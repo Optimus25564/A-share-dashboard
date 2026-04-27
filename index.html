@@ -316,6 +316,38 @@
   }
   .info-filter button.active{background:var(--gold);color:#0b1220;border-color:var(--gold);font-weight:700}
 
+  /* Signal icons in watchlist + tooltip */
+  .sig-icon{
+    display:inline-block;font-size:11px;margin-left:3px;cursor:help;
+    position:relative;vertical-align:middle
+  }
+  .sig-icon:hover::after{
+    content:attr(data-tip);
+    position:absolute;left:50%;bottom:130%;transform:translateX(-50%);
+    background:#0b1220;color:var(--text);padding:6px 10px;border-radius:6px;
+    border:1px solid var(--border);font-size:11px;white-space:nowrap;max-width:280px;
+    white-space:normal;width:max-content;max-width:280px;line-height:1.5;
+    z-index:10;pointer-events:none;box-shadow:0 4px 12px rgba(0,0,0,.5)
+  }
+
+  /* Global feed */
+  .global-row{
+    display:grid;grid-template-columns:90px 130px 1fr;gap:14px;
+    padding:12px 0;border-bottom:1px solid var(--border);align-items:flex-start;cursor:pointer;
+    transition:background .1s
+  }
+  .global-row:hover{background:var(--panel-2)}
+  .global-row .when{color:var(--gold);font-size:11px;font-weight:600;font-variant-numeric:tabular-nums;padding-top:2px}
+  .global-row .when .src-tag{display:inline-block;margin-top:4px;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:700}
+  .global-row .stk{padding-top:2px}
+  .global-row .stk .name{font-weight:600;font-size:13px}
+  .global-row .stk .code{font-family:"SF Mono","Menlo",monospace;color:var(--cyan);font-size:11px;display:block;margin-top:2px}
+  .global-row .stk .cat{font-size:10px;color:var(--muted);margin-top:2px;display:inline-block}
+  .global-row .body .title{font-size:13px;font-weight:600;margin-bottom:4px}
+  .global-row .body .content{font-size:11px;color:var(--muted);line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .global-row .body .meta{font-size:10px;color:var(--muted);margin-top:4px}
+  .global-row .body .meta .tag{display:inline-block;margin-right:5px;padding:1px 5px;background:var(--panel-2);border-radius:3px}
+
   @media (max-width:980px){
     .kpis,.acct-grid{grid-template-columns:repeat(2,1fr)}
     .layers{grid-template-columns:repeat(2,1fr)}
@@ -348,6 +380,7 @@
   <!-- Tabs -->
   <div class="tabs">
     <div class="tab active" data-tab="watch">📊 关注列表</div>
+    <div class="tab" data-tab="global">🌐 全网动态</div>
     <div class="tab" data-tab="trade">💹 模拟交易</div>
     <div class="tab" data-tab="strategy">🧭 策略 / 催化剂</div>
   </div>
@@ -410,6 +443,44 @@
         <div style="margin-top:14px;padding-top:12px;border-top:1px dashed var(--border);font-size:12px;color:var(--muted)">
           <b style="color:var(--gold)">规则：</b>核心 60% + 卫星 40%；单票≤12%；分 3 批建仓。
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== TAB: GLOBAL FEED ===================== -->
+  <div class="tab-content" id="tab-global">
+    <div class="kpis">
+      <div class="kpi"><div class="label">总条目</div><div class="val" id="globalTotal">--</div><div class="hint">公开新闻 + 笔记</div></div>
+      <div class="kpi k2"><div class="label">最近 7 天</div><div class="val" id="globalRecent">--</div><div class="hint">追踪近期热度</div></div>
+      <div class="kpi k3"><div class="label">⚠️ 风险信号</div><div class="val" id="globalRisk">--</div><div class="hint">减持 / 业绩雷 / 警示</div></div>
+      <div class="kpi k4"><div class="label">🎯 重磅利好</div><div class="val" id="globalBull">--</div><div class="hint">业绩 / 订单 / 突破</div></div>
+    </div>
+
+    <div class="card">
+      <h3>🌐 全网动态总览<span class="right" id="globalSummary">--</span></h3>
+
+      <div class="info-filter" id="globalFilter">
+        <button data-gf="all" class="active">全部</button>
+        <button data-gf="risk">⚠️ 风险</button>
+        <button data-gf="bull">🎯 利好</button>
+        <button data-gf="news">📰 新闻</button>
+        <button data-gf="announcement">🏢 公告</button>
+        <button data-gf="research">📊 研报</button>
+        <button data-gf="industry">🏭 产业</button>
+        <button data-gf="policy">📜 政策</button>
+        <button data-gf="note">📝 我的笔记</button>
+      </div>
+
+      <div class="info-filter" id="globalCatFilter" style="margin-top:4px">
+        <button data-gc="all" class="active">所有分类</button>
+        <button data-gc="core">核心芯片</button>
+        <button data-gc="hw">服务器整机</button>
+        <button data-gc="base">上游/封装</button>
+        <button data-gc="infra">基础设施</button>
+      </div>
+
+      <div style="overflow:auto;max-height:75vh" id="globalFeedWrap">
+        <div class="info-timeline" id="globalFeed"></div>
       </div>
     </div>
   </div>
@@ -775,10 +846,16 @@ function renderWatchlist(){
     if (q.changePct > 0) upCount++;
     else if (q.changePct < 0) downCount++;
     const cls = colorClass(q.changePct);
+    const sig = getStockSignals(r.code);
+    const sigIcons = [
+      sig.warn ? `<span class="sig-icon" data-tip="${escapeAttr(sig.warn.title)}">⚠️</span>` : "",
+      sig.bull ? `<span class="sig-icon" data-tip="${escapeAttr(sig.bull.title)}">🎯</span>` : "",
+      sig.hot ?  `<span class="sig-icon" data-tip="${escapeAttr(sig.hot.title)}">✨</span>` : "",
+    ].filter(Boolean).join("");
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td class="code">${r.code}</td>
-      <td class="name">${r.name}<br><span class="pill ${r.cat}">${r.catLabel}</span></td>
+      <td class="name">${r.name} ${sigIcons}<br><span class="pill ${r.cat}">${r.catLabel}</span></td>
       <td class="num-cell ${cls}">${fmtNum(q.price)}</td>
       <td class="num-cell ${cls}">${fmtPct(q.changePct)}</td>
       <td class="num-cell">${q.turnover ? (q.turnover/10000).toFixed(2) : "--"}</td>
@@ -1123,7 +1200,7 @@ document.getElementById("resetBtn").onclick = () => {
 
 // ============ Info Panel: news + notes integrated timeline ============
 const NOTES_KEY = "rmb_invest_notes_v1";
-let publicNews = null; // lazy-load on first open
+let publicNews = null;
 
 async function loadPublicNews(){
   if (publicNews !== null) return publicNews;
@@ -1135,6 +1212,19 @@ async function loadPublicNews(){
     publicNews = {};
   }
   return publicNews;
+}
+
+// Extract risk/bull/research signals from a stock's recent news (top 5 items)
+function getStockSignals(code){
+  const items = (publicNews && publicNews[code]) || [];
+  const sig = { warn: null, bull: null, hot: null };
+  for (const it of items.slice(0, 6)) {
+    const text = (it.title || "") + (it.content || "");
+    if (!sig.warn && (text.includes("⚠️") || (it.tags||[]).some(t=>/警示|风险|减持|警惕|失误|质疑|跌停|业绩雷/.test(t)))) sig.warn = it;
+    if (!sig.bull && (text.includes("🎯") || (it.tags||[]).some(t=>/重磅|扭亏为盈|高增长|里程碑/.test(t)))) sig.bull = it;
+    if (!sig.hot && (text.includes("✨") || (it.tags||[]).some(t=>/扭亏|拐点|首次|定增|收购/.test(t)))) sig.hot = it;
+  }
+  return sig;
 }
 function loadNotes(){
   try { return JSON.parse(localStorage.getItem(NOTES_KEY) || "{}"); }
@@ -1233,6 +1323,7 @@ function renderInfoTimeline(){
         saveNotes(allNotes);
         toast("已删除", "success");
         renderInfoTimeline();
+        renderGlobalFeed();
       }
     };
   });
@@ -1241,6 +1332,107 @@ function renderInfoTimeline(){
 function escapeHtml(s){
   return String(s||"").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
 }
+function escapeAttr(s){ return escapeHtml(s).replace(/`/g,"&#96;"); }
+
+// === Global feed: aggregate all news + notes across stocks ===
+let globalTypeFilter = "all";
+let globalCatFilter = "all";
+
+function gatherAllItems(){
+  if (!publicNews) return [];
+  const notesAll = loadNotes();
+  const items = [];
+  WATCH.forEach(stock => {
+    const news = publicNews[stock.code] || [];
+    const notes = (notesAll[stock.code] || []).map(n => ({...n, type:"note"}));
+    [...news, ...notes].forEach(it => {
+      const text = (it.title||"") + (it.content||"");
+      const isRisk = text.includes("⚠️") || (it.tags||[]).some(t => /警示|风险|减持|警惕|跌停|业绩雷|质疑/.test(t));
+      const isBull = text.includes("🎯") || (it.tags||[]).some(t => /重磅|高增长|里程碑|扭亏为盈/.test(t));
+      items.push({...it, code: stock.code, name: stock.name, cat: stock.cat, catLabel: stock.catLabel, isRisk, isBull});
+    });
+  });
+  items.sort((a,b) => (b.date||"").localeCompare(a.date||""));
+  return items;
+}
+
+function renderGlobalFeed(){
+  const all = gatherAllItems();
+  const today = new Date().toISOString().slice(0,10);
+  const recent = all.filter(it => {
+    if (!it.date) return false;
+    const d = new Date(it.date);
+    const days = (Date.now() - d.getTime()) / 86400000;
+    return days <= 7;
+  });
+  const risks = all.filter(it => it.isRisk);
+  const bulls = all.filter(it => it.isBull);
+
+  document.getElementById("globalTotal").textContent = all.length;
+  document.getElementById("globalRecent").textContent = recent.length;
+  document.getElementById("globalRisk").textContent = risks.length;
+  document.getElementById("globalBull").textContent = bulls.length;
+
+  // Apply filters
+  let filtered = all;
+  if (globalTypeFilter === "risk") filtered = filtered.filter(it => it.isRisk);
+  else if (globalTypeFilter === "bull") filtered = filtered.filter(it => it.isBull);
+  else if (globalTypeFilter !== "all") filtered = filtered.filter(it => it.type === globalTypeFilter);
+  if (globalCatFilter !== "all") filtered = filtered.filter(it => it.cat === globalCatFilter);
+
+  document.getElementById("globalSummary").textContent = `显示 ${filtered.length} / ${all.length} 条`;
+
+  const feed = document.getElementById("globalFeed");
+  if (filtered.length === 0) {
+    feed.innerHTML = `<div class="info-empty">当前筛选下无数据</div>`;
+    return;
+  }
+
+  feed.innerHTML = filtered.slice(0, 200).map(it => {
+    const titleHTML = it.url
+      ? `<a href="${it.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${escapeHtml(it.title || (it.content||"").slice(0,40))}</a>`
+      : escapeHtml(it.title || (it.content||"").slice(0,40));
+    const tags = (it.tags && it.tags.length) ? `<span>${it.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}</span>` : "";
+    return `
+      <div class="global-row" data-code="${it.code}">
+        <div class="when">${it.date || "--"}<br><span class="src-tag ${it.type}">${TYPE_LABEL[it.type] || it.type}</span></div>
+        <div class="stk">
+          <div class="name">${escapeHtml(it.name)}</div>
+          <span class="code">${it.code}</span>
+          <span class="cat">${escapeHtml(it.catLabel)}</span>
+        </div>
+        <div class="body">
+          <div class="title">${titleHTML}</div>
+          <div class="content">${escapeHtml(it.content || "")}</div>
+          <div class="meta">
+            ${it.source ? escapeHtml(it.source) + " · " : ""}${tags}
+          </div>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  feed.querySelectorAll(".global-row").forEach(row => {
+    row.onclick = () => openInfo(row.dataset.code);
+  });
+}
+
+document.querySelectorAll("#globalFilter button").forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll("#globalFilter button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    globalTypeFilter = btn.dataset.gf;
+    renderGlobalFeed();
+  };
+});
+document.querySelectorAll("#globalCatFilter button").forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll("#globalCatFilter button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    globalCatFilter = btn.dataset.gc;
+    renderGlobalFeed();
+  };
+});
 
 // Save note
 document.getElementById("noteSave").onclick = () => {
@@ -1259,6 +1451,7 @@ document.getElementById("noteSave").onclick = () => {
   document.getElementById("noteTags").value = "";
   toast("笔记已保存", "success");
   renderInfoTimeline();
+  renderGlobalFeed();
 };
 
 // Filter
@@ -1843,6 +2036,12 @@ renderAccount();
 renderPnLCurve();
 refresh(true);
 setInterval(() => refresh(false), 10000);
+
+// Eager-load news → re-render watchlist with signal icons + render global feed
+loadPublicNews().then(() => {
+  renderWatchlist();
+  renderGlobalFeed();
+});
 
 </script>
 </body>
