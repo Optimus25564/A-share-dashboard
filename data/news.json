@@ -3,5 +3,106 @@
     "last_updated": "2026-04-27",
     "schema": "{ code: [{ date, type, title, content, source, url, tags }] }",
     "types": ["news", "announcement", "research", "policy", "industry"]
-  }
+  },
+  "688256": [
+    {
+      "date": "2026-04-26",
+      "type": "industry",
+      "title": "软硬件深度协同 寒武纪抢先实现 DeepSeek-V4 原生适配",
+      "content": "公司基于自研 NeuWare 软件栈，第一时间完成 DeepSeek-V4 大模型在国产芯片上的原生适配，算力利用率行业领先。继 V3 之后第二次同步适配，确认双方深度合作。",
+      "source": "新浪财经",
+      "url": "https://finance.sina.com.cn/jjxw/2026-04-26/doc-inhvutnr0235165.shtml",
+      "tags": ["DeepSeek", "生态", "利好"]
+    },
+    {
+      "date": "2026-04-24",
+      "type": "news",
+      "title": "DeepSeek-V4 发布：寒武纪 Day0 适配 285B-Flash + 1.6T-Pro",
+      "content": "寒武纪在 DeepSeek-V4 发布当日完成 285B Flash 与 1.6T Pro 双模型基于 vLLM 推理框架的适配，代码已开源至 GitHub。两大国产之光强强联合，被视为国产 AI 芯片生态突围的里程碑事件。",
+      "source": "新浪财经",
+      "url": "https://finance.sina.com.cn/stock/t/2026-04-24/doc-inhvqmqk3302088.shtml",
+      "tags": ["DeepSeek", "重磅", "生态"]
+    },
+    {
+      "date": "2026-04-24",
+      "type": "industry",
+      "title": "DeepSeek-V4 适配国产芯片：黄仁勋的担忧成真",
+      "content": "DeepSeek-V4 同时支持寒武纪与华为昇腾，迈入百万上下文时代。媒体认为此举标志着国产算力对英伟达 CUDA 生态的实质性挑战。",
+      "source": "钛媒体",
+      "url": "https://www.tmtpost.com/7966555.html",
+      "tags": ["DeepSeek", "去英伟达化"]
+    },
+    {
+      "date": "2026-04-19",
+      "type": "news",
+      "title": "寒武纪现折价 22% 大宗交易 ⚠️",
+      "content": "周内出现折价 22% 的大宗交易，市场关注是否有定增解禁后的早期减持迹象。需关注后续股东减持公告与多空资金博弈。",
+      "source": "证券之星",
+      "url": "https://stock.stockstar.com/RB2026041900000425.shtml",
+      "tags": ["大宗交易", "风险信号"]
+    },
+    {
+      "date": "2026-04-16",
+      "type": "news",
+      "title": "主力资金净买入 5943.63 万元",
+      "content": "4 月 16 日盘中主力资金净流入近 6000 万，对应限售股流通日，显示买盘承接较强。",
+      "source": "证券之星",
+      "url": "https://stock.stockstar.com/RB2026041600038806.shtml",
+      "tags": ["资金面"]
+    },
+    {
+      "date": "2026-04-16",
+      "type": "announcement",
+      "title": "约 333.49 万股限售股上市流通",
+      "content": "占公司总股本 0.79%，涉及 13 名限售股东。流通日定档 4 月 16 日，需关注解禁后股东减持节奏。",
+      "source": "新浪财经",
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-04-08/doc-inhtuyvv6412247.shtml",
+      "tags": ["限售解禁"]
+    },
+    {
+      "date": "2026-03-12",
+      "type": "announcement",
+      "title": "2025 年报：营收 64.97 亿（+453%）净利 20.59 亿，扭亏为盈 🎯",
+      "content": "全年营收 649,719.62 万元同比 +453.21%；归母净利润 205,922.85 万元同比 +555.24%。Q4 单季营收 18.9 亿（+91%）、净利 4.55 亿（+67%）。完全验证算力需求 + 国产替代逻辑。",
+      "source": "新浪财经",
+      "url": "https://finance.sina.com.cn/stock/bxjj/2026-03-12/doc-inhqtusm4712428.shtml",
+      "tags": ["业绩", "重磅", "扭亏为盈"]
+    },
+    {
+      "date": "2025-12-30",
+      "type": "research",
+      "title": "6 家机构给予'买入'评级 —— 推理应用加速落地，算力缺口亟待缓解",
+      "content": "年末 6 家机构同步发布买入评级。共识：DeepSeek 等大模型推理需求爆发，国产算力供给缺口大，寒武纪作为纯 AI ASIC 第一股直接受益。",
+      "source": "东方财富",
+      "url": "https://caifuhao.eastmoney.com/news/20251230134534238084350",
+      "tags": ["研报", "买入评级"]
+    },
+    {
+      "date": "2025-12-04",
+      "type": "research",
+      "title": "第一上海：买入评级，目标价 1683 元",
+      "content": "预测 2025-2027 营收 68.2/151.4/243.0 亿（+481%/+122%/+61%）；归母净利 16.8/51.3/88.8 亿（NA/+205%/+73%）。",
+      "source": "第一上海证券",
+      "url": "https://pdf.dfcfw.com/pdf/H3_AP202512041793800385_1.pdf",
+      "tags": ["研报", "目标价"]
+    },
+    {
+      "date": "2025-08-24",
+      "type": "research",
+      "title": "高盛上调目标价 50% 至 1835 元",
+      "content": "外资机构高盛集团 8 月 24 日研报将寒武纪目标价上调 50% 至 1835 元，反映对国产算力定价权重估的态度转向。",
+      "source": "证券时报",
+      "url": "https://www.stcn.com/article/detail/3291090.html",
+      "tags": ["研报", "外资", "目标价"]
+    },
+    {
+      "date": "2026-04-17",
+      "type": "industry",
+      "title": "市场地位：国内 AI 加速卡 2025 年市占率约 41%，寒武纪稳居前三",
+      "content": "IDC 数据：2025 年中国 AI 加速卡出货约 400 万张，国产芯片厂商合计 41%（约 165 万张），寒武纪进入前三。当前股价 1334 元，总市值 5625 亿。",
+      "source": "证券之星",
+      "url": "https://4g.stockstar.com/detail/RB2026020400027268",
+      "tags": ["市占率", "行业地位"]
+    }
+  ]
 }
