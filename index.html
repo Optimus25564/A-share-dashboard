@@ -625,6 +625,10 @@
       <h4>📍 交易信号建议（4 条规则 · 多信号共识 = 强信号）</h4>
       <div id="klineSignalList"><div style="color:var(--muted);font-size:12px">尚未配置信号规则。请告诉助手要启用哪些信号（见下方提示）。</div></div>
     </div>
+
+    <div style="display:flex;justify-content:flex-end;margin-top:18px;padding-top:14px;border-top:1px solid var(--border)">
+      <button class="btn btn-secondary" id="klineCloseBottom" style="padding:8px 24px">← 返回</button>
+    </div>
   </div>
 </div>
 
@@ -656,6 +660,10 @@
     </div>
 
     <div class="info-timeline" id="infoTimeline"></div>
+
+    <div style="display:flex;justify-content:flex-end;margin-top:18px;padding-top:14px;border-top:1px solid var(--border)">
+      <button class="btn btn-secondary" id="infoCloseBottom" style="padding:8px 24px">← 返回</button>
+    </div>
   </div>
 </div>
 
@@ -1263,11 +1271,12 @@ document.querySelectorAll("#infoFilter button").forEach(btn => {
   };
 });
 
-// Close
-document.getElementById("infoClose").onclick = () =>
-  document.getElementById("infoModal").classList.remove("show");
+// Close handlers (top × + bottom 返回 button + click outside + ESC)
+const closeInfo = () => document.getElementById("infoModal").classList.remove("show");
+document.getElementById("infoClose").onclick = closeInfo;
+document.getElementById("infoCloseBottom").onclick = closeInfo;
 document.getElementById("infoModal").onclick = (e) => {
-  if (e.target.id === "infoModal") e.target.classList.remove("show");
+  if (e.target.id === "infoModal") closeInfo();
 };
 
 // ============ K-line: fetcher + indicators + modal ============
@@ -1648,11 +1657,19 @@ function renderSignals(bars, ind){
   list.innerHTML = consensus + (items || `<div style="color:var(--muted);font-size:12px">无规则触发</div>`);
 }
 
-document.getElementById("klineClose").onclick = () =>
-  document.getElementById("klineModal").classList.remove("show");
+const closeKline = () => document.getElementById("klineModal").classList.remove("show");
+document.getElementById("klineClose").onclick = closeKline;
+document.getElementById("klineCloseBottom").onclick = closeKline;
 document.getElementById("klineModal").onclick = (e) => {
-  if (e.target.id === "klineModal") e.target.classList.remove("show");
+  if (e.target.id === "klineModal") closeKline();
 };
+
+// Global ESC: close any open modal
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    document.querySelectorAll(".modal.show").forEach(m => m.classList.remove("show"));
+  }
+});
 
 // Period / range chip handlers
 document.querySelectorAll("#klineModal .kl-controls [data-p]").forEach(btn => {
