@@ -253,6 +253,60 @@
   .signal-text{flex:1;color:var(--text)}
   .signal-text .sub{color:var(--muted);font-size:11px;margin-top:2px}
 
+  /* Info modal — unified news + private notes timeline */
+  .info-add{display:flex;flex-direction:column;gap:8px;background:var(--panel-2);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:14px}
+  .info-add textarea{
+    width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);
+    padding:8px 10px;border-radius:6px;font-size:13px;font-family:inherit;resize:vertical;min-height:60px;outline:none
+  }
+  .info-add textarea:focus{border-color:var(--gold)}
+  .info-add .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .info-add input[type=date],.info-add input[type=text]{
+    background:var(--bg);border:1px solid var(--border);color:var(--text);
+    padding:6px 8px;border-radius:6px;font-size:12px;font-family:inherit;outline:none
+  }
+  .info-add .btn-save{
+    background:var(--gold);color:#0b1220;border:none;padding:7px 16px;border-radius:6px;
+    font-weight:700;font-size:12px;cursor:pointer;font-family:inherit
+  }
+  .info-add .btn-save:hover{filter:brightness(1.1)}
+
+  .info-timeline{display:flex;flex-direction:column;gap:0}
+  .info-item{
+    display:grid;grid-template-columns:80px 1fr;gap:14px;
+    padding:12px 0;border-bottom:1px solid var(--border);position:relative
+  }
+  .info-item:last-child{border-bottom:none}
+  .info-item .when{color:var(--gold);font-size:11px;font-weight:600;font-variant-numeric:tabular-nums;padding-top:2px}
+  .info-item .when .src-tag{
+    display:inline-block;margin-top:4px;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:700;
+  }
+  .src-tag.news{background:rgba(78,168,255,.18);color:#9ec6ff}
+  .src-tag.announcement{background:rgba(245,179,1,.18);color:#ffd466}
+  .src-tag.research{background:rgba(157,123,255,.18);color:#c0a8ff}
+  .src-tag.policy{background:rgba(255,90,106,.18);color:#ff8a95}
+  .src-tag.industry{background:rgba(41,214,214,.18);color:#7ce7e7}
+  .src-tag.note{background:rgba(46,204,113,.22);color:#7ee2a3}
+  .info-item .body .title{font-size:14px;font-weight:600;margin-bottom:4px}
+  .info-item .body .title a{color:var(--text);text-decoration:none;border-bottom:1px dashed var(--muted)}
+  .info-item .body .title a:hover{color:var(--gold);border-color:var(--gold)}
+  .info-item .body .content{font-size:12px;color:var(--muted);line-height:1.6;white-space:pre-wrap}
+  .info-item .body .meta{font-size:11px;color:var(--muted);margin-top:4px}
+  .info-item .body .meta .tag{display:inline-block;margin-right:6px;padding:1px 6px;background:var(--panel-2);border-radius:3px;font-size:10px}
+  .info-item .body .del-btn{
+    float:right;background:transparent;border:none;color:var(--muted);cursor:pointer;font-size:11px;padding:0
+  }
+  .info-item .body .del-btn:hover{color:var(--red)}
+  .info-empty{text-align:center;padding:30px 10px;color:var(--muted);font-size:13px}
+  .info-stats{display:flex;gap:14px;margin-bottom:12px;font-size:12px;color:var(--muted);padding-bottom:10px;border-bottom:1px solid var(--border)}
+  .info-stats b{color:var(--text)}
+  .info-filter{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}
+  .info-filter button{
+    padding:4px 10px;background:var(--panel-2);border:1px solid var(--border);color:var(--muted);
+    border-radius:12px;font-size:11px;cursor:pointer;font-family:inherit
+  }
+  .info-filter button.active{background:var(--gold);color:#0b1220;border-color:var(--gold);font-weight:700}
+
   @media (max-width:980px){
     .kpis,.acct-grid{grid-template-columns:repeat(2,1fr)}
     .layers{grid-template-columns:repeat(2,1fr)}
@@ -548,6 +602,37 @@
   </div>
 </div>
 
+<!-- Info modal: 公开新闻 + 私密笔记 整合时间线 -->
+<div class="modal" id="infoModal">
+  <div class="modal-card">
+    <button class="close" id="infoClose">×</button>
+    <h3 id="infoTitle">--</h3>
+    <div class="info-stats" id="infoStats"></div>
+
+    <div class="info-add">
+      <div style="font-size:12px;color:var(--muted);margin-bottom:2px">📝 添加笔记 / 非公开信息（仅存本地浏览器）</div>
+      <textarea id="noteContent" placeholder="例如：调研反馈：Q2订单能见度高，下游昇腾整机厂排产到Q3..."></textarea>
+      <div class="row">
+        <input type="date" id="noteDate">
+        <input type="text" id="noteTags" placeholder="标签（逗号分隔，如：订单,调研）" style="flex:1;min-width:140px">
+        <button class="btn-save" id="noteSave">保存</button>
+      </div>
+    </div>
+
+    <div class="info-filter" id="infoFilter">
+      <button data-f="all" class="active">全部</button>
+      <button data-f="note">📝 笔记</button>
+      <button data-f="news">📰 新闻</button>
+      <button data-f="announcement">🏢 公告</button>
+      <button data-f="research">📊 研报</button>
+      <button data-f="policy">📜 政策</button>
+      <button data-f="industry">🏭 产业</button>
+    </div>
+
+    <div class="info-timeline" id="infoTimeline"></div>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <script>
@@ -665,6 +750,7 @@ function renderWatchlist(){
       <td class="num-cell">${q.turnover ? (q.turnover/10000).toFixed(2) : "--"}</td>
       <td class="num-cell">${r.w}%</td>
       <td>
+        <button class="trade-action" data-info="${r.code}" style="margin-right:4px">📋</button>
         <button class="trade-action" data-kl="${r.code}" style="margin-right:4px">K线</button>
         <button class="trade-action" data-buy="${r.code}">买入</button>
       </td>
@@ -685,6 +771,10 @@ function renderWatchlist(){
   // Bind K-line buttons
   tb.querySelectorAll("[data-kl]").forEach(b => {
     b.onclick = () => openKLine(b.dataset.kl);
+  });
+  // Bind info buttons
+  tb.querySelectorAll("[data-info]").forEach(b => {
+    b.onclick = () => openInfo(b.dataset.info);
   });
 }
 
@@ -917,6 +1007,7 @@ function renderAccount(){
         <td class="num-cell">${fmtMoney(m)}</td>
         <td class="num-cell ${cls}">${pnl>=0?"+":""}${pnl.toFixed(0)}<br><span style="font-size:10px">${pnlPct>=0?"+":""}${pnlPct.toFixed(2)}%</span></td>
         <td>
+          <button class="trade-action" data-info2="${code}" style="margin-right:4px">📋</button>
           <button class="trade-action" data-kl2="${code}" style="margin-right:4px">K线</button>
           <button class="trade-action" data-quick="${code}">交易</button>
         </td>`;
@@ -927,6 +1018,9 @@ function renderAccount(){
     });
     ptb.querySelectorAll("[data-kl2]").forEach(b => {
       b.onclick = () => openKLine(b.dataset.kl2);
+    });
+    ptb.querySelectorAll("[data-info2]").forEach(b => {
+      b.onclick = () => openInfo(b.dataset.info2);
     });
   }
   document.getElementById("posSummary").textContent = `${entries.length} 只 · 市值 ${fmtMoney(mv)}`;
@@ -991,6 +1085,163 @@ document.getElementById("resetBtn").onclick = () => {
   renderAccount();
   onStockChange();
   toast("账户已重置", "success");
+};
+
+// ============ Info Panel: news + notes integrated timeline ============
+const NOTES_KEY = "rmb_invest_notes_v1";
+let publicNews = null; // lazy-load on first open
+
+async function loadPublicNews(){
+  if (publicNews !== null) return publicNews;
+  try {
+    const r = await fetch("data/news.json?_=" + Date.now());
+    if (!r.ok) throw new Error("HTTP "+r.status);
+    publicNews = await r.json();
+  } catch(e) {
+    publicNews = {};
+  }
+  return publicNews;
+}
+function loadNotes(){
+  try { return JSON.parse(localStorage.getItem(NOTES_KEY) || "{}"); }
+  catch(e){ return {}; }
+}
+function saveNotes(n){ localStorage.setItem(NOTES_KEY, JSON.stringify(n)); }
+
+const TYPE_LABEL = {
+  news:"📰 新闻", announcement:"🏢 公告", research:"📊 研报",
+  policy:"📜 政策", industry:"🏭 产业", note:"📝 笔记"
+};
+
+let currentInfoCode = null;
+let currentFilter = "all";
+
+async function openInfo(code){
+  currentInfoCode = code;
+  currentFilter = "all";
+  document.querySelectorAll("#infoFilter button").forEach(b => b.classList.toggle("active", b.dataset.f === "all"));
+
+  const stock = WATCH.find(w => w.code === code);
+  document.getElementById("infoTitle").textContent = `${code} · ${stock?stock.name:""} · 信息整合`;
+  document.getElementById("infoModal").classList.add("show");
+
+  // Default note date to today (Beijing)
+  const bj = getBeijingNow();
+  document.getElementById("noteDate").value = bj.toISOString().slice(0,10);
+  document.getElementById("noteContent").value = "";
+  document.getElementById("noteTags").value = "";
+
+  await loadPublicNews();
+  renderInfoTimeline();
+}
+
+function getAllItems(code){
+  const news = (publicNews && publicNews[code]) || [];
+  const notes = (loadNotes()[code] || []).map(n => ({...n, type:"note"}));
+  return [...news, ...notes].sort((a,b) => (b.date||"").localeCompare(a.date||""));
+}
+
+function renderInfoTimeline(){
+  const code = currentInfoCode;
+  if (!code) return;
+  const all = getAllItems(code);
+  const filtered = currentFilter === "all" ? all : all.filter(i => i.type === currentFilter);
+
+  // Stats
+  const counts = all.reduce((acc,i) => { acc[i.type] = (acc[i.type]||0)+1; return acc; }, {});
+  const total = all.length;
+  const noteCnt = counts.note || 0;
+  const newsCnt = (counts.news||0) + (counts.announcement||0) + (counts.research||0) + (counts.policy||0) + (counts.industry||0);
+  document.getElementById("infoStats").innerHTML = `
+    共 <b>${total}</b> 条 · 公开 <b>${newsCnt}</b> · 笔记 <b>${noteCnt}</b>
+    ${all.length ? `· 最新 <b>${all[0].date}</b>` : ""}
+  `;
+
+  const tl = document.getElementById("infoTimeline");
+  if (filtered.length === 0) {
+    tl.innerHTML = `<div class="info-empty">${all.length===0 ? "暂无信息。在上方添加笔记，或等公开新闻同步。" : "当前筛选下无数据"}</div>`;
+    return;
+  }
+  tl.innerHTML = filtered.map((it, idx) => {
+    const isNote = it.type === "note";
+    const titleHTML = it.url
+      ? `<a href="${it.url}" target="_blank" rel="noopener">${escapeHtml(it.title || it.content.slice(0,40))}</a>`
+      : escapeHtml(it.title || (it.content||"").slice(0,40));
+    const delBtn = isNote ? `<button class="del-btn" data-del="${idx}" data-noteidx="${all.indexOf(it) - (all.length - (loadNotes()[code]||[]).length)}">删除</button>` : "";
+    const tags = (it.tags && it.tags.length) ? `<span class="meta">${it.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}</span>` : "";
+    const source = it.source ? `<span class="meta"> · ${escapeHtml(it.source)}</span>` : "";
+    const content = it.content ? `<div class="content">${escapeHtml(it.content)}</div>` : "";
+    return `
+      <div class="info-item">
+        <div class="when">${it.date || "--"}<br><span class="src-tag ${it.type}">${TYPE_LABEL[it.type] || it.type}</span></div>
+        <div class="body">
+          ${delBtn}
+          <div class="title">${titleHTML}</div>
+          ${content}
+          ${tags}${source}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  // Bind delete buttons (notes only)
+  tl.querySelectorAll("[data-del]").forEach(btn => {
+    btn.onclick = () => {
+      if (!confirm("确定删除这条笔记？")) return;
+      const allNotes = loadNotes();
+      const list = allNotes[code] || [];
+      // Find by date+content match (most reliable since notes are ordered by date)
+      const target = filtered[+btn.dataset.del];
+      const matchIdx = list.findIndex(n => n.date === target.date && n.content === target.content);
+      if (matchIdx >= 0) {
+        list.splice(matchIdx, 1);
+        if (list.length === 0) delete allNotes[code]; else allNotes[code] = list;
+        saveNotes(allNotes);
+        toast("已删除", "success");
+        renderInfoTimeline();
+      }
+    };
+  });
+}
+
+function escapeHtml(s){
+  return String(s||"").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+}
+
+// Save note
+document.getElementById("noteSave").onclick = () => {
+  const code = currentInfoCode;
+  if (!code) return;
+  const content = document.getElementById("noteContent").value.trim();
+  const date = document.getElementById("noteDate").value || getBeijingNow().toISOString().slice(0,10);
+  const tagsStr = document.getElementById("noteTags").value.trim();
+  const tags = tagsStr ? tagsStr.split(/[,，]/).map(s=>s.trim()).filter(Boolean) : [];
+  if (!content) return toast("笔记内容不能为空", "error");
+  const all = loadNotes();
+  if (!all[code]) all[code] = [];
+  all[code].push({ date, content, tags, addedAt: new Date().toISOString() });
+  saveNotes(all);
+  document.getElementById("noteContent").value = "";
+  document.getElementById("noteTags").value = "";
+  toast("笔记已保存", "success");
+  renderInfoTimeline();
+};
+
+// Filter
+document.querySelectorAll("#infoFilter button").forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll("#infoFilter button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    currentFilter = btn.dataset.f;
+    renderInfoTimeline();
+  };
+});
+
+// Close
+document.getElementById("infoClose").onclick = () =>
+  document.getElementById("infoModal").classList.remove("show");
+document.getElementById("infoModal").onclick = (e) => {
+  if (e.target.id === "infoModal") e.target.classList.remove("show");
 };
 
 // ============ K-line: fetcher + indicators + modal ============

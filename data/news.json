@@ -1,0 +1,7 @@
+{
+  "_meta": {
+    "last_updated": "2026-04-27",
+    "schema": "{ code: [{ date, type, title, content, source, url, tags }] }",
+    "types": ["news", "announcement", "research", "policy", "industry"]
+  }
+}
