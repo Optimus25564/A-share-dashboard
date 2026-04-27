@@ -596,7 +596,7 @@
     </div>
     <div class="kl-ind" id="klineIndicators"></div>
     <div class="kl-signals">
-      <h4>📍 当前信号建议（基于已启用规则）</h4>
+      <h4>📍 交易信号建议（4 条规则 · 多信号共识 = 强信号）</h4>
       <div id="klineSignalList"><div style="color:var(--muted);font-size:12px">尚未配置信号规则。请告诉助手要启用哪些信号（见下方提示）。</div></div>
     </div>
   </div>
@@ -1450,31 +1450,143 @@ function klOpts(showLegend){
   };
 }
 
-// Signal engine — rules will be filled in based on user's choices.
-// Each rule: {id, name, eval(bars, ind) → {action: 'buy'|'sell'|'hold', detail: string} | null}
+// Signal engine — each rule: eval(bars, ind) → {action, detail, strength} | null
+// strength: 1=弱 2=中 3=强（多条同向叠加 = 共识信号）
 const SIGNAL_RULES = [
-  // Empty by default — user will pick from a list (see chat)
+  {
+    id:"ma_cross", name:"MA 金叉/死叉 (5/20)",
+    eval:(bars, ind) => {
+      const a = ind.ma5, b = ind.ma20;
+      const n = a.length;
+      if (n < 22 || a[n-1]==null || b[n-1]==null || a[n-2]==null || b[n-2]==null) return null;
+      const prevDiff = a[n-2] - b[n-2];
+      const curDiff = a[n-1] - b[n-1];
+      if (prevDiff <= 0 && curDiff > 0) {
+        return {action:"buy", strength:2,
+          detail:`MA5 (${a[n-1].toFixed(2)}) 上穿 MA20 (${b[n-1].toFixed(2)}) — 短期趋势转多`};
+      }
+      if (prevDiff >= 0 && curDiff < 0) {
+        return {action:"sell", strength:2,
+          detail:`MA5 (${a[n-1].toFixed(2)}) 下穿 MA20 (${b[n-1].toFixed(2)}) — 短期趋势转空`};
+      }
+      // Soft hint: trend state
+      if (curDiff > 0 && a[n-1] > a[n-2]) return {action:"hold", strength:1,
+        detail:`多头排列延续，MA5 在 MA20 上方 ${(curDiff/b[n-1]*100).toFixed(1)}%`};
+      if (curDiff < 0 && a[n-1] < a[n-2]) return {action:"hold", strength:1,
+        detail:`空头延续，MA5 在 MA20 下方 ${(Math.abs(curDiff)/b[n-1]*100).toFixed(1)}%`};
+      return null;
+    }
+  },
+  {
+    id:"macd_cross", name:"MACD 金叉/死叉",
+    eval:(bars, ind) => {
+      const {dif, dea, macd} = ind.macd;
+      const n = dif.length;
+      if (n < 30) return null;
+      const prev = dif[n-2] - dea[n-2];
+      const cur = dif[n-1] - dea[n-1];
+      const aboveZero = dif[n-1] > 0;
+      if (prev <= 0 && cur > 0) {
+        return {action:"buy", strength: aboveZero ? 3 : 2,
+          detail:`DIF (${dif[n-1].toFixed(2)}) 上穿 DEA (${dea[n-1].toFixed(2)})${aboveZero?"，零轴上方金叉强势":"，零轴下方金叉为反弹信号"}`};
+      }
+      if (prev >= 0 && cur < 0) {
+        return {action:"sell", strength: aboveZero ? 2 : 3,
+          detail:`DIF (${dif[n-1].toFixed(2)}) 下穿 DEA (${dea[n-1].toFixed(2)})${aboveZero?"，高位死叉警惕回调":"，零轴下方死叉趋势确认"}`};
+      }
+      // Histogram momentum hint
+      if (macd[n-1] > 0 && macd[n-2] > 0 && macd[n-1] > macd[n-2]) return {action:"hold", strength:1,
+        detail:`MACD 红柱放大 (${macd[n-1].toFixed(2)})，多头动能增强`};
+      if (macd[n-1] < 0 && macd[n-2] < 0 && macd[n-1] < macd[n-2]) return {action:"hold", strength:1,
+        detail:`MACD 绿柱放大 (${macd[n-1].toFixed(2)})，空头动能增强`};
+      return null;
+    }
+  },
+  {
+    id:"breakout", name:"N 日新高突破 + 放量",
+    eval:(bars, ind) => {
+      const N = 20;
+      if (bars.length < N + 5) return null;
+      const last = bars[bars.length-1];
+      const window = bars.slice(-N-1, -1); // previous N bars (excluding today)
+      const winHigh = Math.max(...window.map(b=>b.high));
+      const winLow = Math.min(...window.map(b=>b.low));
+      const avgVol = window.reduce((s,b)=>s+b.volume, 0) / N;
+      const volRatio = last.volume / (avgVol || 1);
+      if (last.close > winHigh && volRatio > 1.5) {
+        return {action:"buy", strength:3,
+          detail:`收盘 ${last.close.toFixed(2)} 突破 ${N} 日新高 ${winHigh.toFixed(2)}，量比 ${volRatio.toFixed(1)} (>1.5) — 突破有效`};
+      }
+      if (last.close > winHigh && volRatio <= 1.5) {
+        return {action:"hold", strength:1,
+          detail:`收盘突破 ${N} 日新高但量比仅 ${volRatio.toFixed(1)} — 缩量突破，需观察确认`};
+      }
+      if (last.close < winLow && volRatio > 1.5) {
+        return {action:"sell", strength:3,
+          detail:`收盘 ${last.close.toFixed(2)} 跌破 ${N} 日新低 ${winLow.toFixed(2)}，放量下跌 (量比 ${volRatio.toFixed(1)})`};
+      }
+      return null;
+    }
+  },
+  {
+    id:"rsi_extreme", name:"RSI 超买/超卖",
+    eval:(bars, ind) => {
+      const rsi = ind.rsi;
+      const n = rsi.length;
+      if (n < 16 || rsi[n-1] == null) return null;
+      const cur = rsi[n-1];
+      const prev = rsi[n-2];
+      if (cur < 30) {
+        return {action:"buy", strength: cur < 20 ? 3 : 2,
+          detail:`RSI14 = ${cur.toFixed(1)}，进入超卖区${cur<20?"（极端超卖，反弹概率高）":"（适合关注反弹）"}`};
+      }
+      if (cur > 70) {
+        return {action:"sell", strength: cur > 80 ? 3 : 2,
+          detail:`RSI14 = ${cur.toFixed(1)}，进入超买区${cur>80?"（极端过热，警惕回调）":"（建议减仓或不追高）"}`};
+      }
+      // Recovery from extremes
+      if (prev != null && prev < 30 && cur >= 30 && cur < 50) return {action:"buy", strength:2,
+        detail:`RSI14 = ${cur.toFixed(1)}，从超卖区回升 — 反弹确认信号`};
+      if (prev != null && prev > 70 && cur <= 70 && cur > 50) return {action:"sell", strength:2,
+        detail:`RSI14 = ${cur.toFixed(1)}，从超买区回落 — 顶部确认信号`};
+      return null;
+    }
+  }
 ];
 function renderSignals(bars, ind){
   const list = document.getElementById("klineSignalList");
   if (SIGNAL_RULES.length === 0) {
-    list.innerHTML = `<div style="color:var(--muted);font-size:12px;line-height:1.7">
-      尚未启用任何信号规则。<br>
-      在聊天中告诉助手"启用 [规则名]"，例如："启用 MA金叉、MACD金叉、RSI超买超卖"。
-    </div>`;
+    list.innerHTML = `<div style="color:var(--muted);font-size:12px">尚未配置信号规则。</div>`;
     return;
   }
   const fired = SIGNAL_RULES.map(r => ({rule:r, result:r.eval(bars, ind)})).filter(x => x.result);
-  if (fired.length === 0) {
-    list.innerHTML = `<div style="color:var(--muted);font-size:12px">当前无明确信号触发，建议观望。</div>`;
-    return;
-  }
-  list.innerHTML = fired.map(({rule, result}) => `
-    <div class="signal-item">
-      <span class="signal-tag ${result.action}">${result.action==='buy'?'买入':result.action==='sell'?'卖出':'观望'}</span>
-      <div class="signal-text"><b>${rule.name}</b><div class="sub">${result.detail}</div></div>
-    </div>
-  `).join("");
+
+  // Consensus score: sum of strength signed by direction
+  let buyScore = 0, sellScore = 0, buyCnt = 0, sellCnt = 0;
+  fired.forEach(({result}) => {
+    if (result.action === "buy") { buyScore += result.strength; buyCnt++; }
+    else if (result.action === "sell") { sellScore += result.strength; sellCnt++; }
+  });
+  let consensus = "";
+  if (buyScore >= 5) consensus = `<div style="background:rgba(255,90,106,.18);color:#ff8a95;padding:8px 12px;border-radius:6px;margin-bottom:10px;font-size:13px;font-weight:600">🔴 强买入共识 · ${buyCnt} 条信号 · 总强度 ${buyScore}</div>`;
+  else if (buyScore >= 3) consensus = `<div style="background:rgba(255,90,106,.1);color:#ff8a95;padding:8px 12px;border-radius:6px;margin-bottom:10px;font-size:13px">🟠 偏多 · ${buyCnt} 条信号 · 强度 ${buyScore}</div>`;
+  else if (sellScore >= 5) consensus = `<div style="background:rgba(46,204,113,.18);color:#7ee2a3;padding:8px 12px;border-radius:6px;margin-bottom:10px;font-size:13px;font-weight:600">🟢 强卖出共识 · ${sellCnt} 条信号 · 总强度 ${sellScore}</div>`;
+  else if (sellScore >= 3) consensus = `<div style="background:rgba(46,204,113,.1);color:#7ee2a3;padding:8px 12px;border-radius:6px;margin-bottom:10px;font-size:13px">🟢 偏空 · ${sellCnt} 条信号 · 强度 ${sellScore}</div>`;
+  else if (fired.length === 0) consensus = `<div style="color:var(--muted);font-size:12px;padding:8px 0">⚪ 无明确信号 · 建议观望</div>`;
+
+  const items = fired.map(({rule, result}) => {
+    const stars = "★".repeat(result.strength) + "☆".repeat(3 - result.strength);
+    return `
+      <div class="signal-item">
+        <span class="signal-tag ${result.action}">${result.action==='buy'?'买入':result.action==='sell'?'卖出':'观望'}</span>
+        <div class="signal-text">
+          <b>${rule.name}</b> <span style="color:var(--gold);font-size:11px">${stars}</span>
+          <div class="sub">${result.detail}</div>
+        </div>
+      </div>`;
+  }).join("");
+
+  list.innerHTML = consensus + (items || `<div style="color:var(--muted);font-size:12px">无规则触发</div>`);
 }
 
 document.getElementById("klineClose").onclick = () =>
