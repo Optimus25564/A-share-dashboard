@@ -1,0 +1,18 @@
+# Claude Code local config (do not publish)
+.claude/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Private investment notes — NEVER commit
+private*.json
+private*.md
+notes-private*
+
+# Logs
+*.log
