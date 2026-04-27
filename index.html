@@ -231,6 +231,15 @@
     font-size:24px;cursor:pointer;line-height:1
   }
   .modal-card .close:hover{color:var(--red)}
+  .kl-controls{display:flex;gap:14px;flex-wrap:wrap;margin:8px 0 12px;align-items:center}
+  .kl-controls .group{display:flex;gap:4px;align-items:center}
+  .kl-controls .group .lbl{font-size:11px;color:var(--muted);margin-right:4px}
+  .kl-controls button{
+    padding:4px 10px;background:var(--panel-2);border:1px solid var(--border);color:var(--muted);
+    border-radius:4px;font-size:11px;cursor:pointer;font-family:inherit
+  }
+  .kl-controls button:hover{color:var(--text)}
+  .kl-controls button.active{background:var(--gold);color:#0b1220;border-color:var(--gold);font-weight:700}
   .kl-summary{display:flex;gap:18px;flex-wrap:wrap;margin:8px 0 14px;font-size:13px;color:var(--muted)}
   .kl-summary b{color:var(--text)}
   .kl-charts{display:grid;grid-template-rows:1fr 120px 100px;gap:8px;margin-bottom:14px}
@@ -588,6 +597,23 @@
   <div class="modal-card">
     <button class="close" id="klineClose">×</button>
     <h3 id="klineTitle">--</h3>
+    <div class="kl-controls">
+      <div class="group">
+        <span class="lbl">周期</span>
+        <button data-p="day" class="active">日K</button>
+        <button data-p="week">周K</button>
+        <button data-p="month">月K</button>
+      </div>
+      <div class="group">
+        <span class="lbl">区间</span>
+        <button data-r="22">1月</button>
+        <button data-r="66">3月</button>
+        <button data-r="132" class="active">6月</button>
+        <button data-r="250">1年</button>
+        <button data-r="500">2年</button>
+        <button data-r="0">全部</button>
+      </div>
+    </div>
     <div class="kl-summary" id="klineSummary"></div>
     <div class="kl-charts">
       <div class="kl-chart"><canvas id="klPrice"></canvas></div>
@@ -1351,18 +1377,41 @@ function ind_BOLL(bars, n=20, k=2){
 
 // === Render K-line modal ===
 let klCharts = {};
+let klState = { code: null, period: "day", range: 132 };
+const klCache = {}; // key: code:period → full bars array
+const PERIOD_LABEL = {day:"日K", week:"周K", month:"月K"};
+const FETCH_COUNT = {day: 1300, week: 320, month: 80}; // ~5 years each
+
 async function openKLine(code){
+  klState.code = code;
+  klState.period = "day";
+  klState.range = 132;
+  // Reset button states
+  document.querySelectorAll("#klineModal .kl-controls [data-p]").forEach(b => b.classList.toggle("active", b.dataset.p === "day"));
+  document.querySelectorAll("#klineModal .kl-controls [data-r]").forEach(b => b.classList.toggle("active", +b.dataset.r === 132));
+  document.getElementById("klineModal").classList.add("show");
+  await reloadKLine();
+}
+
+async function reloadKLine(){
+  const {code, period, range} = klState;
   const stock = WATCH.find(w=>w.code===code);
-  const modal = document.getElementById("klineModal");
-  modal.classList.add("show");
-  document.getElementById("klineTitle").textContent = `${code} · ${stock?stock.name:""} · 日K (前复权)`;
+  document.getElementById("klineTitle").textContent = `${code} · ${stock?stock.name:""} · ${PERIOD_LABEL[period]} (前复权)`;
   document.getElementById("klineSummary").innerHTML = "<span>加载中...</span>";
 
-  const bars = await fetchKLine(code, "day", 180);
-  if (bars.length === 0) {
-    document.getElementById("klineSummary").innerHTML = `<span style="color:var(--red)">K线接口未返回数据。可能是浏览器拦截了跨域请求 — 试试 Chrome/Edge。</span>`;
-    return;
+  const cacheKey = code + ":" + period;
+  let allBars = klCache[cacheKey];
+  if (!allBars) {
+    allBars = await fetchKLine(code, period, FETCH_COUNT[period]);
+    if (allBars.length === 0) {
+      document.getElementById("klineSummary").innerHTML = `<span style="color:var(--red)">K线接口未返回数据。可能是浏览器拦截了跨域请求 — 试试 Chrome/Edge。</span>`;
+      return;
+    }
+    klCache[cacheKey] = allBars;
   }
+
+  // Slice to selected range (range=0 means all)
+  const bars = range > 0 && allBars.length > range ? allBars.slice(-range) : allBars;
 
   const ma5 = ind_MA(bars,5), ma10 = ind_MA(bars,10), ma20 = ind_MA(bars,20), ma60 = ind_MA(bars,60);
   const macd = ind_MACD(bars);
@@ -1375,6 +1424,12 @@ async function openKLine(code){
   const chg = last.close - prev.close;
   const chgPct = chg/prev.close*100;
   const cls = chgPct >= 0 ? "up" : "down";
+  // Range stats
+  const rangeHigh = Math.max(...bars.map(b=>b.high));
+  const rangeLow = Math.min(...bars.map(b=>b.low));
+  const firstClose = bars[0].close;
+  const rangeRet = (last.close - firstClose) / firstClose * 100;
+  const retCls = rangeRet >= 0 ? "up" : "down";
   document.getElementById("klineSummary").innerHTML = `
     <span><b class="${cls}">${last.close.toFixed(2)}</b> <span class="${cls}">${chgPct>=0?"+":""}${chgPct.toFixed(2)}%</span></span>
     <span>开 <b>${last.open.toFixed(2)}</b></span>
@@ -1382,6 +1437,10 @@ async function openKLine(code){
     <span>低 <b>${last.low.toFixed(2)}</b></span>
     <span>量 <b>${(last.volume/10000).toFixed(0)}万手</b></span>
     <span>日期 <b>${last.date}</b></span>
+    <span style="border-left:1px solid var(--border);padding-left:14px">
+      区间 ${bars.length} 根 · 最高 <b>${rangeHigh.toFixed(2)}</b> · 最低 <b>${rangeLow.toFixed(2)}</b> ·
+      涨跌 <b class="${retCls}">${rangeRet>=0?"+":""}${rangeRet.toFixed(2)}%</b>
+    </span>
   `;
 
   // Indicator panel
@@ -1594,6 +1653,26 @@ document.getElementById("klineClose").onclick = () =>
 document.getElementById("klineModal").onclick = (e) => {
   if (e.target.id === "klineModal") e.target.classList.remove("show");
 };
+
+// Period / range chip handlers
+document.querySelectorAll("#klineModal .kl-controls [data-p]").forEach(btn => {
+  btn.onclick = () => {
+    if (!klState.code) return;
+    document.querySelectorAll("#klineModal .kl-controls [data-p]").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    klState.period = btn.dataset.p;
+    reloadKLine();
+  };
+});
+document.querySelectorAll("#klineModal .kl-controls [data-r]").forEach(btn => {
+  btn.onclick = () => {
+    if (!klState.code) return;
+    document.querySelectorAll("#klineModal .kl-controls [data-r]").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    klState.range = +btn.dataset.r;
+    reloadKLine();
+  };
+});
 
 // ============ PnL snapshot + curve ============
 let pnlChart = null;
