@@ -198,9 +198,26 @@
 
   /* Timeline & cross signal */
   .tl{display:flex;flex-direction:column;gap:10px}
-  .tl-item{display:flex;gap:10px;font-size:13px}
-  .tl-item .when{min-width:78px;color:var(--gold);font-weight:600;font-size:12px}
-  .tl-item .what span{color:var(--muted);font-size:12px;display:block;margin-top:2px}
+  .tl-item{display:flex;gap:12px;font-size:13px;padding:10px 0;border-bottom:1px solid var(--border)}
+  .tl-item:last-child{border-bottom:none}
+  .tl-item .when{min-width:90px;color:var(--gold);font-weight:600;font-size:12px}
+  .tl-item .what{flex:1}
+  .tl-item .what .title{font-weight:600;margin-bottom:4px}
+  .tl-item .what .detail{color:var(--muted);font-size:12px;display:block;margin-top:2px;line-height:1.55}
+  .tl-item .what .outcome{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:4px;background:var(--panel-2);border-left:2px solid var(--gold)}
+  .tl-item .what .meta{font-size:11px;color:var(--muted);margin-top:4px}
+  .tl-item .what .meta .tag{display:inline-block;margin-right:5px;padding:1px 5px;background:var(--panel-2);border-radius:3px;color:var(--text)}
+  .tl-item .what .meta .stk{display:inline-block;margin-left:6px;padding:1px 5px;background:rgba(41,214,214,.18);color:#7ce7e7;border-radius:3px;cursor:pointer}
+  .tl-item .what .meta .stk:hover{background:rgba(41,214,214,.35)}
+  .status-badge{
+    display:inline-block;padding:2px 8px;border-radius:3px;font-size:10px;font-weight:700;
+    margin-right:6px;vertical-align:middle
+  }
+  .status-badge.active{background:rgba(245,179,1,.2);color:#ffd466}
+  .status-badge.confirmed{background:rgba(46,204,113,.2);color:#7ee2a3}
+  .status-badge.partial{background:rgba(255,165,0,.2);color:#ffb866}
+  .status-badge.missed{background:rgba(255,90,106,.2);color:#ff8a95}
+  .status-badge.pending{background:rgba(138,160,192,.18);color:#b0c0d8}
   .cross{display:grid;grid-template-columns:1fr 40px 1fr;gap:10px;align-items:center;margin-top:8px}
   .cross .col{background:var(--panel-2);border:1px solid var(--border);border-radius:8px;padding:12px}
   .cross .col h4{font-size:13px;margin-bottom:8px}
@@ -616,17 +633,19 @@
     </div>
   </div>
 
-  <!-- ===================== TAB 3: STRATEGY ===================== -->
+  <!-- ===================== TAB 3: STRATEGY (data-driven) ===================== -->
   <div class="tab-content" id="tab-strategy">
-    <h2>2026 关键催化剂</h2>
+    <h2>2026 关键催化剂 <span style="font-size:12px;color:var(--muted);font-weight:400">数据更新于 <b id="catLastUpdated">--</b></span></h2>
     <div class="card">
-      <div class="tl">
-        <div class="tl-item"><div class="when">Q2</div><div class="what">华为昇腾 910C 大规模量产爬坡<span>关注拓维、神州数码订单确认；整机毛利能否突破 15%</span></div></div>
-        <div class="tl-item"><div class="when">Q2-Q3</div><div class="what">DeepSeek 下一代 MoE 模型 + 国产芯片适配披露<span>寒武纪/海光是否进入官方适配清单 = 生态突围信号</span></div></div>
-        <div class="tl-item"><div class="when">Q3</div><div class="what">三大运营商 & 国资云智算中心招标放量<span>国产芯片中标比例 >50% 即"政策闭环"成立</span></div></div>
-        <div class="tl-item"><div class="when">Q3-Q4</div><div class="what">HBM3/HBM3e 国产化验证节点<span>香农、雅克的产业链机会；突破即解除最大瓶颈</span></div></div>
-        <div class="tl-item"><div class="when">Q4</div><div class="what">金融、能源行业国产算力渗透率中报<span>恒生电子等自研大模型厂商业绩兑现窗口</span></div></div>
+      <div class="info-filter" id="catStatusFilter" style="margin-bottom:12px">
+        <button data-cs="all" class="active">全部</button>
+        <button data-cs="active">🟡 进行中</button>
+        <button data-cs="confirmed">✅ 已兑现</button>
+        <button data-cs="partial">🟠 部分兑现</button>
+        <button data-cs="missed">❌ 未达预期</button>
+        <button data-cs="pending">⚪ 待发生</button>
       </div>
+      <div class="tl" id="catalystList"></div>
     </div>
 
     <h2>交叉观察 · "算力的下半场是电力"</h2>
@@ -634,32 +653,18 @@
       <div class="cross">
         <div class="col">
           <h4>🖥 算力端信号</h4>
-          <ul>
-            <li>单机柜功率 40kW → 120kW，液冷必选</li>
-            <li>昇腾/寒武纪集群迈向万卡级</li>
-            <li>推理算力 3 年 10× 增长</li>
-            <li>训练向西部数据中心转移</li>
-          </ul>
+          <ul id="csCompute"></ul>
         </div>
         <div class="arrow">⇌</div>
         <div class="col">
           <h4>⚡ 电力端配套</h4>
-          <ul>
-            <li>核电：中国核电 601985 / 中国广核 003816</li>
-            <li>特高压：国电南瑞 600406 / 许继电气 000400</li>
-            <li>电网：思源电气 002028 / 平高电气 600312</li>
-            <li>绿电+储能：宁德时代 300750 / 阳光电源 300274</li>
-          </ul>
+          <ul id="csPower"></ul>
         </div>
       </div>
     </div>
 
     <h2>策略备忘</h2>
-    <div class="notes">
-      <div class="note g"><b>做多逻辑</b>DeepSeek 级算法对 MoE 稀疏架构的极致优化，天然抬高国产 ASIC 性价比。"算法下沉"是国产 CUDA 生态成型的最大推力。</div>
-      <div class="note"><b>观察指标</b>① 央国企招标占比；② HBM 国产化进度；③ CANN/Neuware 开发者活跃度；④ DeepSeek-R 适配清单。</div>
-      <div class="note r"><b>风险提示</b>先进制程受限、地缘突发、估值已部分反映、整机毛利承压、HBM 断供 → 保留 10% 现金仓。</div>
-    </div>
+    <div class="notes" id="strategyNotes"></div>
   </div>
 
   <footer>
@@ -2046,6 +2051,90 @@ loadPublicNews().then(() => {
   renderWatchlist();
   renderGlobalFeed();
 });
+
+// === Strategy / Catalysts (data-driven) ===
+let catalystsData = null;
+let catStatusFilter = "all";
+const STATUS_LABEL = {
+  active: "🟡 进行中", confirmed: "✅ 已兑现", partial: "🟠 部分兑现",
+  missed: "❌ 未达预期", pending: "⚪ 待发生"
+};
+async function loadCatalysts(){
+  try {
+    const r = await fetch("data/catalysts.json?_=" + Date.now());
+    catalystsData = await r.json();
+  } catch(e) {
+    catalystsData = { catalysts: [], cross_signals: {}, strategy_notes: [] };
+  }
+  renderStrategy();
+}
+function renderStrategy(){
+  if (!catalystsData) return;
+  // Last updated
+  document.getElementById("catLastUpdated").textContent = catalystsData._meta?.last_updated || "--";
+
+  // Catalysts list
+  const items = catalystsData.catalysts || [];
+  const filtered = catStatusFilter === "all" ? items : items.filter(c => c.status === catStatusFilter);
+  // Sort: active first, then by date desc
+  const statusOrder = { active: 0, confirmed: 1, partial: 1, missed: 1, pending: 2 };
+  filtered.sort((a, b) => {
+    const so = (statusOrder[a.status] ?? 9) - (statusOrder[b.status] ?? 9);
+    if (so !== 0) return so;
+    return (b.date || "").localeCompare(a.date || "");
+  });
+
+  const list = document.getElementById("catalystList");
+  if (filtered.length === 0) {
+    list.innerHTML = `<div class="info-empty">当前筛选下无催化剂</div>`;
+  } else {
+    list.innerHTML = filtered.map(c => {
+      const tags = (c.tags || []).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("");
+      const stocks = (c.stocks || []).map(code => {
+        const s = WATCH.find(w => w.code === code);
+        return `<span class="stk" data-code="${code}">${code} ${s ? s.name : ""}</span>`;
+      }).join("");
+      const outcome = c.outcome ? `<div class="outcome">${escapeHtml(c.outcome)}</div>` : "";
+      return `
+        <div class="tl-item">
+          <div class="when">${escapeHtml(c.period || c.date)}<br><span style="font-size:10px;color:var(--muted)">${escapeHtml(c.date)}</span></div>
+          <div class="what">
+            <div class="title"><span class="status-badge ${c.status}">${STATUS_LABEL[c.status] || c.status}</span>${escapeHtml(c.title)}</div>
+            <div class="detail">${escapeHtml(c.detail)}</div>
+            ${outcome}
+            <div class="meta">${tags}${stocks ? "&nbsp;&nbsp;" + stocks : ""}</div>
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    // Bind stock chips → open info panel
+    list.querySelectorAll(".stk[data-code]").forEach(el => {
+      el.onclick = () => openInfo(el.dataset.code);
+    });
+  }
+
+  // Cross signals
+  const cs = catalystsData.cross_signals || {};
+  document.getElementById("csCompute").innerHTML = (cs.compute || []).map(s => `<li>${escapeHtml(s)}</li>`).join("");
+  document.getElementById("csPower").innerHTML = (cs.power || []).map(s => `<li>${escapeHtml(s)}</li>`).join("");
+
+  // Strategy notes
+  const notes = catalystsData.strategy_notes || [];
+  document.getElementById("strategyNotes").innerHTML = notes.map(n => {
+    const cls = n.type === "long" ? "g" : n.type === "risk" ? "r" : "";
+    return `<div class="note ${cls}"><b>${escapeHtml(n.title)}</b>${escapeHtml(n.content)}</div>`;
+  }).join("");
+}
+document.querySelectorAll("#catStatusFilter button").forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll("#catStatusFilter button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    catStatusFilter = btn.dataset.cs;
+    renderStrategy();
+  };
+});
+loadCatalysts();
 
 </script>
 </body>
