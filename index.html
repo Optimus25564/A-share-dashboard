@@ -1301,11 +1301,22 @@ function renderCompanyBasics(code){
   // 增长率
   const revGrowth = qs.length >= 2 ? ((qs[qs.length-1].rev / qs[0].rev - 1) * 100) : null;
 
+  // src badge: A=绿色实数据 / F=橙色估算
+  const srcBadge = (src) => {
+    if (src === "A") return `<span title="Actual 真实财报" style="display:inline-block;background:rgba(46,204,113,.2);color:#7ee2a3;font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;margin-left:4px;letter-spacing:.5px">A</span>`;
+    return `<span title="Forecast 估算" style="display:inline-block;background:rgba(245,179,1,.2);color:var(--gold);font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;margin-left:4px;letter-spacing:.5px">F</span>`;
+  };
+  // 全 A / 含 F 的整体提示
+  const allActual = qs.every(q => q.src === "A");
+  const sourceTag = allActual
+    ? `<span style="font-size:10px;color:#7ee2a3;font-weight:400">✓ 全部已校核财报</span>`
+    : `<span style="font-size:10px;color:var(--gold);font-weight:400">⚠ 含估算数据</span>`;
+
   box.innerHTML = `
     <div style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:6px">📋 业务简介</div>
     <div style="font-size:13px;line-height:1.6;color:#cdd6e6;margin-bottom:12px">${data.intro || "--"}</div>
-    <div style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:6px;display:flex;justify-content:space-between;align-items:baseline">
-      <span>📊 近 4 季度财务</span>
+    <div style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:6px;display:flex;justify-content:space-between;align-items:baseline;gap:10px">
+      <span>📊 近 4 季度财务 ${sourceTag}</span>
       ${revGrowth !== null ? `<span style="font-size:11px;color:${revGrowth>=0?'#ff8a95':'#7ee2a3'};font-weight:400">收入${revGrowth>=0?'+':''}${revGrowth.toFixed(1)}% (${qs[0].q}→${qs[qs.length-1].q})</span>` : ""}
     </div>
     <div style="position:relative;height:180px;margin-bottom:8px"><canvas id="companyFinChart"></canvas></div>
@@ -1324,9 +1335,11 @@ function renderCompanyBasics(code){
           const revArrow = prev ? (q.rev > prev.rev ? '<span style="color:#ff8a95">↑</span>' : q.rev < prev.rev ? '<span style="color:#7ee2a3">↓</span>' : '<span style="color:var(--muted)">→</span>') : '';
           const gmArrow = prev ? (q.gm > prev.gm ? '<span style="color:#ff8a95">↑</span>' : q.gm < prev.gm ? '<span style="color:#7ee2a3">↓</span>' : '<span style="color:var(--muted)">→</span>') : '';
           const nmArrow = prev ? (q.nm > prev.nm ? '<span style="color:#ff8a95">↑</span>' : q.nm < prev.nm ? '<span style="color:#7ee2a3">↓</span>' : '<span style="color:var(--muted)">→</span>') : '';
+          const isF = q.src === "F";
+          const dim = isF ? "opacity:.75;font-style:italic" : "";
           return `
-            <tr style="border-bottom:1px solid var(--border)">
-              <td style="padding:5px 8px;color:#cdd6e6">${q.q}</td>
+            <tr style="border-bottom:1px solid var(--border);${dim}">
+              <td style="padding:5px 8px;color:#cdd6e6">${q.q}${srcBadge(q.src)}</td>
               <td style="text-align:right;padding:5px 8px">${q.rev.toFixed(1)} ${revArrow}</td>
               <td style="text-align:right;padding:5px 8px">${q.gm.toFixed(1)}% ${gmArrow}</td>
               <td style="text-align:right;padding:5px 8px;${q.nm<0?'color:#7ee2a3':''}">${q.nm.toFixed(1)}% ${nmArrow}</td>
@@ -1338,22 +1351,56 @@ function renderCompanyBasics(code){
   `;
 
   // 渲染图表 (收入柱 + 毛利率/净利率双折线)
+  // A 数据: 实色实线 / F 数据: 半透明 + 虚线边框, 折线点用空心圆
   if (_companyChart) { try{_companyChart.destroy();}catch(e){} _companyChart = null; }
   const ctx = document.getElementById("companyFinChart");
   if (ctx && qs.length) {
+    const barFill = qs.map(q => q.src === "A" ? "rgba(245,179,1,.55)" : "rgba(245,179,1,.18)");
+    const barBorder = qs.map(q => q.src === "A" ? "#f5b301" : "rgba(245,179,1,.55)");
+    const barBorderDash = qs.map(q => q.src === "A" ? [] : [4,3]);
+    const pointStyleGM = qs.map(q => q.src === "A" ? "circle" : "circle");
+    const pointBgGM = qs.map(q => q.src === "A" ? "#ff5a6a" : "rgba(255,90,106,.25)");
+    const pointBgNM = qs.map(q => q.src === "A" ? "#29d6d6" : "rgba(41,214,214,.25)");
+    // 线段: 如果两端任一为 F → 虚线
+    const segDashGM = (ctx2) => {
+      const i0 = ctx2.p0DataIndex, i1 = ctx2.p1DataIndex;
+      return (qs[i0].src === "F" || qs[i1].src === "F") ? [4,3] : undefined;
+    };
+
     _companyChart = new Chart(ctx, {
       data: {
         labels: qs.map(q => q.q),
         datasets: [
-          {type:"bar", label:"收入(亿)", data: qs.map(q=>q.rev), backgroundColor:"rgba(245,179,1,.45)", borderColor:"#f5b301", borderWidth:1, yAxisID:"y", order:2},
-          {type:"line", label:"毛利率", data: qs.map(q=>q.gm), borderColor:"#ff5a6a", backgroundColor:"#ff5a6a", borderWidth:2, pointRadius:3, tension:0.2, yAxisID:"y1", order:1},
-          {type:"line", label:"净利率", data: qs.map(q=>q.nm), borderColor:"#29d6d6", backgroundColor:"#29d6d6", borderWidth:2, pointRadius:3, tension:0.2, yAxisID:"y1", order:1},
+          {type:"bar", label:"收入(亿)", data: qs.map(q=>q.rev),
+            backgroundColor: barFill, borderColor: barBorder, borderWidth:1.5,
+            borderSkipped:false,
+            yAxisID:"y", order:2},
+          {type:"line", label:"毛利率", data: qs.map(q=>q.gm),
+            borderColor:"#ff5a6a", backgroundColor:"#ff5a6a", borderWidth:2,
+            pointRadius:4, pointBackgroundColor: pointBgGM, pointBorderColor:"#ff5a6a", pointBorderWidth:1.5,
+            segment:{ borderDash: segDashGM },
+            tension:0.2, yAxisID:"y1", order:1},
+          {type:"line", label:"净利率", data: qs.map(q=>q.nm),
+            borderColor:"#29d6d6", backgroundColor:"#29d6d6", borderWidth:2,
+            pointRadius:4, pointBackgroundColor: pointBgNM, pointBorderColor:"#29d6d6", pointBorderWidth:1.5,
+            segment:{ borderDash: segDashGM },
+            tension:0.2, yAxisID:"y1", order:1},
         ]
       },
       options: {
         responsive:true, maintainAspectRatio:false,
         interaction:{mode:"index", intersect:false},
-        plugins:{legend:{labels:{color:"#8aa0c0",font:{size:11},boxWidth:12}}},
+        plugins:{
+          legend:{labels:{color:"#8aa0c0",font:{size:11},boxWidth:12}},
+          tooltip:{
+            callbacks:{
+              afterLabel: (item) => {
+                const q = qs[item.dataIndex];
+                return q.src === "A" ? "📗 真实财报 (Actual)" : "📙 估算 (Forecast)";
+              }
+            }
+          }
+        },
         scales:{
           x:{ticks:{color:"#8aa0c0",font:{size:11}},grid:{display:false}},
           y:{position:"left",ticks:{color:"#f5b301",font:{size:10},callback:v=>v+"亿"},grid:{color:"#1f2a44"},title:{display:false}},
