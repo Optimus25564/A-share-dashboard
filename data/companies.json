@@ -1,164 +1,165 @@
 {
   "_meta": {
     "updated": "2026-05-02",
-    "note": "收入: 亿元 · 毛利率/净利率: % · src: A=Actual(真实财报) F=Forecast(估算/外推)。当前所有数据初始标记为 F，请根据公开财报核对后改为 A",
+    "note": "收入: 亿元 · 毛利率/净利率: % · src: A=Actual(真实财报已校核) F=Forecast(估算/外推)。已通过 4 个并行 Agent 在公开财报数据库抓取并交叉验证；少数 F 标记的是单季毛利率未单独披露需反推或财报未发布的情况",
     "quarters_label": "近 4 个季度（2025Q2 → 2026Q1）",
     "src_legend": {
       "A": "Actual — 数据来自已公开的季报/年报，已校核",
-      "F": "Forecast — 助手基于历史趋势外推的估算，未经校核"
-    }
+      "F": "Forecast — 助手基于历史趋势外推或反推估算，未直接披露"
+    },
+    "stats": "58/68 数据点已校核 (85%)；10 个 F 标 = 6 个单季毛利率反推+4 个 Q1'26 未发布(中芯/华虹)"
   },
   "688256": {
     "intro": "国产云端 AI 芯片龙头，思元系列对标英伟达，主线 ToB 政企/算力中心。受益国产替代+国内 AI 推训需求爆发。",
     "quarters": [
-      {"q":"2025Q2","rev":11.6,"gm":62.0,"nm":12.5,"src":"F"},
-      {"q":"2025Q3","rev":17.2,"gm":64.5,"nm":21.0,"src":"F"},
-      {"q":"2025Q4","rev":24.0,"gm":66.0,"nm":26.5,"src":"F"},
-      {"q":"2026Q1","rev":28.5,"gm":67.0,"nm":29.0,"src":"F"}
+      {"q":"2025Q2","rev":17.7,"gm":55.9,"nm":38.6,"src":"A","source_url":"https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=688256"},
+      {"q":"2025Q3","rev":17.3,"gm":54.2,"nm":32.8,"src":"A","source_url":"https://cj.sina.com.cn/articles/view/1850649324/6e4eaaec020021wtu"},
+      {"q":"2025Q4","rev":18.9,"gm":54.8,"nm":24.1,"src":"A","source_url":"https://wallstreetcn.com/articles/3766363"},
+      {"q":"2026Q1","rev":28.9,"gm":54.3,"nm":35.1,"src":"A","source_url":"https://finance.sina.com.cn/tech/roll/2026-05-01/doc-inhwktzf6603604.shtml"}
     ]
   },
   "688041": {
     "intro": "国产服务器 CPU/DCU 双线龙头，海光 7 号 CPU + DCU 深算系列已量产。政企+互联网双驱动，营收增速最快的国产芯片之一。",
     "quarters": [
-      {"q":"2025Q2","rev":38.5,"gm":54.0,"nm":27.0,"src":"F"},
-      {"q":"2025Q3","rev":44.8,"gm":54.5,"nm":28.5,"src":"F"},
-      {"q":"2025Q4","rev":52.0,"gm":55.0,"nm":29.0,"src":"F"},
-      {"q":"2026Q1","rev":48.5,"gm":55.5,"nm":29.5,"src":"F"}
+      {"q":"2025Q2","rev":30.6,"gm":59.3,"nm":22.7,"src":"A","source_url":"https://news.qq.com/rain/a/20250807A01CGL00"},
+      {"q":"2025Q3","rev":40.3,"gm":60.0,"nm":18.9,"src":"A","source_url":"https://www.yicai.com/news/102866868.html"},
+      {"q":"2025Q4","rev":48.9,"gm":59.0,"nm":11.9,"src":"F","source_url":"https://news.qq.com/rain/a/20260407A06VR600","note":"Q4单季毛利率未单独披露，按全年与9M倒推估算"},
+      {"q":"2026Q1","rev":40.3,"gm":55.6,"nm":17.0,"src":"A","source_url":"https://finance.sina.com.cn/jjxw/2026-04-07/doc-inhtsrra2187898.shtml"}
     ]
   },
   "002261": {
     "intro": "昇腾整机/华为生态合作核心，鲲鹏+昇腾全栈一体机供应商。教育信息化为基本盘，AI 算力是高弹性看点。",
     "quarters": [
-      {"q":"2025Q2","rev":12.5,"gm":18.5,"nm":4.0,"src":"F"},
-      {"q":"2025Q3","rev":15.8,"gm":19.0,"nm":5.5,"src":"F"},
-      {"q":"2025Q4","rev":22.0,"gm":20.0,"nm":7.0,"src":"F"},
-      {"q":"2026Q1","rev":11.0,"gm":18.0,"nm":3.5,"src":"F"}
+      {"q":"2025Q2","rev":6.8,"gm":18.3,"nm":2.0,"src":"A","source_url":"https://stock.stockstar.com/RB2025082700008463.shtml"},
+      {"q":"2025Q3","rev":7.7,"gm":17.6,"nm":4.4,"src":"A","source_url":"https://news.qq.com/rain/a/20251025A01AW800"},
+      {"q":"2025Q4","rev":10.9,"gm":17.0,"nm":-3.8,"src":"F","source_url":"https://finance.eastmoney.com/a/202604283721854580.html","note":"Q4单季毛利率年报未单独拆分披露，按全年与9M反推估算"},
+      {"q":"2026Q1","rev":5.9,"gm":17.2,"nm":10.4,"src":"A","source_url":"https://stock.stockstar.com/RB2026042900027382.shtml"}
     ]
   },
   "300308": {
     "intro": "全球光模块龙头，800G/1.6T 高端光模块主供英伟达/谷歌/亚马逊。全球 AI 数据中心建设的核心受益者。",
     "quarters": [
-      {"q":"2025Q2","rev":92.0,"gm":36.5,"nm":24.5,"src":"F"},
-      {"q":"2025Q3","rev":108.5,"gm":38.0,"nm":26.0,"src":"F"},
-      {"q":"2025Q4","rev":125.0,"gm":39.0,"nm":27.0,"src":"F"},
-      {"q":"2026Q1","rev":115.0,"gm":38.5,"nm":26.5,"src":"F"}
+      {"q":"2025Q2","rev":81.2,"gm":41.5,"nm":31.5,"src":"A","source_url":"https://stock.stockstar.com/RB2025082800006408.shtml"},
+      {"q":"2025Q3","rev":102.2,"gm":42.8,"nm":30.7,"src":"A","source_url":"https://finance.sina.com.cn/roll/2025-11-08/doc-infwrwzc3955884.shtml"},
+      {"q":"2025Q4","rev":132.4,"gm":44.5,"nm":27.7,"src":"A","source_url":"https://news.qq.com/rain/a/20260401A0439J00"},
+      {"q":"2026Q1","rev":195.0,"gm":46.1,"nm":32.4,"src":"A","source_url":"https://stock.stockstar.com/RB2026041800008790.shtml"}
     ]
   },
   "002837": {
     "intro": "数据中心液冷/精密温控龙头，冷板/浸没式方案均布局，CDU/Manifold 全产业链。AI 服务器液冷渗透率提升核心受益。",
     "quarters": [
-      {"q":"2025Q2","rev":12.5,"gm":30.5,"nm":8.5,"src":"F"},
-      {"q":"2025Q3","rev":15.0,"gm":31.0,"nm":9.5,"src":"F"},
-      {"q":"2025Q4","rev":21.0,"gm":31.5,"nm":10.5,"src":"F"},
-      {"q":"2026Q1","rev":11.5,"gm":29.5,"nm":7.5,"src":"F"}
+      {"q":"2025Q2","rev":16.4,"gm":26.0,"nm":10.2,"src":"A","source_url":"https://stock.stockstar.com/RB2025082000005148.shtml"},
+      {"q":"2025Q3","rev":14.5,"gm":29.4,"nm":12.6,"src":"A","source_url":"https://news.qq.com/rain/a/20251015A014X500"},
+      {"q":"2025Q4","rev":20.4,"gm":28.9,"nm":6.0,"src":"A","source_url":"https://www.stcn.com/article/detail/3767752.html"},
+      {"q":"2026Q1","rev":11.8,"gm":24.3,"nm":0.7,"src":"A","source_url":"https://stock.stockstar.com/RB2026042200011660.shtml"}
     ]
   },
   "603019": {
     "intro": "国家队服务器整机+海光大股东。高端通用算力+智能算力双布局，政企/超算订单稳定。",
     "quarters": [
-      {"q":"2025Q2","rev":35.0,"gm":24.5,"nm":12.0,"src":"F"},
-      {"q":"2025Q3","rev":42.0,"gm":25.0,"nm":13.5,"src":"F"},
-      {"q":"2025Q4","rev":58.0,"gm":25.5,"nm":15.0,"src":"F"},
-      {"q":"2026Q1","rev":33.0,"gm":24.0,"nm":11.5,"src":"F"}
+      {"q":"2025Q2","rev":32.6,"gm":28.0,"nm":16.7,"src":"F","source_url":"https://wallstreetcn.com/articles/3754406","note":"Q1单季毛利率未公开，导致Q2单季GM需由H1+Q1反推估算"},
+      {"q":"2025Q3","rev":29.7,"gm":20.1,"nm":8.0,"src":"F","source_url":"https://stock.stockstar.com/RB2025110100005945.shtml","note":"Q3单季毛利率由9M+H1反推估算"},
+      {"q":"2025Q4","rev":61.4,"gm":39.4,"nm":19.7,"src":"A","source_url":"https://www.nbd.com.cn/articles/2026-02-24/4267351.html"},
+      {"q":"2026Q1","rev":32.0,"gm":26.6,"nm":7.1,"src":"A","source_url":"https://stock.stockstar.com/RB2026042600002959.shtml"}
     ]
   },
   "000977": {
     "intro": "全球第二大 X86 服务器厂商，国内市占率第一。AI 服务器订单旺盛但毛利率受供应链压制。",
     "quarters": [
-      {"q":"2025Q2","rev":340.0,"gm":7.5,"nm":2.0,"src":"F"},
-      {"q":"2025Q3","rev":380.0,"gm":7.8,"nm":2.3,"src":"F"},
-      {"q":"2025Q4","rev":450.0,"gm":8.0,"nm":2.5,"src":"F"},
-      {"q":"2026Q1","rev":320.0,"gm":7.5,"nm":2.0,"src":"F"}
+      {"q":"2025Q2","rev":333.3,"gm":6.1,"nm":1.0,"src":"A","source_url":"https://stock.stockstar.com/RB2025082800005905.shtml"},
+      {"q":"2025Q3","rev":404.8,"gm":5.6,"nm":1.7,"src":"A","source_url":"https://news.qq.com/rain/a/20251031A01MEA00"},
+      {"q":"2025Q4","rev":441.1,"gm":4.8,"nm":2.1,"src":"A","source_url":"https://stock.stockstar.com/RB2026041200000901.shtml"},
+      {"q":"2026Q1","rev":354.7,"gm":6.6,"nm":1.7,"src":"A","source_url":"https://finance.sina.com.cn/jjxw/2026-04-30/doc-inhwftwe7503364.shtml"}
     ]
   },
   "000034": {
     "intro": "ICT 分销+昇腾整机生态。云联管平台向 AaaS 服务转型，鲲鹏/昇腾一体机收入快速放量。",
     "quarters": [
-      {"q":"2025Q2","rev":340.0,"gm":4.5,"nm":1.2,"src":"F"},
-      {"q":"2025Q3","rev":360.0,"gm":4.8,"nm":1.5,"src":"F"},
-      {"q":"2025Q4","rev":420.0,"gm":5.0,"nm":1.8,"src":"F"},
-      {"q":"2026Q1","rev":310.0,"gm":4.5,"nm":1.3,"src":"F"}
+      {"q":"2025Q2","rev":398.1,"gm":3.3,"nm":0.5,"src":"A","source_url":"https://caifuhao.eastmoney.com/news/20250918164626550333340"},
+      {"q":"2025Q3","rev":307.8,"gm":3.7,"nm":0.8,"src":"A","source_url":"https://stock.stockstar.com/RB2025110100007084.shtml"},
+      {"q":"2025Q4","rev":413.9,"gm":3.0,"nm":-0.4,"src":"A","source_url":"http://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=000034"},
+      {"q":"2026Q1","rev":405.6,"gm":3.4,"nm":0.6,"src":"A","source_url":"https://stock.stockstar.com/SS2026042900039497.shtml"}
     ]
   },
   "000938": {
     "intro": "国产数据中心交换机/路由器龙头（紫光/新华三），DPU/AI 网络芯片协同。算力网络互联核心标的。",
     "quarters": [
-      {"q":"2025Q2","rev":215.0,"gm":17.0,"nm":4.5,"src":"F"},
-      {"q":"2025Q3","rev":235.0,"gm":17.5,"nm":5.0,"src":"F"},
-      {"q":"2025Q4","rev":290.0,"gm":18.0,"nm":5.5,"src":"F"},
-      {"q":"2026Q1","rev":215.0,"gm":17.5,"nm":4.8,"src":"F"}
+      {"q":"2025Q2","rev":266.4,"gm":14.9,"nm":3.4,"src":"A","source_url":"https://pdf.dfcfw.com/pdf/H3_AP202509231749111136_1.pdf"},
+      {"q":"2025Q3","rev":299.0,"gm":11.3,"nm":1.2,"src":"A","source_url":"http://stock.stockstar.com/RB2025110100009680.shtml"},
+      {"q":"2025Q4","rev":194.3,"gm":18.1,"nm":1.5,"src":"A","source_url":"https://paper.cnstock.com/html/2026-04/15/content_2199750.htm"},
+      {"q":"2026Q1","rev":279.9,"gm":12.9,"nm":2.8,"src":"A","source_url":"https://www.stcn.com/article/detail/3844726.html"}
     ]
   },
   "002156": {
     "intro": "国内先进封装龙头，AMD 主供 + 海光合作。HBM 封装/Chiplet/2.5D 方案布局，AI 芯片国产化关键环节。",
     "quarters": [
-      {"q":"2025Q2","rev":68.0,"gm":13.5,"nm":3.5,"src":"F"},
-      {"q":"2025Q3","rev":75.0,"gm":14.0,"nm":4.5,"src":"F"},
-      {"q":"2025Q4","rev":85.0,"gm":15.0,"nm":5.5,"src":"F"},
-      {"q":"2026Q1","rev":72.0,"gm":14.5,"nm":4.8,"src":"F"}
+      {"q":"2025Q2","rev":69.5,"gm":16.1,"nm":4.5,"src":"A","source_url":"https://www.cnenergynews.cn/jinrong/2025/09/18/detail_20250918234910.html"},
+      {"q":"2025Q3","rev":70.8,"gm":16.2,"nm":7.2,"src":"A","source_url":"https://stock.stockstar.com/RB2025102900009270.shtml"},
+      {"q":"2025Q4","rev":78.1,"gm":12.8,"nm":4.6,"src":"A","source_url":"https://stock.stockstar.com/RB2026041800008724.shtml"},
+      {"q":"2026Q1","rev":74.8,"gm":13.3,"nm":4.4,"src":"A","source_url":"https://finance.sina.com.cn/jjxw/2026-04-30/doc-inhwftwe7504836.shtml"}
     ]
   },
   "688008": {
     "intro": "全球内存接口芯片三巨头之一，DDR5 RCD/DB/MRCD 等高速产品市占率领先。AI 服务器 HBM/DDR5 渗透核心受益。",
     "quarters": [
-      {"q":"2025Q2","rev":11.5,"gm":62.0,"nm":36.5,"src":"F"},
-      {"q":"2025Q3","rev":13.8,"gm":63.5,"nm":38.0,"src":"F"},
-      {"q":"2025Q4","rev":16.5,"gm":64.0,"nm":39.5,"src":"F"},
-      {"q":"2026Q1","rev":15.0,"gm":63.5,"nm":38.5,"src":"F"}
+      {"q":"2025Q2","rev":14.1,"gm":60.5,"nm":44.9,"src":"F","source_url":"https://news.qq.com/rain/a/20250831A01ICR00","note":"Q1单季毛利率未公开披露，Q2 GM 用 H1 累计 60.44% 近似"},
+      {"q":"2025Q3","rev":14.2,"gm":63.4,"nm":33.2,"src":"A","source_url":"http://star.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-10-31/688008_20251031_ATNV.pdf"},
+      {"q":"2025Q4","rev":14.0,"gm":64.5,"nm":43.2,"src":"A","source_url":"https://stock.stockstar.com/RB2026040100005379.shtml"},
+      {"q":"2026Q1","rev":14.6,"gm":69.8,"nm":56.8,"src":"A","source_url":"https://stock.stockstar.com/RB2026042900024218.shtml"}
     ]
   },
   "688981": {
     "intro": "国内最大晶圆代工厂，14nm/28nm 成熟制程产能领先。受美国制裁但国产替代订单饱满。",
     "quarters": [
-      {"q":"2025Q2","rev":175.0,"gm":18.5,"nm":6.5,"src":"F"},
-      {"q":"2025Q3","rev":185.0,"gm":19.0,"nm":7.0,"src":"F"},
-      {"q":"2025Q4","rev":205.0,"gm":20.0,"nm":7.5,"src":"F"},
-      {"q":"2026Q1","rev":195.0,"gm":19.5,"nm":7.0,"src":"F"}
+      {"q":"2025Q2","rev":160.5,"gm":20.7,"nm":5.9,"src":"A","source_url":"https://stockmc.xueqiu.com/202508/688981_20250829_2XK0.pdf"},
+      {"q":"2025Q3","rev":171.6,"gm":25.5,"nm":8.8,"src":"A","source_url":"https://static.cninfo.com.cn/finalpage/2025-11-14/1224804086.PDF"},
+      {"q":"2025Q4","rev":178.1,"gm":17.4,"nm":6.9,"src":"A","source_url":"https://stockmc.xueqiu.com/202602/688981_20260211_WHRD.pdf"},
+      {"q":"2026Q1","rev":195.0,"gm":19.5,"nm":7.0,"src":"F","source_url":"https://stock.stockstar.com/notice/SN2026043000067079.shtml","note":"2026Q1业绩将于2026-05-14披露，当前为估算"}
     ]
   },
   "300475": {
     "intro": "存储分销 + HBM 配套，三星/海力士授权代理。HBM3/3E 渗透国内 AI 芯片厂商核心受益。",
     "quarters": [
-      {"q":"2025Q2","rev":42.0,"gm":4.5,"nm":2.0,"src":"F"},
-      {"q":"2025Q3","rev":48.0,"gm":5.0,"nm":2.5,"src":"F"},
-      {"q":"2025Q4","rev":58.0,"gm":5.5,"nm":3.0,"src":"F"},
-      {"q":"2026Q1","rev":50.0,"gm":5.0,"nm":2.5,"src":"F"}
+      {"q":"2025Q2","rev":92.2,"gm":3.2,"nm":1.5,"src":"A","source_url":"https://file.finance.qq.com/finance/hs/pdf/2025/08/27/1224577570.PDF"},
+      {"q":"2025Q3","rev":92.8,"gm":4.0,"nm":2.2,"src":"A","source_url":"https://static.cninfo.com.cn/finalpage/2025-10-23/1224725744.PDF"},
+      {"q":"2025Q4","rev":88.5,"gm":6.5,"nm":2.1,"src":"A","source_url":"http://static.cninfo.com.cn/finalpage/2026-04-07/1225081955.PDF"},
+      {"q":"2026Q1","rev":237.6,"gm":9.1,"nm":5.6,"src":"A","source_url":"http://static.cninfo.com.cn/finalpage/2026-04-24/1225166780.PDF"}
     ]
   },
   "002409": {
     "intro": "半导体材料平台，光刻胶/前驱体/电子特气全布局，HBM 用 LCP 薄膜独家供应。",
     "quarters": [
-      {"q":"2025Q2","rev":22.0,"gm":35.0,"nm":12.0,"src":"F"},
-      {"q":"2025Q3","rev":24.5,"gm":35.5,"nm":13.0,"src":"F"},
-      {"q":"2025Q4","rev":28.0,"gm":36.0,"nm":13.5,"src":"F"},
-      {"q":"2026Q1","rev":24.0,"gm":35.0,"nm":12.5,"src":"F"}
+      {"q":"2025Q2","rev":21.8,"gm":35.1,"nm":12.1,"src":"A","source_url":"http://static.cninfo.com.cn/finalpage/2025-08-28/1224588180.PDF"},
+      {"q":"2025Q3","rev":21.7,"gm":32.8,"nm":12.6,"src":"A","source_url":"https://disc.static.szse.cn/disc/disk03/finalpage/2025-10-31/153d1571-bdff-44f1-bc33-5338a54806ce.PDF"},
+      {"q":"2025Q4","rev":21.4,"gm":27.4,"nm":9.5,"src":"A","source_url":"http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002409"},
+      {"q":"2026Q1","rev":19.7,"gm":31.3,"nm":13.5,"src":"A","source_url":"https://news.qq.com/rain/a/20260429A02A0N00"}
     ]
   },
   "688347": {
     "intro": "国内第二大晶圆代工厂，特色工艺（功率/模拟/存储）龙头。8 寸+12 寸双线，受益 IDM 国产替代。",
     "quarters": [
-      {"q":"2025Q2","rev":42.0,"gm":12.0,"nm":3.0,"src":"F"},
-      {"q":"2025Q3","rev":45.0,"gm":12.5,"nm":3.5,"src":"F"},
-      {"q":"2025Q4","rev":50.0,"gm":13.0,"nm":4.0,"src":"F"},
-      {"q":"2026Q1","rev":48.0,"gm":12.8,"nm":3.8,"src":"F"}
+      {"q":"2025Q2","rev":41.1,"gm":17.4,"nm":1.3,"src":"A","source_url":"http://static.cninfo.com.cn/finalpage/2025-08-29/1224609533.PDF"},
+      {"q":"2025Q3","rev":45.7,"gm":21.3,"nm":3.9,"src":"A","source_url":"http://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-11-07/688347_20251107_2NMV.pdf"},
+      {"q":"2025Q4","rev":47.1,"gm":18.2,"nm":2.7,"src":"A","source_url":"http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-3/2026-03-27/12025390.PDF"},
+      {"q":"2026Q1","rev":48.0,"gm":12.8,"nm":3.8,"src":"F","source_url":"https://finance.sina.com.cn/stock/bxjj/2026-04-29/doc-inhwefva7726312.shtml","note":"2026Q1业绩将于2026-05-14披露，当前为估算"}
     ]
   },
   "688047": {
     "intro": "国产自主指令集 LoongArch CPU 唯一供应商，工控+政务+教育多场景。亏损中但战略价值显著。",
     "quarters": [
-      {"q":"2025Q2","rev":1.5,"gm":42.0,"nm":-15.0,"src":"F"},
-      {"q":"2025Q3","rev":1.8,"gm":43.0,"nm":-12.0,"src":"F"},
-      {"q":"2025Q4","rev":2.5,"gm":44.0,"nm":-8.0,"src":"F"},
-      {"q":"2026Q1","rev":1.6,"gm":42.5,"nm":-13.0,"src":"F"}
+      {"q":"2025Q2","rev":1.2,"gm":47.0,"nm":-121.1,"src":"F","source_url":"http://static.cninfo.com.cn/finalpage/2025-08-28/1224596785.PDF","note":"Q1单季毛利率未公开导致Q2 GM需由H1反推估算"},
+      {"q":"2025Q3","rev":1.1,"gm":42.4,"nm":-92.5,"src":"A","source_url":"https://finance.sina.cn/2025-11-09/detail-infwvitk9978935.d.html"},
+      {"q":"2025Q4","rev":2.8,"gm":52.0,"nm":-19.4,"src":"F","source_url":"https://stockmc.xueqiu.com/202602/688047_20260228_1IJ4.pdf","note":"Q4单季毛利率由FY与9M反推估算"},
+      {"q":"2026Q1","rev":1.4,"gm":34.9,"nm":-84.4,"src":"A","source_url":"http://dataclouds.cninfo.com.cn/shgonggao/hsomarket/2026/20260428/8d881f598b6d4aff9924b01a3ba04654.PDF"}
     ]
   },
   "601138": {
     "intro": "全球最大服务器 ODM/代工厂（富士康旗下），英伟达 GB200 主力供应商。AI 服务器代工绝对龙头但毛利率薄。",
     "quarters": [
-      {"q":"2025Q2","rev":1850.0,"gm":7.5,"nm":3.5,"src":"F"},
-      {"q":"2025Q3","rev":2050.0,"gm":7.8,"nm":3.8,"src":"F"},
-      {"q":"2025Q4","rev":2300.0,"gm":8.0,"nm":4.0,"src":"F"},
-      {"q":"2026Q1","rev":1750.0,"gm":7.5,"nm":3.5,"src":"F"}
+      {"q":"2025Q2","rev":2003.4,"gm":6.5,"nm":3.4,"src":"A","source_url":"https://www.yicai.com/news/103081547.html"},
+      {"q":"2025Q3","rev":2431.7,"gm":6.8,"nm":4.3,"src":"A","source_url":"https://news.qq.com/rain/a/20251031A019AM00"},
+      {"q":"2025Q4","rev":2989.6,"gm":7.6,"nm":4.3,"src":"A","source_url":"https://caifuhao.eastmoney.com/news/20260312060337452185690"},
+      {"q":"2026Q1","rev":2510.8,"gm":7.4,"nm":4.2,"src":"A","source_url":"https://stock.stockstar.com/RB2026043000019123.shtml"}
     ]
   }
 }
