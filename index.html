@@ -723,6 +723,9 @@
     <h3 id="infoTitle">--</h3>
     <div class="info-stats" id="infoStats"></div>
 
+    <!-- 公司基本面 (业务简介 + 4 季度财务) -->
+    <div id="companyBasics" style="margin:14px 0;padding:14px;background:rgba(245,179,1,.04);border:1px solid rgba(245,179,1,.2);border-radius:8px"></div>
+
     <div class="info-add">
       <div style="font-size:12px;color:var(--muted);margin-bottom:2px">📝 添加笔记 / 非公开信息（仅存本地浏览器）</div>
       <textarea id="noteContent" placeholder="例如：调研反馈：Q2订单能见度高，下游昇腾整机厂排产到Q3..."></textarea>
@@ -1269,7 +1272,96 @@ async function openInfo(code){
   document.getElementById("noteTags").value = "";
 
   await loadPublicNews();
+  await loadCompanies();
+  renderCompanyBasics(code);
   renderInfoTimeline();
+}
+
+// === 公司基本面 ===
+let companiesData = null;
+let _companyChart = null;
+async function loadCompanies(){
+  if (companiesData) return companiesData;
+  try {
+    const r = await fetch("data/companies.json?_=" + Date.now());
+    companiesData = await r.json();
+  } catch(e){ companiesData = {}; }
+  return companiesData;
+}
+function renderCompanyBasics(code){
+  const box = document.getElementById("companyBasics");
+  if (!box) return;
+  const data = companiesData && companiesData[code];
+  if (!data) {
+    box.innerHTML = `<div style="color:var(--muted);font-size:12px">暂无该公司基本面数据</div>`;
+    return;
+  }
+  const meta = (companiesData._meta && companiesData._meta.note) || "";
+  const qs = data.quarters || [];
+  // 增长率
+  const revGrowth = qs.length >= 2 ? ((qs[qs.length-1].rev / qs[0].rev - 1) * 100) : null;
+
+  box.innerHTML = `
+    <div style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:6px">📋 业务简介</div>
+    <div style="font-size:13px;line-height:1.6;color:#cdd6e6;margin-bottom:12px">${data.intro || "--"}</div>
+    <div style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:6px;display:flex;justify-content:space-between;align-items:baseline">
+      <span>📊 近 4 季度财务</span>
+      ${revGrowth !== null ? `<span style="font-size:11px;color:${revGrowth>=0?'#ff8a95':'#7ee2a3'};font-weight:400">收入${revGrowth>=0?'+':''}${revGrowth.toFixed(1)}% (${qs[0].q}→${qs[qs.length-1].q})</span>` : ""}
+    </div>
+    <div style="position:relative;height:180px;margin-bottom:8px"><canvas id="companyFinChart"></canvas></div>
+    <table style="width:100%;font-size:12px;border-collapse:collapse;margin-bottom:6px">
+      <thead>
+        <tr style="color:var(--muted);border-bottom:1px solid var(--border)">
+          <th style="text-align:left;padding:4px 8px">季度</th>
+          <th style="text-align:right;padding:4px 8px">收入(亿)</th>
+          <th style="text-align:right;padding:4px 8px">毛利率</th>
+          <th style="text-align:right;padding:4px 8px">净利率</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${qs.map((q,i) => {
+          const prev = i > 0 ? qs[i-1] : null;
+          const revArrow = prev ? (q.rev > prev.rev ? '<span style="color:#ff8a95">↑</span>' : q.rev < prev.rev ? '<span style="color:#7ee2a3">↓</span>' : '<span style="color:var(--muted)">→</span>') : '';
+          const gmArrow = prev ? (q.gm > prev.gm ? '<span style="color:#ff8a95">↑</span>' : q.gm < prev.gm ? '<span style="color:#7ee2a3">↓</span>' : '<span style="color:var(--muted)">→</span>') : '';
+          const nmArrow = prev ? (q.nm > prev.nm ? '<span style="color:#ff8a95">↑</span>' : q.nm < prev.nm ? '<span style="color:#7ee2a3">↓</span>' : '<span style="color:var(--muted)">→</span>') : '';
+          return `
+            <tr style="border-bottom:1px solid var(--border)">
+              <td style="padding:5px 8px;color:#cdd6e6">${q.q}</td>
+              <td style="text-align:right;padding:5px 8px">${q.rev.toFixed(1)} ${revArrow}</td>
+              <td style="text-align:right;padding:5px 8px">${q.gm.toFixed(1)}% ${gmArrow}</td>
+              <td style="text-align:right;padding:5px 8px;${q.nm<0?'color:#7ee2a3':''}">${q.nm.toFixed(1)}% ${nmArrow}</td>
+            </tr>`;
+        }).join("")}
+      </tbody>
+    </table>
+    ${meta ? `<div style="font-size:10px;color:var(--muted);margin-top:6px">${meta}</div>` : ""}
+  `;
+
+  // 渲染图表 (收入柱 + 毛利率/净利率双折线)
+  if (_companyChart) { try{_companyChart.destroy();}catch(e){} _companyChart = null; }
+  const ctx = document.getElementById("companyFinChart");
+  if (ctx && qs.length) {
+    _companyChart = new Chart(ctx, {
+      data: {
+        labels: qs.map(q => q.q),
+        datasets: [
+          {type:"bar", label:"收入(亿)", data: qs.map(q=>q.rev), backgroundColor:"rgba(245,179,1,.45)", borderColor:"#f5b301", borderWidth:1, yAxisID:"y", order:2},
+          {type:"line", label:"毛利率", data: qs.map(q=>q.gm), borderColor:"#ff5a6a", backgroundColor:"#ff5a6a", borderWidth:2, pointRadius:3, tension:0.2, yAxisID:"y1", order:1},
+          {type:"line", label:"净利率", data: qs.map(q=>q.nm), borderColor:"#29d6d6", backgroundColor:"#29d6d6", borderWidth:2, pointRadius:3, tension:0.2, yAxisID:"y1", order:1},
+        ]
+      },
+      options: {
+        responsive:true, maintainAspectRatio:false,
+        interaction:{mode:"index", intersect:false},
+        plugins:{legend:{labels:{color:"#8aa0c0",font:{size:11},boxWidth:12}}},
+        scales:{
+          x:{ticks:{color:"#8aa0c0",font:{size:11}},grid:{display:false}},
+          y:{position:"left",ticks:{color:"#f5b301",font:{size:10},callback:v=>v+"亿"},grid:{color:"#1f2a44"},title:{display:false}},
+          y1:{position:"right",ticks:{color:"#ff8a95",font:{size:10},callback:v=>v+"%"},grid:{display:false},title:{display:false}}
+        }
+      }
+    });
+  }
 }
 
 function getAllItems(code){
