@@ -409,6 +409,11 @@
   <!-- ===================== TAB 1: WATCHLIST ===================== -->
   <div class="tab-content active" id="tab-watch">
 
+    <!-- 周线 EMA 买点扫描 banner -->
+    <div id="buyAlertBanner" style="background:linear-gradient(135deg,rgba(255,90,106,.12),rgba(245,179,1,.08));border:1px solid rgba(255,90,106,.35);border-radius:8px;padding:14px 16px;margin-bottom:14px">
+      <div style="color:var(--muted);font-size:13px;padding:6px 0">📡 周线 EMA8 / EMA21 趋势扫描器初始化中...</div>
+    </div>
+
     <div class="kpis">
       <div class="kpi"><div class="label">主线 · 核心算力芯片</div><div class="val">35%</div><div class="hint">寒武纪 + 海光 双核</div></div>
       <div class="kpi k2"><div class="label">昇腾整机生态</div><div class="val">25%</div><div class="hint">政企订单落地最快</div></div>
@@ -1482,17 +1487,14 @@ document.getElementById("infoModal").onclick = (e) => {
 };
 
 // ============ K-line: fetcher + indicators + modal ============
-async function fetchKLine(code, period="day", count=180){
-  const sym = pfx(code);
+async function fetchKLineRaw(sym, period="day", count=180){
   const url = `https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=${sym},${period},,,${count},qfq&_=${Date.now()}`;
-  // Try fetch first (this endpoint usually has CORS); fallback to JSONP
   try {
     const r = await fetch(url);
     if (!r.ok) throw new Error("HTTP "+r.status);
     const j = await r.json();
     return parseKLine(j, sym, period);
   } catch(e) {
-    // JSONP fallback - inject script and look at any callback set
     return new Promise((resolve) => {
       const cb = "klcb_" + Math.floor(Math.random()*1e9);
       window[cb] = (j) => { try{document.head.removeChild(s);}catch(e){} delete window[cb]; resolve(parseKLine(j, sym, period)); };
@@ -1503,6 +1505,9 @@ async function fetchKLine(code, period="day", count=180){
       document.head.appendChild(s);
     });
   }
+}
+async function fetchKLine(code, period="day", count=180){
+  return fetchKLineRaw(pfx(code), period, count);
 }
 function parseKLine(j, sym, period){
   const node = j?.data?.[sym];
@@ -1624,11 +1629,10 @@ async function reloadKLine(){
   // Slice to selected range (range=0 means all)
   const bars = range > 0 && allBars.length > range ? allBars.slice(-range) : allBars;
 
-  const ma5 = ind_MA(bars,5), ma10 = ind_MA(bars,10), ma20 = ind_MA(bars,20), ma60 = ind_MA(bars,60);
+  const closes = bars.map(b=>b.close);
+  const ema8 = ind_EMA(closes, 8);
+  const ema21 = ind_EMA(closes, 21);
   const macd = ind_MACD(bars);
-  const rsi = ind_RSI(bars,14);
-  const kdj = ind_KDJ(bars,9);
-  const boll = ind_BOLL(bars,20,2);
 
   const last = bars[bars.length-1];
   const prev = bars[bars.length-2] || last;
@@ -1654,17 +1658,22 @@ async function reloadKLine(){
     </span>
   `;
 
-  // Indicator panel
+  // Indicator panel — 只看 EMA8 / EMA21 + MACD
+  const periodLabel = period === "week" ? "周" : period === "month" ? "月" : "日";
   const inds = [
-    ["MA5", ma5[ma5.length-1]], ["MA10", ma10[ma10.length-1]], ["MA20", ma20[ma20.length-1]],
-    ["MA60", ma60[ma60.length-1]], ["RSI14", rsi[rsi.length-1]],
-    ["MACD", macd.macd[macd.macd.length-1]], ["DIF", macd.dif[macd.dif.length-1]], ["DEA", macd.dea[macd.dea.length-1]],
-    ["K", kdj.k[kdj.k.length-1]], ["D", kdj.d[kdj.d.length-1]], ["J", kdj.j[kdj.j.length-1]],
-    ["BOLL上", boll.upper[boll.upper.length-1]],
+    [`EMA8 (${periodLabel})`, ema8[ema8.length-1]],
+    [`EMA21 (${periodLabel})`, ema21[ema21.length-1]],
+    ["现价", last.close],
+    ["距 EMA8", ema8[ema8.length-1] ? ((last.close-ema8[ema8.length-1])/ema8[ema8.length-1]*100) : null, "%"],
+    ["MACD", macd.macd[macd.macd.length-1]],
+    ["DIF", macd.dif[macd.dif.length-1]],
+    ["DEA", macd.dea[macd.dea.length-1]],
   ];
-  document.getElementById("klineIndicators").innerHTML = inds.map(([k,v]) =>
-    `<div class="ind"><div class="k">${k}</div><div class="v">${v==null||isNaN(v)?"--":v.toFixed(2)}</div></div>`
-  ).join("");
+  document.getElementById("klineIndicators").innerHTML = inds.map(arr => {
+    const [k, v, suffix] = arr;
+    const display = (v==null || isNaN(v)) ? "--" : (v.toFixed(2) + (suffix||""));
+    return `<div class="ind"><div class="k">${k}</div><div class="v">${display}</div></div>`;
+  }).join("");
 
   const labels = bars.map(b => b.date.slice(5));
 
@@ -1672,17 +1681,13 @@ async function reloadKLine(){
   Object.values(klCharts).forEach(c => c && c.destroy());
   klCharts = {};
 
-  // Price + MA + BOLL
+  // Price + EMA8 + EMA21 (当前周期)
   klCharts.price = new Chart(document.getElementById("klPrice"), {
     type:"line",
     data:{labels,datasets:[
       {label:"收盘",data:bars.map(b=>b.close),borderColor:"#e6ecf5",borderWidth:1.5,pointRadius:0,tension:0},
-      {label:"MA5",data:ma5,borderColor:"#f5b301",borderWidth:1,pointRadius:0,tension:0},
-      {label:"MA10",data:ma10,borderColor:"#29d6d6",borderWidth:1,pointRadius:0,tension:0},
-      {label:"MA20",data:ma20,borderColor:"#ff5a6a",borderWidth:1,pointRadius:0,tension:0},
-      {label:"MA60",data:ma60,borderColor:"#9d7bff",borderWidth:1,pointRadius:0,tension:0},
-      {label:"BOLL上",data:boll.upper,borderColor:"rgba(78,168,255,.5)",borderDash:[3,3],borderWidth:1,pointRadius:0,tension:0},
-      {label:"BOLL下",data:boll.lower,borderColor:"rgba(78,168,255,.5)",borderDash:[3,3],borderWidth:1,pointRadius:0,tension:0},
+      {label:`EMA8 (${periodLabel})`,data:ema8,borderColor:"#f5b301",borderWidth:1.6,pointRadius:0,tension:0},
+      {label:`EMA21 (${periodLabel})`,data:ema21,borderColor:"#9d7bff",borderWidth:1.6,pointRadius:0,tension:0},
     ]},
     options:klOpts(true)
   });
@@ -1705,8 +1710,8 @@ async function reloadKLine(){
     options:klOpts(false)
   });
 
-  // Signals — placeholder until user picks
-  renderSignals(bars, {ma5,ma10,ma20,ma60,macd,rsi,kdj,boll});
+  // Signals — 永远基于周线评估
+  renderSignals(bars, period);
 }
 function klOpts(showLegend){
   return {
@@ -1720,143 +1725,319 @@ function klOpts(showLegend){
   };
 }
 
-// Signal engine — each rule: eval(bars, ind) → {action, detail, strength} | null
-// strength: 1=弱 2=中 3=强（多条同向叠加 = 共识信号）
-const SIGNAL_RULES = [
-  {
-    id:"ma_cross", name:"MA 金叉/死叉 (5/20)",
-    eval:(bars, ind) => {
-      const a = ind.ma5, b = ind.ma20;
-      const n = a.length;
-      if (n < 22 || a[n-1]==null || b[n-1]==null || a[n-2]==null || b[n-2]==null) return null;
-      const prevDiff = a[n-2] - b[n-2];
-      const curDiff = a[n-1] - b[n-1];
-      if (prevDiff <= 0 && curDiff > 0) {
-        return {action:"buy", strength:2,
-          detail:`MA5 (${a[n-1].toFixed(2)}) 上穿 MA20 (${b[n-1].toFixed(2)}) — 短期趋势转多`};
-      }
-      if (prevDiff >= 0 && curDiff < 0) {
-        return {action:"sell", strength:2,
-          detail:`MA5 (${a[n-1].toFixed(2)}) 下穿 MA20 (${b[n-1].toFixed(2)}) — 短期趋势转空`};
-      }
-      // Soft hint: trend state
-      if (curDiff > 0 && a[n-1] > a[n-2]) return {action:"hold", strength:1,
-        detail:`多头排列延续，MA5 在 MA20 上方 ${(curDiff/b[n-1]*100).toFixed(1)}%`};
-      if (curDiff < 0 && a[n-1] < a[n-2]) return {action:"hold", strength:1,
-        detail:`空头延续，MA5 在 MA20 下方 ${(Math.abs(curDiff)/b[n-1]*100).toFixed(1)}%`};
-      return null;
-    }
-  },
-  {
-    id:"macd_cross", name:"MACD 金叉/死叉",
-    eval:(bars, ind) => {
-      const {dif, dea, macd} = ind.macd;
-      const n = dif.length;
-      if (n < 30) return null;
-      const prev = dif[n-2] - dea[n-2];
-      const cur = dif[n-1] - dea[n-1];
-      const aboveZero = dif[n-1] > 0;
-      if (prev <= 0 && cur > 0) {
-        return {action:"buy", strength: aboveZero ? 3 : 2,
-          detail:`DIF (${dif[n-1].toFixed(2)}) 上穿 DEA (${dea[n-1].toFixed(2)})${aboveZero?"，零轴上方金叉强势":"，零轴下方金叉为反弹信号"}`};
-      }
-      if (prev >= 0 && cur < 0) {
-        return {action:"sell", strength: aboveZero ? 2 : 3,
-          detail:`DIF (${dif[n-1].toFixed(2)}) 下穿 DEA (${dea[n-1].toFixed(2)})${aboveZero?"，高位死叉警惕回调":"，零轴下方死叉趋势确认"}`};
-      }
-      // Histogram momentum hint
-      if (macd[n-1] > 0 && macd[n-2] > 0 && macd[n-1] > macd[n-2]) return {action:"hold", strength:1,
-        detail:`MACD 红柱放大 (${macd[n-1].toFixed(2)})，多头动能增强`};
-      if (macd[n-1] < 0 && macd[n-2] < 0 && macd[n-1] < macd[n-2]) return {action:"hold", strength:1,
-        detail:`MACD 绿柱放大 (${macd[n-1].toFixed(2)})，空头动能增强`};
-      return null;
-    }
-  },
-  {
-    id:"breakout", name:"N 日新高突破 + 放量",
-    eval:(bars, ind) => {
-      const N = 20;
-      if (bars.length < N + 5) return null;
-      const last = bars[bars.length-1];
-      const window = bars.slice(-N-1, -1); // previous N bars (excluding today)
-      const winHigh = Math.max(...window.map(b=>b.high));
-      const winLow = Math.min(...window.map(b=>b.low));
-      const avgVol = window.reduce((s,b)=>s+b.volume, 0) / N;
-      const volRatio = last.volume / (avgVol || 1);
-      if (last.close > winHigh && volRatio > 1.5) {
-        return {action:"buy", strength:3,
-          detail:`收盘 ${last.close.toFixed(2)} 突破 ${N} 日新高 ${winHigh.toFixed(2)}，量比 ${volRatio.toFixed(1)} (>1.5) — 突破有效`};
-      }
-      if (last.close > winHigh && volRatio <= 1.5) {
-        return {action:"hold", strength:1,
-          detail:`收盘突破 ${N} 日新高但量比仅 ${volRatio.toFixed(1)} — 缩量突破，需观察确认`};
-      }
-      if (last.close < winLow && volRatio > 1.5) {
-        return {action:"sell", strength:3,
-          detail:`收盘 ${last.close.toFixed(2)} 跌破 ${N} 日新低 ${winLow.toFixed(2)}，放量下跌 (量比 ${volRatio.toFixed(1)})`};
-      }
-      return null;
-    }
-  },
-  {
-    id:"rsi_extreme", name:"RSI 超买/超卖",
-    eval:(bars, ind) => {
-      const rsi = ind.rsi;
-      const n = rsi.length;
-      if (n < 16 || rsi[n-1] == null) return null;
-      const cur = rsi[n-1];
-      const prev = rsi[n-2];
-      if (cur < 30) {
-        return {action:"buy", strength: cur < 20 ? 3 : 2,
-          detail:`RSI14 = ${cur.toFixed(1)}，进入超卖区${cur<20?"（极端超卖，反弹概率高）":"（适合关注反弹）"}`};
-      }
-      if (cur > 70) {
-        return {action:"sell", strength: cur > 80 ? 3 : 2,
-          detail:`RSI14 = ${cur.toFixed(1)}，进入超买区${cur>80?"（极端过热，警惕回调）":"（建议减仓或不追高）"}`};
-      }
-      // Recovery from extremes
-      if (prev != null && prev < 30 && cur >= 30 && cur < 50) return {action:"buy", strength:2,
-        detail:`RSI14 = ${cur.toFixed(1)}，从超卖区回升 — 反弹确认信号`};
-      if (prev != null && prev > 70 && cur <= 70 && cur > 50) return {action:"sell", strength:2,
-        detail:`RSI14 = ${cur.toFixed(1)}，从超买区回落 — 顶部确认信号`};
-      return null;
+// === Signal engine: 周线 EMA8/EMA21 趋势系统 ===
+// 卖出：周线收盘跌破 EMA8 周线
+// 买入 (首选)：EMA8>EMA21 且双向上 + 价格回踩 EMA8 后站稳 + 加分项(放量/指数同向)
+// 给定 weekBars (周线 K), 可选 indexBullish (大盘是否站上自己的周线 EMA8)
+function evalWeeklyEMA(weekBars, indexBullish){
+  const n = weekBars.length;
+  if (n < 22) return null;
+  const closes = weekBars.map(b=>b.close);
+  const ema8 = ind_EMA(closes, 8);
+  const ema21 = ind_EMA(closes, 21);
+  const last = weekBars[n-1];
+  const e8 = ema8[n-1], e21 = ema21[n-1];
+
+  // 卖出规则
+  if (last.close < e8) {
+    return {
+      action:"sell", strength:3,
+      detail:`周线收盘 ${last.close.toFixed(2)} 跌破 EMA8 周线 ${e8.toFixed(2)} — 趋势破位，按规则卖出`,
+      ema8:e8, ema21:e21
+    };
+  }
+
+  // 多头排列
+  const stacked = e8 > e21;
+  // 5 周斜率
+  const e8Rising = e8 > ema8[n-5];
+  const e21Rising = ema21[n-1] > ema21[n-5];
+
+  if (!stacked) {
+    return {
+      action:"hold", strength:1,
+      detail:`EMA8 (${e8.toFixed(2)}) ≤ EMA21 (${e21.toFixed(2)}) — 尚未多头排列，等待趋势确立`,
+      ema8:e8, ema21:e21
+    };
+  }
+  if (!e8Rising || !e21Rising) {
+    return {
+      action:"hold", strength:1,
+      detail:`已多头排列但 ${!e21Rising?"EMA21":"EMA8"} 尚未上行 (5 周斜率) — 趋势未确认`,
+      ema8:e8, ema21:e21
+    };
+  }
+
+  // 回踩检测：从最近往前找 — 只有最近 2 周内的回踩才算"新鲜买点"
+  // 老回踩 (3-4 周前) 说明已反弹一段，降为"持有趋势中"
+  const FRESH_WINDOW = 2;   // 当前周或上一周触及 EMA8 → BUY
+  const STALE_WINDOW = 4;   // 3-4 周前触及 → hold (已经在反弹中了)
+  let freshPullback = -1, stalePullback = -1;
+  for (let i = n-1; i >= Math.max(0, n-STALE_WINDOW); i--){
+    const eb = ema8[i];
+    if (weekBars[i].low <= eb * 1.02) {
+      if (i >= n - FRESH_WINDOW) freshPullback = i;
+      else if (stalePullback === -1) stalePullback = i;
     }
   }
-];
-function renderSignals(bars, ind){
+
+  if (freshPullback >= 0) {
+    // 加分项
+    const vol10 = weekBars.slice(-11, -1).reduce((s,b)=>s+b.volume,0)/10 || 1;
+    const volRatio = last.volume / vol10;
+    const volBonus = volRatio > 1.0;
+    const bonuses = [];
+    if (volBonus) bonuses.push(`周线放量 ${volRatio.toFixed(2)}×`);
+    if (indexBullish === true) bonuses.push(`大盘站上周线 EMA8`);
+    else if (indexBullish === false) bonuses.push(`⚠ 大盘未站上周线 EMA8`);
+
+    let strength = 3;
+    if (!volBonus) strength--;
+    if (indexBullish === false) strength--;
+    strength = Math.max(1, strength);
+
+    const whichWeek = freshPullback === n-1 ? "本周" : "上周";
+    return {
+      action:"buy", strength,
+      detail:`✅ 周线 EMA 多头上行 + 价格${whichWeek}回踩 EMA8 (${e8.toFixed(2)}) 后站稳，现价 ${last.close.toFixed(2)}` +
+        (bonuses.length ? ` · ${bonuses.join(" · ")}` : ""),
+      ema8:e8, ema21:e21, volRatio, hasVolume:volBonus, indexBullish, fresh:true
+    };
+  }
+
+  // 老回踩或无回踩 → 趋势延续中，持有但不是新买点
+  const aboveE8Pct = (last.close - e8) / e8 * 100;
+  if (stalePullback >= 0) {
+    const weeksAgo = (n-1) - stalePullback;
+    return {
+      action:"hold", strength:1,
+      detail:`周线多头延续，${weeksAgo} 周前曾回踩 EMA8 — 已经反弹了 ${weeksAgo} 周，不是新鲜买点。建议持有，等下一次回踩`,
+      ema8:e8, ema21:e21, stale:true, weeksAgo
+    };
+  }
+  return {
+    action:"hold", strength:1,
+    detail:`周线多头延续中 (现价高于 EMA8 ${aboveE8Pct.toFixed(1)}%) — 持有，未到回踩买点`,
+    ema8:e8, ema21:e21
+  };
+}
+
+async function renderSignals(bars, currentPeriod){
   const list = document.getElementById("klineSignalList");
-  if (SIGNAL_RULES.length === 0) {
-    list.innerHTML = `<div style="color:var(--muted);font-size:12px">尚未配置信号规则。</div>`;
+  list.innerHTML = `<div style="color:var(--muted);font-size:12px">加载周线数据评估信号...</div>`;
+  // 信号永远基于周线 — 如果当前不是周线视图，单独获取周线
+  let weekBars;
+  if (currentPeriod === "week") {
+    weekBars = bars;
+  } else {
+    const cacheKey = klState.code + ":week";
+    weekBars = klCache[cacheKey] || await fetchKLine(klState.code, "week", FETCH_COUNT.week);
+    if (weekBars.length) klCache[cacheKey] = weekBars;
+  }
+  const indexBullish = await getIndexBullish();
+  const result = evalWeeklyEMA(weekBars, indexBullish);
+  if (!result) {
+    list.innerHTML = `<div style="color:var(--muted);font-size:12px">周线数据不足 (需 ≥22 周)</div>`;
     return;
   }
-  const fired = SIGNAL_RULES.map(r => ({rule:r, result:r.eval(bars, ind)})).filter(x => x.result);
-
-  // Consensus score: sum of strength signed by direction
-  let buyScore = 0, sellScore = 0, buyCnt = 0, sellCnt = 0;
-  fired.forEach(({result}) => {
-    if (result.action === "buy") { buyScore += result.strength; buyCnt++; }
-    else if (result.action === "sell") { sellScore += result.strength; sellCnt++; }
-  });
-  let consensus = "";
-  if (buyScore >= 5) consensus = `<div style="background:rgba(255,90,106,.18);color:#ff8a95;padding:8px 12px;border-radius:6px;margin-bottom:10px;font-size:13px;font-weight:600">🔴 强买入共识 · ${buyCnt} 条信号 · 总强度 ${buyScore}</div>`;
-  else if (buyScore >= 3) consensus = `<div style="background:rgba(255,90,106,.1);color:#ff8a95;padding:8px 12px;border-radius:6px;margin-bottom:10px;font-size:13px">🟠 偏多 · ${buyCnt} 条信号 · 强度 ${buyScore}</div>`;
-  else if (sellScore >= 5) consensus = `<div style="background:rgba(46,204,113,.18);color:#7ee2a3;padding:8px 12px;border-radius:6px;margin-bottom:10px;font-size:13px;font-weight:600">🟢 强卖出共识 · ${sellCnt} 条信号 · 总强度 ${sellScore}</div>`;
-  else if (sellScore >= 3) consensus = `<div style="background:rgba(46,204,113,.1);color:#7ee2a3;padding:8px 12px;border-radius:6px;margin-bottom:10px;font-size:13px">🟢 偏空 · ${sellCnt} 条信号 · 强度 ${sellScore}</div>`;
-  else if (fired.length === 0) consensus = `<div style="color:var(--muted);font-size:12px;padding:8px 0">⚪ 无明确信号 · 建议观望</div>`;
-
-  const items = fired.map(({rule, result}) => {
-    const stars = "★".repeat(result.strength) + "☆".repeat(3 - result.strength);
-    return `
-      <div class="signal-item">
-        <span class="signal-tag ${result.action}">${result.action==='buy'?'买入':result.action==='sell'?'卖出':'观望'}</span>
-        <div class="signal-text">
-          <b>${rule.name}</b> <span style="color:var(--gold);font-size:11px">${stars}</span>
-          <div class="sub">${result.detail}</div>
+  const stars = "★".repeat(result.strength) + "☆".repeat(3-result.strength);
+  const tag = result.action==='buy'?'买入':result.action==='sell'?'卖出':'持有';
+  let header = "";
+  if (result.action === "buy" && result.strength >= 3) {
+    header = `<div style="background:rgba(255,90,106,.22);color:#ff8a95;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:600">🔴 强买入信号 · 周线 EMA 趋势系统</div>`;
+  } else if (result.action === "buy") {
+    header = `<div style="background:rgba(255,90,106,.12);color:#ff8a95;padding:10px 12px;border-radius:6px;margin-bottom:10px">🟠 买入信号 · 周线 EMA 趋势系统</div>`;
+  } else if (result.action === "sell") {
+    header = `<div style="background:rgba(46,204,113,.18);color:#7ee2a3;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:600">🟢 卖出信号 · 周线趋势破位</div>`;
+  } else {
+    header = `<div style="color:var(--muted);font-size:12px;padding:6px 0">⚪ ${tag}</div>`;
+  }
+  list.innerHTML = header + `
+    <div class="signal-item">
+      <span class="signal-tag ${result.action}">${tag}</span>
+      <div class="signal-text">
+        <b>周线 EMA8 / EMA21 趋势</b> <span style="color:var(--gold);font-size:11px">${stars}</span>
+        <div class="sub">${result.detail}</div>
+        <div class="sub" style="margin-top:4px;color:var(--muted);font-size:11px">
+          EMA8 周 = ${result.ema8.toFixed(2)} · EMA21 周 = ${result.ema21.toFixed(2)} · 现价 = ${weekBars[weekBars.length-1].close.toFixed(2)}
         </div>
-      </div>`;
-  }).join("");
+      </div>
+    </div>`;
+}
 
-  list.innerHTML = consensus + (items || `<div style="color:var(--muted);font-size:12px">无规则触发</div>`);
+// === 大盘指数加分项：上证综指是否站上自己的周线 EMA8 ===
+let _indexBullishCache = null;
+async function getIndexBullish(){
+  if (_indexBullishCache !== null) return _indexBullishCache;
+  try {
+    const bars = await fetchKLineRaw("sh000001", "week", 60);
+    if (bars.length < 9) return null;
+    const ema8 = ind_EMA(bars.map(b=>b.close), 8);
+    _indexBullishCache = bars[bars.length-1].close > ema8[ema8.length-1];
+    return _indexBullishCache;
+  } catch(e){ return null; }
+}
+
+// === 全关注列表买点扫描 ===
+let watchScanState = { running:false, lastRun:null, results:null, alertedKey:null };
+
+async function scanWatchlistBuySignals(){
+  if (watchScanState.running) return watchScanState.results || [];
+  watchScanState.running = true;
+  let okCount = 0, failCount = 0;
+  try {
+    const indexBullish = await getIndexBullish();
+    const tasks = WATCH.map(async (stock) => {
+      try {
+        const cacheKey = stock.code + ":week";
+        let bars = klCache[cacheKey];
+        if (!bars) {
+          bars = await fetchKLine(stock.code, "week", FETCH_COUNT.week);
+          if (bars.length) klCache[cacheKey] = bars;
+        }
+        if (bars.length < 22) { failCount++; return null; }
+        const sig = evalWeeklyEMA(bars, indexBullish);
+        okCount++;
+        if (!sig) return null;
+        return { stock, signal: sig, bars };
+      } catch(e){ failCount++; return null; }
+    });
+    const all = (await Promise.all(tasks)).filter(Boolean);
+    watchScanState.results = all;
+    watchScanState.lastRun = Date.now();
+    watchScanState.okCount = okCount;
+    watchScanState.failCount = failCount;
+    watchScanState.indexBullish = indexBullish;
+    console.log(`[周线扫描] 成功 ${okCount} / 失败 ${failCount} / 大盘加分项 ${indexBullish}`);
+    return all;
+  } finally {
+    watchScanState.running = false;
+  }
+}
+
+function renderBuyAlertBanner(results){
+  const banner = document.getElementById("buyAlertBanner");
+  if (!banner) return;
+  banner.style.display = "block";  // 永远显示，让用户知道扫描状态
+
+  // 筛出"买入"信号
+  const buys = results.filter(r => r.signal.action === "buy");
+  // 也提示一下卖出信号 (跌破 EMA8)
+  const sells = results.filter(r => r.signal.action === "sell");
+  const holds = results.filter(r => r.signal.action === "hold");
+  const ts = watchScanState.lastRun ? new Date(watchScanState.lastRun).toLocaleTimeString("zh-CN", {hour12:false}) : "--";
+  const ok = watchScanState.okCount || 0;
+  const fail = watchScanState.failCount || 0;
+  const idxLabel = watchScanState.indexBullish === true ? '<span style="color:#7ee2a3">站上</span>'
+                : watchScanState.indexBullish === false ? '<span style="color:#ff8a95">未站上</span>'
+                : '<span style="color:var(--muted)">未知</span>';
+
+  // 数据全部失败 — 提示用户
+  if (results.length === 0 && fail >= WATCH.length) {
+    banner.innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <div style="font-size:13px;color:#ff8a95">⚠ 周线 K 线数据抓取失败 (${fail}/${WATCH.length})</div>
+        <button id="rescanBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:4px;font-size:11px;cursor:pointer">🔄 重试</button>
+      </div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.6">
+        可能是 CORS 跨域被拦截，请用 Chrome / Edge 打开本页面。如仍失败请检查网络。<br>
+        浏览器开发者工具 (F12) Console 里会有详细错误信息。
+      </div>`;
+    document.getElementById("rescanBtn").onclick = () => {
+      Object.keys(klCache).forEach(k => { if (k.endsWith(":week")) delete klCache[k]; });
+      _indexBullishCache = null;
+      watchScanState.results = null;
+      runWatchScan(true);
+    };
+    return;
+  }
+
+  const buyHtml = buys.length ? `
+    <div style="margin-bottom:${sells.length?'10px':'0'}">
+      <div style="font-size:14px;font-weight:700;color:#ff8a95;margin-bottom:8px">
+        🔴 周线 EMA 趋势买点 · ${buys.length} 只
+      </div>
+      ${buys.map(b => {
+        const stars = "★".repeat(b.signal.strength) + "☆".repeat(3-b.signal.strength);
+        return `
+          <div class="buy-alert-card" data-code="${b.stock.code}" style="background:rgba(255,90,106,.08);border:1px solid rgba(255,90,106,.35);padding:10px 12px;border-radius:6px;margin-bottom:6px;cursor:pointer">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+              <div><b style="font-size:14px">${b.stock.name}</b> <span style="color:var(--muted);font-size:12px">${b.stock.code} · ${b.stock.catLabel}</span></div>
+              <div style="color:var(--gold);font-size:12px">${stars} 强度 ${b.signal.strength}/3</div>
+            </div>
+            <div style="font-size:12px;color:#cdd6e6;line-height:1.5">${b.signal.detail}</div>
+          </div>`;
+      }).join("")}
+    </div>` : "";
+
+  const sellHtml = sells.length ? `
+    <div>
+      <div style="font-size:14px;font-weight:700;color:#7ee2a3;margin-bottom:8px">
+        🟢 周线趋势破位 · ${sells.length} 只 (按规则应卖出)
+      </div>
+      ${sells.map(s => `
+        <div class="buy-alert-card" data-code="${s.stock.code}" style="background:rgba(46,204,113,.08);border:1px solid rgba(46,204,113,.35);padding:10px 12px;border-radius:6px;margin-bottom:6px;cursor:pointer">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+            <div><b style="font-size:14px">${s.stock.name}</b> <span style="color:var(--muted);font-size:12px">${s.stock.code}</span></div>
+          </div>
+          <div style="font-size:12px;color:#cdd6e6;line-height:1.5">${s.signal.detail}</div>
+        </div>`).join("")}
+    </div>` : "";
+
+  const emptyHtml = (buys.length === 0 && sells.length === 0) ? `
+    <div style="background:rgba(46,204,113,.06);border:1px solid rgba(46,204,113,.2);padding:12px;border-radius:6px">
+      <div style="color:#7ee2a3;font-size:13px;font-weight:600;margin-bottom:4px">✓ 当前无买卖信号</div>
+      <div style="color:var(--muted);font-size:12px">${ok} 只已评估 · ${holds.length} 只持有/趋势中 · 大盘 ${idxLabel}</div>
+    </div>` : "";
+
+  banner.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+      <div style="font-size:13px;color:var(--muted)">📡 周线 EMA8/EMA21 趋势扫描 · ${ok} 只已评估${fail?` · <span style="color:#ff8a95">${fail} 失败</span>`:""} · 大盘 ${idxLabel} · 更新于 ${ts}</div>
+      <div>
+        <button id="rescanBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:4px;font-size:11px;cursor:pointer">🔄 重新扫描</button>
+        <button id="dismissAlertBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:4px;font-size:11px;cursor:pointer;margin-left:6px">✕ 隐藏</button>
+      </div>
+    </div>
+    ${buyHtml}${sellHtml}${emptyHtml}`;
+
+  // 卡片点击 → 打开 K 线
+  banner.querySelectorAll(".buy-alert-card").forEach(card => {
+    card.onclick = () => openKLine(card.dataset.code);
+  });
+  document.getElementById("rescanBtn").onclick = async () => {
+    Object.keys(klCache).forEach(k => { if (k.endsWith(":week")) delete klCache[k]; });
+    _indexBullishCache = null;
+    watchScanState.results = null;
+    watchScanState.alertedKey = null;
+    await runWatchScan(true);
+  };
+  document.getElementById("dismissAlertBtn").onclick = () => banner.style.display = "none";
+
+  // 桌面通知 + toast (仅在结果改变时触发一次)
+  const buyKey = buys.map(b=>b.stock.code).sort().join(",");
+  if (buys.length > 0 && buyKey !== watchScanState.alertedKey) {
+    watchScanState.alertedKey = buyKey;
+    const names = buys.map(b=>b.stock.name).join("、");
+    toast(`🔴 ${buys.length} 只出现周线买点：${names}`, "success");
+    if (window.Notification) {
+      if (Notification.permission === "granted") {
+        try { new Notification(`周线 EMA 买点提醒 · ${buys.length} 只`, { body: names + "\n点击查看详情", tag: "rmb-buy-alert" }); } catch(e){}
+      } else if (Notification.permission !== "denied") {
+        Notification.requestPermission();
+      }
+    }
+  }
+}
+
+async function runWatchScan(force=false){
+  const banner = document.getElementById("buyAlertBanner");
+  if (!banner) return;
+  if (force || !watchScanState.results) {
+    banner.style.display = "block";
+    banner.innerHTML = `<div style="color:var(--muted);font-size:13px;padding:6px 0">📡 正在扫描 ${WATCH.length} 只关注股票的周线趋势...</div>`;
+  }
+  const results = await scanWatchlistBuySignals();
+  renderBuyAlertBanner(results);
 }
 
 const closeKline = () => document.getElementById("klineModal").classList.remove("show");
@@ -2051,6 +2232,15 @@ loadPublicNews().then(() => {
   renderWatchlist();
   renderGlobalFeed();
 });
+
+// 周线 EMA 趋势扫描 — 启动时跑一次，之后每 30 分钟刷新一次
+runWatchScan(false);
+setInterval(() => {
+  Object.keys(klCache).forEach(k => { if (k.endsWith(":week")) delete klCache[k]; });
+  _indexBullishCache = null;
+  watchScanState.results = null;
+  runWatchScan(true);
+}, 30 * 60 * 1000);
 
 // === Strategy / Catalysts (data-driven) ===
 let catalystsData = null;
