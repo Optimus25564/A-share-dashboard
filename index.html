@@ -703,12 +703,11 @@
     <div class="kl-charts">
       <div class="kl-chart"><canvas id="klPrice"></canvas></div>
       <div class="kl-chart"><canvas id="klVolume"></canvas></div>
-      <div class="kl-chart"><canvas id="klOsc"></canvas></div>
     </div>
     <div class="kl-ind" id="klineIndicators"></div>
     <div class="kl-signals">
-      <h4>📍 交易信号建议（4 条规则 · 多信号共识 = 强信号）</h4>
-      <div id="klineSignalList"><div style="color:var(--muted);font-size:12px">尚未配置信号规则。请告诉助手要启用哪些信号（见下方提示）。</div></div>
+      <h4>📍 周线 EMA8 / EMA21 趋势信号</h4>
+      <div id="klineSignalList"></div>
     </div>
 
     <div style="display:flex;justify-content:flex-end;margin-top:18px;padding-top:14px;border-top:1px solid var(--border)">
@@ -1632,7 +1631,6 @@ async function reloadKLine(){
   const closes = bars.map(b=>b.close);
   const ema8 = ind_EMA(closes, 8);
   const ema21 = ind_EMA(closes, 21);
-  const macd = ind_MACD(bars);
 
   const last = bars[bars.length-1];
   const prev = bars[bars.length-2] || last;
@@ -1658,16 +1656,13 @@ async function reloadKLine(){
     </span>
   `;
 
-  // Indicator panel — 只看 EMA8 / EMA21 + MACD
+  // Indicator panel — 只看 EMA8 / EMA21
   const periodLabel = period === "week" ? "周" : period === "month" ? "月" : "日";
   const inds = [
     [`EMA8 (${periodLabel})`, ema8[ema8.length-1]],
     [`EMA21 (${periodLabel})`, ema21[ema21.length-1]],
     ["现价", last.close],
     ["距 EMA8", ema8[ema8.length-1] ? ((last.close-ema8[ema8.length-1])/ema8[ema8.length-1]*100) : null, "%"],
-    ["MACD", macd.macd[macd.macd.length-1]],
-    ["DIF", macd.dif[macd.dif.length-1]],
-    ["DEA", macd.dea[macd.dea.length-1]],
   ];
   document.getElementById("klineIndicators").innerHTML = inds.map(arr => {
     const [k, v, suffix] = arr;
@@ -1743,16 +1738,6 @@ async function reloadKLine(){
     })}]},
     options:klOpts(false)
   });
-  // Oscillator: MACD bars + DIF/DEA lines
-  klCharts.osc = new Chart(document.getElementById("klOsc"), {
-    data:{labels,datasets:[
-      {type:"bar",label:"MACD",data:macd.macd,backgroundColor:macd.macd.map(v=>v>=0?"rgba(255,90,106,.6)":"rgba(46,204,113,.6)")},
-      {type:"line",label:"DIF",data:macd.dif,borderColor:"#f5b301",borderWidth:1,pointRadius:0,tension:0},
-      {type:"line",label:"DEA",data:macd.dea,borderColor:"#29d6d6",borderWidth:1,pointRadius:0,tension:0},
-    ]},
-    options:klOpts(false)
-  });
-
   // Signals — 永远基于周线评估
   renderSignals(bars, period);
 }
