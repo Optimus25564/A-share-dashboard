@@ -415,10 +415,10 @@
     </div>
 
     <div class="kpis">
-      <div class="kpi"><div class="label">主线 · 核心算力芯片</div><div class="val">35%</div><div class="hint">寒武纪 + 海光 双核</div></div>
-      <div class="kpi k2"><div class="label">昇腾整机生态</div><div class="val">25%</div><div class="hint">政企订单落地最快</div></div>
-      <div class="kpi k3"><div class="label">基础设施"卖水"</div><div class="val">25%</div><div class="hint">光模块 + 液冷</div></div>
-      <div class="kpi k4"><div class="label">自主可控底座</div><div class="val">15%</div><div class="hint">极端情境防御</div></div>
+      <div class="kpi" id="kpi-core"><div class="label">主线 · 核心算力芯片</div><div class="val">--</div><div class="hint">寒武 + 海光 + 龙芯</div></div>
+      <div class="kpi k2" id="kpi-hw"><div class="label">昇腾整机 + 算力网络</div><div class="val">--</div><div class="hint">拓维/曙光/浪潮/神州/紫光</div></div>
+      <div class="kpi k3" id="kpi-infra"><div class="label">基础设施"卖水"</div><div class="val">--</div><div class="hint">光模块 + 液冷 + 代工</div></div>
+      <div class="kpi k4" id="kpi-base"><div class="label">自主可控底座</div><div class="val">--</div><div class="hint">封装+接口+晶圆+材料</div></div>
     </div>
 
     <h2>产业链分层</h2>
@@ -852,12 +852,109 @@ function colorClass(n){
   return n > 0 ? "up" : "down";
 }
 
+// ============ 量化权重模型 (5 因子) ============
+// Composite Score = 0.10×log(市值) + 0.30×YoY增速 + 0.15×最新毛利 + 0.15×换手率 + 0.30×战略评分
+// 数据源: companies.json 的 quarters/strategic/market_cap_billion/avg_turnover_pct
+// 输出: { code: { weight, score, factors: {...} } }
+let _quantWeights = null;
+function computeQuantWeights(){
+  if (!companiesData) return null;  // 数据没加载时 fallback 到硬编码 r.w
+  const codes = WATCH.map(s => s.code);
+  // 收集每只的原始因子值
+  const raw = codes.map(code => {
+    const c = companiesData[code];
+    if (!c || !c.quarters || c.quarters.length < 4) return null;
+    const qs = c.quarters;
+    // 收入 YoY 增速: 最近季度 vs 4 季度前 (即同比)
+    const revLatest = qs[qs.length-1].rev;
+    const revYoYBase = qs[0].rev;
+    const revYoY = revYoYBase > 0 ? (revLatest / revYoYBase - 1) * 100 : 0;
+    // 最新毛利率
+    const gmLatest = qs[qs.length-1].gm;
+    return {
+      code,
+      logMC: Math.log(c.market_cap_billion || 100),
+      revYoY: Math.max(-50, Math.min(300, revYoY)),  // clip 极端值
+      gm: gmLatest,
+      turnover: c.avg_turnover_pct || 3,
+      strategic: (c.strategic || 5) / 10  // 归一到 0-1
+    };
+  });
+
+  if (raw.some(r => !r)) return null;
+
+  // z-score 标准化各因子 (战略评分已在 0-1，不需 z-score)
+  function zscore(values){
+    const mean = values.reduce((a,b)=>a+b,0) / values.length;
+    const variance = values.reduce((a,b)=>a+(b-mean)*(b-mean),0) / values.length;
+    const std = Math.sqrt(variance) || 1;
+    return values.map(v => (v - mean) / std);
+  }
+  const zMC = zscore(raw.map(r => r.logMC));
+  const zGrow = zscore(raw.map(r => r.revYoY));
+  const zGM = zscore(raw.map(r => r.gm));
+  const zTO = zscore(raw.map(r => r.turnover));
+
+  // 5 因子权重
+  const W = { mc: 0.10, growth: 0.30, gm: 0.15, turnover: 0.15, strategic: 0.30 };
+
+  // composite score (战略直接用 0-1 值，等价于 0.30 × strategic)
+  const composites = raw.map((r, i) => {
+    return W.mc * zMC[i] + W.growth * zGrow[i] + W.gm * zGM[i] + W.turnover * zTO[i] + W.strategic * r.strategic * 2;
+    // ×2: 让战略评分(0-1)的方差与 z-score(均值0方差1)更可比
+  });
+
+  // 平移到全部 ≥ 0.5 (避免负权重 + 给最弱的一只也保留至少 0.5%)
+  const minComp = Math.min(...composites);
+  const shifted = composites.map(c => c - minComp + 0.5);
+  const sum = shifted.reduce((a,b)=>a+b,0);
+
+  // 归一化到 sum=100, round 到整数, 调整尾差
+  let weights = shifted.map(s => s / sum * 100);
+  // round: 浮点 → 1 位小数
+  weights = weights.map(w => Math.round(w * 10) / 10);
+  // 修尾差让总和 = 100.0
+  const total = weights.reduce((a,b)=>a+b,0);
+  const drift = 100 - total;
+  // 把 drift 加到最高权重那只上
+  if (Math.abs(drift) > 0.01) {
+    const maxIdx = weights.indexOf(Math.max(...weights));
+    weights[maxIdx] = Math.round((weights[maxIdx] + drift) * 10) / 10;
+  }
+
+  // 输出 map
+  const out = {};
+  raw.forEach((r, i) => {
+    out[r.code] = {
+      weight: weights[i],
+      score: composites[i],
+      factors: {
+        market_cap: { val: Math.exp(r.logMC).toFixed(0) + "亿", z: zMC[i].toFixed(2), contrib: (W.mc * zMC[i]).toFixed(2) },
+        growth: { val: r.revYoY.toFixed(1) + "%", z: zGrow[i].toFixed(2), contrib: (W.growth * zGrow[i]).toFixed(2) },
+        gm: { val: r.gm.toFixed(1) + "%", z: zGM[i].toFixed(2), contrib: (W.gm * zGM[i]).toFixed(2) },
+        turnover: { val: r.turnover.toFixed(1) + "%", z: zTO[i].toFixed(2), contrib: (W.turnover * zTO[i]).toFixed(2) },
+        strategic: { val: (r.strategic*10).toFixed(0) + "/10", contrib: (W.strategic * r.strategic * 2).toFixed(2) }
+      }
+    };
+  });
+  _quantWeights = out;
+  return out;
+}
+
 // ============ Render watchlist ============
 function renderWatchlist(){
+  // 触发重算（每次刷新行情时也会动态变化，因为换手率/最新季度可能变）
+  computeQuantWeights();
   const tb = document.getElementById("watchlist");
   tb.innerHTML = "";
   let upCount = 0, downCount = 0;
-  WATCH.slice().sort((a,b)=>b.w-a.w).forEach(r => {
+  // 用算出的权重排序，否则用硬编码 r.w 兜底
+  const sorted = WATCH.slice().sort((a,b) => {
+    const wa = _quantWeights ? (_quantWeights[a.code]?.weight ?? 0) : a.w;
+    const wb = _quantWeights ? (_quantWeights[b.code]?.weight ?? 0) : b.w;
+    return wb - wa;
+  });
+  sorted.forEach(r => {
     const q = lastQuotes[r.code] || {};
     if (q.changePct > 0) upCount++;
     else if (q.changePct < 0) downCount++;
@@ -868,6 +965,17 @@ function renderWatchlist(){
       sig.bull ? `<span class="sig-icon" data-tip="${escapeAttr(sig.bull.title)}">🎯</span>` : "",
       sig.hot ?  `<span class="sig-icon" data-tip="${escapeAttr(sig.hot.title)}">✨</span>` : "",
     ].filter(Boolean).join("");
+    // 量化权重 + 因子分解 tooltip
+    const qw = _quantWeights ? _quantWeights[r.code] : null;
+    const wDisplay = qw ? qw.weight.toFixed(1) + "%" : (r.w + "%");
+    const wTooltip = qw ? escapeAttr(
+      `量化权重 ${qw.weight.toFixed(1)}%\n` +
+      `市值: ${qw.factors.market_cap.val} (z=${qw.factors.market_cap.z}, 贡献 ${qw.factors.market_cap.contrib})\n` +
+      `增速: ${qw.factors.growth.val} (z=${qw.factors.growth.z}, 贡献 ${qw.factors.growth.contrib})\n` +
+      `毛利: ${qw.factors.gm.val} (z=${qw.factors.gm.z}, 贡献 ${qw.factors.gm.contrib})\n` +
+      `换手: ${qw.factors.turnover.val} (z=${qw.factors.turnover.z}, 贡献 ${qw.factors.turnover.contrib})\n` +
+      `战略: ${qw.factors.strategic.val} (贡献 ${qw.factors.strategic.contrib})`
+    ) : "";
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td class="code">${r.code}</td>
@@ -875,7 +983,7 @@ function renderWatchlist(){
       <td class="num-cell ${cls}">${fmtNum(q.price)}</td>
       <td class="num-cell ${cls}">${fmtPct(q.changePct)}</td>
       <td class="num-cell">${q.turnover ? (q.turnover/10000).toFixed(2) : "--"}</td>
-      <td class="num-cell">${r.w}%</td>
+      <td class="num-cell" title="${wTooltip}" style="cursor:help">${wDisplay}</td>
       <td>
         <button class="trade-action" data-info="${r.code}" style="margin-right:4px">📋</button>
         <button class="trade-action" data-kl="${r.code}" style="margin-right:4px">K线</button>
@@ -884,6 +992,22 @@ function renderWatchlist(){
     `;
     tb.appendChild(tr);
   });
+  // 同步顶部 KPI 卡片用动态权重
+  updateCategoryKPIs();
+}
+
+function updateCategoryKPIs(){
+  if (!_quantWeights) return;
+  const byCat = { core:0, hw:0, infra:0, base:0 };
+  WATCH.forEach(s => {
+    const w = (_quantWeights[s.code]?.weight) || 0;
+    byCat[s.cat] = (byCat[s.cat] || 0) + w;
+  });
+  const setKPI = (id, v) => { const el = document.querySelector("#" + id + " .val"); if (el) el.textContent = v.toFixed(0) + "%"; };
+  setKPI("kpi-core",  byCat.core);
+  setKPI("kpi-hw",    byCat.hw);
+  setKPI("kpi-infra", byCat.infra);
+  setKPI("kpi-base",  byCat.base);
   document.getElementById("watchSummary").textContent =
     `↑ ${upCount}　↓ ${downCount}　— ${WATCH.length - upCount - downCount}`;
 
@@ -2379,6 +2503,11 @@ setInterval(() => refresh(false), 10000);
 loadPublicNews().then(() => {
   renderWatchlist();
   renderGlobalFeed();
+});
+
+// Eager-load companies (基本面+量化权重数据) → 重算并刷新 watchlist + KPIs
+loadCompanies().then(() => {
+  renderWatchlist();  // 现在 _quantWeights 可以算出来了, 替代硬编码 r.w
 });
 
 // 周线 EMA 趋势扫描 — 启动时跑一次，之后每 30 分钟刷新一次
