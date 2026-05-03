@@ -878,16 +878,20 @@ function computeQuantWeights(){
     const revYoYBase = qs[0].rev;
     const revYoY = revYoYBase > 0 ? (revLatest / revYoYBase - 1) * 100 : 0;
     const gmLatest = qs[qs.length-1].gm;
+    const nmLatest = qs[qs.length-1].nm;
+    // NM clip 防极端亏损 (如龙芯 -84%) 拉爆 z-score 方差
+    const nmClipped = Math.max(-30, Math.min(60, nmLatest));
     const t = c.avg_turnover_pct || 3;
-    // 流动性: U 形偏好, 5% 为理想峰值, 距离越远扣分越多
     const turnoverScore = -Math.abs(Math.log(t / IDEAL_TURNOVER));
     return {
       code,
       logMC: Math.log(c.market_cap_billion || 100),
       revYoY: Math.max(-50, Math.min(300, revYoY)),
       gm: gmLatest,
-      turnoverScore,        // U 形得分 (用于 z-score 算贡献)
-      turnoverRaw: t,       // 原始换手率 (用于 tooltip 显示)
+      nm: nmLatest,
+      nmClipped,
+      turnoverScore,
+      turnoverRaw: t,
       strategic: (c.strategic || 5) / 10
     };
   });
@@ -904,15 +908,17 @@ function computeQuantWeights(){
   const zMC = zscore(raw.map(r => r.logMC));
   const zGrow = zscore(raw.map(r => r.revYoY));
   const zGM = zscore(raw.map(r => r.gm));
+  const zNM = zscore(raw.map(r => r.nmClipped));
   const zTO = zscore(raw.map(r => r.turnoverScore));
 
-  // 5 因子权重 (战略稀缺度优先，避免短期增速推爆款)
-  const W = { mc: 0.10, growth: 0.20, gm: 0.15, turnover: 0.15, strategic: 0.40 };
+  // 盈利能力合成因子: GM (行业竞争力) 占 0.6 + NM (运营效率) 占 0.4
+  const zProfit = raw.map((_, i) => 0.6 * zGM[i] + 0.4 * zNM[i]);
 
-  // composite score (战略直接用 0-1 值，等价于 0.30 × strategic)
+  // 5 因子权重: 战略 40 / 增速 20 / 盈利 20 / 流动性 12 / 市值 8
+  const W = { mc: 0.08, growth: 0.20, profit: 0.20, turnover: 0.12, strategic: 0.40 };
+
   const composites = raw.map((r, i) => {
-    return W.mc * zMC[i] + W.growth * zGrow[i] + W.gm * zGM[i] + W.turnover * zTO[i] + W.strategic * r.strategic * 2;
-    // ×2: 让战略评分(0-1)的方差与 z-score(均值0方差1)更可比
+    return W.mc * zMC[i] + W.growth * zGrow[i] + W.profit * zProfit[i] + W.turnover * zTO[i] + W.strategic * r.strategic * 2;
   });
 
   // 平移到全部 ≥ 0.5 (避免负权重 + 给最弱的一只也保留至少 0.5%)
@@ -942,7 +948,7 @@ function computeQuantWeights(){
       factors: {
         market_cap: { val: Math.exp(r.logMC).toFixed(0) + "亿", z: zMC[i].toFixed(2), contrib: (W.mc * zMC[i]).toFixed(2) },
         growth: { val: r.revYoY.toFixed(1) + "%", z: zGrow[i].toFixed(2), contrib: (W.growth * zGrow[i]).toFixed(2) },
-        gm: { val: r.gm.toFixed(1) + "%", z: zGM[i].toFixed(2), contrib: (W.gm * zGM[i]).toFixed(2) },
+        profit: { val: `GM ${r.gm.toFixed(1)}% / NM ${r.nm.toFixed(1)}%`, z: zProfit[i].toFixed(2), contrib: (W.profit * zProfit[i]).toFixed(2) },
         turnover: { val: r.turnoverRaw.toFixed(1) + "% (理想 5%)", z: zTO[i].toFixed(2), contrib: (W.turnover * zTO[i]).toFixed(2) },
         strategic: { val: (r.strategic*10).toFixed(0) + "/10", contrib: (W.strategic * r.strategic * 2).toFixed(2) }
       }
@@ -981,11 +987,11 @@ function renderWatchlist(){
     const wDisplay = qw ? qw.weight.toFixed(1) + "%" : (r.w + "%");
     const wTooltip = qw ? escapeAttr(
       `量化权重 ${qw.weight.toFixed(1)}%\n` +
-      `市值: ${qw.factors.market_cap.val} (z=${qw.factors.market_cap.z}, 贡献 ${qw.factors.market_cap.contrib})\n` +
+      `战略: ${qw.factors.strategic.val} (贡献 ${qw.factors.strategic.contrib})\n` +
       `增速: ${qw.factors.growth.val} (z=${qw.factors.growth.z}, 贡献 ${qw.factors.growth.contrib})\n` +
-      `毛利: ${qw.factors.gm.val} (z=${qw.factors.gm.z}, 贡献 ${qw.factors.gm.contrib})\n` +
+      `盈利: ${qw.factors.profit.val} (z=${qw.factors.profit.z}, 贡献 ${qw.factors.profit.contrib})\n` +
       `换手: ${qw.factors.turnover.val} (z=${qw.factors.turnover.z}, 贡献 ${qw.factors.turnover.contrib})\n` +
-      `战略: ${qw.factors.strategic.val} (贡献 ${qw.factors.strategic.contrib})`
+      `市值: ${qw.factors.market_cap.val} (z=${qw.factors.market_cap.z}, 贡献 ${qw.factors.market_cap.contrib})`
     ) : "";
     const tr = document.createElement("tr");
     tr.innerHTML = `
