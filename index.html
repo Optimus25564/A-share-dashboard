@@ -1031,20 +1031,16 @@ const PF_COLORS = ["#ff5a6a", "#f5b301", "#29d6d6", "#9d7bff", "#4ea8ff"];
 let pfChartInstance = null;
 function renderPortfolioPie(){
   const canvas = document.getElementById("pfChart");
-  if (!canvas) return;
-  if (!_quantWeights) {
-    // 数据未就绪 — 在 legend 显示占位，不要碰 canvas (否则 loadCompanies 回调时 canvas 已被销毁)
-    const lg = document.getElementById("pfLegend");
-    if (lg) lg.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:8px 0">⏳ 加载量化权重中...</div>';
-    return;
-  }
-  // 取 Top 5
+  if (!canvas) { console.warn('[Top5] canvas pfChart 不存在'); return; }
+  // 取权重: 优先量化, fallback 到 WATCH.w
+  const useQuant = !!_quantWeights;
+  console.log('[Top5] 渲染饼图, 使用', useQuant ? '量化权重' : 'fallback WATCH.w');
   const ranked = WATCH.map(s => ({
     code: s.code,
     name: s.name,
     cat: s.cat,
     catLabel: s.catLabel,
-    weight: _quantWeights[s.code]?.weight || 0
+    weight: useQuant ? (_quantWeights[s.code]?.weight || 0) : s.w
   })).sort((a,b) => b.weight - a.weight);
   const top5 = ranked.slice(0, 5);
   const restPool = ranked.slice(5);
@@ -1447,8 +1443,14 @@ async function loadCompanies(){
   if (companiesData) return companiesData;
   try {
     const r = await fetch("data/companies.json?_=" + Date.now());
+    if (!r.ok) throw new Error("HTTP " + r.status);
     companiesData = await r.json();
-  } catch(e){ companiesData = {}; }
+    const n = Object.keys(companiesData).filter(k => !k.startsWith('_')).length;
+    console.log(`[基本面] 已加载 ${n} 家公司数据`);
+  } catch(e){
+    console.error('[基本面] 加载失败:', e);
+    companiesData = {};
+  }
   return companiesData;
 }
 function renderCompanyBasics(code){
