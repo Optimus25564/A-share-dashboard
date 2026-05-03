@@ -463,12 +463,15 @@
       </div>
 
       <div class="card">
-        <h3>建议组合配比</h3>
+        <h3>Top 5 仓位配比 <span style="font-size:11px;font-weight:400;color:var(--muted)">· 持有至趋势破位</span></h3>
         <div class="pf-wrap"><canvas id="pfChart"></canvas></div>
         <div class="pf-legend" id="pfLegend"></div>
-        <div style="margin-top:14px;padding-top:12px;border-top:1px dashed var(--border);font-size:12px;color:var(--muted)">
-          <b style="color:var(--gold)">规则：</b>核心 60% + 卫星 40%；单票≤12%；分 3 批建仓。
+        <div style="margin-top:14px;padding-top:12px;border-top:1px dashed var(--border);font-size:12px;color:var(--muted);line-height:1.7">
+          <b style="color:var(--gold)">策略：</b>5 因子量化模型选 Top 5，权重归一化到 100%。<br>
+          <b style="color:var(--gold)">卖出：</b>单票周线收盘跌破 EMA8 = 趋势破位 → 卖出。<br>
+          <b style="color:var(--gold)">不调仓：</b>趋势内不轮动，即使 #6 排名上升也不替换。
         </div>
+        <div id="pfWatchPool" style="margin-top:12px;padding-top:10px;border-top:1px dashed var(--border);font-size:11px;color:var(--muted)"></div>
       </div>
     </div>
   </div>
@@ -1030,25 +1033,67 @@ function updateCategoryKPIs(){
 }
 
 // ============ Portfolio chart ============
-const pfData = [
-  {label:"核心算力芯片",      val:26, color:"#ff5a6a"},
-  {label:"昇腾整机生态链",    val:26, color:"#f5b301"},
-  {label:"基础设施",          val:21, color:"#29d6d6"},
-  {label:"上游封装/HBM",      val:18, color:"#9d7bff"},
-  {label:"现金/机动",         val:9,  color:"#4ea8ff"},
-];
-new Chart(document.getElementById("pfChart"),{
-  type:"doughnut",
-  data:{labels:pfData.map(d=>d.label),datasets:[{data:pfData.map(d=>d.val),backgroundColor:pfData.map(d=>d.color),borderColor:"#121a2b",borderWidth:2}]},
-  options:{responsive:true,maintainAspectRatio:false,cutout:"62%",plugins:{legend:{display:false},tooltip:{callbacks:{label:(c)=>` ${c.label}: ${c.parsed}%`}}}}
-});
-const lg = document.getElementById("pfLegend");
-pfData.forEach(d => {
-  const row = document.createElement("div");
-  row.className = "row";
-  row.innerHTML = `<div class="left"><span class="sq" style="background:${d.color}"></span><span>${d.label}</span></div><b>${d.val}%</b>`;
-  lg.appendChild(row);
-});
+// Top 5 持仓配比 (动态, 基于量化权重归一化)
+const PF_COLORS = ["#ff5a6a", "#f5b301", "#29d6d6", "#9d7bff", "#4ea8ff"];
+let pfChartInstance = null;
+function renderPortfolioPie(){
+  const canvas = document.getElementById("pfChart");
+  if (!canvas) return;
+  if (!_quantWeights) {
+    // 数据未就绪, 显示占位
+    canvas.parentElement.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:20px;text-align:center">⏳ 加载量化权重中...</div>';
+    return;
+  }
+  // 取 Top 5
+  const ranked = WATCH.map(s => ({
+    code: s.code,
+    name: s.name,
+    cat: s.cat,
+    catLabel: s.catLabel,
+    weight: _quantWeights[s.code]?.weight || 0
+  })).sort((a,b) => b.weight - a.weight);
+  const top5 = ranked.slice(0, 5);
+  const restPool = ranked.slice(5);
+  // 归一化 Top 5 到 sum=100
+  const top5Sum = top5.reduce((a,b) => a + b.weight, 0);
+  const pfData = top5.map((s, i) => ({
+    label: s.name,
+    code: s.code,
+    catLabel: s.catLabel,
+    rawWeight: s.weight,
+    val: Math.round(s.weight / top5Sum * 1000) / 10,  // 1 decimal
+    color: PF_COLORS[i]
+  }));
+  // 修尾差 = 100
+  const total = pfData.reduce((a,b) => a + b.val, 0);
+  pfData[0].val = Math.round((pfData[0].val + (100 - total)) * 10) / 10;
+
+  // 销毁旧图并重画
+  if (pfChartInstance) { try{pfChartInstance.destroy();}catch(e){} }
+  pfChartInstance = new Chart(canvas, {
+    type:"doughnut",
+    data:{labels:pfData.map(d=>d.label),datasets:[{data:pfData.map(d=>d.val),backgroundColor:pfData.map(d=>d.color),borderColor:"#121a2b",borderWidth:2}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:"58%",plugins:{legend:{display:false},tooltip:{callbacks:{label:(c)=>` ${pfData[c.dataIndex].label} (${pfData[c.dataIndex].catLabel}): ${c.parsed}%`}}}}
+  });
+  // 渲染 legend
+  const lg = document.getElementById("pfLegend");
+  lg.innerHTML = "";
+  pfData.forEach(d => {
+    const row = document.createElement("div");
+    row.className = "row";
+    row.innerHTML = `<div class="left"><span class="sq" style="background:${d.color}"></span><span>${d.label}<span style="color:var(--muted);font-size:11px;margin-left:6px">${d.catLabel}</span></span></div><b>${d.val}%</b>`;
+    lg.appendChild(row);
+  });
+  // 候选池 (#6-10)
+  const pool = document.getElementById("pfWatchPool");
+  if (pool) {
+    const next5 = restPool.slice(0, 5);
+    pool.innerHTML = `<div style="margin-bottom:4px">📋 候选池（#6-10，趋势破位时考虑替换）：</div>` +
+      next5.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(138,160,192,.1);border-radius:3px">${s.name} ${s.weight.toFixed(1)}</span>`).join("");
+  }
+}
+// 初次渲染（数据未必就绪, 由 loadCompanies().then() 触发重渲染）
+renderPortfolioPie();
 
 // ============ Tabs ============
 function switchTab(name){
@@ -2505,9 +2550,10 @@ loadPublicNews().then(() => {
   renderGlobalFeed();
 });
 
-// Eager-load companies (基本面+量化权重数据) → 重算并刷新 watchlist + KPIs
+// Eager-load companies (基本面+量化权重数据) → 重算并刷新 watchlist + KPIs + 组合
 loadCompanies().then(() => {
-  renderWatchlist();  // 现在 _quantWeights 可以算出来了, 替代硬编码 r.w
+  renderWatchlist();  // 触发 computeQuantWeights → KPI / 权重列
+  renderPortfolioPie();  // Top 5 持仓配比饼图
 });
 
 // 周线 EMA 趋势扫描 — 启动时跑一次，之后每 30 分钟刷新一次
