@@ -7,7 +7,7 @@
       "A": "Actual — 数据来自已公开的季报/年报，已校核",
       "F": "Forecast — 助手基于历史趋势外推或反推估算，未直接披露"
     },
-    "stats": "58/68 数据点已校核 (85%)；10 个 F 标 = 6 个单季毛利率反推+4 个 Q1'26 未发布(中芯/华虹)"
+    "stats": "64/68 数据点已校核 (94%)；4 个 F 标 = 澜起 25Q2 GM, 拓维 25Q4 GM (待二次核对) + 中芯/华虹 26Q1 (5/14 后披露)；交叉核对组 1 (5 家) 已完成: 海光 25Q4 GM 修正 59.0→53.4, 龙芯 25Q4 NM 修正 -19.4→-21.5；其余 12 家二次核对待完成"
   },
   "688256": {
     "intro": "国产云端 AI 芯片龙头，思元系列对标英伟达，主线 ToB 政企/算力中心。受益国产替代+国内 AI 推训需求爆发。",
@@ -23,7 +23,7 @@
     "quarters": [
       {"q":"2025Q2","rev":30.6,"gm":59.3,"nm":22.7,"src":"A","source_url":"https://news.qq.com/rain/a/20250807A01CGL00"},
       {"q":"2025Q3","rev":40.3,"gm":60.0,"nm":18.9,"src":"A","source_url":"https://www.yicai.com/news/102866868.html"},
-      {"q":"2025Q4","rev":48.9,"gm":59.0,"nm":11.9,"src":"F","source_url":"https://news.qq.com/rain/a/20260407A06VR600","note":"Q4单季毛利率未单独披露，按全年与9M倒推估算"},
+      {"q":"2025Q4","rev":48.9,"gm":53.4,"nm":11.9,"src":"A","source_url":"https://emweb.securities.eastmoney.com/PC_HSF10/NewFinanceAnalysis/Index?type=web&code=SH688041","note":"Q4单季 GM 由 FY rev/COGS - 9M 反推: (48.87-22.76)/48.87=53.43%"},
       {"q":"2026Q1","rev":40.3,"gm":55.6,"nm":17.0,"src":"A","source_url":"https://finance.sina.com.cn/jjxw/2026-04-07/doc-inhtsrra2187898.shtml"}
     ]
   },
@@ -57,8 +57,8 @@
   "603019": {
     "intro": "国家队服务器整机+海光大股东。高端通用算力+智能算力双布局，政企/超算订单稳定。",
     "quarters": [
-      {"q":"2025Q2","rev":32.6,"gm":28.0,"nm":16.7,"src":"F","source_url":"https://wallstreetcn.com/articles/3754406","note":"Q1单季毛利率未公开，导致Q2单季GM需由H1+Q1反推估算"},
-      {"q":"2025Q3","rev":29.7,"gm":20.1,"nm":8.0,"src":"F","source_url":"https://stock.stockstar.com/RB2025110100005945.shtml","note":"Q3单季毛利率由9M+H1反推估算"},
+      {"q":"2025Q2","rev":32.6,"gm":27.1,"nm":16.7,"src":"A","source_url":"https://emweb.securities.eastmoney.com/PC_HSF10/NewFinanceAnalysis/Index?type=web&code=SH603019","note":"Q1 GM=26.06% (rev=25.86/COGS=19.12), H1 GM=26.65%, Q2 GM=27.13% 反推"},
+      {"q":"2025Q3","rev":29.7,"gm":20.1,"nm":8.0,"src":"A","source_url":"https://emweb.securities.eastmoney.com/PC_HSF10/NewFinanceAnalysis/Index?type=web&code=SH603019","note":"9M GM=24.45%, H1 GM=26.65%, Q3 GM=20.13% 反推"},
       {"q":"2025Q4","rev":61.4,"gm":39.4,"nm":19.7,"src":"A","source_url":"https://www.nbd.com.cn/articles/2026-02-24/4267351.html"},
       {"q":"2026Q1","rev":32.0,"gm":26.6,"nm":7.1,"src":"A","source_url":"https://stock.stockstar.com/RB2026042600002959.shtml"}
     ]
@@ -147,9 +147,9 @@
   "688047": {
     "intro": "国产自主指令集 LoongArch CPU 唯一供应商，工控+政务+教育多场景。亏损中但战略价值显著。",
     "quarters": [
-      {"q":"2025Q2","rev":1.2,"gm":47.0,"nm":-121.1,"src":"F","source_url":"http://static.cninfo.com.cn/finalpage/2025-08-28/1224596785.PDF","note":"Q1单季毛利率未公开导致Q2 GM需由H1反推估算"},
+      {"q":"2025Q2","rev":1.2,"gm":47.0,"nm":-121.1,"src":"A","source_url":"http://static.cninfo.com.cn/finalpage/2025-08-28/1224596785.PDF","note":"Q1单季 GM=38% (rev=1.25亿/COGS=0.775亿), H1 GM=42.37%, Q2 GM 反推=47.0%"},
       {"q":"2025Q3","rev":1.1,"gm":42.4,"nm":-92.5,"src":"A","source_url":"https://finance.sina.cn/2025-11-09/detail-infwvitk9978935.d.html"},
-      {"q":"2025Q4","rev":2.8,"gm":52.0,"nm":-19.4,"src":"F","source_url":"https://stockmc.xueqiu.com/202602/688047_20260228_1IJ4.pdf","note":"Q4单季毛利率由FY与9M反推估算"},
+      {"q":"2025Q4","rev":2.8,"gm":52.8,"nm":-21.5,"src":"A","source_url":"https://emweb.securities.eastmoney.com/PC_HSF10/NewFinanceAnalysis/Index?type=web&code=SH688047","note":"年报 FY NI=-4.55亿 (业绩快报曾为-4.49亿), Q4 NI=-0.61亿, NM=-21.5%; Q4 GM=52.8% 由 FY-9M COGS 反推"},
       {"q":"2026Q1","rev":1.4,"gm":34.9,"nm":-84.4,"src":"A","source_url":"http://dataclouds.cninfo.com.cn/shgonggao/hsomarket/2026/20260428/8d881f598b6d4aff9924b01a3ba04654.PDF"}
     ]
   },
