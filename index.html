@@ -1005,6 +1005,23 @@ function renderWatchlist(){
   });
   // 同步顶部 KPI 卡片用动态权重
   updateCategoryKPIs();
+  // watchSummary
+  document.getElementById("watchSummary").textContent =
+    `↑ ${upCount}　↓ ${downCount}　— ${WATCH.length - upCount - downCount}`;
+  // Bind buy / K线 / info buttons
+  tb.querySelectorAll("[data-buy]").forEach(b => {
+    b.onclick = () => {
+      switchTab("trade");
+      document.getElementById("tradeStock").value = b.dataset.buy;
+      onStockChange();
+    };
+  });
+  tb.querySelectorAll("[data-kl]").forEach(b => {
+    b.onclick = () => openKLine(b.dataset.kl);
+  });
+  tb.querySelectorAll("[data-info]").forEach(b => {
+    b.onclick = () => openInfo(b.dataset.info);
+  });
 }
 
 function updateCategoryKPIs(){
@@ -1019,25 +1036,6 @@ function updateCategoryKPIs(){
   setKPI("kpi-hw",    byCat.hw);
   setKPI("kpi-infra", byCat.infra);
   setKPI("kpi-base",  byCat.base);
-  document.getElementById("watchSummary").textContent =
-    `↑ ${upCount}　↓ ${downCount}　— ${WATCH.length - upCount - downCount}`;
-
-  // Bind buy buttons → switch tab and prefill
-  tb.querySelectorAll("[data-buy]").forEach(b => {
-    b.onclick = () => {
-      switchTab("trade");
-      document.getElementById("tradeStock").value = b.dataset.buy;
-      onStockChange();
-    };
-  });
-  // Bind K-line buttons
-  tb.querySelectorAll("[data-kl]").forEach(b => {
-    b.onclick = () => openKLine(b.dataset.kl);
-  });
-  // Bind info buttons
-  tb.querySelectorAll("[data-info]").forEach(b => {
-    b.onclick = () => openInfo(b.dataset.info);
-  });
 }
 
 // ============ Portfolio chart ============
