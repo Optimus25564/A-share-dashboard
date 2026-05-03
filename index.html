@@ -1032,15 +1032,20 @@ let pfChartInstance = null;
 function renderPortfolioPie(){
   const canvas = document.getElementById("pfChart");
   if (!canvas) { console.warn('[Top5] canvas pfChart 不存在'); return; }
-  // 取权重: 优先量化, fallback 到 WATCH.w
-  const useQuant = !!_quantWeights;
-  console.log('[Top5] 渲染饼图, 使用', useQuant ? '量化权重' : 'fallback WATCH.w');
+  // 必须等量化数据就绪才画 — 否则会显示错的 Top 5 (WATCH.w 是旧硬编码值)
+  if (!_quantWeights) {
+    console.log('[Top5] _quantWeights 未就绪, 等待 loadCompanies 完成');
+    const lg = document.getElementById("pfLegend");
+    if (lg) lg.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:8px 0">⏳ 加载基本面数据中...</div>';
+    return;
+  }
+  console.log('[Top5] 渲染量化模型 Top 5');
   const ranked = WATCH.map(s => ({
     code: s.code,
     name: s.name,
     cat: s.cat,
     catLabel: s.catLabel,
-    weight: useQuant ? (_quantWeights[s.code]?.weight || 0) : s.w
+    weight: _quantWeights[s.code]?.weight || 0
   })).sort((a,b) => b.weight - a.weight);
   const top5 = ranked.slice(0, 5);
   const restPool = ranked.slice(5);
@@ -1058,8 +1063,9 @@ function renderPortfolioPie(){
   const total = pfData.reduce((a,b) => a + b.val, 0);
   pfData[0].val = Math.round((pfData[0].val + (100 - total)) * 10) / 10;
 
-  // 销毁旧图并重画
-  if (pfChartInstance) { try{pfChartInstance.destroy();}catch(e){} }
+  // 销毁旧图并重画 (用 Chart.getChart 找已挂在 canvas 上的实例)
+  const existing = Chart.getChart(canvas);
+  if (existing) { try{existing.destroy();}catch(e){} }
   pfChartInstance = new Chart(canvas, {
     type:"doughnut",
     data:{labels:pfData.map(d=>d.label),datasets:[{data:pfData.map(d=>d.val),backgroundColor:pfData.map(d=>d.color),borderColor:"#121a2b",borderWidth:2}]},
