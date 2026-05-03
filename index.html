@@ -2542,17 +2542,11 @@ function setLive(on, label){
 document.getElementById("refreshBtn").onclick = () => refresh(true);
 
 // Init
-console.log('[INIT] 开始');
-try { renderWatchlist(); console.log('[INIT] renderWatchlist OK'); }
-catch(e){ console.error('[INIT] renderWatchlist 抛错:', e); throw e; }
-try { renderAccount(); console.log('[INIT] renderAccount OK'); }
-catch(e){ console.error('[INIT] renderAccount 抛错:', e); throw e; }
-try { renderPnLCurve(); console.log('[INIT] renderPnLCurve OK'); }
-catch(e){ console.error('[INIT] renderPnLCurve 抛错:', e); throw e; }
-try { refresh(true); console.log('[INIT] refresh 已发起'); }
-catch(e){ console.error('[INIT] refresh 抛错:', e); throw e; }
+renderWatchlist();
+renderAccount();
+renderPnLCurve();
+refresh(true);
 setInterval(() => refresh(false), 10000);
-console.log('[INIT] 同步部分完成');
 
 // Eager-load news → re-render watchlist with signal icons + render global feed
 loadPublicNews().then(() => {
