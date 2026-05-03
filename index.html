@@ -898,8 +898,8 @@ function computeQuantWeights(){
   const zGM = zscore(raw.map(r => r.gm));
   const zTO = zscore(raw.map(r => r.turnover));
 
-  // 5 因子权重
-  const W = { mc: 0.10, growth: 0.30, gm: 0.15, turnover: 0.15, strategic: 0.30 };
+  // 5 因子权重 (战略稀缺度优先，避免短期增速推爆款)
+  const W = { mc: 0.10, growth: 0.20, gm: 0.15, turnover: 0.15, strategic: 0.40 };
 
   // composite score (战略直接用 0-1 值，等价于 0.30 × strategic)
   const composites = raw.map((r, i) => {
