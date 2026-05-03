@@ -1033,8 +1033,9 @@ function renderPortfolioPie(){
   const canvas = document.getElementById("pfChart");
   if (!canvas) return;
   if (!_quantWeights) {
-    // 数据未就绪, 显示占位
-    canvas.parentElement.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:20px;text-align:center">⏳ 加载量化权重中...</div>';
+    // 数据未就绪 — 在 legend 显示占位，不要碰 canvas (否则 loadCompanies 回调时 canvas 已被销毁)
+    const lg = document.getElementById("pfLegend");
+    if (lg) lg.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:8px 0">⏳ 加载量化权重中...</div>';
     return;
   }
   // 取 Top 5
