@@ -2330,20 +2330,7 @@ function renderBuyAlertBanner(results){
   };
   document.getElementById("dismissAlertBtn").onclick = () => banner.style.display = "none";
 
-  // 桌面通知 + toast (仅在结果改变时触发一次)
-  const buyKey = buys.map(b=>b.stock.code).sort().join(",");
-  if (buys.length > 0 && buyKey !== watchScanState.alertedKey) {
-    watchScanState.alertedKey = buyKey;
-    const names = buys.map(b=>b.stock.name).join("、");
-    toast(`🔴 ${buys.length} 只出现周线买点：${names}`, "success");
-    if (window.Notification) {
-      if (Notification.permission === "granted") {
-        try { new Notification(`周线 EMA 买点提醒 · ${buys.length} 只`, { body: names + "\n点击查看详情", tag: "rmb-buy-alert" }); } catch(e){}
-      } else if (Notification.permission !== "denied") {
-        Notification.requestPermission();
-      }
-    }
-  }
+  // 注：周线买点提示只在关注列表顶部 banner 显示，不再 toast / 桌面通知（避免遮挡其他 tab 内容）
 }
 
 async function runWatchScan(force=false){
