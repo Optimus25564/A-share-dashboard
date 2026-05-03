@@ -857,23 +857,26 @@ function computeQuantWeights(){
   if (!companiesData) return null;  // 数据没加载时 fallback 到硬编码 r.w
   const codes = WATCH.map(s => s.code);
   // 收集每只的原始因子值
+  const IDEAL_TURNOVER = 5;  // 健康活跃区间的中点 (%); <1% 流动性差, >10% 投机过热
   const raw = codes.map(code => {
     const c = companiesData[code];
     if (!c || !c.quarters || c.quarters.length < 4) return null;
     const qs = c.quarters;
-    // 收入 YoY 增速: 最近季度 vs 4 季度前 (即同比)
     const revLatest = qs[qs.length-1].rev;
     const revYoYBase = qs[0].rev;
     const revYoY = revYoYBase > 0 ? (revLatest / revYoYBase - 1) * 100 : 0;
-    // 最新毛利率
     const gmLatest = qs[qs.length-1].gm;
+    const t = c.avg_turnover_pct || 3;
+    // 流动性: U 形偏好, 5% 为理想峰值, 距离越远扣分越多
+    const turnoverScore = -Math.abs(Math.log(t / IDEAL_TURNOVER));
     return {
       code,
       logMC: Math.log(c.market_cap_billion || 100),
-      revYoY: Math.max(-50, Math.min(300, revYoY)),  // clip 极端值
+      revYoY: Math.max(-50, Math.min(300, revYoY)),
       gm: gmLatest,
-      turnover: c.avg_turnover_pct || 3,
-      strategic: (c.strategic || 5) / 10  // 归一到 0-1
+      turnoverScore,        // U 形得分 (用于 z-score 算贡献)
+      turnoverRaw: t,       // 原始换手率 (用于 tooltip 显示)
+      strategic: (c.strategic || 5) / 10
     };
   });
 
@@ -889,7 +892,7 @@ function computeQuantWeights(){
   const zMC = zscore(raw.map(r => r.logMC));
   const zGrow = zscore(raw.map(r => r.revYoY));
   const zGM = zscore(raw.map(r => r.gm));
-  const zTO = zscore(raw.map(r => r.turnover));
+  const zTO = zscore(raw.map(r => r.turnoverScore));
 
   // 5 因子权重 (战略稀缺度优先，避免短期增速推爆款)
   const W = { mc: 0.10, growth: 0.20, gm: 0.15, turnover: 0.15, strategic: 0.40 };
@@ -928,7 +931,7 @@ function computeQuantWeights(){
         market_cap: { val: Math.exp(r.logMC).toFixed(0) + "亿", z: zMC[i].toFixed(2), contrib: (W.mc * zMC[i]).toFixed(2) },
         growth: { val: r.revYoY.toFixed(1) + "%", z: zGrow[i].toFixed(2), contrib: (W.growth * zGrow[i]).toFixed(2) },
         gm: { val: r.gm.toFixed(1) + "%", z: zGM[i].toFixed(2), contrib: (W.gm * zGM[i]).toFixed(2) },
-        turnover: { val: r.turnover.toFixed(1) + "%", z: zTO[i].toFixed(2), contrib: (W.turnover * zTO[i]).toFixed(2) },
+        turnover: { val: r.turnoverRaw.toFixed(1) + "% (理想 5%)", z: zTO[i].toFixed(2), contrib: (W.turnover * zTO[i]).toFixed(2) },
         strategic: { val: (r.strategic*10).toFixed(0) + "/10", contrib: (W.strategic * r.strategic * 2).toFixed(2) }
       }
     };
