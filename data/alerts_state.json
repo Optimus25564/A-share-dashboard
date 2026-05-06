@@ -1,0 +1,83 @@
+{
+  "last_run": "2026-05-06T18:30:00+08:00",
+  "run_date": "2026-05-06",
+  "top5": [
+    {
+      "code": "688256",
+      "name": "寒武纪",
+      "rank": 1,
+      "score": 1.2029
+    },
+    {
+      "code": "688041",
+      "name": "海光",
+      "rank": 2,
+      "score": 1.0283
+    },
+    {
+      "code": "300308",
+      "name": "中际旭创",
+      "rank": 3,
+      "score": 0.6013
+    },
+    {
+      "code": "688008",
+      "name": "澜起",
+      "rank": 4,
+      "score": 0.5935
+    },
+    {
+      "code": "688981",
+      "name": "中芯",
+      "rank": 5,
+      "score": 0.4284
+    }
+  ],
+  "candidates": [
+    {
+      "code": "603019",
+      "name": "曙光",
+      "rank": 6,
+      "score": 0.0428
+    },
+    {
+      "code": "002261",
+      "name": "拓维",
+      "rank": 7,
+      "score": 0.0122
+    },
+    {
+      "code": "002156",
+      "name": "通富",
+      "rank": 8,
+      "score": -0.0013
+    },
+    {
+      "code": "688347",
+      "name": "华虹",
+      "rank": 9,
+      "score": -0.065
+    },
+    {
+      "code": "002409",
+      "name": "雅克",
+      "rank": 10,
+      "score": -0.2563
+    }
+  ],
+  "signals": {
+    "688256": "kline_unavailable",
+    "688041": "kline_unavailable",
+    "300308": "kline_unavailable",
+    "688008": "kline_unavailable",
+    "688981": "kline_unavailable",
+    "sh000001": "kline_unavailable"
+  },
+  "push_result": {
+    "wechat": "failed_403",
+    "email": "failed_network"
+  },
+  "kline_status": "failed: sandbox egress IP blocked by market data server (HTTP 403)",
+  "title": "✅ [2026-05-06] 持仓平稳",
+  "body_length": 832
+}
