@@ -2310,11 +2310,20 @@ function renderBuyAlertBanner(results){
   }
 
   const tagStyle = "display:inline-block;padding:5px 10px;border-radius:4px;font-size:13px;margin:3px 6px 3px 0;cursor:pointer;font-weight:600";
-  const buyHtml = buys.length ? `
-    <div style="margin-bottom:${sells.length?'8px':'0'}">
-      <span style="font-size:13px;font-weight:700;color:#ff8a95;margin-right:8px">🔴 买入 (${buys.length})：</span>
-      ${buys.map(b => `<span class="buy-alert-card" data-code="${b.stock.code}" style="${tagStyle};background:rgba(255,90,106,.15);color:#ff8a95;border:1px solid rgba(255,90,106,.35)">${b.stock.name}</span>`).join("")}
+  // 拆分: 强买入 (3 星) 单独一行高亮, 中弱买入 (1-2 星) 普通一行
+  const strongBuys = buys.filter(b => b.signal.strength >= 3);
+  const weakBuys = buys.filter(b => b.signal.strength < 3);
+  const strongBuyHtml = strongBuys.length ? `
+    <div style="margin-bottom:${(weakBuys.length || sells.length)?'8px':'0'};background:rgba(255,90,106,.12);padding:6px 10px;border-radius:6px;border:1px solid rgba(255,90,106,.45)">
+      <span style="font-size:13px;font-weight:700;color:#ff5a6a;margin-right:8px">🔴🔴 强买入 ★★★ (${strongBuys.length})：</span>
+      ${strongBuys.map(b => `<span class="buy-alert-card" data-code="${b.stock.code}" style="${tagStyle};background:rgba(255,90,106,.3);color:#fff;border:1px solid rgba(255,90,106,.7)">${b.stock.name}</span>`).join("")}
     </div>` : "";
+  const weakBuyHtml = weakBuys.length ? `
+    <div style="margin-bottom:${sells.length?'8px':'0'}">
+      <span style="font-size:13px;font-weight:700;color:#ff8a95;margin-right:8px">🔴 买入 ${weakBuys.length === buys.length ? `(${weakBuys.length})` : `★${weakBuys[0]?.signal.strength}-${weakBuys[weakBuys.length-1]?.signal.strength} (${weakBuys.length})`}：</span>
+      ${weakBuys.map(b => `<span class="buy-alert-card" data-code="${b.stock.code}" style="${tagStyle};background:rgba(255,90,106,.15);color:#ff8a95;border:1px solid rgba(255,90,106,.35)">${b.stock.name}</span>`).join("")}
+    </div>` : "";
+  const buyHtml = strongBuyHtml + weakBuyHtml;
 
   const sellHtml = sells.length ? `
     <div>
