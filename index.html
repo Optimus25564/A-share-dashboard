@@ -447,7 +447,7 @@
               <tr>
                 <th>代码</th><th>名称</th><th class="num-cell">现价</th>
                 <th class="num-cell">涨跌幅</th><th class="num-cell">成交额(亿)</th>
-                <th class="num-cell">建议权重</th><th>操作</th>
+                <th class="num-cell">排名 / 角色</th><th>操作</th>
               </tr>
             </thead>
             <tbody id="watchlist"></tbody>
@@ -982,11 +982,23 @@ function renderWatchlist(){
       sig.bull ? `<span class="sig-icon" data-tip="${escapeAttr(sig.bull.title)}">🎯</span>` : "",
       sig.hot ?  `<span class="sig-icon" data-tip="${escapeAttr(sig.hot.title)}">✨</span>` : "",
     ].filter(Boolean).join("");
-    // 量化权重 + 因子分解 tooltip
+    // 量化权重 + 因子分解 tooltip + 角色标签 (Top 5 vs 候选池 vs 其他)
     const qw = _quantWeights ? _quantWeights[r.code] : null;
-    const wDisplay = qw ? qw.weight.toFixed(1) + "%" : (r.w + "%");
+    // 在 sorted 数组中的位置就是排名 (1-based)
+    const rankIdx = sorted.findIndex(s => s.code === r.code) + 1;
+    let roleHtml;
+    if (rankIdx <= 5) {
+      // Top 5 持仓 — 红色高亮
+      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(255,90,106,.2);color:#ff8a95;font-weight:700;font-size:12px">#${rankIdx} 持仓 ${qw ? qw.weight.toFixed(1) : '?'}%</span>`;
+    } else if (rankIdx <= 10) {
+      // 候选池 — 金色
+      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(245,179,1,.15);color:var(--gold);font-weight:600;font-size:12px">#${rankIdx} 候选</span>`;
+    } else {
+      // 观察池 — 灰色
+      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;color:var(--muted);font-size:11px">#${rankIdx} 观察</span>`;
+    }
     const wTooltip = qw ? escapeAttr(
-      `量化权重 ${qw.weight.toFixed(1)}%\n` +
+      `量化排名 #${rankIdx} · 综合分 ${qw.weight.toFixed(1)}%\n` +
       `战略: ${qw.factors.strategic.val} (贡献 ${qw.factors.strategic.contrib})\n` +
       `增速: ${qw.factors.growth.val} (z=${qw.factors.growth.z}, 贡献 ${qw.factors.growth.contrib})\n` +
       `盈利: ${qw.factors.profit.val} (z=${qw.factors.profit.z}, 贡献 ${qw.factors.profit.contrib})\n` +
@@ -1000,7 +1012,7 @@ function renderWatchlist(){
       <td class="num-cell ${cls}">${fmtNum(q.price)}</td>
       <td class="num-cell ${cls}">${fmtPct(q.changePct)}</td>
       <td class="num-cell">${q.turnover ? (q.turnover/10000).toFixed(2) : "--"}</td>
-      <td class="num-cell" title="${wTooltip}" style="cursor:help">${wDisplay}</td>
+      <td class="num-cell" title="${wTooltip}" style="cursor:help">${roleHtml}</td>
       <td>
         <button class="trade-action" data-info="${r.code}" style="margin-right:4px">📋</button>
         <button class="trade-action" data-kl="${r.code}" style="margin-right:4px">K线</button>
