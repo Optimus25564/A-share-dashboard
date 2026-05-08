@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-05-07T18:30:00+08:00",
-  "run_date": "2026-05-07",
+  "last_run": "2026-05-08T18:30:00+08:00",
+  "run_date": "2026-05-08",
   "top5": [
     {"code": "688256", "name": "寒武纪", "rank": 1, "score": 1.240},
     {"code": "688041", "name": "海光信息", "rank": 2, "score": 1.060},
@@ -18,12 +18,13 @@
   "market": {
     "code": "sh000001",
     "name": "上证指数",
-    "close_est": 4180.00,
-    "prev_close": 4160.17,
-    "chg_pct": "+0.48%(est)",
-    "ema8_est": 4000.85,
-    "ema21_est": 3849.10,
-    "above_ema8": true
+    "close": 4172.00,
+    "prev_close": 4180.09,
+    "chg_pct": "-0.19%(confirmed)",
+    "ema8": 4038.88,
+    "ema21": 3853.36,
+    "above_ema8": true,
+    "data_source": "confirmed via WebSearch"
   },
   "signals": {
     "688256": "hold",
@@ -33,32 +34,77 @@
     "688981": "hold",
     "000001": "hold"
   },
-  "prices_est": {
-    "688256": {"close": 1919.0, "ema8": 1630.60, "ema21": 1430.98, "chg": "≈+0.36%(May7est)", "vs_ema8_pct": 17.7, "note": "May6确认=1912.09, May7≈1919; 明日(5/8)除权: 10转4.9派15, 参考价≈1285"},
-    "688041": {"close": 381.0,  "ema8": 302.83,  "ema21": 261.65,  "chg": "+7.2%(May7est)", "vs_ema8_pct": 25.8},
-    "300308": {"close": 952.0,  "ema8": 825.34,  "ema21": 740.25,  "chg": "+3.6%(est)", "vs_ema8_pct": 15.3},
-    "688008": {"close": 209.22, "ema8": 165.08,  "ema21": 143.47,  "chg": "+5.1%(May7确认)", "vs_ema8_pct": 26.7},
-    "688981": {"close": 127.0,  "ema8": 109.07,  "ema21": 99.82,   "chg": "+3.2%(est)", "vs_ema8_pct": 16.4}
+  "prices": {
+    "688256": {
+      "close": 1188.00,
+      "ema8": 1114.49,
+      "ema21": 962.25,
+      "vs_ema8_pct": 6.6,
+      "data_source": "confirmed via WebSearch",
+      "note": "除权日: 10转4.9派15; pre-ex-rights May7=1868; ref_price=1252.7; adj_factor=0.6706; adj_ema8_prev=1093.5"
+    },
+    "688041": {
+      "close": 377.00,
+      "ema8": 319.31,
+      "ema21": 263.24,
+      "vs_ema8_pct": 18.1,
+      "data_source": "estimated",
+      "note": "May6=355.5(涨停), May7 est=381, May8 market-0.2% → est 377"
+    },
+    "300308": {
+      "close": 946.00,
+      "ema8": 852.15,
+      "ema21": 742.73,
+      "vs_ema8_pct": 11.0,
+      "data_source": "estimated",
+      "note": "May7 est=952, May8 est=946"
+    },
+    "688008": {
+      "close": 207.50,
+      "ema8": 174.51,
+      "ema21": 144.39,
+      "vs_ema8_pct": 18.9,
+      "data_source": "estimated",
+      "note": "May7 confirmed=209.22, May8 est=207.50"
+    },
+    "688981": {
+      "close": 126.00,
+      "ema8": 112.83,
+      "ema21": 100.63,
+      "vs_ema8_pct": 11.7,
+      "data_source": "estimated",
+      "note": "May6 confirmed=123.1, May7 est=127, May8 est=126"
+    }
   },
   "candidates_est": {
-    "603019": {"close": 73.0, "ema8": 64.48, "vs_ema8_pct": 13.2, "note": "May6确认+7.36%"},
-    "002261": {"close": 31.5, "ema8": 27.82, "vs_ema8_pct": 13.2},
-    "002156": {"close": 63.0, "ema8": 55.65, "vs_ema8_pct": 13.2},
-    "688347": {"close": 60.0, "ema8": 53.00, "vs_ema8_pct": 13.2},
-    "002409": {"close": 41.0, "ema8": 36.22, "vs_ema8_pct": 13.2}
+    "603019": {"close": 72.00, "ema8": 66.15, "vs_ema8_pct": 8.8},
+    "002261": {"close": 32.00, "ema8": 28.75, "vs_ema8_pct": 11.3},
+    "002156": {"close": 64.00, "ema8": 57.51, "vs_ema8_pct": 11.3},
+    "688347": {"close": 61.00, "ema8": 54.78, "vs_ema8_pct": 11.4},
+    "002409": {"close": 41.50, "ema8": 37.39, "vs_ema8_pct": 11.0}
   },
   "push_result": {
     "wechat": "failed_403",
     "email": "failed_errno97",
-    "note": "sandbox egress IP blocked - 与昨日一致。微信:HTTP 403; SMTP:errno97"
+    "note": "sandbox egress blocked (HTTP 403 for sctapi.ftqq.com; errno97 for SMTP). 与前两次运行一致。"
   },
-  "kline_status": "partial: K线API受沙箱限制，价格通过WebSearch+估算。确认: 寒武纪May6=1912.09/May7≈1919; 澜起May7=209.22; 中芯May6=123.1; 上证May6=4160.17/May7≈4180; 中韩半导体ETF May7+7.14%; 曙光May6+7.36%; 海光May6=355.5涨停",
-  "market_context": "节后第2个交易日。创业板指刷新近11年新高，中韩半导体ETF+7.14%，算力硬件领涨。上证+0.48%(est)。寒武纪明日(5/8)除权除息: 10转4.9派15，参考价≈1285元。全部持仓HOLD，无卖出/买入信号。",
-  "title": "✅ [2026-05-07] 持仓平稳",
-  "cambricon_exrights": {
+  "kline_status": "K线API受沙箱限制(Host not in allowlist)。确认数据: 上证May8=4172(-0.19%); 寒武纪May8=1188(除权后,search确认); 中芯May6=123.1(search确认); 上证May7=4180.09(search确认); 寒武纪May7=1868(search确认)。其余股票为估算值(±2%)。",
+  "market_context": "五一后第三个交易日(周五). 上证-0.19%收4172, 深证-0.2%收15615. 本周累计: 上证+约1.7%, 创业板+约5%+. AI/算力/半导体继续领涨. 寒武纪执行10转4.9派15除权, 除权后1188仍站稳EMA8(1114). 海光本周涨逾25%高位整固. 全部持仓HOLD, 无买卖信号.",
+  "title": "✅ [2026-05-08] 持仓平稳",
+  "cambricon_exrights_completed": {
     "date": "2026-05-08",
     "plan": "10转4.9派15元",
-    "ref_price_est": 1285.0,
-    "note": "登记日=2026-05-07, 除权除息日=2026-05-08。EMA历史值需除权调整后重算"
-  }
+    "pre_exrights_close": 1868.0,
+    "ref_price": 1252.7,
+    "actual_close": 1188.0,
+    "vs_ref_pct": -5.2,
+    "adj_ema8_after": 1114.49,
+    "adj_ema21_after": 962.25,
+    "above_ema8": true,
+    "status": "completed"
+  },
+  "next_events": [
+    {"date": "2026-05-14", "event": "中芯国际/华虹半导体 2026Q1 财报披露, 当前估算值转为实际值"},
+    {"date": "2026-05-next", "event": "关注寒武纪除权后价格稳定与EMA8支撑情况"}
+  ]
 }
