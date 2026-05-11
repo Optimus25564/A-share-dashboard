@@ -31,6 +31,14 @@
       "url": "https://legis1.com/news/ai-chip-export-controls-committee-tightens",
       "source": "Legis1",
       "content": "House Foreign Affairs Committee advanced the AI OVERWATCH Act, treating NVDA Blackwell chip exports like weapons sales; would prohibit sales to entities of concern (China, Iran, NK, Russia, Venezuela) for 2 years. Direct regulatory risk for NVDA."
+    },
+    {
+      "date": "2026-05-11",
+      "type": "news",
+      "title": "NVIDIA Ships First Vera Rubin Samples; DeepSeek Blackwell Violation Heightens Export Scrutiny Ahead of May 20 Earnings",
+      "url": "https://rollingout.com/2026/05/11/nvidia-nvda-250-price-target-buy-rating/",
+      "source": "Rolling Out",
+      "content": "NVIDIA shipped first Vera Rubin architecture samples to customers this week — successor to Blackwell delivering up to 10x lower inference token cost and 4x fewer GPUs needed to train MoE models. Separately, Reuters reported DeepSeek trained its latest model on Blackwell chips in apparent export control violation, intensifying Washington regulatory scrutiny ahead of NVDA's May 20 Q1 FY2027 earnings ($78.8B revenue guide)."
     }
   ],
   "AVGO": [
@@ -49,6 +57,14 @@
       "url": "https://247wallst.com/investing/2026/05/04/bernstein-analyst-ai-agents-drive-chip-demand-off-the-charts-supply-cant-keep-up/",
       "source": "24/7 Wall St.",
       "content": "Bernstein analyst notes AI agent proliferation driving chip demand 'off the charts.' Broadcom's hyperscaler ASIC business (Google TPU, Meta MTIA) and network switching chips are structural beneficiaries as supply struggles to keep up."
+    },
+    {
+      "date": "2026-05-09",
+      "type": "news",
+      "title": "Broadcom Q2 FY2026 Preview: $22B Revenue Guidance (+47% YoY), AI Semiconductor Revenue to Reach $10.7B (+140%); Earnings June 3",
+      "url": "https://seekingalpha.com/article/4901429-broadcom-is-flexing-its-ai-infrastructure-software-muscle",
+      "source": "Seeking Alpha",
+      "content": "Broadcom Q2 FY2026 earnings scheduled June 3, 2026. Q2 revenue guided at $22B (+47% YoY), AI semiconductor revenue expected $10.7B (+140% YoY). CEO Hock Tan targets $100B AI chip revenue by 2027. AI revenue backlog $73B. AVGO shares up 115% YoY and 23% YTD as hyperscaler ASIC (Google TPU, Meta MTIA) and network chip demand accelerates."
     }
   ],
   "AMD": [
@@ -75,6 +91,14 @@
       "url": "https://www.tipranks.com/news/nvda-amd-qcom-chip-stocks-catch-fire-again-after-intels-blowout-earnings",
       "source": "TipRanks",
       "content": "Goldman Sachs and Bernstein upgraded AMD to Buy citing AI GPU demand acceleration and EPYC server CPU share gains from Intel. AMD shares surged 14%+ post-earnings as Wall Street diversifies AI chip exposure."
+    },
+    {
+      "date": "2026-05-08",
+      "type": "announcement",
+      "title": "AMD Launches Instinct MI350P PCIe: 144GB HBM3E, CDNA4 Architecture for Enterprise On-Prem AI on Existing Servers",
+      "url": "https://www.theregister.com/ai-and-ml/2026/05/07/amd-takes-aim-at-enterprise-ai-with-pcie-based-instinct-gpus/5231481",
+      "source": "The Register",
+      "content": "AMD launched Instinct MI350P, its first PCIe-based Instinct accelerator in 4 years: dual-slot air-cooled form factor, 144GB HBM3E at 4TB/s, peak 4,600 TFLOPS at MXFP4, 600W TBP. Enables enterprise AI deployment on existing air-cooled servers without major infrastructure upgrades. Dell expanded on-prem AI platform with MI350P support. CDNA4 architecture targets agentic AI inference workloads."
     }
   ],
   "INTC": [
@@ -125,6 +149,22 @@
       "url": "https://www.cnbc.com/2026/05/08/wall-street-ai-chip-love-moves-from-nvidia-to-intel-amd-and-micron.html",
       "source": "CNBC",
       "content": "Intel has more than doubled in value in 2026, leading AI chip sector. Xeon 6 CPU demand running ahead of supply. Investors rotating into INTC from NVDA on valuation and execution turnaround narrative."
+    },
+    {
+      "date": "2026-05-05",
+      "type": "news",
+      "title": "Apple Confirms Intel 18A Foundry Agreement to Manufacture Entry-Level Mac/iPad Chips in U.S.; INTC Surges 14%",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/apple-talks-put-intel-foundry-221413260.html",
+      "source": "Yahoo Finance",
+      "content": "Bloomberg confirmed Apple entered foundry agreement with Intel to manufacture 18A-based chips for entry-level Mac and iPad product lines — a landmark validation of Intel Foundry Services as a competitive alternative to TSMC. INTC surged ~14% on the news. Validates CEO Lip-Bu Tan's pitch: Intel 18A is the most advanced process node manufactured in the U.S., with yields running ahead of internal projections."
+    },
+    {
+      "date": "2026-05-09",
+      "type": "news",
+      "title": "Intel Computex 2026 Preview (June 2): Panther Lake Handhelds, 52-Core Nova Lake Desktop, 288-Core Clearwater Forest Server — All on 18A",
+      "url": "https://thenextweb.com/news/intel-computex-2026-18a-panther-nova-lake-ai-pc",
+      "source": "The Next Web",
+      "content": "Intel's Computex 2026 lineup (June 2 keynote, Taipei): Panther Lake Arc G3 gaming handhelds, Nova Lake 52-core desktop preview, and 288-core Clearwater Forest server — all built on Intel 18A. Entire lineup serves as foundry showcase to potential customers Apple, Amazon, and Musk's Terafab. CEO Tan keynote positions 18A as U.S.-made alternative to TSMC for advanced AI chip production."
     }
   ],
   "QCOM": [
@@ -143,6 +183,22 @@
       "url": "https://www.fxleaders.com/news/2026/05/08/chip-stock-qualcomm-up-6-on-new-snapdragon-products/",
       "source": "FX Leaders",
       "content": "Qualcomm launched Snapdragon X2 PC platform with 85 TOPS Hexagon NPU, outperforming Intel Pinter Lake by ~30%. Targets always-on agentic AI PC experiences. Data center silicon shipment to hyperscaler adds new growth vector."
+    },
+    {
+      "date": "2026-04-29",
+      "type": "announcement",
+      "title": "Qualcomm Authorizes $20B Share Buyback; Confirms First Data Center Processor Shipments to Hyperscaler in December 2025",
+      "url": "https://siliconangle.com/2026/04/29/qualcomm-shares-surge-q2-beat-20b-buyback-data-center-timeline/",
+      "source": "SiliconANGLE",
+      "content": "Alongside Q2 FY2026 earnings beat, Qualcomm authorized $20B share buyback program. CEO Cristiano Amon confirmed initial data center processor shipments already completed to a leading hyperscaler in December 2025, establishing data center as a new revenue vector. Automotive segment exceeded $5B annualized revenue for the first time. Stock surged 15% post-earnings."
+    },
+    {
+      "date": "2026-05-11",
+      "type": "news",
+      "title": "Qualcomm Hits All-Time High $247.90 (+9% on May 11); 42% 5-Day Rally on Data Center Entry + Tariff Relief; Leads Nasdaq 100",
+      "url": "https://rollingout.com/2026/05/11/qualcomm-qcom-record-high-9-surge/",
+      "source": "Rolling Out",
+      "content": "QCOM surged 9% on May 11 to intraday all-time record $247.90, extending a 42% gain over 5 consecutive trading days. Catalysts: hyperscaler data center silicon shipments confirmed; 90-day US-China tariff suspension boosting smartphone demand; analyst upgrades (Daiwa Outperform $225, Tigress $280, Benchmark $225). QCOM led both S&P 500 and Nasdaq 100 in performance on the day."
     }
   ],
   "MRVL": [
@@ -161,6 +217,22 @@
       "url": "https://www.techi.com/marvell-stock-mrvl-google-ai-chip-rally/",
       "source": "TECHi",
       "content": "MRVL up 84%+ YTD driven by custom silicon ramp for Google TPU and other hyperscalers. Over 50 new custom AI chip design engagements across 10+ customers. Data center revenue 73% of total mix at $1.519B last quarter."
+    },
+    {
+      "date": "2026-04-22",
+      "type": "announcement",
+      "title": "Marvell Acquires Polariton Technologies to Advance AI Data Center Optical Connectivity to 3.2T and Beyond",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/1020/marvell-announces-acquisition-of-polariton-technologies-advancing-optical-performance-scaling-to-3-2t-and-beyond",
+      "source": "Marvell Investor Relations",
+      "content": "Marvell acquired Polariton Technologies, a developer of high-speed low-power plasmonics-based silicon photonics devices. Terms undisclosed. Adds advanced modulation enabling continued scaling from 1.6T toward 3.2T+ optical connectivity, strengthening Marvell's end-to-end portfolio across ASIC, switching, electro-optics, and photonics for next-generation AI data center architectures."
+    },
+    {
+      "date": "2026-05-05",
+      "type": "news",
+      "title": "Marvell Up 67% in April Alone: Alphabet ASIC Co-Development Confirmed, Nvidia $2B Investment, Custom Silicon at $1.5B Run Rate",
+      "url": "https://www.fool.com/investing/2026/05/05/mtvl-stock-ai-chip-stocks-custom-ai-chips-nvidia/",
+      "source": "Motley Fool",
+      "content": "MRVL surged 67% in April 2026 on three catalysts: confirmed Alphabet co-development agreement for custom AI ASIC, $2B Nvidia strategic investment validating technology, and custom silicon reaching $1.5B annual run rate (projected $9-11B for calendar 2026). Over 50 new design engagements across 10+ customers; data center now 73% of revenue mix at $1.519B last quarter."
     }
   ],
   "APP": [
@@ -215,6 +287,14 @@
       "url": "https://www.cnbc.com/2026/04/15/asml-q1-2026-earnings-report.html",
       "source": "CNBC",
       "content": "ASML CEO stated EUV supply will not meet demand in foreseeable future. Plans to ship 80 Low-NA EUV systems in 2027. AI infrastructure build-out represents binding constraint at equipment layer. Stock rose 3.48% on earnings day."
+    },
+    {
+      "date": "2026-04-07",
+      "type": "policy",
+      "title": "US MATCH Act (April 2, 2026): Bipartisan Bill to Ban DUV Exports and Servicing to China — Major Risk to ASML China Revenue",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/match-act-puts-asml-china-110822970.html",
+      "source": "Yahoo Finance",
+      "content": "The MATCH Act proposes banning DUV immersion lithography exports and servicing to Chinese chipmakers (SMIC, Hua Hong, Huawei, CXMT, YMTC). China was 33% of ASML's 2025 revenue. Bill includes 150-day window for allied (Netherlands, Japan) cooperation before U.S. unilateral action. ASML shares fell on the April 7 announcement. Bill still requires Congressional passage; company guided China to ~20% of 2026 revenue."
     }
   ],
   "AMAT": [
@@ -331,6 +411,14 @@
       "url": "https://www.barchart.com/story/news/1753079/sandisk-stock-is-up-nearly-500-in-2026-q3-results-show-its-data-center-business-is-still-growing",
       "source": "Barchart",
       "content": "SNDK has surged ~500% in 2026 driven by AI data center NAND demand. QLC Stargate launch readiness confirmed. High-bandwidth flash NAND targeted for late 2026. BiCS 8 recognized as industry gold standard. CEO: 'fundamental inflection point' for the company."
+    },
+    {
+      "date": "2026-05-09",
+      "type": "research",
+      "title": "Mizuho Raises Sandisk Price Target to $1,625 from $1,220 (Outperform); AI Data Center Storage Demand Remains Structural",
+      "url": "https://stockanalysis.com/stocks/sndk/",
+      "source": "Mizuho / Stock Analysis",
+      "content": "Mizuho raised SNDK price target to $1,625 from $1,220 (Outperform rating maintained), citing continued structural AI data center NAND storage demand. SNDK shares trading ~$1,543 (up ~500% in 2026). Q3 FY2026 enterprise SSD revenue surged 233% sequentially; company holds $42B total revenue backlog from recent hyperscaler supply contracts; BiCS8 recognized as industry gold standard."
     }
   ],
   "COHR": [
@@ -387,6 +475,14 @@
       "url": "https://www.fool.com/investing/2026/05/09/alphabet-microsoft-amazon-and-meta-platforms-just/",
       "source": "Motley Fool",
       "content": "Combined 2026 hyperscaler capex guidance from MSFT, AMZN, GOOGL, META reaches $595-$635B, three-quarters earmarked for AI infrastructure. AWS grew at highest rate in 15 quarters. Google Cloud +63% YoY. AI monetization accelerating across all platforms."
+    },
+    {
+      "date": "2026-04-29",
+      "type": "announcement",
+      "title": "Microsoft Q3 FY2026: Azure +40% YoY, 20M Copilot Paid Seats (+250% YoY), AI Revenue Surpasses $37B Annual Run Rate; Agent 365 Launched",
+      "url": "https://news.microsoft.com/source/2026/04/29/microsoft-cloud-and-ai-strength-fuels-third-quarter-results/",
+      "source": "Microsoft News",
+      "content": "Q3 FY2026: Revenue $82.9B, Azure grew 40% YoY, Microsoft 365 Copilot reached 20M paid enterprise seats (+250% YoY) — Accenture at 740,000 seats, largest customer win. AI business crossed $37B annual revenue run rate. Agent 365 launched May 1 as enterprise governance platform extending Microsoft 365 identity/security controls to AI agents. Intelligent Cloud segment $34.68B beat estimates."
     }
   ],
   "GOOGL": [
@@ -405,6 +501,22 @@
       "url": "https://www.fool.com/investing/2026/05/01/amazon-alphabet-microsoft-meta-and-apple-just-repo/",
       "source": "Motley Fool",
       "content": "Review of five hyperscaler Q1 2026 reports: Amazon ranked best overall on AWS reacceleration (highest growth in 15 quarters) and retail margins. Alphabet Google Cloud +63% ranked strong second. All five companies raised or maintained record capex plans."
+    },
+    {
+      "date": "2026-05-07",
+      "type": "news",
+      "title": "GOOGL Hits All-Time High ~$402; Google Cloud First $20B Quarter (+63% YoY); Backlog Nearly Doubles to $460B",
+      "url": "https://www.fxleaders.com/news/2026/05/07/alphabet-googl-stock-analysis-399-all-time-high-google-cloud-at-20b-and-the-190b-capex-thats-already-too-small/",
+      "source": "FX Leaders",
+      "content": "Alphabet shares hit all-time high ~$402 driven by Google Cloud's milestone first $20B quarter (+63% YoY). Cloud backlog nearly doubled sequentially to $460B. CEO Pichai: 'Cloud revenue would have been higher if compute supply met demand.' Gemini Enterprise paid MAUs +40% QoQ; 350M total paid subscriptions. Analysts note $190B capex plan may be 'already too small' for demand trajectory."
+    },
+    {
+      "date": "2026-05-06",
+      "type": "announcement",
+      "title": "Google Cloud Next 2026: TPU v8 and Gemini Enterprise Agent Platform Unveiled; Processes 16 Billion Tokens/Minute",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/cloud-next-2026-sundar-pichai/",
+      "source": "Google Blog",
+      "content": "At Google Cloud Next 2026 (Las Vegas), Alphabet unveiled 8th-generation TPU v8 and the Gemini Enterprise Agent Platform targeting enterprise agentic AI. First-party Gemini API now processes 16B tokens/min (vs 10B last quarter — 60% QoQ increase). Platform positions Google Cloud as destination for enterprise AI-native architecture migration. Backlog and compute constraints signal multi-year demand expansion."
     }
   ],
   "AMZN": [
@@ -423,6 +535,22 @@
       "url": "https://www.fool.com/investing/2026/05/01/amazon-alphabet-microsoft-meta-and-apple-just-repo/",
       "source": "Motley Fool",
       "content": "AWS growth reacceleration combined with retail profit margin expansion led analysts to rank Amazon as top Q1 2026 performer among hyperscalers. Anthropic investment and Trainium custom AI chips positioning AWS for long-term AI workload capture."
+    },
+    {
+      "date": "2026-04-20",
+      "type": "announcement",
+      "title": "Amazon Invests Additional $25B in Anthropic; Anthropic Commits $100B+ to AWS and 1GW Trainium2/3 Capacity by Year-End",
+      "url": "https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html",
+      "source": "CNBC",
+      "content": "Amazon committed additional $25B investment in Anthropic (valuation $380B): $5B immediate + $20B contingent on milestones. Anthropic in return commits $100B+ to AWS over 10 years including 1GW of Trainium2/3 capacity by year-end 2026. Deal mirrors Amazon's earlier $50B agreement with OpenAI. Anthropic cited explosive Claude demand as driver of infrastructure urgency."
+    },
+    {
+      "date": "2026-05-11",
+      "type": "news",
+      "title": "Amazon Trainium Chip Backlog Surpasses $225B; Business Crosses $20B Annual Run Rate; OpenAI Commits 2GW Starting 2027",
+      "url": "https://www.fool.com/investing/2026/05/11/amazons-ai-chip-backlog-stands-at-a-massive-225-bi/",
+      "source": "Motley Fool",
+      "content": "AWS Trainium revenue commitments exceed $225B — part of $364B total AWS backlog. Trainium/Graviton/Nitro combined chip business crossed $20B annualized run rate (+40% sequential). OpenAI committed to 2GW Trainium capacity starting 2027; Anthropic up to 5GW. Trainium2 delivers ~30% better price-performance vs comparable GPUs; Trainium3 another 30-40% improvement."
     }
   ],
   "META": [
@@ -441,6 +569,14 @@
       "url": "https://www.cnbc.com/2026/05/05/amd-q1-2026-earnings-report.html",
       "source": "CNBC",
       "content": "Meta announced deployment of up to 6GW of AMD Instinct GPUs including custom MI450. Combined with $125-145B capex, Meta is among the world's largest AI compute buyers. Llama open-source models and MTIA chips further deepen AI infrastructure vertical integration."
+    },
+    {
+      "date": "2026-05-07",
+      "type": "news",
+      "title": "Zuckerberg Town Hall: Meta 2026 Layoffs Are Capex Reallocation to AI Infrastructure, Not AI Productivity Concerns",
+      "url": "https://thenextweb.com/news/zuckerberg-town-hall-meta-layoffs-capex-cost-centres",
+      "source": "The Next Web",
+      "content": "Mark Zuckerberg told employees that 2026 workforce reductions are budget reallocations toward AI infrastructure capex — not signals of AI replacing workers. Meta committed to $125-145B capex in 2026 (nearly double 2025), with nearly all directed to data centers, GPUs, and Llama model infrastructure. Meta Superintelligence Labs released its first model in Q1 2026. Stock initially fell ~10% on capex increase before recovering."
     }
   ],
   "AAPL": [
@@ -459,6 +595,14 @@
       "url": "https://www.gurufocus.com/news/8846372/nvidia-apple-and-microsoft-may-be-trading-at-best-valuations-in-years",
       "source": "GuruFocus",
       "content": "AAPL, NVDA, MSFT trading at historically attractive valuations relative to earnings growth trajectory. Apple Intelligence hardware cycle, Services monetization, and M-series chip advantage in edge AI create multi-year earnings expansion case."
+    },
+    {
+      "date": "2026-04-30",
+      "type": "announcement",
+      "title": "Apple Authorizes $100B Buyback, Raises Dividend 4% to $0.27; Seeks Refund of Supreme Court-Struck IEEPA Tariffs; June Q Revenue Guide +14-17%",
+      "url": "https://9to5mac.com/2026/04/30/apple-to-seek-tariff-refunds-plans-to-reinvest-money-in-u-s-manufacturing/",
+      "source": "9to5Mac",
+      "content": "Q2 FY2026 earnings: Apple's Board authorized $100B additional share repurchases and raised quarterly dividend 4% to $0.27/share (payable May 14, record date May 11). CEO Cook confirmed Apple pursuing refunds on IEEPA tariffs recently struck down by the Supreme Court, with refunds to be reinvested in U.S. advanced manufacturing above prior $500B commitment. June quarter revenue guided +14-17% YoY despite Mac supply constraints and tariff headwinds."
     }
   ],
   "TSLA": [
@@ -477,6 +621,14 @@
       "url": "https://www.heygotrade.com/en/blog/Tesla-TSLA-May-2026-Buy-Hold-Or-Sell-Delivery-Slowdown/",
       "source": "HeyGo Trade",
       "content": "Piper Sandler analyst Alex Potter: Optimus humanoid robot effectively valued at zero in current ~$400/share price despite production ramp underway. Bull case anchored on FSD/Robotaxi scaling in 2027 and robot optionality on top."
+    },
+    {
+      "date": "2026-05-09",
+      "type": "news",
+      "title": "Tesla Optimus Factory Preparations Begin Q2: Fremont Line Targets 1M Robots/Year; FSD v14.3 Cuts Inference Latency 20%",
+      "url": "https://www.tesery.com/blogs/news/teslas-q1-2026-earnings-call-investors-demand-answers-on-optimus-fsd-and-robotaxi-future",
+      "source": "Tesery",
+      "content": "Tesla beginning preparations for first large-scale Optimus factory at Fremont (first-gen line: 1M robots/year) and Gigafactory Texas (second-gen: 10M robots/year long-term target) in Q2 2026. FSD v14.3 launched April with reinforcement learning upgrades, improved neural encoder, AI compiler, and 20% lower inference latency. Unsupervised Robotaxi now operating in Austin, Dallas, and Houston; targeting a dozen U.S. states by year-end."
     }
   ],
   "CRWV": [
@@ -495,6 +647,14 @@
       "url": "https://www.cnbc.com/2026/05/07/coreweave-crwv-q1-earnings-report-2026.html",
       "source": "CNBC",
       "content": "CRWV stock fell ~10% post-earnings as Q1 EPS of -$1.11 missed -$0.87 estimate. Despite backlog approaching $100B and revenues tripling YoY, heavy capex ($31-35B in 2026) and persistent net losses concerned investors. Revenue guidance $12-13B for 2026 maintained."
+    },
+    {
+      "date": "2026-05-09",
+      "type": "news",
+      "title": "Magnetar Capital Sells $164.4M of CoreWeave Shares; Post-Earnings EPS Miss Raises Profitability Concerns",
+      "url": "https://www.investing.com/news/insider-trading-news/magnetar-funds-sell-1644m-of-coreweave-crwv-stock-93CH-4674487",
+      "source": "Investing.com",
+      "content": "Magnetar Capital funds disclosed $164.4M sale of CRWV shares following post-earnings ~10% decline. Q1 EPS of -$1.40 significantly missed -$0.87 estimate despite $2.1B revenue (+112% YoY) and $99.4B backlog. 2026 capex guidance $31-35B with persistent net losses raises investor concerns about path to profitability. Revenue guidance $12-13B for full 2026 maintained."
     }
   ],
   "CEG": [
@@ -539,6 +699,14 @@
       "url": "https://techjacksolutions.com/ai-brief/vertiv-raises-2026-guidance-to-14b-as-ai-data-center-backlog-surges-80-year-over-year/",
       "source": "TechJack Solutions",
       "content": "VRT stock reaches record high after guidance raised to $14B. Backlog surged 80% YoY on AI data center liquid cooling and power infrastructure demand. Liquid cooling penetration rate inflection point a key long-term growth driver."
+    },
+    {
+      "date": "2026-04-20",
+      "type": "policy",
+      "title": "White House Invokes Defense Production Act: Power Grid as National Security — VRT, ETN, GEV Designated Beneficiaries for Accelerated Procurement",
+      "url": "https://stocktwits.com/news-articles/markets/equity/etn-gev-nee-pwr-vrt-stocks-stand-to-gain-after-us-flags-power-grid-as-defense-priority/cZBN1XwRe2m",
+      "source": "StockTwits / Market News",
+      "content": "White House invoked Defense Production Act (April 20) classifying power grid and baseload energy systems as national security assets. Energy Dept authorized to accelerate procurement — direct purchases, guarantees, and regulatory approvals — for critical grid equipment. Vertiv (liquid cooling, power infrastructure), Eaton, and GE Vernova are primary beneficiaries. >50% of 2026 US data centers face delays from transformer/switchgear shortages."
     }
   ],
   "ETN": [
@@ -557,6 +725,14 @@
       "url": "https://finance.biggo.com/news/US_ETN_2026-05-05",
       "source": "BigGo Finance",
       "content": "Boyd Thermal Q1 revenues more than doubled YoY adding liquid cooling to Eaton's data center portfolio. 12 new factories ramping (temporary margin headwind). Electrical Americas exit rate north of 30% margin targeted for H2 2026."
+    },
+    {
+      "date": "2026-04-20",
+      "type": "policy",
+      "title": "White House Defense Production Act: Power Grid Emergency — Eaton 11-Year Backlog, 50%+ of 2026 Data Centers Facing Delays",
+      "url": "https://energynewsbeat.co/ai/more-than-half-of-the-data-centers-may-be-delayed-due-to-lack-of-transformers-and-electrical-equipment-2/",
+      "source": "Energy News Beat",
+      "content": "Defense Production Act designation of power grid as national security (April 20) accelerates federal procurement for electrical equipment. Eaton's data center electrical backlog equivalent to 11 years of 2025 construction activity. Industry data: >50% of planned 2026 U.S. data centers face delays or cancellations due to transformer and switchgear shortages — Eaton's core product categories. ETN up 17% YoY in Q1 2026."
     }
   ],
   "GEV": [
@@ -575,6 +751,22 @@
       "url": "https://finance.yahoo.com/news/1-4-trillion-needed-ai-132108238.html",
       "source": "Yahoo Finance",
       "content": "GEV and VRT earnings confirm AI power demand is structural. Industry projects $1.4 trillion in AI data center electrification by 2030. Grid equipment lead times and transformer availability remain supply-constrained, pricing power with GEV, ETN, VRT."
+    },
+    {
+      "date": "2026-05-05",
+      "type": "news",
+      "title": "GE Vernova Up 65% YTD, Among Top S&P 500 Performers; Gas Turbine Slots Sold Through 2030; Targets 20GW Annualized Output Q3 2026",
+      "url": "https://247wallst.com/investing/2026/05/05/industrial-strength-rally-why-caterpillar-is-up-53-and-ge-vernova-is-up-65-in-2026/",
+      "source": "24/7 Wall St.",
+      "content": "GE Vernova up 65% YTD, one of the strongest-performing S&P 500 industrials. Gas turbine slots sold out through 2030; targeting 20GW annualized gas turbine output by Q3 2026 and 24GW by 2028. Q1 data center orders $2.4B — more than all of 2025. Backlog $163B (+$13B QoQ). TIME magazine named GEV among 2026 Most Influential Companies. GEV per TIME: 'turning energy uncertainty into a business advantage.'"
+    },
+    {
+      "date": "2026-04-20",
+      "type": "policy",
+      "title": "White House Defense Production Act: GE Vernova Gas Turbines and Grid Equipment Classified as National Defense Priority Assets",
+      "url": "https://stocktwits.com/news-articles/markets/equity/etn-gev-nee-pwr-vrt-stocks-stand-to-gain-after-us-flags-power-grid-as-defense-priority/cZBN1XwRe2m-gev",
+      "source": "StockTwits / Market News",
+      "content": "Trump White House invoked Defense Production Act (April 20) classifying power grid and baseload energy as national defense priority. Energy Dept can now accelerate procurement via direct purchases and guarantees for GEV gas turbines and grid equipment. GEV is the primary U.S. manufacturer for grid expansion — backlog $163B, turbine slots sold through 2030 — now with strategic federal procurement backing."
     }
   ],
   "CCJ": [
@@ -621,6 +813,14 @@
       "url": "https://finance.yahoo.com/news/1-4-trillion-needed-ai-132108238.html",
       "source": "Yahoo Finance",
       "content": "Industry analysis projects $1.4T in AI data center electrification capex by 2030. XLU holdings Constellation Energy (CEG), NextEra Energy (NEE) and Duke Energy are key beneficiaries. CEG Q1 EPS beat, GE Vernova $2.4B Q1 data center orders reinforce structural power demand shift."
+    },
+    {
+      "date": "2026-04-20",
+      "type": "policy",
+      "title": "White House Defense Production Act: U.S. Power Grid as National Security — XLU Holdings CEG and NEE to Benefit from Federal Procurement",
+      "url": "https://stocktwits.com/news-articles/markets/equity/etn-gev-nee-pwr-vrt-stocks-stand-to-gain-after-us-flags-power-grid-as-defense-priority/cZBN1XwRe2m-xlu",
+      "source": "StockTwits / Market News",
+      "content": "White House Defense Production Act invocation (April 20) adds federal backing to U.S. power grid expansion. XLU's top holdings — Constellation Energy (CEG, nuclear) and NextEra Energy (NEE, renewables/gas) — benefit from streamlined regulatory approvals and accelerated grid procurement. Combined with $1.4T projected AI data center electrification by 2030, structural tailwind for utilities sector is strengthening beyond historical rate-base growth."
     }
   ],
   "COPX": [
@@ -685,6 +885,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-rklb-record-q1-071220759.html",
       "source": "Yahoo Finance",
       "content": "RKLB stock surged 8%+ premarket after record Q1 2026 results. Neutron medium-lift rocket program advancing with 5 dedicated launch contracts through 2029. Defense sector expansion with Anduril and Raytheon diversifying revenue from commercial launches."
+    },
+    {
+      "date": "2026-05-09",
+      "type": "news",
+      "title": "Rocket Lab Neutron Timeline Risk: Tank Rupture Test Failure Pushes Launch to Q4 2026 / Early 2027; Archimedes Engine Tests Ongoing",
+      "url": "https://finance.yahoo.com/news/look-rocket-lab-rklb-valuation-150812886.html",
+      "source": "Yahoo Finance",
+      "content": "A Neutron upper-stage tank rupture during testing has pushed the initial launch target to Q4 2026 or potentially early 2027. CEO Peter Beck stated Archimedes engine is undergoing 'nasty' qualification tests and vehicle is 'on track for Q4 if engine survives.' Stage separation test completed successfully in May. Valuation now carries first-launch execution risk premium despite record $2.2B backlog and 31+ contracts in Q1."
     }
   ]
 }
