@@ -2984,6 +2984,7 @@ async function scanWatchlistBuySignalsUS(){
   if (watchScanStateUS.running) return watchScanStateUS.results || [];
   watchScanStateUS.running = true;
   let okCount = 0, failCount = 0;
+  const failedCodes = [];
   try {
     const indexBullish = await getIndexBullishUS();
     const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
@@ -2996,20 +2997,21 @@ async function scanWatchlistBuySignalsUS(){
           bars = await fetchUSKLine(code, "week", 320);
           if (bars.length) klCacheUS[cacheKey] = bars;
         }
-        if (bars.length < 22) { failCount++; return null; }
+        if (bars.length < 22) { failCount++; failedCodes.push(code); return null; }
         const sig = evalWeeklyEMA(bars, indexBullish);
         okCount++;
         if (!sig) return null;
         return { stock: { code, name: c.name }, signal: sig, bars };
-      } catch(e){ failCount++; return null; }
+      } catch(e){ failCount++; failedCodes.push(code); return null; }
     });
     const all = (await Promise.all(tasks)).filter(Boolean);
     watchScanStateUS.results = all;
     watchScanStateUS.lastRun = Date.now();
     watchScanStateUS.okCount = okCount;
     watchScanStateUS.failCount = failCount;
+    watchScanStateUS.failedCodes = failedCodes;
     watchScanStateUS.indexBullish = indexBullish;
-    console.log(`[美股周线扫描] 成功 ${okCount} / 失败 ${failCount} / QQQ 多头 ${indexBullish}`);
+    console.log(`[美股周线扫描] 成功 ${okCount} / 失败 ${failCount} (${failedCodes.join(',')}) / QQQ 多头 ${indexBullish}`);
     return all;
   } finally {
     watchScanStateUS.running = false;
@@ -3066,9 +3068,11 @@ function renderBuyAlertBannerUS(results){
       <div style="color:var(--muted);font-size:12px">${ok} 只已评估 · ${holds.length} 只持有/趋势中 · 大盘 ${idxLabel}</div>
     </div>` : "";
 
+  const failedCodes = watchScanStateUS.failedCodes || [];
+  const failHtml = fail ? ` · <span style="color:#ff8a95" title="腾讯接口不支持以下 ETF: ${failedCodes.join(', ')}">${fail} 不支持 (${failedCodes.join('/')})</span>` : "";
   banner.innerHTML = `
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-      <div style="font-size:13px;color:var(--muted)">📡 美股周线 EMA8/EMA21 趋势扫描 · ${ok} 只已评估${fail?` · <span style="color:#ff8a95">${fail} 失败</span>`:""} · 大盘 ${idxLabel} · 更新于 ${ts}</div>
+      <div style="font-size:13px;color:var(--muted)">📡 美股周线 EMA8/EMA21 趋势扫描 · ${ok} 只已评估${failHtml} · 大盘 ${idxLabel} · 更新于 ${ts}</div>
       <button id="rescanUSBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:4px;font-size:11px;cursor:pointer">🔄 重新扫描</button>
     </div>
     ${strongBuyHtml}${weakBuyHtml}${sellHtml}${emptyHtml}`;
