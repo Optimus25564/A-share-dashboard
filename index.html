@@ -476,10 +476,15 @@
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
         <div>
           <div style="font-size:16px;font-weight:700;color:#4ea8ff;margin-bottom:4px">🇺🇸 美股 · AI 算力 + 能源主线</div>
-          <div style="font-size:12px;color:var(--muted)">36 只观察清单 · 行情来源 Stooq (15-20 分钟延迟) · 5 因子量化模型实时计算</div>
+          <div style="font-size:12px;color:var(--muted)">36 只观察清单 · 行情来源 腾讯美股 (15-20 分钟延迟) · 5 因子量化模型实时计算</div>
         </div>
         <button id="usRefreshBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:6px 14px;border-radius:4px;font-size:12px;cursor:pointer">🔄 刷新</button>
       </div>
+    </div>
+
+    <!-- 美股周线 EMA 买点扫描 banner -->
+    <div id="buyAlertBannerUS" style="background:linear-gradient(135deg,rgba(255,90,106,.12),rgba(245,179,1,.08));border:1px solid rgba(255,90,106,.35);border-radius:8px;padding:14px 16px;margin-bottom:14px">
+      <div style="color:var(--muted);font-size:13px;padding:6px 0">📡 美股周线 EMA8 / EMA21 趋势扫描器初始化中...</div>
     </div>
 
     <h2>产业链分层</h2>
@@ -2953,7 +2958,140 @@ function renderUSLayers(){
 async function initUSTab(){
   await loadCompaniesUS();
   renderUSWatchlist();  // 先用静态数据渲染
-  refreshUSQuotes();    // 异步拉行情, 完成后再渲染一次
+  refreshUSQuotes();    // 异步拉行情
+  runWatchScanUS(false); // 触发周线趋势扫描
+}
+
+// ============ 美股周线 EMA 趋势扫描 (与 A股 同逻辑, 不同数据源) ============
+let _indexBullishCacheUS = null;
+const klCacheUS = {};  // US K-line 缓存, 防止重复拉取
+let watchScanStateUS = { running:false, lastRun:null, results:null, okCount:0, failCount:0, indexBullish:null };
+
+async function getIndexBullishUS(){
+  if (_indexBullishCacheUS !== null) return _indexBullishCacheUS;
+  try {
+    // 用 QQQ (Nasdaq 100 ETF) 作为美股科技股大盘指代
+    const bars = await fetchUSKLine("QQQ", "week", 60);
+    if (bars.length < 9) return null;
+    const ema8 = ind_EMA(bars.map(b=>b.close), 8);
+    _indexBullishCacheUS = bars[bars.length-1].close > ema8[ema8.length-1];
+    return _indexBullishCacheUS;
+  } catch(e){ return null; }
+}
+
+async function scanWatchlistBuySignalsUS(){
+  if (watchScanStateUS.running) return watchScanStateUS.results || [];
+  watchScanStateUS.running = true;
+  let okCount = 0, failCount = 0;
+  try {
+    const indexBullish = await getIndexBullishUS();
+    const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
+    const tasks = codes.map(async (code) => {
+      try {
+        const c = companiesUS[code];
+        const cacheKey = code + ":week";
+        let bars = klCacheUS[cacheKey];
+        if (!bars) {
+          bars = await fetchUSKLine(code, "week", 320);
+          if (bars.length) klCacheUS[cacheKey] = bars;
+        }
+        if (bars.length < 22) { failCount++; return null; }
+        const sig = evalWeeklyEMA(bars, indexBullish);
+        okCount++;
+        if (!sig) return null;
+        return { stock: { code, name: c.name }, signal: sig, bars };
+      } catch(e){ failCount++; return null; }
+    });
+    const all = (await Promise.all(tasks)).filter(Boolean);
+    watchScanStateUS.results = all;
+    watchScanStateUS.lastRun = Date.now();
+    watchScanStateUS.okCount = okCount;
+    watchScanStateUS.failCount = failCount;
+    watchScanStateUS.indexBullish = indexBullish;
+    console.log(`[美股周线扫描] 成功 ${okCount} / 失败 ${failCount} / QQQ 多头 ${indexBullish}`);
+    return all;
+  } finally {
+    watchScanStateUS.running = false;
+  }
+}
+
+function renderBuyAlertBannerUS(results){
+  const banner = document.getElementById("buyAlertBannerUS");
+  if (!banner) return;
+  banner.style.display = "block";
+
+  const buys = results.filter(r => r.signal.action === "buy");
+  const sells = results.filter(r => r.signal.action === "sell");
+  const holds = results.filter(r => r.signal.action === "hold");
+  const ts = watchScanStateUS.lastRun ? new Date(watchScanStateUS.lastRun).toLocaleTimeString("zh-CN", {hour12:false}) : "--";
+  const ok = watchScanStateUS.okCount || 0;
+  const fail = watchScanStateUS.failCount || 0;
+  const idxLabel = watchScanStateUS.indexBullish === true ? '<span style="color:#7ee2a3">QQQ 站上 EMA8</span>'
+                : watchScanStateUS.indexBullish === false ? '<span style="color:#ff8a95">QQQ 跌破 EMA8</span>'
+                : '<span style="color:var(--muted)">大盘未知</span>';
+
+  if (results.length === 0 && fail >= 30) {
+    banner.innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div style="font-size:13px;color:#ff8a95">⚠ 美股周线 K 线数据抓取失败 (${fail})</div>
+        <button id="rescanUSBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:4px;font-size:11px;cursor:pointer">🔄 重试</button>
+      </div>`;
+    document.getElementById("rescanUSBtn").onclick = () => runWatchScanUS(true);
+    return;
+  }
+
+  const tagStyle = "display:inline-block;padding:5px 10px;border-radius:4px;font-size:13px;margin:3px 6px 3px 0;cursor:pointer;font-weight:600";
+  // 强买入 (3 星) 单独一行
+  const strongBuys = buys.filter(b => b.signal.strength >= 3);
+  const weakBuys = buys.filter(b => b.signal.strength < 3);
+  const strongBuyHtml = strongBuys.length ? `
+    <div style="margin-bottom:${(weakBuys.length || sells.length)?'8px':'0'};background:rgba(255,90,106,.12);padding:6px 10px;border-radius:6px;border:1px solid rgba(255,90,106,.45)">
+      <span style="font-size:13px;font-weight:700;color:#ff5a6a;margin-right:8px">🔴🔴 强买入 ★★★ (${strongBuys.length})：</span>
+      ${strongBuys.map(b => `<span class="us-alert-card" data-code="${b.stock.code}" style="${tagStyle};background:rgba(255,90,106,.3);color:#fff;border:1px solid rgba(255,90,106,.7)">${b.stock.code} ${b.stock.name}</span>`).join("")}
+    </div>` : "";
+  const weakBuyHtml = weakBuys.length ? `
+    <div style="margin-bottom:${sells.length?'8px':'0'}">
+      <span style="font-size:13px;font-weight:700;color:#ff8a95;margin-right:8px">🔴 买入 (${weakBuys.length})：</span>
+      ${weakBuys.map(b => `<span class="us-alert-card" data-code="${b.stock.code}" style="${tagStyle};background:rgba(255,90,106,.15);color:#ff8a95;border:1px solid rgba(255,90,106,.35)">${b.stock.code}</span>`).join("")}
+    </div>` : "";
+  const sellHtml = sells.length ? `
+    <div>
+      <span style="font-size:13px;font-weight:700;color:#7ee2a3;margin-right:8px">🟢 卖出 (${sells.length})：</span>
+      ${sells.map(s => `<span class="us-alert-card" data-code="${s.stock.code}" style="${tagStyle};background:rgba(46,204,113,.15);color:#7ee2a3;border:1px solid rgba(46,204,113,.35)">${s.stock.code}</span>`).join("")}
+    </div>` : "";
+  const emptyHtml = (buys.length === 0 && sells.length === 0) ? `
+    <div style="background:rgba(46,204,113,.06);border:1px solid rgba(46,204,113,.2);padding:12px;border-radius:6px">
+      <div style="color:#7ee2a3;font-size:13px;font-weight:600;margin-bottom:4px">✓ 当前无买卖信号</div>
+      <div style="color:var(--muted);font-size:12px">${ok} 只已评估 · ${holds.length} 只持有/趋势中 · 大盘 ${idxLabel}</div>
+    </div>` : "";
+
+  banner.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+      <div style="font-size:13px;color:var(--muted)">📡 美股周线 EMA8/EMA21 趋势扫描 · ${ok} 只已评估${fail?` · <span style="color:#ff8a95">${fail} 失败</span>`:""} · 大盘 ${idxLabel} · 更新于 ${ts}</div>
+      <button id="rescanUSBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:4px;font-size:11px;cursor:pointer">🔄 重新扫描</button>
+    </div>
+    ${strongBuyHtml}${weakBuyHtml}${sellHtml}${emptyHtml}`;
+
+  banner.querySelectorAll(".us-alert-card").forEach(card => {
+    card.onclick = () => openKLine(card.dataset.code);
+  });
+  document.getElementById("rescanUSBtn").onclick = async () => {
+    Object.keys(klCacheUS).forEach(k => delete klCacheUS[k]);
+    _indexBullishCacheUS = null;
+    watchScanStateUS.results = null;
+    await runWatchScanUS(true);
+  };
+}
+
+async function runWatchScanUS(force=false){
+  const banner = document.getElementById("buyAlertBannerUS");
+  if (!banner) return;
+  if (force || !watchScanStateUS.results) {
+    banner.style.display = "block";
+    banner.innerHTML = `<div style="color:var(--muted);font-size:13px;padding:6px 0">📡 正在扫描 36 只美股的周线趋势...</div>`;
+  }
+  const results = await scanWatchlistBuySignalsUS();
+  renderBuyAlertBannerUS(results);
 }
 const usRefreshBtn = document.getElementById("usRefreshBtn");
 if (usRefreshBtn) usRefreshBtn.onclick = () => refreshUSQuotes();
