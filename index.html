@@ -400,7 +400,8 @@
 
   <!-- Tabs -->
   <div class="tabs">
-    <div class="tab active" data-tab="watch">📊 关注列表</div>
+    <div class="tab active" data-tab="watch">📊 A股·关注</div>
+    <div class="tab" data-tab="us">🇺🇸 美股·算力/能源</div>
     <div class="tab" data-tab="global">🌐 全网动态</div>
     <div class="tab" data-tab="trade">💹 模拟交易</div>
     <div class="tab" data-tab="strategy">🧭 策略 / 催化剂</div>
@@ -466,6 +467,44 @@
         </div>
         <div id="pfWatchPool" style="margin-top:12px;padding-top:10px;border-top:1px dashed var(--border);font-size:11px;color:var(--muted)"></div>
       </div>
+    </div>
+  </div>
+
+  <!-- ===================== TAB: US STOCKS ===================== -->
+  <div class="tab-content" id="tab-us">
+    <div style="background:linear-gradient(135deg,rgba(78,168,255,.12),rgba(245,179,1,.06));border:1px solid rgba(78,168,255,.3);border-radius:8px;padding:14px 16px;margin-bottom:14px">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+        <div>
+          <div style="font-size:16px;font-weight:700;color:#4ea8ff;margin-bottom:4px">🇺🇸 美股 · AI 算力 + 能源主线</div>
+          <div style="font-size:12px;color:var(--muted)">36 只观察清单 · 行情来源 Stooq (15-20 分钟延迟) · 战略评分 1-10</div>
+        </div>
+        <button id="usRefreshBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:6px 14px;border-radius:4px;font-size:12px;cursor:pointer">🔄 刷新</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>美股观察清单 · 按战略评分排序<span class="right" id="usSummary">--</span></h3>
+      <div style="overflow:auto;max-height:680px">
+        <table>
+          <thead>
+            <tr>
+              <th>代码</th>
+              <th>名称</th>
+              <th class="num-cell">现价 (USD)</th>
+              <th class="num-cell">涨跌幅</th>
+              <th class="num-cell">市值 (亿$)</th>
+              <th class="num-cell">战略</th>
+              <th>主营 / 定位</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="usWatchlist"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;padding:10px 14px;background:rgba(245,179,1,.05);border-left:3px solid var(--gold);border-radius:4px;font-size:11px;color:var(--muted);line-height:1.7">
+      📌 当前为 MVP 版本: 战略评分手工赋值, 实时行情 Stooq 接口 (CORS 友好). 后续接入: 财报数据 (5 因子量化权重) / 周线 EMA 趋势扫描 / 美股 AI 新闻自动抓取.
     </div>
   </div>
 
@@ -2575,6 +2614,124 @@ function setLive(on, label){
   el.innerHTML = `<span class="pulse"></span>${label}`;
 }
 document.getElementById("refreshBtn").onclick = () => refresh(true);
+
+// ============ 美股 AI/能源 tab ============
+let companiesUS = null;
+let usQuotes = {};
+const CAT_COLOR = {
+  core_chip: "#ff5a6a",   // 红
+  foundry:   "#f5b301",   // 金
+  memory:    "#9d7bff",   // 紫
+  optical:   "#29d6d6",   // 青
+  hyperscaler:"#4ea8ff",  // 蓝
+  power:     "#7ee2a3",   // 绿
+  etf:       "#cdd6e6",   // 灰白
+  other:     "#8aa0c0"    // 灰
+};
+async function loadCompaniesUS(){
+  if (companiesUS) return companiesUS;
+  try {
+    const r = await fetch("data/companies_us.json?_=" + Date.now());
+    companiesUS = await r.json();
+    const n = Object.keys(companiesUS).filter(k => !k.startsWith('_')).length;
+    console.log(`[美股] 已加载 ${n} 只清单`);
+  } catch(e) {
+    console.error('[美股] 加载失败:', e);
+    companiesUS = {};
+  }
+  return companiesUS;
+}
+// Stooq 实时行情 (CORS 友好, 15-20 分钟延迟)
+async function fetchUSQuote(ticker){
+  // ETF 用 .us 后缀; 个股也用 .us 后缀
+  const sym = ticker.toLowerCase().replace(/\./g,'-') + ".us";
+  const url = `https://stooq.com/q/l/?s=${sym}&i=d&f=sd2t2ohlcv`;
+  try {
+    const r = await fetch(url);
+    const text = await r.text();
+    // CSV: Symbol,Date,Time,Open,High,Low,Close,Volume
+    const lines = text.trim().split("\n");
+    if (lines.length < 2) return null;
+    const cols = lines[1].split(",");
+    const close = parseFloat(cols[6]);
+    const open  = parseFloat(cols[3]);
+    if (isNaN(close)) return null;
+    return {
+      close, open,
+      high: parseFloat(cols[4]),
+      low:  parseFloat(cols[5]),
+      volume: parseInt(cols[7]) || 0,
+      changePct: open > 0 ? (close - open) / open * 100 : 0,
+      date: cols[1]
+    };
+  } catch(e){ return null; }
+}
+async function refreshUSQuotes(){
+  if (!companiesUS) return;
+  const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
+  const results = await Promise.all(codes.map(async c => {
+    const q = await fetchUSQuote(c);
+    return [c, q];
+  }));
+  results.forEach(([c, q]) => { if (q) usQuotes[c] = q; });
+  renderUSWatchlist();
+}
+function renderUSWatchlist(){
+  const tb = document.getElementById("usWatchlist");
+  if (!tb || !companiesUS) return;
+  const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
+  // 按战略评分降序排
+  codes.sort((a,b) => (companiesUS[b].strategic || 0) - (companiesUS[a].strategic || 0));
+  let upCount = 0, downCount = 0;
+  const rows = codes.map(code => {
+    const c = companiesUS[code];
+    const q = usQuotes[code] || {};
+    const price = q.close ? `$${q.close.toFixed(2)}` : "--";
+    const changePctStr = q.changePct !== undefined
+      ? `${q.changePct >= 0 ? "+" : ""}${q.changePct.toFixed(2)}%`
+      : "--";
+    const cls = q.changePct === undefined ? "" : (q.changePct >= 0 ? "up" : "down");
+    if (q.changePct > 0) upCount++;
+    else if (q.changePct < 0) downCount++;
+    const stars = "★".repeat(c.strategic) + "☆".repeat(10 - c.strategic);
+    const catColor = CAT_COLOR[c.cat] || "#8aa0c0";
+    return `
+      <tr>
+        <td class="code" style="font-weight:600">${code}</td>
+        <td class="name">
+          ${c.name}
+          <br><span class="pill" style="background:${catColor}22;color:${catColor};border:1px solid ${catColor}55">${c.catLabel}</span>
+        </td>
+        <td class="num-cell ${cls}">${price}</td>
+        <td class="num-cell ${cls}">${changePctStr}</td>
+        <td class="num-cell">${c.market_cap_billion || "--"}</td>
+        <td class="num-cell" title="${stars}" style="cursor:help;font-weight:600;color:var(--gold)">${c.strategic}/10</td>
+        <td style="font-size:11px;color:#cdd6e6;line-height:1.5;max-width:380px">${c.intro || ""}</td>
+        <td>
+          <a href="https://finance.yahoo.com/quote/${code}" target="_blank" class="trade-action" style="text-decoration:none;display:inline-block">📊 Yahoo</a>
+        </td>
+      </tr>`;
+  });
+  tb.innerHTML = rows.join("");
+  const summary = document.getElementById("usSummary");
+  if (summary) summary.textContent = `↑ ${upCount}　↓ ${downCount}　共 ${codes.length} 只`;
+}
+async function initUSTab(){
+  await loadCompaniesUS();
+  renderUSWatchlist();  // 先用静态数据渲染
+  refreshUSQuotes();    // 异步拉行情, 完成后再渲染一次
+}
+const usRefreshBtn = document.getElementById("usRefreshBtn");
+if (usRefreshBtn) usRefreshBtn.onclick = () => refreshUSQuotes();
+
+// 切换到美股 tab 时触发加载 (避免页面初始化就拉一堆数据)
+document.querySelectorAll(".tab").forEach(t => {
+  if (t.dataset.tab === "us") {
+    t.addEventListener("click", () => {
+      if (!companiesUS) initUSTab();
+    }, { once: false });
+  }
+});
 
 // Init
 renderWatchlist();
