@@ -2618,6 +2618,84 @@ document.getElementById("refreshBtn").onclick = () => refresh(true);
 // ============ 美股 AI/能源 tab ============
 let companiesUS = null;
 let usQuotes = {};
+let _quantWeightsUS = null;
+
+// 美股 5 因子量化模型 (与 A股 同公式)
+function computeQuantWeightsUS(){
+  if (!companiesUS) return null;
+  const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
+  const IDEAL_TURNOVER = 5;
+  // 先过滤出有完整 quarters 数据的 (ETF 没有 quarters, 跳过)
+  const valid = codes.filter(code => {
+    const c = companiesUS[code];
+    return c.quarters && c.quarters.length >= 4;
+  });
+  if (valid.length < 4) return null;
+
+  const raw = valid.map(code => {
+    const c = companiesUS[code];
+    const qs = c.quarters;
+    const revLatest = qs[qs.length-1].rev;
+    const revYoYBase = qs[0].rev;
+    const revYoY = revYoYBase > 0 ? (revLatest / revYoYBase - 1) * 100 : 0;
+    const gmLatest = qs[qs.length-1].gm;
+    const nmLatest = qs[qs.length-1].nm;
+    const nmClipped = Math.max(-30, Math.min(60, nmLatest));
+    const t = c.avg_turnover_pct || 3;
+    return {
+      code,
+      logMC: Math.log(c.market_cap_billion || 100),
+      revYoY: Math.max(-50, Math.min(300, revYoY)),
+      gm: gmLatest,
+      nm: nmLatest,
+      nmClipped,
+      turnoverScore: -Math.abs(Math.log(t / IDEAL_TURNOVER)),
+      turnoverRaw: t,
+      strategic: (c.strategic || 5) / 10
+    };
+  });
+
+  function zscore(values){
+    const mean = values.reduce((a,b)=>a+b,0) / values.length;
+    const variance = values.reduce((a,b)=>a+(b-mean)*(b-mean),0) / values.length;
+    const std = Math.sqrt(variance) || 1;
+    return values.map(v => (v - mean) / std);
+  }
+  const zMC = zscore(raw.map(r => r.logMC));
+  const zGrow = zscore(raw.map(r => r.revYoY));
+  const zGM = zscore(raw.map(r => r.gm));
+  const zNM = zscore(raw.map(r => r.nmClipped));
+  const zTO = zscore(raw.map(r => r.turnoverScore));
+  const zProfit = raw.map((_, i) => 0.6 * zGM[i] + 0.4 * zNM[i]);
+
+  const W = { mc: 0.08, growth: 0.20, profit: 0.20, turnover: 0.12, strategic: 0.40 };
+  const composites = raw.map((r, i) =>
+    W.mc * zMC[i] + W.growth * zGrow[i] + W.profit * zProfit[i] + W.turnover * zTO[i] + W.strategic * r.strategic * 2
+  );
+  const minComp = Math.min(...composites);
+  const shifted = composites.map(c => c - minComp + 0.5);
+  const sum = shifted.reduce((a,b)=>a+b,0);
+  let weights = shifted.map(s => Math.round(s/sum*1000)/10);
+  const total = weights.reduce((a,b)=>a+b,0);
+  weights[weights.indexOf(Math.max(...weights))] += Math.round((100-total)*10)/10;
+
+  const out = {};
+  raw.forEach((r, i) => {
+    out[r.code] = {
+      weight: weights[i],
+      score: composites[i],
+      factors: {
+        market_cap: { val: Math.exp(r.logMC).toFixed(0) + "亿$", contrib: (W.mc * zMC[i]).toFixed(2) },
+        growth: { val: r.revYoY.toFixed(1) + "%", contrib: (W.growth * zGrow[i]).toFixed(2) },
+        profit: { val: `GM ${r.gm.toFixed(1)}% / NM ${r.nm.toFixed(1)}%`, contrib: (W.profit * zProfit[i]).toFixed(2) },
+        turnover: { val: r.turnoverRaw.toFixed(1) + "%", contrib: (W.turnover * zTO[i]).toFixed(2) },
+        strategic: { val: (r.strategic*10).toFixed(0) + "/10", contrib: (W.strategic * r.strategic * 2).toFixed(2) }
+      }
+    };
+  });
+  _quantWeightsUS = out;
+  return out;
+}
 const CAT_COLOR = {
   core_chip: "#ff5a6a",   // 红
   foundry:   "#f5b301",   // 金
@@ -2679,11 +2757,22 @@ async function refreshUSQuotes(){
 function renderUSWatchlist(){
   const tb = document.getElementById("usWatchlist");
   if (!tb || !companiesUS) return;
+  // 触发量化分计算
+  computeQuantWeightsUS();
   const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
-  // 按战略评分降序排
-  codes.sort((a,b) => (companiesUS[b].strategic || 0) - (companiesUS[a].strategic || 0));
+  // 排序: 有 quant 分的按 quant 降序, 其他 (ETF) 按战略降序排在后面
+  codes.sort((a,b) => {
+    const wa = _quantWeightsUS && _quantWeightsUS[a] ? _quantWeightsUS[a].weight : -1;
+    const wb = _quantWeightsUS && _quantWeightsUS[b] ? _quantWeightsUS[b].weight : -1;
+    if (wa === -1 && wb === -1) return (companiesUS[b].strategic || 0) - (companiesUS[a].strategic || 0);
+    return wb - wa;
+  });
+  // 计算 Top 5 归一化 (与 A股 一致)
+  const quantCodes = codes.filter(c => _quantWeightsUS && _quantWeightsUS[c]);
+  const top5Sum = quantCodes.slice(0,5).reduce((s,c) => s + _quantWeightsUS[c].weight, 0);
+
   let upCount = 0, downCount = 0;
-  const rows = codes.map(code => {
+  const rows = codes.map((code, idx) => {
     const c = companiesUS[code];
     const q = usQuotes[code] || {};
     const price = q.close ? `$${q.close.toFixed(2)}` : "--";
@@ -2693,8 +2782,34 @@ function renderUSWatchlist(){
     const cls = q.changePct === undefined ? "" : (q.changePct >= 0 ? "up" : "down");
     if (q.changePct > 0) upCount++;
     else if (q.changePct < 0) downCount++;
-    const stars = "★".repeat(c.strategic) + "☆".repeat(10 - c.strategic);
     const catColor = CAT_COLOR[c.cat] || "#8aa0c0";
+    const qw = _quantWeightsUS ? _quantWeightsUS[code] : null;
+
+    // 角色徽章
+    const quantRank = quantCodes.indexOf(code) + 1;
+    let roleHtml;
+    if (qw && quantRank > 0 && quantRank <= 5 && top5Sum > 0) {
+      const normPct = (qw.weight / top5Sum * 100).toFixed(1);
+      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(255,90,106,.2);color:#ff8a95;font-weight:700;font-size:12px">#${quantRank} 持仓 ${normPct}%</span>`;
+    } else if (qw && quantRank > 0 && quantRank <= 10) {
+      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(245,179,1,.15);color:var(--gold);font-weight:600;font-size:12px">#${quantRank} 候选</span>`;
+    } else if (qw && quantRank > 0) {
+      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;color:var(--muted);font-size:11px">#${quantRank} 观察</span>`;
+    } else {
+      // ETF: 没 quant, 显示战略 + ETF 标签
+      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(138,160,192,.15);color:var(--muted);font-size:11px">ETF · 战略 ${c.strategic}/10</span>`;
+    }
+
+    // tooltip 显示因子分解 (Top 5 / 候选池) 或基本信息
+    const tooltip = qw ? escapeAttr(
+      `排名 #${quantRank} · 综合分 ${qw.weight.toFixed(1)}%\n` +
+      `战略: ${qw.factors.strategic.val} (贡献 ${qw.factors.strategic.contrib})\n` +
+      `增速: ${qw.factors.growth.val} (贡献 ${qw.factors.growth.contrib})\n` +
+      `盈利: ${qw.factors.profit.val} (贡献 ${qw.factors.profit.contrib})\n` +
+      `换手: ${qw.factors.turnover.val} (贡献 ${qw.factors.turnover.contrib})\n` +
+      `市值: ${qw.factors.market_cap.val} (贡献 ${qw.factors.market_cap.contrib})`
+    ) : escapeAttr(`战略评分: ${c.strategic}/10\n${c.intro || ""}`);
+
     return `
       <tr>
         <td class="code" style="font-weight:600">${code}</td>
@@ -2705,7 +2820,7 @@ function renderUSWatchlist(){
         <td class="num-cell ${cls}">${price}</td>
         <td class="num-cell ${cls}">${changePctStr}</td>
         <td class="num-cell">${c.market_cap_billion || "--"}</td>
-        <td class="num-cell" title="${stars}" style="cursor:help;font-weight:600;color:var(--gold)">${c.strategic}/10</td>
+        <td class="num-cell" title="${tooltip}" style="cursor:help">${roleHtml}</td>
         <td style="font-size:11px;color:#cdd6e6;line-height:1.5;max-width:380px">${c.intro || ""}</td>
         <td>
           <a href="https://finance.yahoo.com/quote/${code}" target="_blank" class="trade-action" style="text-decoration:none;display:inline-block">📊 Yahoo</a>
