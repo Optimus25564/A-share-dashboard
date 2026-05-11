@@ -1958,30 +1958,34 @@ async function fetchKLine(code, period="day", count=180){
   return fetchKLineRaw(pfx(code), period, count);
 }
 
-// 美股 K 线 from Stooq (CSV, CORS 友好)
-async function fetchUSKLine(ticker, period="day"){
-  const interval = period === "week" ? "w" : period === "month" ? "m" : "d";
-  const sym = ticker.toLowerCase().replace(/\./g, '-') + ".us";
-  const url = `https://stooq.com/q/d/l/?s=${sym}&i=${interval}`;
+// 美股交易所映射 (默认 OQ=NASDAQ; N=NYSE; P=NYSE Arca)
+const US_EXCHANGE = {
+  TSM: 'N', ONTO: 'N', FN: 'N', VRT: 'N', ETN: 'N', GEV: 'N', CCJ: 'N',
+  EWY: 'P',
+  // 不支持: XLU, COPX, XME (腾讯无数据)
+};
+function usSym(ticker){
+  const ex = US_EXCHANGE[ticker] || 'OQ';
+  return `us${ticker}.${ex}`;
+}
+
+// 美股 K 线 from 腾讯 (CORS 友好, 与 A 股同 API 家族)
+async function fetchUSKLine(ticker, period="day", count=320){
+  const sym = usSym(ticker);
+  const url = `https://web.ifzq.gtimg.cn/appstock/app/usfqkline/get?param=${sym},${period},,,${count},qfq&_=${Date.now()}`;
   try {
     const r = await fetch(url);
-    const text = await r.text();
-    const lines = text.trim().split("\n");
-    if (lines.length < 2) return [];
-    // header: Date,Open,High,Low,Close,Volume
-    return lines.slice(1).map(line => {
-      const cols = line.split(",");
-      return {
-        date: cols[0],
-        open: parseFloat(cols[1]),
-        high: parseFloat(cols[2]),
-        low: parseFloat(cols[3]),
-        close: parseFloat(cols[4]),
-        volume: parseInt(cols[5]) || 0
-      };
-    }).filter(b => !isNaN(b.close));
+    const j = await r.json();
+    const node = j?.data?.[sym];
+    if (!node) return [];
+    const arr = node[period] || node["qfq"+period] || node.day || [];
+    return arr.map(row => ({
+      date: row[0],
+      open: +row[1], close: +row[2], high: +row[3], low: +row[4],
+      volume: +row[5]
+    })).filter(b => !isNaN(b.close));
   } catch(e) {
-    console.error('Stooq fetch failed:', e);
+    console.error('Tencent US K-line fetch failed:', e);
     return [];
   }
 }
@@ -2811,30 +2815,17 @@ async function loadCompaniesUS(){
   }
   return companiesUS;
 }
-// Stooq 实时行情 (CORS 友好, 15-20 分钟延迟)
+// 美股实时行情用腾讯日 K 末尾两根 (vs Stooq 因为现在收费)
 async function fetchUSQuote(ticker){
-  // ETF 用 .us 后缀; 个股也用 .us 后缀
-  const sym = ticker.toLowerCase().replace(/\./g,'-') + ".us";
-  const url = `https://stooq.com/q/l/?s=${sym}&i=d&f=sd2t2ohlcv`;
-  try {
-    const r = await fetch(url);
-    const text = await r.text();
-    // CSV: Symbol,Date,Time,Open,High,Low,Close,Volume
-    const lines = text.trim().split("\n");
-    if (lines.length < 2) return null;
-    const cols = lines[1].split(",");
-    const close = parseFloat(cols[6]);
-    const open  = parseFloat(cols[3]);
-    if (isNaN(close)) return null;
-    return {
-      close, open,
-      high: parseFloat(cols[4]),
-      low:  parseFloat(cols[5]),
-      volume: parseInt(cols[7]) || 0,
-      changePct: open > 0 ? (close - open) / open * 100 : 0,
-      date: cols[1]
-    };
-  } catch(e){ return null; }
+  const bars = await fetchUSKLine(ticker, "day", 2);
+  if (bars.length === 0) return null;
+  const last = bars[bars.length - 1];
+  const prev = bars.length >= 2 ? bars[bars.length - 2] : last;
+  const changePct = prev.close > 0 ? (last.close - prev.close) / prev.close * 100 : 0;
+  return {
+    close: last.close, open: last.open, high: last.high, low: last.low,
+    volume: last.volume, changePct, date: last.date
+  };
 }
 async function refreshUSQuotes(){
   if (!companiesUS) return;
