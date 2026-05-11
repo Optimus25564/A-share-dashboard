@@ -1245,44 +1245,5 @@
     "market_cap_billion": 50,
     "avg_turnover_pct": 1.5,
     "quarters": []
-  },
-  "RKLB": {
-    "name": "Rocket Lab",
-    "cat": "other",
-    "catLabel": "航天",
-    "intro": "小型火箭发射 + 卫星制造, Neutron 中型火箭对标 SpaceX Falcon 9. AI 太空数据中心潜在受益.",
-    "strategic": 5,
-    "market_cap_billion": 609,
-    "avg_turnover_pct": 5,
-    "quarters": [
-      {
-        "q": "2025Q2",
-        "rev": 1.45,
-        "gm": 32.1,
-        "nm": -46,
-        "src": "A"
-      },
-      {
-        "q": "2025Q3",
-        "rev": 1.55,
-        "gm": 37,
-        "nm": -11.8,
-        "src": "A"
-      },
-      {
-        "q": "2025Q4",
-        "rev": 1.8,
-        "gm": 38,
-        "nm": -29.5,
-        "src": "A"
-      },
-      {
-        "q": "2026Q1",
-        "rev": 2,
-        "gm": 38.2,
-        "nm": -22.5,
-        "src": "A"
-      }
-    ]
   }
 }
