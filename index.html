@@ -487,37 +487,47 @@
       <div style="color:var(--muted);font-size:13px;padding:6px 0">📡 美股周线 EMA8 / EMA21 趋势扫描器初始化中...</div>
     </div>
 
-    <h2>产业链分层</h2>
+    <h2>AI CapEx 产业链 8 层</h2>
     <div class="layers">
       <div class="layer L1">
-        <h3><span class="num">1</span>核心 AI 芯片</h3>
-        <div class="desc">GPU/CPU/ASIC 设计 + 内存 — AI 算力金字塔顶端。</div>
-        <div class="chips" id="usLayerCore"></div>
+        <h3><span class="num">1</span>算力芯片 & 加速器</h3>
+        <div class="desc">GPU/CPU/ASIC/IP — AI 算力金字塔顶端。</div>
+        <div class="chips" id="usLayerL1"></div>
       </div>
       <div class="layer L2">
-        <h3><span class="num">2</span>制造 & 设备</h3>
-        <div class="desc">晶圆代工 + 光刻/沉积/量测设备 + EDA — 卡脖子工序。</div>
-        <div class="chips" id="usLayerFoundry"></div>
+        <h3><span class="num">2</span>内存 & 存储</h3>
+        <div class="desc">HBM/DDR5/NAND — AI 训练的容量瓶颈。</div>
+        <div class="chips" id="usLayerL2"></div>
       </div>
       <div class="layer L3">
-        <h3><span class="num">3</span>数据中心物理层</h3>
-        <div class="desc">光模块/液冷/电源/UPS — AI 训练集群的"卖水"。</div>
-        <div class="chips" id="usLayerPhysical"></div>
+        <h3><span class="num">3</span>制造 / 设备 / EDA</h3>
+        <div class="desc">晶圆代工 + 设备 + EDA — 卡脖子工序。</div>
+        <div class="chips" id="usLayerL3"></div>
       </div>
       <div class="layer L4">
-        <h3><span class="num">4</span>能源 & 电力</h3>
-        <div class="desc">核电/铀矿/电网/燃气轮机 — AI 用电需求驱动。</div>
-        <div class="chips" id="usLayerEnergy"></div>
+        <h3><span class="num">4</span>先进封装 / 测试</h3>
+        <div class="desc">CoWoS/封测/基板 — HBM 集成关键。</div>
+        <div class="chips" id="usLayerL4"></div>
       </div>
       <div class="layer L1">
-        <h3><span class="num">5</span>应用 & 云</h3>
-        <div class="desc">大模型 + 云服务 + 端侧 AI — 算力消费方。</div>
-        <div class="chips" id="usLayerCloud"></div>
+        <h3><span class="num">5</span>AI 网络 & 互联</h3>
+        <div class="desc">以太网/光模块/SerDes/PCIe — GPU 互联瓶颈。</div>
+        <div class="chips" id="usLayerL5"></div>
       </div>
       <div class="layer L2">
-        <h3><span class="num">6</span>ETF & 板块对冲</h3>
-        <div class="desc">行业 ETF + 上下游金属/电力 — 分散持仓工具。</div>
-        <div class="chips" id="usLayerETF"></div>
+        <h3><span class="num">6</span>数据中心物理基建</h3>
+        <div class="desc">液冷/电源/UPS/EPC 工程 — 卖水第一站。</div>
+        <div class="chips" id="usLayerL6"></div>
+      </div>
+      <div class="layer L3">
+        <h3><span class="num">7</span>能源 / 发电 / 管道</h3>
+        <div class="desc">核电/燃气/铀矿/天然气管道 — AI 用电源头。</div>
+        <div class="chips" id="usLayerL7"></div>
+      </div>
+      <div class="layer L4">
+        <h3><span class="num">8</span>云 / Neocloud / 应用</h3>
+        <div class="desc">大模型/GPU 云/应用变现/端侧 AI。</div>
+        <div class="chips" id="usLayerL8"></div>
       </div>
     </div>
 
@@ -1966,9 +1976,15 @@ async function fetchKLine(code, period="day", count=180){
 // 美股交易所映射 (默认 OQ=NASDAQ; N=NYSE; P=NYSE Arca)
 // 经实测验证 (count=100 bars 完整度): 大部分 OQ 默认即可
 const US_EXCHANGE = {
+  // NYSE (.N)
   TSM: 'N', ONTO: 'N', FN: 'N', VRT: 'N', ETN: 'N', GEV: 'N', CCJ: 'N', COHR: 'N',
+  ANET: 'N', CIEN: 'N', GLW: 'N', PWR: 'N', EME: 'N', FIX: 'N', MOD: 'N', TT: 'N',
+  JCI: 'N', HUBB: 'N', VST: 'N', NRG: 'N', KMI: 'N', WMB: 'N', ORCL: 'N', NOW: 'N',
+  CRM: 'N',
+  // NYSE Arca ETF (.P)
   EWY: 'P',
-  // 不支持: XLU, COPX, XME (腾讯无数据)
+  // 不支持: XLU, COPX, XME (腾讯无数据), ASE (代码 ASX 待定)
+  // 默认 NASDAQ (.OQ): ARM, LRCX, CDNS, AMKR, TER, CRDO, ALAB, CSCO, MPWR, POWL, IREN, PLTR, 其余
 };
 function usSym(ticker){
   const ex = US_EXCHANGE[ticker] || 'OQ';
@@ -2930,14 +2946,16 @@ function renderUSWatchlist(){
 
 function renderUSLayers(){
   if (!companiesUS) return;
-  // cat → layer container ID mapping
+  // cat → layer container ID mapping (8 层)
   const groups = {
-    usLayerCore:     ['core_chip', 'memory'],
-    usLayerFoundry:  ['foundry'],
-    usLayerPhysical: ['optical'],
-    usLayerEnergy:   ['power'],
-    usLayerCloud:    ['hyperscaler', 'other'],
-    usLayerETF:      ['etf']
+    usLayerL1: ['core_chip'],                  // L1 算力芯片
+    usLayerL2: ['memory'],                     // L2 内存存储
+    usLayerL3: ['foundry'],                    // L3 制造设备 EDA
+    usLayerL4: ['packaging'],                  // L4 先进封装
+    usLayerL5: ['network', 'optical'],         // L5 AI 网络
+    usLayerL6: ['dc_infra'],                   // L6 DC 物理基建
+    usLayerL7: ['power'],                      // L7 能源电网
+    usLayerL8: ['hyperscaler', 'app', 'etf', 'other']  // L8 云/应用/ETF
   };
   const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
   for (const [containerId, cats] of Object.entries(groups)) {

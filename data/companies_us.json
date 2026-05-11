@@ -1,15 +1,18 @@
 {
   "_meta": {
     "updated": "2026-05-12",
-    "note": "36 只 AI 算力+能源主线观察列表. 财报数据 4 季度 (2025Q2 → 2026Q1), 单位: rev=亿美元(US$100M). ETF (SMH/XLU/COPX/XME/EWY) 不抓财报, quarters 保持 []. MU 2026Q1 标 F 待复核.",
+    "note": "AI CapEx 产业链 8 层框架. 财报数据自然季度 (2025Q2→2026Q1). 单位 rev=亿$.",
     "categories": {
-      "core_chip": "核心 AI 芯片设计",
-      "foundry": "晶圆制造 / 设备",
-      "memory": "存储/HBM",
-      "optical": "光模块/光通信",
-      "hyperscaler": "云计算 / 大模型",
-      "power": "数据中心电力/能源",
-      "etf": "板块 ETF",
+      "core_chip": "L1 算力芯片 & 加速器",
+      "memory": "L2 内存 & 存储",
+      "foundry": "L3 半导体制造 & 设备 & EDA",
+      "packaging": "L4 先进封装 / 基板 / 测试",
+      "network": "L5 AI 网络 & 高速互联",
+      "dc_infra": "L6 数据中心基础设施 (电/冷/工程)",
+      "power": "L7 能源 / 发电 / 电网",
+      "hyperscaler": "L8 云 / Neocloud / 应用",
+      "app": "AI 软件应用层",
+      "etf": "ETF & 主题表达工具",
       "other": "其他相关"
     },
     "market_cap_updated": "市值 May 11 2026 实时数据 (companiesmarketcap.com / Yahoo). 单位: 亿美元."
@@ -178,7 +181,7 @@
     "cat": "core_chip",
     "catLabel": "移动 SoC",
     "intro": "手机 SoC + 调制解调器龙头, 进军 PC AI 芯片 (Snapdragon X). 边缘 AI 重要参与者.",
-    "strategic": 7,
+    "strategic": 6,
     "market_cap_billion": 2483,
     "avg_turnover_pct": 1.8,
     "quarters": [
@@ -256,10 +259,10 @@
   },
   "APP": {
     "name": "AppLovin",
-    "cat": "other",
+    "cat": "app",
     "catLabel": "AI 软件应用",
     "intro": "移动广告 AI 优化平台 AXON, 用机器学习算法预测用户行为最大化广告变现. 非半导体, AI 软件下游应用受益.",
-    "strategic": 7,
+    "strategic": 6,
     "market_cap_billion": 1530,
     "avg_turnover_pct": 4.5,
     "quarters": [
@@ -573,7 +576,7 @@
     "cat": "memory",
     "catLabel": "NAND",
     "intro": "Western Digital 2025 年分拆出来的 NAND 闪存独立公司, 与铠侠 (Kioxia) 合资生产.",
-    "strategic": 7,
+    "strategic": 6,
     "market_cap_billion": 2285,
     "avg_turnover_pct": 5.5,
     "quarters": [
@@ -609,7 +612,7 @@
   },
   "COHR": {
     "name": "Coherent",
-    "cat": "optical",
+    "cat": "network",
     "catLabel": "光模块/激光",
     "intro": "光通信 (800G/1.6T 收发器) + 工业激光, AI 数据中心互联核心元件供应.",
     "strategic": 8,
@@ -648,7 +651,7 @@
   },
   "LITE": {
     "name": "Lumentum",
-    "cat": "optical",
+    "cat": "network",
     "catLabel": "光模块",
     "intro": "数据中心光模块 + 3D 感测激光, AI 网络扩张直接受益.",
     "strategic": 7,
@@ -687,7 +690,7 @@
   },
   "FN": {
     "name": "Fabrinet",
-    "cat": "optical",
+    "cat": "network",
     "catLabel": "光器件制造",
     "intro": "光通信器件 OEM 代工, NVDA 光模块主要外包伙伴. AI 网络渗透核心配套.",
     "strategic": 7,
@@ -887,7 +890,7 @@
     "cat": "hyperscaler",
     "catLabel": "硬件/Apple Intelligence",
     "intro": "Apple Intelligence 端侧 AI + 自研 M 系列芯片. AI 落地终端市场最大平台.",
-    "strategic": 7,
+    "strategic": 6,
     "market_cap_billion": 42910,
     "avg_turnover_pct": 0.6,
     "quarters": [
@@ -926,7 +929,7 @@
     "cat": "hyperscaler",
     "catLabel": "电车/AI",
     "intro": "Dojo 自研训练芯片 + FSD 自动驾驶 + Optimus 机器人. AI 训练算力大户.",
-    "strategic": 7,
+    "strategic": 6,
     "market_cap_billion": 16520,
     "avg_turnover_pct": 3.5,
     "quarters": [
@@ -1041,7 +1044,7 @@
   },
   "VRT": {
     "name": "Vertiv",
-    "cat": "power",
+    "cat": "dc_infra",
     "catLabel": "数据中心基础设施",
     "intro": "数据中心电力/液冷/UPS 全栈方案商, AI 数据中心扩张核心受益. 液冷渗透率提升直接利好.",
     "strategic": 8,
@@ -1080,7 +1083,7 @@
   },
   "ETN": {
     "name": "Eaton",
-    "cat": "power",
+    "cat": "dc_infra",
     "catLabel": "电力管理",
     "intro": "工业电力管理龙头, 数据中心配电/UPS 系统. 全球电网升级 + AI 用电增长双重受益.",
     "strategic": 8,
@@ -1122,7 +1125,7 @@
     "cat": "power",
     "catLabel": "电力设备",
     "intro": "GE 拆分的电力业务 (天然气轮机/风电/电网), AI 用电需求驱动燃气发电复兴. 2024 年单独上市.",
-    "strategic": 8,
+    "strategic": 7,
     "market_cap_billion": 2903,
     "avg_turnover_pct": 2.5,
     "quarters": [
@@ -1162,7 +1165,7 @@
     "cat": "power",
     "catLabel": "铀矿",
     "intro": "全球最大铀矿商, 核电复兴的最直接受益. AI 数据中心驱动核电需求 → 铀价中枢上移.",
-    "strategic": 7,
+    "strategic": 6,
     "market_cap_billion": 508,
     "avg_turnover_pct": 3,
     "quarters": [
@@ -1243,6 +1246,306 @@
     "intro": "韩国市场 ETF, 主要持仓三星电子 + SK 海力士. 间接配置 HBM 全球老大 SK Hynix.",
     "strategic": 7,
     "market_cap_billion": 50,
+    "avg_turnover_pct": 1.5,
+    "quarters": []
+  },
+  "ARM": {
+    "name": "Arm Holdings",
+    "cat": "core_chip",
+    "catLabel": "CPU IP",
+    "strategic": 8,
+    "intro": "全球 CPU IP 设计垄断 (手机/AI/服务器), Grace CPU + AI 边缘端基础设施核心.",
+    "market_cap_billion": 1500,
+    "avg_turnover_pct": 2,
+    "quarters": []
+  },
+  "LRCX": {
+    "name": "Lam Research",
+    "cat": "foundry",
+    "catLabel": "刻蚀设备",
+    "strategic": 8,
+    "intro": "刻蚀/沉积设备龙头 (与 AMAT 并列), HBM/NAND 制造关键工序.",
+    "market_cap_billion": 1100,
+    "avg_turnover_pct": 2.5,
+    "quarters": []
+  },
+  "CDNS": {
+    "name": "Cadence Design",
+    "cat": "foundry",
+    "catLabel": "EDA 软件",
+    "strategic": 8,
+    "intro": "EDA 双寡头之一 (与 SNPS 并列), AI 芯片设计必备工具.",
+    "market_cap_billion": 800,
+    "avg_turnover_pct": 1.5,
+    "quarters": []
+  },
+  "ASE": {
+    "name": "ASE Technology",
+    "cat": "packaging",
+    "catLabel": "封测",
+    "strategic": 8,
+    "intro": "全球最大 OSAT (外包封测), CoWoS/SoIC 先进封装产能扩张主力.",
+    "market_cap_billion": 250,
+    "avg_turnover_pct": 2.5,
+    "quarters": []
+  },
+  "AMKR": {
+    "name": "Amkor Technology",
+    "cat": "packaging",
+    "catLabel": "封测",
+    "strategic": 7,
+    "intro": "美国本土最大封测 (ASE 二号位), AI 芯片 2.5D/3D 封装合作伙伴.",
+    "market_cap_billion": 80,
+    "avg_turnover_pct": 3.5,
+    "quarters": []
+  },
+  "TER": {
+    "name": "Teradyne",
+    "cat": "packaging",
+    "catLabel": "测试设备",
+    "strategic": 7,
+    "intro": "半导体测试设备龙头, HBM/SoC 量产测试受益, 与 Advantest 双寡头.",
+    "market_cap_billion": 250,
+    "avg_turnover_pct": 2.5,
+    "quarters": []
+  },
+  "ANET": {
+    "name": "Arista Networks",
+    "cat": "network",
+    "catLabel": "AI 以太网",
+    "strategic": 9,
+    "intro": "AI 数据中心以太网交换核心标的, Meta/Microsoft 等超大客户主供, AI 网络绝对龙头.",
+    "market_cap_billion": 1400,
+    "avg_turnover_pct": 1.5,
+    "quarters": []
+  },
+  "CRDO": {
+    "name": "Credo Technology",
+    "cat": "network",
+    "catLabel": "高速互联",
+    "strategic": 7,
+    "intro": "高速 SerDes/AEC 主动电缆, AI 数据中心高速互联弹性最大标的.",
+    "market_cap_billion": 150,
+    "avg_turnover_pct": 6,
+    "quarters": []
+  },
+  "ALAB": {
+    "name": "Astera Labs",
+    "cat": "network",
+    "catLabel": "PCIe/CXL",
+    "strategic": 8,
+    "intro": "PCIe/CXL/Retimer 数据中心互联芯片, AI 服务器内部连接基础设施.",
+    "market_cap_billion": 250,
+    "avg_turnover_pct": 5,
+    "quarters": []
+  },
+  "CIEN": {
+    "name": "Ciena",
+    "cat": "network",
+    "catLabel": "光网络",
+    "strategic": 7,
+    "intro": "光网络传输设备 (DCI 数据中心互联), AI 长距骨干网络受益.",
+    "market_cap_billion": 150,
+    "avg_turnover_pct": 3,
+    "quarters": []
+  },
+  "CSCO": {
+    "name": "Cisco Systems",
+    "cat": "network",
+    "catLabel": "网络设备",
+    "strategic": 6,
+    "intro": "传统网络龙头, AI 数据中心追赶中 (Silicon One ASIC), 体量大但弹性低.",
+    "market_cap_billion": 2800,
+    "avg_turnover_pct": 1.5,
+    "quarters": []
+  },
+  "MPWR": {
+    "name": "Monolithic Power",
+    "cat": "network",
+    "catLabel": "电源管理",
+    "strategic": 8,
+    "intro": "AI 服务器电源管理芯片 (DrMOS/VRM), NVDA H100/B200 供应链关键.",
+    "market_cap_billion": 450,
+    "avg_turnover_pct": 2.5,
+    "quarters": []
+  },
+  "GLW": {
+    "name": "Corning",
+    "cat": "network",
+    "catLabel": "光纤/玻璃",
+    "strategic": 7,
+    "intro": "光纤连接 + Gorilla 玻璃, Nvidia 战略合作 (北卡州扩 10x 光通信产能).",
+    "market_cap_billion": 600,
+    "avg_turnover_pct": 2,
+    "quarters": []
+  },
+  "PWR": {
+    "name": "Quanta Services",
+    "cat": "dc_infra",
+    "catLabel": "电力 EPC",
+    "strategic": 8,
+    "intro": "美国最大电力 EPC 工程商, 数据中心并网/输电线建设主力承包.",
+    "market_cap_billion": 600,
+    "avg_turnover_pct": 2,
+    "quarters": []
+  },
+  "EME": {
+    "name": "EMCOR Group",
+    "cat": "dc_infra",
+    "catLabel": "机电工程",
+    "strategic": 7,
+    "intro": "数据中心机电安装工程龙头, AI Capex 建设直接受益.",
+    "market_cap_billion": 250,
+    "avg_turnover_pct": 2.5,
+    "quarters": []
+  },
+  "FIX": {
+    "name": "Comfort Systems",
+    "cat": "dc_infra",
+    "catLabel": "暖通工程",
+    "strategic": 7,
+    "intro": "暖通冷却施工龙头 (HVAC), 数据中心液冷/精密温控 EPC.",
+    "market_cap_billion": 250,
+    "avg_turnover_pct": 3,
+    "quarters": []
+  },
+  "MOD": {
+    "name": "Modine Manufacturing",
+    "cat": "dc_infra",
+    "catLabel": "热管理",
+    "strategic": 7,
+    "intro": "热管理/冷却系统, 数据中心液冷渗透核心受益.",
+    "market_cap_billion": 80,
+    "avg_turnover_pct": 3.5,
+    "quarters": []
+  },
+  "TT": {
+    "name": "Trane Technologies",
+    "cat": "dc_infra",
+    "catLabel": "暖通设备",
+    "strategic": 7,
+    "intro": "全球暖通空调龙头, 数据中心冷却系统集成.",
+    "market_cap_billion": 1100,
+    "avg_turnover_pct": 1.5,
+    "quarters": []
+  },
+  "JCI": {
+    "name": "Johnson Controls",
+    "cat": "dc_infra",
+    "catLabel": "楼宇/暖通",
+    "strategic": 6,
+    "intro": "楼宇自动化 + 暖通, 数据中心 BMS / HVAC 集成.",
+    "market_cap_billion": 700,
+    "avg_turnover_pct": 2,
+    "quarters": []
+  },
+  "HUBB": {
+    "name": "Hubbell",
+    "cat": "dc_infra",
+    "catLabel": "电气连接",
+    "strategic": 7,
+    "intro": "电气连接设备, 数据中心配电/开关柜/连接器配套.",
+    "market_cap_billion": 250,
+    "avg_turnover_pct": 2,
+    "quarters": []
+  },
+  "POWL": {
+    "name": "Powell Industries",
+    "cat": "dc_infra",
+    "catLabel": "开关柜",
+    "strategic": 7,
+    "intro": "中高压开关柜专家, 数据中心 + LNG 配电关键设备.",
+    "market_cap_billion": 50,
+    "avg_turnover_pct": 4.5,
+    "quarters": []
+  },
+  "VST": {
+    "name": "Vistra",
+    "cat": "power",
+    "catLabel": "独立电力",
+    "strategic": 8,
+    "intro": "美国最大独立电力运营商, 核 + 燃气 + 可再生组合, AI 用电直供数据中心.",
+    "market_cap_billion": 800,
+    "avg_turnover_pct": 2.5,
+    "quarters": []
+  },
+  "NRG": {
+    "name": "NRG Energy",
+    "cat": "power",
+    "catLabel": "零售电力",
+    "strategic": 7,
+    "intro": "美国零售电力 + 燃气发电, 与超大数据中心客户长协合作.",
+    "market_cap_billion": 250,
+    "avg_turnover_pct": 2,
+    "quarters": []
+  },
+  "KMI": {
+    "name": "Kinder Morgan",
+    "cat": "power",
+    "catLabel": "天然气管道",
+    "strategic": 6,
+    "intro": "美国最大天然气管道, 数据中心燃气发电上游受益.",
+    "market_cap_billion": 850,
+    "avg_turnover_pct": 1.5,
+    "quarters": []
+  },
+  "WMB": {
+    "name": "Williams Companies",
+    "cat": "power",
+    "catLabel": "天然气管道",
+    "strategic": 6,
+    "intro": "天然气运输管道, 与 KMI 共同受益数据中心燃气发电增长.",
+    "market_cap_billion": 800,
+    "avg_turnover_pct": 1.5,
+    "quarters": []
+  },
+  "ORCL": {
+    "name": "Oracle",
+    "cat": "hyperscaler",
+    "catLabel": "云/数据库",
+    "strategic": 8,
+    "intro": "OCI 云服务 + 数据库 + AI 训练 (与 Meta/OpenAI 大单), AI 云第四极.",
+    "market_cap_billion": 2200,
+    "avg_turnover_pct": 1.5,
+    "quarters": []
+  },
+  "IREN": {
+    "name": "IREN",
+    "cat": "hyperscaler",
+    "catLabel": "GPU 云",
+    "strategic": 7,
+    "intro": "矿转 AI 数据中心运营商 (类 CoreWeave), 已与 NVDA 签 5GW 部署协议.",
+    "market_cap_billion": 130,
+    "avg_turnover_pct": 8,
+    "quarters": []
+  },
+  "PLTR": {
+    "name": "Palantir",
+    "cat": "hyperscaler",
+    "catLabel": "AI 平台",
+    "strategic": 8,
+    "intro": "AIP (AI 平台) 政企双线 (DoD/Foundry), AI 商业化最快变现案例.",
+    "market_cap_billion": 4500,
+    "avg_turnover_pct": 4,
+    "quarters": []
+  },
+  "NOW": {
+    "name": "ServiceNow",
+    "cat": "hyperscaler",
+    "catLabel": "AI 工作流",
+    "strategic": 7,
+    "intro": "企业 AI 工作流平台 (Now Assist), 大企业 AI 部署核心承接者.",
+    "market_cap_billion": 2200,
+    "avg_turnover_pct": 1.5,
+    "quarters": []
+  },
+  "CRM": {
+    "name": "Salesforce",
+    "cat": "hyperscaler",
+    "catLabel": "AI CRM",
+    "strategic": 6,
+    "intro": "CRM 巨头 + Agentforce AI 代理, 应用层 AI 变现.",
+    "market_cap_billion": 2500,
     "avg_turnover_pct": 1.5,
     "quarters": []
   }
