@@ -971,6 +971,10 @@ function renderWatchlist(){
     const wb = _quantWeights ? (_quantWeights[b.code]?.weight ?? 0) : b.w;
     return wb - wa;
   });
+  // 与饼图保持一致: Top 5 归一化到 100% 作为真实持仓配比
+  const top5Sum = _quantWeights
+    ? sorted.slice(0,5).reduce((s,r) => s + (_quantWeights[r.code]?.weight ?? 0), 0)
+    : 0;
   sorted.forEach(r => {
     const q = lastQuotes[r.code] || {};
     if (q.changePct > 0) upCount++;
@@ -988,8 +992,9 @@ function renderWatchlist(){
     const rankIdx = sorted.findIndex(s => s.code === r.code) + 1;
     let roleHtml;
     if (rankIdx <= 5) {
-      // Top 5 持仓 — 红色高亮
-      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(255,90,106,.2);color:#ff8a95;font-weight:700;font-size:12px">#${rankIdx} 持仓 ${qw ? qw.weight.toFixed(1) : '?'}%</span>`;
+      // Top 5 持仓 — 红色高亮, 显示归一化后 % (与饼图一致)
+      const normPct = (qw && top5Sum > 0) ? (qw.weight / top5Sum * 100).toFixed(1) : '?';
+      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(255,90,106,.2);color:#ff8a95;font-weight:700;font-size:12px">#${rankIdx} 持仓 ${normPct}%</span>`;
     } else if (rankIdx <= 10) {
       // 候选池 — 金色
       roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(245,179,1,.15);color:var(--gold);font-weight:600;font-size:12px">#${rankIdx} 候选</span>`;
@@ -997,8 +1002,13 @@ function renderWatchlist(){
       // 观察池 — 灰色
       roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;color:var(--muted);font-size:11px">#${rankIdx} 观察</span>`;
     }
+    const rawPct = qw ? qw.weight.toFixed(1) : '?';
+    const normPctForTooltip = (qw && top5Sum > 0 && rankIdx <= 5) ? (qw.weight / top5Sum * 100).toFixed(1) : null;
     const wTooltip = qw ? escapeAttr(
-      `量化排名 #${rankIdx} · 综合分 ${qw.weight.toFixed(1)}%\n` +
+      `排名 #${rankIdx}\n` +
+      (normPctForTooltip ? `Top 5 配比 (实际买入): ${normPctForTooltip}%\n` : "") +
+      `原始权重 (17 只里占比): ${rawPct}%\n` +
+      `─── 因子分解 ───\n` +
       `战略: ${qw.factors.strategic.val} (贡献 ${qw.factors.strategic.contrib})\n` +
       `增速: ${qw.factors.growth.val} (z=${qw.factors.growth.z}, 贡献 ${qw.factors.growth.contrib})\n` +
       `盈利: ${qw.factors.profit.val} (z=${qw.factors.profit.z}, 贡献 ${qw.factors.profit.contrib})\n` +
