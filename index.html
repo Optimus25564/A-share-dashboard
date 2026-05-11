@@ -476,9 +476,43 @@
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
         <div>
           <div style="font-size:16px;font-weight:700;color:#4ea8ff;margin-bottom:4px">🇺🇸 美股 · AI 算力 + 能源主线</div>
-          <div style="font-size:12px;color:var(--muted)">36 只观察清单 · 行情来源 Stooq (15-20 分钟延迟) · 战略评分 1-10</div>
+          <div style="font-size:12px;color:var(--muted)">36 只观察清单 · 行情来源 Stooq (15-20 分钟延迟) · 5 因子量化模型实时计算</div>
         </div>
         <button id="usRefreshBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:6px 14px;border-radius:4px;font-size:12px;cursor:pointer">🔄 刷新</button>
+      </div>
+    </div>
+
+    <h2>产业链分层</h2>
+    <div class="layers">
+      <div class="layer L1">
+        <h3><span class="num">1</span>核心 AI 芯片</h3>
+        <div class="desc">GPU/CPU/ASIC 设计 + 内存 — AI 算力金字塔顶端。</div>
+        <div class="chips" id="usLayerCore"></div>
+      </div>
+      <div class="layer L2">
+        <h3><span class="num">2</span>制造 & 设备</h3>
+        <div class="desc">晶圆代工 + 光刻/沉积/量测设备 + EDA — 卡脖子工序。</div>
+        <div class="chips" id="usLayerFoundry"></div>
+      </div>
+      <div class="layer L3">
+        <h3><span class="num">3</span>数据中心物理层</h3>
+        <div class="desc">光模块/液冷/电源/UPS — AI 训练集群的"卖水"。</div>
+        <div class="chips" id="usLayerPhysical"></div>
+      </div>
+      <div class="layer L4">
+        <h3><span class="num">4</span>能源 & 电力</h3>
+        <div class="desc">核电/铀矿/电网/燃气轮机 — AI 用电需求驱动。</div>
+        <div class="chips" id="usLayerEnergy"></div>
+      </div>
+      <div class="layer L1">
+        <h3><span class="num">5</span>应用 & 云</h3>
+        <div class="desc">大模型 + 云服务 + 端侧 AI — 算力消费方。</div>
+        <div class="chips" id="usLayerCloud"></div>
+      </div>
+      <div class="layer L2">
+        <h3><span class="num">6</span>ETF & 板块对冲</h3>
+        <div class="desc">行业 ETF + 上下游金属/电力 — 分散持仓工具。</div>
+        <div class="chips" id="usLayerETF"></div>
       </div>
     </div>
 
@@ -1506,7 +1540,11 @@ async function openInfo(code){
   currentFilter = "all";
   document.querySelectorAll("#infoFilter button").forEach(b => b.classList.toggle("active", b.dataset.f === "all"));
 
-  const stock = WATCH.find(w => w.code === code);
+  // 自动检测 A股 / 美股
+  const isUS = /[A-Za-z]/.test(code);
+  const stock = isUS
+    ? (companiesUS && companiesUS[code] ? {name: companiesUS[code].name} : null)
+    : WATCH.find(w => w.code === code);
   document.getElementById("infoTitle").textContent = `${code} · ${stock?stock.name:""} · 信息整合`;
   document.getElementById("infoModal").classList.add("show");
 
@@ -1517,7 +1555,12 @@ async function openInfo(code){
   document.getElementById("noteTags").value = "";
 
   await loadPublicNews();
-  await loadCompanies();
+  // US tickers 加载 companiesUS, A股加载 companiesData
+  if (isUS) {
+    await loadCompaniesUS();
+  } else {
+    await loadCompanies();
+  }
   renderCompanyBasics(code);
   renderInfoTimeline();
 }
@@ -1542,12 +1585,24 @@ async function loadCompanies(){
 function renderCompanyBasics(code){
   const box = document.getElementById("companyBasics");
   if (!box) return;
-  const data = companiesData && companiesData[code];
+  // 自动检测: US (含字母) 用 companiesUS, A股用 companiesData
+  const isUS = /[A-Za-z]/.test(code);
+  const dataset = isUS ? companiesUS : companiesData;
+  const data = dataset && dataset[code];
   if (!data) {
     box.innerHTML = `<div style="color:var(--muted);font-size:12px">暂无该公司基本面数据</div>`;
     return;
   }
-  const meta = (companiesData._meta && companiesData._meta.note) || "";
+  // 美股: ETF 没有 quarters
+  if (isUS && (!data.quarters || data.quarters.length === 0)) {
+    box.innerHTML = `
+      <div style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:6px">📋 业务简介</div>
+      <div style="font-size:13px;line-height:1.6;color:#cdd6e6;margin-bottom:12px">${data.intro || "--"}</div>
+      <div style="color:var(--muted);font-size:12px;padding:8px 0">ETF 无单独财报</div>`;
+    return;
+  }
+  const meta = (dataset._meta && dataset._meta.note) || "";
+  const currency = isUS ? "亿$" : "亿元";
   const qs = data.quarters || [];
   // 增长率
   const revGrowth = qs.length >= 2 ? ((qs[qs.length-1].rev / qs[0].rev - 1) * 100) : null;
@@ -1575,7 +1630,7 @@ function renderCompanyBasics(code){
       <thead>
         <tr style="color:var(--muted);border-bottom:1px solid var(--border)">
           <th style="text-align:left;padding:4px 8px">季度</th>
-          <th style="text-align:right;padding:4px 8px">收入(亿)</th>
+          <th style="text-align:right;padding:4px 8px">收入(${currency})</th>
           <th style="text-align:right;padding:4px 8px">毛利率</th>
           <th style="text-align:right;padding:4px 8px">净利率</th>
         </tr>
@@ -1622,7 +1677,7 @@ function renderCompanyBasics(code){
       data: {
         labels: qs.map(q => q.q),
         datasets: [
-          {type:"bar", label:"收入(亿)", data: qs.map(q=>q.rev),
+          {type:"bar", label:`收入(${currency})`, data: qs.map(q=>q.rev),
             backgroundColor: barFill, borderColor: barBorder, borderWidth:1.5,
             borderSkipped:false,
             yAxisID:"y", order:2},
@@ -1654,7 +1709,7 @@ function renderCompanyBasics(code){
         },
         scales:{
           x:{ticks:{color:"#8aa0c0",font:{size:11}},grid:{display:false}},
-          y:{position:"left",ticks:{color:"#f5b301",font:{size:10},callback:v=>v+"亿"},grid:{color:"#1f2a44"},title:{display:false}},
+          y:{position:"left",ticks:{color:"#f5b301",font:{size:10},callback:v=>v+(isUS?"亿$":"亿")},grid:{color:"#1f2a44"},title:{display:false}},
           y1:{position:"right",ticks:{color:"#ff8a95",font:{size:10},callback:v=>v+"%"},grid:{display:false},title:{display:false}}
         }
       }
@@ -1896,7 +1951,39 @@ async function fetchKLineRaw(sym, period="day", count=180){
   }
 }
 async function fetchKLine(code, period="day", count=180){
+  // 美股 ticker (包含字母) 用 Stooq, A股 (纯数字) 用腾讯
+  if (/[A-Za-z]/.test(code)) {
+    return fetchUSKLine(code, period);
+  }
   return fetchKLineRaw(pfx(code), period, count);
+}
+
+// 美股 K 线 from Stooq (CSV, CORS 友好)
+async function fetchUSKLine(ticker, period="day"){
+  const interval = period === "week" ? "w" : period === "month" ? "m" : "d";
+  const sym = ticker.toLowerCase().replace(/\./g, '-') + ".us";
+  const url = `https://stooq.com/q/d/l/?s=${sym}&i=${interval}`;
+  try {
+    const r = await fetch(url);
+    const text = await r.text();
+    const lines = text.trim().split("\n");
+    if (lines.length < 2) return [];
+    // header: Date,Open,High,Low,Close,Volume
+    return lines.slice(1).map(line => {
+      const cols = line.split(",");
+      return {
+        date: cols[0],
+        open: parseFloat(cols[1]),
+        high: parseFloat(cols[2]),
+        low: parseFloat(cols[3]),
+        close: parseFloat(cols[4]),
+        volume: parseInt(cols[5]) || 0
+      };
+    }).filter(b => !isNaN(b.close));
+  } catch(e) {
+    console.error('Stooq fetch failed:', e);
+    return [];
+  }
 }
 function parseKLine(j, sym, period){
   const node = j?.data?.[sym];
@@ -2000,8 +2087,13 @@ async function openKLine(code){
 
 async function reloadKLine(){
   const {code, period, range} = klState;
-  const stock = WATCH.find(w=>w.code===code);
-  document.getElementById("klineTitle").textContent = `${code} · ${stock?stock.name:""} · ${PERIOD_LABEL[period]} (前复权)`;
+  // 自动检测 A股 / 美股
+  const isUS = /[A-Za-z]/.test(code);
+  const stock = isUS
+    ? (companiesUS && companiesUS[code] ? {name: companiesUS[code].name} : null)
+    : WATCH.find(w=>w.code===code);
+  const fqLabel = isUS ? "(USD)" : "(前复权)";
+  document.getElementById("klineTitle").textContent = `${code} · ${stock?stock.name:""} · ${PERIOD_LABEL[period]} ${fqLabel}`;
   document.getElementById("klineSummary").innerHTML = "<span>加载中...</span>";
 
   const cacheKey = code + ":" + period;
@@ -2823,13 +2915,49 @@ function renderUSWatchlist(){
         <td class="num-cell" title="${tooltip}" style="cursor:help">${roleHtml}</td>
         <td style="font-size:11px;color:#cdd6e6;line-height:1.5;max-width:380px">${c.intro || ""}</td>
         <td>
-          <a href="https://finance.yahoo.com/quote/${code}" target="_blank" class="trade-action" style="text-decoration:none;display:inline-block">📊 Yahoo</a>
+          <button class="trade-action us-info-btn" data-code="${code}" style="margin-right:4px">📋</button>
+          <button class="trade-action us-kline-btn" data-code="${code}" style="margin-right:4px">K线</button>
+          <a href="https://finance.yahoo.com/quote/${code}" target="_blank" class="trade-action" style="text-decoration:none;display:inline-block">📊</a>
         </td>
       </tr>`;
   });
   tb.innerHTML = rows.join("");
   const summary = document.getElementById("usSummary");
   if (summary) summary.textContent = `↑ ${upCount}　↓ ${downCount}　共 ${codes.length} 只`;
+  // 绑定按钮
+  tb.querySelectorAll(".us-info-btn").forEach(b => b.onclick = () => openInfo(b.dataset.code));
+  tb.querySelectorAll(".us-kline-btn").forEach(b => b.onclick = () => openKLine(b.dataset.code));
+  // 渲染产业链分层
+  renderUSLayers();
+}
+
+function renderUSLayers(){
+  if (!companiesUS) return;
+  // cat → layer container ID mapping
+  const groups = {
+    usLayerCore:     ['core_chip', 'memory'],
+    usLayerFoundry:  ['foundry'],
+    usLayerPhysical: ['optical'],
+    usLayerEnergy:   ['power'],
+    usLayerCloud:    ['hyperscaler', 'other'],
+    usLayerETF:      ['etf']
+  };
+  const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
+  for (const [containerId, cats] of Object.entries(groups)) {
+    const el = document.getElementById(containerId);
+    if (!el) continue;
+    const items = codes
+      .filter(c => cats.includes(companiesUS[c].cat))
+      .sort((a,b) => (companiesUS[b].strategic||0) - (companiesUS[a].strategic||0));
+    el.innerHTML = items.map(c => {
+      const co = companiesUS[c];
+      return `<span class="chip" title="${escapeAttr(co.intro || '')}" style="cursor:pointer" data-uscode="${c}">${c} ${co.name} <span style="color:var(--gold);font-size:10px">★${co.strategic}</span></span>`;
+    }).join('');
+    // chip click → openInfo
+    el.querySelectorAll("[data-uscode]").forEach(s => {
+      s.onclick = () => openInfo(s.dataset.uscode);
+    });
+  }
 }
 async function initUSTab(){
   await loadCompaniesUS();
