@@ -137,8 +137,8 @@
     "name": "Intel",
     "cat": "core_chip",
     "catLabel": "CPU/Foundry",
-    "intro": "PC/服务器 CPU 老牌厂商, 代工业务 (Intel Foundry) 是国家战略级别但盈利困难, 2024-2025 持续亏损改革.",
-    "strategic": 6,
+    "intro": "美国政府持 9.9% 股权 (CHIPS Act 拨款转股权), Intel 18A (1.8nm) Fab 52 亚利桑那量产 — 美国先进制程国家战略资产。CPU 老牌 + Foundry 国家级。",
+    "strategic": 9,
     "market_cap_billion": 6387,
     "avg_turnover_pct": 3.5,
     "quarters": [

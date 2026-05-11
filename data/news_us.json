@@ -1,1 +1,36 @@
-{}
+{
+  "INTC": [
+    {
+      "date": "2026-03-20",
+      "type": "policy",
+      "title": "美国政府持有 Intel 9.9% 非投票权股权 — CHIPS Act 拨款转股权",
+      "url": "https://www.govconwire.com/articles/intel-us-government-investment-chips-act-grants-secure-enclave",
+      "source": "GovConWire",
+      "content": "美国政府将 Intel 剩余 CHIPS Act 拨款转为 9.9% 非投票权股权, 433M 股, 标志着政府成为唯一一家美国先进制程公司的实质股东。"
+    },
+    {
+      "date": "2025-10",
+      "type": "announcement",
+      "title": "Intel 18A (1.8nm) Fab 52 亚利桑那量产 — 美国本土首次先进节点 HVM",
+      "url": "https://newsroom.intel.com/corporate/intel-and-trump-administration-reach-historic-agreement",
+      "source": "Intel Newsroom",
+      "content": "Intel Fab 52 (亚利桑那 Ocotillo) 18A 工艺进入 HVM, 首次美国本土实现先进制程量产, 战略意义对冲 TSMC 集中风险。"
+    },
+    {
+      "date": "2026-04",
+      "type": "research",
+      "title": "Intel 收到 $5.7B 加速 CHIPS Act 拨款",
+      "url": "https://www.precedenceresearch.com/news/intel-chips-act-deal",
+      "source": "Precedence Research",
+      "content": "经修订的 CHIPS Act 协议加速 $5.7B 拨款。Intel 仍独立运营 Foundry, 政府不参与运营决策。"
+    },
+    {
+      "date": "2026-04",
+      "type": "industry",
+      "title": "NVDA-Intel 战略合作 — 老对手联手",
+      "url": "https://www.investing.com/analysis/inside-the-nvidiaintel-deal-sleeping-with-the-enemy-200672578",
+      "source": "Investing.com",
+      "content": "Nvidia 和 Intel 达成战略合作, AI 生态新格局。"
+    }
+  ]
+}
