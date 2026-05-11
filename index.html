@@ -1964,8 +1964,9 @@ async function fetchKLine(code, period="day", count=180){
 }
 
 // 美股交易所映射 (默认 OQ=NASDAQ; N=NYSE; P=NYSE Arca)
+// 经实测验证 (count=100 bars 完整度): 大部分 OQ 默认即可
 const US_EXCHANGE = {
-  TSM: 'N', ONTO: 'N', FN: 'N', VRT: 'N', ETN: 'N', GEV: 'N', CCJ: 'N',
+  TSM: 'N', ONTO: 'N', FN: 'N', VRT: 'N', ETN: 'N', GEV: 'N', CCJ: 'N', COHR: 'N',
   EWY: 'P',
   // 不支持: XLU, COPX, XME (腾讯无数据)
 };
