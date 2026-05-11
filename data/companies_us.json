@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "updated": "2026-05-11",
-    "note": "美股 AI 算力 + 能源主线观察列表. quarters 数据为初始空, 等 routine 抓取后填充. strategic = 1-10 主线卡位评分.",
+    "updated": "2026-05-12",
+    "note": "36 只 AI 算力+能源主线观察列表. 财报数据 4 季度 (2025Q2 → 2026Q1), 单位: rev=亿美元(US$100M). ETF (SMH/XLU/COPX/XME/EWY) 不抓财报, quarters 保持 []. MU 2026Q1 标 F 待复核.",
     "categories": {
       "core_chip": "核心 AI 芯片设计",
       "foundry": "晶圆制造 / 设备",
@@ -21,7 +21,37 @@
     "strategic": 10,
     "market_cap_billion": 4500,
     "avg_turnover_pct": 1.2,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 441,
+        "gm": 60.5,
+        "nm": 42.6,
+        "src": "A",
+        "note": "Q2 GM/NM 受 $4.5B H20 出口管制存货减值拖累"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 467,
+        "gm": 72.4,
+        "nm": 56.5,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 570,
+        "gm": 73.4,
+        "nm": 56,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 681,
+        "gm": 75,
+        "nm": 63.1,
+        "src": "A"
+      }
+    ]
   },
   "AVGO": {
     "name": "Broadcom",
@@ -31,7 +61,36 @@
     "strategic": 9,
     "market_cap_billion": 1400,
     "avg_turnover_pct": 1.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 150,
+        "gm": 68,
+        "nm": 33.1,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 159.5,
+        "gm": 67.1,
+        "nm": 26,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 180.2,
+        "gm": 68,
+        "nm": 47.3,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 193.1,
+        "gm": 68.1,
+        "nm": 38.1,
+        "src": "A"
+      }
+    ]
   },
   "AMD": {
     "name": "AMD",
@@ -40,8 +99,38 @@
     "intro": "AI GPU 第二选择 (MI300/MI350), x86 CPU 抢英特尔份额. AI 业务高速增长但绝对体量距英伟达甚远.",
     "strategic": 8,
     "market_cap_billion": 280,
-    "avg_turnover_pct": 4.0,
-    "quarters": []
+    "avg_turnover_pct": 4,
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 76.9,
+        "gm": 39.8,
+        "nm": 10,
+        "src": "A",
+        "note": "GM 受 $800M MI308 出口管制减值拖累"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 92.5,
+        "gm": 51.7,
+        "nm": 12.7,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 102.7,
+        "gm": 54.3,
+        "nm": 15.8,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 102.5,
+        "gm": 52.8,
+        "nm": 13.4,
+        "src": "A"
+      }
+    ]
   },
   "INTC": {
     "name": "Intel",
@@ -51,7 +140,37 @@
     "strategic": 6,
     "market_cap_billion": 90,
     "avg_turnover_pct": 3.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 128.6,
+        "gm": 27.5,
+        "nm": -23.5,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 136.5,
+        "gm": 38.2,
+        "nm": 31.3,
+        "src": "A",
+        "note": "NM 一次性 Altera 剥离收益; 2026Q1 重组+商誉减值"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 136.7,
+        "gm": 36.2,
+        "nm": -2.4,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 135.8,
+        "gm": 39.4,
+        "nm": -31.5,
+        "src": "A"
+      }
+    ]
   },
   "QCOM": {
     "name": "Qualcomm",
@@ -61,7 +180,38 @@
     "strategic": 7,
     "market_cap_billion": 195,
     "avg_turnover_pct": 1.8,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 103.7,
+        "gm": 55.6,
+        "nm": 25.7,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 112.7,
+        "gm": 55.3,
+        "nm": -27.7,
+        "src": "A",
+        "note": "EU 反垄断/税务一次性费用"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 122.5,
+        "gm": 54.6,
+        "nm": 24.5,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 106,
+        "gm": 53.8,
+        "nm": 69.5,
+        "src": "A",
+        "note": "重大税收抵免"
+      }
+    ]
   },
   "MRVL": {
     "name": "Marvell",
@@ -71,7 +221,37 @@
     "strategic": 7,
     "market_cap_billion": 70,
     "avg_turnover_pct": 3.8,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 19,
+        "gm": 50.3,
+        "nm": 9.4,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 20.1,
+        "gm": 50.4,
+        "nm": 9.7,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 20.8,
+        "gm": 51.6,
+        "nm": 91.7,
+        "src": "A",
+        "note": "NM 91.7% 为汽车以太网业务出售一次性收益 (~$3.77B)"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 22.2,
+        "gm": 51.7,
+        "nm": 17.9,
+        "src": "A"
+      }
+    ]
   },
   "APP": {
     "name": "AppLovin",
@@ -81,7 +261,36 @@
     "strategic": 7,
     "market_cap_billion": 130,
     "avg_turnover_pct": 4.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 12.6,
+        "gm": 87.7,
+        "nm": 65.1,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 14.1,
+        "gm": 87.6,
+        "nm": 59.5,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 16.6,
+        "gm": 88.9,
+        "nm": 66.5,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 18.4,
+        "gm": 89,
+        "nm": 65.4,
+        "src": "A"
+      }
+    ]
   },
   "TSM": {
     "name": "TSMC",
@@ -90,8 +299,37 @@
     "intro": "全球先进制程绝对垄断 (3nm/2nm), 所有 AI 芯片 (NVDA/AMD/AVGO/AAPL) 都靠它代工. ADR 在美上市.",
     "strategic": 10,
     "market_cap_billion": 1200,
-    "avg_turnover_pct": 1.0,
-    "quarters": []
+    "avg_turnover_pct": 1,
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 301,
+        "gm": 58.6,
+        "nm": 42.6,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 331,
+        "gm": 59.5,
+        "nm": 45.6,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 337,
+        "gm": 62.3,
+        "nm": 48.3,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 359,
+        "gm": 66.2,
+        "nm": 50.5,
+        "src": "A"
+      }
+    ]
   },
   "ASML": {
     "name": "ASML",
@@ -101,7 +339,36 @@
     "strategic": 10,
     "market_cap_billion": 320,
     "avg_turnover_pct": 1.2,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 87,
+        "gm": 53.7,
+        "nm": 28.6,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 87,
+        "gm": 51.6,
+        "nm": 27.2,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 107,
+        "gm": 52.2,
+        "nm": 29.1,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 104,
+        "gm": 53,
+        "nm": 30.3,
+        "src": "A"
+      }
+    ]
   },
   "AMAT": {
     "name": "Applied Materials",
@@ -111,7 +378,36 @@
     "strategic": 8,
     "market_cap_billion": 200,
     "avg_turnover_pct": 2.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 71,
+        "gm": 49.1,
+        "nm": 30.1,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 73,
+        "gm": 48.8,
+        "nm": 24.4,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 68,
+        "gm": 48,
+        "nm": 27.9,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 70,
+        "gm": 49,
+        "nm": 28.9,
+        "src": "A"
+      }
+    ]
   },
   "KLAC": {
     "name": "KLA Corp",
@@ -121,7 +417,36 @@
     "strategic": 8,
     "market_cap_billion": 105,
     "avg_turnover_pct": 1.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 32,
+        "gm": 62,
+        "nm": 37.9,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 32,
+        "gm": 61.3,
+        "nm": 34.9,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 33,
+        "gm": 61.5,
+        "nm": 34.8,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 34,
+        "gm": 61.1,
+        "nm": 35.2,
+        "src": "A"
+      }
+    ]
   },
   "ONTO": {
     "name": "Onto Innovation",
@@ -130,8 +455,37 @@
     "intro": "晶圆/掩膜版/HBM 封装的量测设备, 受益先进封装 (CoWoS) 产能扩张.",
     "strategic": 7,
     "market_cap_billion": 9,
-    "avg_turnover_pct": 4.0,
-    "quarters": []
+    "avg_turnover_pct": 4,
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 3,
+        "gm": 48.2,
+        "nm": 13.4,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 2,
+        "gm": 50.7,
+        "nm": 12.9,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 3,
+        "gm": 46.4,
+        "nm": 4,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 3,
+        "gm": 50.1,
+        "nm": 11.6,
+        "src": "A"
+      }
+    ]
   },
   "SNPS": {
     "name": "Synopsys",
@@ -141,7 +495,37 @@
     "strategic": 7,
     "market_cap_billion": 90,
     "avg_turnover_pct": 1.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 16,
+        "gm": 80.2,
+        "nm": 21.8,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 17,
+        "gm": 78.1,
+        "nm": 13.9,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 23,
+        "gm": 71,
+        "nm": 19.9,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 24,
+        "gm": 73.5,
+        "nm": 2.7,
+        "src": "A",
+        "note": "GAAP NM 2.7% 因 Ansys 收购摊销/重组费用; Non-GAAP 经营 OM ~42%"
+      }
+    ]
   },
   "MU": {
     "name": "Micron",
@@ -151,7 +535,37 @@
     "strategic": 9,
     "market_cap_billion": 130,
     "avg_turnover_pct": 4.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 93,
+        "gm": 37.7,
+        "nm": 20.2,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 113,
+        "gm": 44.7,
+        "nm": 28.3,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 136,
+        "gm": 56,
+        "nm": 38.4,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 239,
+        "gm": 74.4,
+        "nm": 57.8,
+        "src": "F",
+        "note": "营收 239 亿美元 / GM 74.4% 异常高 - 数据待校核, 实际可能 ~80 亿"
+      }
+    ]
   },
   "SNDK": {
     "name": "Sandisk",
@@ -161,7 +575,36 @@
     "strategic": 7,
     "market_cap_billion": 12,
     "avg_turnover_pct": 5.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 19,
+        "gm": 26.2,
+        "nm": -1.2,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 23,
+        "gm": 29.8,
+        "nm": 4.9,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 30,
+        "gm": 50.9,
+        "nm": 26.6,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 60,
+        "gm": 78.4,
+        "nm": 60.8,
+        "src": "A"
+      }
+    ]
   },
   "COHR": {
     "name": "Coherent",
@@ -170,8 +613,37 @@
     "intro": "光通信 (800G/1.6T 收发器) + 工业激光, AI 数据中心互联核心元件供应.",
     "strategic": 8,
     "market_cap_billion": 13,
-    "avg_turnover_pct": 4.0,
-    "quarters": []
+    "avg_turnover_pct": 4,
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 15.3,
+        "gm": 35.7,
+        "nm": -5.5,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 15.8,
+        "gm": 36.6,
+        "nm": 14.2,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 16.9,
+        "gm": 37,
+        "nm": 8.5,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 18.1,
+        "gm": 37.7,
+        "nm": 10.1,
+        "src": "A"
+      }
+    ]
   },
   "LITE": {
     "name": "Lumentum",
@@ -181,7 +653,36 @@
     "strategic": 7,
     "market_cap_billion": 7,
     "avg_turnover_pct": 4.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 4.81,
+        "gm": 37.3,
+        "nm": 44.4,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 5.34,
+        "gm": 37.7,
+        "nm": 0.8,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 6.66,
+        "gm": 39,
+        "nm": 11.8,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 8.08,
+        "gm": 46.6,
+        "nm": 17.8,
+        "src": "A"
+      }
+    ]
   },
   "FN": {
     "name": "Fabrinet",
@@ -190,8 +691,37 @@
     "intro": "光通信器件 OEM 代工, NVDA 光模块主要外包伙伴. AI 网络渗透核心配套.",
     "strategic": 7,
     "market_cap_billion": 11,
-    "avg_turnover_pct": 3.0,
-    "quarters": []
+    "avg_turnover_pct": 3,
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 9.1,
+        "gm": 12.2,
+        "nm": 9.6,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 9.78,
+        "gm": 11.9,
+        "nm": 9.8,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 11.33,
+        "gm": 12.2,
+        "nm": 9.9,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 12.14,
+        "gm": 11.9,
+        "nm": 10.3,
+        "src": "A"
+      }
+    ]
   },
   "MSFT": {
     "name": "Microsoft",
@@ -201,7 +731,36 @@
     "strategic": 9,
     "market_cap_billion": 3300,
     "avg_turnover_pct": 0.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 764.4,
+        "gm": 68.6,
+        "nm": 35.6,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 776.7,
+        "gm": 69.1,
+        "nm": 35.7,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 812.7,
+        "gm": 68,
+        "nm": 47.3,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 828.9,
+        "gm": 67.6,
+        "nm": 38.3,
+        "src": "A"
+      }
+    ]
   },
   "GOOGL": {
     "name": "Alphabet",
@@ -211,7 +770,37 @@
     "strategic": 9,
     "market_cap_billion": 2400,
     "avg_turnover_pct": 0.8,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 964.3,
+        "gm": 59.5,
+        "nm": 29.2,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 1023.5,
+        "gm": 59.6,
+        "nm": 34.2,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 1138.3,
+        "gm": 59.8,
+        "nm": 30.3,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 1099,
+        "gm": 62.4,
+        "nm": 56.9,
+        "src": "A",
+        "note": "NM 56.9% 含 $37.7B 持仓投资公允价值变动收益"
+      }
+    ]
   },
   "AMZN": {
     "name": "Amazon",
@@ -221,7 +810,36 @@
     "strategic": 8,
     "market_cap_billion": 2400,
     "avg_turnover_pct": 0.7,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 1677,
+        "gm": 51.8,
+        "nm": 10.8,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 1801.7,
+        "gm": 50.8,
+        "nm": 11.8,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 2133.9,
+        "gm": 48.5,
+        "nm": 10.2,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 1815.2,
+        "gm": 51.8,
+        "nm": 16.7,
+        "src": "A"
+      }
+    ]
   },
   "META": {
     "name": "Meta Platforms",
@@ -231,7 +849,37 @@
     "strategic": 9,
     "market_cap_billion": 1500,
     "avg_turnover_pct": 0.7,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 475.2,
+        "gm": 82.1,
+        "nm": 38.6,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 512.4,
+        "gm": 82,
+        "nm": 5.3,
+        "src": "A",
+        "note": "NM 5.3% 因美国税改 OBBBA $18.95B 一次性税务计提"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 598.9,
+        "gm": 81.8,
+        "nm": 38,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 563.1,
+        "gm": 81.9,
+        "nm": 47.5,
+        "src": "A"
+      }
+    ]
   },
   "AAPL": {
     "name": "Apple",
@@ -241,7 +889,36 @@
     "strategic": 7,
     "market_cap_billion": 3500,
     "avg_turnover_pct": 0.6,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 940.4,
+        "gm": 46.5,
+        "nm": 24.9,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 1024.7,
+        "gm": 47.2,
+        "nm": 26.8,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 1437.6,
+        "gm": 48.2,
+        "nm": 29.3,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 1111.8,
+        "gm": 49.3,
+        "nm": 26.6,
+        "src": "A"
+      }
+    ]
   },
   "TSLA": {
     "name": "Tesla",
@@ -251,7 +928,36 @@
     "strategic": 7,
     "market_cap_billion": 800,
     "avg_turnover_pct": 3.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 225,
+        "gm": 17.2,
+        "nm": 5.3,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 281,
+        "gm": 18,
+        "nm": 4.9,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 249,
+        "gm": 20.1,
+        "nm": 3.4,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 223.9,
+        "gm": 21.1,
+        "nm": 2.1,
+        "src": "A"
+      }
+    ]
   },
   "CRWV": {
     "name": "CoreWeave",
@@ -260,8 +966,37 @@
     "intro": "GPU 云服务 (Nvidia 战略客户), AI 训练专用云. 2025 年 IPO, 短期波动大但 AI 算力出租纯标的.",
     "strategic": 7,
     "market_cap_billion": 60,
-    "avg_turnover_pct": 8.0,
-    "quarters": []
+    "avg_turnover_pct": 8,
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 12.1,
+        "gm": 74.2,
+        "nm": -24,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 13.7,
+        "gm": 73,
+        "nm": -8.1,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 15.7,
+        "gm": 67.6,
+        "nm": -28.7,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 20.8,
+        "gm": 65.5,
+        "nm": -35.6,
+        "src": "A"
+      }
+    ]
   },
   "CEG": {
     "name": "Constellation Energy",
@@ -270,8 +1005,38 @@
     "intro": "美国最大核电运营商, 与微软签订 20 年 PPA 协议给 AI 数据中心供电. AI 用电核心标的.",
     "strategic": 9,
     "market_cap_billion": 100,
-    "avg_turnover_pct": 2.0,
-    "quarters": []
+    "avg_turnover_pct": 2,
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 61,
+        "gm": 22.2,
+        "nm": 13.7,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 65.7,
+        "gm": 22.7,
+        "nm": 14.1,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 60.7,
+        "gm": 16.3,
+        "nm": 7.1,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 111.2,
+        "gm": 26.9,
+        "nm": 14.4,
+        "src": "A",
+        "note": "营收近翻倍因 Calpine 收购于 2026/01 合并报表"
+      }
+    ]
   },
   "VRT": {
     "name": "Vertiv",
@@ -281,7 +1046,36 @@
     "strategic": 8,
     "market_cap_billion": 50,
     "avg_turnover_pct": 3.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 26.4,
+        "gm": 34,
+        "nm": 12.3,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 26.8,
+        "gm": 37.8,
+        "nm": 14.9,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 28.8,
+        "gm": 38.9,
+        "nm": 15.5,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 26.5,
+        "gm": 37.7,
+        "nm": 14.7,
+        "src": "A"
+      }
+    ]
   },
   "ETN": {
     "name": "Eaton",
@@ -291,7 +1085,36 @@
     "strategic": 8,
     "market_cap_billion": 110,
     "avg_turnover_pct": 1.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 70.3,
+        "gm": 37,
+        "nm": 14,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 69.9,
+        "gm": 38.3,
+        "nm": 14.5,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 70.6,
+        "gm": 36.8,
+        "nm": 16.1,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 74.5,
+        "gm": 35.6,
+        "nm": 11.6,
+        "src": "A"
+      }
+    ]
   },
   "GEV": {
     "name": "GE Vernova",
@@ -301,7 +1124,37 @@
     "strategic": 8,
     "market_cap_billion": 100,
     "avg_turnover_pct": 2.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 91.1,
+        "gm": 20.3,
+        "nm": 5.4,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 99.7,
+        "gm": 19,
+        "nm": 4.5,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 109.6,
+        "gm": 21.2,
+        "nm": 33.5,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 93.4,
+        "gm": 19.1,
+        "nm": 50.9,
+        "src": "A",
+        "note": "NM 50.9% 含 ~$4B Prolec GE 重估收益 + $330M Proficy 出售; 经营 NM ~5-8%"
+      }
+    ]
   },
   "CCJ": {
     "name": "Cameco",
@@ -310,8 +1163,37 @@
     "intro": "全球最大铀矿商, 核电复兴的最直接受益. AI 数据中心驱动核电需求 → 铀价中枢上移.",
     "strategic": 7,
     "market_cap_billion": 30,
-    "avg_turnover_pct": 3.0,
-    "quarters": []
+    "avg_turnover_pct": 3,
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 6.3,
+        "gm": 39.2,
+        "nm": 36.6,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 4.5,
+        "gm": 37.3,
+        "nm": 0,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 8.5,
+        "gm": 30,
+        "nm": 16.6,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 5.9,
+        "gm": 43.6,
+        "nm": 15.5,
+        "src": "A"
+      }
+    ]
   },
   "SMH": {
     "name": "VanEck Semiconductor ETF",
@@ -340,7 +1222,7 @@
     "intro": "全球铜矿 ETF. 数据中心 + 电网升级 + 电动车 三重需求, 铜超级周期主要交易工具.",
     "strategic": 7,
     "market_cap_billion": 3,
-    "avg_turnover_pct": 3.0,
+    "avg_turnover_pct": 3,
     "quarters": []
   },
   "XME": {
@@ -350,7 +1232,7 @@
     "intro": "美国金属与矿业 ETF, 覆盖铜/铝/钢/锂等. AI 基建驱动金属需求.",
     "strategic": 6,
     "market_cap_billion": 2,
-    "avg_turnover_pct": 4.0,
+    "avg_turnover_pct": 4,
     "quarters": []
   },
   "EWY": {
@@ -370,7 +1252,36 @@
     "intro": "小型火箭发射 + 卫星制造, Neutron 中型火箭对标 SpaceX Falcon 9. AI 太空数据中心潜在受益.",
     "strategic": 5,
     "market_cap_billion": 25,
-    "avg_turnover_pct": 5.0,
-    "quarters": []
+    "avg_turnover_pct": 5,
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 1.45,
+        "gm": 32.1,
+        "nm": -46,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 1.55,
+        "gm": 37,
+        "nm": -11.8,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 1.8,
+        "gm": 38,
+        "nm": -29.5,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 2,
+        "gm": 38.2,
+        "nm": -22.5,
+        "src": "A"
+      }
+    ]
   }
 }
