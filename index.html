@@ -476,7 +476,7 @@
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
         <div>
           <div style="font-size:16px;font-weight:700;color:#4ea8ff;margin-bottom:4px">🇺🇸 美股 · AI 算力 + 能源主线</div>
-          <div style="font-size:12px;color:var(--muted)">36 只观察清单 · 行情来源 腾讯美股 (15-20 分钟延迟) · 5 因子量化模型实时计算</div>
+          <div style="font-size:12px;color:var(--muted)"><span id="usCountDisplay">--</span> 只观察清单 · 行情来源 腾讯美股 (15-20 分钟延迟) · 5 因子量化模型实时计算</div>
         </div>
         <button id="usRefreshBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:6px 14px;border-radius:4px;font-size:12px;cursor:pointer">🔄 刷新</button>
       </div>
@@ -2978,9 +2978,14 @@ function renderUSLayers(){
 }
 async function initUSTab(){
   await loadCompaniesUS();
-  renderUSWatchlist();  // 先用静态数据渲染
-  refreshUSQuotes();    // 异步拉行情
-  runWatchScanUS(false); // 触发周线趋势扫描
+  const cnt = document.getElementById("usCountDisplay");
+  if (cnt && companiesUS) {
+    const n = Object.keys(companiesUS).filter(k => !k.startsWith('_')).length;
+    cnt.textContent = n;
+  }
+  renderUSWatchlist();
+  refreshUSQuotes();
+  runWatchScanUS(false);
 }
 
 // ============ 美股周线 EMA 趋势扫描 (与 A股 同逻辑, 不同数据源) ============
