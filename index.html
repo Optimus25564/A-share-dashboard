@@ -2743,10 +2743,12 @@ function computeQuantWeightsUS(){
   if (!companiesUS) return null;
   const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
   const IDEAL_TURNOVER = 5;
-  // 先过滤出有完整 quarters 数据的 (ETF 没有 quarters, 跳过)
+  // 先过滤出有完整 quarters 数据的 (ETF 没有 quarters, 跳过; null 字段也跳过, 如 CRDO/MOD 财年错位未发布)
   const valid = codes.filter(code => {
     const c = companiesUS[code];
-    return c.quarters && c.quarters.length >= 4;
+    return c.quarters
+      && c.quarters.length >= 4
+      && c.quarters.every(q => q.rev !== null && q.gm !== null && q.nm !== null);
   });
   if (valid.length < 4) return null;
 
