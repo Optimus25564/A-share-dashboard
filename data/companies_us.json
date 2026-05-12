@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-05-12",
+    "updated": "2026-05-13",
     "note": "AI CapEx 产业链 8 层框架. 财报数据自然季度 (2025Q2→2026Q1). 单位 rev=亿$.",
     "categories": {
       "core_chip": "L1 算力芯片 & 加速器",
@@ -213,7 +213,7 @@
         "gm": 53.8,
         "nm": 69.5,
         "src": "A",
-        "note": "重大税收抵免"
+        "note": "⚠ NM 69.5% > GM 53.8%, 因当季约 $25-30 亿一次性税收抵免, 营业层面 NM 应在 30% 左右. 量化模型已 clip 到 60% 处理."
       }
     ]
   },
@@ -1257,7 +1257,36 @@
     "intro": "全球 CPU IP 设计垄断 (手机/AI/服务器), Grace CPU + AI 边缘端基础设施核心.",
     "market_cap_billion": 1500,
     "avg_turnover_pct": 2,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 10.5,
+        "gm": 97.2,
+        "nm": 12.4,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 11.4,
+        "gm": 97.4,
+        "nm": 21,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 12.4,
+        "gm": 97.6,
+        "nm": 18,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 14.9,
+        "gm": 97.9,
+        "nm": 21,
+        "src": "A"
+      }
+    ]
   },
   "LRCX": {
     "name": "Lam Research",
@@ -1267,7 +1296,36 @@
     "intro": "刻蚀/沉积设备龙头 (与 AMAT 并列), HBM/NAND 制造关键工序.",
     "market_cap_billion": 1100,
     "avg_turnover_pct": 2.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 51.7,
+        "gm": 50.1,
+        "nm": 33.3,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 53.2,
+        "gm": 50.4,
+        "nm": 29.5,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 53.5,
+        "gm": 49.6,
+        "nm": 29.8,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 58.4,
+        "gm": 49.8,
+        "nm": 31.3,
+        "src": "A"
+      }
+    ]
   },
   "CDNS": {
     "name": "Cadence Design",
@@ -1277,7 +1335,37 @@
     "intro": "EDA 双寡头之一 (与 SNPS 并列), AI 芯片设计必备工具.",
     "market_cap_billion": 800,
     "avg_turnover_pct": 1.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 12.8,
+        "gm": 85.6,
+        "nm": 12.6,
+        "src": "A",
+        "note": "NM 12.6% 因 Ansys 并购摊销/重组"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 13.4,
+        "gm": 86.4,
+        "nm": 21.5,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 14.4,
+        "gm": 86.9,
+        "nm": 27,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 14.7,
+        "gm": 85.5,
+        "nm": 22.8,
+        "src": "A"
+      }
+    ]
   },
   "ASE": {
     "name": "ASE Technology",
@@ -1287,7 +1375,36 @@
     "intro": "全球最大 OSAT (外包封测), CoWoS/SoIC 先进封装产能扩张主力.",
     "market_cap_billion": 250,
     "avg_turnover_pct": 2.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 48.4,
+        "gm": 17,
+        "nm": 5,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 56.7,
+        "gm": 17.1,
+        "nm": 6.4,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 57.6,
+        "gm": 19.5,
+        "nm": 8.4,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 55.1,
+        "gm": 20.1,
+        "nm": 8.4,
+        "src": "A"
+      }
+    ]
   },
   "AMKR": {
     "name": "Amkor Technology",
@@ -1297,7 +1414,36 @@
     "intro": "美国本土最大封测 (ASE 二号位), AI 芯片 2.5D/3D 封装合作伙伴.",
     "market_cap_billion": 80,
     "avg_turnover_pct": 3.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 15.1,
+        "gm": 12,
+        "nm": 3.6,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 19.9,
+        "gm": 14.3,
+        "nm": 6.4,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 18.9,
+        "gm": 16.7,
+        "nm": 9.1,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 16.9,
+        "gm": 14.2,
+        "nm": 5,
+        "src": "A"
+      }
+    ]
   },
   "TER": {
     "name": "Teradyne",
@@ -1307,7 +1453,36 @@
     "intro": "半导体测试设备龙头, HBM/SoC 量产测试受益, 与 Advantest 双寡头.",
     "market_cap_billion": 250,
     "avg_turnover_pct": 2.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 6.5,
+        "gm": 57.2,
+        "nm": 12.9,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 7.7,
+        "gm": 58.4,
+        "nm": 16.2,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 10.8,
+        "gm": 57.2,
+        "nm": 24,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 12.8,
+        "gm": 60.9,
+        "nm": 31.5,
+        "src": "A"
+      }
+    ]
   },
   "ANET": {
     "name": "Arista Networks",
@@ -1317,7 +1492,36 @@
     "intro": "AI 数据中心以太网交换核心标的, Meta/Microsoft 等超大客户主供, AI 网络绝对龙头.",
     "market_cap_billion": 1400,
     "avg_turnover_pct": 1.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 22.1,
+        "gm": 65.3,
+        "nm": 40.3,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 23.1,
+        "gm": 64.6,
+        "nm": 37,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 24.9,
+        "gm": 62.9,
+        "nm": 38.4,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 27.1,
+        "gm": 61.9,
+        "nm": 37.8,
+        "src": "A"
+      }
+    ]
   },
   "CRDO": {
     "name": "Credo Technology",
@@ -1327,7 +1531,37 @@
     "intro": "高速 SerDes/AEC 主动电缆, AI 数据中心高速互联弹性最大标的.",
     "market_cap_billion": 150,
     "avg_turnover_pct": 6,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 2.2,
+        "gm": 67.4,
+        "nm": 28.4,
+        "src": "F"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 2.7,
+        "gm": 67.6,
+        "nm": 30.8,
+        "src": "F"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 4.1,
+        "gm": 68.5,
+        "nm": 38.6,
+        "src": "F"
+      },
+      {
+        "q": "2026Q1",
+        "rev": null,
+        "gm": null,
+        "nm": null,
+        "src": "F",
+        "note": "财报未发布 (CRDO FY26 Q4 预计 2026/06 公布)"
+      }
+    ]
   },
   "ALAB": {
     "name": "Astera Labs",
@@ -1337,7 +1571,36 @@
     "intro": "PCIe/CXL/Retimer 数据中心互联芯片, AI 服务器内部连接基础设施.",
     "market_cap_billion": 250,
     "avg_turnover_pct": 5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 1.9,
+        "gm": 75.8,
+        "nm": 26.7,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 2.3,
+        "gm": 76.3,
+        "nm": 39.5,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 2.7,
+        "gm": 75.6,
+        "nm": 16.6,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 3.1,
+        "gm": 76.3,
+        "nm": 26,
+        "src": "A"
+      }
+    ]
   },
   "CIEN": {
     "name": "Ciena",
@@ -1347,7 +1610,37 @@
     "intro": "光网络传输设备 (DCI 数据中心互联), AI 长距骨干网络受益.",
     "market_cap_billion": 150,
     "avg_turnover_pct": 3,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 11.3,
+        "gm": 40.2,
+        "nm": 0.8,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 12.2,
+        "gm": 41.3,
+        "nm": 4.1,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 13.5,
+        "gm": 42.7,
+        "nm": 1.4,
+        "src": "A",
+        "note": "GAAP NM 1.4% 因股权激励/无形资产摊销, Non-GAAP NM ~12%"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 14.3,
+        "gm": 43.8,
+        "nm": 10.5,
+        "src": "A"
+      }
+    ]
   },
   "CSCO": {
     "name": "Cisco Systems",
@@ -1357,7 +1650,37 @@
     "intro": "传统网络龙头, AI 数据中心追赶中 (Silicon One ASIC), 体量大但弹性低.",
     "market_cap_billion": 2800,
     "avg_turnover_pct": 1.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 141.5,
+        "gm": 65.6,
+        "nm": 17.6,
+        "src": "A",
+        "note": "FY25 Q3 (Apr 26 结束) — 最接近自然 25Q2"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 146.7,
+        "gm": 63.3,
+        "nm": 17.4,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 148.8,
+        "gm": 65.5,
+        "nm": 19.2,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 153.5,
+        "gm": 65,
+        "nm": 20.7,
+        "src": "A"
+      }
+    ]
   },
   "MPWR": {
     "name": "Monolithic Power",
@@ -1367,7 +1690,36 @@
     "intro": "AI 服务器电源管理芯片 (DrMOS/VRM), NVDA H100/B200 供应链关键.",
     "market_cap_billion": 450,
     "avg_turnover_pct": 2.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 6.6,
+        "gm": 55.1,
+        "nm": 20.1,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 7.4,
+        "gm": 55.1,
+        "nm": 24.2,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 7.5,
+        "gm": 55.2,
+        "nm": 23.4,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 8,
+        "gm": 55.3,
+        "nm": 24,
+        "src": "A"
+      }
+    ]
   },
   "GLW": {
     "name": "Corning",
@@ -1377,7 +1729,36 @@
     "intro": "光纤连接 + Gorilla 玻璃, Nvidia 战略合作 (北卡州扩 10x 光通信产能).",
     "market_cap_billion": 600,
     "avg_turnover_pct": 2,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 38.6,
+        "gm": 36,
+        "nm": 13,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 41,
+        "gm": 37.1,
+        "nm": 11.5,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 42.2,
+        "gm": 35.5,
+        "nm": 13.9,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 41.4,
+        "gm": 36.9,
+        "nm": 9.9,
+        "src": "A"
+      }
+    ]
   },
   "PWR": {
     "name": "Quanta Services",
@@ -1387,7 +1768,36 @@
     "intro": "美国最大电力 EPC 工程商, 数据中心并网/输电线建设主力承包.",
     "market_cap_billion": 600,
     "avg_turnover_pct": 2,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 67.7,
+        "gm": 14.9,
+        "nm": 3.5,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 76.3,
+        "gm": 15.9,
+        "nm": 4.5,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 78.4,
+        "gm": 15.5,
+        "nm": 4,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 78.8,
+        "gm": 14.1,
+        "nm": 2.9,
+        "src": "A"
+      }
+    ]
   },
   "EME": {
     "name": "EMCOR Group",
@@ -1397,7 +1807,36 @@
     "intro": "数据中心机电安装工程龙头, AI Capex 建设直接受益.",
     "market_cap_billion": 250,
     "avg_turnover_pct": 2.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 43,
+        "gm": 19.4,
+        "nm": 7,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 43,
+        "gm": 19.4,
+        "nm": 6.9,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 45.1,
+        "gm": 19.8,
+        "nm": 9.6,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 46.3,
+        "gm": 18.7,
+        "nm": 6.6,
+        "src": "A"
+      }
+    ]
   },
   "FIX": {
     "name": "Comfort Systems",
@@ -1487,7 +1926,36 @@
     "intro": "美国最大天然气管道, 数据中心燃气发电上游受益.",
     "market_cap_billion": 850,
     "avg_turnover_pct": 1.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 40.4,
+        "gm": 70,
+        "nm": 18.4,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 41.5,
+        "gm": 66.4,
+        "nm": 15.8,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 45.1,
+        "gm": 67.9,
+        "nm": 22.7,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 48.3,
+        "gm": 63.8,
+        "nm": 20.7,
+        "src": "A"
+      }
+    ]
   },
   "WMB": {
     "name": "Williams Companies",
@@ -1497,7 +1965,37 @@
     "intro": "天然气运输管道, 与 KMI 共同受益数据中心燃气发电增长.",
     "market_cap_billion": 800,
     "avg_turnover_pct": 1.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 27.8,
+        "gm": 62.2,
+        "nm": 21,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 29.2,
+        "gm": 63.5,
+        "nm": 23.4,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 32,
+        "gm": 63.2,
+        "nm": 24.2,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 30.3,
+        "gm": 62.9,
+        "nm": 30.1,
+        "src": "A",
+        "note": "NM 30% 偏高, 可能含 Cogentrix 资产剥离/重估收益"
+      }
+    ]
   },
   "ORCL": {
     "name": "Oracle",
@@ -1507,7 +2005,36 @@
     "intro": "OCI 云服务 + 数据库 + AI 训练 (与 Meta/OpenAI 大单), AI 云第四极.",
     "market_cap_billion": 2200,
     "avg_turnover_pct": 1.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 133.1,
+        "gm": 70.7,
+        "nm": 22,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 140.6,
+        "gm": 70.9,
+        "nm": 22.4,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 171.9,
+        "gm": 64.6,
+        "nm": 21.7,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 159,
+        "gm": 70.2,
+        "nm": 21.6,
+        "src": "A"
+      }
+    ]
   },
   "IREN": {
     "name": "IREN",
@@ -1517,7 +2044,38 @@
     "intro": "矿转 AI 数据中心运营商 (类 CoreWeave), 已与 NVDA 签 5GW 部署协议.",
     "market_cap_billion": 130,
     "avg_turnover_pct": 8,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 1.9,
+        "gm": 71.8,
+        "nm": 94.4,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 2.4,
+        "gm": 66.4,
+        "nm": 160.1,
+        "src": "A",
+        "note": "NM 160% 含大额非现金一次性收益"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 1.8,
+        "gm": 64.4,
+        "nm": -84.1,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 1.4,
+        "gm": 72.4,
+        "nm": -171.2,
+        "src": "A",
+        "note": "NM -171% 含 $140M 矿机减值+$24M capped call 亏损"
+      }
+    ]
   },
   "PLTR": {
     "name": "Palantir",
@@ -1527,7 +2085,36 @@
     "intro": "AIP (AI 平台) 政企双线 (DoD/Foundry), AI 商业化最快变现案例.",
     "market_cap_billion": 4500,
     "avg_turnover_pct": 4,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 10,
+        "gm": 80.8,
+        "nm": 32.7,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 11.8,
+        "gm": 82.5,
+        "nm": 40.4,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 14.1,
+        "gm": 84.7,
+        "nm": 43.5,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 16.3,
+        "gm": 86.8,
+        "nm": 53.7,
+        "src": "A"
+      }
+    ]
   },
   "NOW": {
     "name": "ServiceNow",
@@ -1537,7 +2124,36 @@
     "intro": "企业 AI 工作流平台 (Now Assist), 大企业 AI 部署核心承接者.",
     "market_cap_billion": 2200,
     "avg_turnover_pct": 1.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 32.2,
+        "gm": 77.5,
+        "nm": 12,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 34.1,
+        "gm": 77.3,
+        "nm": 14.7,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 35.7,
+        "gm": 76.6,
+        "nm": 11.2,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 37.7,
+        "gm": 75.1,
+        "nm": 12.4,
+        "src": "A"
+      }
+    ]
   },
   "CRM": {
     "name": "Salesforce",
@@ -1547,6 +2163,35 @@
     "intro": "CRM 巨头 + Agentforce AI 代理, 应用层 AI 变现.",
     "market_cap_billion": 2500,
     "avg_turnover_pct": 1.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 102.4,
+        "gm": 78.1,
+        "nm": 18.4,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 102.6,
+        "gm": 78,
+        "nm": 20.3,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 112,
+        "gm": 77.6,
+        "nm": 17.4,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 98.3,
+        "gm": 77,
+        "nm": 15.7,
+        "src": "A"
+      }
+    ]
   }
 }
