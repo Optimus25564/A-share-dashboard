@@ -531,29 +531,43 @@
       </div>
     </div>
 
-    <div class="card">
-      <h3>美股观察清单 · 按战略评分排序<span class="right" id="usSummary">--</span></h3>
-      <div style="overflow:auto;max-height:680px">
-        <table>
-          <thead>
-            <tr>
-              <th>代码</th>
-              <th>名称</th>
-              <th class="num-cell">现价 (USD)</th>
-              <th class="num-cell">涨跌幅</th>
-              <th class="num-cell">市值 (亿$)</th>
-              <th class="num-cell">战略</th>
-              <th>主营 / 定位</th>
-              <th>操作</th>
-            </tr>
-          </thead>
-          <tbody id="usWatchlist"></tbody>
-        </table>
+    <div class="main">
+      <div class="card">
+        <h3>美股观察清单 · 按 5 因子量化模型排序<span class="right" id="usSummary">--</span></h3>
+        <div style="overflow:auto;max-height:680px">
+          <table>
+            <thead>
+              <tr>
+                <th>代码</th>
+                <th>名称</th>
+                <th class="num-cell">现价 (USD)</th>
+                <th class="num-cell">涨跌幅</th>
+                <th class="num-cell">市值 (亿$)</th>
+                <th class="num-cell">排名 / 角色</th>
+                <th>主营 / 定位</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="usWatchlist"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Top 5 仓位配比 <span style="font-size:11px;font-weight:400;color:var(--muted)">· 持有至趋势破位</span></h3>
+        <div class="pf-wrap"><canvas id="pfChartUS"></canvas></div>
+        <div class="pf-legend" id="pfLegendUS"></div>
+        <div style="margin-top:14px;padding-top:12px;border-top:1px dashed var(--border);font-size:12px;color:var(--muted);line-height:1.7">
+          <b style="color:var(--gold)">策略：</b>5 因子量化模型选 Top 5，权重归一化到 100%。<br>
+          <b style="color:var(--gold)">卖出：</b>单票周线收盘跌破 EMA8 = 趋势破位 → 卖出。<br>
+          <b style="color:var(--gold)">不调仓：</b>趋势内不轮动，即使 #6 排名上升也不替换。
+        </div>
+        <div id="pfWatchPoolUS" style="margin-top:12px;padding-top:10px;border-top:1px dashed var(--border);font-size:11px;color:var(--muted)"></div>
       </div>
     </div>
 
     <div style="margin-top:14px;padding:10px 14px;background:rgba(245,179,1,.05);border-left:3px solid var(--gold);border-radius:4px;font-size:11px;color:var(--muted);line-height:1.7">
-      📌 当前为 MVP 版本: 战略评分手工赋值, 实时行情 Stooq 接口 (CORS 友好). 后续接入: 财报数据 (5 因子量化权重) / 周线 EMA 趋势扫描 / 美股 AI 新闻自动抓取.
+      📌 5 因子量化模型 = 战略 40% / 增速 20% / 盈利 20% / 流动性 12% / 市值 8%. 行情: 腾讯美股 (15-20 分钟延迟). 周线 EMA8/EMA21 趋势扫描, ETF 不参与量化排名.
     </div>
   </div>
 
@@ -2944,6 +2958,63 @@ function renderUSWatchlist(){
   tb.querySelectorAll(".us-kline-btn").forEach(b => b.onclick = () => openKLine(b.dataset.code));
   // 渲染产业链分层
   renderUSLayers();
+  // 渲染 Top 5 饼图
+  renderUSPortfolioPie();
+}
+
+// ============ US Portfolio chart ============
+function renderUSPortfolioPie(){
+  const canvas = document.getElementById("pfChartUS");
+  if (!canvas) return;
+  if (!_quantWeightsUS || !companiesUS) {
+    const lg = document.getElementById("pfLegendUS");
+    if (lg) lg.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:8px 0">⏳ 加载基本面数据中...</div>';
+    return;
+  }
+  const ranked = Object.keys(_quantWeightsUS).map(code => ({
+    code,
+    name: companiesUS[code]?.name || code,
+    catLabel: companiesUS[code]?.catLabel || "",
+    weight: _quantWeightsUS[code].weight
+  })).sort((a,b) => b.weight - a.weight);
+  const top5 = ranked.slice(0, 5);
+  const restPool = ranked.slice(5);
+  if (top5.length === 0) return;
+  const top5Sum = top5.reduce((a,b) => a + b.weight, 0);
+  const pfData = top5.map((s, i) => ({
+    label: s.name,
+    code: s.code,
+    catLabel: s.catLabel,
+    rawWeight: s.weight,
+    val: Math.round(s.weight / top5Sum * 1000) / 10,
+    color: PF_COLORS[i]
+  }));
+  const total = pfData.reduce((a,b) => a + b.val, 0);
+  pfData[0].val = Math.round((pfData[0].val + (100 - total)) * 10) / 10;
+
+  const existing = Chart.getChart(canvas);
+  if (existing) { try{existing.destroy();}catch(e){} }
+  new Chart(canvas, {
+    type:"doughnut",
+    data:{labels:pfData.map(d=>d.label),datasets:[{data:pfData.map(d=>d.val),backgroundColor:pfData.map(d=>d.color),borderColor:"#121a2b",borderWidth:2}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:"58%",plugins:{legend:{display:false},tooltip:{callbacks:{label:(c)=>` ${pfData[c.dataIndex].label} (${pfData[c.dataIndex].catLabel}): ${c.parsed}%`}}}}
+  });
+  const lg = document.getElementById("pfLegendUS");
+  if (lg) {
+    lg.innerHTML = "";
+    pfData.forEach(d => {
+      const row = document.createElement("div");
+      row.className = "row";
+      row.innerHTML = `<div class="left"><span class="sq" style="background:${d.color}"></span><span>${d.code} · ${d.label}<span style="color:var(--muted);font-size:11px;margin-left:6px">${d.catLabel}</span></span></div><b>${d.val}%</b>`;
+      lg.appendChild(row);
+    });
+  }
+  const pool = document.getElementById("pfWatchPoolUS");
+  if (pool) {
+    const next5 = restPool.slice(0, 5);
+    pool.innerHTML = `<div style="margin-bottom:4px">📋 候选池（#6-10，趋势破位时考虑替换）：</div>` +
+      next5.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(138,160,192,.1);border-radius:3px">${s.code} ${s.weight.toFixed(1)}</span>`).join("");
+  }
 }
 
 function renderUSLayers(){
