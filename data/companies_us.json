@@ -1846,7 +1846,36 @@
     "intro": "暖通冷却施工龙头 (HVAC), 数据中心液冷/精密温控 EPC.",
     "market_cap_billion": 250,
     "avg_turnover_pct": 3,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 21.7,
+        "gm": 23.5,
+        "nm": 10.6,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 24.5,
+        "gm": 24.8,
+        "nm": 11.9,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 26.5,
+        "gm": 25.5,
+        "nm": 12.5,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 28.7,
+        "gm": 26.3,
+        "nm": 12.9,
+        "src": "A"
+      }
+    ]
   },
   "MOD": {
     "name": "Modine Manufacturing",
@@ -1856,7 +1885,38 @@
     "intro": "热管理/冷却系统, 数据中心液冷渗透核心受益.",
     "market_cap_billion": 80,
     "avg_turnover_pct": 3.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 6.8,
+        "gm": 24.2,
+        "nm": 11.7,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 7.4,
+        "gm": 22.3,
+        "nm": 11.2,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 8.1,
+        "gm": 23.1,
+        "nm": -3.8,
+        "src": "A",
+        "note": "FQ3 (Oct-Dec 25) NM -3.8% 含减值/重组"
+      },
+      {
+        "q": "2026Q1",
+        "rev": null,
+        "gm": null,
+        "nm": null,
+        "src": "F",
+        "note": "FQ4 财报未发布 (预计 5 月底披露)"
+      }
+    ]
   },
   "TT": {
     "name": "Trane Technologies",
@@ -1866,7 +1926,36 @@
     "intro": "全球暖通空调龙头, 数据中心冷却系统集成.",
     "market_cap_billion": 1100,
     "avg_turnover_pct": 1.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 57.5,
+        "gm": 37.6,
+        "nm": 15.2,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 57.4,
+        "gm": 36.9,
+        "nm": 15,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 51.5,
+        "gm": 34.1,
+        "nm": 12,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 49.7,
+        "gm": 34.8,
+        "nm": 12.1,
+        "src": "A"
+      }
+    ]
   },
   "JCI": {
     "name": "Johnson Controls",
@@ -1876,7 +1965,37 @@
     "intro": "楼宇自动化 + 暖通, 数据中心 BMS / HVAC 集成.",
     "market_cap_billion": 700,
     "avg_turnover_pct": 2,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 60.5,
+        "gm": 37.1,
+        "nm": 11.6,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 64.4,
+        "gm": 36.5,
+        "nm": 26.3,
+        "src": "A",
+        "note": "FQ4 含 ~$1.49B R&LC HVAC 剥离一次性收益, 经常性 NM 约 3.2%"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 58,
+        "gm": 35.8,
+        "nm": 9,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 61.4,
+        "gm": 36.8,
+        "nm": 10,
+        "src": "A"
+      }
+    ]
   },
   "HUBB": {
     "name": "Hubbell",
@@ -1886,7 +2005,36 @@
     "intro": "电气连接设备, 数据中心配电/开关柜/连接器配套.",
     "market_cap_billion": 250,
     "avg_turnover_pct": 2,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 14.8,
+        "gm": 37.2,
+        "nm": 16.5,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 15,
+        "gm": 36.2,
+        "nm": 17.1,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 14.9,
+        "gm": 35.2,
+        "nm": 15.1,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 15.2,
+        "gm": 33.3,
+        "nm": 12.1,
+        "src": "A"
+      }
+    ]
   },
   "POWL": {
     "name": "Powell Industries",
@@ -1896,7 +2044,36 @@
     "intro": "中高压开关柜专家, 数据中心 + LNG 配电关键设备.",
     "market_cap_billion": 50,
     "avg_turnover_pct": 4.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 2.9,
+        "gm": 30.7,
+        "nm": 16.9,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 3,
+        "gm": 31.4,
+        "nm": 17.3,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 2.5,
+        "gm": 28.4,
+        "nm": 16.5,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 3,
+        "gm": 29.7,
+        "nm": 15.5,
+        "src": "A"
+      }
+    ]
   },
   "VST": {
     "name": "Vistra",
@@ -1906,7 +2083,36 @@
     "intro": "美国最大独立电力运营商, 核 + 燃气 + 可再生组合, AI 用电直供数据中心.",
     "market_cap_billion": 800,
     "avg_turnover_pct": 2.5,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 42.5,
+        "gm": 26.5,
+        "nm": 7.7,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 49.7,
+        "gm": 30.2,
+        "nm": 13.1,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 45.8,
+        "gm": 23.8,
+        "nm": 5.1,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 56.4,
+        "gm": 35.2,
+        "nm": 18.2,
+        "src": "A"
+      }
+    ]
   },
   "NRG": {
     "name": "NRG Energy",
@@ -1916,7 +2122,36 @@
     "intro": "美国零售电力 + 燃气发电, 与超大数据中心客户长协合作.",
     "market_cap_billion": 250,
     "avg_turnover_pct": 2,
-    "quarters": []
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 67.4,
+        "gm": 5.7,
+        "nm": -1.5,
+        "src": "A"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 76.4,
+        "gm": 10.2,
+        "nm": 2,
+        "src": "A"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 77.5,
+        "gm": 9.1,
+        "nm": 0.9,
+        "src": "A"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 102.6,
+        "gm": 7.9,
+        "nm": 1.2,
+        "src": "A"
+      }
+    ]
   },
   "KMI": {
     "name": "Kinder Morgan",
