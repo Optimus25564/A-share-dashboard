@@ -2275,10 +2275,22 @@ function klOpts(showLegend){
   };
 }
 
-// === Signal engine: 周线 EMA8/EMA21 趋势系统 ===
-// 卖出：周线收盘跌破 EMA8 周线
-// 买入 (首选)：EMA8>EMA21 且双向上 + 价格回踩 EMA8 后站稳 + 加分项(放量/指数同向)
-// 给定 weekBars (周线 K), 可选 indexBullish (大盘是否站上自己的周线 EMA8)
+// === Signal engine: 周线 EMA8/EMA21 趋势系统 (4 档买入 + 2 档卖出) ===
+// buy-deep ★★★   本周 low 触及 EMA21        → 满仓 100%
+// buy ★★         本周 low 触及 EMA8 ±0.5%   → 80%
+// buy-near ★     距 EMA8 ≤ 3% (未真回踩)    → 试仓 50%
+// hold-trend     多头排列但距 EMA8 > 3%     → 持有不追
+// hold           未多头排列 / 斜率未上行     → 观望
+// sell-warning   本周(未收盘) close < EMA8  → 持有等周收盘
+// sell-confirmed 上一根完整周线 close < EMA8 → 清仓
+function isBuyAction(a){ return typeof a === 'string' && a.startsWith('buy'); }
+function isSellAction(a){ return typeof a === 'string' && a.startsWith('sell'); }
+function actionLabel(a){
+  return ({'buy-deep':'深回踩 ★★★','buy':'买入 ★★','buy-near':'试仓 ★',
+    'hold-trend':'持有','hold':'观望',
+    'sell-warning':'⚠ 待确认','sell-confirmed':'清仓'})[a] || a;
+}
+
 function evalWeeklyEMA(weekBars, indexBullish){
   const n = weekBars.length;
   if (n < 22) return null;
@@ -2286,89 +2298,93 @@ function evalWeeklyEMA(weekBars, indexBullish){
   const ema8 = ind_EMA(closes, 8);
   const ema21 = ind_EMA(closes, 21);
   const last = weekBars[n-1];
+  const prev = weekBars[n-2];
   const e8 = ema8[n-1], e21 = ema21[n-1];
+  const e8Prev = ema8[n-2];
 
-  // 卖出规则
+  // ============ 卖出（两档） ============
+  // 1) sell-confirmed: 上一根完整周线 close < EMA8 — 已成定局，必须清仓
+  if (prev.close < e8Prev) {
+    return {
+      action:"sell-confirmed", strength:3, pos:"清仓 0%",
+      detail:`上一周收盘 ${prev.close.toFixed(2)} < EMA8(${e8Prev.toFixed(2)}) — 周线趋势已破位，按规则清仓`,
+      ema8:e8, ema21:e21
+    };
+  }
+  // 2) sell-warning: 本周(未收盘) close < EMA8 — 盘中警告，等周收盘确认
   if (last.close < e8) {
     return {
-      action:"sell", strength:3,
-      detail:`周线收盘 ${last.close.toFixed(2)} 跌破 EMA8 周线 ${e8.toFixed(2)} — 趋势破位，按规则卖出`,
+      action:"sell-warning", strength:2, pos:"持有不动 · 等周收盘",
+      detail:`⚠ 本周收盘 ${last.close.toFixed(2)} < EMA8(${e8.toFixed(2)})，但周线未收盘 — 等本周五收盘后确认。盘中假破位不算`,
       ema8:e8, ema21:e21
     };
   }
 
-  // 多头排列
+  // ============ 趋势条件 ============
   const stacked = e8 > e21;
-  // 5 周斜率
   const e8Rising = e8 > ema8[n-5];
-  const e21Rising = ema21[n-1] > ema21[n-5];
-
+  const e21Rising = e21 > ema21[n-5];
   if (!stacked) {
     return {
-      action:"hold", strength:1,
+      action:"hold", strength:1, pos:"观望",
       detail:`EMA8 (${e8.toFixed(2)}) ≤ EMA21 (${e21.toFixed(2)}) — 尚未多头排列，等待趋势确立`,
       ema8:e8, ema21:e21
     };
   }
   if (!e8Rising || !e21Rising) {
     return {
-      action:"hold", strength:1,
-      detail:`已多头排列但 ${!e21Rising?"EMA21":"EMA8"} 尚未上行 (5 周斜率) — 趋势未确认`,
+      action:"hold", strength:1, pos:"观望",
+      detail:`已多头排列但 ${!e21Rising?"EMA21":"EMA8"} 5 周斜率未向上 — 趋势未确认`,
       ema8:e8, ema21:e21
     };
   }
 
-  // 回踩检测：从最近往前找 — 只有最近 2 周内的回踩才算"新鲜买点"
-  // 老回踩 (3-4 周前) 说明已反弹一段，降为"持有趋势中"
-  const FRESH_WINDOW = 2;   // 当前周或上一周触及 EMA8 → BUY
-  const STALE_WINDOW = 4;   // 3-4 周前触及 → hold (已经在反弹中了)
-  let freshPullback = -1, stalePullback = -1;
-  for (let i = n-1; i >= Math.max(0, n-STALE_WINDOW); i--){
-    const eb = ema8[i];
-    if (weekBars[i].low <= eb * 1.02) {
-      if (i >= n - FRESH_WINDOW) freshPullback = i;
-      else if (stalePullback === -1) stalePullback = i;
-    }
+  // 加分项 (放量 + 大盘) — 用于 buy 档强度
+  const vol10 = weekBars.slice(-11, -1).reduce((s,b)=>s+b.volume,0)/10 || 1;
+  const volRatio = last.volume / vol10;
+  const volBonus = volRatio > 1.0;
+  const bonuses = [];
+  if (volBonus) bonuses.push(`周线放量 ${volRatio.toFixed(2)}×`);
+  if (indexBullish === true) bonuses.push(`大盘多头`);
+  else if (indexBullish === false) bonuses.push(`⚠ 大盘未站上 EMA8`);
+  const bonusSfx = bonuses.length ? ` · ${bonuses.join(" · ")}` : "";
+
+  // ============ 买入（三档实质 + hold-trend 兜底） ============
+  // 1) buy-deep: 本周 low 触及 EMA21 ±1%（深回踩，黄金坑）
+  if (last.low <= e21 * 1.01) {
+    return {
+      action:"buy-deep", strength:3, pos:"满仓 100%",
+      detail:`🎯 深回踩 EMA21 (${e21.toFixed(2)}) — 强趋势中的黄金坑，建议满仓${bonusSfx}`,
+      ema8:e8, ema21:e21, volRatio, hasVolume:volBonus, indexBullish
+    };
   }
-
-  if (freshPullback >= 0) {
-    // 加分项
-    const vol10 = weekBars.slice(-11, -1).reduce((s,b)=>s+b.volume,0)/10 || 1;
-    const volRatio = last.volume / vol10;
-    const volBonus = volRatio > 1.0;
-    const bonuses = [];
-    if (volBonus) bonuses.push(`周线放量 ${volRatio.toFixed(2)}×`);
-    if (indexBullish === true) bonuses.push(`大盘站上周线 EMA8`);
-    else if (indexBullish === false) bonuses.push(`⚠ 大盘未站上周线 EMA8`);
-
+  // 2) buy: 本周 low 触及 EMA8 ±0.5%（标准回踩 — 严格收紧）
+  if (last.low <= e8 * 1.005) {
     let strength = 3;
     if (!volBonus) strength--;
     if (indexBullish === false) strength--;
     strength = Math.max(1, strength);
-
-    const whichWeek = freshPullback === n-1 ? "本周" : "上周";
     return {
-      action:"buy", strength,
-      detail:`✅ 周线 EMA 多头上行 + 价格${whichWeek}回踩 EMA8 (${e8.toFixed(2)}) 后站稳，现价 ${last.close.toFixed(2)}` +
-        (bonuses.length ? ` · ${bonuses.join(" · ")}` : ""),
+      action:"buy", strength, pos:"80%",
+      detail:`✅ 本周回踩 EMA8 (${e8.toFixed(2)}) 后站稳，现价 ${last.close.toFixed(2)} — 标准买点 80%${bonusSfx}`,
       ema8:e8, ema21:e21, volRatio, hasVolume:volBonus, indexBullish, fresh:true
     };
   }
-
-  // 老回踩或无回踩 → 趋势延续中，持有但不是新买点
+  // 3) buy-near: 距 EMA8 ≤ 3%（接近回踩，试仓 50%）
   const aboveE8Pct = (last.close - e8) / e8 * 100;
-  if (stalePullback >= 0) {
-    const weeksAgo = (n-1) - stalePullback;
+  if (aboveE8Pct <= 3) {
     return {
-      action:"hold", strength:1,
-      detail:`周线多头延续，${weeksAgo} 周前曾回踩 EMA8 — 已经反弹了 ${weeksAgo} 周，不是新鲜买点。建议持有，等下一次回踩`,
-      ema8:e8, ema21:e21, stale:true, weeksAgo
+      action:"buy-near", strength:2, pos:"试仓 50%",
+      detail:`🟡 距 EMA8 仅 ${aboveE8Pct.toFixed(1)}% — 接近回踩区，建议试仓 50%（可分批），等真回踩到 EMA8 再补齐${bonusSfx}`,
+      ema8:e8, ema21:e21, aboveE8Pct, indexBullish
     };
   }
+
+  // 4) hold-trend: 多头排列但距 EMA8 > 3%（趋势内但不是买点）
   return {
-    action:"hold", strength:1,
-    detail:`周线多头延续中 (现价高于 EMA8 ${aboveE8Pct.toFixed(1)}%) — 持有，未到回踩买点`,
-    ema8:e8, ema21:e21
+    action:"hold-trend", strength:1, pos:"持有现有，不追",
+    detail:`持有现有仓位 — 多头趋势延续中，现价高于 EMA8 ${aboveE8Pct.toFixed(1)}% (> 3%)，不追，等回踩到 ≤3% 再试仓`,
+    ema8:e8, ema21:e21, aboveE8Pct
   };
 }
 
@@ -2391,14 +2407,23 @@ async function renderSignals(bars, currentPeriod){
     return;
   }
   const stars = "★".repeat(result.strength) + "☆".repeat(3-result.strength);
-  const tag = result.action==='buy'?'买入':result.action==='sell'?'卖出':'持有';
+  const tag = actionLabel(result.action);
+  const posLabel = result.pos ? ` · 建议仓位 <b style="color:var(--gold)">${result.pos}</b>` : '';
   let header = "";
-  if (result.action === "buy" && result.strength >= 3) {
-    header = `<div style="background:rgba(255,90,106,.22);color:#ff8a95;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:600">🔴 强买入信号 · 周线 EMA 趋势系统</div>`;
+  if (result.action === "buy-deep") {
+    header = `<div style="background:rgba(255,90,106,.28);color:#fff;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:700;border:1px solid rgba(255,90,106,.6)">🎯 深回踩 EMA21 · 黄金坑 · 满仓 100%</div>`;
+  } else if (result.action === "buy" && result.strength >= 3) {
+    header = `<div style="background:rgba(255,90,106,.22);color:#ff8a95;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:600">🔴 标准回踩 EMA8 · 强买入 ★★★ · 80%</div>`;
   } else if (result.action === "buy") {
-    header = `<div style="background:rgba(255,90,106,.12);color:#ff8a95;padding:10px 12px;border-radius:6px;margin-bottom:10px">🟠 买入信号 · 周线 EMA 趋势系统</div>`;
-  } else if (result.action === "sell") {
-    header = `<div style="background:rgba(46,204,113,.18);color:#7ee2a3;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:600">🟢 卖出信号 · 周线趋势破位</div>`;
+    header = `<div style="background:rgba(255,90,106,.12);color:#ff8a95;padding:10px 12px;border-radius:6px;margin-bottom:10px">🔴 回踩 EMA8 买入 · 80%</div>`;
+  } else if (result.action === "buy-near") {
+    header = `<div style="background:rgba(245,179,1,.14);color:#f5b301;padding:10px 12px;border-radius:6px;margin-bottom:10px">🟡 距 EMA8 ≤3% · 试仓 50%（分批）</div>`;
+  } else if (result.action === "sell-confirmed") {
+    header = `<div style="background:rgba(46,204,113,.22);color:#7ee2a3;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:700">🟢 周线已确认破位 · 清仓 0%</div>`;
+  } else if (result.action === "sell-warning") {
+    header = `<div style="background:rgba(245,179,1,.14);color:#f5b301;padding:10px 12px;border-radius:6px;margin-bottom:10px">⚠ 本周盘中跌破 EMA8 — 等周收盘确认，先持有不动</div>`;
+  } else if (result.action === "hold-trend") {
+    header = `<div style="color:var(--muted);font-size:12px;padding:6px 0">⚪ 趋势内持有 · 距 EMA8 较远，不追</div>`;
   } else {
     header = `<div style="color:var(--muted);font-size:12px;padding:6px 0">⚪ ${tag}</div>`;
   }
@@ -2406,7 +2431,7 @@ async function renderSignals(bars, currentPeriod){
     <div class="signal-item">
       <span class="signal-tag ${result.action}">${tag}</span>
       <div class="signal-text">
-        <b>周线 EMA8 / EMA21 趋势</b> <span style="color:var(--gold);font-size:11px">${stars}</span>
+        <b>周线 EMA8 / EMA21 趋势</b> <span style="color:var(--gold);font-size:11px">${stars}</span>${posLabel}
         <div class="sub">${result.detail}</div>
         <div class="sub" style="margin-top:4px;color:var(--muted);font-size:11px">
           EMA8 周 = ${result.ema8.toFixed(2)} · EMA21 周 = ${result.ema21.toFixed(2)} · 现价 = ${weekBars[weekBars.length-1].close.toFixed(2)}
@@ -2470,11 +2495,15 @@ function renderBuyAlertBanner(results){
   if (!banner) return;
   banner.style.display = "block";  // 永远显示，让用户知道扫描状态
 
-  // 筛出"买入"信号
-  const buys = results.filter(r => r.signal.action === "buy");
-  // 也提示一下卖出信号 (跌破 EMA8)
-  const sells = results.filter(r => r.signal.action === "sell");
-  const holds = results.filter(r => r.signal.action === "hold");
+  // 分档
+  const deepBuys = results.filter(r => r.signal.action === "buy-deep");
+  const stdBuys  = results.filter(r => r.signal.action === "buy");
+  const nearBuys = results.filter(r => r.signal.action === "buy-near");
+  const buys = [...deepBuys, ...stdBuys, ...nearBuys];
+  const sellsConfirmed = results.filter(r => r.signal.action === "sell-confirmed");
+  const sellsWarning   = results.filter(r => r.signal.action === "sell-warning");
+  const sells = [...sellsConfirmed, ...sellsWarning];
+  const holds = results.filter(r => r.signal.action === "hold" || r.signal.action === "hold-trend");
   const ts = watchScanState.lastRun ? new Date(watchScanState.lastRun).toLocaleTimeString("zh-CN", {hour12:false}) : "--";
   const ok = watchScanState.okCount || 0;
   const fail = watchScanState.failCount || 0;
@@ -2503,26 +2532,18 @@ function renderBuyAlertBanner(results){
   }
 
   const tagStyle = "display:inline-block;padding:5px 10px;border-radius:4px;font-size:13px;margin:3px 6px 3px 0;cursor:pointer;font-weight:600";
-  // 拆分: 强买入 (3 星) 单独一行高亮, 中弱买入 (1-2 星) 普通一行
-  const strongBuys = buys.filter(b => b.signal.strength >= 3);
-  const weakBuys = buys.filter(b => b.signal.strength < 3);
-  const strongBuyHtml = strongBuys.length ? `
-    <div style="margin-bottom:${(weakBuys.length || sells.length)?'8px':'0'};background:rgba(255,90,106,.12);padding:6px 10px;border-radius:6px;border:1px solid rgba(255,90,106,.45)">
-      <span style="font-size:13px;font-weight:700;color:#ff5a6a;margin-right:8px">🔴🔴 强买入 ★★★ (${strongBuys.length})：</span>
-      ${strongBuys.map(b => `<span class="buy-alert-card" data-code="${b.stock.code}" style="${tagStyle};background:rgba(255,90,106,.3);color:#fff;border:1px solid rgba(255,90,106,.7)">${b.stock.name}</span>`).join("")}
+  const mkRow = (label, items, color, bg, border) => items.length ? `
+    <div style="margin-bottom:8px;${bg?`background:${bg};padding:6px 10px;border-radius:6px;border:1px solid ${border};`:''}">
+      <span style="font-size:13px;font-weight:700;color:${color};margin-right:8px">${label} (${items.length})：</span>
+      ${items.map(b => `<span class="buy-alert-card" data-code="${b.stock.code}" style="${tagStyle};background:rgba(255,255,255,.04);color:${color};border:1px solid ${color}66">${b.stock.name}</span>`).join("")}
     </div>` : "";
-  const weakBuyHtml = weakBuys.length ? `
-    <div style="margin-bottom:${sells.length?'8px':'0'}">
-      <span style="font-size:13px;font-weight:700;color:#ff8a95;margin-right:8px">🔴 买入 ${weakBuys.length === buys.length ? `(${weakBuys.length})` : `★${weakBuys[0]?.signal.strength}-${weakBuys[weakBuys.length-1]?.signal.strength} (${weakBuys.length})`}：</span>
-      ${weakBuys.map(b => `<span class="buy-alert-card" data-code="${b.stock.code}" style="${tagStyle};background:rgba(255,90,106,.15);color:#ff8a95;border:1px solid rgba(255,90,106,.35)">${b.stock.name}</span>`).join("")}
-    </div>` : "";
-  const buyHtml = strongBuyHtml + weakBuyHtml;
-
-  const sellHtml = sells.length ? `
-    <div>
-      <span style="font-size:13px;font-weight:700;color:#7ee2a3;margin-right:8px">🟢 卖出 (${sells.length})：</span>
-      ${sells.map(s => `<span class="buy-alert-card" data-code="${s.stock.code}" style="${tagStyle};background:rgba(46,204,113,.15);color:#7ee2a3;border:1px solid rgba(46,204,113,.35)">${s.stock.name}</span>`).join("")}
-    </div>` : "";
+  const deepHtml    = mkRow("🎯 深回踩 EMA21 · 满仓 100%", deepBuys, "#ff5a6a", "rgba(255,90,106,.15)", "rgba(255,90,106,.5)");
+  const stdHtml     = mkRow("🔴 回踩 EMA8 · 80%",      stdBuys,  "#ff8a95");
+  const nearHtml    = mkRow("🟡 距 EMA8 ≤3% · 试仓 50%", nearBuys, "#f5b301");
+  const buyHtml     = deepHtml + stdHtml + nearHtml;
+  const sellConfHtml = mkRow("🟢 周线已确认破位 · 清仓 0%", sellsConfirmed, "#7ee2a3", "rgba(46,204,113,.12)", "rgba(46,204,113,.5)");
+  const sellWarnHtml = mkRow("⚠ 本周盘中跌破 EMA8 · 等周收盘", sellsWarning, "#f5b301");
+  const sellHtml    = sellConfHtml + sellWarnHtml;
 
   const emptyHtml = (buys.length === 0 && sells.length === 0) ? `
     <div style="background:rgba(46,204,113,.06);border:1px solid rgba(46,204,113,.2);padding:12px;border-radius:6px">
@@ -3119,9 +3140,14 @@ function renderBuyAlertBannerUS(results){
   if (!banner) return;
   banner.style.display = "block";
 
-  const buys = results.filter(r => r.signal.action === "buy");
-  const sells = results.filter(r => r.signal.action === "sell");
-  const holds = results.filter(r => r.signal.action === "hold");
+  const deepBuys = results.filter(r => r.signal.action === "buy-deep");
+  const stdBuys  = results.filter(r => r.signal.action === "buy");
+  const nearBuys = results.filter(r => r.signal.action === "buy-near");
+  const buys = [...deepBuys, ...stdBuys, ...nearBuys];
+  const sellsConfirmed = results.filter(r => r.signal.action === "sell-confirmed");
+  const sellsWarning   = results.filter(r => r.signal.action === "sell-warning");
+  const sells = [...sellsConfirmed, ...sellsWarning];
+  const holds = results.filter(r => r.signal.action === "hold" || r.signal.action === "hold-trend");
   const ts = watchScanStateUS.lastRun ? new Date(watchScanStateUS.lastRun).toLocaleTimeString("zh-CN", {hour12:false}) : "--";
   const ok = watchScanStateUS.okCount || 0;
   const fail = watchScanStateUS.failCount || 0;
@@ -3140,24 +3166,19 @@ function renderBuyAlertBannerUS(results){
   }
 
   const tagStyle = "display:inline-block;padding:5px 10px;border-radius:4px;font-size:13px;margin:3px 6px 3px 0;cursor:pointer;font-weight:600";
-  // 强买入 (3 星) 单独一行
-  const strongBuys = buys.filter(b => b.signal.strength >= 3);
-  const weakBuys = buys.filter(b => b.signal.strength < 3);
-  const strongBuyHtml = strongBuys.length ? `
-    <div style="margin-bottom:${(weakBuys.length || sells.length)?'8px':'0'};background:rgba(255,90,106,.12);padding:6px 10px;border-radius:6px;border:1px solid rgba(255,90,106,.45)">
-      <span style="font-size:13px;font-weight:700;color:#ff5a6a;margin-right:8px">🔴🔴 强买入 ★★★ (${strongBuys.length})：</span>
-      ${strongBuys.map(b => `<span class="us-alert-card" data-code="${b.stock.code}" style="${tagStyle};background:rgba(255,90,106,.3);color:#fff;border:1px solid rgba(255,90,106,.7)">${b.stock.code} ${b.stock.name}</span>`).join("")}
+  const mkRowUS = (label, items, color, bg, border) => items.length ? `
+    <div style="margin-bottom:8px;${bg?`background:${bg};padding:6px 10px;border-radius:6px;border:1px solid ${border};`:''}">
+      <span style="font-size:13px;font-weight:700;color:${color};margin-right:8px">${label} (${items.length})：</span>
+      ${items.map(b => `<span class="us-alert-card" data-code="${b.stock.code}" style="${tagStyle};background:rgba(255,255,255,.04);color:${color};border:1px solid ${color}66">${b.stock.code}</span>`).join("")}
     </div>` : "";
-  const weakBuyHtml = weakBuys.length ? `
-    <div style="margin-bottom:${sells.length?'8px':'0'}">
-      <span style="font-size:13px;font-weight:700;color:#ff8a95;margin-right:8px">🔴 买入 (${weakBuys.length})：</span>
-      ${weakBuys.map(b => `<span class="us-alert-card" data-code="${b.stock.code}" style="${tagStyle};background:rgba(255,90,106,.15);color:#ff8a95;border:1px solid rgba(255,90,106,.35)">${b.stock.code}</span>`).join("")}
-    </div>` : "";
-  const sellHtml = sells.length ? `
-    <div>
-      <span style="font-size:13px;font-weight:700;color:#7ee2a3;margin-right:8px">🟢 卖出 (${sells.length})：</span>
-      ${sells.map(s => `<span class="us-alert-card" data-code="${s.stock.code}" style="${tagStyle};background:rgba(46,204,113,.15);color:#7ee2a3;border:1px solid rgba(46,204,113,.35)">${s.stock.code}</span>`).join("")}
-    </div>` : "";
+  const deepHtml    = mkRowUS("🎯 深回踩 EMA21 · 满仓 100%", deepBuys, "#ff5a6a", "rgba(255,90,106,.15)", "rgba(255,90,106,.5)");
+  const stdHtml     = mkRowUS("🔴 回踩 EMA8 · 80%",       stdBuys,  "#ff8a95");
+  const nearHtml    = mkRowUS("🟡 距 EMA8 ≤3% · 试仓 50%", nearBuys, "#f5b301");
+  const strongBuyHtml = deepHtml + stdHtml;
+  const weakBuyHtml   = nearHtml;
+  const sellConfHtml = mkRowUS("🟢 周线已确认破位 · 清仓 0%", sellsConfirmed, "#7ee2a3", "rgba(46,204,113,.12)", "rgba(46,204,113,.5)");
+  const sellWarnHtml = mkRowUS("⚠ 本周盘中跌破 EMA8 · 等周收盘", sellsWarning, "#f5b301");
+  const sellHtml    = sellConfHtml + sellWarnHtml;
   const emptyHtml = (buys.length === 0 && sells.length === 0) ? `
     <div style="background:rgba(46,204,113,.06);border:1px solid rgba(46,204,113,.2);padding:12px;border-radius:6px">
       <div style="color:#7ee2a3;font-size:13px;font-weight:600;margin-bottom:4px">✓ 当前无买卖信号</div>
