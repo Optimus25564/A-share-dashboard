@@ -47,6 +47,14 @@
       "url": "https://www.tomshardware.com/tech-industry/semiconductors/nvidia-prepares-h200-shipments-to-china-as-chip-war-lines-blur",
       "source": "Tom's Hardware",
       "content": "Nvidia is preparing to ship 82,000 H200 AI GPUs to China under revised US export controls allowing H200 sales on a case-by-case basis at 25% tariff. China approved imports for ByteDance, Alibaba, and Tencent totaling 400,000+ units — a major demand reopening ahead of May 20 earnings."
+    },
+    {
+      "date": "2026-05-12",
+      "type": "policy",
+      "title": "Jensen Huang Not Invited on Trump China Delegation — AI Chip Export Easing to China Unlikely Near-Term",
+      "url": "https://www.cnbc.com/2026/05/12/nvidia-ceo-huang-trump-china-trip-chip-sales.html",
+      "source": "CNBC",
+      "content": "Nvidia CEO Jensen Huang was excluded from Trump's May 13-15 China state visit delegation (Tim Cook and Elon Musk included). Huang said he would join if invited but received no invitation. Analysts: Huang's absence signals AI semiconductor exports to China remain a sensitive category unlikely to recover soon; White House focused on agriculture and commercial aviation, not advanced AI chips. NVDA Q1 FY2027 earnings May 20, $78.8B revenue consensus."
     }
   ],
   "AVGO": [
@@ -317,6 +325,14 @@
       "url": "https://www.stocktitan.net/news/AMAT/applied-materials-and-tsmc-partner-at-the-epic-center-to-accelerate-oicr4yh8mudu.html",
       "source": "StockTitan",
       "content": "TSMC and Applied Materials will co-innovate at AMAT's $5B EPIC Center in Silicon Valley to advance materials engineering and process integration for energy-efficient AI chips, accelerating lab-to-fab transitions for next-gen nodes."
+    },
+    {
+      "date": "2026-05-12",
+      "type": "announcement",
+      "title": "TSMC Arizona Corporation Board Approves Up to $20B Capital Injection to Fund Fab Construction and Equipment",
+      "url": "https://www.tipranks.com/news/company-announcements/tsmc-approves-up-to-us20-billion-capital-injection-for-arizona-unit",
+      "source": "TipRanks / TSMC",
+      "content": "TSMC disclosed its U.S. subsidiary TSMC Arizona Corporation approved a capital increase plan authorizing up to $20B injection from parent TSMC, subject to regulatory approvals. Funds support large-scale fab construction and equipment spending under the US-Taiwan trade deal framework (15% tariff cap). Total Arizona investment on track toward $165B+; second fab P2 tool move-in target October 2026, targeting N2 and A16 process nodes."
     }
   ],
   "ASML": [
@@ -361,6 +377,14 @@
       "url": "https://247wallst.com/investing/2026/05/04/bernstein-analyst-ai-agents-drive-chip-demand-off-the-charts-supply-cant-keep-up/",
       "source": "24/7 Wall St.",
       "content": "Bernstein analyst: binding constraint for AI chip capacity has shifted from chip design to foundry production and semiconductor equipment. TSMC, ASML, and AMAT all running at maximum capacity; supply cannot meet AI demand."
+    },
+    {
+      "date": "2026-05-13",
+      "type": "news",
+      "title": "Applied Materials Q2 FY2026 Earnings Tomorrow (May 14): Consensus $7.69B Revenue, EPS $2.66; 20%+ SEM Growth Target Key",
+      "url": "https://www.tikr.com/blog/applied-materials-reports-q2-earnings-on-may-14-heres-what-the-5b-epic-bet-means-for-investors",
+      "source": "TIKR",
+      "content": "AMAT reports Q2 FY2026 (ends April) results May 14 after close. Consensus: revenue $7.69B (+8.4% YoY), EPS $2.66 (+11.3% YoY); beat streak intact (4 consecutive quarters). Key catalyst: CFO target to deliver >20% semiconductor equipment business growth in calendar 2026. Focus on DRAM/HBM and advanced packaging demand. Morgan Stanley $454 target, Seaport Research Buy $500 target. AMAT-TSMC $5B EPIC Center partnership announced May 11."
     }
   ],
   "KLAC": [
@@ -379,6 +403,14 @@
       "url": "https://www.cnbc.com/2026/04/16/taiwan-semi-tsm-asml-stock-earnings-ai-chips.html",
       "source": "CNBC",
       "content": "Following TSMC and ASML Q1 earnings, analysts note the binding constraint for AI chip capacity has shifted to equipment makers like ASML, Lam Research, and KLA. All running at maximum capacity to meet AI infrastructure buildout demand."
+    },
+    {
+      "date": "2026-05-12",
+      "type": "announcement",
+      "title": "KLA Corp Announces 10-for-1 Stock Split and 21% Dividend Increase — 17th Consecutive Annual Dividend Raise",
+      "url": "https://www.prnewswire.com/news-releases/kla-corporation-announces-ten-to-one-stock-split-and-quarterly-cash-dividend-payment-302766137.html",
+      "source": "PR Newswire / KLA IR",
+      "content": "KLA Corp board approved a 10-for-1 forward stock split (record date June 4, trading on split-adjusted basis June 12, 2026 on Nasdaq as KLAC). Quarterly dividend raised 21% to $2.30/share pre-split ($0.23 post-split), the 17th consecutive annual dividend increase. CFO: split intended to improve share accessibility consistent with long-term capital allocation strategy. WFE industry 2026 forecast $140B (per LRCX); KLAC running at maximum capacity."
     }
   ],
   "ONTO": [
@@ -449,6 +481,14 @@
       "url": "https://finance.yahoo.com/news/micron-technology-mu-7-2-011253349.html",
       "source": "Yahoo Finance",
       "content": "Micron gained 7.2% after announcing FY2026 capex raised to $20B to expand HBM4 and AI DRAM capacity. Separately, stock touched $800 milestone as a threatened Samsung worker strike raised HBM supply-constraint fears. Micron projects HBM TAM to reach $100B by 2028 — two years ahead of prior forecast. 2026 HBM4 output remains fully sold out via binding contracts."
+    },
+    {
+      "date": "2026-05-12",
+      "type": "research",
+      "title": "D.A. Davidson Initiates Micron at Buy with $1,000 Target — First Four-Digit Analyst Price Target in MU History",
+      "url": "https://www.fxleaders.com/news/2026/05/12/micron-stock-forecast-2026-can-mu-reach-1000-on-exploding-ai-memory-chip-demand/",
+      "source": "FX Leaders / D.A. Davidson",
+      "content": "D.A. Davidson initiated Micron at Buy with a $1,000 price target — the first four-digit analyst target in MU's history — citing an AI-driven memory supercycle. 2026 HBM4 output fully sold out; MU projects HBM TAM reaches $100B by 2028, two years ahead of prior forecast. FY2026 capex raised to $20B to expand AI memory capacity; Samsung worker strike fears further tighten HBM supply concerns. MU stock +750% over past year."
     }
   ],
   "SNDK": [
@@ -475,6 +515,14 @@
       "url": "https://stockanalysis.com/stocks/sndk/",
       "source": "Mizuho / Stock Analysis",
       "content": "Mizuho raised SNDK price target to $1,625 from $1,220 (Outperform rating maintained), citing continued structural AI data center NAND storage demand. SNDK shares trading ~$1,543 (up ~500% in 2026). Q3 FY2026 enterprise SSD revenue surged 233% sequentially; company holds $42B total revenue backlog from recent hyperscaler supply contracts; BiCS8 recognized as industry gold standard."
+    },
+    {
+      "date": "2026-05-12",
+      "type": "news",
+      "title": "Sandisk Stock 'Goes Vertical': Up ~550% YTD at $1,398; Analyst Coverage Expanding as AI NAND Momentum Accelerates",
+      "url": "https://www.fool.com/investing/2026/05/12/sandisk-just-went-vertical-is-the-stock-now-too-ho/",
+      "source": "The Motley Fool",
+      "content": "SNDK stock continued its extraordinary 2026 run — up ~550% YTD at $1,398 as of May 12 — prompting Motley Fool analysis of sustainability. $42B backlog from three hyperscaler supply contracts; Q3 FY2026 enterprise SSD +233% sequentially; CEO: 'NAND is the only economically viable solution for AI inference capacity at scale.' Data center revenue more than tripled; BiCS 8 recognized as industry gold standard. Analyst coverage expanding on unprecedented financial performance."
     }
   ],
   "COHR": [
@@ -705,6 +753,14 @@
       "url": "https://www.cnbc.com/2026/04/28/meta-muse-spark-has-promise-wall-street-wants-zuckerberg-ai-strategy.html",
       "source": "CNBC",
       "content": "Meta unveiled Muse Spark, its first commercial (paid) AI model — deviating from previous Llama open-source releases. The move mirrors OpenAI, Anthropic, and Google's paid API approach. Wall Street responded skeptically, wanting clearer AI revenue strategy beyond the $125-145B capex commitment. Analysts: AI monetization thesis requires demonstrated revenue from models, not just advertising efficiency gains."
+    },
+    {
+      "date": "2026-05-05",
+      "type": "news",
+      "title": "Five Major Publishers Sue Meta Over Llama AI Training on Pirated Books — Class Action in Manhattan Federal Court",
+      "url": "https://thenextweb.com/news/publishers-meta-llama-copyright-class-action-2026",
+      "source": "The Next Web",
+      "content": "Elsevier, Cengage, Hachette, Macmillan, and McGraw Hill filed a class-action lawsuit in Manhattan federal court alleging Meta pirated millions of books and journal articles to train its Llama large language models without permission, payment, or license. Author Scott Turow is co-plaintiff. Case adds copyright litigation risk atop Meta's $125-145B capex AI buildout plan for 2026."
     }
   ],
   "AAPL": [
@@ -747,6 +803,14 @@
       "url": "https://phemex.com/academy/apple-stock-2026",
       "source": "Phemex Academy",
       "content": "Apple and Google formally announced a multi-year deal where Google's Gemini models power the next generation of Apple Foundation Models, including a rebuilt Siri in iOS 27. iOS 27 will allow users to switch between multiple AI providers — Gemini, OpenAI, and Apple's own models. Wedbush projects this creates an 'AI toll booth' on the App Store as developers integrate Gemini and other AI APIs into iPhone apps."
+    },
+    {
+      "date": "2026-05-13",
+      "type": "news",
+      "title": "Apple CEO Tim Cook Joins Trump China Delegation (May 13-15 Beijing); iPhone Tariff Relief and Supply Chain on Agenda",
+      "url": "https://www.tomshardware.com/tech-industry/jensen-huang-snubbed-by-white-house-for-president-trumps-china-state-visit-nvidia-ceo-not-on-roster-which-includes-apples-tim-cook-and-elon-musk",
+      "source": "Tom's Hardware / Bloomberg",
+      "content": "Apple CEO Tim Cook joined President Trump's May 13-15 China state visit to Beijing alongside Tesla's Elon Musk and executives from Qualcomm, Citi, Goldman Sachs, Cargill, and Visa. Apple likely seeking tariff relief on iPhone/Mac China manufacturing and supply chain assurances. AAPL Q2 FY2026 revenue $111.2B (+17% YoY); company previously pursuing IEEPA tariff refunds from Supreme Court ruling to reinvest in U.S. manufacturing. Nvidia CEO Jensen Huang was notably not invited."
     }
   ],
   "TSLA": [
@@ -781,6 +845,14 @@
       "url": "https://www.heygotrade.com/en/blog/tesla-tsla-hold-add-robotaxi-dallas-houston/",
       "source": "HeyGo Trade",
       "content": "TSLA closed May 11 at $420.84 — up 54% from the November 2025 low of $273. Q2 2026: Optimus factory preparations begin at Fremont (first-gen line: 1M robots/year capacity) and Gigafactory Texas (10M robots/year long-term). Robotaxi operational in Austin, Dallas, Houston; FSD v14.3 with 20% lower inference latency in active deployment; FSD subscribers 1.3M (+51% YoY). Piper Sandler: Optimus effectively valued at zero in current share price."
+    },
+    {
+      "date": "2026-05-13",
+      "type": "news",
+      "title": "Elon Musk Joins Trump China Trip as Tesla Seeks EV Market Recovery; 2026 Model Y Passes NHTSA ADAS Tests",
+      "url": "https://www.benzinga.com/news/politics/26/05/52463767/elon-musk-joins-trumps-china-trip-nvidia-ceo-jensen-huang-not-invited",
+      "source": "Benzinga",
+      "content": "Elon Musk joins Trump's May 13-15 China state visit delegation, with Tesla seeking EV market access recovery and supply chain stability. Separately, NHTSA confirmed Tesla's 2026 Model Y successfully passed ADAS tests for pedestrian emergency braking, lane-keeping, and blind-spot warnings — a regulatory milestone supporting Tesla's FSD and Robotaxi expansion. TSLA stock up 54% from November 2025 low; Optimus factory preparations underway at Fremont and Gigafactory Texas."
     }
   ],
   "CRWV": [
@@ -867,6 +939,14 @@
       "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-5-11-why-vertiv-vrt-stock-is-trading-up-today",
       "source": "FinancialContent / Citi Research",
       "content": "Citi raised Vertiv Holdings price target to a Street-high $414, citing $15B+ backlog visibility from AI data center liquid cooling and power infrastructure. VRT shares hit new 52-week high at $365.25 (up 108% YTD). Management guides 51% adjusted earnings growth and 30% organic revenue growth in 2026 on accelerating AI data center buildout demand."
+    },
+    {
+      "date": "2026-05-12",
+      "type": "news",
+      "title": "Vertiv Schedules May 19-20 Investor Conference in Greenville SC; 2026-2027 Financial Outlook to Be Presented",
+      "url": "https://www.stocktitan.net/news/VRT/vertiv-to-host-investor-conference-on-may-19-ymzs1hegs99p.html",
+      "source": "StockTitan / Vertiv IR",
+      "content": "Vertiv announced a two-day investor conference May 19-20, 2026 in Greenville, South Carolina. Management will discuss strategic initiatives, product innovations, and financial outlook. VRT stock hit 52-week high $365.25 (+108% YTD) after Citi raised target to Street-high $414. Conference follows Q1 2026 record: revenue $2.6B (+30% YoY), backlog >$15B, adj EPS +83%, organic growth guidance 30% for 2026."
     }
   ],
   "ETN": [
@@ -1035,6 +1115,14 @@
       "url": "https://seekingalpha.com/article/4873430-ewy-south-korea-is-cashing-in-on-its-memory-chips",
       "source": "Seeking Alpha",
       "content": "Samsung unveiled HBM4 memory targeting AI accelerators to compete with SK Hynix's dominance. SK Hynix remains primary HBM3E supplier to NVIDIA. EWY has become a direct proxy for AI memory supercycle, with HBM and server DRAM driving earnings for both top holdings."
+    },
+    {
+      "date": "2026-05-12",
+      "type": "news",
+      "title": "Samsung Worker Strike Threat Tightens HBM Supply Outlook; EWY Top Holdings Face Dual AI Memory Risk",
+      "url": "https://en.sedaily.com/finance/2026/05/12/samsung-hbm-strike-risk",
+      "source": "Seoul Economic Daily / Market Analysis",
+      "content": "A threatened Samsung Electronics worker strike raised HBM supply disruption fears, adding risk to EWY top holdings (SK Hynix 25.4%, Samsung 24%). Micron gained 7.2% on May 12 on alternative supply narrative. EWY is up 87% YTD on AI memory supercycle; Samsung HBM4 competes with SK Hynix HBM3E for NVIDIA orders. Labor action risk is a key variable for HBM supply chain stability heading into H2 2026 ramp."
     }
   ],
   "RKLB": [
@@ -1159,6 +1247,14 @@
       "url": "https://247wallst.com/investing/2026/05/07/lam-research-has-surged-300-in-a-year-wall-street-sees-more-gains-still-ahead/",
       "source": "24/7 Wall St.",
       "content": "Lam Research shares surged ~300% in the trailing 12 months on AI-driven wafer fabrication equipment demand. After Q3 FY2026 record revenue $5.84B (+24% YoY) and management raising 2026 WFE industry forecast to $140B, multiple analysts lifted price targets above $1,200. Q4 revenue guided $6.6B — 9.4% above consensus — signaling continued acceleration from TSMC N2/A16 ramp and HBM capacity expansion."
+    },
+    {
+      "date": "2026-05-05",
+      "type": "research",
+      "title": "Seaport Research Initiates Lam Research Buy at $300 and Applied Materials Buy at $500 — 2026 WFE Industry $140B",
+      "url": "https://247wallst.com/investing/2026/05/05/here-are-tuesdays-top-wall-street-analyst-research-calls-applied-materials-devon-energy-godaddy-home-depot-lam-research-lowes-roblox-tractor-supply-ulta-beauty-and-more/",
+      "source": "24/7 Wall St.",
+      "content": "Seaport Research Partners initiated Lam Research at Buy with $300 price target and Applied Materials at Buy with $500 target. Thesis: AI-driven wafer fabrication equipment supercycle with 2026 WFE industry spending raised by LRCX to $140B (from $135B prior) — highest ever forecast. LRCX Q3 FY2026 record revenue $5.84B (+24% YoY); Q4 guided $6.6B. HBM DRAM and advanced logic demand provide multi-year visibility."
     }
   ],
   "CDNS": [
@@ -1221,6 +1317,14 @@
       "url": "https://www.fool.com/investing/2026/05/11/palantir-technologies-has-just-created-history-here/",
       "source": "The Motley Fool",
       "content": "Following record Q1 2026 results, Palantir achieved historic stock market milestones as one of very few large-cap companies combining hyper-growth (85% revenue) with high profitability (57% FCF margin). AIP platform adoption in DoD and enterprise sectors driving both growth vectors simultaneously."
+    },
+    {
+      "date": "2026-05-04",
+      "type": "policy",
+      "title": "DoD FY2027 Budget Proposes $2.3B for Palantir Maven Smart System — Highest Ever Single-Program Allocation",
+      "url": "https://www.cnbc.com/2026/05/04/palantir-pltr-q1-earnings-report-2026.html",
+      "source": "CNBC / Palantir Q1 2026 Earnings Call",
+      "content": "Palantir disclosed on Q1 2026 earnings call that the DoD FY2027 budget proposal includes $2.3B specifically allocated for Maven Smart System — providing multi-year revenue visibility significantly above current annual run rate for the program. Maven usage doubled over 4 months and is 4x higher over 12 months across combatant commands and intelligence applications. US government revenue +84% YoY to $687M in Q1 2026. Average contract size ~4x what it was 4 quarters ago."
     }
   ],
   "IREN": [
@@ -1325,6 +1429,14 @@
       "url": "https://www.cnbc.com/2026/05/06/nvidia-corning-optical-factories-nc-texas-ai.html",
       "source": "CNBC",
       "content": "GLW jumped 12% on NVIDIA partnership. Deal includes $500M pre-funded warrant for NVIDIA to purchase ~3M Corning shares immediately plus additional warrants for up to 15M shares at $180/share — establishing Corning as a cornerstone US-based optical interconnect supplier for AI data centers."
+    },
+    {
+      "date": "2026-01-27",
+      "type": "announcement",
+      "title": "Corning and Meta Sign Up to $6B Multiyear Fiber-Optic Agreement to Accelerate U.S. AI Data Center Buildout Through 2030",
+      "url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-and-Meta-Announce-Multiyear-up-to-6-Billion-Agreement-to-Accelerate-US-Data-Center-Buildout/default.aspx",
+      "source": "Corning IR",
+      "content": "Corning and Meta announced a multiyear agreement worth up to $6B through 2030 for optical fiber, cable, and connectivity solutions for Meta's AI data centers. Meta serves as anchor customer for Corning's expanded North Carolina optical cable facility (15-20% employment increase). Deal followed by May 6 NVIDIA-Corning $3.2B partnership — cementing Corning as the primary U.S. optical fiber supplier for AI infrastructure. Corning targeting $20B annualized sales run rate by end of 2026."
     }
   ],
   "CRDO": [
@@ -1397,6 +1509,14 @@
       "url": "https://investor.cisco.com/news/news-details/2026/CISCO-REPORTS-SECOND-QUARTER-EARNINGS/default.aspx",
       "source": "Cisco IR",
       "content": "Cisco Q2 FY2026: $2.1B in AI infrastructure orders in a single quarter — equal to all of FY2025 combined — raising full-year AI infrastructure order outlook to >$5B. Silicon One ASIC adoption and data center networking demand driving acceleration. Splunk added 500 new logos in H1 FY26. Q3 FY2026 results scheduled May 13."
+    },
+    {
+      "date": "2026-05-13",
+      "type": "news",
+      "title": "Cisco Q3 FY2026 Earnings Today (May 13): Revenue Guide $15.4-15.6B; AI Orders Trajectory Toward >$5B Full-Year Key",
+      "url": "https://www.techi.com/cisco-csco-q3-fy26-earnings-preview-may-13/",
+      "source": "TECHi",
+      "content": "Cisco reports Q3 FY2026 (ended April 25) after close May 13. Mgmt guided $15.4-15.6B revenue and adj EPS $1.02-1.04 — above prior Street consensus. Key watch: AI infrastructure orders vs Q2's $2.1B pace (toward >$5B full-year target); ~$3B of that order book converting to hyperscaler revenue in FY26. Options pricing ~10% implied move. Silicon One AI ASIC adoption, Splunk security integration, and gross margin management in focus."
     }
   ],
   "PWR": [
@@ -1547,6 +1667,22 @@
       "url": "https://ir.amkor.com/news-releases/news-release-details/amkor-and-tsmc-expand-partnership-and-collaborate-advanced",
       "source": "Amkor Technology IR",
       "content": "Amkor Technology and TSMC expanded their partnership to collaborate on advanced packaging in Arizona, directly supporting TSMC's Arizona semiconductor fabs. Amkor is investing $7B to build the largest advanced packaging facility in the United States — producing 2.5D and 3D package configurations for AI chips including NVIDIA Blackwell and next-generation architectures. Facility expected to begin production in 2027."
+    },
+    {
+      "date": "2026-05-08",
+      "type": "announcement",
+      "title": "Amkor Prices $1.0B in 0% Convertible Notes Due 2031; Stock Jumps 6% on Capital Market Confidence",
+      "url": "https://ts2.tech/en/amkor-technology-stock-jumps-6-why-1-15-billion-debt-deal-has-amkr-in-focus/",
+      "source": "TS2 Space",
+      "content": "Amkor Technology priced $1.0B of 0% coupon convertible senior notes due July 2031 (with $150M overallotment option for up to $1.15B total). Net proceeds ~$981.7M earmarked for AI advanced packaging capacity expansion. AMKR stock jumped 6% on successful execution, signaling investor confidence ahead of May 21 investor day. Follows record Q1 2026 revenue $1.685B (+27% YoY) and $7B Arizona facility partnership with TSMC."
+    },
+    {
+      "date": "2026-05-21",
+      "type": "news",
+      "title": "Amkor Technology May 21 Investor Day: CEO Engel to Outline Advanced Packaging Roadmap and Multi-Year Targets",
+      "url": "https://ir.amkor.com/events-and-presentations/default.aspx",
+      "source": "Amkor Technology IR",
+      "content": "Amkor Technology investor day May 21, 2026 in New York: CEO Kevin Engel and CFO Megan Faust to present strategic priorities and multi-year financial targets. Company entering day with record Q1 2026 revenue $1.685B (+27% YoY), Q2 guided $1.75-1.85B, $7B Arizona advanced packaging facility with TSMC, and $1.0B convertible notes priced. AI chip 2.5D/3D advanced packaging capacity ramp for NVIDIA next-gen architectures expected to be key focus."
     }
   ],
   "TER": [
