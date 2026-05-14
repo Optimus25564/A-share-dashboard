@@ -2278,7 +2278,7 @@ function klOpts(showLegend){
 // === Signal engine: 周线 EMA8/EMA21 趋势系统 (4 档买入 + 2 档卖出) ===
 // buy-deep ★★★   本周 low 触及 EMA21        → 满仓 100%
 // buy ★★         本周 low 触及 EMA8 ±0.5%   → 80%
-// buy-near ★     距 EMA8 ≤ 3% (未真回踩)    → 试仓 50%
+// buy-near ★     距 EMA8 ≤ 3% (未真回踩)    → 试仓 30%
 // hold-trend     多头排列但距 EMA8 > 3%     → 持有不追
 // hold           未多头排列 / 斜率未上行     → 观望
 // sell-warning   本周(未收盘) close < EMA8  → 持有等周收盘
@@ -2364,18 +2364,20 @@ function evalWeeklyEMA(weekBars, indexBullish){
     if (!volBonus) strength--;
     if (indexBullish === false) strength--;
     strength = Math.max(1, strength);
+    const posByStrength = {3:"80%", 2:"65%", 1:"50%"};
+    const pos = posByStrength[strength];
     return {
-      action:"buy", strength, pos:"80%",
-      detail:`✅ 本周回踩 EMA8 (${e8.toFixed(2)}) 后站稳，现价 ${last.close.toFixed(2)} — 标准买点 80%${bonusSfx}`,
+      action:"buy", strength, pos,
+      detail:`✅ 本周回踩 EMA8 (${e8.toFixed(2)}) 后站稳，现价 ${last.close.toFixed(2)} — 标准买点 ${pos}${bonusSfx}`,
       ema8:e8, ema21:e21, volRatio, hasVolume:volBonus, indexBullish, fresh:true
     };
   }
-  // 3) buy-near: 距 EMA8 ≤ 3%（接近回踩，试仓 50%）
+  // 3) buy-near: 距 EMA8 ≤ 3%（接近回踩，试仓 30%）
   const aboveE8Pct = (last.close - e8) / e8 * 100;
   if (aboveE8Pct <= 3) {
     return {
-      action:"buy-near", strength:2, pos:"试仓 50%",
-      detail:`🟡 距 EMA8 仅 ${aboveE8Pct.toFixed(1)}% — 接近回踩区，建议试仓 50%（可分批），等真回踩到 EMA8 再补齐${bonusSfx}`,
+      action:"buy-near", strength:2, pos:"试仓 30%",
+      detail:`🟡 距 EMA8 仅 ${aboveE8Pct.toFixed(1)}% — 接近回踩区，建议试仓 30%（可分批），等真回踩到 EMA8 再补齐${bonusSfx}`,
       ema8:e8, ema21:e21, aboveE8Pct, indexBullish
     };
   }
@@ -2417,7 +2419,7 @@ async function renderSignals(bars, currentPeriod){
   } else if (result.action === "buy") {
     header = `<div style="background:rgba(255,90,106,.12);color:#ff8a95;padding:10px 12px;border-radius:6px;margin-bottom:10px">🔴 回踩 EMA8 买入 · 80%</div>`;
   } else if (result.action === "buy-near") {
-    header = `<div style="background:rgba(245,179,1,.14);color:#f5b301;padding:10px 12px;border-radius:6px;margin-bottom:10px">🟡 距 EMA8 ≤3% · 试仓 50%（分批）</div>`;
+    header = `<div style="background:rgba(245,179,1,.14);color:#f5b301;padding:10px 12px;border-radius:6px;margin-bottom:10px">🟡 距 EMA8 ≤3% · 试仓 30%（分批）</div>`;
   } else if (result.action === "sell-confirmed") {
     header = `<div style="background:rgba(46,204,113,.22);color:#7ee2a3;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:700">🟢 周线已确认破位 · 清仓 0%</div>`;
   } else if (result.action === "sell-warning") {
@@ -2539,7 +2541,7 @@ function renderBuyAlertBanner(results){
     </div>` : "";
   const deepHtml    = mkRow("🎯 深回踩 EMA21 · 满仓 100%", deepBuys, "#ff5a6a", "rgba(255,90,106,.15)", "rgba(255,90,106,.5)");
   const stdHtml     = mkRow("🔴 回踩 EMA8 · 80%",      stdBuys,  "#ff8a95");
-  const nearHtml    = mkRow("🟡 距 EMA8 ≤3% · 试仓 50%", nearBuys, "#f5b301");
+  const nearHtml    = mkRow("🟡 距 EMA8 ≤3% · 试仓 30%", nearBuys, "#f5b301");
   const buyHtml     = deepHtml + stdHtml + nearHtml;
   const sellConfHtml = mkRow("🟢 周线已确认破位 · 清仓 0%", sellsConfirmed, "#7ee2a3", "rgba(46,204,113,.12)", "rgba(46,204,113,.5)");
   const sellWarnHtml = mkRow("⚠ 本周盘中跌破 EMA8 · 等周收盘", sellsWarning, "#f5b301");
@@ -3173,7 +3175,7 @@ function renderBuyAlertBannerUS(results){
     </div>` : "";
   const deepHtml    = mkRowUS("🎯 深回踩 EMA21 · 满仓 100%", deepBuys, "#ff5a6a", "rgba(255,90,106,.15)", "rgba(255,90,106,.5)");
   const stdHtml     = mkRowUS("🔴 回踩 EMA8 · 80%",       stdBuys,  "#ff8a95");
-  const nearHtml    = mkRowUS("🟡 距 EMA8 ≤3% · 试仓 50%", nearBuys, "#f5b301");
+  const nearHtml    = mkRowUS("🟡 距 EMA8 ≤3% · 试仓 30%", nearBuys, "#f5b301");
   const strongBuyHtml = deepHtml + stdHtml;
   const weakBuyHtml   = nearHtml;
   const sellConfHtml = mkRowUS("🟢 周线已确认破位 · 清仓 0%", sellsConfirmed, "#7ee2a3", "rgba(46,204,113,.12)", "rgba(46,204,113,.5)");
