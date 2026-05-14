@@ -2368,23 +2368,21 @@ function evalWeeklyEMA(weekBars, indexBullish){
       ema8:e8, ema21:e21, volRatio, hasVolume:volBonus, indexBullish
     };
   }
-  // 2) buy: 本周 low 触及 EMA8 ±0.5%（标准回踩 — 严格收紧）
+  // 2) buy: 本周 low 触及 EMA8 ±0.5%（标准回踩 — 最高 2 星, 3 星留给 buy-deep）
   if (last.low <= e8 * 1.005) {
-    let strength = 3;
-    if (!volBonus) strength--;
-    if (indexBullish === false) strength--;
-    strength = Math.max(1, strength);
+    let strength = 2;
+    if (!volBonus && indexBullish === false) strength = 1;  // 两项加分都缺才降级
     return {
       action:"buy", strength,
       detail:`✅ 本周回踩 EMA8 (${e8.toFixed(2)}) 后站稳，现价 ${last.close.toFixed(2)} — 标准买点${bonusSfx}`,
       ema8:e8, ema21:e21, volRatio, hasVolume:volBonus, indexBullish, fresh:true
     };
   }
-  // 3) buy-near: 距 EMA8 ≤ 3%（接近回踩）
+  // 3) buy-near: 距 EMA8 ≤ 3%（接近回踩 — 固定 1 星）
   const aboveE8Pct = (last.close - e8) / e8 * 100;
   if (aboveE8Pct <= 3) {
     return {
-      action:"buy-near", strength:2,
+      action:"buy-near", strength:1,
       detail:`🟡 距 EMA8 仅 ${aboveE8Pct.toFixed(1)}% — 接近回踩区，等真回踩到 EMA8 更确定${bonusSfx}`,
       ema8:e8, ema21:e21, aboveE8Pct, indexBullish
     };
@@ -2421,10 +2419,10 @@ async function renderSignals(bars, currentPeriod){
   let header = "";
   if (result.action === "buy-deep") {
     header = `<div style="background:rgba(255,90,106,.28);color:#fff;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:700;border:1px solid rgba(255,90,106,.6)">🎯 深回踩 EMA21 · 黄金坑</div>`;
-  } else if (result.action === "buy" && result.strength >= 3) {
-    header = `<div style="background:rgba(255,90,106,.22);color:#ff8a95;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:600">🔴 标准回踩 EMA8 · 强买入 ★★★</div>`;
+  } else if (result.action === "buy" && result.strength >= 2) {
+    header = `<div style="background:rgba(255,90,106,.22);color:#ff8a95;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:600">🔴 标准回踩 EMA8 · 买入 ★★</div>`;
   } else if (result.action === "buy") {
-    header = `<div style="background:rgba(255,90,106,.12);color:#ff8a95;padding:10px 12px;border-radius:6px;margin-bottom:10px">🔴 回踩 EMA8 买入</div>`;
+    header = `<div style="background:rgba(255,90,106,.12);color:#ff8a95;padding:10px 12px;border-radius:6px;margin-bottom:10px">🔴 回踩 EMA8 买入 ★（加分项不足）</div>`;
   } else if (result.action === "buy-near") {
     header = `<div style="background:rgba(245,179,1,.14);color:#f5b301;padding:10px 12px;border-radius:6px;margin-bottom:10px">🟡 距 EMA8 ≤3% · 接近回踩</div>`;
   } else if (result.action === "sell-confirmed") {
