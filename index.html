@@ -2286,9 +2286,9 @@ function klOpts(showLegend){
 function isBuyAction(a){ return typeof a === 'string' && a.startsWith('buy'); }
 function isSellAction(a){ return typeof a === 'string' && a.startsWith('sell'); }
 function actionLabel(a){
-  return ({'buy-deep':'深回踩 ★★★','buy':'买入 ★★','buy-near':'试仓 ★',
+  return ({'buy-deep':'深回踩','buy':'买入','buy-near':'接近回踩',
     'hold-trend':'持有','hold':'观望',
-    'sell-warning':'⚠ 待确认','sell-confirmed':'清仓'})[a] || a;
+    'sell-warning':'待确认','sell-confirmed':'清仓'})[a] || a;
 }
 
 function evalWeeklyEMA(weekBars, indexBullish){
