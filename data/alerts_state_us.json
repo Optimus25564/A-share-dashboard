@@ -1,260 +1,149 @@
 {
-  "last_run": "2026-05-13T08:30:00+08:00",
-  "run_date": "2026-05-12",
+  "last_run": "2026-05-14T08:30:00+08:00",
+  "run_date": "2026-05-13",
   "market": "US",
   "top5": [
     {
+      "code": "SNDK",
+      "name": "Sandisk",
+      "rank": 1,
+      "score": 1.4082
+    },
+    {
       "code": "MU",
       "name": "Micron",
-      "rank": 1,
-      "score": 1.3173,
-      "signal": "hold",
-      "kline": {
-        "last_date": "2026-05-08",
-        "close": 746.81,
-        "close_may12": 765.77,
-        "ema8_est": 539,
-        "ema21_est": 414,
-        "data_source": "web-search (stooq blocked); EMA rolling-estimated from prior state"
-      },
-      "price_note": "MU 周K持续上扬. 5/8收$747 ATH区. 5/11冲高$795后5/12回落$766. EMA8~$539, 价格远高于EMA8, 趋势强. 当周小幅回撤但未触及EMA8区间."
+      "rank": 2,
+      "score": 1.3036
     },
     {
       "code": "NVDA",
       "name": "Nvidia",
-      "rank": 2,
-      "score": 1.0644,
-      "signal": "buy-fresh",
-      "kline": {
-        "last_date": "2026-05-08",
-        "close": 215.2,
-        "close_may12": 216.07,
-        "ema8_est": 203,
-        "ema21_est": 182,
-        "data_source": "web-search (stooq blocked)"
-      },
-      "price_note": "5/2周低点回踩EMA8($199区), 5/8收$215反弹确认买点. 5/12 $216.07 (+0.5%), 高$223.75, 低$214.92. EMA8~$203, EMA21~$182. EMA8>EMA21, 斜率向上, 近两周低点触及EMA8*1.02区 → buy-fresh有效."
-    },
-    {
-      "code": "TSM",
-      "name": "TSMC",
       "rank": 3,
-      "score": 0.7514,
-      "signal": "hold",
-      "kline": {
-        "last_date": "2026-05-08",
-        "close": 411.68,
-        "close_may12": 397.31,
-        "ema8_est": 367,
-        "ema21_est": 301,
-        "data_source": "web-search (stooq blocked)"
-      },
-      "price_note": "5/8收$411.68, 5/12 $397.31 (-3.4%). 52w低$134.25(25年4月), 大幅反弹后周线仍强势. EMA8~$367, 价格高于EMA8 → hold. 当日回撤需观察是否持续."
+      "score": 0.7659
     },
     {
-      "code": "SNDK",
-      "name": "Sandisk",
+      "code": "APP",
+      "name": "AppLovin",
       "rank": 4,
-      "score": 0.5921,
-      "signal": "hold",
-      "kline": {
-        "last_date": "2026-05-08",
-        "close": 1562.34,
-        "close_may12": 1469.0,
-        "ema8_est": 1281,
-        "ema21_est": 1006,
-        "data_source": "web-search (stooq blocked)"
-      },
-      "price_note": "5/8收$1562 ATH, 5/12显著回落至$1469 (-5.9%), Motley Fool报道SNDK单日大跌. EMA8~$1281, 价格仍高于EMA8. 当周大幅回撤需密切关注是否破EMA8, 若继续弱可能转sell-warning."
+      "score": 0.7551
     },
     {
-      "code": "ASML",
-      "name": "ASML",
+      "code": "AVGO",
+      "name": "Broadcom",
       "rank": 5,
-      "score": 0.5733,
-      "signal": "hold",
-      "kline": {
-        "last_date": "2026-05-08",
-        "close": 1592.02,
-        "close_may12": 1518.0,
-        "ema8_est": 1404,
-        "ema21_est": 1145,
-        "data_source": "web-search (stooq blocked)"
-      },
-      "price_note": "5/8收$1592 ATH, 5/12跌至$1518 (-4.6%). EMA8~$1404, 价格仍高于EMA8 → hold. 单日大跌受半导体板块整体回调压力, 趋势未破."
+      "score": 0.5076
     }
   ],
   "candidates": [
     {
-      "code": "AVGO",
-      "name": "Broadcom",
+      "code": "TSM",
+      "name": "TSMC",
       "rank": 6,
-      "score": 0.5188,
-      "is_etf": false,
-      "signal": "hold",
-      "kline": {
-        "last_date": "2026-05-08",
-        "close": 427.83,
-        "close_may12": 417.62,
-        "ema8_est": 391,
-        "ema21_est": 321,
-        "data_source": "web-search (stooq blocked)"
-      },
-      "price_note": "5/8收$427.83, 5/12 $417.62 (-2.4%). EMA8~$391, 价格高于EMA8 → hold. 随半导体大盘回撤."
+      "score": 0.4664
+    },
+    {
+      "code": "LITE",
+      "name": "Lumentum",
+      "rank": 7,
+      "score": 0.4548
+    },
+    {
+      "code": "AMD",
+      "name": "AMD",
+      "rank": 8,
+      "score": 0.4465
     },
     {
       "code": "META",
       "name": "Meta Platforms",
-      "rank": 7,
-      "score": 0.4457,
-      "is_etf": false,
-      "signal": "sell-warning",
-      "kline": {
-        "last_date": "2026-05-08",
-        "close": 609.63,
-        "close_may12": 599.56,
-        "ema8_est": 644,
-        "ema21_est": 637,
-        "data_source": "web-search (stooq blocked)"
-      },
-      "price_note": "5/8收$610, 5/12 $599.56 (区间$592.65-$603.75). EMA8~$644 > 收盘 → sell-warning (非周五). ATH $788(2025年8月)以来下降趋势持续."
+      "rank": 9,
+      "score": 0.4361
     },
     {
       "code": "GOOGL",
       "name": "Alphabet",
-      "rank": 8,
-      "score": 0.4124,
-      "is_etf": false,
-      "signal": "hold",
-      "kline": {
-        "last_date": "2026-05-08",
-        "close": 400.8,
-        "close_may12": 386.0,
-        "ema8_est": 369,
-        "ema21_est": 318,
-        "data_source": "web-search (stooq blocked)"
-      },
-      "price_note": "5/8收$400.80 ATH, 5/12 ~$386 (区间$382.77-$389.74, -3.7%). EMA8~$369, 周K收盘$400 仍高于EMA8. 当日回撤较大但未破EMA8 → hold. 需关注周末收盘."
-    },
-    {
-      "code": "CEG",
-      "name": "Constellation Energy",
-      "rank": 9,
-      "score": 0.3125,
-      "is_etf": false,
-      "signal": "buy-fresh",
-      "kline": {
-        "last_date": "2026-05-08",
-        "close": 303.63,
-        "close_may12": 294.61,
-        "ema8_est": 296,
-        "ema21_est": 264,
-        "data_source": "web-search (stooq blocked)"
-      },
-      "price_note": "5/8收$303.63, EMA8~$296, EMA8>EMA21. 5/12 $294.61 (区间$294.08-$300.71). 近期低点多次触及EMA8区域 → buy-fresh信号. Q1财报2026/05/11发布, 核电+数据中心供电逻辑完整."
-    },
-    {
-      "code": "MSFT",
-      "name": "Microsoft",
       "rank": 10,
-      "score": 0.2564,
-      "is_etf": false,
-      "signal": "sell-warning",
-      "kline": {
-        "last_date": "2026-05-08",
-        "close": 415.1,
-        "close_may12": 407.77,
-        "ema8_est": 436,
-        "ema21_est": 472,
-        "data_source": "web-search (stooq blocked)"
-      },
-      "price_note": "5/8收$415, 5/12 $407.77 (-1.18%). EMA8~$436 > 收盘 → sell-warning (非周五). EMA8<EMA21 死叉格局. 52w高$555(2025年7月), YTD约-12%."
+      "score": 0.3932
     }
   ],
   "signals": {
-    "MU": "hold",
-    "NVDA": "buy-fresh",
-    "TSM": "hold",
     "SNDK": "hold",
-    "ASML": "hold",
+    "MU": "hold",
+    "NVDA": "hold",
+    "APP": "hold",
     "AVGO": "hold",
-    "META": "sell-warning",
+    "TSM": "hold",
+    "LITE": "hold",
+    "AMD": "hold",
+    "META": "buy-fresh",
     "GOOGL": "hold",
-    "CEG": "buy-fresh",
-    "MSFT": "sell-warning"
+    "SPY": "hold"
   },
-  "benchmark": {
-    "SPY": "hold",
-    "QQQ": "hold",
-    "SPY_close_may8": 737.62,
-    "SPY_close_may12": 738.18,
-    "QQQ_close_may8": 711.23,
-    "QQQ_close_may12": 707.24,
-    "benchmark_note": "SPY 5/12 区间$731.83-$738.84, 大盘基本持平. QQQ -0.6% 科技股略弱. 半导体ETF SMH承压."
+  "ema_snapshot": {
+    "SNDK": {
+      "close": 1443.77,
+      "ema8": 1170.8,
+      "ema21": 882.25
+    },
+    "MU": {
+      "close": 802.5,
+      "ema8": 574.74,
+      "ema21": 405.97
+    },
+    "NVDA": {
+      "close": 225.57,
+      "ema8": 206.55,
+      "ema21": 186.35
+    },
+    "APP": {
+      "close": 490.69,
+      "ema8": 450.06,
+      "ema21": 440.78
+    },
+    "AVGO": {
+      "close": 409.14,
+      "ema8": 379.04,
+      "ema21": 326.92
+    },
+    "TSM": {
+      "close": 397.28,
+      "ema8": 350.96,
+      "ema21": 293.15
+    },
+    "LITE": {
+      "close": 1044.0,
+      "ema8": 675.35,
+      "ema21": 396.65
+    },
+    "AMD": {
+      "close": 448.29,
+      "ema8": 321.87,
+      "ema21": 248.54
+    },
+    "META": {
+      "close": 615.99,
+      "ema8": 609.71,
+      "ema21": 601.67
+    },
+    "GOOGL": {
+      "close": 402.48,
+      "ema8": 323.4,
+      "ema21": 268.73
+    },
+    "SPY": {
+      "close": 742.31,
+      "ema8": 696.29,
+      "ema21": 662.85
+    }
   },
-  "weekly_alert": {
-    "type": "sector-rotation-warning",
-    "title": "半导体板块5/12集体回调",
-    "detail": "ASML -4.6%, SNDK -5.9%, TSM -3.4%, AVGO -2.4%. NVDA基本持平. MU周三短暂冲高$795后回落$766. 大盘(SPY/QQQ)相对抗跌. 当周(5/11-5/16)尚未结束, 若周五收盘半导体仍弱则多个标的可能转sell-warning."
+  "market_context": {
+    "SPY_close": 742.31,
+    "QQQ_close": 714.65,
+    "SPY_signal": "hold",
+    "note": "SPY +28.6% YoY, QQQ +41.3% YoY; 市场处于强劲上行趋势; 4月初关税抛售已完全修复"
   },
-  "etf_sector_hedge": {
-    "SMH_score": 0.9707,
-    "SMH_note": "半导体ETF, 当日随板块回调",
-    "COPX_score": 0.1080,
-    "XLU_score": -0.0045,
-    "EWY_score": -0.1262,
-    "XME_score": -0.9480
-  },
-  "kline_status": "partial: stooq.com blocked (sandbox allowlist); 5/8周K收盘沿用上期; 5/12日内收盘来自web-search多源验证(Yahoo/TradingKey/Robinhood/Investing.com); EMA8/EMA21滚动迭代估算",
-  "sources": "stooq blocked → web-search: TradingKey, Yahoo Finance, Robinhood, MarketBeat, Investing.com; NVDA/TSM/ASML/MU/SNDK/AVGO/META/GOOGL/CEG/MSFT/SPY/QQQ prices confirmed 2026-05-12",
-  "missing_tickers": ["RKLB"],
-  "score_detail": {
-    "MU": 1.3173,
-    "NVDA": 1.0644,
-    "TSM": 0.7514,
-    "SNDK": 0.5921,
-    "ASML": 0.5733,
-    "AVGO": 0.5188,
-    "META": 0.4457,
-    "GOOGL": 0.4124,
-    "CEG": 0.3125,
-    "MSFT": 0.2564,
-    "AMD": 0.1715,
-    "INTC": 0.1088,
-    "KLAC": -0.0459,
-    "AMAT": -0.0676,
-    "APP": -0.0760,
-    "LITE": -0.1159,
-    "COHR": -0.1201,
-    "AMZN": -0.1719,
-    "VRT": -0.1747,
-    "CRWV": -0.2255,
-    "SNPS": -0.2616,
-    "MRVL": -0.2922,
-    "ETN": -0.3052,
-    "GEV": -0.4917,
-    "ONTO": -0.4990,
-    "QCOM": -0.6222,
-    "FN": -0.6276,
-    "AAPL": -0.7491,
-    "TSLA": -0.8219,
-    "CCJ": -0.8563,
-    "SMH_etf": 0.9707,
-    "COPX_etf": 0.1080,
-    "XLU_etf": -0.0045,
-    "EWY_etf": -0.1262,
-    "XME_etf": -0.9480
-  },
-  "analysis_notes": {
-    "sell_warning": ["META", "MSFT"],
-    "buy_fresh": ["NVDA", "CEG"],
-    "hold": ["MU", "TSM", "SNDK", "ASML", "AVGO", "GOOGL"],
-    "is_friday": false,
-    "nvda_note": "buy-fresh信号延续: 5/2周回踩EMA8($199), 5/8反弹$215确认, 5/12 $216持稳",
-    "ceg_note": "buy-fresh: EMA8~$296, 近期低点多次触碰EMA8支撑; Q1财报正面, 核电供电AI数据中心逻辑完整",
-    "meta_note": "sell-warning: ATH $788(Aug-25)→$600(May-26), EMA8~$644>收盘. Q1财报跌后未能收复",
-    "msft_note": "sell-warning: EMA8~$436 > 收盘$408, EMA21~$472>EMA8, 死叉下降趋势",
-    "sndk_watch": "5/12单日-5.9%大跌, 需关注本周收盘是否跌破EMA8 ~$1281",
-    "semi_cluster_risk": "ASML/SNDK/TSM/AVGO集体5/12回调, 若持续则下周信号可能转sell-warning"
-  }
+  "kline_status": "partial: stooq/yahoo均返回403, K线数据由网络搜索已知价格+插值估算构建 (约27根周线); EMA值为近似值",
+  "sources": "stooq weekly K-line (blocked, 403), prices estimated via WebSearch news data",
+  "highlight": "🔔 META 出现 buy-fresh 信号 (周内低点$596.66触及EMA8区间); LITE/AMD/MU/SNDK 均处强劲上行趋势",
+  "data_quality_warning": "K线数据为估算, 建议人工复核EMA值后再执行交易决策"
 }
