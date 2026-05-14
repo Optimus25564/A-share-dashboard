@@ -886,6 +886,14 @@ const WATCH = [
   {code:"688347",name:"华虹公司", cat:"base",  catLabel:"晶圆代工", w:2},
   {code:"688047",name:"龙芯中科", cat:"core",  catLabel:"自主指令集", w:2},
   {code:"601138",name:"工业富联", cat:"infra", catLabel:"服务器代工", w:2},
+  // 2026-05 新增观察
+  {code:"600584",name:"长电科技", cat:"base",  catLabel:"先进封装", w:6},
+  {code:"002463",name:"沪电股份", cat:"infra", catLabel:"AI PCB",   w:8},
+  {code:"300476",name:"胜宏科技", cat:"infra", catLabel:"AI PCB",   w:7},
+  {code:"002371",name:"北方华创", cat:"base",  catLabel:"半导体设备", w:8},
+  {code:"688012",name:"中微公司", cat:"base",  catLabel:"刻蚀设备", w:7},
+  {code:"688120",name:"华海清科", cat:"base",  catLabel:"CMP 设备",  w:4},
+  {code:"300604",name:"长川科技", cat:"base",  catLabel:"测试设备", w:4},
 ];
 // Code → market prefix
 function pfx(code){
@@ -969,12 +977,16 @@ function colorClass(n){
 let _quantWeights = null;
 function computeQuantWeights(){
   if (!companiesData) return null;  // 数据没加载时 fallback 到硬编码 r.w
-  const codes = WATCH.map(s => s.code);
+  // 仅对有完整 4 季 quarters 数据的票打分; 新加入未补数据的票自动跳过量化排名
+  const codes = WATCH.map(s => s.code).filter(code => {
+    const c = companiesData[code];
+    return c && c.quarters && c.quarters.length >= 4
+      && c.quarters.every(q => q.rev !== null && q.gm !== null && q.nm !== null);
+  });
   // 收集每只的原始因子值
   const IDEAL_TURNOVER = 5;  // 健康活跃区间的中点 (%); <1% 流动性差, >10% 投机过热
   const raw = codes.map(code => {
     const c = companiesData[code];
-    if (!c || !c.quarters || c.quarters.length < 4) return null;
     const qs = c.quarters;
     const revLatest = qs[qs.length-1].rev;
     const revYoYBase = qs[0].rev;
@@ -997,8 +1009,6 @@ function computeQuantWeights(){
       strategic: (c.strategic || 5) / 10
     };
   });
-
-  if (raw.some(r => !r)) return null;
 
   // z-score 标准化各因子 (战略评分已在 0-1，不需 z-score)
   function zscore(values){
