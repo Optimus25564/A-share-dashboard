@@ -702,5 +702,285 @@
     "strategic": 7,
     "market_cap_billion": 400,
     "avg_turnover_pct": 6
+  },
+  "600584": {
+    "intro": "国内封测龙头，全球Top3 OSAT。XDFOI芯粒高密度多维异构集成系列工艺量产，AI先进封装业务占比超42%，2025年先进封装收入达270亿元创新高，CPO实现样品出货，深度受益AI算力封装需求。",
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 92.7,
+        "gm": 12.7,
+        "nm": 2.88,
+        "src": "A",
+        "source_url": "https://finance.sina.com.cn/stock/aiassist/yjbg/2025-08-28/doc-infnpuac8155743.shtml"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 100.6,
+        "gm": 14.25,
+        "nm": 4.8,
+        "src": "A",
+        "source_url": "https://stock.stockstar.com/RB2025102500005372.shtml"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 102.0,
+        "gm": 13.8,
+        "nm": 6.0,
+        "src": "A",
+        "source_url": "https://stockmc.xueqiu.com/202604/600584_20260410_UBW0.pdf"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 91.7,
+        "gm": 14.55,
+        "nm": 3.16,
+        "src": "A",
+        "source_url": "https://finance.sina.com.cn/jjxw/2026-04-29/doc-inhwckrq6871876.shtml"
+      }
+    ],
+    "strategic": 8,
+    "market_cap_billion": 1000,
+    "avg_turnover_pct": 7.5
+  },
+  "002463": {
+    "intro": "AI服务器/交换机PCB龙头，英伟达GB200/GB300核心供应商，北美AI服务器份额超80%。GB300订单排至2026Q3，单机柜价值量超500美元，泰国二期产能2026年贡献50-60亿元营收。",
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 44.56,
+        "gm": 35.2,
+        "nm": 20.6,
+        "src": "A",
+        "source_url": "https://wap.stockstar.com/detail/RB2025082300006515"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 50.19,
+        "gm": 35.84,
+        "nm": 20.62,
+        "src": "A",
+        "source_url": "https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/search/rptid/816312994376/index.phtml"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 54.33,
+        "gm": 36.5,
+        "nm": 20.32,
+        "src": "A",
+        "source_url": "https://finance.sina.com.cn/stock/aigc/stockfs/2026-03-24/doc-inhsavwy0494234.shtml"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 62.14,
+        "gm": 35.63,
+        "nm": 19.98,
+        "src": "A",
+        "source_url": "https://finance.sina.com.cn/stock/relnews/cn/2026-04-22/doc-inhvkqha6082058.shtml"
+      }
+    ],
+    "strategic": 8,
+    "market_cap_billion": 2100,
+    "avg_turnover_pct": 4.5
+  },
+  "300476": {
+    "intro": "AI高端HDI/PCB领军，英伟达GB200/GB300服务器PCB全球份额超50%，2026年4月港股上市市值破3000亿港元。泰国二期产能放量，叠加谷歌TPU V7P订单贡献，2025年净利润同比+273.5%。",
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 47.19,
+        "gm": 36.22,
+        "nm": 25.9,
+        "src": "A",
+        "source_url": "https://wap.stockstar.com/detail/RB2025090600006117"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 51.0,
+        "gm": 35.85,
+        "nm": 21.6,
+        "src": "A",
+        "source_url": "https://wallstreetcn.com/articles/3757994"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 51.75,
+        "gm": 34.0,
+        "nm": 20.6,
+        "src": "A",
+        "source_url": "https://finance.sina.com.cn/roll/2026-03-12/doc-inhqtyyi4632124.shtml"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 63.8,
+        "gm": 34.46,
+        "nm": 33.86,
+        "src": "A",
+        "source_url": "https://caifuhao.eastmoney.com/news/20260422031335093485810"
+      }
+    ],
+    "strategic": 7,
+    "market_cap_billion": 380,
+    "avg_turnover_pct": 6
+  },
+  "002371": {
+    "intro": "国内半导体设备综合龙头，刻蚀/沉积/扩散/CMP/清洗/离子注入全平台布局，控股芯源微进一步拓展涂胶显影/清洗/封装设备。受益AI驱动晶圆厂史诗级扩产，2026年全球设备销售预期1450亿美元。",
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 79.4,
+        "gm": 42.1,
+        "nm": 18.9,
+        "src": "F",
+        "source_url": "https://finance.sina.com.cn/stock/aiassist/yjbg/2026-04-17/doc-inhuvrew3036909.shtml"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 111.6,
+        "gm": 40.3,
+        "nm": 17.2,
+        "src": "A",
+        "source_url": "https://wallstreetcn.com/articles/3758308"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 120.53,
+        "gm": 37.15,
+        "nm": 3.56,
+        "src": "A",
+        "source_url": "https://finance.sina.com.cn/stock/aigc/stockfs/2026-04-17/doc-inhuvres2044700.shtml"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 103.23,
+        "gm": 40.8,
+        "nm": 15.84,
+        "src": "A",
+        "source_url": "https://finance.eastmoney.com/a/202605013727341211.html"
+      }
+    ],
+    "strategic": 9,
+    "market_cap_billion": 3050,
+    "avg_turnover_pct": 1.5
+  },
+  "688012": {
+    "intro": "国产刻蚀设备龙头，CCP/ICP全覆盖，台积电/中芯/长江存储核心供应商，刻蚀反应台全球累计出货超6800台。新一代低温刻蚀设备已交付验证，薄膜LPCVD设备2025年收入同比+224%，5nm及以下产线批量应用。",
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 27.87,
+        "gm": 38.54,
+        "nm": 14.1,
+        "src": "A",
+        "source_url": "https://finance.sina.com.cn/stock/aiassist/yjbg/2025-08-28/doc-infnpuac8155743.shtml"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 31.09,
+        "gm": 39.6,
+        "nm": 16.21,
+        "src": "A",
+        "source_url": "https://finance.sina.com.cn/stock/aiassist/yjbg/2025-10-29/doc-infvqfei7936000.shtml"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 43.2,
+        "gm": 39.1,
+        "nm": 20.8,
+        "src": "A",
+        "source_url": "https://finance.sina.com.cn/roll/2026-04-01/doc-inhszihk2481807.shtml"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 29.15,
+        "gm": 40.5,
+        "nm": 31.9,
+        "src": "A",
+        "source_url": "https://finance.sina.com.cn/jjxw/2026-04-28/doc-inhvzfsh8542848.shtml"
+      }
+    ],
+    "strategic": 9,
+    "market_cap_billion": 2080,
+    "avg_turnover_pct": 2.5
+  },
+  "688120": {
+    "intro": "国产CMP设备唯一龙头，全球第三家12英寸CMP量产商。2026年4月第1000台CMP装备出机，存储/逻辑订单占比大，部分产能被核心客户提前锁定。先进制程机型订单显著增长，离子注入机交付存储龙头。",
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 12.65,
+        "gm": 45.8,
+        "nm": 24.7,
+        "src": "A",
+        "source_url": "https://reportify.cn/reports/1158827575217360896"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 10.17,
+        "gm": 40.97,
+        "nm": 22.4,
+        "src": "A",
+        "source_url": "https://stock.stockstar.com/RB2025110100007786.shtml"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 14.54,
+        "gm": 42.7,
+        "nm": 24.0,
+        "src": "A",
+        "source_url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-4/2026-04-23/12154282.PDF"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 12.01,
+        "gm": 42.31,
+        "nm": 20.57,
+        "src": "A",
+        "source_url": "https://finance.sina.com.cn/jjxw/2026-04-23/doc-inhvmvzh5090742.shtml"
+      }
+    ],
+    "strategic": 7,
+    "market_cap_billion": 580,
+    "avg_turnover_pct": 3
+  },
+  "300604": {
+    "intro": "国内测试设备No.1，覆盖SoC/逻辑/混合信号/RF芯片测试机+分选机+AOI。D9000数字测试机性能逼近国际先进水平，深度受益AI芯片+存储测试需求+封测厂扩产，在手订单覆盖2026全年1.6倍。",
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 11.45,
+        "gm": 55.5,
+        "nm": 24.3,
+        "src": "A",
+        "source_url": "https://finance.sina.com.cn/roll/2025-06-26/doc-infcmkha4557715.shtml"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 15.0,
+        "gm": 53.88,
+        "nm": 28.0,
+        "src": "A",
+        "source_url": "https://www.cls.cn/detail/2152396"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 18.32,
+        "gm": 36.29,
+        "nm": 10.11,
+        "src": "A",
+        "source_url": "https://finance.sina.com.cn/roll/2026-04-27/doc-inhvyeeu8966270.shtml"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 13.78,
+        "gm": 56.81,
+        "nm": 26.05,
+        "src": "A",
+        "source_url": "https://stock.stockstar.com/RB2026042600003756.shtml"
+      }
+    ],
+    "strategic": 7,
+    "market_cap_billion": 380,
+    "avg_turnover_pct": 5
   }
 }
