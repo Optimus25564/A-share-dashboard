@@ -1,149 +1,163 @@
 {
-  "last_run": "2026-05-14T08:30:00+08:00",
-  "run_date": "2026-05-13",
+  "last_run": "2026-05-15T08:30:00+08:00",
+  "run_date": "2026-05-14",
   "market": "US",
   "top5": [
     {
-      "code": "SNDK",
-      "name": "Sandisk",
-      "rank": 1,
-      "score": 1.4082
-    },
-    {
       "code": "MU",
       "name": "Micron",
-      "rank": 2,
-      "score": 1.3036
+      "rank": 1,
+      "score": 1.2127
     },
     {
       "code": "NVDA",
       "name": "Nvidia",
-      "rank": 3,
-      "score": 0.7659
+      "rank": 2,
+      "score": 1.1351
     },
     {
-      "code": "APP",
-      "name": "AppLovin",
+      "code": "TSM",
+      "name": "TSMC",
+      "rank": 3,
+      "score": 0.8327
+    },
+    {
+      "code": "ASML",
+      "name": "ASML",
       "rank": 4,
-      "score": 0.7551
+      "score": 0.6758
     },
     {
       "code": "AVGO",
       "name": "Broadcom",
       "rank": 5,
-      "score": 0.5076
+      "score": 0.6134
     }
   ],
   "candidates": [
     {
-      "code": "TSM",
-      "name": "TSMC",
-      "rank": 6,
-      "score": 0.4664
-    },
-    {
-      "code": "LITE",
-      "name": "Lumentum",
-      "rank": 7,
-      "score": 0.4548
-    },
-    {
-      "code": "AMD",
-      "name": "AMD",
-      "rank": 8,
-      "score": 0.4465
-    },
-    {
       "code": "META",
       "name": "Meta Platforms",
-      "rank": 9,
-      "score": 0.4361
+      "rank": 6,
+      "score": 0.4986
     },
     {
       "code": "GOOGL",
       "name": "Alphabet",
+      "rank": 7,
+      "score": 0.4328
+    },
+    {
+      "code": "MSFT",
+      "name": "Microsoft",
+      "rank": 8,
+      "score": 0.3687
+    },
+    {
+      "code": "CEG",
+      "name": "Constellation Energy",
+      "rank": 9,
+      "score": 0.3673
+    },
+    {
+      "code": "SNDK",
+      "name": "Sandisk",
       "rank": 10,
-      "score": 0.3932
+      "score": 0.3414
     }
   ],
   "signals": {
-    "SNDK": "hold",
     "MU": "hold",
     "NVDA": "hold",
-    "APP": "hold",
-    "AVGO": "hold",
     "TSM": "hold",
-    "LITE": "hold",
-    "AMD": "hold",
+    "ASML": "buy-fresh",
+    "AVGO": "hold",
     "META": "buy-fresh",
     "GOOGL": "hold",
+    "MSFT": "hold",
+    "CEG": "sell-warning",
+    "SNDK": "hold",
     "SPY": "hold"
   },
+  "signal_notes": {
+    "MU": "EMA8 625.50 > EMA21 442.08, low=776.00 above zone=638.01",
+    "NVDA": "EMA8 213.01 > EMA21 190.83, low=231.00 above zone=217.27",
+    "TSM": "EMA8 365.95 > EMA21 304.54, low=413.00 above zone=373.27",
+    "ASML": "EMA8 1509.07 > EMA21 1381.21, zone=1539.25, low(yesterday)=1500.00≤zone",
+    "AVGO": "EMA8 391.67 > EMA21 336.83, low=416.79 above zone=399.50",
+    "META": "EMA8 611.34 > EMA21 603.07, zone=623.57, low(today)=608.00≤zone",
+    "GOOGL": "EMA8 340.42 > EMA21 280.66, low=381.58 above zone=347.23",
+    "MSFT": "EMA8=395.50 vs EMA21=429.48, trend unclear",
+    "CEG": "close 274.89 < EMA8 294.42",
+    "SNDK": "EMA8 1224.69 > EMA21 930.53, low=1407.00 above zone=1249.18",
+    "SPY": "EMA8 707.70 > EMA21 670.56, low=743.56 above zone=721.85"
+  },
   "ema_snapshot": {
-    "SNDK": {
-      "close": 1443.77,
-      "ema8": 1170.8,
-      "ema21": 882.25
-    },
     "MU": {
-      "close": 802.5,
-      "ema8": 574.74,
-      "ema21": 405.97
+      "close": 803.16,
+      "ema8": 625.5,
+      "ema21": 442.08
     },
     "NVDA": {
-      "close": 225.57,
-      "ema8": 206.55,
-      "ema21": 186.35
-    },
-    "APP": {
-      "close": 490.69,
-      "ema8": 450.06,
-      "ema21": 440.78
-    },
-    "AVGO": {
-      "close": 409.14,
-      "ema8": 379.04,
-      "ema21": 326.92
+      "close": 235.63,
+      "ema8": 213.01,
+      "ema21": 190.83
     },
     "TSM": {
-      "close": 397.28,
-      "ema8": 350.96,
-      "ema21": 293.15
+      "close": 418.4,
+      "ema8": 365.95,
+      "ema21": 304.54
     },
-    "LITE": {
-      "close": 1044.0,
-      "ema8": 675.35,
-      "ema21": 396.65
+    "ASML": {
+      "close": 1593.31,
+      "ema8": 1509.07,
+      "ema21": 1381.21
     },
-    "AMD": {
-      "close": 448.29,
-      "ema8": 321.87,
-      "ema21": 248.54
+    "AVGO": {
+      "close": 435.88,
+      "ema8": 391.67,
+      "ema21": 336.83
     },
     "META": {
-      "close": 615.99,
-      "ema8": 609.71,
-      "ema21": 601.67
+      "close": 617.06,
+      "ema8": 611.34,
+      "ema21": 603.07
     },
     "GOOGL": {
-      "close": 402.48,
-      "ema8": 323.4,
-      "ema21": 268.73
+      "close": 400.0,
+      "ema8": 340.42,
+      "ema21": 280.66
+    },
+    "MSFT": {
+      "close": 404.24,
+      "ema8": 395.5,
+      "ema21": 429.48
+    },
+    "CEG": {
+      "close": 274.89,
+      "ema8": 294.42,
+      "ema21": 329.54
+    },
+    "SNDK": {
+      "close": 1413.31,
+      "ema8": 1224.69,
+      "ema21": 930.53
     },
     "SPY": {
-      "close": 742.31,
-      "ema8": 696.29,
-      "ema21": 662.85
+      "close": 747.65,
+      "ema8": 707.7,
+      "ema21": 670.56
     }
   },
   "market_context": {
-    "SPY_close": 742.31,
-    "QQQ_close": 714.65,
+    "SPY_close": 747.65,
+    "QQQ_close": 719.76,
     "SPY_signal": "hold",
-    "note": "SPY +28.6% YoY, QQQ +41.3% YoY; 市场处于强劲上行趋势; 4月初关税抛售已完全修复"
+    "note": "SPY close=747.65 (+0.7% vs prev); QQQ close=719.76; 市场处于强劲上行趋势, 关税停火后科技股持续走强"
   },
-  "kline_status": "partial: stooq/yahoo均返回403, K线数据由网络搜索已知价格+插值估算构建 (约27根周线); EMA值为近似值",
-  "sources": "stooq weekly K-line (blocked, 403), prices estimated via WebSearch news data",
-  "highlight": "🔔 META 出现 buy-fresh 信号 (周内低点$596.66触及EMA8区间); LITE/AMD/MU/SNDK 均处强劲上行趋势",
-  "data_quality_warning": "K线数据为估算, 建议人工复核EMA值后再执行交易决策"
+  "rank_changes": "Top5 变动: +['TSM', 'ASML'] -['SNDK', 'APP']",
+  "kline_status": "partial: stooq/yahoo均返回403; 价格来源于 WebSearch 已知收盘价 (May 14); EMA 基于上期状态文件递推更新 (增量一根日线); ASML/MSFT/CEG 为首次追踪, 初始EMA为估算值",
+  "sources": "WebSearch (May 14 US close prices), EMA incremental update from prev state",
+  "highlight": "⚠️ 卖出警告: CEG",
+  "data_quality_warning": "ASML/MSFT/CEG 的 EMA 为首次估算, 建议等3-5期后数值趋于稳定再执行交易决策"
 }
