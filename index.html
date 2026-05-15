@@ -2449,13 +2449,17 @@ async function renderSignals(bars, currentPeriod){
 
 // === 大盘指数加分项：上证综指是否站上自己的周线 EMA8 ===
 let _indexBullishCache = null;
+let _indexDistancePct = null;
 async function getIndexBullish(){
   if (_indexBullishCache !== null) return _indexBullishCache;
   try {
     const bars = await fetchKLineRaw("sh000001", "week", 60);
     if (bars.length < 9) return null;
     const ema8 = ind_EMA(bars.map(b=>b.close), 8);
-    _indexBullishCache = bars[bars.length-1].close > ema8[ema8.length-1];
+    const close = bars[bars.length-1].close;
+    const e8 = ema8[ema8.length-1];
+    _indexBullishCache = close > e8;
+    _indexDistancePct = (close - e8) / e8 * 100;
     return _indexBullishCache;
   } catch(e){ return null; }
 }
@@ -2514,9 +2518,14 @@ function renderBuyAlertBanner(results){
   const ts = watchScanState.lastRun ? new Date(watchScanState.lastRun).toLocaleTimeString("zh-CN", {hour12:false}) : "--";
   const ok = watchScanState.okCount || 0;
   const fail = watchScanState.failCount || 0;
-  const idxLabel = watchScanState.indexBullish === true ? '<span style="color:#7ee2a3">站上</span>'
-                : watchScanState.indexBullish === false ? '<span style="color:#ff8a95">未站上</span>'
-                : '<span style="color:var(--muted)">未知</span>';
+  const idxLabel = (() => {
+    const pct = _indexDistancePct;
+    if (watchScanState.indexBullish === null || pct === null) return '<span style="color:var(--muted)">上证 未知</span>';
+    const sign = pct >= 0 ? '+' : '';
+    if (pct < 0) return `<span style="color:#ff8a95">上证 距 EMA8 ${sign}${pct.toFixed(1)}% ✗ 已跌破</span>`;
+    if (pct < 3)  return `<span style="color:#f5b301">上证 距 EMA8 ${sign}${pct.toFixed(1)}% ⚠ 接近破位</span>`;
+    return `<span style="color:#7ee2a3">上证 距 EMA8 ${sign}${pct.toFixed(1)}% ✓ 多头</span>`;
+  })();
 
   // 数据全部失败 — 提示用户
   if (results.length === 0 && fail >= WATCH.length) {
@@ -2531,7 +2540,7 @@ function renderBuyAlertBanner(results){
       </div>`;
     document.getElementById("rescanBtn").onclick = () => {
       Object.keys(klCache).forEach(k => { if (k.endsWith(":week")) delete klCache[k]; });
-      _indexBullishCache = null;
+      _indexBullishCache = null; _indexDistancePct = null;
       watchScanState.results = null;
       runWatchScan(true);
     };
@@ -2555,12 +2564,12 @@ function renderBuyAlertBanner(results){
   const emptyHtml = (buys.length === 0 && sells.length === 0) ? `
     <div style="background:rgba(46,204,113,.06);border:1px solid rgba(46,204,113,.2);padding:12px;border-radius:6px">
       <div style="color:#7ee2a3;font-size:13px;font-weight:600;margin-bottom:4px">✓ 当前无买卖信号</div>
-      <div style="color:var(--muted);font-size:12px">${ok} 只已评估 · ${holds.length} 只持有/趋势中 · 大盘 ${idxLabel}</div>
+      <div style="color:var(--muted);font-size:12px">${ok} 只已评估 · ${holds.length} 只持有/趋势中 · ${idxLabel}</div>
     </div>` : "";
 
   banner.innerHTML = `
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-      <div style="font-size:13px;color:var(--muted)">📡 周线 EMA8/EMA21 趋势扫描 · ${ok} 只已评估${fail?` · <span style="color:#ff8a95">${fail} 失败</span>`:""} · 大盘 ${idxLabel} · 更新于 ${ts}</div>
+      <div style="font-size:13px;color:var(--muted)">📡 周线 EMA8/EMA21 趋势扫描 · ${ok} 只已评估${fail?` · <span style="color:#ff8a95">${fail} 失败</span>`:""} · ${idxLabel} · 更新于 ${ts}</div>
       <div>
         <button id="rescanBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:4px;font-size:11px;cursor:pointer">🔄 重新扫描</button>
         <button id="dismissAlertBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:4px;font-size:11px;cursor:pointer;margin-left:6px">✕ 隐藏</button>
@@ -2574,7 +2583,7 @@ function renderBuyAlertBanner(results){
   });
   document.getElementById("rescanBtn").onclick = async () => {
     Object.keys(klCache).forEach(k => { if (k.endsWith(":week")) delete klCache[k]; });
-    _indexBullishCache = null;
+    _indexBullishCache = null; _indexDistancePct = null;
     watchScanState.results = null;
     watchScanState.alertedKey = null;
     await runWatchScan(true);
@@ -3089,6 +3098,7 @@ async function initUSTab(){
 
 // ============ 美股周线 EMA 趋势扫描 (与 A股 同逻辑, 不同数据源) ============
 let _indexBullishCacheUS = null;
+let _indexDistancePctUS = null;
 const klCacheUS = {};  // US K-line 缓存, 防止重复拉取
 let watchScanStateUS = { running:false, lastRun:null, results:null, okCount:0, failCount:0, indexBullish:null };
 
@@ -3099,7 +3109,10 @@ async function getIndexBullishUS(){
     const bars = await fetchUSKLine("QQQ", "week", 60);
     if (bars.length < 9) return null;
     const ema8 = ind_EMA(bars.map(b=>b.close), 8);
-    _indexBullishCacheUS = bars[bars.length-1].close > ema8[ema8.length-1];
+    const close = bars[bars.length-1].close;
+    const e8 = ema8[ema8.length-1];
+    _indexBullishCacheUS = close > e8;
+    _indexDistancePctUS = (close - e8) / e8 * 100;
     return _indexBullishCacheUS;
   } catch(e){ return null; }
 }
@@ -3158,9 +3171,14 @@ function renderBuyAlertBannerUS(results){
   const ts = watchScanStateUS.lastRun ? new Date(watchScanStateUS.lastRun).toLocaleTimeString("zh-CN", {hour12:false}) : "--";
   const ok = watchScanStateUS.okCount || 0;
   const fail = watchScanStateUS.failCount || 0;
-  const idxLabel = watchScanStateUS.indexBullish === true ? '<span style="color:#7ee2a3">QQQ 站上 EMA8</span>'
-                : watchScanStateUS.indexBullish === false ? '<span style="color:#ff8a95">QQQ 跌破 EMA8</span>'
-                : '<span style="color:var(--muted)">大盘未知</span>';
+  const idxLabel = (() => {
+    const pct = _indexDistancePctUS;
+    if (watchScanStateUS.indexBullish === null || pct === null) return '<span style="color:var(--muted)">QQQ 未知</span>';
+    const sign = pct >= 0 ? '+' : '';
+    if (pct < 0) return `<span style="color:#ff8a95">QQQ 距 EMA8 ${sign}${pct.toFixed(1)}% ✗ 已跌破</span>`;
+    if (pct < 3)  return `<span style="color:#f5b301">QQQ 距 EMA8 ${sign}${pct.toFixed(1)}% ⚠ 接近破位</span>`;
+    return `<span style="color:#7ee2a3">QQQ 距 EMA8 ${sign}${pct.toFixed(1)}% ✓ 多头</span>`;
+  })();
 
   if (results.length === 0 && fail >= 30) {
     banner.innerHTML = `
@@ -3189,14 +3207,14 @@ function renderBuyAlertBannerUS(results){
   const emptyHtml = (buys.length === 0 && sells.length === 0) ? `
     <div style="background:rgba(46,204,113,.06);border:1px solid rgba(46,204,113,.2);padding:12px;border-radius:6px">
       <div style="color:#7ee2a3;font-size:13px;font-weight:600;margin-bottom:4px">✓ 当前无买卖信号</div>
-      <div style="color:var(--muted);font-size:12px">${ok} 只已评估 · ${holds.length} 只持有/趋势中 · 大盘 ${idxLabel}</div>
+      <div style="color:var(--muted);font-size:12px">${ok} 只已评估 · ${holds.length} 只持有/趋势中 · ${idxLabel}</div>
     </div>` : "";
 
   const failedCodes = watchScanStateUS.failedCodes || [];
   const failHtml = fail ? ` · <span style="color:#ff8a95" title="腾讯接口不支持以下 ETF: ${failedCodes.join(', ')}">${fail} 不支持 (${failedCodes.join('/')})</span>` : "";
   banner.innerHTML = `
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-      <div style="font-size:13px;color:var(--muted)">📡 美股周线 EMA8/EMA21 趋势扫描 · ${ok} 只已评估${failHtml} · 大盘 ${idxLabel} · 更新于 ${ts}</div>
+      <div style="font-size:13px;color:var(--muted)">📡 美股周线 EMA8/EMA21 趋势扫描 · ${ok} 只已评估${failHtml} · ${idxLabel} · 更新于 ${ts}</div>
       <button id="rescanUSBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:4px;font-size:11px;cursor:pointer">🔄 重新扫描</button>
     </div>
     ${strongBuyHtml}${weakBuyHtml}${sellHtml}${emptyHtml}`;
@@ -3206,7 +3224,7 @@ function renderBuyAlertBannerUS(results){
   });
   document.getElementById("rescanUSBtn").onclick = async () => {
     Object.keys(klCacheUS).forEach(k => delete klCacheUS[k]);
-    _indexBullishCacheUS = null;
+    _indexBullishCacheUS = null; _indexDistancePctUS = null;
     watchScanStateUS.results = null;
     await runWatchScanUS(true);
   };
@@ -3257,7 +3275,7 @@ loadCompanies().then(() => {
 runWatchScan(false);
 setInterval(() => {
   Object.keys(klCache).forEach(k => { if (k.endsWith(":week")) delete klCache[k]; });
-  _indexBullishCache = null;
+  _indexBullishCache = null; _indexDistancePct = null;
   watchScanState.results = null;
   runWatchScan(true);
 }, 30 * 60 * 1000);
