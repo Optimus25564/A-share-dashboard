@@ -63,6 +63,14 @@
       "url": "https://www.fool.com/investing/2026/05/13/prediction-nvidia-stock-will-soar-on-may-20/",
       "source": "Motley Fool",
       "content": "NVDA hit intraday ATH $227.84 on May 13, pushing market cap to $5.4 trillion. 37 analysts rate Strong Buy with $272 consensus target. Earnings scheduled May 20; consensus calls for $78.8B revenue and $1.77 EPS. China H200 stalled; Jensen Huang excluded from Trump China delegation."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "policy",
+      "title": "Trump-Xi Summit May 14-15: H200 AI Chip Sales Cleared to ~10 Chinese Firms; US-China Tariffs Cut 145%→30%",
+      "url": "https://www.abhs.in/blog/us-china-trade-truce-beijing-summit-chip-export-controls-semiconductor-may-2026",
+      "source": "Abhishek Gautam",
+      "content": "US-China trade truce (May 12) cut US tariffs 145%→30%, China tariffs 125%→10%. At Trump-Xi summit May 14-15, Washington cleared H200 GPU sales to ~10 Chinese firms (Alibaba, Tencent, ByteDance). Blackwell controls NOT lifted. Semiconductor export controls, rare earth restrictions, and antitrust probes vs Nvidia/Qualcomm/Intel remain on negotiating table."
     }
   ],
   "AVGO": [
@@ -97,6 +105,22 @@
       "url": "https://rollingout.com/2026/05/11/broadcom-avgo-100b-ai-chip-projection/",
       "source": "Rolling Out",
       "content": "Broadcom CEO Hock Tan reiterated the $100B AI chip revenue target for 2027, citing 'unprecedented' demand for custom ASIC solutions. Google TPU, Meta MTIA, and a third hyperscaler ASIC program in development. Q2 FY2026 AI semiconductor revenue guided $10.7B (+140% YoY); June 3 earnings confirmed. AVGO backlog $73B with 18-month visibility."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "research",
+      "title": "Wells Fargo Raises Broadcom Price Target to $545 from $430; AI Semiconductor Revenue Running 30-40% Above Prior Estimates",
+      "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-5-14-why-broadcom-avgo-stock-is-up-today",
+      "source": "StockStory / FinancialContent",
+      "content": "Wells Fargo raised AVGO price target to $545 from $430, citing AI semiconductor revenue tracking 30-40% above prior estimates. Wolfe Research and Citi also raised targets to $500. AVGO rose 4.3% to new 52-week high $438. Year-to-date gain 26.1%."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "announcement",
+      "title": "Broadcom Discloses Meta Partnership to Co-Develop 2nm Custom AI Chip; Citi Forecasts AI Revenue to Hit 81% of Sales by FY2028",
+      "url": "https://www.investing.com/news/stock-market-news/why-is-broadcom-stock-surging-today-93CH-4689080",
+      "source": "Investing.com",
+      "content": "Broadcom disclosed partnership with Meta Platforms to co-develop a 2nm custom AI ASIC, expanding its hyperscaler ASIC client base beyond Google TPU. Citi forecasts Broadcom AI revenue growing from ~49% of total sales currently to ~81% by fiscal Q4 2028. Adds to existing Google TPU and Meta MTIA relationships."
     }
   ],
   "AMD": [
@@ -139,6 +163,14 @@
       "url": "https://www.fool.com/investing/2026/05/10/is-it-too-late-to-buy-amd-after-12-month-gain-of/",
       "source": "The Motley Fool",
       "content": "Following AMD Q1 2026 blowout results, 33 analysts maintain Buy consensus with median price target $383.45. CEO Lisa Su confirmed MI450 customer demand is exceeding initial expectations; AMD guided Q2 revenue ~$11.2B (+46% YoY)."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "news",
+      "title": "AMD Approaches $1 Trillion Market Cap ($731B) After Blowout Q1; Data Center Revenue +57% YoY; Q2 Guide $11.2B",
+      "url": "https://www.fool.com/investing/2026/05/14/after-amds-blowout-earnings-report-is-this-ai-stoc/",
+      "source": "Motley Fool",
+      "content": "AMD Q1 2026 (reported May 5): revenue $10.25B (+38% YoY, beat $9.89B est), data center segment $5.8B (+57% YoY), non-GAAP EPS $1.37 beat $1.29 est. Q2 guide $11.2B (+46% YoY), non-GAAP GM ~56%. Market cap reached $731B on May 14, analysts speculate $1T milestone achievable in 2026."
     }
   ],
   "INTC": [
@@ -221,6 +253,14 @@
       "url": "https://www.timothysykes.com/news/intel-corporation-intc-news-2026_05_11/",
       "source": "Timothy Sykes / CNBC",
       "content": "Intel stock gained 4.65% on May 11, extending a 116% month-to-date surge, as reports confirmed both Apple foundry agreement and Google expanding partnership for EMIB advanced packaging on next-gen TPU chips. Google also committed to multiple generations of Intel CPUs for AI data center workloads. Dual hyperscaler customer wins — Apple (entry-level Mac/iPad chips) + Google (TPU EMIB + CPU) — cement Intel 18A Foundry Services as a commercial alternative to TSMC."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "research",
+      "title": "INTC Falls 5.21% on May 14: HSBC Downgrades; UBS Warns AMD at 27.4%, ARM at 17.7% Server CPU Share; Foundry Loss $2.3B",
+      "url": "https://www.tradingkey.com/news/market-movers/261895377-market-movers-intc-20260514",
+      "source": "TradingKey",
+      "content": "Intel stock fell 5.21% on May 14. HSBC downgraded Intel noting prior rally was based on one-off deals not sustainable fundamentals. UBS flagged server CPU market share erosion: Intel at 54.9% (down 370bps sequentially), AMD gained 230bps to 27.4%, ARM gained 140bps to 17.7%. Intel Foundry Q1 2026 operating loss $2.3B; 18A and 14A process yields below expectations."
     }
   ],
   "QCOM": [
@@ -255,6 +295,14 @@
       "url": "https://rollingout.com/2026/05/11/qualcomm-qcom-record-high-9-surge/",
       "source": "Rolling Out",
       "content": "QCOM surged 9% on May 11 to intraday all-time record $247.90, extending a 42% gain over 5 consecutive trading days. Catalysts: hyperscaler data center silicon shipments confirmed; 90-day US-China tariff suspension boosting smartphone demand; analyst upgrades (Daiwa Outperform $225, Tigress $280, Benchmark $225). QCOM led both S&P 500 and Nasdaq 100 in performance on the day."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "research",
+      "title": "QCOM Down 4.47% on May 14: BNP Paribas Downgrades to Neutral, Cuts Target $180→$120; UBS Trims to $150 on Handset Weakness",
+      "url": "https://www.tradingkey.com/news/market-movers/261895499-market-movers-qcom-20260514",
+      "source": "TradingKey",
+      "content": "Qualcomm fell 4.47% on May 14 as profit-taking met fresh downgrades. BNP Paribas cut to Neutral with target slashed from $180 to $120, citing anticipated low double-digit smartphone shipment declines in 2026, slow diversification, and lack of near-term growth catalysts. UBS trimmed target from $160 to $150 on deteriorating handset fundamentals."
     }
   ],
   "MRVL": [
@@ -357,6 +405,14 @@
       "url": "https://www.tipranks.com/news/company-announcements/tsmc-approves-up-to-us20-billion-capital-injection-for-arizona-unit",
       "source": "TipRanks / TSMC",
       "content": "TSMC disclosed its U.S. subsidiary TSMC Arizona Corporation approved a capital increase plan authorizing up to $20B injection from parent TSMC, subject to regulatory approvals. Funds support large-scale fab construction and equipment spending under the US-Taiwan trade deal framework (15% tariff cap). Total Arizona investment on track toward $165B+; second fab P2 tool move-in target October 2026, targeting N2 and A16 process nodes."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "announcement",
+      "title": "TSMC Technology Symposium 2026: Global Chip Market $1.5T by 2030; AI/HPC to Reach 55% Share; 9 Fab Phases Planned",
+      "url": "https://www.digitimes.com/news/a20260514PD231/tsmc-technology-packaging-demand-2026.html",
+      "source": "Digitimes",
+      "content": "At annual Hsinchu technology symposium May 14, TSMC forecast global semiconductor market exceeding $1.5T by 2030: AI/HPC 55%, smartphones 20%, automotive 10%. TSMC planning 9 phases of wafer fab and advanced packaging facilities in 2026. Stock hit new ATH $421.97, market cap ~$2.2T. Quarterly dividend increased 17.2%."
     }
   ],
   "ASML": [
@@ -749,6 +805,22 @@
       "url": "https://www.alphapilot.tech/discover/alphabet-sets-the-android-show-for-may-12-to-showcase-gemini-ai-integration",
       "source": "AlphaPilot Tech",
       "content": "Alphabet announced 'The Android Show: I/O Edition' broadcast on May 12, 2026, as a precursor to Google I/O. Expected highlights: Android 17 (Cinnamon Bun) and deep Gemini AI ecosystem integration across mobile devices — including on-device multimodal AI, expanded Gemini 2.0 assistant functions, and developer APIs for Gemini integration in third-party apps."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "news",
+      "title": "Alphabet Hits 17th ATH of 2026 at ~$402 on Googlebook Laptop Launch; Google I/O Scheduled May 19 with Gemini 4.0",
+      "url": "https://www.foreignpolicyjournal.com/2026/05/14/alphabet-nasdaq-googl-stock-price-hits-17th-intraday-record-of-2026-as-googlebook-launch-drives-fresh-buzz/",
+      "source": "Foreign Policy Journal",
+      "content": "GOOGL hit its 17th intraday ATH of 2026 at ~$402 on May 14. New catalyst: Googlebook premium laptop powered by Android and Gemini AI, positioned as Gemini Intelligence-first computing device. Google I/O scheduled May 19 with expected Gemini 4.0 launch, AI smart glasses, and Gemini ecosystem announcements. 2026 capex guidance $180-190B."
+    },
+    {
+      "date": "2026-05-11",
+      "type": "announcement",
+      "title": "Anthropic Commits $200B to Google Cloud Over 5 Years; Multi-Gigawatt TPU Access in Broadcom Partnership",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/alphabet-googl-ai-cloud-surge-165904806.html",
+      "source": "Yahoo Finance",
+      "content": "Anthropic committed to spending $200B over 5 years on Google Cloud infrastructure, securing multi-gigawatt access to Google TPUs co-developed with Broadcom. One of the largest cloud infrastructure commitments ever. Solidifies Google Cloud as Anthropic's primary AI infrastructure partner and significantly boosts GCP AI revenue trajectory."
     }
   ],
   "AMZN": [
@@ -841,6 +913,14 @@
       "url": "https://www.bloomberg.com/news/articles/2026-05-11/meta-sued-by-california-county-over-scam-advertisements",
       "source": "Bloomberg",
       "content": "Santa Clara County, California filed suit against Meta alleging the company knowingly facilitates and profits from billions of scam advertisements across Facebook and Instagram. Separately, Chinese regulators blocked Meta's proposed acquisition of AI startup Manus citing geopolitical and regulatory concerns — a setback for Meta's AI strategy in Asia. META stock up 33% YoY in Q1 but down in May on litigation and capex overspend concerns."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "news",
+      "title": "Meta Q1 2026 Summary: Net Income +61% YoY; 2026 AI Capex Raised to $125-145B; Q2 Revenue Guide $59.5B (+25% YoY)",
+      "url": "https://www.fool.com/investing/2026/05/14/meta-platforms-stock-bargain-right-now/",
+      "source": "Motley Fool",
+      "content": "Meta Platforms Q1 2026: net income grew 61% YoY despite elevated AI capex. Raised FY2026 capex guidance to $125-145B from $115-135B due to higher component costs and additional data center capacity for future years. Q2 2026 revenue midpoint guide $59.5B (+25% YoY). Daily active users declined slightly in Q1 due to Iran internet disruptions and Russia WhatsApp restrictions."
     }
   ],
   "AAPL": [
@@ -933,6 +1013,14 @@
       "url": "https://www.benzinga.com/news/politics/26/05/52463767/elon-musk-joins-trumps-china-trip-nvidia-ceo-jensen-huang-not-invited",
       "source": "Benzinga",
       "content": "Elon Musk joins Trump's May 13-15 China state visit delegation, with Tesla seeking EV market access recovery and supply chain stability. Separately, NHTSA confirmed Tesla's 2026 Model Y successfully passed ADAS tests for pedestrian emergency braking, lane-keeping, and blind-spot warnings — a regulatory milestone supporting Tesla's FSD and Robotaxi expansion. TSLA stock up 54% from November 2025 low; Optimus factory preparations underway at Fremont and Gigafactory Texas."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "news",
+      "title": "Tesla FSD v14.3 Launches with 20% Lower Inference Latency; Model S/X Fremont Lines Shut to Enable Optimus Robot Factory",
+      "url": "https://www.fxleaders.com/news/2026/05/14/tesla-tsla-stock-surges-toward-445-china-growth-strong-earnings-and-robotaxi-hype-drive-momentum-in-2026/",
+      "source": "FX Leaders",
+      "content": "Tesla launched FSD (Supervised) v14.3 with 20% lower inference latency, improved vision perception, and enhanced edge case handling. Model S/X production lines at Fremont permanently closed to make way for Optimus humanoid robot factory targeting 1M robots/year. Tesla also received EU FSD approval in Netherlands. Q1 2026 FSD subscribers: 1.3M (up from ~850K a year ago)."
     }
   ],
   "CRWV": [
@@ -1137,6 +1225,14 @@
       "url": "https://www.cameco.com/media/news/northern-saskatchewan-operations-update-0",
       "source": "Cameco",
       "content": "Flooding in northern Saskatchewan collapsed Smoothstone River Bridge, cutting supply access to McArthur River mine and Key Lake mill. Cameco temporarily halted Key Lake milling and reduced McArthur River mining activity. Long-term guidance unchanged; near-term production impact being assessed."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "policy",
+      "title": "White House NSTM-3 Mandates Space Nuclear by 2028; Uranium Spot Price $86.55/lb (+24% TTM); Nuclear Demand Momentum Builds",
+      "url": "https://www.tickerreport.com/banking-finance/13436141/cameco-touts-nuclear-demand-surge-strong-2025-results-at-annual-meeting.html",
+      "source": "Ticker Report",
+      "content": "White House National Science and Technology Memorandum 3 (April 14) mandates space-based nuclear deployment by 2028 and lunar reactor by 2030 — a new demand driver for uranium. Uranium spot price: $86.55/lb (+24% trailing 12 months). Cameco board chair cited building momentum in government, industry, and public support for nuclear energy at annual meeting."
     }
   ],
   "SMH": [
@@ -1163,6 +1259,14 @@
       "url": "https://www.sahmcapital.com/news/content/semiconductor-etfs-soxx-smh-just-logged-their-best-month-ever-whats-driving-this-rally-2026-05-01",
       "source": "Sahm Capital",
       "content": "VanEck Semiconductor ETF (SMH) and iShares SOXX logged their best monthly performance on record in April 2026, driven by AMD Q1 blowout (+14%), Intel 18A Apple deal (+13%), and continued Micron HBM supercycle narrative. SMH +45% YTD; SOXX +60% YTD. Broadband AI chipmaker earnings driving sector-wide multiple expansion across SMH's top holdings."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "policy",
+      "title": "US-China Trade Truce: Tariffs Cut Sharply; H200 AI Chip Sales Cleared to Chinese Firms; Semiconductor Sector Broadly Rallies",
+      "url": "https://www.cnbc.com/2026/05/14/trump-xi-summit-tech-flashpoints.html",
+      "source": "CNBC",
+      "content": "US-China trade truce (May 12) cut US tariffs from 145% to 30% and Chinese tariffs from 125% to 10%. At Trump-Xi Beijing summit May 14-15, Washington cleared H200 AI GPU sales to ~10 major Chinese tech firms (Alibaba, Tencent). Blackwell controls not lifted. Semiconductor sector rallied broadly: NVDA +4.5%, TSM +5%, ANET +4.5%. Chip export controls and rare earth restrictions remain under negotiation."
     }
   ],
   "XLU": [
@@ -1261,6 +1365,14 @@
       "url": "https://finance.yahoo.com/news/look-rocket-lab-rklb-valuation-150812886.html",
       "source": "Yahoo Finance",
       "content": "A Neutron upper-stage tank rupture during testing has pushed the initial launch target to Q4 2026 or potentially early 2027. CEO Peter Beck stated Archimedes engine is undergoing 'nasty' qualification tests and vehicle is 'on track for Q4 if engine survives.' Stage separation test completed successfully in May. Valuation now carries first-launch execution risk premium despite record $2.2B backlog and 31+ contracts in Q1."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "announcement",
+      "title": "Rocket Lab Acquires Motiv Space Systems for Up to $60M; Backlog Hits $2.2B Record; RKLB Reaches New 52-Week High $131",
+      "url": "https://www.fool.com/investing/2026/05/14/rocket-lab-buys-a-rival-for-40-million-cash/",
+      "source": "Motley Fool",
+      "content": "Rocket Lab agreed to acquire Motiv Space Systems for up to $60M in cash and stock. Motiv makes robotic space equipment used on Mars Perseverance rover. Q1 2026: revenue $200M (+63.5% YoY). Signed 31 new Electron/HASTE contracts plus 5 Neutron agreements, bringing total backlog to $2.2B (record). Neutron rocket first launch on track for late 2026. RKLB +5.8% to new 52-week high $131."
     }
   ],
   "HUBB": [
@@ -1331,6 +1443,14 @@
       "url": "https://www.fxleaders.com/news/2026/05/13/arista-networks-anet-stock-at-142-strong-q1-2026-earnings-beat-ai-data-center-demand-fuel-25-35-upside-outlook/",
       "source": "FX Leaders",
       "content": "ANET sold off 17.9% post-Q1 despite strong results (revenue $2.71B +35% YoY, EPS beat $0.87 vs $0.79) and raised 2026 guidance to $11.5B. Analysts attribute decline to guidance miss vs. buy-side expectations and elevated supply constraint commentary (1-2 years across wafers, silicon, optics, memory). Consensus now sees 25-35% upside from $142 as demand fundamentals remain intact."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "news",
+      "title": "Arista Networks Rebounds +4.52% to $148 After Post-Earnings Selloff; Full-Year 2026 Outlook Raised to $11.5B",
+      "url": "https://www.tradingkey.com/news/market-movers/261895764-market-movers-anet-20260514",
+      "source": "TradingKey",
+      "content": "ANET recovered 4.52% to $148.48 on May 14, partially reversing the post-Q1-earnings selloff. Q1 revenue $2.71B beat; Q2 guide ~$2.8B; full-year 2026 raised to $11.5B on strong AI fabric demand from Meta and Microsoft hyperscalers. Supply chain constraints persist but Buy consensus from 17 analysts."
     }
   ],
   "ARM": [
@@ -1391,6 +1511,14 @@
       "url": "https://simplywall.st/stocks/us/semiconductors/nasdaq-lrcx/lam-research/news/what-lam-research-lrcxs-ai-fueled-margin-gains-amid-macro-te",
       "source": "Simply Wall St.",
       "content": "Lam Research guided Q4 FY2026 revenue to $6.6B (9.4% above prior consensus), confirming continued AI-driven equipment demand acceleration. WFE industry 2026 forecast raised by LRCX to $140B — the highest ever. Stock +300% over trailing 12 months; closed $289 on May 12 (one-month return +10%). Non-GAAP gross margin approaching 50%; management guided modest margin improvement next quarter."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "news",
+      "title": "Lam Research Touches All-Time High $300 for First Time (+73% YTD); B. Riley Raises PT to $375; 2026 WFE Forecast $140B",
+      "url": "https://www.mexc.com/news/1093509",
+      "source": "MEXC",
+      "content": "LRCX crossed $300 intraday on May 14 (first-ever ATH), up 73% YTD and ~250% YoY. B. Riley raised PT to $375 from $350 (Buy). Q3 FY2026: EPS $1.47 vs $1.36 est, revenue $5.84B (+23.8% YoY). Lam raised 2026 wafer fabrication equipment spending forecast to ~$140B from $135B on AI-driven HBM and advanced NAND demand."
     }
   ],
   "CDNS": [
@@ -1477,6 +1605,14 @@
       "url": "https://www.cnbc.com/2026/05/04/palantir-pltr-q1-earnings-report-2026.html",
       "source": "CNBC / Palantir Q1 2026 Earnings Call",
       "content": "Palantir disclosed on Q1 2026 earnings call that the DoD FY2027 budget proposal includes $2.3B specifically allocated for Maven Smart System — providing multi-year revenue visibility significantly above current annual run rate for the program. Maven usage doubled over 4 months and is 4x higher over 12 months across combatant commands and intelligence applications. US government revenue +84% YoY to $687M in Q1 2026. Average contract size ~4x what it was 4 quarters ago."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "news",
+      "title": "Palantir Rises 2.9% in Sympathy with Cisco Blowout; FY2026 Revenue Guide $7.65-7.66B (+71% YoY Above Consensus)",
+      "url": "https://www.foreignpolicyjournal.com/2026/05/14/palantir-nasdaq-pltr-jumps-2-9-as-cisco-nasdaq-csco-earnings-boost-software-sector-sentiment/",
+      "source": "Foreign Policy Journal",
+      "content": "PLTR rose 2.9% on May 14, lifted by Cisco's blowout Q3 results boosting software/AI infrastructure sector sentiment. Palantir FY2026 guide: $7.65-7.66B (+71% YoY) well above $7.27B consensus. Q1 2026 (May 4): revenue $1.63B vs $1.54B est, EPS $0.33 vs $0.27 est."
     }
   ],
   "IREN": [
@@ -1701,6 +1837,14 @@
       "url": "https://www.techi.com/cisco-csco-q3-fy26-earnings-preview-may-13/",
       "source": "TECHi",
       "content": "Cisco reports Q3 FY2026 (ended April 25) after close May 13. Mgmt guided $15.4-15.6B revenue and adj EPS $1.02-1.04 — above prior Street consensus. Key watch: AI infrastructure orders vs Q2's $2.1B pace (toward >$5B full-year target); ~$3B of that order book converting to hyperscaler revenue in FY26. Options pricing ~10% implied move. Silicon One AI ASIC adoption, Splunk security integration, and gross margin management in focus."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "announcement",
+      "title": "Cisco Q3 FY2026: Revenue $15.84B (+12% YoY) Beats; Stock +15%; Hyperscaler AI Orders >2x YoY; Q4 Guide $16.7-16.9B",
+      "url": "https://investor.cisco.com/news/news-details/2026/CISCO-REPORTS-THIRD-QUARTER-EARNINGS/default.aspx",
+      "source": "Cisco Investor Relations",
+      "content": "Cisco Q3 FY2026 (ended April 25): revenue $15.84B beat $15.56B est (+12% YoY), adj EPS $1.06 beat $1.04 est. Product orders +35% YoY; hyperscaler AI orders more than doubled. CSCO jumped 15-17% on May 14 — largest single-day gain in 14 years. Q4 guide: revenue $16.7-16.9B, adj EPS $1.16-$1.18. Restructuring: <4,000 job cuts (<5% workforce)."
     }
   ],
   "PWR": [
