@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-05-13",
+    "updated": "2026-05-17",
     "note": "AI CapEx 产业链 8 层框架. 财报数据自然季度 (2025Q2→2026Q1). 单位 rev=亿$.",
     "categories": {
       "core_chip": "L1 算力芯片 & 加速器",
@@ -566,8 +566,9 @@
         "rev": 239,
         "gm": 74.4,
         "nm": 57.8,
-        "src": "F",
-        "note": "营收 239 亿美元 / GM 74.4% 异常高 - 数据待校核, 实际可能 ~80 亿"
+        "src": "A",
+        "source_url": "https://investors.micron.com/news-releases/news-release-details/micron-technology-inc-reports-results-second-quarter-fiscal-2026",
+        "note": "FY2026 Q2 (Dec25-Feb26): HBM/AI内存爆发, 营收同比+196%至$238.6亿, GM 74.4%创历史新高, GAAP净利润$137.9亿"
       }
     ]
   },
@@ -2426,6 +2427,49 @@
         "gm": 77,
         "nm": 15.7,
         "src": "A"
+      }
+    ]
+  },
+  "RKLB": {
+    "name": "Rocket Lab",
+    "cat": "other",
+    "catLabel": "航天运载",
+    "intro": "全球最活跃商业小型运载火箭公司, Electron火箭领先. 空间系统(卫星制造)高增速, Neutron中型火箭在研. AI驱动国防/商业卫星需求受益, 2026Q1营收创历史新高$2亿.",
+    "strategic": 7,
+    "market_cap_billion": 722,
+    "avg_turnover_pct": 6,
+    "quarters": [
+      {
+        "q": "2025Q2",
+        "rev": 1.4,
+        "gm": 32.2,
+        "nm": -46.1,
+        "src": "A",
+        "source_url": "https://www.tradingview.com/news/tradingview:5f70aa14da243:0-rocket-lab-q2-2025-financial-results/"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 1.6,
+        "gm": 37.0,
+        "nm": -11.8,
+        "src": "A",
+        "source_url": "https://www.globenewswire.com/news-release/2025/11/10/3185076/0/en/Rocket-Lab-Announces-Third-Quarter-2025-Financial-Results-Posts-Record-Quarterly-Revenue-of-155m-Representing-48-Year-on-Year-Growth-at-Record-Gross-Margin.html"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 1.8,
+        "gm": 38.0,
+        "nm": -29.4,
+        "src": "A",
+        "source_url": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-fourth-quarter-and-full-year-2025-financial"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 2.0,
+        "gm": 38.2,
+        "nm": -22.5,
+        "src": "A",
+        "source_url": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-first-quarter-2026-financial-results"
       }
     ]
   }
