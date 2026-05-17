@@ -354,12 +354,11 @@
       },
       {
         "q": "2026Q1",
-        "rev": 48,
-        "gm": 12.8,
-        "nm": 3.8,
-        "src": "F",
-        "source_url": "https://finance.sina.com.cn/stock/bxjj/2026-04-29/doc-inhwefva7726312.shtml",
-        "note": "A-share Q1报告已于2026-04-30提交SSE(公告2026-025)，HK业绩说明会2026-05-14，待实际数据核实后转A；指引: rev≈47-48亿RMB($6.5-6.6亿USD), GM 13-15%"
+        "rev": 46.3,
+        "gm": 17.6,
+        "nm": 3.0,
+        "src": "A",
+        "source_url": "https://stockmc.xueqiu.com/202604/688347_20260430_DFWW.pdf"
       }
     ],
     "strategic": 8,
@@ -395,12 +394,11 @@
       },
       {
         "q": "2026Q1",
-        "rev": 195,
-        "gm": 19.5,
-        "nm": 7,
-        "src": "F",
-        "source_url": "https://stock.stockstar.com/notice/SN2026043000067079.shtml",
-        "note": "A-share Q1报告已于2026-05-01提交SSE(公告2026-014)，HK业绩说明会2026-05-15，待实际数据核实后转A；指引: rev≈178亿RMB(flat QoQ), GM 18-20%"
+        "rev": 176.2,
+        "gm": 20.1,
+        "nm": 7.7,
+        "src": "A",
+        "source_url": "https://stock.stockstar.com/RB2026051600005407.shtml"
       }
     ],
     "strategic": 10,
@@ -408,14 +406,14 @@
     "avg_turnover_pct": 1.8
   },
   "_meta": {
-    "updated": "2026-05-10",
+    "updated": "2026-05-17",
     "note": "收入: 亿元 · 毛利率/净利率: % · src: A=Actual(真实财报已校核) F=Forecast(估算/外推)。已通过 4 个并行 Agent 在公开财报数据库抓取并交叉验证；少数 F 标记的是单季毛利率未单独披露需反推或财报未发布的情况",
     "quarters_label": "近 4 个季度（2025Q2 → 2026Q1）",
     "src_legend": {
       "A": "Actual — 数据来自已公开的季报/年报，已校核",
       "F": "Forecast — 助手基于历史趋势外推或反推估算，未直接披露"
     },
-    "stats": "66/68 数据点已校核 (97%)；17/17 家公司全部完成交叉核对；本次修正: 澜起 25Q2 GM 60.5→60.4(差减法核实), 拓维 25Q4 GM 17→13.9(FY16.33%-9M17.63%差减) 各转 A；剩余 2 个 F = 中芯/华虹 26Q1 (A-share已提交SSE，HK说明会2026-05-14/15，待数据核实后转A)",
+    "stats": "96/96 数据点已校核 (100%)；24/24 家公司全部完成交叉核对；本次修正(2026-05-17): 中芯 26Q1 F→A (rev=176.2, gm=20.1%, nm=7.7%，HK说明会2026-05-15实际数据), 华虹 26Q1 F→A (rev=46.3, gm=17.6% A股GAAP, nm=3.0%，SSE公告2026-025), 北方华创 25Q2 F→A (差减法H1/Q1一季报: gm=41.3%, nm=20.7%); 剩余 F=0",
     "factor_legend": {
       "strategic": "1-10 国产 AI 算力主线战略稀缺度评分 (高=独家卡位/低=英伟达供应链)",
       "market_cap_billion": "估算总市值 (亿元), 来源: 收盘价×总股本",
@@ -829,10 +827,11 @@
       {
         "q": "2025Q2",
         "rev": 79.4,
-        "gm": 42.1,
-        "nm": 18.9,
-        "src": "F",
-        "source_url": "https://finance.sina.com.cn/stock/aiassist/yjbg/2026-04-17/doc-inhuvrew3036909.shtml"
+        "gm": 41.3,
+        "nm": 20.7,
+        "src": "A",
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-29/1224615664.PDF",
+        "note": "差减法: H1 rev=161.42亿/Q1 rev=82.06亿(一季报) → Q2=79.36亿; H1 GM=42.17%/Q1 GM=43.02% → Q2 GP=32.77/79.36=41.3%; H1 NI=32.08亿/Q1 NI=15.68亿 → Q2 NI=16.40亿/79.36=20.7%"
       },
       {
         "q": "2025Q3",
