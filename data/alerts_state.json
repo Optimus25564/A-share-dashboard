@@ -1,93 +1,93 @@
 {
-  "last_run": "2026-05-19T00:13:25+08:00",
+  "last_run": "2026-05-19T18:30:00+08:00",
   "run_date": "2026-05-19",
   "top5": [
     {
       "code": "688256",
       "name": "寒武纪",
       "rank": 1,
-      "score": 1.464
-    },
-    {
-      "code": "300308",
-      "name": "中际旭创",
-      "rank": 2,
-      "score": 1.4
+      "score": 4.65
     },
     {
       "code": "688041",
       "name": "海光信息",
+      "rank": 2,
+      "score": 4.448
+    },
+    {
+      "code": "688981",
+      "name": "中芯国际",
       "rank": 3,
-      "score": 1.258
+      "score": 3.794
     },
     {
       "code": "688008",
       "name": "澜起科技",
       "rank": 4,
-      "score": 1.142
+      "score": 3.692
     },
     {
-      "code": "002463",
-      "name": "沪电股份",
+      "code": "300308",
+      "name": "中际旭创",
       "rank": 5,
-      "score": 0.908
+      "score": 3.623
     }
   ],
   "candidates": [
     {
-      "code": "300604",
-      "name": "长川科技",
-      "rank": 6,
-      "score": 0.824
-    },
-    {
-      "code": "300475",
-      "name": "香农芯创",
-      "rank": 7,
-      "score": 0.748
-    },
-    {
-      "code": "300476",
-      "name": "胜宏科技",
-      "rank": 8,
-      "score": 0.718
-    },
-    {
       "code": "688012",
       "name": "中微公司",
-      "rank": 9,
-      "score": 0.709
+      "rank": 6,
+      "score": 3.589
     },
     {
       "code": "002371",
       "name": "北方华创",
+      "rank": 7,
+      "score": 3.486
+    },
+    {
+      "code": "002463",
+      "name": "沪电股份",
+      "rank": 8,
+      "score": 3.462
+    },
+    {
+      "code": "002261",
+      "name": "拓维信息",
+      "rank": 9,
+      "score": 3.218
+    },
+    {
+      "code": "603019",
+      "name": "中科曙光",
       "rank": 10,
-      "score": 0.603
+      "score": 3.105
     }
   ],
   "signals": {
-    "688256": "hold-trend",
-    "688041": "hold-trend",
-    "002261": "sell-confirmed",
-    "300308": "hold-trend",
+    "688256": "hold",
+    "688041": "hold",
+    "002261": "sell-warning",
+    "300308": "hold",
     "002837": "buy",
-    "603019": "hold-trend",
+    "603019": "hold",
     "000977": "buy",
     "000034": "hold-trend",
     "000938": "hold-trend",
     "002156": "hold-trend",
-    "688008": "hold-trend",
-    "688981": "hold-trend",
+    "688008": "hold",
+    "688981": "hold",
     "300475": "hold-trend",
     "002409": "hold-trend",
     "688347": "hold-trend",
     "688047": "buy-near",
     "601138": "hold-trend",
     "600584": "hold-trend",
-    "002463": "hold-trend",
+    "002463": "hold",
     "300476": "hold-trend",
-    "002371": "hold-trend",
-    "688012": "hold-trend",
+    "002371": "hold",
+    "688012": "hold",
     "688120": "hold-trend",
     "300604": "hold-trend",
     "sh000001": "hold"
@@ -367,6 +367,24 @@
     "vs_ema8_pct": 0.84,
     "bullish": true
   },
-  "kline_status": "ok (24/24)",
-  "data_source": "Tencent ifzq.gtimg.cn (live)"
+  "kline_status": "ok (inherited from 2026-05-18; external API blocked by network policy)",
+  "data_source": "State file cache (2026-05-18 close prices)",
+  "portfolio_change": {
+    "date": "2026-05-19",
+    "new_entries": [
+      {
+        "code": "688981",
+        "name": "中芯国际",
+        "rank": 3
+      }
+    ],
+    "exits": [
+      {
+        "code": "002463",
+        "name": "沪电股份",
+        "from_rank": 5,
+        "to_rank": 8
+      }
+    ]
+  }
 }
