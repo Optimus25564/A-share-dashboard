@@ -469,6 +469,14 @@
       "url": "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000280/tsmctosell81ofvanguardinte.htm",
       "source": "SEC Filing / TSMC",
       "content": "TSMC April 2026 revenue NT$410.73B (-1.1% MoM, +17.5% YoY). Board approved NT$7.0/share Q1 2026 cash dividend. Plans to sell 152M shares (~8.1%) of Vanguard International Semiconductor. Q2 2026 guidance: $39-40.2B revenue, 65.5-67.5% GM."
+    },
+    {
+      "date": "2026-05-18",
+      "type": "research",
+      "title": "Bernstein: TSMC Poised for AI Growth Despite Lagging Semiconductor Index; 61% of Q1 Revenue from AI/HPC; N2 Arizona P2 Fab Tool Move-In October 2026",
+      "url": "https://www.gurufocus.com/news/8867942/tsm-tsmc-poised-for-growth-amid-ai-expansion-bernstein-analysts-suggest",
+      "source": "Guru Focus / Bernstein",
+      "content": "Bernstein analysts flag TSMC has lagged the Philadelphia Semiconductor Index despite fundamentally strong positioning: 61% of Q1 2026 revenue from AI and HPC; N2 Arizona fab (P2) on track for October 2026 equipment move-in as part of $465B US investment; consecutive annual price hikes (5-10% for AI/HPC nodes) already underway through 2029. Bernstein argues stock underperformance is sector-rotation noise — TSMC's structural monopoly on advanced AI chip manufacturing is intact. Q2 2026 guidance: $39-40.2B revenue, GM 65.5-67.5%."
     }
   ],
   "ASML": [
@@ -529,6 +537,14 @@
       "url": "https://www.tikr.com/blog/applied-materials-reports-q2-earnings-on-may-14-heres-what-the-5b-epic-bet-means-for-investors",
       "source": "TIKR",
       "content": "AMAT reports Q2 FY2026 (ends April) results May 14 after close. Consensus: revenue $7.69B (+8.4% YoY), EPS $2.66 (+11.3% YoY); beat streak intact (4 consecutive quarters). Key catalyst: CFO target to deliver >20% semiconductor equipment business growth in calendar 2026. Focus on DRAM/HBM and advanced packaging demand. Morgan Stanley $454 target, Seaport Research Buy $500 target. AMAT-TSMC $5B EPIC Center partnership announced May 11."
+    },
+    {
+      "date": "2026-05-14",
+      "type": "announcement",
+      "title": "Applied Materials Q2 FY2026: Record Revenue $7.91B (+11% YoY); Non-GAAP EPS $2.86 (+20%); Dividend +15%; SEM Business to Grow >30% in 2026",
+      "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-second-quarter-2026-results",
+      "source": "Applied Materials IR",
+      "content": "AMAT Q2 FY2026 (ended April 27): record revenue $7.91B (+11% YoY, beat $7.68B est), non-GAAP EPS $2.86 (+20% YoY, beat $2.68 est), non-GAAP GM 50.0% (record). Q3 guided revenue ~$8.25B. Semiconductor equipment business expected to grow >30% in calendar 2026. Raised quarterly dividend 15% to $0.53/share (9th consecutive annual increase). Announced acquisition of ASMPT's NEXX business (large-area advanced packaging deposition equipment) to strengthen panel-level packaging for AI accelerators."
     },
     {
       "date": "2026-05-18",
@@ -965,6 +981,14 @@
       "url": "https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/",
       "source": "TechCrunch",
       "content": "Google I/O 2026 conference underway. Gemini placed as cross-app OS layer on Android/Chrome/Car. Googlebooks (AI-first laptops) launching fall 2026. Cloud revenue surpassed $20B for first time, growing 63% YoY."
+    },
+    {
+      "date": "2026-05-19",
+      "type": "announcement",
+      "title": "Google I/O 2026 Key Announcements: Gemini 3.5 Flash (4x Faster), Gemini Spark 24/7 AI Agent, Samsung Android XR Smart Glasses Fall 2026, AI Ultra $100/Month",
+      "url": "https://www.tomsguide.com/news/live/google-io-2026-live-news-updates",
+      "source": "Tom's Guide / TechTimes / MacRumors",
+      "content": "Google I/O 2026 keynote (May 19): (1) Gemini 3.5 Flash — surpasses Gemini 3.1 Pro on coding/agentic/multimodal benchmarks, runs 4x faster, now powering Google Search AI Mode across all Google products and APIs. (2) Gemini Spark: 24/7 personal AI agent running on Google Cloud VMs autonomously without a device open; available first to AI Ultra subscribers. (3) Android XR smart glasses: unveiled with Samsung (hardware), Gentle Monster and Warby Parker (design); Gemini-powered all-day assistant via private earpiece; fall 2026 launch. (4) Google AI Ultra tier cut to $100/month for power users/developers. Strategic: each announcement reinforces GCP AI infrastructure demand and Alphabet's vertical AI integration from silicon (TPUs) to consumer devices."
     }
   ],
   "AMZN": [
@@ -1315,6 +1339,14 @@
       "url": "https://www.sec.gov/Archives/edgar/data/0001674101/000162828026026379/q12026exhibit991vrt04222026.htm",
       "source": "SEC Filing / Vertiv",
       "content": "VRT Q1 2026: Net sales $2.65B (+30% YoY), Adj. EPS growth +83%, Americas organic growth +44%. Raised FY2026 guidance to $13.5-14B net sales, 29-31% organic growth. Adj. FCF $653M (+147% YoY). Liquid cooling demand accelerating."
+    },
+    {
+      "date": "2026-05-19",
+      "type": "announcement",
+      "title": "Vertiv 2026 Investor Conference Opens in Greenville SC: Financial Outlook, Liquid Cooling Strategy, 2027-2028 Targets Presented",
+      "url": "https://investors.vertiv.com/news/news-details/2026/Vertiv-to-Host-Investor-Conference-on-May-19---20-2026/default.aspx",
+      "source": "Vertiv Investor Relations",
+      "content": "Vertiv two-day Investor Conference opened May 19 in Greenville, SC; technology-focused presentations continue May 20. Management presenting FY2026 financial outlook (raised guidance: $13.5-14B net sales, adj EPS $6.30-6.40 at +51% midpoint), liquid cooling product innovations, and 2027-2028 multi-year targets. Webcast and materials available at investors.vertiv.com. VRT stock opened down 3.16% on May 19 ahead of event. $15B+ backlog remains primary demand visibility indicator; liquid cooling penetration inflection continues."
     }
   ],
   "ETN": [
@@ -1637,6 +1669,14 @@
       "url": "https://www.stocktitan.net/news/RKLB/rocket-lab-awarded-30-million-contract-for-haste-hypersonic-rocket-eladz9v4tpd3.html",
       "source": "StockTitan",
       "content": "RKLB: (1) Awarded $30M Anduril HASTE hypersonic test launch contract. (2) Largest launch deal in company history: confidential customer books 5 Neutron + 3 Electron dedicated launches through 2029. Backlog >$2.2B; 31 contracts signed in Q1 2026 alone."
+    },
+    {
+      "date": "2026-05-20",
+      "type": "announcement",
+      "title": "Rocket Lab Annual Shareholder Meeting May 20; Electron 9th Launch for Synspective Confirmed; LOXSAT Cryogenic Mission Booked; Stock -5% on May 19 Tech Rotation",
+      "url": "https://stocktwits.com/news-articles/markets/equity/rklb-stock-near-record-highs-rocket-lab-investors-electron-launch-shareholder-meeting/cZXuKI5ReZO",
+      "source": "StockTwits / Rocket Lab",
+      "content": "Rocket Lab annual shareholders meeting held May 20. Company confirmed: (1) Electron's 9th dedicated launch for Synspective's StriX radar satellite constellation (Japanese Earth imaging). (2) LOXSAT mission booked — Eta Space's cryogenic fuel storage technology launched on Electron. RKLB fell ~5% on May 19 as rising Treasury yields drove broad tech selloff in speculative growth names. Q1 2026: record revenue $200.4M (+63.5% YoY), backlog $2.2B record, Q2 guided $225-240M."
     }
   ],
   "HUBB": [
@@ -2103,6 +2143,14 @@
       "url": "https://seekingalpha.com/news/4583960-astera-labs-credo-among-6-ai-stocks-to-get-coverage-from-rothschild",
       "source": "Seeking Alpha / Rothschild & Co.",
       "content": "Rothschild & Co. initiated coverage on Credo Technology (CRDO) with Neutral rating and $153 price target. CRDO Q3 FY2026 revenue $407M (+201% YoY); FY2026 projected full-year revenue +272% YoY on hyperscaler Active Electrical Cable (AEC) ramp expanding from inter-rack to rack-to-rack deployments. Three hyperscalers each exceed 10% of revenue; a fourth beginning material contributions. Q4 FY2026 results expected late May 2026."
+    },
+    {
+      "date": "2026-05-20",
+      "type": "announcement",
+      "title": "Credo Technology Q4 FY2026 Earnings Scheduled June 1; Q4 Revenue Guidance $425-435M; Full-Year ~120% YoY Growth on AEC Hyperscaler Ramp",
+      "url": "https://www.stocktitan.net/news/CRDO/credo-schedules-fourth-quarter-and-fiscal-year-2026-financial-4ffht6bdbjvd.html",
+      "source": "StockTitan / Credo Technology IR",
+      "content": "Credo Technology will report Q4 and full FY2026 results after market close June 1, 2026, with conference call at 2:00 PM PT. Q4 FY2026 guidance: revenue $425-435M (midpoint +7% sequential vs Q3's $407M), non-GAAP GM 64-66%. Full fiscal year 2026 tracking for ~120%+ YoY growth on hyperscaler Active Electrical Cable expansion from inter-rack to rack-to-rack deployments plus growing optical DSP/retimer traction. Three hyperscalers each represent >10% of revenue; a fourth beginning material contributions."
     }
   ],
   "ALAB": [
