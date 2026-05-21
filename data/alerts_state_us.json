@@ -1,110 +1,95 @@
 {
-  "last_run": "2026-05-20T08:39:12+08:00",
-  "run_date": "2026-05-20",
+  "last_run": "2026-05-21T08:30:00+08:00",
+  "run_date": "2026-05-21",
   "market": "US",
   "top5": [
-    {
-      "code": "MU",
-      "name": "Micron",
-      "rank": 1,
-      "score": 1.4038
-    },
-    {
-      "code": "NVDA",
-      "name": "Nvidia",
-      "rank": 2,
-      "score": 1.1373
-    },
-    {
-      "code": "TSM",
-      "name": "TSMC",
-      "rank": 3,
-      "score": 0.8312
-    },
-    {
-      "code": "ASML",
-      "name": "ASML",
-      "rank": 4,
-      "score": 0.6675
-    },
-    {
-      "code": "SNDK",
-      "name": "Sandisk",
-      "rank": 5,
-      "score": 0.6558
-    }
+    {"code": "MU",   "name": "Micron",    "rank": 1, "score": 1.2509},
+    {"code": "NVDA", "name": "Nvidia",    "rank": 2, "score": 1.1628},
+    {"code": "TSM",  "name": "TSMC",      "rank": 3, "score": 0.8552},
+    {"code": "ASML", "name": "ASML",      "rank": 4, "score": 0.7020},
+    {"code": "AVGO", "name": "Broadcom",  "rank": 5, "score": 0.6346}
   ],
   "candidates": [
-    {
-      "code": "AVGO",
-      "name": "Broadcom",
-      "rank": 6,
-      "score": 0.5894
-    },
-    {
-      "code": "META",
-      "name": "Meta Platforms",
-      "rank": 7,
-      "score": 0.5157
-    },
-    {
-      "code": "GOOGL",
-      "name": "Alphabet",
-      "rank": 8,
-      "score": 0.4699
-    },
-    {
-      "code": "CEG",
-      "name": "Constellation Energy",
-      "rank": 9,
-      "score": 0.416
-    },
-    {
-      "code": "MSFT",
-      "name": "Microsoft",
-      "rank": 10,
-      "score": 0.3195
-    }
+    {"code": "META",  "name": "Meta Platforms",             "rank": 6,  "score": 0.5200},
+    {"code": "GOOGL", "name": "Alphabet",                   "rank": 7,  "score": 0.4498},
+    {"code": "CEG",   "name": "Constellation Energy",       "rank": 8,  "score": 0.3943},
+    {"code": "MSFT",  "name": "Microsoft",                  "rank": 9,  "score": 0.3842},
+    {"code": "SNDK",  "name": "Sandisk",                    "rank": 10, "score": 0.3662},
+    {"code": "SMH",   "name": "VanEck Semiconductor ETF",   "rank": 1,  "score": -0.2253, "type": "ETF"},
+    {"code": "COPX",  "name": "Global X Copper Miners ETF", "rank": 2,  "score": -0.4932, "type": "ETF"}
   ],
   "signals": {
     "NVDA": "hold-trend",
     "AVGO": "hold-trend",
-    "AMD": "hold-trend",
+    "AMD":  "hold-trend",
     "INTC": "hold-trend",
     "QCOM": "hold-trend",
     "MRVL": "hold-trend",
-    "APP": "hold",
-    "TSM": "buy-near",
-    "ASML": "buy",
-    "AMAT": "buy-near",
-    "KLAC": "buy",
+    "APP":  "hold",
+    "TSM":  "buy-fresh",
+    "ASML": "buy-fresh",
+    "AMAT": "hold-trend",
+    "KLAC": "hold-trend",
     "ONTO": "sell-warning",
     "SNPS": "hold-trend",
-    "MU": "hold-trend",
+    "MU":   "hold-trend",
     "SNDK": "hold-trend",
     "COHR": "hold-trend",
-    "LITE": "buy",
-    "FN": "buy",
-    "MSFT": "hold",
-    "GOOGL": "hold-trend",
+    "LITE": "hold-trend",
+    "FN":   "hold-trend",
+    "MSFT": "hold-trend",
+    "GOOGL":"hold-trend",
     "AMZN": "hold-trend",
-    "META": "sell-confirmed",
+    "META": "sell-warning",
     "AAPL": "hold-trend",
     "TSLA": "buy-near",
     "CRWV": "sell-warning",
-    "CEG": "sell-confirmed",
-    "VRT": "hold-trend",
-    "ETN": "sell-warning",
-    "GEV": "sell-warning",
-    "CCJ": "sell-confirmed",
-    "SMH": "hold",
-    "XLU": "hold",
-    "COPX": "hold",
-    "XME": "hold",
-    "EWY": "hold",
+    "CEG":  "sell-warning",
+    "VRT":  "hold-trend",
+    "ETN":  "sell-warning",
+    "GEV":  "hold-trend",
+    "CCJ":  "sell-warning",
+    "SMH":  "hold-trend",
+    "XLU":  "hold",
+    "COPX": "hold-trend",
+    "XME":  "hold",
+    "EWY":  "hold",
     "RKLB": "hold-trend"
   },
-  "rank_change": "⚠️ 排名变动: SNDK(+0.6558) 晋入 Top5 #5 替换 AVGO; AVGO 落至候选池 #6; CEG 上升至候选池 #9",
-  "kline_status": "partial: 周线 K 线无法拉取 — 远端执行环境网络策略封锁所有外部金融 API (Stooq/Yahoo/Tencent/FMP 均返回 host-not-in-allowlist); EMA 信号沿用 2026-05-19 最后有效值",
-  "sources": "因子评分: companies_us.json 实时计算; K 线信号: 沿用 2026-05-19"
+  "price_snapshot": {
+    "MU":   {"price": 715,    "note": "ATH $818 May-11; 回调13%; 日内 $712-739"},
+    "NVDA": {"price": 223.22, "note": "稳健上行; 20日EMA $198"},
+    "TSM":  {"price": 379.89, "note": "10日EMA $359; 50日EMA $352; 触EMA8后反弹"},
+    "ASML": {"price": null,   "note": "+5.95% May-20; UBS升级至欧洲半导体首选 目标€1900"},
+    "AVGO": {"price": 416.35, "note": "ATH $442 May-14; 20日EMA $374"},
+    "AMD":  {"price": 414.05, "note": "ATH $469 May-11; 强买信号"},
+    "QCOM": {"price": 192.89, "note": "MACD 买入信号"},
+    "TSLA": {"price": 409.99, "note": "20日EMA $406.94; 紧贴EMA8"},
+    "VRT":  {"price": 350.00, "note": "ATH $380 May-14; 回调8%"},
+    "ETN":  {"price": 371.88, "note": "(-2.62%) 持续低于EMA8"},
+    "GEV":  {"price": 1024.87,"note": "强势新高; Q1营收$93.4亿; 从卖出区恢复"},
+    "CCJ":  {"price": 107.51, "note": "52周 $50-$135; 低于EMA8≈$115"},
+    "META": {"price": 602.61, "note": "(-1.41%) MA呈卖出; 200周SMA $676在上"},
+    "CEG":  {"price": 279.78, "note": "月跌-14.26%; Strong Sell MA信号"},
+    "MSFT": {"price": 418.75, "note": "所有MA均买入"},
+    "SNDK": {"price": 1385,   "note": "ATH $1600 May-11; 回调13%"},
+    "KLAC": {"price": 1750.95,"note": "6个月涨幅+59.3%; 市值$2274亿"},
+    "AMAT": {"price": 408.00, "note": "强劲季报; EPIC封装合作伙伴"},
+    "SMH":  {"price": 557.00, "note": "日高$564 / 日低$551"},
+    "COPX": {"price": 82.31,  "note": "+3.70%; 铜需求强劲"},
+    "QQQ":  {"price": 701.38, "note": "大盘参考; ATH $720 May-14; 52周+34.8%"},
+    "RKLB": {"price": 130.00, "note": "Q1营收$2亿+64%YoY; 盘后-9%获利了结"}
+  },
+  "rank_change": "⚠️ 排名变动: AVGO(+0.6346) 升回 Top5 #5, 替换 SNDK; SNDK 降至候选池 #10(score=0.3662); 其余 Top4 维持不变",
+  "signal_summary": {
+    "buy_fresh":    ["TSM","ASML"],
+    "buy_near":     ["TSLA"],
+    "sell_warning": ["META","CEG","ONTO","CRWV","ETN","CCJ"],
+    "sell_confirmed": [],
+    "hold_trend":   23,
+    "hold":         4
+  },
+  "market_context": "美股大盘整体强势: QQQ $701(ATH $720 May-14), S&P 500年内+26.4%. 半导体板块: KLAC +59.3%(6M), MU ATH $818, AVGO ATH $442, AMD ATH $469 — 均为近期高点. 个别股回调但EMA8仍有效支撑. ASML UBS升级(目标€1,900)催化新买点. 能源/核电(CEG/CCJ/ETN)相对弱势.",
+  "kline_status": "partial: 远端执行环境网络策略限制外部金融API访问 (stooq/yfinance/yahoo均返回403/host-not-in-allowlist); 周线EMA8/EMA21基于 WebSearch 价格快照 + 日均线外推推断. 关键价格数据源: macrotrends/stockanalysis/tradingkey/marketbeat (May 20-21 2026)",
+  "sources": "因子评分: companies_us.json 实时5因子模型; 价格数据: WebSearch聚合 (Yahoo Finance / MacroTrends / TradingKey / MarketBeat / Robinhood, May 20-21 2026); K线信号: 日线EMA推断周线EMA8/EMA21位置"
 }
