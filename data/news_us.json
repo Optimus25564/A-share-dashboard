@@ -87,6 +87,14 @@
       "url": "https://www.scmp.com/news/china/diplomacy/article/3339797/us-government-approves-nvidia-h200-chip-exports-china",
       "source": "South China Morning Post",
       "content": "Commerce Department cleared ~10 Chinese firms including Alibaba, Tencent and ByteDance to purchase H200 chips, capped at 75,000 units each. China shipments must not exceed half of domestic US sales."
+    },
+    {
+      "date": "2026-05-20",
+      "type": "announcement",
+      "title": "NVIDIA Q1 FY2027 Record Earnings: Revenue $81.6B (+85% YoY), Data Center $75.2B (+92%); Q2 Guidance ~$91B; $80B Buyback Added",
+      "url": "https://www.stocktitan.net/sec-filings/NVDA/8-k-nvidia-corp-reports-material-event-56086a88bbb4.html",
+      "source": "NVIDIA / StockTitan",
+      "content": "Q1 FY2027 (ended April 2026): Revenue $81.6B beat $78.8B est (+85% YoY); Data Center $75.2B (+92% YoY). GAAP EPS $2.39 beat $1.75 est; GAAP GM 74.9%. Q2 guidance ~$91B ±2%, mid-70% GM, no assumed China DC compute revenue. $80B buyback authorization added; dividend raised to $0.25/share."
     }
   ],
   "AVGO": [
@@ -145,6 +153,14 @@
       "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-first-quarter-fiscal-year-2026-financial",
       "source": "Broadcom IR / IndexBox",
       "content": "Major bank raised AVGO target to $500 (from $475), Buy rating. AVGO Q1 FY2026: AI revenue $8.4B (+106% YoY), OpenAI joined named custom-silicon customers. CEO Hock Tan: 'line of sight to $100B AI chip revenue in 2027.' Stock up 30% YTD after -15% early 2026 dip."
+    },
+    {
+      "date": "2026-05-19",
+      "type": "research",
+      "title": "Evercore ISI Raises Broadcom Price Target to $582 from $490; Maintains Outperform — AI Demand Tracking Ahead of Estimates",
+      "url": "https://www.benzinga.com/quote/AVGO/analyst-ratings",
+      "source": "Benzinga / Evercore ISI",
+      "content": "Evercore ISI analyst Mark Lipacis raised AVGO target to $582 (from $490), maintaining Outperform. AI semiconductor revenue tracking above consensus ahead of June 3 Q2 FY2026 earnings (guided $22B revenue, $10.7B AI chip). CEO Hock Tan $100B AI chip 2027 target viewed as increasingly achievable."
     }
   ],
   "AMD": [
@@ -511,6 +527,14 @@
       "url": "https://www.asml.com/en/investors/financial-calendar",
       "source": "ASML",
       "content": "Following ASML Q1 2026 results (April 15), High-NA EUV lithography has entered high-volume manufacturing at leading-edge foundries. China fell to 19% of system sales in Q1 from 36% in Q4 2025 due to tightening export controls. 2026 revenue guidance raised to €36-40B. Next earnings Q2 2026 expected mid-July 2026. EUV supply remains demand-constrained through 2027 per CEO."
+    },
+    {
+      "date": "2026-05-19",
+      "type": "announcement",
+      "title": "ASML CEO: High-NA EUV Nearing Commercial Production — First Sub-2nm Chips Expected Within Months; AI Demand Keeps Market Supply-Constrained",
+      "url": "https://www.gurufocus.com/news/8870338/asml-progresses-with-new-highna-euv-technology-for-advanced-chip-production",
+      "source": "GuroFocus / ASML",
+      "content": "ASML CEO Christophe Fouquet: High-NA EUV approaching commercial application, first chips produced via High-NA EUV expected within months. Technology shrinks feature size ~66% vs current Low-NA EUV, enabling sub-2nm processes. Intel leading in High-NA EUV adoption. AI demand from Terafab, Starlink and hyperscalers will keep chip supply constrained for foreseeable future. Each High-NA EUV machine priced ~$400M."
     }
   ],
   "AMAT": [
@@ -697,6 +721,14 @@
       "url": "https://www.alphaspread.com/market-news/earnings/micron-rallies-as-ai-demand-sells-out-2026-hbm-production-strong-q1-results-and-analyst-upgrades-fuel-optimism",
       "source": "Alpha Spread",
       "content": "MU HBM3E production completely sold out for 2026 under binding contracts at record prices. Stock up 150% YTD (~$795). Consensus FY26 EPS $58; analyst targets $900-1000. Memory pricing power structural shift driven by AI multi-year contracts; memory no longer commodity."
+    },
+    {
+      "date": "2026-05-20",
+      "type": "news",
+      "title": "Micron Opens +4% as NVIDIA Q1 Data Center Revenue $75.2B Confirms HBM Super-Cycle Intact; Samsung Supply Uncertainty Adds Tailwind",
+      "url": "https://www.tradingkey.com/news/market-movers/261915492-market-movers-mu-20260520",
+      "source": "TradingKey",
+      "content": "Micron stock opened up 4.14% on May 20 following NVIDIA Q1 FY2027 blowout (Data Center $75.2B, +92% YoY) confirming sustained HBM demand. Samsung supply uncertainty (labor negotiations) further strengthens Micron positioning. Analysts maintain $1,000-$1,100 price targets. MU 2026 HBM supply fully committed under binding contracts."
     }
   ],
   "SNDK": [
@@ -989,6 +1021,14 @@
       "url": "https://www.tomsguide.com/news/live/google-io-2026-live-news-updates",
       "source": "Tom's Guide / TechTimes / MacRumors",
       "content": "Google I/O 2026 keynote (May 19): (1) Gemini 3.5 Flash — surpasses Gemini 3.1 Pro on coding/agentic/multimodal benchmarks, runs 4x faster, now powering Google Search AI Mode across all Google products and APIs. (2) Gemini Spark: 24/7 personal AI agent running on Google Cloud VMs autonomously without a device open; available first to AI Ultra subscribers. (3) Android XR smart glasses: unveiled with Samsung (hardware), Gentle Monster and Warby Parker (design); Gemini-powered all-day assistant via private earpiece; fall 2026 launch. (4) Google AI Ultra tier cut to $100/month for power users/developers. Strategic: each announcement reinforces GCP AI infrastructure demand and Alphabet's vertical AI integration from silicon (TPUs) to consumer devices."
+    },
+    {
+      "date": "2026-05-20",
+      "type": "announcement",
+      "title": "Google I/O 2026 Day 2: Gemini 3.5 Flash Broadly Available at Half the Cost; Android XR Smart Glasses with Samsung Previewed for Fall 2026",
+      "url": "https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/",
+      "source": "Google Developers Blog",
+      "content": "Google I/O Day 2 developer sessions: Gemini 3.5 Flash broadly available — frontier-level capabilities at <50% cost of comparable frontier models. Android XR smart glasses (co-developed with Samsung) previewed for fall 2026 launch. Gemini Intelligence platform expands agentic AI on Android. Googlebooks laptop category launching fall 2026 with Acer, ASUS, Lenovo."
     }
   ],
   "AMZN": [
