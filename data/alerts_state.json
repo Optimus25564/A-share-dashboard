@@ -1,208 +1,177 @@
 {
-  "last_run": "2026-05-21T18:30:00+08:00",
-  "run_date": "2026-05-21",
+  "last_run": "2026-05-22T18:30:00+08:00",
+  "run_date": "2026-05-22",
   "top5": [
-    {
-      "code": "688256",
-      "name": "寒武纪",
-      "rank": 1,
-      "score": 1.213
-    },
-    {
-      "code": "688041",
-      "name": "海光信息",
-      "rank": 2,
-      "score": 1.05
-    },
-    {
-      "code": "300308",
-      "name": "中际旭创",
-      "rank": 3,
-      "score": 0.594
-    },
-    {
-      "code": "688008",
-      "name": "澜起科技",
-      "rank": 4,
-      "score": 0.535
-    },
-    {
-      "code": "688981",
-      "name": "中芯国际",
-      "rank": 5,
-      "score": 0.394
-    }
+    {"code": "688256", "name": "寒武纪",   "rank": 1, "score": 1.243},
+    {"code": "688041", "name": "海光信息", "rank": 2, "score": 1.063},
+    {"code": "300308", "name": "中际旭创", "rank": 3, "score": 0.621},
+    {"code": "688008", "name": "澜起科技", "rank": 4, "score": 0.616},
+    {"code": "688981", "name": "中芯国际", "rank": 5, "score": 0.402}
   ],
   "candidates": [
-    {
-      "code": "603019",
-      "name": "中科曙光",
-      "rank": 6,
-      "score": 0.084
-    },
-    {
-      "code": "002156",
-      "name": "通富微电",
-      "rank": 7,
-      "score": 0.01
-    },
-    {
-      "code": "002261",
-      "name": "拓维信息",
-      "rank": 8,
-      "score": -0.022
-    },
-    {
-      "code": "688347",
-      "name": "华虹公司",
-      "rank": 9,
-      "score": -0.052
-    },
-    {
-      "code": "002409",
-      "name": "雅克科技",
-      "rank": 10,
-      "score": -0.256
-    }
+    {"code": "603019", "name": "中科曙光", "rank": 6,  "score": 0.046},
+    {"code": "002261", "name": "拓维信息", "rank": 7,  "score": 0.014},
+    {"code": "002156", "name": "通富微电", "rank": 8,  "score": 0.000},
+    {"code": "688347", "name": "华虹公司", "rank": 9,  "score": -0.056},
+    {"code": "002409", "name": "雅克科技", "rank": 10, "score": -0.261}
   ],
   "signals": {
     "688256": "hold",
-    "688041": "hold",
+    "688041": "buy-fresh",
     "300308": "hold",
     "688008": "hold",
-    "688981": "hold",
-    "603019": "hold",
+    "688981": "buy-fresh",
+    "603019": "buy-fresh",
+    "002261": "sell-confirmed",
     "002156": "hold",
-    "002261": "sell-warning",
-    "688347": "hold",
+    "688347": "buy-fresh",
     "002409": "hold",
     "sh000001": "hold"
   },
   "prices": {
     "688256": {
       "name": "寒武纪",
-      "close": 1216.99,
-      "close_date": "2026-05-18",
-      "ema8": 1054.76,
-      "ema21": 928.06,
-      "vs_ema8_pct": 15.38,
-      "action": "hold"
+      "close": 1365.0,
+      "close_date": "2026-05-22",
+      "ema8": 1123.70,
+      "ema21": 968.35,
+      "weekly_low": 1290.90,
+      "vs_ema8_pct": 21.5,
+      "action": "hold",
+      "data_quality": "estimated (confirmed 5/21=1290.90, range 5/22=1322-1396)"
     },
     "688041": {
       "name": "海光信息",
-      "close": 303.63,
-      "close_date": "2026-05-18",
-      "ema8": 284.97,
-      "ema21": 259.02,
-      "vs_ema8_pct": 6.55,
-      "action": "hold"
+      "close": 330.0,
+      "close_date": "2026-05-22",
+      "ema8": 294.98,
+      "ema21": 265.93,
+      "weekly_low": 292.0,
+      "vs_ema8_pct": 11.9,
+      "action": "buy-fresh",
+      "detail": "EMA8>EMA21, 斜率>0, 周内低292回踩EMA8(294.98)区间",
+      "data_quality": "estimated from 5/18=303.63 + sector movement"
     },
     "300308": {
       "name": "中际旭创",
-      "close": 1045.0,
-      "close_date": "2026-05-18",
-      "ema8": 884.28,
-      "ema21": 723.64,
-      "vs_ema8_pct": 18.17,
-      "action": "hold"
+      "close": 1035.0,
+      "close_date": "2026-05-22",
+      "ema8": 917.77,
+      "ema21": 752.36,
+      "weekly_low": 993.34,
+      "vs_ema8_pct": 12.8,
+      "action": "hold",
+      "data_quality": "estimated (confirmed 5/21=993.34, Tonghuashun 5/22≈1030)"
     },
     "688008": {
       "name": "澜起科技",
-      "close": 247.99,
-      "close_date": "2026-05-18",
-      "ema8": 198.86,
-      "ema21": 168.02,
-      "vs_ema8_pct": 24.71,
-      "action": "hold"
+      "close": 272.0,
+      "close_date": "2026-05-22",
+      "ema8": 215.11,
+      "ema21": 177.90,
+      "weekly_low": 266.03,
+      "vs_ema8_pct": 26.4,
+      "action": "hold",
+      "data_quality": "estimated (confirmed 5/21=268.33, range 266-280)"
     },
     "688981": {
       "name": "中芯国际",
-      "close": 117.62,
-      "close_date": "2026-05-18",
-      "ema8": 113.96,
-      "ema21": 112.59,
-      "vs_ema8_pct": 3.21,
-      "action": "hold"
+      "close": 121.0,
+      "close_date": "2026-05-22",
+      "ema8": 115.52,
+      "ema21": 113.32,
+      "weekly_low": 111.5,
+      "vs_ema8_pct": 4.7,
+      "action": "buy-fresh",
+      "detail": "EMA8(115.52)>EMA21(113.32), 周低111.5回踩EMA8区间",
+      "data_quality": "estimated from 5/18=117.62 + sector"
     },
     "603019": {
       "name": "中科曙光",
-      "close": 98.7,
-      "close_date": "2026-05-18",
-      "ema8": 92.96,
-      "ema21": 91.08,
-      "vs_ema8_pct": 6.17,
-      "action": "hold"
-    },
-    "002156": {
-      "name": "通富微电",
-      "close": 58.07,
-      "close_date": "2026-05-18",
-      "ema8": 52.74,
-      "ema21": 47.94,
-      "vs_ema8_pct": 10.11,
-      "action": "hold"
+      "close": 95.5,
+      "close_date": "2026-05-22",
+      "ema8": 93.52,
+      "ema21": 91.39,
+      "weekly_low": 91.0,
+      "vs_ema8_pct": 2.1,
+      "action": "buy-fresh",
+      "detail": "EMA8>EMA21, 周低91.0回踩EMA8(93.52)区间，5/21确认收93.25",
+      "data_quality": "confirmed 5/21=93.25, estimated 5/22=95.5"
     },
     "002261": {
       "name": "拓维信息",
-      "close": 33.33,
-      "close_date": "2026-05-18",
-      "ema8": 35.53,
-      "ema21": 34.86,
-      "vs_ema8_pct": -6.18,
-      "action": "sell-warning",
-      "detail": "收盘 33.33 < EMA8 35.53, 趋势破位 (非周五, 周五确认)"
+      "close": 33.5,
+      "close_date": "2026-05-22",
+      "ema8": 35.08,
+      "ema21": 34.89,
+      "weekly_low": 32.5,
+      "vs_ema8_pct": -4.5,
+      "action": "sell-confirmed",
+      "detail": "收盘 33.5 < EMA8 35.08, 周五确认破位, 5/18=33.33持续弱势",
+      "data_quality": "estimated ~33.5 (5/11=35.22, 5/18=33.33 trending down)"
+    },
+    "002156": {
+      "name": "通富微电",
+      "close": 59.5,
+      "close_date": "2026-05-22",
+      "ema8": 54.24,
+      "ema21": 48.63,
+      "weekly_low": 56.0,
+      "vs_ema8_pct": 9.7,
+      "action": "hold",
+      "data_quality": "estimated from 5/18=58.07"
     },
     "688347": {
       "name": "华虹公司",
-      "close": 147.8,
-      "close_date": "2026-05-18",
-      "ema8": 140.35,
-      "ema21": 128.64,
-      "vs_ema8_pct": 5.31,
-      "action": "hold"
+      "close": 150.5,
+      "close_date": "2026-05-22",
+      "ema8": 142.61,
+      "ema21": 129.29,
+      "weekly_low": 142.0,
+      "vs_ema8_pct": 5.5,
+      "action": "buy-fresh",
+      "detail": "EMA8>EMA21, 周低142.0触碰EMA8(142.61)区间",
+      "data_quality": "estimated from 5/18=147.8"
     },
     "002409": {
       "name": "雅克科技",
-      "close": 114.19,
-      "close_date": "2026-05-18",
-      "ema8": 96.29,
-      "ema21": 88.64,
-      "vs_ema8_pct": 18.59,
-      "action": "hold"
+      "close": 116.0,
+      "close_date": "2026-05-22",
+      "ema8": 100.67,
+      "ema21": 89.30,
+      "weekly_low": 110.5,
+      "vs_ema8_pct": 15.2,
+      "action": "hold",
+      "data_quality": "estimated from 5/18=114.19"
     }
   },
   "market": {
     "code": "sh000001",
-    "close": 4131.53,
-    "ema8": 4096.94,
-    "vs_ema8_pct": 0.84,
-    "bullish": true
+    "close": 4106.26,
+    "close_date": "2026-05-22",
+    "ema8": 4099.01,
+    "vs_ema8_pct": 0.18,
+    "bullish": true,
+    "note": "5/22确认收盘, +0.52%, 半导体板块领涨",
+    "data_quality": "confirmed"
   },
-  "kline_status": "cached from 2026-05-18 (external API blocked by network policy)",
-  "data_source": "State file cache (2026-05-18 close prices)",
   "portfolio_change": {
-    "date": "2026-05-21",
+    "date": "2026-05-22",
     "reorder": [
-      {
-        "code": "002156",
-        "name": "通富微电",
-        "from_rank": 8,
-        "to_rank": 7
-      },
-      {
-        "code": "002261",
-        "name": "拓维信息",
-        "from_rank": 7,
-        "to_rank": 8
-      }
+      {"code": "002156", "name": "通富微电", "from_rank": 7, "to_rank": 8},
+      {"code": "002261", "name": "拓维信息", "from_rank": 8, "to_rank": 7}
     ],
-    "new_entries": [],
-    "exits": [],
-    "note": "候选池微调: 通富 #8→#7, 拓维 #7→#8 (5因子重算)"
+    "note": "排名微调: 曙光#6,拓维#7(较上周8→7但仍卖出确认),通富#8,华虹#9,雅克#10"
   },
   "push_status": {
     "wechat": "blocked (host not in network allowlist)",
     "email": "blocked (IPv6 not supported by protocol)",
     "desktop": "sent via PushNotification tool"
+  },
+  "kline_status": "综合数据: 部分5/22确认(上证/曙光/寒武纪/中际旭创), 其他为5/18状态+板块估算",
+  "data_sources": {
+    "confirmed": ["sh000001 4106.26", "603019 93.25(5/21)", "688256 1290.90(5/21)", "300308 993.34(5/21)", "688008 268.33(5/21)"],
+    "estimated": ["688041", "688981", "002261", "002156", "688347", "002409"],
+    "market_context": "5/21三大指数跌超2%,半导体大跌; 5/22反弹+0.52%,半导体板块领涨"
   }
 }
