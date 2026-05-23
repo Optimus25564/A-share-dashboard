@@ -235,6 +235,14 @@
       "url": "https://www.amd.com/en/newsroom/press-releases/2026-5-20-amd-announces-more-than-10-billion-in-taiwan-ecos.html",
       "source": "AMD Newsroom",
       "content": "AMD announced $10B+ in Taiwan ecosystem investments to expand advanced packaging partnerships for next-gen AI infrastructure. Helios rack-scale platform (MI450X GPU + 6th Gen EPYC CPU) to deploy H2 2026 with ODM partners Sanmina, Wiwynn, Wistron, and Inventec. AMD Ryzen PRO 9000 lineup also expanded May 20."
+    },
+    {
+      "date": "2026-05-21",
+      "type": "announcement",
+      "title": "AMD EPYC 'Venice' Enters Production on TSMC 2nm — First HPC Product on Industry's Most Advanced Process Node",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1287/amd-announces-production-ramp-of-next-generation-amd-epyc-processor-venice-on-tsmc-2nm-process-technology",
+      "source": "AMD Investor Relations / GlobeNewsWire",
+      "content": "AMD announced EPYC 6th-gen 'Venice' CPU production ramp on TSMC 2nm — the first HPC product in the industry on 2nm. Venice targets cloud, enterprise, HPC, and AI infrastructure; future production at TSMC Arizona planned. Follow-on 'Verano' integrates LPDDR for agentic AI memory. AMD stock market cap at $731B after Q1 2026 blowout; Q2 guide $11.2B (+46% YoY)."
     }
   ],
   "INTC": [
@@ -341,6 +349,22 @@
       "url": "https://www.tradingkey.com/news/market-movers/261915496-market-movers-intc-20260520",
       "source": "TradingKey / Melius Research",
       "content": "Intel surged 6.71% on May 20 after Melius Research raised target to $150. Thesis: agentic/inference AI workloads are proving far more CPU-intensive than pure GPU compute, triggering a \"CPU renaissance.\" Intel asking PC partners to adopt more 18A CPUs. Server CPU share 54.9% (from 64.4% a year ago) but overall demand growing. Sixth consecutive beat-and-raise quarter."
+    },
+    {
+      "date": "2026-05-19",
+      "type": "news",
+      "title": "Intel and Qualcomm Both Eyeing AI Chip Startup Tenstorrent at ~$5B Valuation",
+      "url": "https://www.gurufocus.com/news/8869156/intel-intc-and-qualcomm-qcom-eye-tenstorrent-acquisition-valued-at-5b",
+      "source": "GuruFocus / Bloomberg",
+      "content": "Bloomberg reports Intel and Qualcomm separately exploring acquisition of AI chip startup Tenstorrent (founded by Jim Keller), valued at ~$5B+. Tenstorrent develops RISC-V-based AI processors for training and inference. Intel shares rose ~6% on the news. No deal announced; early-stage discussions involve investment banks exploring strategic options."
+    },
+    {
+      "date": "2026-05-21",
+      "type": "news",
+      "title": "Intel Falls 3.24% on May 21: Valuation at 100x Forward P/E; SuperClaw Hybrid AI Solution Announced; Server CPU Share 54.9%",
+      "url": "https://www.tradingkey.com/news/market-movers/261920293-market-movers-intc-20260521",
+      "source": "TradingKey",
+      "content": "Intel fell 3.24% on May 21 as analysts flag unsustainable 100x forward P/E on YTD +200% rally. Company introduced SuperClaw hybrid AI solution combining CPU and accelerator workloads. Server CPU market share 54.9% (down from 64.4% a year ago); AMD at 27.4%, ARM at 17.7%. Intel stock at ~$120, up 530%+ from 52-week low of $18.97."
     }
   ],
   "QCOM": [
@@ -391,6 +415,14 @@
       "url": "https://stocktwits.com/news-articles/markets/equity/qcom-stock-is-7-from-its-record-high-qcom-executives-to-join-trump-in-china-visit/cZXbNRUReQV",
       "source": "StockTwits / Market News",
       "content": "Qualcomm CEO Cristiano Amon joined Trump's China delegation. Amon said QCOM is working with 'pretty much all' major AI players including Meta and OpenAI on top-secret hardware. QCOM fell 11% on May 12 amid broader semiconductor rotation on macro/Iran tension concerns."
+    },
+    {
+      "date": "2026-05-22",
+      "type": "news",
+      "title": "Qualcomm Surges 11.2% on May 22; 42% 5-Day Rally Driven by Data Center Silicon Deal + Tariff Relief; Leads S&P 500",
+      "url": "https://www.tradingkey.com/news/market-movers/261922999-market-movers-qcom-20260522",
+      "source": "TradingKey / GuruFocus",
+      "content": "QCOM surged 11.2% on May 22, extending a nearly 42% gain over 5 consecutive sessions. Key catalysts: data center silicon shipments to hyperscaler confirmed (Dec 2025), 90-day US-China tariff suspension boosting smartphone demand, and strong Q2 FY2026 results ($10.6B revenue, $20B buyback). AI data center expansion positioned as QCOM's third growth pillar alongside mobile and automotive."
     }
   ],
   "MRVL": [
@@ -483,6 +515,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/261890453-market-movers-app-20260513",
       "source": "TradingKey",
       "content": "AppLovin shares declined 7.65% on May 13 as broader AI software valuations faced pressure amid rising rates and macro concerns. APP reported record Q1 2026 revenue $1.842B (+59% YoY) and EPS $3.56, with Q2 guided $1.93B at 84% EBITDA margin. June 2026 Axon self-service platform launch remains the next key catalyst per Morgan Stanley (Overweight, $720 target)."
+    },
+    {
+      "date": "2026-05-21",
+      "type": "news",
+      "title": "Amnesty International Supports Dutch Class Action Lawsuit Against AppLovin for Alleged Illegal Tracking of 1.5M Children",
+      "url": "https://www.amnestyusa.org/press-releases/amnesty-international-supports-lawsuit-against-u-s-tech-company-applovin-over-illegal-tracking-software/",
+      "source": "Amnesty International USA",
+      "content": "Amnesty International backed The Privacy Collective's class action against AppLovin on behalf of Dutch internet users (including 1.5M children), alleging AppLovin's SDK unlawfully collected data via apps like Block Blast, Subway Surfers, and CapCut. Company also faces an active SEC probe. Despite strong Q1 ($1.84B revenue, +59% YoY), legal headwinds mount ahead of June Axon self-service platform launch."
     }
   ],
   "TSM": [
@@ -541,6 +581,14 @@
       "url": "https://www.techtimes.com/articles/316921/20260520/tsmc-arizona-fab-posts-514m-year-one-profit-q1-2026-earnings-surpass-full-2025-figure.htm",
       "source": "TechTimes / Counterpoint Research",
       "content": "TSMC's first Arizona fab earned $514M profit in Q1 2026 alone, exceeding its entire 2025 earnings. Board approved additional $20B capital injection for TSMC Arizona on top of ~$31.3B in broader appropriations. \"Demand still significantly outpaces supply,\" per Counterpoint Research analyst. Stock rose 2.3% May 20 and 1.36% May 21."
+    },
+    {
+      "date": "2026-05-21",
+      "type": "news",
+      "title": "TSMC N2 Process in Commercial Production: AMD EPYC Venice First HPC Customer; TSM Stock +1.36% to $407",
+      "url": "https://www.guru3d.com/story/amd-epyc-venice-enters-production-on-tsmc-2nm-process/",
+      "source": "Guru3D / AMD Press Release",
+      "content": "TSMC's N2 (2nm) process node confirmed in commercial production ramp with AMD EPYC 'Venice' as the first HPC product to ship. AMD also plans to ramp production at TSMC Arizona (N2/A16) fab — P2 equipment move-in October 2026. TSM stock rose 1.36% to $407.15 on May 21. 61% of Q1 2026 revenue from AI/HPC. Stock up to new highs; Bernstein noted TSM lagging the Philly SOX index despite structural monopoly."
     }
   ],
   "ASML": [
@@ -583,6 +631,14 @@
       "url": "https://www.gurufocus.com/news/8870338/asml-progresses-with-new-highna-euv-technology-for-advanced-chip-production",
       "source": "GuroFocus / ASML",
       "content": "ASML CEO Christophe Fouquet: High-NA EUV approaching commercial application, first chips produced via High-NA EUV expected within months. Technology shrinks feature size ~66% vs current Low-NA EUV, enabling sub-2nm processes. Intel leading in High-NA EUV adoption. AI demand from Terafab, Starlink and hyperscalers will keep chip supply constrained for foreseeable future. Each High-NA EUV machine priced ~$400M."
+    },
+    {
+      "date": "2026-05-22",
+      "type": "research",
+      "title": "UBS Reinstates ASML as Top Pick in European Semis with Raised PT; Tata Electronics India Partnership Confirmed",
+      "url": "https://www.tradingkey.com/news/market-movers/261920550-market-movers-asml-20260521",
+      "source": "TradingKey / UBS Research",
+      "content": "ASML gained 3.04% on May 21 and 2.6% on May 22 after UBS reinstated ASML as top pick in European semiconductor sector with raised price target. ASML separately formed semiconductor manufacturing partnership with Tata Electronics to advance chip production in India. Full-year 2026 guidance raised to €36-40B; High-NA EUV (~$400M per unit) nearing commercial production with first sub-2nm chips expected within months."
     }
   ],
   "AMAT": [
@@ -711,6 +767,14 @@
       "url": "https://www.stocktitan.net/news/SNPS/synopsys-announces-earnings-release-date-for-second-quarter-fiscal-7xly7l9tnz9f.html",
       "source": "StockTitan / Synopsys",
       "content": "Synopsys will report Q2 FY2026 results May 27 after market close. Citi raised price target to $600 (from $580) on May 6. Morgan Stanley: Ansys integration ahead of plan targeting $400M cost synergies ahead of original 3-year schedule. Stock +27% in past month. Elliott Management stake disclosed. Seeking Alpha: Ansys integration 'reinforced the quality growth story'."
+    },
+    {
+      "date": "2026-05-22",
+      "type": "news",
+      "title": "Synopsys Q2 FY2026 Earnings May 27: Consensus $2.25B Revenue, $3.17 EPS; Options Imply 7.8% Move; Elliott Stake Active",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/synopsys-report-q2-earnings-whats-141300112.html",
+      "source": "Yahoo Finance / Bloomberg Options Data",
+      "content": "Synopsys reports Q2 FY2026 results May 27 after close (conf call 2PM PT). Analyst consensus: revenue $2.225-2.275B, non-GAAP EPS $3.11-3.17. Options market implies 7.8% post-earnings move. AI chip design demand and Ansys integration (ahead of $400M synergy target) are positives; consumer/auto/industrial weakness a headwind. Elliott Management stake active. SNPS +27% past month."
     }
   ],
   "MU": [
@@ -877,6 +941,14 @@
       "url": "https://247wallst.com/investing/2026/05/18/applied-optoelectronics-slumps-10-lumentum-dives-9-coherent-drops-6-as-ai-optics-profit-takers-strike/",
       "source": "24/7 Wall St.",
       "content": "AI optics stocks saw profit-taking pressure on May 18: COHR -6%, LITE -9%, AAOI -10%. Sector had run sharply on AI data center interconnect demand. Underlying demand thesis intact per analysts."
+    },
+    {
+      "date": "2026-05-21",
+      "type": "news",
+      "title": "Coherent Trades at $358 (-11.2% Past Week) as AI Optics Rally Consolidates; Stock Still +84.5% YTD After NVIDIA $2B Investment",
+      "url": "https://simplywall.st/stocks/us/tech/nyse-cohr/coherent/news/is-it-too-late-to-consider-coherent-cohr-after-its-350-one-y",
+      "source": "Simply Wall St",
+      "content": "Coherent stock at $358.50 on May 21, down 11.2% over the prior week as the AI optics sector consolidates after a massive 350%+ one-year run. Stock +84.5% YTD. NVIDIA's $2B strategic investment and co-packaged optics partnership remain the core thesis. Q3 FY2026 datacenter revenue +41% YoY. Sector-wide cooling affected Lumentum (-7%) and Fabrinet (-8%) during the same period."
     }
   ],
   "LITE": [
@@ -1241,6 +1313,14 @@
       "url": "https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html",
       "source": "CNBC",
       "content": "Execution of Meta's 10% workforce reduction began May 20: 8,000 employees cut, 6,000 open positions cancelled, 7,000 employees reorganized into new AI-focused roles. Largest workforce overhaul in Meta's history. CEO Zuckerberg told employees no further company-wide layoffs expected in 2026. Reflects AI-first organizational pivot alongside record $72B+ capex guidance."
+    },
+    {
+      "date": "2026-05-22",
+      "type": "announcement",
+      "title": "Meta Launches Forum App to Compete with Reddit and Facebook Groups; Reddit Shares Plunge",
+      "url": "https://www.foreignpolicyjournal.com/2026/05/22/meta-platforms-inc-nasdaq-meta-settles-near-608-as-forum-app-launches-against-reddit/",
+      "source": "Foreign Policy Journal / Meta",
+      "content": "Meta launched Forum, a standalone community discussion app targeting Reddit's core use case and Facebook Groups. Reddit shares fell sharply on the news. META stock settled near $608 on May 22. Q1 2026 EPS $10.44 beat estimates by ~56%; 10% workforce cut (8,000+ jobs) underway to redirect capital to AI infrastructure ($125-145B 2026 capex). AMD 6GW Instinct GPU deployment confirmed as part of Meta AI training expansion."
     }
   ],
   "AAPL": [
@@ -1299,6 +1379,14 @@
       "url": "https://www.foreignpolicyjournal.com/2026/05/18/tim-cooks-beijing-trip-signals-apple-nasdaq-aapl-is-all-in-on-keeping-china-happy/",
       "source": "Foreign Policy Journal",
       "content": "Tim Cook visited Beijing; Xi Jinping told assembled executives including Cook that China would open wider for their businesses. Apple Q2 2026: revenue $111.2B (+17% YoY), $100B buyback authorized. 80% of production still in China."
+    },
+    {
+      "date": "2026-05-22",
+      "type": "news",
+      "title": "Apple Restructures Hardware Development Team to Accelerate AI-Centric Devices; Stock at $306, Market Cap $4.48T",
+      "url": "https://stockanalysis.com/stocks/aapl/",
+      "source": "Stock Analysis / Market Reports",
+      "content": "Apple restructured its hardware development organization to accelerate AI-focused devices amid growing competitive pressure from AI-enabled rivals. Apple Intelligence driving upgrade cycle. Stock at $306 (+14.6% past 30 days, market cap $4.48T). Apple Vision Pro gains eye-tracking wheelchair control capability. Intel 18A foundry deal and Google-Gemini Siri integration (iOS 27) remain major strategic milestones."
     }
   ],
   "TSLA": [
@@ -1615,6 +1703,14 @@
       "url": "https://247wallst.com/investing/2026/05/19/forget-vistra-one-quarter-of-orders-at-ge-vernova-exceeded-all-of-last-year-that-is-the-ai-power-trade-worth-owning/",
       "source": "24/7 Wall St.",
       "content": "GE Vernova's Electrification segment booked $2.4B in Q1 2026 data center equipment orders alone — more than all of 2025. Raised 2026 guidance to $44.5-45.5B revenue (EBITDA margin 12-14%). Total backlog $163B, targeting $200B by 2027 — one year ahead of plan. Electrification revenue forecast to surge 44% in 2026 to $13.9B."
+    },
+    {
+      "date": "2026-05-21",
+      "type": "announcement",
+      "title": "GE Vernova Acquires Robotech Automation to Accelerate Robotics in Energy Infrastructure; Stock at $1,044",
+      "url": "https://www.gevernova.com/news/press-releases/ge-vernova-to-acquire-robotech-automation",
+      "source": "GE Vernova Newsroom",
+      "content": "GE Vernova signed definitive agreement to acquire Robotech Automation, a specialized robotics and automation systems integrator based near Montreal, Canada; expected close Q3 2026. GEV stock at $1,044 (+59.7% YTD, +130% past year). Company raised 2026 guidance: revenue $44.5-45.5B, FCF $6.5-7.5B. Q1 2026 data center equipment orders exceeded all of 2025; $163B backlog."
     }
   ],
   "CCJ": [
@@ -1853,6 +1949,14 @@
       "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-5-21-why-rocket-lab-rklb-stock-is-falling-today",
       "source": "Financial Content / StockStory",
       "content": "Rocket Lab entered an ATM equity distribution agreement with financial institutions to sell up to $3B in common stock over time. Proceeds for Neutron medium rocket development and Space Systems expansion. Stock fell 7.25% on May 21 to $125.90 on dilution concerns. Q1 2026 revenue $200.3M (+63% YoY). Stock at ~$125-130 range."
+    },
+    {
+      "date": "2026-05-22",
+      "type": "announcement",
+      "title": "Rocket Lab Wins $90M U.S. Space Force Contract; Stock +4.48% on May 22 Reversing Prior Day's 6.6% Drop",
+      "url": "https://www.timothysykes.com/news/rocket-lab-corporation-rklb-news-2026_05_22/",
+      "source": "Timothy Sykes / Market News",
+      "content": "Rocket Lab secured a $90 million contract from the U.S. Space Force, adding to a $2.2B record backlog. Stock surged 4.48% on May 22 reversing May 21's 6.58% drop triggered by the $3B ATM equity offering. Company's pipeline includes the largest launch deal ever (8 launches through 2029) and a $190M DoD hypersonic test contract. Neutron medium-lift rocket launch pushed to Q4 2026 after tank rupture test failure."
     }
   ],
   "HUBB": [
@@ -2063,6 +2167,14 @@
       "url": "https://au.finance.yahoo.com/news/lam-research-vs-applied-materials-123000020.html",
       "source": "Yahoo Finance / Morgan Stanley",
       "content": "Morgan Stanley upgraded LRCX to Overweight (simultaneously downgraded AMAT to Equal-weight). Thesis: NAND recovery cycle, HBM DRAM upgrades, and advanced packaging ramp favor LRCX etch/deposition portfolio. LRCX FY2026/2027 revenue growth forecasts 24.9%/29%; EPS growth 37%/36.5% — sector-leading trajectory."
+    },
+    {
+      "date": "2026-05-21",
+      "type": "announcement",
+      "title": "Lam Research Opens Panel-Level Packaging Center of Excellence in Salzburg; Declares $0.26/Share Dividend; Stock +3.46%",
+      "url": "https://investor.lamresearch.com/",
+      "source": "Lam Research IR",
+      "content": "Lam Research opened a Panel-Level Packaging Center of Excellence in Salzburg, Austria — an R&D lab for chip packaging using square panels instead of circular wafers to enhance density and cut costs for AI accelerator packaging. Board declared quarterly dividend of $0.26/share. Stock gained 3.46% on May 21; Morgan Stanley Overweight upgrade (May 18) and WFE industry 2026 forecast of $140B underpin the bull case."
     }
   ],
   "CDNS": [
