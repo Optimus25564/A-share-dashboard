@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-05-17",
+    "updated": "2026-05-24",
     "note": "AI CapEx 产业链 8 层框架. 财报数据自然季度 (2025Q2→2026Q1). 单位 rev=亿$.",
     "categories": {
       "core_chip": "L1 算力芯片 & 加速器",
@@ -1535,32 +1535,47 @@
     "quarters": [
       {
         "q": "2025Q2",
-        "rev": 2.2,
-        "gm": 67.4,
-        "nm": 28.4,
-        "src": "F"
+        "rev": 1.7,
+        "gm": 67.2,
+        "nm": 21.5,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828025028827/credoq42025ex-991.htm",
+        "note": "FY25 Q4 (Feb-May 2025): AEC 需求爆发, 营收同比+180% 至$1.70亿"
       },
       {
         "q": "2025Q3",
-        "rev": 2.7,
-        "gm": 67.6,
-        "nm": 30.8,
-        "src": "F"
+        "rev": 2.2,
+        "gm": 67.4,
+        "nm": 28.4,
+        "src": "A",
+        "source_url": "https://investors.credosemi.com/news-events/news/news-details/2025/Credo-Technology-Group-Holding-Ltd-Reports-First-Quarter-of-Fiscal-Year-2026-Financial-Results/",
+        "note": "FY26 Q1 (May-Aug 2025): 营收$2.23亿同比+274%, GAAP净利$6340万"
       },
       {
         "q": "2025Q4",
-        "rev": 4.1,
-        "gm": 68.5,
-        "nm": 38.6,
-        "src": "F"
+        "rev": 2.7,
+        "gm": 67.5,
+        "nm": 30.8,
+        "src": "A",
+        "source_url": "https://www.businesswire.com/news/home/20251201598056/en/Credo-Technology-Group-Holding-Ltd-Reports-Second-Quarter-of-Fiscal-Year-2026-Financial-Results",
+        "note": "FY26 Q2 (Aug-Nov 2025): 营收$2.68亿同比+272%, GAAP净利$8260万"
       },
       {
         "q": "2026Q1",
+        "rev": 4.1,
+        "gm": 68.5,
+        "nm": 38.6,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828026013205/credoq32026ex-9911.htm",
+        "note": "FY26 Q3 (Nov 2025-Jan 2026): 营收$4.07亿同比+202%/环比+52%, GAAP净利$1.571亿, AEC超高速增长"
+      },
+      {
+        "q": "2026Q2",
         "rev": null,
         "gm": null,
         "nm": null,
         "src": "F",
-        "note": "财报未发布 (CRDO FY26 Q4 预计 2026/06 公布)"
+        "note": "FY26 Q4 (Feb-May 2026) 财报预计 2026/06 公布; 公司指引 $4.25-4.35亿, GM 63.9-65.9%"
       }
     ]
   },
@@ -1915,7 +1930,7 @@
         "gm": null,
         "nm": null,
         "src": "F",
-        "note": "FQ4 财报未发布 (预计 5 月底披露)"
+        "note": "FQ4 FY2026 (Jan-Mar 2026) 财报预计 2026/05/27 盘后发布 (FY26 Q4 Earnings Call)"
       }
     ]
   },
