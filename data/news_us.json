@@ -103,6 +103,14 @@
       "url": "https://www.kiplinger.com/investing/live/nvidia-earnings-live-updates-and-commentary-may-2026",
       "source": "Kiplinger / Capital.com",
       "content": "Despite record Q1 FY2027 results ($81.6B revenue, $2.39 EPS, Q2 guide $91B), NVDA stock declined 0.9% on May 21 — fourth consecutive post-earnings decline. Analysts called it a \"garden variety beat\"; market had priced in perfection. Q2 guidance excludes China data center compute revenue."
+    },
+    {
+      "date": "2026-05-25",
+      "type": "announcement",
+      "title": "NVIDIA Names Suzanne Nora Johnson to Board of Directors Effective July 13; Market Cap Reaches $5.22 Trillion",
+      "url": "https://nvidianews.nvidia.com/news/latest",
+      "source": "NVIDIA Newsroom",
+      "content": "NVIDIA appointed Suzanne Nora Johnson (former Goldman Sachs vice chairman, RAND Corporation chair) to its board of directors, effective July 13, 2026. As of May 24, NVIDIA's market cap reached $5.22 trillion following Q1 FY2027 blowout ($81.6B revenue, +85% YoY; Q2 guide $91B). Stock up 11%+ month-to-date and ~20% YTD."
     }
   ],
   "AVGO": [
@@ -177,6 +185,14 @@
       "url": "https://finance.yahoo.com/quote/AVGO/press-releases/",
       "source": "LSEG / Yahoo Finance",
       "content": "LSEG (London Stock Exchange Group) signed a new 5-year technology partnership agreement with Broadcom, expanding their existing relationship. AVGO stock closed at $414.57 on May 21 (-0.76%). Q2 FY2026 earnings June 3 with $22B revenue and $10.7B AI chip revenue guided. Goldman Sachs Buy reiterated May 20."
+    },
+    {
+      "date": "2026-05-22",
+      "type": "news",
+      "title": "Broadcom Custom AI Chips 'About to Hit Full Force' as Multiple Hyperscaler ASICs Enter High-Volume Shipments",
+      "url": "https://www.fool.com/investing/2026/05/22/broadcoms-secret-weapon-is-about-to-be-unleashed/",
+      "source": "The Motley Fool",
+      "content": "Motley Fool analysis: Broadcom's custom AI silicon 'secret weapon' about to be unleashed as Google TPU, Meta MTIA, and OpenAI ASIC programs simultaneously enter high-volume production in H1/H2 2026. AI semiconductor revenue guided $10.7B (+140% YoY) for Q2 FY2026 (June 3 earnings). CEO Hock Tan's $100B AI chip 2027 target increasingly achievable. Stock at $413-419 range (May 25); $73B backlog provides multi-year visibility."
     }
   ],
   "AMD": [
@@ -365,6 +381,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/261920293-market-movers-intc-20260521",
       "source": "TradingKey",
       "content": "Intel fell 3.24% on May 21 as analysts flag unsustainable 100x forward P/E on YTD +200% rally. Company introduced SuperClaw hybrid AI solution combining CPU and accelerator workloads. Server CPU market share 54.9% (down from 64.4% a year ago); AMD at 27.4%, ARM at 17.7%. Intel stock at ~$120, up 530%+ from 52-week low of $18.97."
+    },
+    {
+      "date": "2026-05-22",
+      "type": "news",
+      "title": "Biggest Threat to Intel's 200%+ YTD Rally: 100x Forward P/E, Server CPU Share Loss to AMD and ARM",
+      "url": "https://www.fool.com/investing/2026/05/22/meet-the-biggest-threat-to-intels-stunning-stock-m/",
+      "source": "The Motley Fool",
+      "content": "Motley Fool identifies three key risks to Intel's extraordinary 2026 rally: (1) Valuation at ~100x forward P/E — unsustainable historically; (2) Server CPU market share eroding to 54.9% from 64.4% YoY (AMD at 27.4%, ARM at 17.7%); (3) Intel Foundry Q1 2026 operating loss $2.3B — 18A and 14A process yields below expectations. Intel has doubled AMD's 2026 gains at +222% vs +118% YTD as of May 23."
     }
   ],
   "QCOM": [
@@ -589,6 +613,14 @@
       "url": "https://www.guru3d.com/story/amd-epyc-venice-enters-production-on-tsmc-2nm-process/",
       "source": "Guru3D / AMD Press Release",
       "content": "TSMC's N2 (2nm) process node confirmed in commercial production ramp with AMD EPYC 'Venice' as the first HPC product to ship. AMD also plans to ramp production at TSMC Arizona (N2/A16) fab — P2 equipment move-in October 2026. TSM stock rose 1.36% to $407.15 on May 21. 61% of Q1 2026 revenue from AI/HPC. Stock up to new highs; Bernstein noted TSM lagging the Philly SOX index despite structural monopoly."
+    },
+    {
+      "date": "2026-05-23",
+      "type": "announcement",
+      "title": "TSMC Declares $0.95/Share ADR Dividend; Ex-Date June 11, Payment July 9, 2026; Q2 2026 Revenue Guided $39-40.2B",
+      "url": "https://stockanalysis.com/stocks/tsm/dividend/",
+      "source": "TSMC / Stock Analysis",
+      "content": "TSMC declared a $0.95/share ADR cash dividend with ex-date June 11, 2026 and payment date July 9, 2026. Q2 2026 revenue guidance $39-40.2B at gross margin 65.5-67.5%. Arizona Fab P2 (N2 process) tool move-in on track for October 2026. Total Arizona investment trajectory toward $465B under US-Taiwan trade deal (15% tariff cap). Market cap ~$2.2T; 61% of Q1 2026 revenue from AI/HPC customers."
     }
   ],
   "ASML": [
@@ -639,6 +671,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/261920550-market-movers-asml-20260521",
       "source": "TradingKey / UBS Research",
       "content": "ASML gained 3.04% on May 21 and 2.6% on May 22 after UBS reinstated ASML as top pick in European semiconductor sector with raised price target. ASML separately formed semiconductor manufacturing partnership with Tata Electronics to advance chip production in India. Full-year 2026 guidance raised to €36-40B; High-NA EUV (~$400M per unit) nearing commercial production with first sub-2nm chips expected within months."
+    },
+    {
+      "date": "2026-05-15",
+      "type": "news",
+      "title": "TSMC Delays High-NA EUV Adoption to 2029, Citing Cost; ASML Stock Falls 4.81% — Low-NA Strategy Intact",
+      "url": "https://sherwood.news/markets/asml-drops-after-tsmc-delays-adoption-of-its-newest-chip-making-machines-until-2029/",
+      "source": "Sherwood News / TradingKey",
+      "content": "TSMC confirmed it will not deploy ASML's High-NA EUV lithography machines for mass production before 2029, citing each unit's ~€350M+ price tag and sufficient capability from existing Low-NA systems. ASML shares fell 4.81% on May 15 before rebounding. Analysts note: Intel and SK Hynix are leading High-NA EUV early adopters, while TSMC will use A12/A13 variants with Low-NA through 2028-2029. ASML 2026 revenue guidance raised to €36-40B; Low-NA target 80 systems in 2027."
     }
   ],
   "AMAT": [
@@ -849,6 +889,22 @@
       "url": "https://www.thestreet.com/investing/stocks/melius-raises-micron-stock-target-to-1100-after-mu-drops-6",
       "source": "TheStreet / Melius Research / HSBC",
       "content": "MU gained 3.6% on May 21. Samsung Electronics labor unions announced an 18-day strike, threatening HBM supply from the world's largest memory producer. Both Melius Research and HSBC raised MU targets to $1,100. Micron 2026 HBM production fully committed under binding contracts; any Samsung disruption further strengthens Micron pricing power."
+    },
+    {
+      "date": "2026-05-22",
+      "type": "news",
+      "title": "Micron CEO Mehrotra: Memory Chip Shortage 'Well Beyond 2026' — Can Only Meet 50-67% of HBM/DRAM Customer Demand",
+      "url": "https://www.bloomberg.com/news/videos/2026-05-22/micron-ceo-sees-memory-chip-shortage-lasting-beyond-2026-video",
+      "source": "Bloomberg",
+      "content": "Micron CEO Sanjay Mehrotra told Bloomberg the memory chip shortage will last 'well beyond 2026' as Micron can meet only 50-67% of customer demand for HBM and DRAM. Shortage is structural: meaningful new industry supply doesn't arrive at scale until 2028. Micron committed $200B in US capacity expansion (Manassas VA, Boise ID, Syracuse NY) targeting 40% domestic manufacturing by 2036, creating 90,000 high-paying jobs."
+    },
+    {
+      "date": "2026-05-25",
+      "type": "news",
+      "title": "Micron's 50% Problem: AI Memory Demand Doubles While Supply Lags; Shortage to Last Into 2028",
+      "url": "https://247wallst.com/investing/2026/05/25/micron-ceo-sanjay-mehrotra-memory-chip-shortage-will-last-well-beyond-2026/",
+      "source": "24/7 Wall St.",
+      "content": "Analysis of Micron's structural supply constraint: company can only meet 50% of demand for HBM in some customer categories. CEO Mehrotra confirmed shortage extends beyond 2026 — new competitors' capacity won't arrive at scale until 2028, giving Micron two more years of pricing power. 2026 HBM output fully sold out; HBM TAM projected to reach $100B by 2028 (two years ahead of prior forecast)."
     }
   ],
   "SNDK": [
@@ -899,6 +955,14 @@
       "url": "https://www.benzinga.com/markets/tech/26/05/52425213/sandisk-nvidia-ai-semiconductor-memory-stocks",
       "source": "Benzinga",
       "content": "SanDisk is developing High-Bandwidth Flash (HBF) — NAND stacked vertically like HBM, offering 8-16x the capacity at lower cost per bit for AI inference serving. First HBF samples expected H2 2026. SanDisk did in months what Nvidia took years — transforming from consumer NAND to AI data center infrastructure. Q3 FY2026 datacenter revenue +645% YoY; $42B backlog from hyperscaler contracts."
+    },
+    {
+      "date": "2026-05-23",
+      "type": "news",
+      "title": "Memory Chip Supercycle 2026: Micron and SanDisk Remain Top AI Memory Bets as HBM Shortage Extends Beyond 2026",
+      "url": "https://www.fool.com/investing/2026/05/23/memory-chip-supercycle-2026-why-micron-and-sandisk/",
+      "source": "The Motley Fool",
+      "content": "Motley Fool positions Micron and SanDisk as top memory supercycle plays: CEO Mehrotra confirmed HBM/DRAM shortage extends well beyond 2026 as new capacity not at scale until 2028. SanDisk's High-Bandwidth Flash (HBF) development and $42B hyperscaler backlog reinforce structural demand thesis. Combined AI data center memory TAM projected to reach $100B by 2028."
     }
   ],
   "COHR": [
@@ -2059,6 +2123,14 @@
       "url": "https://www.arista.com/en/company/news/press-release/24030-pr-20260520",
       "source": "Arista Networks",
       "content": "Arista Networks was positioned as a Leader in the 2026 Gartner Magic Quadrant for Enterprise Wired and Wireless LAN, recognizing its unified software-driven networking approach. Stock surged 5.8% to $148.59 on May 21 on Gartner recognition + NVDA earnings. GF Score 100/100. Management flagged industry-wide Broadcom switch silicon shortage (TSMC capacity) may constrain AI network expansion 1-2 years."
+    },
+    {
+      "date": "2026-05-23",
+      "type": "research",
+      "title": "Evercore Reiterates Arista Networks as Top Pick, $200 Price Target on AI Data Center Ethernet Demand",
+      "url": "https://seekingalpha.com/article/4907945-arista-networks-stock-buy-the-margin-anxiety-selloff",
+      "source": "Seeking Alpha / Evercore ISI",
+      "content": "Evercore ISI maintained Arista Networks as sector Top Pick with Outperform rating and $200 price target on May 23, 2026. Thesis: buy the margin anxiety selloff post-Q1; AI data center Ethernet switching demand structurally intact. ANET full-year 2026 guidance $11.5B (+27.7% YoY) and AI fabric target $3.5B remain achievable despite 1-2 year supply constraints in switch silicon (TSMC capacity)."
     }
   ],
   "ARM": [
@@ -2109,6 +2181,14 @@
       "url": "https://rollingout.com/2026/05/21/arm-holdings-arm-hits-all-time-high/",
       "source": "Rolling Out / Bernstein",
       "content": "Bernstein initiated ARM at Outperform with $300 price target, forecasting a fivefold profit increase by 2030. Stock extended gains to $298 (+16%) on May 21. Arm IP found in virtually every AI inference device globally; NVDA Vera CPU, mobile, and server ARM expansion provide multi-decade royalty compounding. Full-year FY2026 results confirmed strong trajectory."
+    },
+    {
+      "date": "2026-05-22",
+      "type": "news",
+      "title": "Arm Holdings Up 104% YTD at $223; Smart Money Waiting for Specific Entry Level on AGI CPU Royalty Upside",
+      "url": "https://247wallst.com/investing/2026/05/20/arm-holdings-is-up-104-and-smart-money-is-waiting-for-one-specific-level-to-buy-more/",
+      "source": "24/7 Wall St.",
+      "content": "Arm Holdings stock up 104% YTD, trading at $223.15 against consensus analyst target $230.92 (69% bullish). Institutional investors watching for pullback entry after near-50% weekly rally through May 22. Bullish thesis: NVDA Vera CPU licensed from ARM translates to significant royalty upside as NVDA forecasts $20B in CPU revenue; data center royalties doubled YoY in FY2026. AGI CPU demand exceeded $20B in six weeks post-announcement."
     }
   ],
   "LRCX": [
@@ -2741,6 +2821,14 @@
       "url": "https://www.datacenterdynamics.com/en/news/vera-rubin-hot-water-cooling-reveal-triggers-hvac-share-drop/",
       "source": "Data Center Dynamics",
       "content": "Modine Manufacturing fell 7.5% on May 20 after Nvidia announced Vera Rubin GPU platforms maintain hot-water cooling loop architecture instead of chiller-based systems, implying reduced demand for large HVAC chiller equipment in AI data centers. Modine FQ4 (Jan-Mar 2026) earnings still pending, expected late May 2026."
+    },
+    {
+      "date": "2026-05-26",
+      "type": "announcement",
+      "title": "Modine Q4 FY2026 Results Released Today May 26; Earnings Conference Call May 27 at 9AM CT",
+      "url": "https://investors.modine.com/news/news-details/2026/Modine-to-Host-Fourth-Quarter-Fiscal-2026-Earnings-Conference-Call-on-May-27-2026/default.aspx",
+      "source": "Modine Manufacturing IR",
+      "content": "Modine Manufacturing Q4 FY2026 (fiscal year ended March 31, 2026) financial results released after market close May 26, 2026. Management (CEO Neil Brinker and CFO Michael Lucareli) to host earnings conference call May 27 at 9:00 AM CT. FY2026 guidance projected: total sales +20-25%, Climate Solutions revenue +40-45%, data center cooling sales >70% growth, adjusted EBITDA $455-475M. Q3 FY2026 showed data center cooling +78% YoY; four new chiller production lines commissioned."
     }
   ],
   "TT": [
