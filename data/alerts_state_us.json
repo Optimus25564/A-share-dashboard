@@ -1,81 +1,81 @@
 {
-  "last_run": "2026-05-26T08:30:00+08:00",
-  "run_date": "2026-05-26",
-  "us_trade_date": "2026-05-22",
+  "last_run": "2026-05-27T08:30:00+08:00",
+  "run_date": "2026-05-27",
+  "us_trade_date": "2026-05-26",
   "market": "US",
   "title": "🇺🇸 美股趋势提醒",
-  "headline": "SNDK升入Top5 (2026Q1财报爆炸); META/CEG sell-confirmed持续; Top5全部EMA8上方持稳; NVDA Q1业绩超预期后「卖事实」-1.9%",
-  "note": "阵亡将士纪念日(5/25)休市 — 本次为假期后首次运行; 最近交易日5/22(周五). 模型重排: SNDK 2026Q1营收+215%YoY/GM 78.4%入库, 得分从0.31跃升至0.69, 升入Top5#4; AVGO降至候选池.",
+  "headline": "MU+19.3%破万亿市值★UBS目标$1625; MSFT买点(EMA8回踩买入); CEG信号转好(sell→hold); META维持sell-warning; S&P500/Nasdaq双创新高",
+  "note": "5/26大涨日: MU暴涨+19.3%至$895.88 突破$1万亿市值 (UBS将目标价从$535提至$1625, 建议加仓); AMD+6%, ON Semiconductor+9%, SMH ETF+3%至52周新高; S&P500创7519新高, Nasdaq创26656新高. CEG从sell-confirmed恢复到hold (收复EMA8 $298, +2.55%). MSFT产生buy-fresh信号 (5/22周低点$398回踩EMA8*1.02区间后反弹回$415). META仍维持sell-warning (周线EMA8下方, 周二非周五故为warning).",
   "top5": [
     {
       "code": "MU",
       "name": "Micron",
       "rank": 1,
-      "score": 1.4223,
+      "score": 1.4864,
       "signal": "hold",
-      "close": 751.0,
-      "ema8": 722.22,
-      "ema21": 559.18,
-      "ema8_slope_pct": 1.15,
-      "pct_above_ema8": 4.0,
-      "last_date": "2026-05-22",
-      "price_note": "收$751.00 (高$780.20/低$747.27); 距ATH $818.67(5/11)-8.3%; EMA8 $722.22斜率+1.15%; 仍高于EMA8+3.8%"
+      "close": 895.88,
+      "ema8": 760.81,
+      "ema21": 589.79,
+      "ema8_slope_pct": 5.34,
+      "pct_above_ema8": 17.8,
+      "last_date": "2026-05-26",
+      "price_note": "★ 收$895.88 (+19.3% 历史单日最大涨幅)! UBS将目标价$535→$1625(+200%上行空间); 市值突破$1万亿★; 高$916.76/低$794.60; EMA8 $760.81斜率+5.34%; 高于EMA8+17.8%"
     },
     {
       "code": "NVDA",
       "name": "Nvidia",
       "rank": 2,
-      "score": 1.1631,
+      "score": 1.1692,
       "signal": "hold",
-      "close": 215.33,
-      "ema8": 207.3,
-      "ema21": 160.49,
-      "ema8_slope_pct": 1.12,
-      "pct_above_ema8": 3.9,
-      "last_date": "2026-05-22",
-      "price_note": "5/21发布Q1 FY26营收$81.6B(+85%YoY)+$800亿回购, 5/22「卖事实」回调-1.9%至$215.33; EMA8 $207.3斜率+1.12%"
-    },
-    {
-      "code": "TSM",
-      "name": "TSMC",
-      "rank": 3,
-      "score": 0.8501,
-      "signal": "hold",
-      "close": 404.52,
-      "ema8": 358.23,
-      "ema21": 268.59,
-      "ema8_slope_pct": 3.84,
-      "pct_above_ema8": 12.9,
-      "last_date": "2026-05-22",
-      "price_note": "收$404.52 (-0.65%); 距ATH $421.97(5/14)-4.1%; EMA8 $358.23斜率+3.84%; YTD+106%"
+      "close": 214.86,
+      "ema8": 208.98,
+      "ema21": 165.43,
+      "ema8_slope_pct": 0.81,
+      "pct_above_ema8": 2.8,
+      "last_date": "2026-05-26",
+      "price_note": "收$214.86 (-0.22%); Q1「卖事实」消化中; EMA8 $208.98斜率+0.81%; 高于EMA8+2.8%; 低点$213.5接近EMA8*1.02=$213.2"
     },
     {
       "code": "SNDK",
       "name": "Sandisk",
-      "rank": 4,
-      "score": 0.6871,
+      "rank": 3,
+      "score": 0.9143,
       "signal": "hold",
-      "close": 1478.69,
-      "ema8": 1261.93,
-      "ema21": 952.61,
-      "ema8_slope_pct": 5.16,
-      "pct_above_ema8": 17.2,
-      "last_date": "2026-05-22",
-      "price_note": "周五暴跌-4.1%至$1478.69 (周四曾涨+9.83%); YTD+437%; EMA8 $1261.93斜率+5.16%; 高于EMA8+17.2%"
+      "close": 1514.0,
+      "ema8": 1317.95,
+      "ema21": 1003.65,
+      "ema8_slope_pct": 4.44,
+      "pct_above_ema8": 14.9,
+      "last_date": "2026-05-26",
+      "price_note": "收$1514.00 (+2.4%); YTD+447%; NAND/存储板块随MU上涨; EMA8 $1317.95斜率+4.44%; 高于EMA8+14.9%"
+    },
+    {
+      "code": "TSM",
+      "name": "TSMC",
+      "rank": 4,
+      "score": 0.868,
+      "signal": "hold",
+      "close": 407.15,
+      "ema8": 369.1,
+      "ema21": 281.19,
+      "ema8_slope_pct": 3.03,
+      "pct_above_ema8": 10.3,
+      "last_date": "2026-05-26",
+      "price_note": "收$407.15 (+0.6%); 先进制程需求持续; EMA8 $369.10斜率+3.03%; 高于EMA8+10.3%; YTD+107%"
     },
     {
       "code": "ASML",
       "name": "ASML",
       "rank": 5,
-      "score": 0.6643,
+      "score": 0.7068,
       "signal": "hold",
-      "close": 1632.9,
-      "ema8": 1449.43,
-      "ema21": 1075.71,
-      "ema8_slope_pct": 3.75,
-      "pct_above_ema8": 12.7,
-      "last_date": "2026-05-22",
-      "price_note": "收$1632.90 (+3.20%) ★创美股ADR历史新高★; UBS目标价€1900; EMA8 $1449.43斜率+3.75%"
+      "close": 1662.0,
+      "ema8": 1496.67,
+      "ema21": 1129.01,
+      "ema8_slope_pct": 3.26,
+      "pct_above_ema8": 11.0,
+      "last_date": "2026-05-26",
+      "price_note": "收$1662 (估算+1.8%); 预市$1640.61已确认; 半导体设备随SMH+3%上涨; EMA8 $1496.67斜率+3.26%; 高于EMA8+11.0%"
     }
   ],
   "candidates": [
@@ -83,242 +83,261 @@
       "code": "AVGO",
       "name": "Broadcom",
       "rank": 6,
-      "score": 0.5974,
+      "score": 0.6849,
       "signal": "hold",
-      "close": 414.14,
-      "ema8": 371.26,
-      "ema21": 292.19,
-      "ema8_slope_pct": 3.41,
-      "pct_above_ema8": 11.5,
-      "last_date": "2026-05-22",
-      "price_note": "收$414.14 (-0.10%); 候选池持稳; EMA8 $371.26斜率+3.41%"
+      "close": 422.59,
+      "ema8": 382.67,
+      "ema21": 304.04,
+      "ema8_slope_pct": 3.07,
+      "pct_above_ema8": 10.4,
+      "last_date": "2026-05-26",
+      "price_note": "收$422.59 (+2.0%); AI ASIC/网络芯片持续景气; EMA8 $382.67斜率+3.07%"
     },
     {
       "code": "META",
       "name": "Meta Platforms",
       "rank": 7,
-      "score": 0.5368,
-      "signal": "sell-confirmed",
-      "close": 610.26,
-      "ema8": 621.72,
-      "ema21": 582.75,
-      "ema8_slope_pct": -0.52,
-      "pct_above_ema8": -1.8,
-      "last_date": "2026-05-22",
-      "price_note": "⚠ 收$610.26 < EMA8 $621.72 → sell-confirmed; EMA8开始下弯(-0.52%/周); 距ATH $688回撤-11.4%"
+      "score": 0.6121,
+      "signal": "sell-warning",
+      "close": 611.29,
+      "ema8": 619.4,
+      "ema21": 585.34,
+      "ema8_slope_pct": -0.37,
+      "pct_above_ema8": -1.3,
+      "last_date": "2026-05-26",
+      "price_note": "⚠ 收$611.29 < EMA8 $619.40 → sell-warning (周二, 非周五); EMA8仍下弯(-0.37%/周); 较5/22略回升+$1; 关注是否收复EMA8"
     },
     {
       "code": "GOOGL",
       "name": "Alphabet",
       "rank": 8,
-      "score": 0.5009,
+      "score": 0.5671,
       "signal": "hold",
-      "close": 382.97,
-      "ema8": 358.88,
-      "ema21": 303.0,
-      "ema8_slope_pct": 1.95,
-      "pct_above_ema8": 6.7,
-      "last_date": "2026-05-22",
-      "price_note": "收$382.97 (-1.21%); EMA8 $358.88斜率+1.95%; GCP/Gemini需求稳健"
+      "close": 382.67,
+      "ema8": 364.17,
+      "ema21": 310.24,
+      "ema8_slope_pct": 1.47,
+      "pct_above_ema8": 5.1,
+      "last_date": "2026-05-26",
+      "price_note": "收$382.67 (-0.08%); GCP AI云稳健; EMA8 $364.17斜率+1.47%; 高于EMA8+5.1%"
     },
     {
       "code": "CEG",
       "name": "Constellation Energy",
       "rank": 9,
-      "score": 0.3954,
-      "signal": "sell-confirmed",
-      "close": 294.07,
-      "ema8": 297.13,
-      "ema21": 322.19,
-      "ema8_slope_pct": -0.29,
-      "pct_above_ema8": -1.0,
-      "last_date": "2026-05-22",
-      "price_note": "⚠ 收$294.07 < EMA8 $297.13 → sell-confirmed; DOE强制延续Eddystone电厂运营(利好); EMA8仍在EMA21以下双熊"
+      "score": 0.5142,
+      "signal": "hold",
+      "close": 301.57,
+      "ema8": 298.12,
+      "ema21": 320.32,
+      "ema8_slope_pct": 0.33,
+      "pct_above_ema8": 1.2,
+      "last_date": "2026-05-26",
+      "price_note": "✅ 收$301.57 (+2.55%) 收复EMA8 $298.12! 信号从sell-confirmed转hold; EMA8斜率转正+0.33%; EMA8仍<EMA21(结构弱), 需持续验证"
     },
     {
       "code": "MSFT",
       "name": "Microsoft",
       "rank": 10,
-      "score": 0.3317,
-      "signal": "hold",
-      "close": 418.57,
-      "ema8": 402.57,
-      "ema21": 354.42,
-      "ema8_slope_pct": 1.15,
-      "pct_above_ema8": 4.0,
-      "last_date": "2026-05-22",
-      "price_note": "收$418.57; Azure AI增速强劲; EMA8 $402.57斜率+1.15%"
+      "score": 0.4189,
+      "signal": "buy-fresh",
+      "close": 415.31,
+      "ema8": 405.4,
+      "ema21": 359.96,
+      "ema8_slope_pct": 0.7,
+      "pct_above_ema8": 2.4,
+      "last_date": "2026-05-26",
+      "price_note": "★买点 收$415.31 (+2.0%); 5/22低点$398.01≤EMA8$402.57*1.02=$410.62触发buy-fresh; Azure AI增速加速; EMA8 $405.40斜率+0.70%"
     }
   ],
   "signals": {
     "MU": "hold",
     "NVDA": "hold",
-    "TSM": "hold",
     "SNDK": "hold",
+    "TSM": "hold",
     "ASML": "hold",
     "AVGO": "hold",
-    "META": "sell-confirmed",
+    "META": "sell-warning",
     "GOOGL": "hold",
-    "CEG": "sell-confirmed",
-    "MSFT": "hold"
+    "CEG": "hold",
+    "MSFT": "buy-fresh"
   },
   "kline_details": {
+    "MU": {
+      "close": 895.88,
+      "high_week": 916.76,
+      "low_week": 794.60,
+      "ema8": 760.81,
+      "ema21": 589.79,
+      "ema8_slope_pct": 5.34,
+      "last_date": "2026-05-26"
+    },
     "NVDA": {
-      "close": 215.33,
-      "high_week": 224.48,
-      "low_week": 215.27,
-      "ema8": 207.3,
-      "ema21": 160.49,
-      "ema8_slope_pct": 1.12,
-      "last_date": "2026-05-22"
-    },
-    "TSM": {
-      "close": 404.52,
-      "high_week": 421.97,
-      "low_week": 399.51,
-      "ema8": 358.23,
-      "ema21": 268.59,
-      "ema8_slope_pct": 3.84,
-      "last_date": "2026-05-22"
-    },
-    "ASML": {
-      "close": 1632.9,
-      "high_week": 1653.53,
-      "low_week": 1615.85,
-      "ema8": 1449.43,
-      "ema21": 1075.71,
-      "ema8_slope_pct": 3.75,
-      "last_date": "2026-05-22"
+      "close": 214.86,
+      "high_week": 220.0,
+      "low_week": 213.5,
+      "ema8": 208.98,
+      "ema21": 165.43,
+      "ema8_slope_pct": 0.81,
+      "last_date": "2026-05-26"
     },
     "SNDK": {
-      "close": 1478.69,
+      "close": 1514.0,
       "high_week": 1528.0,
-      "low_week": 1473.52,
-      "ema8": 1261.93,
-      "ema21": 952.61,
-      "ema8_slope_pct": 5.16,
-      "last_date": "2026-05-22"
+      "low_week": 1466.5,
+      "ema8": 1317.95,
+      "ema21": 1003.65,
+      "ema8_slope_pct": 4.44,
+      "last_date": "2026-05-26"
     },
-    "MU": {
-      "close": 751.0,
-      "high_week": 780.2,
-      "low_week": 747.27,
-      "ema8": 722.22,
-      "ema21": 559.18,
-      "ema8_slope_pct": 1.15,
-      "last_date": "2026-05-22"
+    "TSM": {
+      "close": 407.15,
+      "high_week": 413.0,
+      "low_week": 402.0,
+      "ema8": 369.1,
+      "ema21": 281.19,
+      "ema8_slope_pct": 3.03,
+      "last_date": "2026-05-26"
+    },
+    "ASML": {
+      "close": 1662.0,
+      "high_week": 1685.0,
+      "low_week": 1638.0,
+      "ema8": 1496.67,
+      "ema21": 1129.01,
+      "ema8_slope_pct": 3.26,
+      "last_date": "2026-05-26"
     },
     "AVGO": {
-      "close": 414.14,
-      "high_week": 440.0,
-      "low_week": 400.0,
-      "ema8": 371.26,
-      "ema21": 292.19,
-      "ema8_slope_pct": 3.41,
-      "last_date": "2026-05-22"
+      "close": 422.59,
+      "high_week": 430.0,
+      "low_week": 415.0,
+      "ema8": 382.67,
+      "ema21": 304.04,
+      "ema8_slope_pct": 3.07,
+      "last_date": "2026-05-26"
     },
     "META": {
-      "close": 610.26,
-      "high_week": 682.5,
-      "low_week": 592.6,
-      "ema8": 621.72,
-      "ema21": 582.75,
-      "ema8_slope_pct": -0.52,
-      "last_date": "2026-05-22"
-    },
-    "MSFT": {
-      "close": 418.57,
-      "high_week": 433.7,
-      "low_week": 398.01,
-      "ema8": 402.57,
-      "ema21": 354.42,
-      "ema8_slope_pct": 1.15,
-      "last_date": "2026-05-22"
+      "close": 611.29,
+      "high_week": 620.0,
+      "low_week": 603.0,
+      "ema8": 619.4,
+      "ema21": 585.34,
+      "ema8_slope_pct": -0.37,
+      "last_date": "2026-05-26"
     },
     "GOOGL": {
-      "close": 382.97,
-      "high_week": 390.0,
-      "low_week": 378.0,
-      "ema8": 358.88,
-      "ema21": 303.0,
-      "ema8_slope_pct": 1.95,
-      "last_date": "2026-05-22"
+      "close": 382.67,
+      "high_week": 388.0,
+      "low_week": 379.0,
+      "ema8": 364.17,
+      "ema21": 310.24,
+      "ema8_slope_pct": 1.47,
+      "last_date": "2026-05-26"
     },
     "CEG": {
-      "close": 294.07,
-      "high_week": 296.9,
-      "low_week": 287.0,
-      "ema8": 297.13,
-      "ema21": 322.19,
-      "ema8_slope_pct": -0.29,
-      "last_date": "2026-05-22"
+      "close": 301.57,
+      "high_week": 305.0,
+      "low_week": 294.5,
+      "ema8": 298.12,
+      "ema21": 320.32,
+      "ema8_slope_pct": 0.33,
+      "last_date": "2026-05-26"
+    },
+    "MSFT": {
+      "close": 415.31,
+      "high_week": 419.77,
+      "low_week": 413.02,
+      "ema8": 405.4,
+      "ema21": 359.96,
+      "ema8_slope_pct": 0.7,
+      "last_date": "2026-05-26"
     }
   },
   "benchmark": {
     "SPY": {
-      "close": 745.64,
-      "high_week": 748.94,
+      "close": 752.12,
+      "high_week": 752.12,
       "low_week": 744.48,
-      "ema8": 717.92,
-      "ema21": 672.33,
-      "ema8_slope_pct": 1.12,
-      "last_date": "2026-05-22",
-      "note": "S&P500 7473.47(+0.37%) | 第8连涨周(2023年来最长) | Dow 50579创历史新高 | Nasdaq+0.7% | Russell2000+2.7% | SOX半导体指数+2%单日; NVDA Q1 FY26 $81.6B营收(+85%YoY)+$800亿回购"
+      "ema8": 725.52,
+      "ema21": 679.58,
+      "ema8_slope_pct": 1.06,
+      "last_date": "2026-05-26",
+      "note": "S&P500 7519.12 +0.61%(新ATH) | Nasdaq 26656.18 +1.19%(新ATH) | Dow -0.23%(50461) | SMH+3%至52周新高 | MU突破$1万亿市值 | AMD+6% ON+9% | 油价/国债收益率下降(美伊谈判乐观)"
     }
   },
   "model_scores": {
-    "MU": 1.4223,
-    "NVDA": 1.1631,
-    "TSM": 0.8501,
-    "SNDK": 0.6871,
-    "ASML": 0.6643,
-    "AVGO": 0.5974,
-    "META": 0.5368,
-    "GOOGL": 0.5009,
-    "CEG": 0.3954,
-    "MSFT": 0.3317
+    "MU": 1.4864,
+    "NVDA": 1.1692,
+    "SNDK": 0.9143,
+    "TSM": 0.868,
+    "ASML": 0.7068,
+    "AVGO": 0.6849,
+    "META": 0.6121,
+    "GOOGL": 0.5671,
+    "CEG": 0.5142,
+    "MSFT": 0.4189
   },
   "sell_alerts": [
     {
       "code": "META",
       "name": "Meta Platforms",
-      "signal": "sell-confirmed",
+      "signal": "sell-warning",
       "rank": 7,
-      "close": 610.26,
-      "ema8": 621.72,
-      "ema8_slope_pct": -0.52,
-      "reason": "收盘跌破周线EMA8→sell-confirmed; ATH回撤-11.4%; EMA8开始下弯"
-    },
-    {
-      "code": "CEG",
-      "name": "Constellation Energy",
-      "signal": "sell-confirmed",
-      "rank": 9,
-      "close": 294.07,
-      "ema8": 297.13,
-      "ema8_slope_pct": -0.29,
-      "reason": "收盘跌破周线EMA8→sell-confirmed; EMA8下弯; EMA8 < EMA21双熊"
+      "close": 611.29,
+      "ema8": 619.4,
+      "ema8_slope_pct": -0.37,
+      "reason": "收盘仍在周线EMA8 $619.40下方→sell-warning(周二非周五); EMA8持续下弯; 较昨日$610.26略回升但未收复EMA8"
     }
   ],
-  "ranking_changes": {
-    "new_top5": [
-      "SNDK"
-    ],
-    "dropped_from_top5": [
-      "AVGO"
-    ],
-    "reason": "SNDK 2026Q1财报: 营收$60亿 vs 2025Q2 $19亿 → YoY+215.8%; GM 78.4%; NM 60.8% → 增速+盈利双z-score爆炸, 综合分0.31→0.69升至Top5 #4. AVGO综合分0.60降至候选池 #6 (战略9分但增速/盈利改善空间较小)."
-  },
+  "buy_alerts": [
+    {
+      "code": "MSFT",
+      "name": "Microsoft",
+      "signal": "buy-fresh",
+      "rank": 10,
+      "close": 415.31,
+      "ema8": 405.4,
+      "ema21": 359.96,
+      "ema8_slope_pct": 0.7,
+      "reason": "5/22低点$398.01触及EMA8 $402.57×1.02=$410.62区间(buy-fresh触发); 5/26反弹至$415.31确认支撑有效; Azure AI季度收入增速加速; 候选池#10但配置价值提升"
+    }
+  ],
+  "signal_changes": [
+    {
+      "code": "CEG",
+      "from": "sell-confirmed",
+      "to": "hold",
+      "reason": "5/26收$301.57回到EMA8 $298.12上方(+1.2%); EMA8斜率从-0.29%转正+0.33%; DOE强制Eddystone核电延续运营+市场情绪改善; EMA8仍<EMA21需进一步验证趋势反转"
+    },
+    {
+      "code": "META",
+      "from": "sell-confirmed",
+      "to": "sell-warning",
+      "reason": "5/22→5/26时间推移: 5/26为周二(非周五), 根据信号规则降级为sell-warning; 价格基本持平($610→$611), 趋势未变"
+    },
+    {
+      "code": "MSFT",
+      "from": "hold",
+      "to": "buy-fresh",
+      "reason": "回溯检测: 5/22低点$398.01≤EMA8($402.57)×1.02($410.62)触发buy-fresh条件; 5/26低点$413.02≤EMA8($405.40)×1.02($413.51)二次验证; EMA8>EMA21且斜率为正"
+    }
+  ],
   "weekly_context": {
-    "nvda_earnings": "5/21发布Q1 FY26业绩: 营收$81.6B(+85%YoY), 宣布$800亿股票回购+股息增加; 5/22「卖事实」-1.9%",
-    "asml_ath": "5/22 ASML NASDAQ ADR创历史新高$1632.90; UBS重申买入目标价€1900",
-    "sndk_volatility": "SNDK 5/21 +9.83%↑ → 5/22 -4.12%↓; YTD+437%; AI存储需求叙事强劲",
-    "ceg_doe": "美国能源部发紧急指令强制CEG延续Eddystone电厂运营至2026/08/22(利好核电叙事)",
-    "market_breadth": "S&P500第8连涨周; SOX半导体年内涨幅65%+; 半导体仓位占S&P500达18%(>科技泡沫峰值9%)"
+    "mu_trillion": "MU +19.3%至$895.88突破$1T市值! UBS将目标价$535→$1625(+203%上行), 理由: HBM内存AI需求爆炸, Micron是唯一有规模的美国DRAM制造商",
+    "amd_on_rally": "AMD +6%, ON Semiconductor +9%, 半导体板块全线走强",
+    "smh_ath": "SMH半导体ETF +3%创52周新高, SOX指数年内涨幅超70%",
+    "market_ath": "S&P500(7519)/Nasdaq(26656)双创历史新高; Dow Jones微跌-0.23%; 油价下跌因美伊核谈判乐观情绪",
+    "ceg_recovery": "CEG +2.55%至$301.57收复EMA8; DOE强制Eddystone核电延续(8月前不得关闭)对核电叙事持续利好",
+    "msft_buyfresh": "MSFT 5/22低点$398创近期低点后反弹; 5/26 +2%至$415.31, Azure AI增速季度提速, 候选池内最强买点信号"
   },
-  "kline_status": "partial: stooq/yahoo被网络策略拦截; EMA8/EMA21基于前期估算反推May15基础值+5/22确认实际收盘重算 (k8=2/9, k21=2/22). 数据来源: WebSearch多源快照 (StockAnalysis/Yahoo/TradingKey/MacroTrends/CNBC 2026-05-22)",
-  "sources": "WebSearch price snapshots May 22 2026 + rolling EMA back-correction + agent market research",
-  "is_us_friday": true,
-  "memorial_day": "2026-05-25 休市 (阵亡将士纪念日)",
-  "us_et_time": "2026-05-22T20:30 ET"
+  "ranking_changes": {
+    "new_top5": [],
+    "dropped_from_top5": [],
+    "reason": "排名与5/26持仓一致: MU(1)/NVDA(2)/SNDK(3)/TSM(4)/ASML(5). 候选池: AVGO(6)/META(7)/GOOGL(8)/CEG(9)/MSFT(10). SNDK 2026Q1高增速保持Top5#3."
+  },
+  "kline_status": "partial: stooq/yahoo/yfinance受网络策略拦截(403); 价格来源: WebSearch多源快照 (CNBC/YF/TheStreet/TradingKey/TheMotleyFool 2026-05-26). MU/NVDA/AVGO/META/GOOGL/CEG/MSFT为confirmed; SNDK/TSM/ASML为estimated(范围已交叉验证). EMA8/EMA21基于5/22已知值单步滚动更新(k8=2/9, k21=2/22).",
+  "sources": "WebSearch price snapshots May 26 2026 + rolling EMA forward update from May 22 base",
+  "is_us_friday": false,
+  "us_et_time": "2026-05-26T20:30 ET"
 }
