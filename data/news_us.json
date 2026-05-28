@@ -111,6 +111,14 @@
       "url": "https://nvidianews.nvidia.com/news/latest",
       "source": "NVIDIA Newsroom",
       "content": "NVIDIA appointed Suzanne Nora Johnson (former Goldman Sachs vice chairman, RAND Corporation chair) to its board of directors, effective July 13, 2026. As of May 24, NVIDIA's market cap reached $5.22 trillion following Q1 FY2027 blowout ($81.6B revenue, +85% YoY; Q2 guide $91B). Stock up 11%+ month-to-date and ~20% YTD."
+    },
+    {
+      "date": "2026-05-26",
+      "type": "news",
+      "title": "Nvidia's NVLink Fusion Architecture Enters CPU Market — Analysts: NVDA Now Competes with Intel and AMD in Server CPUs",
+      "url": "https://www.fool.com/investing/2026/05/26/did-nvidia-just-say-checkmate-to-intel-and-amd/",
+      "source": "The Motley Fool",
+      "content": "Nvidia's NVLink Fusion, revealed at Q1 FY2027 earnings, allows third-party Arm-based CPUs to connect to Nvidia GPUs at near-NVLink bandwidth — positioning NVDA to compete directly in CPU markets against Intel and AMD. Analysts estimate Nvidia CPU revenue could reach 0B in 2026, matching Intel and exceeding AMD's CPU segment immediately upon ramp."
     }
   ],
   "AVGO": [
@@ -193,6 +201,14 @@
       "url": "https://www.fool.com/investing/2026/05/22/broadcoms-secret-weapon-is-about-to-be-unleashed/",
       "source": "The Motley Fool",
       "content": "Motley Fool analysis: Broadcom's custom AI silicon 'secret weapon' about to be unleashed as Google TPU, Meta MTIA, and OpenAI ASIC programs simultaneously enter high-volume production in H1/H2 2026. AI semiconductor revenue guided $10.7B (+140% YoY) for Q2 FY2026 (June 3 earnings). CEO Hock Tan's $100B AI chip 2027 target increasingly achievable. Stock at $413-419 range (May 25); $73B backlog provides multi-year visibility."
+    },
+    {
+      "date": "2026-05-26",
+      "type": "research",
+      "title": "Expert Sets Broadcom Price Target $630 (52% Upside); BCM68850 First 50G PON-SoC With Integrated NPU Launched; AVGO +3.46%",
+      "url": "https://247wallst.com/investing/2026/05/26/one-expert-sees-broadcom-at-630-and-the-ai-infrastructure-math-backs-the-case/",
+      "source": "24/7 Wall St.",
+      "content": "Wall Street analyst issued $630 price target on AVGO (52% upside from ~$415), citing AI infrastructure buildout math and custom ASIC revenue ramp toward $10.7B in Q2 FY2026. Broadcom also launched BCM68850, the industry's first 50G ITU-PON home gateway SoC featuring an integrated NPU and native Wi-Fi 8 support. AVGO rose 3.46% on May 26 ahead of June 3 Q2 FY2026 earnings."
     }
   ],
   "AMD": [
@@ -389,6 +405,14 @@
       "url": "https://www.fool.com/investing/2026/05/22/meet-the-biggest-threat-to-intels-stunning-stock-m/",
       "source": "The Motley Fool",
       "content": "Motley Fool identifies three key risks to Intel's extraordinary 2026 rally: (1) Valuation at ~100x forward P/E — unsustainable historically; (2) Server CPU market share eroding to 54.9% from 64.4% YoY (AMD at 27.4%, ARM at 17.7%); (3) Intel Foundry Q1 2026 operating loss $2.3B — 18A and 14A process yields below expectations. Intel has doubled AMD's 2026 gains at +222% vs +118% YTD as of May 23."
+    },
+    {
+      "date": "2026-05-27",
+      "type": "research",
+      "title": "Northland Capital Markets Downgrades Intel to Market Perform, Suspends Price Target After 222% YTD Rally — Valuation Overextended",
+      "url": "https://www.tradingkey.com/news/market-movers/261931374-market-movers-intc-20260527",
+      "source": "TradingKey / Northland Capital Markets",
+      "content": "Northland Capital Markets downgraded Intel from Outperform to Market Perform and suspended its price target, stating the stock's 222% YTD rally has pushed valuation to overvalued territory. INTC fell 3.26% on May 27. Background concern: Mercury Research data shows Intel continues to lose server CPU share to AMD despite the stock's stellar performance."
     }
   ],
   "QCOM": [
@@ -505,6 +529,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/261920000-market-movers-mrvl-20260521",
       "source": "Marvell IR / Citi / RBC / Wolfe Research",
       "content": "Marvell Q1 FY2027 earnings (May 21) beat consensus estimates. Analysts raised targets: Citi to $215 (from $118), RBC to $200, Wolfe Research to $210. Google collaboration on custom TPU memory chip designs confirmed. Shares had surged +50%+ over prior month. FY2027 revenue outlook ~$11B (>30% YoY), FY2028 ~$15B (~40% YoY). AI ASIC and optical interconnect businesses driving growth."
+    },
+    {
+      "date": "2026-05-27",
+      "type": "announcement",
+      "title": "Marvell Q1 FY2027 Official 8-K: Revenue $2.418B Record (+28% YoY); Non-GAAP EPS $0.80 Beat; FY2027 Raised to $11.5B; AI Interconnect +70% YoY",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001835632/000183563226000014/q127_8kx522026ex-991.htm",
+      "source": "Marvell Technology / SEC EDGAR",
+      "content": "Marvell Q1 FY2027 8-K (official): Net revenue $2.418B record (+28% YoY), beat guidance midpoint by $18M; non-GAAP EPS $0.80 beat $0.75 estimate; GAAP GM 52.1%, non-GAAP 58.9%. Q2 FY2027 guide: +12% QoQ, +35% YoY. FY2027 total revenue outlook raised to $11.5B (+40% YoY). AI interconnect/custom ASIC revenue to grow 70%+ YoY in FY2027, demand exceeding expectations."
     }
   ],
   "APP": [
@@ -547,6 +579,14 @@
       "url": "https://www.amnestyusa.org/press-releases/amnesty-international-supports-lawsuit-against-u-s-tech-company-applovin-over-illegal-tracking-software/",
       "source": "Amnesty International USA",
       "content": "Amnesty International backed The Privacy Collective's class action against AppLovin on behalf of Dutch internet users (including 1.5M children), alleging AppLovin's SDK unlawfully collected data via apps like Block Blast, Subway Surfers, and CapCut. Company also faces an active SEC probe. Despite strong Q1 ($1.84B revenue, +59% YoY), legal headwinds mount ahead of June Axon self-service platform launch."
+    },
+    {
+      "date": "2026-05-27",
+      "type": "news",
+      "title": "AppLovin +11.95% May 27: Major Banks Upgrade on Axon Self-Serve Ad Platform June Launch; Q2 Revenue Guide Above Street",
+      "url": "https://stockstotrade.com/news/applovin-corporation-app-news-2026_05_27-2/",
+      "source": "StocksToTrade",
+      "content": "AppLovin surged 11.95% on May 27 after UBS, Deutsche Bank, Macquarie, Wedbush, Oppenheimer, and Jefferies issued Buy/Outperform upgrades or raised price targets. Q1 2026: revenue .84B beat .78B est; Q2 guided .915-1.945B and adjusted EBITDA .615-1.645B, both above Street. Key catalyst: Axon self-serve advertising platform confirmed for June 2026 public launch, expected to unlock significant new advertiser growth."
     }
   ],
   "TSM": [
@@ -621,6 +661,14 @@
       "url": "https://stockanalysis.com/stocks/tsm/dividend/",
       "source": "TSMC / Stock Analysis",
       "content": "TSMC declared a $0.95/share ADR cash dividend with ex-date June 11, 2026 and payment date July 9, 2026. Q2 2026 revenue guidance $39-40.2B at gross margin 65.5-67.5%. Arizona Fab P2 (N2 process) tool move-in on track for October 2026. Total Arizona investment trajectory toward $465B under US-Taiwan trade deal (15% tariff cap). Market cap ~$2.2T; 61% of Q1 2026 revenue from AI/HPC customers."
+    },
+    {
+      "date": "2026-05-27",
+      "type": "announcement",
+      "title": "TSMC Raises 3nm Process Pricing Up to 15% for H2 2026 — Second AI-Driven Price Hike This Year; 3nm/5nm Lines Sold Out",
+      "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/261930703-tsmc-tsm-3nm-pricing-power-ai-demand-capacity-shortage-gross-margin-nvidia-analyst-upgrades-risk-tradingkey",
+      "source": "TradingKey",
+      "content": "TSMC announced a second price increase in 2026: 3nm process quotes raised up to 15% for H2 2026 and another 5-10% in 2027, driven by surging AI server demand from NVIDIA, Google and AWS. All 3nm and 5nm capacity is operating at or near maximum and sold out through year-end. Record gross margin 66.2% in Q1 2026, further expansion expected. TSM ADR rose 2.52% to 12.32."
     }
   ],
   "ASML": [
@@ -815,6 +863,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/synopsys-report-q2-earnings-whats-141300112.html",
       "source": "Yahoo Finance / Bloomberg Options Data",
       "content": "Synopsys reports Q2 FY2026 results May 27 after close (conf call 2PM PT). Analyst consensus: revenue $2.225-2.275B, non-GAAP EPS $3.11-3.17. Options market implies 7.8% post-earnings move. AI chip design demand and Ansys integration (ahead of $400M synergy target) are positives; consumer/auto/industrial weakness a headwind. Elliott Management stake active. SNPS +27% past month."
+    },
+    {
+      "date": "2026-05-27",
+      "type": "announcement",
+      "title": "Synopsys Q2 FY2026: Revenue $2.276B (+42% YoY) Beats; Raises Full-Year EPS Guidance to $14.76; Elliott Investment — Jesse Cohn Joins Board",
+      "url": "https://www.sec.gov/Archives/edgar/data/0000883241/000119312526241911/d126227dex991.htm",
+      "source": "Synopsys / SEC EDGAR",
+      "content": "Synopsys Q2 FY2026: Revenue $2.276B vs $1.604B prior year (+42% YoY), beating $2.25B consensus. Raised full-year non-GAAP EPS guidance midpoint to $14.76. CEO Sassine Ghazi: 'AI is scaling semiconductor demand, architectural diversity and complexity of chips, driving demand across our portfolio.' Cooperation agreement with Elliott Investment Management; Jesse Cohn appointed to board effective June 1, 2026."
     }
   ],
   "MU": [
@@ -1311,6 +1367,14 @@
       "url": "https://finance.yahoo.com/quote/AMZN/news/",
       "source": "Wells Fargo / About Amazon",
       "content": "Wells Fargo raised Amazon price target citing substantial AWS Trainium custom AI chip capacity expansion ahead. Jeff Bezos publicly stated \"AI fears are overblown,\" signaling confidence in long-term AI infrastructure investment. AWS Summits held May 20 in Hamburg and Seoul. AWS AI revenue run rate exceeds $15B annually. Court ruling favored Amazon data center expansion."
+    },
+    {
+      "date": "2026-05-27",
+      "type": "announcement",
+      "title": "Snowflake Signs $6B 5-Year AWS Deal for AI Infrastructure; Amazon $200B 2026 AI Capex on Track",
+      "url": "https://techcrunch.com/2026/05/27/in-more-good-news-for-amazon-snowflake-signs-6b-deal-with-aws-for-ai-cpu-chips/",
+      "source": "TechCrunch",
+      "content": "Snowflake signed a $6 billion, 5-year agreement with AWS, underscoring surging enterprise AI infrastructure demand on Amazon's platform. Amazon reconfirmed ~$200B 2026 capital expenditure plan primarily for AI infrastructure, maintaining AWS's cloud leadership position. Amazon eyes $3 trillion valuation as AI revenue ramps."
     }
   ],
   "META": [
@@ -1393,6 +1457,14 @@
       "url": "https://www.foreignpolicyjournal.com/2026/05/22/meta-platforms-inc-nasdaq-meta-settles-near-608-as-forum-app-launches-against-reddit/",
       "source": "Foreign Policy Journal / Meta",
       "content": "Meta launched Forum, a standalone community discussion app targeting Reddit's core use case and Facebook Groups. Reddit shares fell sharply on the news. META stock settled near $608 on May 22. Q1 2026 EPS $10.44 beat estimates by ~56%; 10% workforce cut (8,000+ jobs) underway to redirect capital to AI infrastructure ($125-145B 2026 capex). AMD 6GW Instinct GPU deployment confirmed as part of Meta AI training expansion."
+    },
+    {
+      "date": "2026-05-27",
+      "type": "announcement",
+      "title": "Meta Signs Multi-Year AWS Deal: Hundreds of Thousands of Graviton Chips for Agentic AI Across 3.6B Daily Users",
+      "url": "https://www.aboutamazon.com/news/aws/meta-aws-graviton-ai-partnership",
+      "source": "Amazon / About Amazon",
+      "content": "Meta agreed to deploy hundreds of thousands of AWS Graviton chips over at least 3 years to power next-gen agentic AI across its 3.6 billion daily active user platform and 32 new data centers under construction. The deal combines AWS purpose-built silicon with Meta's AI stack — a strategic win for AWS custom silicon over Nvidia GPU dependency for certain AI inference workloads."
     }
   ],
   "AAPL": [
@@ -2045,6 +2117,14 @@
       "url": "https://www.timothysykes.com/news/rocket-lab-corporation-rklb-news-2026_05_22/",
       "source": "Timothy Sykes / Market News",
       "content": "Rocket Lab secured a $90 million contract from the U.S. Space Force, adding to a $2.2B record backlog. Stock surged 4.48% on May 22 reversing May 21's 6.58% drop triggered by the $3B ATM equity offering. Company's pipeline includes the largest launch deal ever (8 launches through 2029) and a $190M DoD hypersonic test contract. Neutron medium-lift rocket launch pushed to Q4 2026 after tank rupture test failure."
+    },
+    {
+      "date": "2026-05-27",
+      "type": "announcement",
+      "title": "Rocket Lab Passes SDA Tracking Layer Tranche 3 System Requirements Review; $816M Missile Defense Contract Milestone; RKLB +7%",
+      "url": "https://stocktwits.com/news-articles/markets/equity/rklb-stock-takes-off-after-rocket-lab-s-defense-solution-passes-sda-s-requirements-everything-to-know-about-its-latest-816-m-award/cZgga5yRerc",
+      "source": "StockTwits / Space Development Agency",
+      "content": "Rocket Lab's missile defense solution for the Space Development Agency Tracking Layer Tranche 3 constellation passed System Requirements Review (SRR), confirming technical baseline meets SDA's operational requirements. This milestone is critical for an ~$816M award pathway. RKLB surged 7%+ in premarket to $155 range on May 27, building on 5.48% gain on May 26."
     }
   ],
   "HUBB": [
@@ -3201,6 +3281,14 @@
       "url": "https://stockanalysis.com/stocks/crm/",
       "source": "Stock Analysis / BofA",
       "content": "Salesforce reports Q1 FY2027 on May 27. Consensus: EPS $3.12 (+20.9% YoY). BofA reinstated coverage cautiously citing ServiceNow's autonomous CRM expansion as competitive threat. Key metric: Agentforce AI agent adoption and seat expansion. Stock at ~$175. Q2 FY2027 guide will be closely watched for AI monetization signals."
+    },
+    {
+      "date": "2026-05-27",
+      "type": "announcement",
+      "title": "Salesforce Q1 FY2027 Earnings Beat: Revenue $11.1B (+13% YoY); Non-GAAP EPS $3.88 Beats $3.12 Est; Agentforce ARR Tops $1B with 3.8B AI Work Units",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001108524/000110852426000125/crm-q1fy27xexhibit991.htm",
+      "source": "Salesforce / SEC EDGAR",
+      "content": "Salesforce Q1 FY2027 (ended April 2026): Revenue $11.1B (+13% YoY, includes $444M Informatica contribution); non-GAAP EPS $3.88 beat $3.12 consensus by 24%; GAAP EPS $2.42 (+52% YoY); GAAP OM 21.1%, non-GAAP 34.8%. Agentforce ARR exceeded $1B milestone with 3.8 billion Agentic Work Units delivered. Combined AI+data ARR $3.4B. CRPO $33.6B (+14% YoY)."
     }
   ]
 }
