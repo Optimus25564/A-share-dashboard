@@ -84,7 +84,7 @@
     background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px;
     display:flex;flex-direction:column;gap:10px
   }
-  .layer h3{font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px}
+  .layer h3{font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
   .layer .num{
     width:22px;height:22px;border-radius:50%;
     display:inline-flex;align-items:center;justify-content:center;
@@ -95,6 +95,14 @@
   .L3 .num{background:var(--cyan)}
   .L4 .num{background:var(--purple)}
   .layer .desc{font-size:12px;color:var(--muted)}
+  .layer h3 .layer-avg{
+    margin-left:auto;font-size:11px;font-weight:700;
+    padding:2px 8px;border-radius:10px;white-space:nowrap;
+    background:rgba(138,160,192,.12);color:var(--muted);
+    font-variant-numeric:tabular-nums;letter-spacing:.2px
+  }
+  .layer h3 .layer-avg.up{background:rgba(255,90,106,.18);color:#ff8a95}
+  .layer h3 .layer-avg.down{background:rgba(46,204,113,.18);color:#7be0a8}
   .chips{display:flex;flex-wrap:wrap;gap:6px}
   .chip{font-size:11px;padding:3px 8px;border-radius:12px;background:var(--panel-2);border:1px solid var(--border)}
 
@@ -418,22 +426,22 @@
     <h2>产业链分层</h2>
     <div class="layers">
       <div class="layer L1">
-        <h3><span class="num">1</span>核心算力芯片</h3>
+        <h3><span class="num">1</span>核心算力芯片<span class="layer-avg" id="aLayerAvg1">--</span></h3>
         <div class="desc">从指令集到算子的全面替代，弹性最大。</div>
         <div class="chips"><span class="chip">寒武纪</span><span class="chip">海光信息</span><span class="chip">龙芯中科</span><span class="chip">昇腾(未上市)</span></div>
       </div>
       <div class="layer L2">
-        <h3><span class="num">2</span>服务器整机</h3>
+        <h3><span class="num">2</span>服务器整机<span class="layer-avg" id="aLayerAvg2">--</span></h3>
         <div class="desc">软硬一体集成订单的最大承接者。</div>
         <div class="chips"><span class="chip">中科曙光</span><span class="chip">浪潮信息</span><span class="chip">拓维信息</span><span class="chip">神州数码</span><span class="chip">紫光股份</span></div>
       </div>
       <div class="layer L3">
-        <h3><span class="num">3</span>上游支撑 · 封装 / 设备 / 材料</h3>
+        <h3><span class="num">3</span>上游支撑 · 封装 / 设备 / 材料<span class="layer-avg" id="aLayerAvg3">--</span></h3>
         <div class="desc">封测、半导体设备、HBM 材料、接口、代工 —— 落地瓶颈。</div>
         <div class="chips"><span class="chip">通富微电</span><span class="chip">长电科技</span><span class="chip">澜起科技</span><span class="chip">香农芯创</span><span class="chip">雅克科技</span><span class="chip">中芯国际</span><span class="chip">华虹</span><span class="chip">北方华创</span><span class="chip">中微公司</span><span class="chip">华海清科</span><span class="chip">长川科技</span></div>
       </div>
       <div class="layer L4">
-        <h3><span class="num">4</span>物理层 · 液冷 / 光模块 / PCB</h3>
+        <h3><span class="num">4</span>物理层 · 液冷 / 光模块 / PCB<span class="layer-avg" id="aLayerAvg4">--</span></h3>
         <div class="desc">液冷必选，800G/1.6T 光模块，AI 服务器高多层 PCB。</div>
         <div class="chips"><span class="chip">英维克</span><span class="chip">中际旭创</span><span class="chip">工业富联</span><span class="chip">沪电股份</span><span class="chip">胜宏科技</span></div>
       </div>
@@ -490,42 +498,42 @@
     <h2>AI CapEx 产业链 8 层</h2>
     <div class="layers">
       <div class="layer L1">
-        <h3><span class="num">1</span>算力芯片 & 加速器</h3>
+        <h3><span class="num">1</span>算力芯片 & 加速器<span class="layer-avg" id="usLayerAvg1">--</span></h3>
         <div class="desc">GPU/CPU/ASIC/IP — AI 算力金字塔顶端。</div>
         <div class="chips" id="usLayerL1"></div>
       </div>
       <div class="layer L2">
-        <h3><span class="num">2</span>内存 & 存储</h3>
+        <h3><span class="num">2</span>内存 & 存储<span class="layer-avg" id="usLayerAvg2">--</span></h3>
         <div class="desc">HBM/DDR5/NAND — AI 训练的容量瓶颈。</div>
         <div class="chips" id="usLayerL2"></div>
       </div>
       <div class="layer L3">
-        <h3><span class="num">3</span>制造 / 设备 / EDA</h3>
+        <h3><span class="num">3</span>制造 / 设备 / EDA<span class="layer-avg" id="usLayerAvg3">--</span></h3>
         <div class="desc">晶圆代工 + 设备 + EDA — 卡脖子工序。</div>
         <div class="chips" id="usLayerL3"></div>
       </div>
       <div class="layer L4">
-        <h3><span class="num">4</span>先进封装 / 测试</h3>
+        <h3><span class="num">4</span>先进封装 / 测试<span class="layer-avg" id="usLayerAvg4">--</span></h3>
         <div class="desc">CoWoS/封测/基板 — HBM 集成关键。</div>
         <div class="chips" id="usLayerL4"></div>
       </div>
       <div class="layer L1">
-        <h3><span class="num">5</span>AI 网络 & 互联</h3>
+        <h3><span class="num">5</span>AI 网络 & 互联<span class="layer-avg" id="usLayerAvg5">--</span></h3>
         <div class="desc">以太网/光模块/SerDes/PCIe — GPU 互联瓶颈。</div>
         <div class="chips" id="usLayerL5"></div>
       </div>
       <div class="layer L2">
-        <h3><span class="num">6</span>数据中心物理基建</h3>
+        <h3><span class="num">6</span>数据中心物理基建<span class="layer-avg" id="usLayerAvg6">--</span></h3>
         <div class="desc">液冷/电源/UPS/EPC 工程 — 卖水第一站。</div>
         <div class="chips" id="usLayerL6"></div>
       </div>
       <div class="layer L3">
-        <h3><span class="num">7</span>能源 / 发电 / 管道</h3>
+        <h3><span class="num">7</span>能源 / 发电 / 管道<span class="layer-avg" id="usLayerAvg7">--</span></h3>
         <div class="desc">核电/燃气/铀矿/天然气管道 — AI 用电源头。</div>
         <div class="chips" id="usLayerL7"></div>
       </div>
       <div class="layer L4">
-        <h3><span class="num">8</span>云 / Neocloud / 应用</h3>
+        <h3><span class="num">8</span>云 / Neocloud / 应用<span class="layer-avg" id="usLayerAvg8">--</span></h3>
         <div class="desc">大模型/GPU 云/应用变现/端侧 AI。</div>
         <div class="chips" id="usLayerL8"></div>
       </div>
@@ -895,6 +903,34 @@ const WATCH = [
   {code:"688120",name:"华海清科", cat:"base",  catLabel:"CMP 设备",  w:4},
   {code:"300604",name:"长川科技", cat:"base",  catLabel:"测试设备", w:4},
 ];
+// A 股产业链分层 → 成分股代码 (用于当日涨跌幅平均)
+const A_LAYER_CODES = {
+  1: ["688256","688041","688047"],                                                                     // L1 核心算力芯片 (昇腾未上市)
+  2: ["603019","000977","002261","000034","000938"],                                                   // L2 服务器整机
+  3: ["002156","600584","688008","300475","002409","688981","688347","002371","688012","688120","300604"], // L3 上游支撑 封装/设备/材料
+  4: ["002837","300308","601138","002463","300476"]                                                    // L4 物理层 液冷/光模块/PCB
+};
+
+// 渲染产业链分层每层当日涨跌幅平均 (市场热度)
+function renderLayerAverages(layerMap, quotesMap, idPrefix){
+  for (const [layer, codes] of Object.entries(layerMap)) {
+    const el = document.getElementById(idPrefix + layer);
+    if (!el) continue;
+    const valid = codes.map(c => quotesMap[c]).filter(q => q && typeof q.changePct === "number" && !isNaN(q.changePct));
+    if (valid.length === 0) {
+      el.textContent = "-- (0)";
+      el.className = "layer-avg";
+      continue;
+    }
+    const avg = valid.reduce((s,q) => s + q.changePct, 0) / valid.length;
+    const up = valid.filter(q => q.changePct > 0).length;
+    const down = valid.filter(q => q.changePct < 0).length;
+    const sign = avg >= 0 ? "+" : "";
+    el.textContent = `${sign}${avg.toFixed(2)}% · ${up}↑${down}↓ / ${valid.length}`;
+    el.className = "layer-avg " + (avg > 0 ? "up" : avg < 0 ? "down" : "");
+  }
+}
+
 // Code → market prefix
 function pfx(code){
   // 6xx → sh (Shanghai), others → sz (Shenzhen)
@@ -1148,6 +1184,8 @@ function renderWatchlist(){
   // watchSummary
   document.getElementById("watchSummary").textContent =
     `↑ ${upCount}　↓ ${downCount}　— ${WATCH.length - upCount - downCount}`;
+  // 产业链分层 — 每层当日涨跌幅平均
+  renderLayerAverages(A_LAYER_CODES, lastQuotes, "aLayerAvg");
   // Bind buy / K线 / info buttons
   tb.querySelectorAll("[data-buy]").forEach(b => {
     b.onclick = () => {
@@ -1182,6 +1220,16 @@ function updateCategoryKPIs(){
 // Top 5 持仓配比 (动态, 基于量化权重归一化)
 const PF_COLORS = ["#ff5a6a", "#f5b301", "#29d6d6", "#9d7bff", "#4ea8ff"];
 let pfChartInstance = null;
+// 从扫描结果提取已破位 / 警告代码集合 (供 Top 5 动态剔除)
+function getSellExcludedCodes(scanResults){
+  if (!scanResults) return new Set();
+  return new Set(scanResults.filter(r => r.signal.action === "sell-confirmed").map(r => r.stock.code));
+}
+function getSellWarningCodes(scanResults){
+  if (!scanResults) return new Set();
+  return new Set(scanResults.filter(r => r.signal.action === "sell-warning").map(r => r.stock.code));
+}
+
 function renderPortfolioPie(){
   const canvas = document.getElementById("pfChart");
   if (!canvas) { console.warn('[Top5] canvas pfChart 不存在'); return; }
@@ -1193,13 +1241,18 @@ function renderPortfolioPie(){
     return;
   }
   console.log('[Top5] 渲染量化模型 Top 5');
-  const ranked = WATCH.map(s => ({
+  const excluded = getSellExcludedCodes(watchScanState && watchScanState.results);
+  const warning  = getSellWarningCodes(watchScanState && watchScanState.results);
+  const rankedAll = WATCH.map(s => ({
     code: s.code,
     name: s.name,
     cat: s.cat,
     catLabel: s.catLabel,
     weight: _quantWeights[s.code]?.weight || 0
   })).sort((a,b) => b.weight - a.weight);
+  // 剔除已破位 (sell-confirmed) — 趋势已坏，按策略卖出
+  const ranked = rankedAll.filter(s => !excluded.has(s.code));
+  const excludedRanked = rankedAll.filter(s => excluded.has(s.code));
   const top5 = ranked.slice(0, 5);
   const restPool = ranked.slice(5);
   // 归一化 Top 5 到 sum=100
@@ -1227,18 +1280,25 @@ function renderPortfolioPie(){
   // 渲染 legend
   const lg = document.getElementById("pfLegend");
   lg.innerHTML = "";
-  pfData.forEach(d => {
+  pfData.forEach((d, i) => {
+    const warnIco = warning.has(top5[i].code)
+      ? ' <span title="本周盘中跌破 EMA8，等周五收盘确认" style="color:#f5b301;font-size:11px">⚠</span>' : "";
     const row = document.createElement("div");
     row.className = "row";
-    row.innerHTML = `<div class="left"><span class="sq" style="background:${d.color}"></span><span>${d.label}<span style="color:var(--muted);font-size:11px;margin-left:6px">${d.catLabel}</span></span></div><b>${d.val}%</b>`;
+    row.innerHTML = `<div class="left"><span class="sq" style="background:${d.color}"></span><span>${d.label}${warnIco}<span style="color:var(--muted);font-size:11px;margin-left:6px">${d.catLabel}</span></span></div><b>${d.val}%</b>`;
     lg.appendChild(row);
   });
-  // 候选池 (#6-10)
+  // 候选池 (#6-10) + 已破位剔除
   const pool = document.getElementById("pfWatchPool");
   if (pool) {
     const next5 = restPool.slice(0, 5);
+    const exHtml = excludedRanked.length ? (
+      `<div style="margin-top:8px;color:#7be0a8">🟢 已破位剔除（周线 close &lt; EMA8）：</div>` +
+      excludedRanked.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(46,204,113,.15);border:1px solid rgba(46,204,113,.4);border-radius:3px;color:#7be0a8;text-decoration:line-through">${s.name} ${s.weight.toFixed(1)}</span>`).join("")
+    ) : "";
     pool.innerHTML = `<div style="margin-bottom:4px">📋 候选池（#6-10，趋势破位时考虑替换）：</div>` +
-      next5.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(138,160,192,.1);border-radius:3px">${s.name} ${s.weight.toFixed(1)}</span>`).join("");
+      next5.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(138,160,192,.1);border-radius:3px">${s.name} ${s.weight.toFixed(1)}</span>`).join("") +
+      exHtml;
   }
 }
 // 初次渲染（数据未必就绪, 由 loadCompanies().then() 触发重渲染）
@@ -2602,6 +2662,8 @@ async function runWatchScan(force=false){
   }
   const results = await scanWatchlistBuySignals();
   renderBuyAlertBanner(results);
+  // 扫描完成 → 重渲染 Top 5 (剔除已破位的票)
+  renderPortfolioPie();
 }
 
 const closeKline = () => document.getElementById("klineModal").classList.remove("show");
@@ -3008,12 +3070,17 @@ function renderUSPortfolioPie(){
     if (lg) lg.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:8px 0">⏳ 加载基本面数据中...</div>';
     return;
   }
-  const ranked = Object.keys(_quantWeightsUS).map(code => ({
+  const excluded = getSellExcludedCodes(watchScanStateUS && watchScanStateUS.results);
+  const warning  = getSellWarningCodes(watchScanStateUS && watchScanStateUS.results);
+  const rankedAll = Object.keys(_quantWeightsUS).map(code => ({
     code,
     name: companiesUS[code]?.name || code,
     catLabel: companiesUS[code]?.catLabel || "",
     weight: _quantWeightsUS[code].weight
   })).sort((a,b) => b.weight - a.weight);
+  // 剔除已破位 (sell-confirmed) — 趋势已坏，按策略卖出
+  const ranked = rankedAll.filter(s => !excluded.has(s.code));
+  const excludedRanked = rankedAll.filter(s => excluded.has(s.code));
   const top5 = ranked.slice(0, 5);
   const restPool = ranked.slice(5);
   if (top5.length === 0) return;
@@ -3039,18 +3106,25 @@ function renderUSPortfolioPie(){
   const lg = document.getElementById("pfLegendUS");
   if (lg) {
     lg.innerHTML = "";
-    pfData.forEach(d => {
+    pfData.forEach((d, i) => {
+      const warnIco = warning.has(top5[i].code)
+        ? ' <span title="本周盘中跌破 EMA8，等周收盘确认" style="color:#f5b301;font-size:11px">⚠</span>' : "";
       const row = document.createElement("div");
       row.className = "row";
-      row.innerHTML = `<div class="left"><span class="sq" style="background:${d.color}"></span><span>${d.code} · ${d.label}<span style="color:var(--muted);font-size:11px;margin-left:6px">${d.catLabel}</span></span></div><b>${d.val}%</b>`;
+      row.innerHTML = `<div class="left"><span class="sq" style="background:${d.color}"></span><span>${d.code} · ${d.label}${warnIco}<span style="color:var(--muted);font-size:11px;margin-left:6px">${d.catLabel}</span></span></div><b>${d.val}%</b>`;
       lg.appendChild(row);
     });
   }
   const pool = document.getElementById("pfWatchPoolUS");
   if (pool) {
     const next5 = restPool.slice(0, 5);
+    const exHtml = excludedRanked.length ? (
+      `<div style="margin-top:8px;color:#7be0a8">🟢 已破位剔除（周线 close &lt; EMA8）：</div>` +
+      excludedRanked.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(46,204,113,.15);border:1px solid rgba(46,204,113,.4);border-radius:3px;color:#7be0a8;text-decoration:line-through">${s.code} ${s.weight.toFixed(1)}</span>`).join("")
+    ) : "";
     pool.innerHTML = `<div style="margin-bottom:4px">📋 候选池（#6-10，趋势破位时考虑替换）：</div>` +
-      next5.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(138,160,192,.1);border-radius:3px">${s.code} ${s.weight.toFixed(1)}</span>`).join("");
+      next5.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(138,160,192,.1);border-radius:3px">${s.code} ${s.weight.toFixed(1)}</span>`).join("") +
+      exHtml;
   }
 }
 
@@ -3068,12 +3142,17 @@ function renderUSLayers(){
     usLayerL8: ['hyperscaler', 'app', 'etf', 'other']  // L8 云/应用/ETF
   };
   const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
+  // 收集每层成分股代码，给 renderLayerAverages 用
+  const usLayerCodes = {};
   for (const [containerId, cats] of Object.entries(groups)) {
     const el = document.getElementById(containerId);
     if (!el) continue;
     const items = codes
       .filter(c => cats.includes(companiesUS[c].cat))
       .sort((a,b) => (companiesUS[b].strategic||0) - (companiesUS[a].strategic||0));
+    // containerId 形如 usLayerL3 → 提取层号 "3"
+    const layerNum = containerId.replace("usLayerL", "");
+    usLayerCodes[layerNum] = items;
     el.innerHTML = items.map(c => {
       const co = companiesUS[c];
       return `<span class="chip" title="${escapeAttr(co.intro || '')}" style="cursor:pointer" data-uscode="${c}">${c} ${co.name} <span style="color:var(--gold);font-size:10px">★${co.strategic}</span></span>`;
@@ -3083,6 +3162,9 @@ function renderUSLayers(){
       s.onclick = () => openInfo(s.dataset.uscode);
     });
   }
+  // 缓存供 quote 刷新时复用
+  window._usLayerCodes = usLayerCodes;
+  renderLayerAverages(usLayerCodes, usQuotes, "usLayerAvg");
 }
 async function initUSTab(){
   await loadCompaniesUS();
@@ -3239,6 +3321,8 @@ async function runWatchScanUS(force=false){
   }
   const results = await scanWatchlistBuySignalsUS();
   renderBuyAlertBannerUS(results);
+  // 扫描完成 → 重渲染 Top 5 (剔除已破位的票)
+  renderUSPortfolioPie();
 }
 const usRefreshBtn = document.getElementById("usRefreshBtn");
 if (usRefreshBtn) usRefreshBtn.onclick = () => refreshUSQuotes();
