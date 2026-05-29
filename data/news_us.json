@@ -119,6 +119,14 @@
       "url": "https://www.fool.com/investing/2026/05/26/did-nvidia-just-say-checkmate-to-intel-and-amd/",
       "source": "The Motley Fool",
       "content": "Nvidia's NVLink Fusion, revealed at Q1 FY2027 earnings, allows third-party Arm-based CPUs to connect to Nvidia GPUs at near-NVLink bandwidth — positioning NVDA to compete directly in CPU markets against Intel and AMD. Analysts estimate Nvidia CPU revenue could reach 0B in 2026, matching Intel and exceeding AMD's CPU segment immediately upon ramp."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "announcement",
+      "title": "NVIDIA Targets $200B CPU Market with Vera Rubin Platform; Jensen Forecasts $20B Standalone CPU Sales in 2026",
+      "url": "https://techcrunch.com/2026/05/20/jensen-huang-says-hes-found-a-brand-new-200b-market-for-nvidia/",
+      "source": "TechCrunch / CNBC",
+      "content": "CEO Jensen Huang: Vera Rubin platform opens a brand-new $200B CPU TAM for NVIDIA — a market never addressed before. Every major hyperscaler partnering on deployment. NVIDIA predicts $20B in standalone CPU sales in 2026, with Rubin shipments starting Q3. China included in the $200B forecast."
     }
   ],
   "AVGO": [
@@ -209,6 +217,14 @@
       "url": "https://247wallst.com/investing/2026/05/26/one-expert-sees-broadcom-at-630-and-the-ai-infrastructure-math-backs-the-case/",
       "source": "24/7 Wall St.",
       "content": "Wall Street analyst issued $630 price target on AVGO (52% upside from ~$415), citing AI infrastructure buildout math and custom ASIC revenue ramp toward $10.7B in Q2 FY2026. Broadcom also launched BCM68850, the industry's first 50G ITU-PON home gateway SoC featuring an integrated NPU and native Wi-Fi 8 support. AVGO rose 3.46% on May 26 ahead of June 3 Q2 FY2026 earnings."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "Broadcom Q2 FY2026 Earnings Preview: AI Revenue $10.7B Guided; Google Locked to 2031, Meta to 2029, Anthropic Adds 3.5GW",
+      "url": "https://seekingalpha.com/article/4909452-broadcom-stock-q2-fy27-100b-target-may-already-be-obsolete",
+      "source": "Seeking Alpha",
+      "content": "Broadcom Q2 FY2026 earnings imminent: Q1 AI semiconductor revenue $8.4B (+106% YoY); Q2 AI guidance $10.7B; total Q2 revenue ~$22B (+47% YoY). Major customer commitments: Google locked through 2031, Meta through 2029, Anthropic added 3.5GW. Polymarket traders assign 94.4% probability of Q2 beat. FY2026 revenue target ~$103B."
     }
   ],
   "AMD": [
@@ -275,6 +291,14 @@
       "url": "https://ir.amd.com/news-events/press-releases/detail/1287/amd-announces-production-ramp-of-next-generation-amd-epyc-processor-venice-on-tsmc-2nm-process-technology",
       "source": "AMD Investor Relations / GlobeNewsWire",
       "content": "AMD announced EPYC 6th-gen 'Venice' CPU production ramp on TSMC 2nm — the first HPC product in the industry on 2nm. Venice targets cloud, enterprise, HPC, and AI infrastructure; future production at TSMC Arizona planned. Follow-on 'Verano' integrates LPDDR for agentic AI memory. AMD stock market cap at $731B after Q1 2026 blowout; Q2 guide $11.2B (+46% YoY)."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "AMD Up 3.17% on May 28 as Data Center Momentum Continues; Rocket One Joins AMD AI Developer Program",
+      "url": "https://www.tradingkey.com/news/market-movers/261934174-market-movers-amd-20260528",
+      "source": "TradingKey",
+      "content": "AMD stock climbed 3.17% to $501.25 (high $507.90); Q1 2026 Data Center revenue continues strong. Rocket One accepted into AMD AI Developer Program. Key risk: TSMC foundry capacity constraints expected to cap 2026 server GPU upside."
     }
   ],
   "INTC": [
@@ -413,6 +437,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/261931374-market-movers-intc-20260527",
       "source": "TradingKey / Northland Capital Markets",
       "content": "Northland Capital Markets downgraded Intel from Outperform to Market Perform and suspended its price target, stating the stock's 222% YTD rally has pushed valuation to overvalued territory. INTC fell 3.26% on May 27. Background concern: Mercury Research data shows Intel continues to lose server CPU share to AMD despite the stock's stellar performance."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "Intel Arc G-Series GPUs Unveiled for Handheld Gaming; Preliminary Apple Foundry Deal Reported; Intel Up 224% YTD at $119",
+      "url": "https://newsroom.intel.com/",
+      "source": "Intel Newsroom / Yahoo Finance",
+      "content": "Intel unveiled Arc G-Series GPUs for next-gen handheld gaming devices; OEM devices ship June 2026. Preliminary agreement to manufacture chips for Apple at Intel 18A foundry reported. Intel stock up 224.77% YTD, trading at $118.95 on May 28. Q1 Data Center & AI revenue +22% to $5.05B; Foundry +16% to $5.42B."
     }
   ],
   "QCOM": [
@@ -471,6 +503,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/261922999-market-movers-qcom-20260522",
       "source": "TradingKey / GuruFocus",
       "content": "QCOM surged 11.2% on May 22, extending a nearly 42% gain over 5 consecutive sessions. Key catalysts: data center silicon shipments to hyperscaler confirmed (Dec 2025), 90-day US-China tariff suspension boosting smartphone demand, and strong Q2 FY2026 results ($10.6B revenue, $20B buyback). AI data center expansion positioned as QCOM's third growth pillar alongside mobile and automotive."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "announcement",
+      "title": "Qualcomm Signs Landmark AI Chip Deal with ByteDance — First Major Data Center Hardware Client",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/qualcomm-teaming-bytedance-means-qcom-204446955.html",
+      "source": "Yahoo Finance",
+      "content": "Qualcomm secured a landmark agreement to supply AI chips to ByteDance (parent of TikTok), marking QCOM's first high-volume client for its newly launched data center hardware product line. Analysts view this as a significant strategic pivot into the AI data center market."
     }
   ],
   "MRVL": [
@@ -727,6 +767,14 @@
       "url": "https://sherwood.news/markets/asml-drops-after-tsmc-delays-adoption-of-its-newest-chip-making-machines-until-2029/",
       "source": "Sherwood News / TradingKey",
       "content": "TSMC confirmed it will not deploy ASML's High-NA EUV lithography machines for mass production before 2029, citing each unit's ~€350M+ price tag and sufficient capability from existing Low-NA systems. ASML shares fell 4.81% on May 15 before rebounding. Analysts note: Intel and SK Hynix are leading High-NA EUV early adopters, while TSMC will use A12/A13 variants with Low-NA through 2028-2029. ASML 2026 revenue guidance raised to €36-40B; Low-NA target 80 systems in 2027."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "industry",
+      "title": "ASML Sustains Strong Buy Ratings as EUV Demand Locked In for 2026-2027; TSMC 2nm and Intel 18A Both Require High-NA",
+      "url": "https://finance.yahoo.com/quote/ASML/",
+      "source": "Yahoo Finance / Analysts",
+      "content": "ASML maintains strong order book heading into H2 2026 as all major leading-edge fabs (TSMC 2nm, Intel 18A, Samsung) require both EUV and High-NA EUV capacity. Export restrictions to China remain in place but guidance for 2026 revenue of €30-35B maintained. No new major announcements on May 28-29."
     }
   ],
   "AMAT": [
@@ -769,6 +817,14 @@
       "url": "https://seekingalpha.com/news/4594307-lam-research-gets-an-upgrade-applied-materials-cut-at-morgan-stanley",
       "source": "Seeking Alpha / Morgan Stanley",
       "content": "Morgan Stanley downgraded AMAT to Equal-weight; 2027 growth expected in-line with market, persistent China share concerns, valuation discount unlikely to narrow despite 2026 share gains. LRCX upgraded simultaneously."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "Applied Materials CEO at Bernstein Conference May 28; In Terafab AI Chip Fab Discussions; Citi Raises Target",
+      "url": "https://ir.appliedmaterials.com/events/event-details/bernstein-strategic-decisions-conference-2",
+      "source": "Applied Materials IR / GlobeNewswire",
+      "content": "AMAT CEO Gary Dickerson presented at Bernstein Strategic Decisions Conference (May 28, 9am ET). Reports indicate AMAT in preliminary discussions with Elon Musk's Terafab AI chip fab project (2nm, targeting 1 terawatt annual compute capacity). Citi massively raised AMAT price target. Stock at $448.29."
     }
   ],
   "KLAC": [
@@ -803,6 +859,14 @@
       "url": "https://www.theglobeandmail.com/investing/markets/stocks/AMAT/pressreleases/1885018/macom-marvell-technology-applied-materials-kla-corporation-and-lam-research-shares-are-falling-what-you-need-to-know/",
       "source": "Globe and Mail",
       "content": "KLA shares under pressure amid sector rotation. Industry backdrop strong: WFE market forecast raised to $140B for 2026. KLA Q1 FY2026 revenue $3.4B (+6.6% YoY), GM 61.1%, benefiting from AI-driven advanced node investments by TSMC and Samsung."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "KLA Corporation Poised for Growth as Semiconductor Equipment Demand Surges; Analysts Bullish on Market Share Gains",
+      "url": "https://www.fool.com/investing/2026/05/28/great-news-for-klac-stock-investors/",
+      "source": "Motley Fool",
+      "content": "Motley Fool coverage highlights KLA's dominant position in wafer metrology/inspection — 'Huge News' (May 27) and 'Great News' (May 28) articles underscore limited competition and strong AI-driven semiconductor capex cycle. KLAC stock at $1,791.44 (+3.26% on May 28). Semiconductor industry boom translating directly to inspection equipment demand."
     }
   ],
   "ONTO": [
@@ -969,6 +1033,14 @@
       "url": "https://finance.yahoo.com/news/micron-1-trillion-market-cap-ubs-1625-target-20260526.html",
       "source": "Yahoo Finance / UBS",
       "content": "Micron reached a $1 trillion market capitalization on May 26, 2026. UBS raised its price target from $535 to $1,625 (+204%) — the highest on Wall Street — citing structural HBM supercycle dynamics. MU stock surged +18.7% on the day. 2026 HBM4 production fully sold out; DRAM spot prices +58-63% YoY, NAND +70-75% YoY. Nvidia has locked pricing through 2029 via long-term supply agreements with Micron. Analyst consensus: buy rating from 36/40 covering analysts."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "research",
+      "title": "Micron Crosses $1 Trillion Market Cap; UBS Raises Target to $1,625, Mizuho to $1,150 as HBM Supply Stays Tight",
+      "url": "https://www.fool.com/investing/2026/05/28/micron-technology-ai-memory-boom-cyclical/",
+      "source": "Motley Fool / UBS / Mizuho",
+      "content": "MU market cap surpassed $1 trillion; shares hit $949.49 intraday high. UBS raised target from $535 to $1,625; Mizuho raised to $1,150 from $800. Management says memory supply is structurally tight. AI data centers estimated to consume 70% of memory chip supply in 2026."
     }
   ],
   "SNDK": [
@@ -1027,6 +1099,14 @@
       "url": "https://www.fool.com/investing/2026/05/23/memory-chip-supercycle-2026-why-micron-and-sandisk/",
       "source": "The Motley Fool",
       "content": "Motley Fool positions Micron and SanDisk as top memory supercycle plays: CEO Mehrotra confirmed HBM/DRAM shortage extends well beyond 2026 as new capacity not at scale until 2028. SanDisk's High-Bandwidth Flash (HBF) development and $42B hyperscaler backlog reinforce structural demand thesis. Combined AI data center memory TAM projected to reach $100B by 2028."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "industry",
+      "title": "SanDisk $1,571 (+3.25%) as Roundhill DRAM ETF Hits $6.5B AUM in 27 Days — Fastest ETF Launch in History",
+      "url": "https://www.fool.com/investing/2026/05/28/roundhill-memory-etf-dram-micron-sandisk-dram/",
+      "source": "Motley Fool",
+      "content": "SanDisk stock reached $1,571 (+3.25%) on May 28. The newly launched Roundhill DRAM Memory ETF (ticker: DRAM) amassed $6.5B in AUM in just 27 trading days — fastest ETF launch in history — packaging exposure to SanDisk, Micron, Samsung and SK Hynix. AI data centers consuming ~70% of memory chip supply."
     }
   ],
   "COHR": [
@@ -1077,6 +1157,14 @@
       "url": "https://simplywall.st/stocks/us/tech/nyse-cohr/coherent/news/is-it-too-late-to-consider-coherent-cohr-after-its-350-one-y",
       "source": "Simply Wall St",
       "content": "Coherent stock at $358.50 on May 21, down 11.2% over the prior week as the AI optics sector consolidates after a massive 350%+ one-year run. Stock +84.5% YTD. NVIDIA's $2B strategic investment and co-packaged optics partnership remain the core thesis. Q3 FY2026 datacenter revenue +41% YoY. Sector-wide cooling affected Lumentum (-7%) and Fabrinet (-8%) during the same period."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "industry",
+      "title": "Coherent Added to S&P 500; Q3 FY2026 Revenue $1.81B (+21%); Datacom Segment Now 75% of Revenue",
+      "url": "https://finance.yahoo.com/news/lumentum-coherent-vertiv-added-p-225126453.html",
+      "source": "Yahoo Finance",
+      "content": "Coherent, Lumentum, and Vertiv added to S&P 500 in AI-dominated index rebalancing. COHR Q3 FY2026 (May 6): revenue $1.81B beat estimates, up 21% YoY; Datacenter & Communications = 75% of total revenue. Stock up 112% YTD as 800G optical demand accelerates."
     }
   ],
   "LITE": [
@@ -1111,6 +1199,14 @@
       "url": "https://247wallst.com/investing/2026/05/18/applied-optoelectronics-slumps-10-lumentum-dives-9-coherent-drops-6-as-ai-optics-profit-takers-strike/",
       "source": "24/7 Wall St.",
       "content": "Lumentum slid 9% May 18 in profit-taking, then rebounded 17% following days. LITE fiscal Q3 2026 revenue guided $780M-$830M after Q2 revenue of $665.5M (+66% YoY). AI data center 800G/1.6T demand intact."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "industry",
+      "title": "Lumentum Added to S&P 500; BofA Raises Ciena/Cisco Targets as 800G Optics Market Set to Expand 10x in 2026",
+      "url": "https://finance.yahoo.com/news/lumentum-coherent-vertiv-added-p-225126453.html",
+      "source": "Yahoo Finance / Bank of America",
+      "content": "Lumentum added to S&P 500 alongside Coherent and Vertiv in AI-focused rebalancing. BofA raised Ciena target to $660 and Cisco to $135, citing 800G optical market expanding ~10x. LITE stock up 180% YTD. Optics becoming critical AI data center interconnect bottleneck."
     }
   ],
   "FN": [
@@ -1137,6 +1233,14 @@
       "url": "https://www.sec.gov/Archives/edgar/data/0001408710/000140871026000014/fn-2026504xex991q326.htm",
       "source": "SEC Filing / Fabrinet",
       "content": "Fabrinet Q3 FY2026: Record quarterly revenue and EPS exceeding guidance ranges. Q4 guidance $1.25-1.29B. CEO highlighted exceptionally strong quarter from numerous ongoing/ramping AI optics programs. Cisco (18% of revenue) sales +59% YoY in FY2025."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "announcement",
+      "title": "Fabrinet Q3 2026 Earnings: Revenue $1.214B (+541% YoY) but Misses EPS Est; Stock Falls 13% on Cash Flow Concerns",
+      "url": "https://www.quiverquant.com/news/Fabrinet+(FN)+Stock+Falls+on+Q3+2026+Earnings",
+      "source": "QuiverQuant / JPMorgan",
+      "content": "Fabrinet Q3 2026: Total revenue $1.214B (+541% YoY), slightly below consensus $1.216B; diluted EPS $3.45 vs $3.67 estimate. Stock fell 13.49% post-earnings on sharp decline in operating cash flow and significant increase in capex. JPMorgan downgraded on limited visibility."
     }
   ],
   "MSFT": [
@@ -1203,6 +1307,14 @@
       "url": "https://www.nasdaq.com/market-activity/stocks/msft/news-headlines",
       "source": "NASDAQ / Microsoft",
       "content": "Microsoft quarterly dividend of $0.91/share ex-dividend date May 21, payable June 11. Separately, EY and Microsoft announced a global initiative helping enterprise clients scale AI company-wide value creation, moving beyond isolated AI pilots. MSFT stock at ~$421. Q3 FY2026 delivered $82.89B revenue, $4.27 EPS, driven by Azure AI acceleration."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "Microsoft Raises 2026 AI Infrastructure Capex to $190B; Azure Revenue +40%; Committed to Doubling AI Capacity in 2 Years",
+      "url": "https://www.nextplatform.com/cloud/2026/05/04/microsoft-committed-to-doubling-ai-infrastructure-in-two-years/5219208",
+      "source": "Next Platform",
+      "content": "Microsoft raised calendar 2026 capex plan to $190B (+$25B due to increases in DRAM, flash, wafers, and substrates). Azure revenue +40% in Q3 FY2026. Committed to doubling AI infrastructure capacity within 2 years to meet accelerating demand. OpenAI partnership restructured: MSFT remains primary cloud partner through 2032 on non-exclusive basis."
     }
   ],
   "GOOGL": [
@@ -1309,6 +1421,14 @@
       "url": "https://seekingalpha.com/article/4906996-alphabet-just-disrupted-itself-completely-rating-upgrade",
       "source": "Seeking Alpha / Google",
       "content": "Google I/O 2026 (May 21-22): Alphabet unveiled Gemini 3.5, Gemini Omni (multimodal reasoning), and radically revamped agentic AI Search with autonomous task completion and real-time web access. New AI pricing model ties revenue to compute usage, supporting gross margin expansion. Seeking Alpha upgraded GOOGL to Strong Bullish; Google Cloud accelerated to 63% YoY growth in Q1 with $460B+ backlog."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "Alphabet Shares Near All-Time High $391; Gemini 3.5 Ramping Post-Google I/O; Google Cloud EQT Partnership for 300+ Companies",
+      "url": "https://www.google.com/finance/beta/quote/GOOGL:NASDAQ",
+      "source": "Google Finance / CNBC",
+      "content": "Alphabet (GOOGL) at $389.66 on May 28, near 52-week high; 52-week range $162-$408. Gemini 3.5 Flash (4x faster, half cost) ramping broadly post-Google I/O. EQT partnered with Google Cloud for AI transformation of 300+ portfolio companies. Google Cloud revenue +63% in Q1 2026 — first $20B quarter. Antitrust monitor imposed on Google Search in May 2026."
     }
   ],
   "AMZN": [
@@ -1375,6 +1495,14 @@
       "url": "https://techcrunch.com/2026/05/27/in-more-good-news-for-amazon-snowflake-signs-6b-deal-with-aws-for-ai-cpu-chips/",
       "source": "TechCrunch",
       "content": "Snowflake signed a $6 billion, 5-year agreement with AWS, underscoring surging enterprise AI infrastructure demand on Amazon's platform. Amazon reconfirmed ~$200B 2026 capital expenditure plan primarily for AI infrastructure, maintaining AWS's cloud leadership position. Amazon eyes $3 trillion valuation as AI revenue ramps."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "Amazon Knocks on Door of $3 Trillion Market Cap at $269/Share; AWS Hits $150B Annual Revenue Run Rate",
+      "url": "https://247wallst.com/investing/2026/05/28/amazon-will-join-the-3-trillion-club-on-this-date/",
+      "source": "24/7 Wall St.",
+      "content": "Amazon approaching $3 trillion market cap ($2.86T at $265/share). AWS delivered $150B annualized revenue run rate. Q1 AWS grew 28% — fastest pace in 15 quarters. Trainium/Inferentia AI chips business crossed $20B annualized run rate. Q2 guidance $194-199B revenue."
     }
   ],
   "META": [
@@ -1465,6 +1593,14 @@
       "url": "https://www.aboutamazon.com/news/aws/meta-aws-graviton-ai-partnership",
       "source": "Amazon / About Amazon",
       "content": "Meta agreed to deploy hundreds of thousands of AWS Graviton chips over at least 3 years to power next-gen agentic AI across its 3.6 billion daily active user platform and 32 new data centers under construction. The deal combines AWS purpose-built silicon with Meta's AI stack — a strategic win for AWS custom silicon over Nvidia GPU dependency for certain AI inference workloads."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "announcement",
+      "title": "Meta Launches Global Paid Subscription Plans: Instagram/Facebook Plus $3.99/mo, WhatsApp Plus $2.99/mo; Stock +3.6%",
+      "url": "https://www.cnbc.com/2026/05/28/2-major-developments-at-meta-may-have-just-put-a-floor-in-on-the-struggling-stock.html",
+      "source": "CNBC",
+      "content": "Meta announced global rollout of paid subscriptions: Instagram Plus and Facebook Plus at $3.99/mo each; WhatsApp Plus $2.99/mo; Meta One Plus $7.99/mo; Meta One Premium $19.99/mo. Designed to diversify revenue beyond advertising. META stock rallied 3.6% to $633-$643 range. AI spending plans had weighed on stock."
     }
   ],
   "AAPL": [
@@ -1531,6 +1667,14 @@
       "url": "https://stockanalysis.com/stocks/aapl/",
       "source": "Stock Analysis / Market Reports",
       "content": "Apple restructured its hardware development organization to accelerate AI-focused devices amid growing competitive pressure from AI-enabled rivals. Apple Intelligence driving upgrade cycle. Stock at $306 (+14.6% past 30 days, market cap $4.48T). Apple Vision Pro gains eye-tracking wheelchair control capability. Intel 18A foundry deal and Google-Gemini Siri integration (iOS 27) remain major strategic milestones."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "Apple Hits All-Time Closing High $312.19; $4.59T Market Cap; Apple Maps to Launch Ads Summer 2026",
+      "url": "https://macdailynews.com/2026/05/28/apple-shares-hit-new-all-time-closing-high-260528/",
+      "source": "MacDailyNews",
+      "content": "Apple shares hit all-time intraday high $313.26 on May 27 and all-time closing high $312.19 on May 28; market cap $4.59T. Apple Maps to introduce local search/discovery ads this summer. Risk: management warned rising memory costs will have increasing margin impact beyond current quarter."
     }
   ],
   "TSLA": [
@@ -1589,6 +1733,14 @@
       "url": "https://finance.yahoo.com/quote/TSLA/news/",
       "source": "Wedbush / Yahoo Finance",
       "content": "Wedbush analyst Dan Ives reported SpaceX and Tesla \"will eventually merge into one company in 2027.\" SpaceX publicly confirmed plans to explore expanded Tesla collaboration. Tesla ended plans to build India manufacturing facility. Q1 2026: EPS $0.41 beat estimates, energy storage margins hit record 39.5%. Stock at $414 range."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "Tesla Robotaxi Confirmed in Austin; Targeting 12 US States by Year-End 2026; Stock at $441 Despite Q1 Delivery Miss",
+      "url": "https://www.investing.com/news/stock-market-news/why-is-applovin-stock-rallying-5-today-93CH-4709724",
+      "source": "Investing.com",
+      "content": "Tesla Robotaxi confirmed live in Austin (joining Dallas and Houston); management guiding to ~12 US states by year-end 2026. New lens-cleaning patent supports autonomous fleet operations. Stock at $441.01 on May 28 despite Q1 2026 deliveries of 358,023 missing 365,645 consensus. Kalshi places 52% odds on Tesla-SpaceX merger before May 2027."
     }
   ],
   "CRWV": [
@@ -1639,6 +1791,14 @@
       "url": "https://www.timothysykes.com/news/coreweave-inc-crwv-news-2026_05_21/",
       "source": "Timothy Sykes / TipRanks",
       "content": "CoreWeave Q1 2026: revenue ~$2.08B (doubled YoY, beat), but EPS missed, triggering ~13% post-earnings decline. Stock recovered +5% on May 21 following NVDA's strong Q2 guidance ($91B), confirming AI data center GPU demand. Short interest at 14%. Capital-intensive GPU cloud model faces debt scrutiny despite strong revenue growth."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "announcement",
+      "title": "CoreWeave Launches Unified Agentic AI Capabilities; $99.4B Contracted Backlog; 2027 Revenue 75% Already Contracted",
+      "url": "https://investors.coreweave.com/news/default.aspx",
+      "source": "CoreWeave Investor Relations",
+      "content": "CoreWeave announced unified agentic AI platform capabilities on May 27. Analysts assign Strong Buy: $99.4B contracted backlog with $36B expected within 24 months. Over 75% of 2027 revenue already contracted. Stock at $104.30 on May 27."
     }
   ],
   "CEG": [
@@ -1681,6 +1841,14 @@
       "url": "https://www.energy.gov/oe/articles/doe-issues-emergency-order-constellation-eddystone-pjm-grid-reliability-summer-2026",
       "source": "U.S. Department of Energy",
       "content": "U.S. Department of Energy issued Emergency Order No. 202-26-17 on May 25, 2026, requiring Constellation Energy's Eddystone Generating Station Units 3 & 4 to remain in commercial operation through August 22, 2026, to ensure PJM Interconnection grid reliability during summer peak demand. CEG stock rose 3.38-4.86% on the news, underscoring the essential role of Constellation's dispatchable generation fleet."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "announcement",
+      "title": "Constellation Energy Quarterly Dividend $0.4265/Share Payable June 5; Pursuing 1GW Nuclear Uprates Over Next Decade",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001868275/000186827526000063/ceg-20260511991.htm",
+      "source": "SEC EDGAR / CEG IR",
+      "content": "Constellation declared quarterly dividend of $0.4265/share payable June 5 (record May 15). Pursuing 1GW+ of nuclear uprates over the next decade including 135MW at Braidwood and Byron plants (Illinois). Prioritizing long-term hyperscaler PPAs for AI data center power. Q1 2026 earnings beat; reaffirmed full-year guidance."
     }
   ],
   "VRT": [
@@ -1747,6 +1915,14 @@
       "url": "https://eciks.org/4378-69941-vrt-stock-rallies-to-new-highs-on-raised-2026-guidance-ai-data-center-boom",
       "source": "TD Cowen / RBC Capital",
       "content": "Vertiv Q1 2026: $15B backlog (+109% YoY), organic orders +252% YoY, driven by AI data center liquid cooling and power demand. TD Cowen raised PT to $387 from $347 (Buy); RBC raised to $435 from $356 (Outperform). Liquid cooling backlog provides strong multi-year revenue visibility as GPU cluster power density increases."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "Vertiv Added to S&P 500; Q1 2026 Adjusted EPS +83%, Revenue +30%; Stock Up 115% YTD at $311",
+      "url": "https://finance.yahoo.com/news/lumentum-coherent-vertiv-added-p-225126453.html",
+      "source": "Yahoo Finance",
+      "content": "Vertiv added to S&P 500 in AI-dominated rebalancing alongside Coherent and Lumentum. Q1 2026: adjusted EPS +83% YoY; revenue +30% YoY; $15B backlog up 109%. Stock up 115% YTD at $311 (down 2.61% on May 28). AI data center power/cooling demand remains structurally elevated."
     }
   ],
   "ETN": [
@@ -1789,6 +1965,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/look-eaton-etn-valuation-raised-181549695.html",
       "source": "Yahoo Finance",
       "content": "ETN Q1 2026: Electrical Americas data center orders +240% YoY, revenue +50%. Total electrical backlog +48% YoY. Launched Eaton Beam Rubin DSX 'grid-to-chip' platform with NVIDIA. Closed Boyd Thermal acquisition. New Nebraska switchgear plant committed."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "Eaton Pending $9.5B Boyd Thermal Acquisition for Liquid Cooling; Electrical Americas Q4 2025 Revenue Hit $3.51B Record (+21% YoY)",
+      "url": "https://www.techi.com/ge-vernova-vertiv-ai-data-center/",
+      "source": "TECHi",
+      "content": "Eaton posted record Q4 2025 Electrical Americas revenue of $3.51B (+21% YoY). Pending $9.5B acquisition of Boyd Thermal to expand liquid cooling capabilities for AI data center infrastructure. Positioned alongside GE Vernova and Vertiv in the AI power and cooling stack."
     }
   ],
   "GEV": [
@@ -1871,6 +2055,14 @@
       "url": "https://www.gevernova.com/news/press-releases/ge-vernova-ha-gas-turbine-fleet-surpasses-4-million-operating-hours-2026",
       "source": "GE Vernova Newsroom",
       "content": "GE Vernova announced its HA gas turbine fleet has surpassed 4 million cumulative commercial operating hours across global installations — a fleet reliability milestone reflecting 99%+ availability. GEV stock rallied +5.31% on May 26 alongside broader power sector gains driven by a DOE Emergency Order for PJM grid reliability. Company noted wind segment faces a $250-350M tariff headwind in 2026 related to steel/component imports; impact not material to total outlook given $163B backlog and gas turbine dominance. Gas turbine slots remain sold out through 2030."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "GE Vernova Falls 3.33% on May 28; Bearish Analyst Questions Valuation; CEO Flags State Resistance for Data Center Projects",
+      "url": "https://www.tradingkey.com/news/market-movers/261934173-market-movers-gev-20260528",
+      "source": "TradingKey",
+      "content": "GEV fell 3.33% on May 28 amid broader market headwinds and bearish analyst report questioning current valuation. CEO highlighted state-level permitting resistance causing delays for hyperscaler customers in advancing data center power projects — potential slowdown in near-term order flow."
     }
   ],
   "CCJ": [
@@ -1947,6 +2139,14 @@
       "url": "https://www.indexbox.io/blog/nvidia-q1-2026-earnings-preview-strong-ai-demand-points-to-upside/",
       "source": "IndexBox",
       "content": "SMH top holding NVDA (25%+ weight) reports Q1 FY2027 earnings May 20 ($79.2B revenue expected). AI hyperscaler capex raised to $725B combined. SMH tracks NVDA, TSM, AVGO, AMD, ASML — all reporting strong AI demand. AMD +38% Q1 YoY, TSM +35% Q1 YoY."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "industry",
+      "title": "SMH Hits $618 High as AI-Driven Semiconductor ETF Inflows Surge; +120% Over Past Year",
+      "url": "https://stockinvest.us/stock/SMH",
+      "source": "StockInvest / VanEck",
+      "content": "VanEck Semiconductor ETF (SMH) reached $618.24 intraday high on May 27; strong AI-driven inflows into semiconductor equities. SMH returned over 120% in the past year driven by NVDA, TSM, AVGO and AMD. Consensus 2026 EPS growth forecast >100% for underlying holdings."
     }
   ],
   "XLU": [
@@ -2125,6 +2325,14 @@
       "url": "https://stocktwits.com/news-articles/markets/equity/rklb-stock-takes-off-after-rocket-lab-s-defense-solution-passes-sda-s-requirements-everything-to-know-about-its-latest-816-m-award/cZgga5yRerc",
       "source": "StockTwits / Space Development Agency",
       "content": "Rocket Lab's missile defense solution for the Space Development Agency Tracking Layer Tranche 3 constellation passed System Requirements Review (SRR), confirming technical baseline meets SDA's operational requirements. This milestone is critical for an ~$816M award pathway. RKLB surged 7%+ in premarket to $155 range on May 27, building on 5.48% gain on May 26."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "announcement",
+      "title": "Rocket Lab Acquires Motiv Space Systems (May 26); Stock at $146 on May 28; Q1 Revenue $200.3M (+63% YoY)",
+      "url": "https://investors.rocketlabcorp.com/news-releases/",
+      "source": "Rocket Lab IR",
+      "content": "Rocket Lab acquired Motiv Space Systems on May 26, expanding its robotic systems and space hardware capabilities. RKLB stock at $146.26 on May 28 (range $142-$150). Q1 2026 revenue $200.3M (+63.5% YoY) — first quarter exceeding $200M. $90M US Space Force GEO satellite contract awarded May 21."
     }
   ],
   "HUBB": [
@@ -2235,6 +2443,14 @@
       "url": "https://seekingalpha.com/article/4907945-arista-networks-stock-buy-the-margin-anxiety-selloff",
       "source": "Seeking Alpha / Evercore ISI",
       "content": "Evercore ISI maintained Arista Networks as sector Top Pick with Outperform rating and $200 price target on May 23, 2026. Thesis: buy the margin anxiety selloff post-Q1; AI data center Ethernet switching demand structurally intact. ANET full-year 2026 guidance $11.5B (+27.7% YoY) and AI fabric target $3.5B remain achievable despite 1-2 year supply constraints in switch silicon (TSMC capacity)."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "Arista Networks: Analysts See Explosive AI Networking Demand; Q1 Revenue $2.71B (+35% YoY); AI Fabric Target Raised to $3.5B",
+      "url": "https://www.fool.com/investing/2026/05/28/massive-news-arista-stock-could-surge-on-explosive/",
+      "source": "Motley Fool",
+      "content": "Arista raised full-year 2026 revenue growth outlook to 27.7% and AI fabric revenue target to $3.5B following Q1 beat. Q1: revenue $2.71B (+35.1% YoY), EPS $0.87 beat $0.81 est. Risk: significant insider selling ($246M in 90 days) and NVIDIA's strategic entry into Ethernet market as competitive pressure."
     }
   ],
   "ARM": [
@@ -2293,6 +2509,14 @@
       "url": "https://247wallst.com/investing/2026/05/20/arm-holdings-is-up-104-and-smart-money-is-waiting-for-one-specific-level-to-buy-more/",
       "source": "24/7 Wall St.",
       "content": "Arm Holdings stock up 104% YTD, trading at $223.15 against consensus analyst target $230.92 (69% bullish). Institutional investors watching for pullback entry after near-50% weekly rally through May 22. Bullish thesis: NVDA Vera CPU licensed from ARM translates to significant royalty upside as NVDA forecasts $20B in CPU revenue; data center royalties doubled YoY in FY2026. AGI CPU demand exceeded $20B in six weeks post-announcement."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "ARM Holdings Hits All-Time High; Up 5.36% on May 28; Mizuho Raises Target to $360; Up 210%+ YTD",
+      "url": "https://www.cnbc.com/2026/05/28/red-hot-arm-soars-to-another-all-time-high-what-is-fueling-the-move-this-time.html",
+      "source": "CNBC",
+      "content": "ARM Holdings stock soared 5.36% on May 28 to another all-time high, up 210%+ since start of 2026. Data center royalties more than doubled YoY in FY2026. Mizuho raised price target to $360 from $290 citing strong DRAM and HBM demand remaining strong through 2027."
     }
   ],
   "LRCX": [
@@ -2359,6 +2583,14 @@
       "url": "https://investor.lamresearch.com/",
       "source": "Lam Research IR",
       "content": "Lam Research opened a Panel-Level Packaging Center of Excellence in Salzburg, Austria — an R&D lab for chip packaging using square panels instead of circular wafers to enhance density and cut costs for AI accelerator packaging. Board declared quarterly dividend of $0.26/share. Stock gained 3.46% on May 21; Morgan Stanley Overweight upgrade (May 18) and WFE industry 2026 forecast of $140B underpin the bull case."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "research",
+      "title": "Mizuho Raises Lam Research Target to $380 from $330; Presenting at BofA Tech Conference June 2; Terafab Discussions Ongoing",
+      "url": "https://stockstory.org/us/stocks/nasdaq/lrcx/news/why-up-down/lam-research-and-kla-corporation-stocks-trade-down-what-you-need-to-know",
+      "source": "Mizuho / StockStory",
+      "content": "Mizuho raised LRCX price target to $380 from $330. Lam Research to present at Bank of America Global Technology Conference June 2 (9:20am PDT). In preliminary discussions with Elon Musk's Terafab AI chip project. Stock up 2.54% at $267.60."
     }
   ],
   "CDNS": [
@@ -2401,6 +2633,14 @@
       "url": "https://www.gurufocus.com/news/8873018/cadence-design-systems-inc-cdns-shares-surge-38-what-gf-score-of-100-tells-investors",
       "source": "Guru Focus",
       "content": "CDNS rose 3.8% to $351 on May 20, buoyed by AI chip design sentiment. Q1 2026: record backlog $8B, revenue +18.7% YoY. Company raised 2026 revenue growth outlook to approximately 17% YoY. GF Score 97/100. AI chip design complexity (chiplets, 2D integration) creating sustained multi-year EDA tool demand."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "Cadence Design Q1 2026 Revenue $1.474B; Raises Full-Year Guidance; AI Chip Complexity Drives EDA Demand",
+      "url": "https://finance.yahoo.com/quote/CDNS/",
+      "source": "Yahoo Finance",
+      "content": "Cadence reported Q1 2026 non-GAAP EPS $1.96 and revenue $1.474B, beating estimates. Full-year guidance raised driven by strong AI chip design activity. EDA/IP tools essential for increasingly complex AI accelerator architectures at TSMC 3nm/2nm nodes."
     }
   ],
   "ORCL": [
@@ -2451,6 +2691,14 @@
       "url": "https://www.tipranks.com/news/orcl-vs-pltr-which-ai-stock-is-the-better-buy-in-may-according-to-analysts",
       "source": "TipRanks / Bank of America",
       "content": "BofA analyst Tal Liani initiated Oracle at Buy, $200 PT, describing ORCL as \"a giant going all-in on AI infrastructure and cloud.\" Massive AI infrastructure backlog; capex to reach ~$50B in FY2026, rising through FY2029. OCI (Oracle Cloud Infrastructure) accelerating on Meta and OpenAI training partnerships. FCF may turn negative near-term but structural AI cloud positioning compelling."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "Oracle Surges 9.47% on Snowflake Beat; 'SaaSpocalypse' Narrative Collapses; Next Earnings June 16",
+      "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-5-28-oracle-orcl-shares-skyrocket-what-you-need-to-know",
+      "source": "FinancialContent / StockStory",
+      "content": "Oracle surged 9.47% on May 28 after Snowflake's blowout Q1 FY2027 results (+34% product revenue, AI accounts jumped from 9,100 to 13,600) reversed the 'SaaSpocalypse' narrative that had erased ~$2T from software values since late 2025. Oracle Q4 FY2026 earnings scheduled June 16."
     }
   ],
   "PLTR": [
@@ -2501,6 +2749,14 @@
       "url": "https://www.tipranks.com/news/orcl-vs-pltr-which-ai-stock-is-the-better-buy-in-may-according-to-analysts",
       "source": "TipRanks / Deutsche Bank",
       "content": "Deutsche Bank raised PLTR target to $200 from $160, keeping Hold due to premium valuation. BofA views Palantir as the clearest enterprise AI winner with strong government DoD and commercial AIP momentum. Strong revenue growth and margin expansion priced in. Stock expensive on traditional metrics but AI monetization visibility highest in software sector."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "Palantir +7.83% on May 28; Q1 Revenue $1.633B (+85%), US Commercial +133%; FY2026 Guidance Raised to $7.65B; Maven AI = DoD Program of Record",
+      "url": "https://www.fool.com/investing/2026/05/28/why-palantir-stock-is-soaring-today/",
+      "source": "Motley Fool",
+      "content": "Palantir surged 7.83% to ~$143. Q1 2026: revenue $1.633B (+85% YoY, highest-ever growth rate); US commercial +133% to $595M. 206 government deals closed in Q1, many >$10M. Maven AI military system designated DoD 'program of record' (March 2026) — durable defense budget embeddedness. Full-year 2026 guidance raised to ~$7.65B."
     }
   ],
   "IREN": [
@@ -2627,6 +2883,14 @@
       "url": "https://seekingalpha.com/article/4907471-monolithic-power-systems-ai-thermodynamic-leader-against-a-structural-margin-trap",
       "source": "Seeking Alpha",
       "content": "MPWR Q1 2026: record revenue, up 26% YoY, led by enterprise data and AI communications segment. DrMOS and VRM power management chips for NVDA H100/B200 servers driving growth. Stock at $1,534 on May 21. Structural bull case intact; Seeking Alpha notes potential margin pressure risk at 61x forward P/E if competition intensifies."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "industry",
+      "title": "Monolithic Power AI Server Power Market Expanding; MPWR a Key NVDA H100/B200 Supply Chain Beneficiary",
+      "url": "https://stockanalysis.com/stocks/mpwr/",
+      "source": "StockAnalysis / Industry",
+      "content": "MPWR's DrMOS/VRM power management chips are critical components in NVIDIA H100/B200 AI server builds. As hyperscalers scale AI training clusters, power delivery efficiency demands grow. Analysts continue to highlight MPWR as a direct AI infrastructure spending beneficiary, with data center exposure now representing the majority of revenue."
     }
   ],
   "GLW": [
@@ -2669,6 +2933,14 @@
       "url": "https://www.theglobeandmail.com/investing/markets/stocks/GLW/pressreleases/1478785/the-zacks-analyst-blog-sandisk-monolithic-power-systems-garmin-and-corning/",
       "source": "Globe and Mail / Zacks",
       "content": "GLW stock up 324% over past year, +123% YTD. Key catalyst: NVIDIA multiyear partnership to 10x US optical manufacturing capacity in North Carolina. Q1 2026 revenue $4.14B (+7.3% YoY). Optical telecom segment driven by AI data center fiber demand."
+    },
+    {
+      "date": "2026-05-29",
+      "type": "announcement",
+      "title": "Corning Declares $0.28 Quarterly Dividend; $3.2B NVIDIA Optical Deal; Stock Down 3.21% on May 28 Amid Insider Selling",
+      "url": "https://www.tradingkey.com/news/market-movers/261934301-market-movers-glw-20260528",
+      "source": "TradingKey / Corning IR",
+      "content": "Corning declared quarterly cash dividend of $0.28/share (May 29). Stock fell 3.21% on May 28 (range $182-$195). Senior SVP and CTO among insiders who sold $33M+ in shares in the past 90 days. Company benefits from $3.2B NVIDIA deal to expand optical connectivity for AI data centers; Q1 solar revenues up 80% YoY."
     }
   ],
   "CRDO": [
@@ -2711,6 +2983,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/crdo-vs-alab-high-speed-135400408.html",
       "source": "Yahoo Finance / Credo Technology",
       "content": "Credo Technology announced $750M acquisition of DustPhotonics (cash + stock + performance incentives). Combined with ZF Optical Transceivers and optical DSPs, Credo expects optical revenues to exceed $500M in FY2027. Deal closes by Q2 FY2026. Accretive to non-GAAP EPS by FY2027. Positions Credo as end-to-end optical connectivity provider for AI data centers."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "announcement",
+      "title": "Credo Technology Acquires DustPhotonics for $750M; FY2026 Revenue Forecast Exceeds $800M",
+      "url": "https://www.tradingview.com/news/zacks:c10651e8f094b:0-crdo-vs-alab-which-high-speed-connectivity-stock-has-more-upside/",
+      "source": "Zacks / TradingView",
+      "content": "Credo Technology announced acquisition of DustPhotonics for $750M (cash + stock + performance incentives), expanding its photonics capabilities for AI interconnects. FY2026 revenue forecast: >$800M (+85% YoY growth). FY25 revenues rose 126% YoY to $436.8M."
     }
   ],
   "ALAB": [
@@ -2787,6 +3067,14 @@
       "url": "https://seekingalpha.com/news/4583960-astera-labs-credo-among-6-ai-stocks-to-get-coverage-from-rothschild",
       "source": "Seeking Alpha / Rothschild & Co",
       "content": "Rothschild & Co initiated coverage on six AI-linked connectivity stocks including CIEN with Neutral, price target $153. CIEN Q1 FY2026 revenue $1.43B (+17% YoY). AI-driven DCI (Data Center Interconnect) backbone demand supports growth."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "research",
+      "title": "Bank of America Raises Ciena Target to $660 from $550; 800G Optics Market to Expand 10x in 2026; Ciena Holds ~30% Share",
+      "url": "https://moneycheck.com/bofa-boosts-cisco-csco-and-ciena-cien-price-targets-on-ai-optical-networking-surge",
+      "source": "Bank of America / MoneyCheck",
+      "content": "BofA maintained Buy and raised Ciena price target to $660 (from $550) on AI optical networking acceleration. BofA forecasts 800G optics market expanding ~10x in 2026 as hyperscalers upgrade infrastructure. Ciena holds ~30% share of 800G segment. Global 800G ZR/ZR+ market expected to grow dramatically."
     }
   ],
   "CSCO": [
@@ -2821,6 +3109,14 @@
       "url": "https://seekingalpha.com/article/4905852-cisco-systems-inc-2026-q3-results-earnings-call-presentation",
       "source": "Seeking Alpha",
       "content": "Cisco Q3 FY2026 (ended Apr 25): revenue $15.8B (+12% YoY, record), Product revenue +17%, AI infrastructure and campus networking led growth. GAAP EPS $0.85, non-GAAP $1.06 vs $1.00 est. Q4 guidance $16.7-16.9B. Cutting <4,000 jobs (<5%)."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "research",
+      "title": "Bank of America Raises Cisco Target to $135 from $114; $1B+ Acacia AI Optics Orders; Cisco Leads 800G with 50% Market Share",
+      "url": "https://moneycheck.com/bofa-boosts-cisco-csco-and-ciena-cien-price-targets-on-ai-optical-networking-surge",
+      "source": "Bank of America / MoneyCheck",
+      "content": "BofA raised Cisco target to $135 (from $114), maintaining Buy. Cisco reported $1B+ in Acacia orders; AI-related optics surged ~4x to ~$950M. Cisco leads the 800G AI optics segment with >50% market share. 800G technology expected to account for 35.5% of optical market in 2026, up from 4.6% in 2025."
     }
   ],
   "PWR": [
@@ -2847,6 +3143,14 @@
       "url": "https://www.fool.com/investing/2026/05/13/3-electrical-infrastructure-stocks-with-shockingly/",
       "source": "The Motley Fool",
       "content": "PWR highlighted as top AI grid/data center EPC play: data center transmission and power interconnect work accelerating. Q1 2026 revenue $7.88B. Backlog visibility strong as hyperscalers commit to multi-year power infrastructure buildouts."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "Quanta Services CEO/CFO at Bernstein Strategic Decisions Conference; Data Center Power Grid Buildout Accelerating",
+      "url": "https://www.stocktitan.net/news/PWR/quanta-services-to-participate-in-several-institutional-investor-b2osdsn68kah.html",
+      "source": "StockTitan / Bernstein",
+      "content": "Quanta Services CEO Duke Austin and CFO Jayshree Desai participated in Bernstein Strategic Decisions Conference on May 28 (1:30pm ET). Focus on accelerating data center power interconnection work and transmission line construction; power infrastructure backlog for AI data centers remains robust."
     }
   ],
   "EME": [
@@ -3231,6 +3535,14 @@
       "url": "https://www.techtarget.com/searchcustomerexperience/news/366642658/ServiceNows-Autonomous-CRM-takes-aim-at-Salesforce",
       "source": "TechTarget / BofA",
       "content": "ServiceNow expanded into autonomous CRM with new customer experience features unveiled at Knowledge 2026 (May 5-7), directly targeting Salesforce's market. Stock jumped ~9% on the AI platform expansion. BofA reiterates Buy on NOW while cautious on CRM. ServiceNow Q1 FY2026 strong. Enterprise AI workflow automation TAM expansion from IT service management into CRM and sales."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "ServiceNow Stock Rises to $107 as Snowflake/Salesforce Earnings Reverse Enterprise Software Selloff",
+      "url": "https://finance.yahoo.com/quote/NOW/",
+      "source": "Yahoo Finance",
+      "content": "ServiceNow (NOW) stock rose to $107.48 on May 28 as Salesforce ($11.1B Q1 revenue, record 34.8% non-GAAP operating margin) and Snowflake (+34% product revenue, AI accounts +49%) earnings reversed fears that AI was displacing enterprise SaaS platforms rather than expanding them."
     }
   ],
   "CRM": [
