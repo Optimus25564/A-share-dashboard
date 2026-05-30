@@ -577,6 +577,14 @@
       "url": "https://www.sec.gov/Archives/edgar/data/0001835632/000183563226000014/q127_8kx522026ex-991.htm",
       "source": "Marvell Technology / SEC EDGAR",
       "content": "Marvell Q1 FY2027 8-K (official): Net revenue $2.418B record (+28% YoY), beat guidance midpoint by $18M; non-GAAP EPS $0.80 beat $0.75 estimate; GAAP GM 52.1%, non-GAAP 58.9%. Q2 FY2027 guide: +12% QoQ, +35% YoY. FY2027 total revenue outlook raised to $11.5B (+40% YoY). AI interconnect/custom ASIC revenue to grow 70%+ YoY in FY2027, demand exceeding expectations."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "research",
+      "title": "Marvell Mass Analyst Upgrades Post-Q1: Benchmark $275, BofA $240, Goldman $180, Raymond James $235; FY2028 Revenue Guide Lifted 10% to $16.5B",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/marvell-technology-mrvl-valuation-check-042642797.html",
+      "source": "Yahoo Finance / Multiple Brokerages",
+      "content": "Following Q1 FY2027 beat ($2.418B revenue, $0.80 non-GAAP EPS), at least 5 major banks raised targets on May 28-29: Benchmark $275 (from $130), BofA $240, Goldman Sachs $180, Raymond James $235, Cantor Fitzgerald $220. Management raised FY2028 revenue guide 10% to $16.5B (from $15B), reflecting sustained AI custom ASIC and high-speed interconnect demand."
     }
   ],
   "APP": [
@@ -709,6 +717,14 @@
       "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/261930703-tsmc-tsm-3nm-pricing-power-ai-demand-capacity-shortage-gross-margin-nvidia-analyst-upgrades-risk-tradingkey",
       "source": "TradingKey",
       "content": "TSMC announced a second price increase in 2026: 3nm process quotes raised up to 15% for H2 2026 and another 5-10% in 2027, driven by surging AI server demand from NVIDIA, Google and AWS. All 3nm and 5nm capacity is operating at or near maximum and sold out through year-end. Record gross margin 66.2% in Q1 2026, further expansion expected. TSM ADR rose 2.52% to 12.32."
+    },
+    {
+      "date": "2026-05-29",
+      "type": "research",
+      "title": "Bernstein Raises TSMC Target to $430 on 28% EPS CAGR Outlook; Arizona Fab 2 (3nm) Equipment Install Q3 2026; Analyst Consensus $423.50",
+      "url": "https://www.foreignpolicyjournal.com/2026/05/29/taiwan-semiconductor-manufacturing-company-nyse-tsm-targets-430-per-share-as-analysts-project-28-eps-growth/",
+      "source": "Foreign Policy Journal / Bernstein SocGen",
+      "content": "Bernstein SocGen reiterated Outperform on TSM, raised target to $430 (from $351) projecting 28% EPS CAGR over 2.5 years on AI demand. Analyst consensus $423.50. Arizona Fab 2 (3nm) to begin equipment installation Q3 2026, accelerated from original 2028 timeline. April 2026 consolidated revenue NT$410.7B (+17.5% YoY). Counterpoint: 'demand still significantly outpaces supply, no major sign of slowing.'"
     }
   ],
   "ASML": [
@@ -2097,6 +2113,14 @@
       "url": "https://www.sec.gov/Archives/edgar/data/0001009001/000119312526213812/d152766dex991.htm",
       "source": "SEC Filing / Cameco",
       "content": "Flooding in northern Saskatchewan caused collapse of Smoothstone River Bridge—primary supply route to McArthur River and Key Lake sites. Cameco Q1 2026: adjusted net earnings $203M, operations consistent with annual expectations."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "industry",
+      "title": "Uranium Above $86.5/lb Near 2-Month High; Meta 7.8GW and Microsoft Nuclear SMR Deals Drive Long-Term Demand; CCJ Consensus Target $130",
+      "url": "https://tradingeconomics.com/commodity/uranium",
+      "source": "TradeEconomics / Cameco",
+      "content": "Uranium futures rose above $86.5/lb near 2-month high on May 28 on recovering risk sentiment and structural nuclear demand from AI data centers. Catalysts: Meta signed agreements for up to 7.8GW nuclear capacity; Microsoft pursuing nuclear reactor restarts. US govt backed Westinghouse reactor development with Cameco support. CCJ at $107.53, analyst consensus Buy with 12-month target $130.04 (+17.5% upside)."
     }
   ],
   "SMH": [
@@ -2243,6 +2267,14 @@
       "url": "https://finance.yahoo.com/quote/EWY/",
       "source": "Yahoo Finance",
       "content": "EWY's top holding SK Hynix remains dominant in HBM3E supply to NVDA Blackwell systems. Samsung Electronics also shipping HBM4 prototype samples. Korean semiconductor sector benefits from AI memory super-cycle; EWY up sharply alongside US semiconductor peers."
+    },
+    {
+      "date": "2026-05-29",
+      "type": "news",
+      "title": "EWY +109% YTD as SK Hynix-Samsung Market Cap Gap Narrows to 6.8%; South Korea Launches 2x Leveraged Samsung/Hynix ETFs; Korea Up ~96% in 2026",
+      "url": "https://247wallst.com/investing/2026/05/29/south-korea-is-up-nearly-96-percent-in-2026-and-these-3-etfs-let-you-play-the-chip-nation-story-at-different-risk-levels/",
+      "source": "24/7 Wall St.",
+      "content": "EWY +109% YTD through May 28 (top holdings: SK Hynix 28%, Samsung 24%). SK Hynix market cap now within 6.8% of Samsung—driven by HBM3E AI memory dominance—vs less than half Samsung's a year ago. South Korea launched first 2x leveraged single-stock ETFs for Samsung and SK Hynix on May 29, drawing 2 trillion won in 45 minutes. Korean equity market up ~96% in 2026, dominated by HBM/AI chip rally."
     }
   ],
   "RKLB": [
@@ -2359,6 +2391,14 @@
       "url": "https://finance.yahoo.com/news/hubbell-hubb-expanding-around-ai-160759319.html",
       "source": "Yahoo Finance",
       "content": "Hubbell signed definitive agreement to acquire NSI Industries for $3.0B cash. NSI makes electrical fittings, connectors and wire-management products for industrial/infrastructure/commercial markets; ~$570M 2026 revenue expected. Q1 revenue $1.52B (+11.1% YoY)."
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "Hubbell to Participate in Upcoming Investor Conference; Q1 2026 EPS $3.93 Beat (+16% YoY); NSI Industries $3.0B Acquisition Integration Underway",
+      "url": "https://www.globenewswire.com/news-release/2026/05/28/3303271/0/en/Hubbell-to-Participate-in-Upcoming-Investor-Conference.html",
+      "source": "GlobeNewsWire",
+      "content": "Hubbell announced participation in upcoming investor conference (press release May 28, 2026). Q1 2026: revenue $1.52B (+11.1% YoY), adj EPS $3.93 (+16%), beat estimate $3.87. $3.0B NSI Industries acquisition (electrical connectors and wiring devices) integration underway, expanding electrical solutions segment. Analyst average price target $547."
     }
   ],
   "POWL": [
@@ -2385,6 +2425,14 @@
       "url": "https://www.fool.com/investing/2026/05/05/why-powell-industries-rallied-today/",
       "source": "The Motley Fool",
       "content": "POWL Q2 FY2026: Revenue $296.6M (+6%), new orders $490M (+97%), backlog $1.8B (+33%). After quarter end, received mega data center order >$400M. Stock rallied 11% on the news as AI data center switchgear demand accelerates."
+    },
+    {
+      "date": "2026-05-07",
+      "type": "research",
+      "title": "Roth Capital Raises Powell Industries Target to $333 After $400M AI Mega Order; Quarterly Dividend $0.09; Backlog $1.8B +33% YoY",
+      "url": "https://www.marketbeat.com/instant-alerts/powell-industries-q2-earnings-call-highlights-2026-05-05/",
+      "source": "MarketBeat / Roth Capital",
+      "content": "Post-Q2 FY2026 earnings, Roth Capital raised POWL target to $333 (from $285), maintaining Buy. Company declared quarterly dividend $0.09/share payable June 17, 2026 (record May 20). Backlog $1.8B (+33% YoY), orders $490M (+97%). Despite EPS miss ($1.25 vs $1.35), stock rallied on post-quarter $400M+ AI data center mega order—largest single contract in company history. Firm remains debt-free with $544.9M cash."
     }
   ],
   "ANET": [
@@ -2849,6 +2897,14 @@
       "url": "https://www.marketwatch.com/story/power-stocks-surge-may-26-doe-emergency-grid-order-boosts-ceg-vst-gev-20260526",
       "source": "MarketWatch",
       "content": "Vistra Corp surged 5.32-6.32% on May 26 alongside Constellation Energy (+3.38-4.86%) and GE Vernova (+5.31%) after the U.S. Department of Energy issued Emergency Order No. 202-26-17 mandating specific PJM power plants remain online through summer 2026. The order reinforced the policy premium being placed on dispatchable power assets supporting grid reliability during AI-driven demand growth, directly supporting Vistra's long-term contracted generation strategy."
+    },
+    {
+      "date": "2026-05-29",
+      "type": "announcement",
+      "title": "Vistra Declares Quarterly Dividend $0.229/Share, Ex-Date June 22, 2026; 2026 Revenue Projected $23B (+20%)",
+      "url": "https://investor.vistracorp.com/news",
+      "source": "Vistra Investor Relations",
+      "content": "Vistra declared quarterly cash dividend of $0.229/share with ex-date June 22, 2026. Q1 2026 revenue $5.64B (+43% YoY), reaffirmed Adj EBITDA guidance $6.8-7.6B and Adj FCF $3.9-4.7B for 2026; projects $10B+ cumulative cash generation through 2027. Analysts forecast $23B 2026 revenue on Meta 2,600MW nuclear PPA and AI data center power demand."
     }
   ],
   "MPWR": [
@@ -3355,6 +3411,14 @@
       "url": "https://finance.yahoo.com/quote/NRG/",
       "source": "Yahoo Finance",
       "content": "NRG Q1 2026 revenue $10.26B. Company continues expanding long-term power purchase agreements with hyperscaler data center customers. Retail electricity + gas generation portfolio benefits from AI-driven industrial power demand."
+    },
+    {
+      "date": "2026-05-17",
+      "type": "news",
+      "title": "NRG New CEO Robert Gaudette 'Bring Your Own Power' AI Strategy; 445MW Contracted; Fleet Doubles to 25GW After LS Power Acquisition",
+      "url": "https://fortune.com/2026/05/17/new-nrg-energy-ceo-leans-growth-bring-your-own-power-ai-boom-virtual-power-plants/",
+      "source": "Fortune",
+      "content": "New CEO Robert Gaudette (took over end of April 2026) unveiled 'bring your own power' (BYOP) model and virtual power plant strategy for hyperscalers, growing contracted data center capacity to 445MW. LS Power acquisition (closed January 2026) doubled NRG's generation fleet to ~25GW (13GW quick-start gas + 6GW CPower demand-response via CPower). Stock +7.1% on May 20 on AI power-demand wave."
     }
   ],
   "KMI": [
@@ -3381,6 +3445,14 @@
       "url": "https://www.sec.gov/Archives/edgar/data/0001506307/000150630726000041/kmi-20260514.htm",
       "source": "SEC Filing / Kinder Morgan",
       "content": "Kinder Morgan announced Chief Operating Officer Art Holland plans to retire effective September 4, 2026. Kenneth W. Grubb appointed as new COO. Company also scheduled Bernstein Strategic Decisions Conference presentation for May 27."
+    },
+    {
+      "date": "2026-05-15",
+      "type": "industry",
+      "title": "Kinder Morgan: US Natural Gas Demand to Reach 150 Bcf/d by 2031; 153 GW New Gas-Fired DC Power; $10.1B Project Backlog; All 3 Agencies Now BBB+",
+      "url": "https://naturalgasintel.com/news/natural-gas-story-has-legs-as-data-centers-spur-kmi-pipeline-expansions-says-kinder/",
+      "source": "Natural Gas Intelligence",
+      "content": "KMI management projects US natural gas demand to reach 150 Bcf/d by 2031, driven by LNG export ramp and ~153 GW of new gas-fired power generation tied to AI data centers. Project backlog reached $10.1B, bolstered by new data center infrastructure deals. After Moody's upgrade to Baa1 (completed April 2026), KMI is now rated equivalent to BBB+ at all three major credit rating agencies—a credit milestone that lowers funding costs."
     }
   ],
   "WMB": [
@@ -3501,6 +3573,14 @@
       "url": "https://simplywall.st/stocks/us/semiconductors/nasdaq-ter/teradyne/news/why-teradyne-ter-is-up-66-after-surging-q1-earnings-and-fres",
       "source": "Simply Wall St",
       "content": "TER Q1 2026: Revenue $1.28B (+87% YoY, record), Semiconductor Test >$1B first time, GM 60.9%, EPS $2.56 vs $2.18 est. AI/HBM testing = 70% of revenue. Q2 guidance $1.15-1.25B. Stock initially fell 12% after-hours on high-valuation sustainability concerns."
+    },
+    {
+      "date": "2026-05-08",
+      "type": "announcement",
+      "title": "Teradyne Invests $157.8M in MultiLane JV and Acquires TestInsight for $29M; Expands AI Data Center Connectivity Test and Semiconductor Software",
+      "url": "https://futurumgroup.com/insights/teradyne-q1-fy-2026-earnings-credit-revenue-growth-to-ai-test-demand/",
+      "source": "Futurum Group / Teradyne",
+      "content": "Post-Q1, Teradyne announced two strategic moves: (1) $157.8M investment in MultiLane Test Products joint venture to expand AI data center high-speed interconnect testing; (2) $29M acquisition of TestInsight to enhance semiconductor test software capabilities. Q2 2026 guidance maintained at $1.15-1.25B revenue; management noted potential order lumpiness in AI data center ecosystem but maintains 70%+ AI revenue mix."
     }
   ],
   "NOW": [
