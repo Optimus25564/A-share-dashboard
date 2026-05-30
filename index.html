@@ -2361,6 +2361,17 @@ function actionLabel(a){
     'sell-warning':'待确认','sell-confirmed':'清仓'})[a] || a;
 }
 
+// 判断最新一根周 K 是否已收盘定型 (周五收盘后 → 周一开盘前)
+// 北京周末 (Sat/Sun) 或 周一开盘前 (Mon < 09:00) → 上周线已收盘
+// 对美股也适用: 美股周五收盘 = 北京周六凌晨, 用户查看时基本都在北京周末窗口
+function isLastWeeklyBarClosed(){
+  const now = new Date();
+  const dow = now.getDay();        // 0=Sun, 6=Sat
+  if (dow === 0 || dow === 6) return true;
+  if (dow === 1 && now.getHours() < 9) return true;
+  return false;
+}
+
 function evalWeeklyEMA(weekBars, indexBullish){
   const n = weekBars.length;
   if (n < 22) return null;
@@ -2371,6 +2382,7 @@ function evalWeeklyEMA(weekBars, indexBullish){
   const prev = weekBars[n-2];
   const e8 = ema8[n-1], e21 = ema21[n-1];
   const e8Prev = ema8[n-2];
+  const lastClosed = isLastWeeklyBarClosed();
 
   // ============ 卖出（两档） ============
   // 1) sell-confirmed: 上一根完整周线 close < EMA8 — 已成定局
@@ -2381,8 +2393,16 @@ function evalWeeklyEMA(weekBars, indexBullish){
       ema8:e8, ema21:e21
     };
   }
-  // 2) sell-warning: 本周(未收盘) close < EMA8 — 盘中警告，等周收盘确认
+  // 2) last 周已收盘 + close < EMA8 → sell-confirmed (周末/周一开盘前)
+  //    last 周未收盘 + close < EMA8 → sell-warning (周中盘中警告)
   if (last.close < e8) {
+    if (lastClosed) {
+      return {
+        action:"sell-confirmed", strength:3,
+        detail:`本周收盘 ${last.close.toFixed(2)} < EMA8(${e8.toFixed(2)}) — 周线已收盘且已破位`,
+        ema8:e8, ema21:e21
+      };
+    }
     return {
       action:"sell-warning", strength:2,
       detail:`⚠ 本周收盘 ${last.close.toFixed(2)} < EMA8(${e8.toFixed(2)})，但周线未收盘 — 等本周五收盘后确认，盘中假破位不算`,
