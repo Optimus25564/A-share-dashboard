@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-05-24",
+    "updated": "2026-05-31",
     "note": "AI CapEx 产业链 8 层框架. 财报数据自然季度 (2025Q2→2026Q1). 单位 rev=亿$.",
     "categories": {
       "core_chip": "L1 算力芯片 & 加速器",
@@ -54,6 +54,15 @@
         "gm": 75,
         "nm": 63.1,
         "src": "A"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 816,
+        "gm": 74.9,
+        "nm": 71.5,
+        "src": "A",
+        "source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027",
+        "note": "FY27 Q1 (Feb-Apr 2026): 营收$81.6B同比+85%, 数据中心$75.2B创历史新高占总营收92%, GAAP净利$58.3B"
       }
     ]
   },
@@ -254,6 +263,15 @@
         "gm": 51.7,
         "nm": 17.9,
         "src": "A"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 24.2,
+        "gm": 52.1,
+        "nm": 1.4,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/0001835632/000183563226000014/q127_8kx522026ex-991.htm",
+        "note": "FY27 Q1 (Feb-May 2026): 营收$24.2亿记录新高同比+28%, 数据中心$18.3亿占76%; GAAP NM 1.4% 因无形资产摊销+SBC; Non-GAAP NM ~30%"
       }
     ]
   },
@@ -410,6 +428,15 @@
         "gm": 49,
         "nm": 28.9,
         "src": "A"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 79.1,
+        "gm": 49.9,
+        "nm": 35.5,
+        "src": "A",
+        "source_url": "https://www.globenewswire.com/news-release/2026/05/14/3295316/0/en/applied-materials-announces-second-quarter-2026-results.html",
+        "note": "FY26 Q2 (Feb-Apr 2026): 营收$79.1亿记录新高同比+11%, GAAP NM 35.5% 含$7.71亿非经营性收入(投资收益等); 经营 OM 31.9%"
       }
     ]
   },
@@ -528,6 +555,15 @@
         "nm": 2.7,
         "src": "A",
         "note": "GAAP NM 2.7% 因 Ansys 收购摊销/重组费用; Non-GAAP 经营 OM ~42%"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 22.8,
+        "gm": 72.3,
+        "nm": 0.8,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/0000883241/000119312526241911/d126227dex991.htm",
+        "note": "FY26 Q2 (Feb-Apr 2026): 营收$22.8亿同比+42%, GAAP NM 0.8% 因 Ansys 收购摊销持续; Non-GAAP NM ~28%"
       }
     ]
   },
@@ -1926,11 +1962,12 @@
       },
       {
         "q": "2026Q1",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "F",
-        "note": "FQ4 FY2026 (Jan-Mar 2026) 财报预计 2026/05/27 盘后发布 (FY26 Q4 Earnings Call)"
+        "rev": 9.5,
+        "gm": 22.5,
+        "nm": 7.7,
+        "src": "A",
+        "source_url": "https://www.prnewswire.com/news-releases/modine-reports-fourth-quarter-fiscal-2026-results-302782279.html",
+        "note": "FQ4 FY2026 (Jan-Mar 2026): 营收$9.5亿同比+47%创纪录, 数据中心冷却需求强劲; 毛利率因产能扩张+关税压力降至22.5%; 全年营收$31.8亿"
       }
     ]
   },
