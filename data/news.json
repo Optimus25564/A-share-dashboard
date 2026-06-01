@@ -107,6 +107,22 @@
       "url": "https://www.huxiu.com/article/4860064.html",
       "source": "虎嗅",
       "content": "中际旭创股价收于1103元，总市值超1.2万亿元。公司2025年光模块销量2109万只，收入375亿元，毛利率从2020年的25.6%提升至2025年的42.6%，完成戴维斯双击，全球800G市占率超40%、1.6T市占率50%-70%"
+    },
+    {
+      "date": "2026-05-29",
+      "type": "announcement",
+      "title": "关于召开2026年第二次临时股东会的通知（公告编号2026-058）：审议激励计划归属价格调整等议案",
+      "source": "新浪财经",
+      "url": "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?CompanyCode=80195269&gather=1&id=12358155",
+      "content": "公司发布第二次临时股东会通知，拟审议第三/四期限制性股票激励计划归属价格调整等相关议案"
+    },
+    {
+      "date": "2026-05-30",
+      "type": "announcement",
+      "title": "郑重声明：'2026光互联论坛（5.28上海）'及董事长演讲全文为杜撰虚假信息 已固定证据将依法追究",
+      "source": "新浪财经",
+      "url": "https://finance.sina.com.cn/wm/2026-05-30/doc-inhzsnki8664329.shtml",
+      "content": "公司声明从未参与所谓'2026光互联论坛（5.28上海）'活动，相关董事长演讲全文皆为杜撰，已固定证据将依法追究相关人员法律责任 ⚠️"
     }
   ],
   "300475": [
@@ -410,6 +426,14 @@
       "url": "http://money.finance.sina.com.cn/corp/go.php/vCB_AllBulletin/stockid/601138.phtml",
       "source": "上海证券交易所",
       "content": "工业富联发布2025年年度股东会召开通知，议案包括审议2025年度利润分配方案（拟向全体股东每10股派发现金红利6.5元含税，合计约129亿元，现金分红比例约55.12%），届时提交股东大会正式审议通过后实施"
+    },
+    {
+      "date": "2026-05-29",
+      "type": "announcement",
+      "title": "2025年度分红：拟每10股派现金红利6.5元（含税）合计约129亿元 本年度合计分红194亿 6月9日召开年度股东会",
+      "source": "新浪财经",
+      "url": "https://finance.sina.com.cn/jjxw/2026-05-29/doc-inhzqccn7978036.shtml",
+      "content": "2025年度分红方案：每10股派6.5元（含税），合计约129.01亿元；加中期红利本年度合计现金分红194.51亿元，股权登记日6月2日"
     }
   ],
   "603019": [
@@ -633,6 +657,14 @@
       "url": "https://news.10jqka.com.cn/20260527/c677012747.shtml",
       "source": "同花顺",
       "content": "华为5月25日发表「韬（tau）定律」，确立以时延缩微替代几何缩微的新技术路径，HBM配套内存接口芯片需求爆发。半导体板块指数当日涨7.05%，澜起科技作为全球最大内存互连芯片供应商（市占率36.8%），HBM内存接口芯片被重点列为核心受益标的，产业链价值重估加速。"
+    },
+    {
+      "date": "2026-05-28",
+      "type": "announcement",
+      "title": "第五大股东上海融迎询价转让1222.8万股实施完毕 转让价250.08元/股套现约30.58亿 持股降至5.78%",
+      "source": "上交所公告",
+      "url": "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=688008",
+      "content": "上海融迎及一致行动人WLT Partners询价转让完成，合计持股从6.84%降至5.78%，触及1%整数刻度"
     }
   ],
   "688012": [
@@ -840,6 +872,22 @@
       "url": "https://finance.sina.com.cn/stock/bxjj/2026-05-27/doc-inhzivfk8414581.shtml",
       "source": "新浪财经",
       "content": "龙芯中科披露2026年度向特定对象发行A股股票预案，募集资金总额不超过23亿元，拟用于：基于先进工艺的信息化芯片研发及产业化、CPU关键核心技术研发、通用GPU（9A1000系列）关键核心技术研发，以及补充流动资金。发行数量不超总股本10%（约4010万股），采取竞价方式。"
+    },
+    {
+      "date": "2026-05-28",
+      "type": "news",
+      "title": "23亿定增媒体解读：加码Xnm先进工艺 聚焦CPU+通用GPU双线布局 龙芯9A1000GPGPU即将回片测试",
+      "source": "新浪财经",
+      "url": "https://finance.sina.com.cn/jjxw/2026-05-28/doc-inhzmpqs0177622.shtml",
+      "content": "定增三大投向：Xnm工艺信息化芯片研发产业化、CPU关键核心技术、GPGPU关键核心技术；龙芯9A1000首款GPGPU即将回片进入测试阶段"
+    },
+    {
+      "date": "2026-05-31",
+      "type": "research",
+      "title": "定增23亿重点投向技术研发 龙芯中科连亏何时盈利引市场关注 控股股东去年套现5.7亿",
+      "source": "新浪财经",
+      "url": "https://finance.sina.com.cn/jjxw/2026-05-31/doc-inhzurik6192245.shtml",
+      "content": "市场质疑连续亏损的龙芯中科定增规划，公司聚焦Xnm先进工艺CPU/GPU研发，控股股东方去年套现5.7亿引争议 ⚠️"
     }
   ],
   "688120": [
@@ -1377,7 +1425,7 @@
     }
   ],
   "_meta": {
-    "last_updated": "2026-05-26",
+    "last_updated": "2026-06-01",
     "schema": "{ code: [{ date, type, title, content, source, url, tags }] }",
     "types": [
       "news",
@@ -1682,6 +1730,14 @@
       "url": "https://paper.cnstock.com/html/2026-05/13/content_2215718.htm",
       "source": "上海证券报",
       "content": "浪潮信息2025年度利润分配方案获股东大会审议通过，以公司总股本14.68亿股为基数，向全体股东每10股派发现金股利0.40元（含税），合计派发约5874万元。股权登记日2026年5月19日，除权除息日2026年5月20日。"
+    },
+    {
+      "date": "2026-05-22",
+      "type": "industry",
+      "title": "首款元脑智能体工作站Z3发布：支持本地千亿参数大模型推理 面向中小企业提供高性价比AI算力 ✨",
+      "source": "浪潮信息",
+      "url": "https://www.ieisystem.com/about/news/",
+      "content": "Z3面向中小企业与科研团队，单机支持本地千亿参数大模型、10+智能体协同，分钟级部署，数据安全可控，拓展本地AI算力入门市场"
     }
   ],
   "000034": [
@@ -1883,6 +1939,14 @@
       "url": "https://finance.sina.com.cn/jjxw/2026-05-22/doc-inhyurwi7570659.shtml",
       "source": "新浪财经",
       "content": "紫光股份核心子公司新华三2026年一季度实现营业收入221.89亿元，同比增长45.08%；净利润9.49亿元，同比增长28.16%。AI算力网络订单高增叠加政企数字化转型加速，业绩大幅改善。"
+    },
+    {
+      "date": "2026-05-30",
+      "type": "announcement",
+      "title": "子公司新华三少数股权全部交割完成：HPE正式退出持股 紫光国际对新华三持股比例从81%升至87.98% ✨",
+      "source": "新浪财经",
+      "url": "https://finance.sina.com.cn/roll/2026-05-30/doc-inhzreqy7579700.shtml",
+      "content": "公告编号2026-057：紫光国际与6家投资者受让新华三合计19%股权两次交易交割全部完成，HPE开曼不再持有新华三股权，紫光国际持股升至87.98%"
     }
   ],
   "002156": [
