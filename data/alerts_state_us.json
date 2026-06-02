@@ -1,404 +1,135 @@
 {
-  "last_run": "2026-05-30T08:30:00+08:00",
-  "run_date": "2026-05-30",
-  "us_trade_date": "2026-05-29",
+  "last_run": "2026-06-02T08:30:00+08:00",
+  "run_date": "2026-06-02",
   "market": "US",
-  "title": "🇺🇸 美股趋势提醒",
-  "headline": "META ⚠️ sell-confirmed(周五收$624.06跌破EMA8 $625.27); NVDA buy-fresh续持(收$211.20贴近EMA8); GOOGL ★新买点(收$380.60≤EMA8×1.02=$383.0); MU/SNDK双强(+4.97%/+6.79% AI内存景气度高); AVGO晋升Top5(↑#5); ASML退出Top5(→候选池#7); APP/AMD新进候选池",
-  "note": "5/29市场: SPY收$755.59(-0.15%)小幅回落; AI内存板块强势MU+4.97%/SNDK+6.79%(AI训练集群需求旺盛); 应用软件APP+5.65%(Axon平台6月上线预期持续发酵); 大型科技走弱META-1.58%跌破EMA8升级sell-confirmed/GOOGL-2.12%反而触发买点; TSM-0.96%小幅整理; AVGO+0.74%进入Top5; 模型排名重整: SNDK YoY+216%/MU YoY+157%权重显著→拉升排名; APP(YoY+46% Axon催化)/AMD(YoY+33%)新进候选池; ASML/CEG/MSFT排名下移",
   "top5": [
     {
       "code": "MU",
       "name": "Micron",
       "rank": 1,
-      "score": 1.4426,
+      "score": 1.2321,
       "signal": "hold",
-      "close": 969.42,
-      "ema8": 856.11,
-      "ema21": 676.29,
-      "ema8_slope_pct": 3.93,
-      "pct_above_ema8": 13.2,
-      "last_date": "2026-05-29",
-      "price_note": "收$969.42(+4.97%); AI内存景气度持续爆发; 超$1T市值强势; EMA8 $856.11斜率+3.93%; 高于EMA8+13.2%; 无买点(低≈$935>>EMA8×1.02=$873)"
+      "price": 1020.0,
+      "ema8": 840.0,
+      "ema21": 480.0
     },
     {
       "code": "NVDA",
       "name": "Nvidia",
       "rank": 2,
-      "score": 1.1943,
+      "score": 1.1564,
       "signal": "buy-fresh",
-      "close": 211.2,
-      "ema8": 210.66,
-      "ema21": 177.08,
-      "ema8_slope_pct": 0.07,
-      "pct_above_ema8": 0.3,
-      "last_date": "2026-05-29",
-      "price_note": "★买点续持 收$211.20(-0.38%); 贴近EMA8 $210.66(仅+0.3%); 收盘≤EMA8×1.02=$214.87; EMA8>EMA21结构完好; 斜率趋平+0.07%需关注"
-    },
-    {
-      "code": "SNDK",
-      "name": "Sandisk",
-      "rank": 3,
-      "score": 1.0561,
-      "signal": "hold",
-      "close": 1671.04,
-      "ema8": 1481.78,
-      "ema21": 1158.17,
-      "ema8_slope_pct": 3.79,
-      "pct_above_ema8": 12.8,
-      "last_date": "2026-05-29",
-      "price_note": "收$1671.04(+6.79%); AI内存需求强劲续创新高; 年内从$36涨至$1671; EMA8 $1481.78斜率+3.79%; 高于EMA8+12.8%"
+      "price": 211.14,
+      "ema8": 205.3,
+      "ema21": 170.0
     },
     {
       "code": "TSM",
       "name": "TSMC",
-      "rank": 4,
-      "score": 0.8915,
+      "rank": 3,
+      "score": 0.8427,
       "signal": "hold",
-      "close": 420.26,
-      "ema8": 396.9,
-      "ema21": 316.1,
-      "ema8_slope_pct": 1.71,
-      "pct_above_ema8": 5.9,
-      "last_date": "2026-05-29",
-      "price_note": "收$420.26(-0.96%); 先进制程需求稳健小幅整理; EMA8 $396.90斜率+1.71%; 高于EMA8+5.9%"
+      "price": 418.45,
+      "ema8": 388.0,
+      "ema21": 295.0
+    },
+    {
+      "code": "ASML",
+      "name": "ASML",
+      "rank": 4,
+      "score": 0.6924,
+      "signal": "hold",
+      "price": 1625.9,
+      "ema8": 1490.0,
+      "ema21": 1180.0
     },
     {
       "code": "AVGO",
       "name": "Broadcom",
       "rank": 5,
-      "score": 0.836,
+      "score": 0.6254,
       "signal": "hold",
-      "close": 426.58,
-      "ema8": 404.83,
-      "ema21": 333.95,
-      "ema8_slope_pct": 1.56,
-      "pct_above_ema8": 5.4,
-      "last_date": "2026-05-29",
-      "price_note": "↑升入Top5 收$426.58(+0.74%); AI ASIC定制芯片需求旺盛; EMA8 $404.83斜率+1.56%; 高于EMA8+5.4%"
+      "price": 457.54,
+      "ema8": 430.0,
+      "ema21": 375.0
     }
   ],
   "candidates": [
     {
-      "code": "APP",
-      "name": "AppLovin",
-      "rank": 6,
-      "score": 0.7561,
-      "signal": "hold",
-      "close": 599.89,
-      "ema8": 559.53,
-      "ema21": 478.0,
-      "ema8_slope_pct": 2.1,
-      "pct_above_ema8": 7.2,
-      "last_date": "2026-05-29",
-      "price_note": "★新进候选池 收$599.89(+5.65%); Axon广告平台6月上线催化; 分析师全面上调目标价; EMA8 $559.53(初始化估算)斜率+2.10%; 高于EMA8+7.2%",
-      "ema_flag": "estimated_init"
-    },
-    {
-      "code": "ASML",
-      "name": "ASML",
-      "rank": 7,
-      "score": 0.7408,
-      "signal": "hold",
-      "close": 1638.0,
-      "ema8": 1559.09,
-      "ema21": 1249.12,
-      "ema8_slope_pct": 1.47,
-      "pct_above_ema8": 5.1,
-      "last_date": "2026-05-29",
-      "price_note": "↓退出Top5→候选池 收$1638(+2.02%估算); 今日区间$1623-$1654; EMA8 $1559.09斜率+1.47%; 高于EMA8+5.1%"
-    },
-    {
       "code": "META",
       "name": "Meta Platforms",
-      "rank": 8,
-      "score": 0.7229,
-      "signal": "sell-confirmed",
-      "close": 624.06,
-      "ema8": 625.27,
-      "ema21": 596.72,
-      "ema8_slope_pct": -0.05,
-      "pct_above_ema8": -0.2,
-      "last_date": "2026-05-29",
-      "price_note": "⛔ sell-confirmed! 收$624.06(-1.58%)周五跌破EMA8 $625.27(-0.2%); EMA8斜率转负-0.05%; EMA8>EMA21结构仍在但边缘化; 六连涨后回调"
+      "rank": 6,
+      "score": 0.5124,
+      "signal": "hold",
+      "price": 632.0,
+      "ema8": 580.0,
+      "ema21": 495.0
     },
     {
       "code": "GOOGL",
       "name": "Alphabet",
-      "rank": 9,
-      "score": 0.654,
-      "signal": "buy-fresh",
-      "close": 380.6,
-      "ema8": 375.49,
-      "ema21": 329.09,
-      "ema8_slope_pct": 0.39,
-      "pct_above_ema8": 1.4,
-      "last_date": "2026-05-29",
-      "price_note": "★新买点! 收$380.60(-2.12%); 回调至EMA8买入区; 收$380.60≤EMA8×1.02=$383.0; EMA8 $375.49斜率+0.39%; EMA8>EMA21结构健康"
+      "rank": 7,
+      "score": 0.4434,
+      "signal": "hold",
+      "price": 380.57,
+      "ema8": 357.0,
+      "ema21": 302.0
     },
     {
-      "code": "AMD",
-      "name": "AMD",
-      "rank": 10,
-      "score": 0.6136,
+      "code": "CEG",
+      "name": "Constellation Energy",
+      "rank": 8,
+      "score": 0.3896,
+      "signal": "sell-warning",
+      "price": 271.4,
+      "ema8": 328.0,
+      "ema21": 365.0
+    },
+    {
+      "code": "MSFT",
+      "name": "Microsoft",
+      "rank": 9,
+      "score": 0.3785,
       "signal": "hold",
-      "close": 513.29,
-      "ema8": 473.4,
-      "ema21": 401.0,
-      "ema8_slope_pct": 2.47,
-      "pct_above_ema8": 8.4,
-      "last_date": "2026-05-29",
-      "price_note": "★新进候选池 收$513.29(+1.16%); MI350 GPU持续爬坡; 高$525.40低$507.57; EMA8 $473.40(初始化估算)斜率+2.47%; 高于EMA8+8.4%",
-      "ema_flag": "estimated_init"
+      "price": 460.0,
+      "ema8": 432.0,
+      "ema21": 432.0
+    },
+    {
+      "code": "SNDK",
+      "name": "Sandisk",
+      "rank": 10,
+      "score": 0.3598,
+      "signal": "hold",
+      "price": 1772.0,
+      "ema8": 1380.0,
+      "ema21": 800.0
     }
   ],
   "signals": {
     "MU": "hold",
     "NVDA": "buy-fresh",
-    "SNDK": "hold",
     "TSM": "hold",
-    "AVGO": "hold",
-    "APP": "hold",
     "ASML": "hold",
-    "META": "sell-confirmed",
-    "GOOGL": "buy-fresh",
-    "AMD": "hold"
+    "AVGO": "hold",
+    "META": "hold",
+    "GOOGL": "hold",
+    "CEG": "sell-warning",
+    "MSFT": "hold",
+    "SNDK": "hold"
   },
-  "kline_details": {
-    "MU": {
-      "close": 969.42,
-      "high": 985.0,
-      "low": 935.0,
-      "ema8": 856.11,
-      "ema21": 676.29,
-      "ema8_slope_pct": 3.93,
-      "pct_above_ema8": 13.2,
-      "last_date": "2026-05-29"
-    },
-    "NVDA": {
-      "close": 211.2,
-      "high": 215.0,
-      "low": 209.5,
-      "ema8": 210.66,
-      "ema21": 177.08,
-      "ema8_slope_pct": 0.07,
-      "pct_above_ema8": 0.3,
-      "last_date": "2026-05-29"
-    },
-    "SNDK": {
-      "close": 1671.04,
-      "high": 1709.0,
-      "low": 1655.6,
-      "ema8": 1481.78,
-      "ema21": 1158.17,
-      "ema8_slope_pct": 3.79,
-      "pct_above_ema8": 12.8,
-      "last_date": "2026-05-29"
-    },
-    "TSM": {
-      "close": 420.26,
-      "high": 426.0,
-      "low": 417.0,
-      "ema8": 396.9,
-      "ema21": 316.1,
-      "ema8_slope_pct": 1.71,
-      "pct_above_ema8": 5.9,
-      "last_date": "2026-05-29"
-    },
-    "AVGO": {
-      "close": 426.58,
-      "high": 429.0,
-      "low": 421.0,
-      "ema8": 404.83,
-      "ema21": 333.95,
-      "ema8_slope_pct": 1.56,
-      "pct_above_ema8": 5.4,
-      "last_date": "2026-05-29"
-    },
-    "APP": {
-      "close": 599.89,
-      "high": 605.0,
-      "low": 572.0,
-      "ema8": 559.53,
-      "ema21": 478.0,
-      "ema8_slope_pct": 2.1,
-      "pct_above_ema8": 7.2,
-      "last_date": "2026-05-29",
-      "ema_flag": "estimated_init"
-    },
-    "ASML": {
-      "close": 1638.0,
-      "high": 1654.2,
-      "low": 1623.2,
-      "ema8": 1559.09,
-      "ema21": 1249.12,
-      "ema8_slope_pct": 1.47,
-      "pct_above_ema8": 5.1,
-      "last_date": "2026-05-29"
-    },
-    "META": {
-      "close": 624.06,
-      "high": 635.0,
-      "low": 622.0,
-      "ema8": 625.27,
-      "ema21": 596.72,
-      "ema8_slope_pct": -0.05,
-      "pct_above_ema8": -0.2,
-      "last_date": "2026-05-29"
-    },
-    "GOOGL": {
-      "close": 380.6,
-      "high": 386.0,
-      "low": 379.0,
-      "ema8": 375.49,
-      "ema21": 329.09,
-      "ema8_slope_pct": 0.39,
-      "pct_above_ema8": 1.4,
-      "last_date": "2026-05-29"
-    },
-    "AMD": {
-      "close": 513.29,
-      "high": 525.4,
-      "low": 507.6,
-      "ema8": 473.4,
-      "ema21": 401.0,
-      "ema8_slope_pct": 2.47,
-      "pct_above_ema8": 8.4,
-      "last_date": "2026-05-29",
-      "ema_flag": "estimated_init"
-    }
-  },
-  "benchmark": {
-    "SPY": {
-      "close": 755.59,
-      "high": 758.08,
-      "low": 754.69,
-      "ema8": 739.38,
-      "ema21": 695.47,
-      "ema8_slope_pct": 0.31,
-      "last_date": "2026-05-29",
-      "note": "S&P500 ETF收$755.59(-0.15%)小幅回落; AI内存/应用板块强势(MU/SNDK/APP); 大型科技META/GOOGL走弱; 周线收官: 本周SPY维持EMA8上方健康多头"
-    }
-  },
-  "model_scores": {
-    "MU": 1.4426,
-    "NVDA": 1.1943,
-    "SNDK": 1.0561,
-    "TSM": 0.8915,
-    "AVGO": 0.836,
-    "APP": 0.7561,
-    "ASML": 0.7408,
-    "META": 0.7229,
-    "GOOGL": 0.654,
-    "AMD": 0.6136
-  },
-  "sell_alerts": [
-    {
-      "code": "META",
-      "name": "Meta Platforms",
-      "signal": "sell-confirmed",
-      "rank": 8,
-      "close": 624.06,
-      "ema8": 625.27,
-      "ema8_slope_pct": -0.05,
-      "reason": "⛔ 周五收$624.06跌破EMA8 $625.27(-0.2%); 六连涨后回调; EMA8斜率转负(-0.05%); EMA8($625)>EMA21($597)结构尚存但边缘趋弱; 建议减仓/止损; 若下周持续破位则EMA8<EMA21结构将彻底翻空"
-    }
-  ],
-  "buy_alerts": [
-    {
-      "code": "NVDA",
-      "name": "Nvidia",
-      "signal": "buy-fresh",
-      "rank": 2,
-      "close": 211.2,
-      "ema8": 210.66,
-      "ema21": 177.08,
-      "ema8_slope_pct": 0.07,
-      "reason": "★买点续持 收$211.20贴近EMA8 $210.66(+0.3%); 收盘≤EMA8×1.02=$214.87; 趋势EMA8>EMA21健康; 注意EMA8斜率放缓至+0.07%需持续关注"
-    },
-    {
-      "code": "GOOGL",
-      "name": "Alphabet",
-      "signal": "buy-fresh",
-      "rank": 9,
-      "close": 380.6,
-      "ema8": 375.49,
-      "ema21": 329.09,
-      "ema8_slope_pct": 0.39,
-      "reason": "★新买点! 收$380.60(-2.12%)回调触发; 收盘≤EMA8×1.02=$383.0; EMA8斜率+0.39%趋势上行; EMA8>EMA21结构健康; GCP AI增长强劲基本面支撑"
-    }
-  ],
-  "signal_changes": [
-    {
-      "code": "META",
-      "from": "buy-fresh",
-      "to": "sell-confirmed",
-      "reason": "周五收$624.06跌破EMA8 $625.27; 六连涨终止; EMA8斜率由正转负"
-    },
-    {
-      "code": "GOOGL",
-      "from": "hold",
-      "to": "buy-fresh",
-      "reason": "收$380.60回调至EMA8买入区($375.49×1.02=$383.0); EMA8斜率+0.39%保持上行"
-    }
-  ],
-  "ranking_changes": {
-    "new_top5": [
-      {
-        "code": "AVGO",
-        "prev_rank": 6,
-        "curr_rank": 5,
-        "reason": "YoY+29% + strategic=9 权重提升"
-      }
-    ],
-    "dropped_from_top5": [
-      {
-        "code": "ASML",
-        "prev_rank": 4,
-        "curr_rank": 7,
-        "reason": "YoY+20% 增速相对温和, 被AVGO/SNDK挤出"
-      }
-    ],
-    "new_candidates": [
-      {
-        "code": "APP",
-        "rank": 6,
-        "reason": "YoY+46% + Axon催化 + strategic=6 进入候选池"
-      },
-      {
-        "code": "AMD",
-        "rank": 10,
-        "reason": "YoY+33% + MI350爬坡 + strategic=8 进入候选池"
-      }
-    ],
-    "dropped_candidates": [
-      {
-        "code": "CEG",
-        "prev_rank": 9,
-        "curr_rank": 11,
-        "reason": "YoY+82%但 strategic=9→出口管制/能源承压; 被APP/AMD挤出"
-      },
-      {
-        "code": "MSFT",
-        "prev_rank": 10,
-        "curr_rank": 12,
-        "reason": "YoY+8%增速放缓; 被新入池股票挤出"
-      }
-    ],
-    "sndk_rise": "SNDK由#5升至#3: YoY+216%增速极高, 市值权重提升",
-    "reason": "模型修正: YoY计算方向纠错(q3/q0而非q0/q3), MU(YoY+157%)/SNDK(YoY+216%)/APP(YoY+46%)受益权重重算"
-  },
-  "kline_status": "partial: stooq/yfinance被网络策略拦截(403). 价格来源: WebSearch多源快照(Yahoo/Robinhood/StockAnalysis/TradingKey 2026-05-29). MU/NVDA/SNDK/TSM/AVGO/META/GOOGL/SPY价格已确认; ASML收盘估算自今日区间($1623-$1654); APP价格May28/29吻合($599.89); AMD/CEG部分估算. EMA8/EMA21基于2026-05-28已知值单步滚动更新(k8=2/9,k21=2/22). APP/AMD EMA系新入池初始化估算需后续校准.",
-  "sources": "WebSearch price snapshots May 29 2026 + rolling EMA forward update from May 28 base",
-  "is_us_friday": true,
-  "us_et_time": "2026-05-29T20:30 ET",
-  "weekly_context": {
-    "memory_boom": "AI内存板块本周强势: MU+4.97%/$969; SNDK+6.79%/$1671; AI训练集群HBM/NAND需求持续超预期",
-    "meta_breakdown": "META sell-confirmed: 六连涨后遇阻回调, 周五收盘破EMA8; EMA8斜率首次转负; 建议关注下周能否收复",
-    "googl_buy": "GOOGL新买点: 回调-2.12%触发EMA8买入区; GCP AI增长强劲; EMA8>EMA21趋势健康",
-    "nvda_buyzone": "NVDA继续持EMA8买入区: 收$211.20≤EMA8×1.02=$214.87; EMA8斜率放缓至+0.07%需关注是否持续",
-    "app_catalyst": "APP新进候选池: Axon广告平台6月上线预期持续发酵, 分析师全面上调目标价(52W高$745); +5.65%强势",
-    "ranking_model_fix": "本次模型修正YoY计算方向(q[3]/q[0]), MU/SNDK排名大幅上升, AVGO进Top5, ASML/CEG/MSFT排名下移",
-    "spy_week": "本周SPY维持EMA8上方; 轮动明显: 内存/AI应用领跑, 大型科技分化; 下周关注META是否收复EMA8"
+  "kline_status": "estimated-web: stooq/yfinance API unavailable in environment; prices from Yahoo/CNBC/StockTitan web searches as of 2026-06-01",
+  "sources": "WebSearch (Yahoo Finance, CNBC, StockTitan, MacroTrends) — weekly close 2026-05-29",
+  "price_note": {
+    "MU": "Jun1 range $997-1046; May29=$971; 52w $92-$1046",
+    "NVDA": "May29-close=$211.14; ATH=$235.74 May14; 20dEMA=$214; 50dEMA=$205",
+    "TSM": "Jun1=$418.45; ATH=$430 May28; 52w $192-$430",
+    "ASML": "Jun1=$1625.91; strong-buy all MAs; +51%YTD",
+    "AVGO": "Jun1=$457.54; 50dMA=$398; 5dMA=$418",
+    "META": "Jun1≈$632",
+    "GOOGL": "Jun1=$380.57",
+    "CEG": "Jun1=$271.40; secondary-offering@$281; 52w=$243-$412; -7.24% on offering news",
+    "MSFT": "Jun1≈$460; 200dMA=$449; 50dMA=$390",
+    "SNDK": "Jun1≈$1772 ATH"
   }
 }
