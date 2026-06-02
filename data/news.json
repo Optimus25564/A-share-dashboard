@@ -1425,7 +1425,7 @@
     }
   ],
   "_meta": {
-    "last_updated": "2026-06-01",
+    "last_updated": "2026-06-02",
     "schema": "{ code: [{ date, type, title, content, source, url, tags }] }",
     "types": [
       "news",
@@ -2058,6 +2058,14 @@
       "url": "https://www.stcn.com/article/detail/3925376.html",
       "source": "证券时报",
       "content": "华为正式对外阐释「韬（tau）定律」，通过逻辑折叠等架构创新压缩信号时延，先进封装成为AI算力芯片演进核心路径。先进封装概念持续强势，华天科技3连板，通富微电当日成交额超150亿元创历史新高，5nm Chiplet和HBM3封装规模化量产为核心驱动力。"
+    },
+    {
+      "date": "2026-06-01",
+      "type": "announcement",
+      "title": "披露定增募集说明书修订稿：补充回复深交所问询 更新2025年报及2026Q1数据 44亿元定增继续推进",
+      "url": "https://www.cninfo.com.cn/new/disclosure/detail?stockCode=002156&announcementId=1225348000",
+      "source": "巨潮资讯",
+      "content": "通富微电披露2026年度向特定对象发行A股股票募集说明书（修订稿），补充回复深交所审核问询函，更新2025年报及2026Q1财务数据等申请文件，44亿元定增申请继续推进；当日股价下跌6.98%。"
     }
   ],
   "002409": [
