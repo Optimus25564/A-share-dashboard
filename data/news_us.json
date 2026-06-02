@@ -127,6 +127,14 @@
       "url": "https://techcrunch.com/2026/05/20/jensen-huang-says-hes-found-a-brand-new-200b-market-for-nvidia/",
       "source": "TechCrunch / CNBC",
       "content": "CEO Jensen Huang: Vera Rubin platform opens a brand-new $200B CPU TAM for NVIDIA — a market never addressed before. Every major hyperscaler partnering on deployment. NVIDIA predicts $20B in standalone CPU sales in 2026, with Rubin shipments starting Q3. China included in the $200B forecast."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "announcement",
+      "title": "Nvidia Computex 2026: Vera CPU for AI Agents, RTX Spark Superchip for AI PCs; $0.25 Quarterly Dividend",
+      "url": "https://www.fool.com/investing/2026/05/31/nvda-stock-jensen-huang-keynote-computex/",
+      "source": "Motley Fool",
+      "content": "Jensen Huang keynote at Computex: Vera CPU (Arm-based, 80% faster agentic tasks than x86, targeting $200B TAM/$20B FY revenue); RTX Spark PC superchip (Blackwell GPU + Arm N1X) shipping in 30+ laptops/10+ desktops fall 2026. Dividend $0.25/share, ex-date June 4."
     }
   ],
   "AVGO": [
@@ -225,6 +233,14 @@
       "url": "https://seekingalpha.com/article/4909452-broadcom-stock-q2-fy27-100b-target-may-already-be-obsolete",
       "source": "Seeking Alpha",
       "content": "Broadcom Q2 FY2026 earnings imminent: Q1 AI semiconductor revenue $8.4B (+106% YoY); Q2 AI guidance $10.7B; total Q2 revenue ~$22B (+47% YoY). Major customer commitments: Google locked through 2031, Meta through 2029, Anthropic added 3.5GW. Polymarket traders assign 94.4% probability of Q2 beat. FY2026 revenue target ~$103B."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "announcement",
+      "title": "Wall Street Expects 140% AI Revenue Growth as Broadcom Q2 FY2026 Reports June 3",
+      "url": "https://moneymorning.com/2026/05/30/broadcom-avgo-q2-2026-earnings-preview-ai-revenue-june",
+      "source": "Money Morning",
+      "content": "AVGO Q2 FY2026 earnings due June 3, 2026 after market; analyst consensus EPS $2.40, revenue $22.11B (+47% YoY), AI revenue $10.7B (+140% YoY). Broadcom has beaten estimates in 7 straight quarters. Stock up 33% YTD, 57% since March 30 nadir."
     }
   ],
   "AMD": [
@@ -299,6 +315,22 @@
       "url": "https://www.tradingkey.com/news/market-movers/261934174-market-movers-amd-20260528",
       "source": "TradingKey",
       "content": "AMD stock climbed 3.17% to $501.25 (high $507.90); Q1 2026 Data Center revenue continues strong. Rocket One accepted into AMD AI Developer Program. Key risk: TSMC foundry capacity constraints expected to cap 2026 server GPU upside."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "announcement",
+      "title": "AMD Computex 2026: RX 9070 GRE Goes Global at $549; AM5 Platform Supported Through 2029",
+      "url": "https://www.amd.com/en/blogs/2026/amd-computex-2026-10-years-of-am4-am5-support-through.html",
+      "source": "AMD",
+      "content": "AMD at Computex 2026: Radeon RX 9070 GRE expands from China-exclusive to global market at $549; Socket AM5 extended support through 2029; Ryzen 7 5800X3D Anniversary Edition arriving June 25 at $349."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "industry",
+      "title": "AMD Faces Competitive Pressure as Nvidia Enters PC Chip Market with RTX Spark Arm-Based Superchip",
+      "url": "https://www.gurufocus.com/news/8893951/amd-faces-stock-pressure-amid-nvidias-new-superchip-announcement",
+      "source": "GuruFocus",
+      "content": "Nvidia's RTX Spark (Blackwell GPU + Arm N1X CPU) directly challenges AMD's GPU and CPU market. AMD stock pulls back on June 1 despite own Computex launches."
     }
   ],
   "INTC": [
@@ -445,6 +477,14 @@
       "url": "https://newsroom.intel.com/",
       "source": "Intel Newsroom / Yahoo Finance",
       "content": "Intel unveiled Arc G-Series GPUs for next-gen handheld gaming devices; OEM devices ship June 2026. Preliminary agreement to manufacture chips for Apple at Intel 18A foundry reported. Intel stock up 224.77% YTD, trading at $118.95 on May 28. Q1 Data Center & AI revenue +22% to $5.05B; Foundry +16% to $5.42B."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "news",
+      "title": "Intel Stock Falls 6.8% on June 1 as Nvidia RTX Spark Arm-Based Superchip Threatens PC Market",
+      "url": "https://www.tradingkey.com/news/market-movers/261939234-market-movers-intc-20260601",
+      "source": "TradingKey",
+      "content": "INTC dropped 6.8% June 1 after Nvidia unveiled RTX Spark, its first processor for personal computers, challenging Intel's long-standing x86 dominance. Intel CEO Lip-Bu Tan in Taiwan for TSMC meetings ahead of Computex June 2 keynote."
     }
   ],
   "QCOM": [
@@ -585,6 +625,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/marvell-technology-mrvl-valuation-check-042642797.html",
       "source": "Yahoo Finance / Multiple Brokerages",
       "content": "Following Q1 FY2027 beat ($2.418B revenue, $0.80 non-GAAP EPS), at least 5 major banks raised targets on May 28-29: Benchmark $275 (from $130), BofA $240, Goldman Sachs $180, Raymond James $235, Cantor Fitzgerald $220. Management raised FY2028 revenue guide 10% to $16.5B (from $15B), reflecting sustained AI custom ASIC and high-speed interconnect demand."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "announcement",
+      "title": "Marvell Launches Teralynx T100: Industry's First 102.4 Tbps Switch Silicon for AI Infrastructure",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/1022/marvell-keynote-at-computex-2026-the-future-of-aiscaling-depends-on-connectivity",
+      "source": "Marvell IR",
+      "content": "Marvell introduces Teralynx T100, industry's first 102.4 Tbps switch silicon engineered for AI infrastructure, addressing large AI cluster bottlenecks with lower power and reduced latency. CEO Matt Murphy to deliver Computex 2026 keynote June 2. MRVL +9.42% on June 1."
     }
   ],
   "APP": [
@@ -725,6 +773,22 @@
       "url": "https://www.foreignpolicyjournal.com/2026/05/29/taiwan-semiconductor-manufacturing-company-nyse-tsm-targets-430-per-share-as-analysts-project-28-eps-growth/",
       "source": "Foreign Policy Journal / Bernstein SocGen",
       "content": "Bernstein SocGen reiterated Outperform on TSM, raised target to $430 (from $351) projecting 28% EPS CAGR over 2.5 years on AI demand. Analyst consensus $423.50. Arizona Fab 2 (3nm) to begin equipment installation Q3 2026, accelerated from original 2028 timeline. April 2026 consolidated revenue NT$410.7B (+17.5% YoY). Counterpoint: 'demand still significantly outpaces supply, no major sign of slowing.'"
+    },
+    {
+      "date": "2026-06-01",
+      "type": "news",
+      "title": "TSMC Stock Surges 4.8% to Record $443 as Nvidia Announces Major Taiwan Investment Expansion",
+      "url": "https://www.gurufocus.com/news/8894341/tsm-stock-surges-over-5-as-tsmc-hits-record-valuation",
+      "source": "GuruFocus",
+      "content": "TSM hits new 52-week high $443.18 intraday (+4.8%) as Nvidia CEO Jensen Huang at Computex dramatically expands planned annual Taiwan investment, translating directly into sustained fab utilization for TSMC. Q2 revenue guidance $39B-$40.2B (+30% YoY)."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "industry",
+      "title": "TSMC Plans Up to 15% Price Hike for 3nm Wafers in H2 2026 as Capacity Fully Utilized",
+      "url": "https://www.benzinga.com/markets/tech/26/06/52920523/tsmcs-price-hike-is-bad-for-nvidia-margins-and-potentially-great-for-nvidia-stock",
+      "source": "Benzinga",
+      "content": "TSMC planning 3nm wafer price increases of up to 15% in H2 2026 with potential further hikes in 2027. Capacity fully booked with extended wait times. Positive for TSMC revenue but margin headwind for Nvidia and other fabless customers."
     }
   ],
   "ASML": [
@@ -791,6 +855,14 @@
       "url": "https://finance.yahoo.com/quote/ASML/",
       "source": "Yahoo Finance / Analysts",
       "content": "ASML maintains strong order book heading into H2 2026 as all major leading-edge fabs (TSMC 2nm, Intel 18A, Samsung) require both EUV and High-NA EUV capacity. Export restrictions to China remain in place but guidance for 2026 revenue of €30-35B maintained. No new major announcements on May 28-29."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "policy",
+      "title": "US May Expand DUV Export Controls to China — Key Near-Term Risk for ASML",
+      "url": "https://ts2.tech/en/asml-shares-set-52-week-peak-china-remains-key-risk-for-traders/",
+      "source": "TS2 Space",
+      "content": "Potential new US law could cut off ASML lower-end DUV machine sales to China (beyond EUV already blocked). Loss of DUV access to China would be a real hit to near-term ASML sales. Stock near 52-week peak, up 53% in 2026; Motley Fool notes ASML could be next $1T tech company."
     }
   ],
   "AMAT": [
@@ -1057,6 +1129,14 @@
       "url": "https://www.fool.com/investing/2026/05/28/micron-technology-ai-memory-boom-cyclical/",
       "source": "Motley Fool / UBS / Mizuho",
       "content": "MU market cap surpassed $1 trillion; shares hit $949.49 intraday high. UBS raised target from $535 to $1,625; Mizuho raised to $1,150 from $800. Management says memory supply is structurally tight. AI data centers estimated to consume 70% of memory chip supply in 2026."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "announcement",
+      "title": "Micron Q3 FY2026 Earnings Scheduled June 24; Raymond James Raises Target to $1,100",
+      "url": "https://www.stocktitan.net/news/MU/micron-technology-to-report-fiscal-third-quarter-results-on-june-24-22gcrbths4gp.html",
+      "source": "StockTitan",
+      "content": "Micron to report Q3 FY2026 results at earnings call June 24, 2026. Raymond James raises PT to $1,100 citing strong demand visibility and constrained HBM supply; stock up 304% in 6 months, $1T+ market cap."
     }
   ],
   "SNDK": [
@@ -1331,6 +1411,14 @@
       "url": "https://www.nextplatform.com/cloud/2026/05/04/microsoft-committed-to-doubling-ai-infrastructure-in-two-years/5219208",
       "source": "Next Platform",
       "content": "Microsoft raised calendar 2026 capex plan to $190B (+$25B due to increases in DRAM, flash, wafers, and substrates). Azure revenue +40% in Q3 FY2026. Committed to doubling AI infrastructure capacity within 2 years to meet accelerating demand. OpenAI partnership restructured: MSFT remains primary cloud partner through 2032 on non-exclusive basis."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "news",
+      "title": "Microsoft Restructures OpenAI Partnership: Ends Exclusive Revenue Share; Any Cloud Can Now Serve OpenAI Models",
+      "url": "https://seekingalpha.com/article/4900458-microsoft-azure-doing-the-heavylifting",
+      "source": "Seeking Alpha",
+      "content": "Microsoft ends exclusive revenue share payments to OpenAI; arrangement becomes non-exclusive, allowing any cloud provider to serve OpenAI models. Microsoft retains royalty-free frontier model license through 2032. AI annualized revenue $37B (+123% YoY). FY2026 capex $190B (+61%) maintains Azure capacity leadership."
     }
   ],
   "GOOGL": [
@@ -1445,6 +1533,14 @@
       "url": "https://www.google.com/finance/beta/quote/GOOGL:NASDAQ",
       "source": "Google Finance / CNBC",
       "content": "Alphabet (GOOGL) at $389.66 on May 28, near 52-week high; 52-week range $162-$408. Gemini 3.5 Flash (4x faster, half cost) ramping broadly post-Google I/O. EQT partnered with Google Cloud for AI transformation of 300+ portfolio companies. Google Cloud revenue +63% in Q1 2026 — first $20B quarter. Antitrust monitor imposed on Google Search in May 2026."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "announcement",
+      "title": "Alphabet Plans $80B Equity Raise for AI Infrastructure; Berkshire Hathaway Commits $10B",
+      "url": "https://seekingalpha.com/news/4599490-alphabet-raises-80b-for-ai-investments-including-10b-from-berkshire-hathaway",
+      "source": "Seeking Alpha / Bloomberg",
+      "content": "Alphabet to raise $80B via equity: $30B concurrent public offering + $40B ATM program (Class A and C). Berkshire Hathaway $10B via private placement ($5B Class A at $351.81, $5B Class C at $348.20). GOOGL dips ~1% on dilution concerns. Funds AI compute capacity buildout."
     }
   ],
   "AMZN": [
@@ -1691,6 +1787,14 @@
       "url": "https://macdailynews.com/2026/05/28/apple-shares-hit-new-all-time-closing-high-260528/",
       "source": "MacDailyNews",
       "content": "Apple shares hit all-time intraday high $313.26 on May 27 and all-time closing high $312.19 on May 28; market cap $4.59T. Apple Maps to introduce local search/discovery ads this summer. Risk: management warned rising memory costs will have increasing margin impact beyond current quarter."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "announcement",
+      "title": "Apple WWDC 2026 Begins June 8: Revamped Siri AI and iOS 27 Expected After 2025 Delay",
+      "url": "https://247wallst.com/investing/2026/06/01/prediction-microsoft-stock-will-trade-at-this-price-in-a-year/",
+      "source": "24/7 Wall St",
+      "content": "Apple WWDC 2026 starts June 8, 2026. The long-delayed Siri AI upgrade (pushed from 2025 after technical challenges) expected to launch alongside iOS 27. Analysts view as pivotal moment for Apple Intelligence rollout and device upgrade cycle."
     }
   ],
   "TSLA": [
@@ -1815,6 +1919,14 @@
       "url": "https://investors.coreweave.com/news/default.aspx",
       "source": "CoreWeave Investor Relations",
       "content": "CoreWeave announced unified agentic AI platform capabilities on May 27. Analysts assign Strong Buy: $99.4B contracted backlog with $36B expected within 24 months. Over 75% of 2027 revenue already contracted. Stock at $104.30 on May 27."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "announcement",
+      "title": "CoreWeave First to Deploy Nvidia Vera Rubin NVL72; Joins Russell 3000 Index June 26",
+      "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Advances-AI-Native-Cloud-Platform-for-the-Next-Phase-of-Production-Scale-AI/default.aspx",
+      "source": "CoreWeave IR",
+      "content": "CoreWeave becomes first AI cloud to deploy and validate Nvidia's Vera Rubin NVL72 system (10x better inference/watt vs Blackwell; 1/10 cost per million tokens). Added to Russell 3000 effective June 26, 2026. Contracted backlog nears $100B. Stock +6.5% in pre-market on three simultaneous catalysts."
     }
   ],
   "CEG": [
@@ -2079,6 +2191,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/261934173-market-movers-gev-20260528",
       "source": "TradingKey",
       "content": "GEV fell 3.33% on May 28 amid broader market headwinds and bearish analyst report questioning current valuation. CEO highlighted state-level permitting resistance causing delays for hyperscaler customers in advancing data center power projects — potential slowdown in near-term order flow."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "announcement",
+      "title": "GE Vernova Q2 2026: $0.50 Quarterly Dividend; Backlog Grows $13B+ QoQ; Targets 110GW Gas Turbine Agreements by Year-End",
+      "url": "https://www.gevernova.com/news/taxonomy/term/9211",
+      "source": "GE Vernova",
+      "content": "GEV board declares $0.50/share quarterly dividend (payable July 14, record June 16). CEO Scott Strazik: Power and Electrification demand accelerating; backlog grew $13B+ QoQ; expects at least 110GW combined gas turbine backlog and slot reservations by year-end 2026. Hosting Orchestrate 2026 in Atlanta, June 9-12."
     }
   ],
   "CCJ": [
@@ -2365,6 +2485,14 @@
       "url": "https://investors.rocketlabcorp.com/news-releases/",
       "source": "Rocket Lab IR",
       "content": "Rocket Lab acquired Motiv Space Systems on May 26, expanding its robotic systems and space hardware capabilities. RKLB stock at $146.26 on May 28 (range $142-$150). Q1 2026 revenue $200.3M (+63.5% YoY) — first quarter exceeding $200M. $90M US Space Force GEO satellite contract awarded May 21."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "news",
+      "title": "Rocket Lab Stock Falls 12% as Blue Origin Explosion and SpaceX IPO Plans Spook Space Sector",
+      "url": "https://www.fool.com/investing/2026/06/01/why-rocket-lab-stock-plummeted-today/",
+      "source": "Motley Fool",
+      "content": "RKLB drops 11.9% June 1 in broader space sector selloff following Blue Origin rocket explosion raising satellite deployment concerns; SpaceX IPO ($1.8T+ valuation target, planned June 12) also creates market jitters. RKLB business fundamentals remain strong: $1.3B+ total SDA contracts, 436% 12-month gain before pullback."
     }
   ],
   "HUBB": [
@@ -2499,6 +2627,14 @@
       "url": "https://www.fool.com/investing/2026/05/28/massive-news-arista-stock-could-surge-on-explosive/",
       "source": "Motley Fool",
       "content": "Arista raised full-year 2026 revenue growth outlook to 27.7% and AI fabric revenue target to $3.5B following Q1 beat. Q1: revenue $2.71B (+35.1% YoY), EPS $0.87 beat $0.81 est. Risk: significant insider selling ($246M in 90 days) and NVIDIA's strategic entry into Ethernet market as competitive pressure."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "news",
+      "title": "Arista Networks Surges 5.8% on June 1; Raises AI Ethernet Revenue Outlook; 100+ AI Customers",
+      "url": "https://www.tradingkey.com/news/market-movers/261939571-market-movers-anet-20260601",
+      "source": "TradingKey",
+      "content": "ANET +5.77% June 1 as management signals AI-related revenues to more than double in 2026. Over 100 advanced AI customers deployed. Arista named Leader in 2026 Gartner Magic Quadrant for Enterprise Wired and Wireless LAN."
     }
   ],
   "ARM": [
@@ -2565,6 +2701,22 @@
       "url": "https://www.cnbc.com/2026/05/28/red-hot-arm-soars-to-another-all-time-high-what-is-fueling-the-move-this-time.html",
       "source": "CNBC",
       "content": "ARM Holdings stock soared 5.36% on May 28 to another all-time high, up 210%+ since start of 2026. Data center royalties more than doubled YoY in FY2026. Mizuho raised price target to $360 from $290 citing strong DRAM and HBM demand remaining strong through 2027."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "news",
+      "title": "ARM Holdings Jumps 18% as Nvidia Vera CPU and RTX Spark Both Use Arm Architecture — Massive Royalty Uplift",
+      "url": "https://www.benzinga.com/markets/equities/26/06/52900247/nvidias-computex-reveal-is-amazing-for-arm-stock-says-jim-cramer-heres-why",
+      "source": "Benzinga",
+      "content": "ARM stock surges 18% to ~$416 on June 1 as Nvidia's RTX Spark (Arm N1X for AI PCs, 30+ laptop/desktop models) and Vera data center CPU (Arm-based) both use ARM architecture. Dramatically expands Arm royalty base across AI PC and data center segments."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "announcement",
+      "title": "ARM CEO Rene Haas Delivers Computex 2026 Keynote on Agentic AI; Committed AGI CPU Demand Exceeds $2B for FY27/28",
+      "url": "https://www.arm.com/company/events/computex",
+      "source": "ARM",
+      "content": "ARM CEO Rene Haas keynotes Computex 2026 (June 2, Taipei) on how agentic AI is reshaping compute. ARM Q4 FY2026 revenue $1.49B (+20% YoY); committed customer demand for ARM AGI CPU exceeded $2B across FY27 and FY28."
     }
   ],
   "LRCX": [
@@ -2639,6 +2791,14 @@
       "url": "https://stockstory.org/us/stocks/nasdaq/lrcx/news/why-up-down/lam-research-and-kla-corporation-stocks-trade-down-what-you-need-to-know",
       "source": "Mizuho / StockStory",
       "content": "Mizuho raised LRCX price target to $380 from $330. Lam Research to present at Bank of America Global Technology Conference June 2 (9:20am PDT). In preliminary discussions with Elon Musk's Terafab AI chip project. Stock up 2.54% at $267.60."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "announcement",
+      "title": "Lam Research Q2 2026 Gross Margin Guidance 50.5%; WFE Market Forecast Raised to $140B for 2026",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/lrcxs-gross-margin-near-50-123400387.html",
+      "source": "Yahoo Finance",
+      "content": "Lam Research Q2 2026 guidance: GM improvement to 50.5% despite customer mix pressure. Wafer fabrication equipment (WFE) spending forecast raised to $140B for 2026 (from prior $135B estimate). Cash dividend $0.26/share, ex-date June 17, 2026. AI-driven HBM/NAND demand remains core growth driver."
     }
   ],
   "CDNS": [
@@ -2747,6 +2907,14 @@
       "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-5-28-oracle-orcl-shares-skyrocket-what-you-need-to-know",
       "source": "FinancialContent / StockStory",
       "content": "Oracle surged 9.47% on May 28 after Snowflake's blowout Q1 FY2027 results (+34% product revenue, AI accounts jumped from 9,100 to 13,600) reversed the 'SaaSpocalypse' narrative that had erased ~$2T from software values since late 2025. Oracle Q4 FY2026 earnings scheduled June 16."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "announcement",
+      "title": "Oracle Q4 FY2026 Earnings Set for June 10; Q3 Remaining Performance Obligations $553B (+325% YoY)",
+      "url": "https://www.stocktitan.net/news/ORCL/oracle-sets-the-date-for-its-fourth-quarter-fiscal-year-2026-vxb0jud32m8v.html",
+      "source": "StockTitan",
+      "content": "Oracle Q4 FY2026 earnings release after market close June 10, 2026. Q3 RPO $553B (+325% YoY); OCI Cloud Infrastructure revenue +84% to $4.9B. Q4 non-GAAP EPS guidance $1.96-$2.00; cloud revenue growth guided 46-50% YoY. OCI backlog is massive."
     }
   ],
   "PLTR": [
@@ -2805,6 +2973,14 @@
       "url": "https://www.fool.com/investing/2026/05/28/why-palantir-stock-is-soaring-today/",
       "source": "Motley Fool",
       "content": "Palantir surged 7.83% to ~$143. Q1 2026: revenue $1.633B (+85% YoY, highest-ever growth rate); US commercial +133% to $595M. 206 government deals closed in Q1, many >$10M. Maven AI military system designated DoD 'program of record' (March 2026) — durable defense budget embeddedness. Full-year 2026 guidance raised to ~$7.65B."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "announcement",
+      "title": "Palantir Wins $300M USDA Contract for Farmland Data Management; PLTR Hits $156 (+13.7% in 5 Days)",
+      "url": "https://www.fxleaders.com/news/2026/06/01/palantir-pltr-stock-hits-156-in-2026-13-weekly-surge-fueled-by-ai-demand-boom/",
+      "source": "FX Leaders",
+      "content": "PLTR secures $300M Department of Agriculture contract for farmland data management. Stock reaches $156.54 (+13.68% in 5 days) driven by strong AI platform demand. Q1 FY2026 record revenue $1.633B (+85% YoY), US Commercial +133% YoY."
     }
   ],
   "IREN": [
@@ -2855,6 +3031,14 @@
       "url": "https://www.tipranks.com/news/why-coreweave-crwv-nebius-nbis-and-iren-stocks-are-rising-today-5-21-26",
       "source": "TipRanks / Invezz",
       "content": "IREN shares rose May 21 following NVDA's $91B Q2 guidance. IREN holds a $5.6B combined cloud services and potential equity deal with Nvidia (5-year right to purchase 30M shares at $70). Short interest 16% as traders bet against AI infrastructure debt load. Company transitioning from Bitcoin mining to dedicated AI GPU data center infrastructure."
+    },
+    {
+      "date": "2026-05-26",
+      "type": "news",
+      "title": "Iris Energy (IREN) to Join Russell 3000 Index Effective June 26, 2026",
+      "url": "https://www.gurufocus.com/news/8882482/coreweave-crwv-and-iren-limited-iren-join-russell-3000-index",
+      "source": "GuruFocus",
+      "content": "FTSE Russell preliminary list includes IREN Limited in Russell 3000 Index changes effective after US market close June 26, 2026. Inclusion expected to drive passive fund inflows and improve market visibility for the Bitcoin mining-to-AI data center operator."
     }
   ],
   "VST": [
@@ -3047,6 +3231,14 @@
       "url": "https://www.tradingview.com/news/zacks:c10651e8f094b:0-crdo-vs-alab-which-high-speed-connectivity-stock-has-more-upside/",
       "source": "Zacks / TradingView",
       "content": "Credo Technology announced acquisition of DustPhotonics for $750M (cash + stock + performance incentives), expanding its photonics capabilities for AI interconnects. FY2026 revenue forecast: >$800M (+85% YoY growth). FY25 revenues rose 126% YoY to $436.8M."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "announcement",
+      "title": "Credo Technology Q4 FY2026: Revenue $437M (+157% YoY); Full Year Revenue Triples to $1.3B+",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828026039474/credoq42026ex-991.htm",
+      "source": "SEC EDGAR",
+      "content": "CRDO Q4 FY2026 (ended May 2, 2026): Revenue $437.0M (+157% YoY, +7.4% QoQ), GAAP GM 68.2%, GAAP net income $169.1M ($0.88 diluted EPS), non-GAAP net income $226.7M ($1.16 EPS). Full FY2026 revenue >$1.3B (3x YoY); non-GAAP net income grew 5x YoY. AEC demand remains robust."
     }
   ],
   "ALAB": [
@@ -3089,6 +3281,14 @@
       "url": "https://seekingalpha.com/news/4583960-astera-labs-credo-among-6-ai-stocks-to-get-coverage-from-rothschild",
       "source": "Seeking Alpha / Barclays / Citi / Rothschild",
       "content": "Astera Labs reported record Q1 2026 revenue $308.4M (+65% YoY), driven by AI solutions. Barclays and Citi raised price targets; Rothschild initiated coverage on ALAB among 6 AI connectivity stocks. Stock at all-time high ~$287-290. ALAB's PCIe/CXL retimers and fabric switches are critical AI server internal interconnect for GB200/B300 server systems."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "announcement",
+      "title": "Astera Labs at Computex 2026: First Public Demo of Scorpio X-Series 320-Lane Smart Fabric Switch; PCIe 6 Scale-Up Optics",
+      "url": "https://www.asteralabs.com/news/astera-labs-to-host-press-conference-live-demos-and-technical-talks-at-computex-2026/",
+      "source": "Astera Labs",
+      "content": "Astera Labs (ALAB) hosts press conference June 3 at Computex 2026 (Taipei Nangang, Hall 1, Room 303): first public demo of Scorpio X-Series 320-Lane Smart Fabric Switch; industry-first PCIe 6 scale-up optics demonstrations; COSMOS-enabled rack-level validation. Complete rack-scale AI connectivity portfolio showcase."
     }
   ],
   "CIEN": [
