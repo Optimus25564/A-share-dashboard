@@ -135,6 +135,14 @@
       "url": "https://www.fool.com/investing/2026/05/31/nvda-stock-jensen-huang-keynote-computex/",
       "source": "Motley Fool",
       "content": "Jensen Huang keynote at Computex: Vera CPU (Arm-based, 80% faster agentic tasks than x86, targeting $200B TAM/$20B FY revenue); RTX Spark PC superchip (Blackwell GPU + Arm N1X) shipping in 30+ laptops/10+ desktops fall 2026. Dividend $0.25/share, ex-date June 4."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "announcement",
+      "title": "Nvidia Computex Day 2: Vera Rubin NVL72 Full Production Confirmed; Spectrum-X Co-Packaged Optics Ships; Cosmos 3 Robotics Launched",
+      "url": "https://blogs.nvidia.com/blog/nvidia-gtc-taipei-computex-2026-news/",
+      "source": "NVIDIA Blog",
+      "content": "Nvidia confirmed Vera Rubin NVL72 is in full production. Spectrum-X Ethernet Photonics (co-packaged optics next-gen switching) also entered full production. NVIDIA Cosmos 3 for robotics unveiled. DLSS 4.5 expanding to 11 new titles including Marvel Rivals and Phantom Blade Zero."
     }
   ],
   "AVGO": [
@@ -241,6 +249,14 @@
       "url": "https://moneymorning.com/2026/05/30/broadcom-avgo-q2-2026-earnings-preview-ai-revenue-june",
       "source": "Money Morning",
       "content": "AVGO Q2 FY2026 earnings due June 3, 2026 after market; analyst consensus EPS $2.40, revenue $22.11B (+47% YoY), AI revenue $10.7B (+140% YoY). Broadcom has beaten estimates in 7 straight quarters. Stock up 33% YTD, 57% since March 30 nadir."
+    },
+    {
+      "date": "2026-06-03",
+      "type": "announcement",
+      "title": "Broadcom Q2 FY2026 Reports Today After Close: AI Semiconductor Revenue Guided $10.7B (+140% YoY); Total Revenue $22B",
+      "url": "https://www.marketbeat.com/earnings/reports/2026-6-3-broadcom-inc-stock/",
+      "source": "MarketBeat / Alphastreet",
+      "content": "Broadcom reports Q2 FY2026 after close June 3. Guided $22B total revenue (+47% YoY), AI semiconductor revenue $10.7B (+140% YoY), non-GAAP gross margin ~77%. $73B AI backlog across custom accelerators and networking. CEO Hock Tan targets >$100B AI chip revenue in 2027. EPS consensus $2.40 (37 analysts)."
     }
   ],
   "AMD": [
@@ -331,6 +347,14 @@
       "url": "https://www.gurufocus.com/news/8893951/amd-faces-stock-pressure-amid-nvidias-new-superchip-announcement",
       "source": "GuruFocus",
       "content": "Nvidia's RTX Spark (Blackwell GPU + Arm N1X CPU) directly challenges AMD's GPU and CPU market. AMD stock pulls back on June 1 despite own Computex launches."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "announcement",
+      "title": "AMD Computex 2026 CPUs: Ryzen 7 7700X3D Ships July 16 ($329); 5800X3D 10th Anniversary Edition June 25 ($349)",
+      "url": "https://www.neowin.net/news/computex-2026-amd-launches-new-ryzen-5800x3d-for-am4-and-7700x3d-for-am5/",
+      "source": "Neowin",
+      "content": "AMD at Computex launches Ryzen 7 7700X3D (8 cores, 104MB cache, up to 4.5GHz boost, $329, July 16 availability) and Ryzen 7 5800X3D 10th Anniversary Edition ($349, June 25). AMD also confirmed AM5 socket commitment through 2029 for platform longevity."
     }
   ],
   "INTC": [
@@ -485,6 +509,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/261939234-market-movers-intc-20260601",
       "source": "TradingKey",
       "content": "INTC dropped 6.8% June 1 after Nvidia unveiled RTX Spark, its first processor for personal computers, challenging Intel's long-standing x86 dominance. Intel CEO Lip-Bu Tan in Taiwan for TSMC meetings ahead of Computex June 2 keynote."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "announcement",
+      "title": "Intel Computex 2026: Xeon 6+ on Intel 18A Architecture Announced; 36,864-Core Liquid-Cooled Rack; Xeon 7 Diamond Rapids 2027",
+      "url": "https://dataconomy.com/2026/06/02/intel-xeon-6-plus-chips-ai-infrastructure-computex-2026/",
+      "source": "Dataconomy / Intel Newsroom",
+      "content": "Intel CEO Lip-Bu Tan keynote at Computex: Xeon 6+ on Intel 18A architecture, single liquid-cooled rack housing 36,864 cores at 100kW. SambaNova SN-50 RDU partnership for disaggregated inference. Next-gen Xeon 7 Diamond Rapids confirmed for 2027 on Intel 18A-P process. Also unveiled Arc G3 platform for AI handheld devices."
     }
   ],
   "QCOM": [
@@ -551,6 +583,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/qualcomm-teaming-bytedance-means-qcom-204446955.html",
       "source": "Yahoo Finance",
       "content": "Qualcomm secured a landmark agreement to supply AI chips to ByteDance (parent of TikTok), marking QCOM's first high-volume client for its newly launched data center hardware product line. Analysts view this as a significant strategic pivot into the AI data center market."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "news",
+      "title": "Qualcomm Computex 2026: Launches Dragonfly Data Center AI Brand; Stock Falls 8.77% on Nvidia RTX Spark Competition; ARM May Cancel Key License",
+      "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/261940757-qcom-computex-2026-dragonfly-nvad-tradingkey",
+      "source": "TradingKey / Pulse2 / Blockonomi",
+      "content": "Qualcomm CEO Cristiano Amon at Computex declared 2026 'Year of AI Agents' and unveiled Dragonfly brand for data center AI inference — QCOM's first formal DC entry. Stock fell 8.77% as Nvidia RTX Spark superchip (Arm CPU + Blackwell GPU, 128GB unified memory) enters Windows on Arm market directly competing with Snapdragon X Elite. Reports: Arm Holdings considering cancellation of Qualcomm architectural license."
     }
   ],
   "MRVL": [
@@ -789,6 +829,14 @@
       "url": "https://www.benzinga.com/markets/tech/26/06/52920523/tsmcs-price-hike-is-bad-for-nvidia-margins-and-potentially-great-for-nvidia-stock",
       "source": "Benzinga",
       "content": "TSMC planning 3nm wafer price increases of up to 15% in H2 2026 with potential further hikes in 2027. Capacity fully booked with extended wait times. Positive for TSMC revenue but margin headwind for Nvidia and other fabless customers."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "news",
+      "title": "TSMC ADR Hits 52-Week High $449; Adopts NVIDIA cuLitho for 20-50% Manufacturing Efficiency Gain; Intel CEO Visits Taiwan",
+      "url": "https://www.investing.com/news/stock-market-news/why-is-taiwan-semiconductor-stock-surging-today-93CH-4719732",
+      "source": "Investing.com / TechTimes",
+      "content": "TSM ADR hit 52-week high $449.39 (Taiwan shares NT$2,380 new high). TSMC implementing NVIDIA cuLitho for computational lithography, achieving 20-50% improvement in cost-effectiveness vs CPU-based systems. Intel CEO Lip-Bu Tan visited TSMC management ahead of Computex keynote. TSMC/MediaTek NX1 AI PC chip for Nvidia announced."
     }
   ],
   "ASML": [
@@ -863,6 +911,14 @@
       "url": "https://ts2.tech/en/asml-shares-set-52-week-peak-china-remains-key-risk-for-traders/",
       "source": "TS2 Space",
       "content": "Potential new US law could cut off ASML lower-end DUV machine sales to China (beyond EUV already blocked). Loss of DUV access to China would be a real hit to near-term ASML sales. Stock near 52-week peak, up 53% in 2026; Motley Fool notes ASML could be next $1T tech company."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "policy",
+      "title": "ASML China Revenue Drops to 19% of Sales (from 36% in Q4 2025); Company Raises FY2026 Guidance to €36-40B as EUV Demand Fills Gap",
+      "url": "https://marketwise.com/investing/asml-earnings-china-export-restrictions-ai-chip-demand/",
+      "source": "MarketWise / Tom's Hardware",
+      "content": "Despite DUV export controls to China, ASML raised full-year 2026 guidance to €36-40B range. China fell from 36% to 19% of system revenue in Q1 2026, with higher-margin EUV demand from Taiwan, Korea, and US AI customers filling the gap. Finance head confirmed ASML has rare earth material inventory buffer due to long semiconductor equipment lead times."
     }
   ],
   "AMAT": [
@@ -955,6 +1011,14 @@
       "url": "https://www.fool.com/investing/2026/05/28/great-news-for-klac-stock-investors/",
       "source": "Motley Fool",
       "content": "Motley Fool coverage highlights KLA's dominant position in wafer metrology/inspection — 'Huge News' (May 27) and 'Great News' (May 28) articles underscore limited competition and strong AI-driven semiconductor capex cycle. KLAC stock at $1,791.44 (+3.26% on May 28). Semiconductor industry boom translating directly to inspection equipment demand."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "research",
+      "title": "KLA Corp Gains 4.56% Post-Nvidia Keynote; Jefferies Upgrades; BofA Forecasts WFE Market $131B in 2026, $150B in 2027",
+      "url": "https://drrobertcastellano.substack.com/p/kla-upgraded-by-jefferies-but-why",
+      "source": "Substack / BofA Research",
+      "content": "KLAC jumped 4.56% to $2,028.57 on June 1 post-Computex. Jefferies upgrades KLA. Bank of America forecasts WFE market $131B (+10% YoY) in 2026 and $150B (+14%) in 2027, driven by HBM expansion, leading-edge logic (3nm/2nm), and advanced packaging. KLAC's yield inspection and process control tools are critical for all these nodes."
     }
   ],
   "ONTO": [
@@ -1137,6 +1201,14 @@
       "url": "https://www.stocktitan.net/news/MU/micron-technology-to-report-fiscal-third-quarter-results-on-june-24-22gcrbths4gp.html",
       "source": "StockTitan",
       "content": "Micron to report Q3 FY2026 results at earnings call June 24, 2026. Raymond James raises PT to $1,100 citing strong demand visibility and constrained HBM supply; stock up 304% in 6 months, $1T+ market cap."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "announcement",
+      "title": "Micron Computex 2026: HBM4 36GB 12H Launches; All 2026 HBM4 Production Capacity Sold Out; Confirmed as Nvidia Vera Rubin Supplier",
+      "url": "https://www.globenewswire.com/news-release/2026/06/01/3304776/14450/en/Micron-Powers-AI-Everywhere-at-COMPUTEX-2026.html",
+      "source": "GlobeNewswire / TechTimes",
+      "content": "Micron Computex 2026: HBM4 36GB 12H (2.6x inference performance vs prior gen). All 2026 HBM4 production capacity is fully sold out. NVIDIA CEO Jensen Huang named Micron alongside Samsung and SK Hynix as Vera Rubin HBM4 suppliers. Also launched industry's first PCIe Gen6 SSD (9650) and 256GB SOCAMM2 module (1/3 power of RDIMM)."
     }
   ],
   "SNDK": [
@@ -1419,6 +1491,14 @@
       "url": "https://seekingalpha.com/article/4900458-microsoft-azure-doing-the-heavylifting",
       "source": "Seeking Alpha",
       "content": "Microsoft ends exclusive revenue share payments to OpenAI; arrangement becomes non-exclusive, allowing any cloud provider to serve OpenAI models. Microsoft retains royalty-free frontier model license through 2032. AI annualized revenue $37B (+123% YoY). FY2026 capex $190B (+61%) maintains Azure capacity leadership."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "announcement",
+      "title": "Microsoft Build 2026: Copilot Agent Mode for Office 365 Late-June Rollout; Azure AI Foundry GA; DoD Signs $9.69B Software Contract",
+      "url": "https://windowsnews.ai/article/build-2026-microsoft-unleashes-ai-agents-across-office-365-windows-and-azure-at-san-francisco-keynot.421349",
+      "source": "Windows News / Microsoft",
+      "content": "Microsoft Build 2026 (Fort Mason, San Francisco): Copilot Agent Mode rolling out to Microsoft 365 subscribers late June, with persistent agents inside Word/Excel/Teams/Outlook. Azure AI Foundry achieves general availability. GitHub Copilot graduates to autonomous coding agent. US DoD signs $9.69B enterprise agreement for M365, Azure, Copilot AI — expected to save $422M."
     }
   ],
   "GOOGL": [
@@ -1541,6 +1621,14 @@
       "url": "https://seekingalpha.com/news/4599490-alphabet-raises-80b-for-ai-investments-including-10b-from-berkshire-hathaway",
       "source": "Seeking Alpha / Bloomberg",
       "content": "Alphabet to raise $80B via equity: $30B concurrent public offering + $40B ATM program (Class A and C). Berkshire Hathaway $10B via private placement ($5B Class A at $351.81, $5B Class C at $348.20). GOOGL dips ~1% on dilution concerns. Funds AI compute capacity buildout."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "announcement",
+      "title": "Google I/O 2026: Gemini 3.5 Flash, Gemini Spark Personal Agent; GOOGL Stock Falls 3.5% on $80B Offering Dilution Fears",
+      "url": "https://www.proactiveinvestors.com/companies/news/1092628/alphabet-showcases-new-ai-models-and-agent-tools-at-google-i-o-2026-1092628.html",
+      "source": "Proactive Investors / Al Jazeera",
+      "content": "Google I/O 2026: Gemini 3.5 Flash, Gemini Omni Flash, Gemini Spark personal AI agent, and Universal Cart. Alphabet 2026 capex guided $180-190B. GOOGL opened -3.5% on dilution fears from $80B equity offering (Berkshire Hathaway $10B anchor, $30B bank-underwritten, $40B market). Piper Sandler: AI-assisted search citations up 16x since early 2025."
     }
   ],
   "AMZN": [
@@ -1615,6 +1703,14 @@
       "url": "https://247wallst.com/investing/2026/05/28/amazon-will-join-the-3-trillion-club-on-this-date/",
       "source": "24/7 Wall St.",
       "content": "Amazon approaching $3 trillion market cap ($2.86T at $265/share). AWS delivered $150B annualized revenue run rate. Q1 AWS grew 28% — fastest pace in 15 quarters. Trainium/Inferentia AI chips business crossed $20B annualized run rate. Q2 guidance $194-199B revenue."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "announcement",
+      "title": "AWS Expands OpenAI Partnership: GPT-5.5 and GPT-5.4 Available on Amazon Bedrock; Amazon Quick AI Work Assistant Launches",
+      "url": "https://aws.amazon.com/blogs/aws/top-announcements-of-the-whats-next-with-aws-2026/",
+      "source": "AWS News Blog",
+      "content": "AWS What's Next 2026: OpenAI models GPT-5.5 and GPT-5.4 available on Amazon Bedrock in preview; Codex and Amazon Bedrock Managed Agents powered by OpenAI in limited preview. Amazon Quick AI work assistant goes live with desktop app, Free/Plus tiers, multi-app integration."
     }
   ],
   "META": [
@@ -1713,6 +1809,14 @@
       "url": "https://www.cnbc.com/2026/05/28/2-major-developments-at-meta-may-have-just-put-a-floor-in-on-the-struggling-stock.html",
       "source": "CNBC",
       "content": "Meta announced global rollout of paid subscriptions: Instagram Plus and Facebook Plus at $3.99/mo each; WhatsApp Plus $2.99/mo; Meta One Plus $7.99/mo; Meta One Premium $19.99/mo. Designed to diversify revenue beyond advertising. META stock rallied 3.6% to $633-$643 range. AI spending plans had weighed on stock."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "news",
+      "title": "Meta Superintelligence Labs Launches Muse Spark AI Model; Tests Meta One Plus $7.99/mo Subscription in 3 Countries",
+      "url": "https://www.cnbc.com/2026/05/27/meta-testing-ai-subscription-services-cheapest-plan-at-7point99.html",
+      "source": "CNBC / Bitcoin Ethereum News",
+      "content": "Meta's Superintelligence Labs (led by Alexandr Wang) launches Muse Spark, matching Llama 4 mid-size capability at far lower compute. Meta begins testing subscription plans: Meta One Plus $7.99/month and Meta One Premium $19.99/month, launching first in Singapore, Guatemala, Bolivia. Full-year 2026 capex raised to $125-145B."
     }
   ],
   "AAPL": [
@@ -1927,6 +2031,14 @@
       "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Advances-AI-Native-Cloud-Platform-for-the-Next-Phase-of-Production-Scale-AI/default.aspx",
       "source": "CoreWeave IR",
       "content": "CoreWeave becomes first AI cloud to deploy and validate Nvidia's Vera Rubin NVL72 system (10x better inference/watt vs Blackwell; 1/10 cost per million tokens). Added to Russell 3000 effective June 26, 2026. Contracted backlog nears $100B. Stock +6.5% in pre-market on three simultaneous catalysts."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "announcement",
+      "title": "CoreWeave Signs $2.2B 15-Year Hyperscale Data Center Lease in Chicago as Sole Tenant; Stock Surges 12%",
+      "url": "https://www.timothysykes.com/news/coreweave-inc-crwv-news-2026_06_02/",
+      "source": "Timothy Sykes News",
+      "content": "CoreWeave signed 15-year build-to-suit hyperscale data center lease in Chicago area (~$2.2B contracted revenue). CRWV stock surged 12%+. Q1 2026 revenue ~$2.08B (+100% YoY), above Street expectations; net loss ~$740M ongoing. Previously deployed first Nvidia Vera Rubin NVL72 system among hyperscalers."
     }
   ],
   "CEG": [
@@ -1977,6 +2089,14 @@
       "url": "https://www.sec.gov/Archives/edgar/data/0001868275/000186827526000063/ceg-20260511991.htm",
       "source": "SEC EDGAR / CEG IR",
       "content": "Constellation declared quarterly dividend of $0.4265/share payable June 5 (record May 15). Pursuing 1GW+ of nuclear uprates over the next decade including 135MW at Braidwood and Byron plants (Illinois). Prioritizing long-term hyperscaler PPAs for AI data center power. Q1 2026 earnings beat; reaffirmed full-year guidance."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "announcement",
+      "title": "Constellation Energy: Existing Shareholders Launch 11M-Share Secondary Offering; CEG Falls 7%; Nuclear Uprates 1GW and $3.9B Capex Plan Ongoing",
+      "url": "https://www.fool.com/investing/2026/06/01/why-constellation-energy-stock-slumped-on-monday/",
+      "source": "Motley Fool / SEC FWP",
+      "content": "Institutional shareholders launched underwritten secondary offering of 11M CEG shares (company itself not selling). Stock fell 7% on June 1-2. CEG's own nuclear expansion plan: ~1GW uprates and $3.9B capital spending to support 5,650+ MW long-term clean energy agreements with AI data center customers. Q1 2026 revenue $11.12B beat consensus $8.71B."
     }
   ],
   "VRT": [
@@ -2635,6 +2755,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/261939571-market-movers-anet-20260601",
       "source": "TradingKey",
       "content": "ANET +5.77% June 1 as management signals AI-related revenues to more than double in 2026. Over 100 advanced AI customers deployed. Arista named Leader in 2026 Gartner Magic Quadrant for Enterprise Wired and Wireless LAN."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "news",
+      "title": "Arista Networks Raises 2026 Revenue Guidance to $11.5B; AI Revenue to More Than Double; Named Gartner Magic Quadrant Leader",
+      "url": "https://simplywall.st/stocks/us/tech/nyse-anet/arista-networks/news/how-investors-may-respond-to-arista-networks-anet-raising-ai",
+      "source": "Simply Wall St / TradingKey",
+      "content": "Arista raised full-year 2026 revenue guidance to ~$11.5B with AI revenues expected to more than double YoY on strong Meta/Microsoft data center demand. Named Leader in 2026 Gartner Magic Quadrant for Enterprise Wired and Wireless LAN. Presenting at William Blair Growth Conference June 2 and BofA Global Technology Conference June 3."
     }
   ],
   "ARM": [
@@ -2799,6 +2927,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/lrcxs-gross-margin-near-50-123400387.html",
       "source": "Yahoo Finance",
       "content": "Lam Research Q2 2026 guidance: GM improvement to 50.5% despite customer mix pressure. Wafer fabrication equipment (WFE) spending forecast raised to $140B for 2026 (from prior $135B estimate). Cash dividend $0.26/share, ex-date June 17, 2026. AI-driven HBM/NAND demand remains core growth driver."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "news",
+      "title": "Lam Research Stock Jumps 4.8% Post-Nvidia Computex Keynote; Record Q3 FY2026 $5.84B Revenue (+24% YoY); WFE Forecast Raised to $140B",
+      "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-6-2-why-lam-research-lrcx-stock-is-trading-up-today",
+      "source": "Financial Content / BofA Research",
+      "content": "LRCX gained 4.8% to $332.93 as NVDA Computex keynote reinforced AI chip cycle. Company reported record Q3 FY2026 revenue $5.84B (+24% YoY), adjusted EPS +41%, beating consensus for 4th consecutive quarter. Raised WFE market forecast to ~$140B for 2026 (from $135B prior estimate)."
     }
   ],
   "CDNS": [
@@ -2915,6 +3051,14 @@
       "url": "https://www.stocktitan.net/news/ORCL/oracle-sets-the-date-for-its-fourth-quarter-fiscal-year-2026-vxb0jud32m8v.html",
       "source": "StockTitan",
       "content": "Oracle Q4 FY2026 earnings release after market close June 10, 2026. Q3 RPO $553B (+325% YoY); OCI Cloud Infrastructure revenue +84% to $4.9B. Q4 non-GAAP EPS guidance $1.96-$2.00; cloud revenue growth guided 46-50% YoY. OCI backlog is massive."
+    },
+    {
+      "date": "2026-06-03",
+      "type": "news",
+      "title": "Oracle Q4 FY2026 Preview: $553B Remaining Performance Obligations (+325% YoY); OCI Revenue $4.9B (+84%); EPS Guided $1.96-2.00",
+      "url": "https://www.techi.com/oracle-earnings-preview-oci-backlog-ai-capex-test/",
+      "source": "TECHi / Oracle IR",
+      "content": "Oracle Q4 FY2026 earnings June 10. Q3 remaining performance obligations hit $553B (+325% YoY), OCI cloud infra revenue $4.9B (+84%). Q4 guidance: non-GAAP EPS $1.96-2.00, cloud revenue +46-50%. Analysts project $95B market cap swing. Key question: can OCI capacity keep pace with massive backlog without margin compression."
     }
   ],
   "PLTR": [
@@ -2981,6 +3125,14 @@
       "url": "https://www.fxleaders.com/news/2026/06/01/palantir-pltr-stock-hits-156-in-2026-13-weekly-surge-fueled-by-ai-demand-boom/",
       "source": "FX Leaders",
       "content": "PLTR secures $300M Department of Agriculture contract for farmland data management. Stock reaches $156.54 (+13.68% in 5 days) driven by strong AI platform demand. Q1 FY2026 record revenue $1.633B (+85% YoY), US Commercial +133% YoY."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "news",
+      "title": "Palantir Falls 5.74% as Trump Signs AI Executive Order Targeting High-Performance Defense AI Software Providers",
+      "url": "https://www.tradingkey.com/news/market-movers/261941787-market-movers-pltr-20260602",
+      "source": "TradingKey / Yahoo Finance",
+      "content": "PLTR fell 5.74% (down up to 6.8% intraday) on June 2 amid broader AI stock pullback. President Trump signed executive order focused on ultra-high-performance AI software from defense contractors including Palantir and Anthropic, raising regulatory uncertainty. This follows June 1 +3.17% gain on strong Q1 results."
     }
   ],
   "IREN": [
@@ -3881,6 +4033,14 @@
       "url": "https://www.sec.gov/Archives/edgar/data/0001108524/000110852426000125/crm-q1fy27xexhibit991.htm",
       "source": "Salesforce / SEC EDGAR",
       "content": "Salesforce Q1 FY2027 (ended April 2026): Revenue $11.1B (+13% YoY, includes $444M Informatica contribution); non-GAAP EPS $3.88 beat $3.12 consensus by 24%; GAAP EPS $2.42 (+52% YoY); GAAP OM 21.1%, non-GAAP 34.8%. Agentforce ARR exceeded $1B milestone with 3.8 billion Agentic Work Units delivered. Combined AI+data ARR $3.4B. CRPO $33.6B (+14% YoY)."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "news",
+      "title": "Salesforce Agentforce Surpasses $1B Annual Recurring Revenue; Faces Intensified Competition from ServiceNow Autonomous CRM",
+      "url": "https://www.barchart.com/story/news/2259771/salesforce-vs-servicenow-1-ai-giant-is-leaving-the-other-behind",
+      "source": "Barchart / TechTarget",
+      "content": "Salesforce Agentforce AI agent platform crossed $1B ARR milestone. ServiceNow directly challenged Salesforce's core market by launching Autonomous CRM. Enterprise AI competition intensifying. Salesforce's Q1 FY2027 revenue $9.83B with 15.7% net margin. CRM stock market cap ~$250B."
     }
   ]
 }
