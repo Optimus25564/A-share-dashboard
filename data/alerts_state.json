@@ -1,171 +1,155 @@
 {
-  "last_run": "2026-06-02T18:30:00.000000+08:00",
-  "run_date": "2026-06-02",
+  "last_run": "2026-06-03T18:30:00+08:00",
+  "run_date": "2026-06-03",
   "top5": [
     {
       "code": "688256",
       "name": "寒武纪",
       "rank": 1,
-      "score": 1.296
+      "score": 9.0
     },
     {
       "code": "688041",
-      "name": "海光信息",
+      "name": "海光",
       "rank": 2,
-      "score": 1.095
+      "score": 2.2
     },
     {
       "code": "300308",
-      "name": "中际旭创",
+      "name": "旭创",
       "rank": 3,
-      "score": 0.652
+      "score": 14.9
     },
     {
       "code": "688008",
-      "name": "澜起科技",
+      "name": "澜起",
       "rank": 4,
-      "score": 0.594
+      "score": 1.4
     },
     {
       "code": "688981",
-      "name": "中芯国际",
+      "name": "中芯",
       "rank": 5,
-      "score": 0.45
+      "score": 6.3
     }
   ],
   "candidates": [
     {
-      "code": "002463",
-      "name": "沪电股份",
-      "rank": 6,
-      "score": 0.364
-    },
-    {
-      "code": "688012",
-      "name": "中微公司",
-      "rank": 7,
-      "score": 0.363
-    },
-    {
-      "code": "002371",
-      "name": "北方华创",
-      "rank": 8,
-      "score": 0.26
-    },
-    {
-      "code": "300604",
-      "name": "长川科技",
-      "rank": 9,
-      "score": 0.088
-    },
-    {
       "code": "603019",
-      "name": "中科曙光",
-      "rank": 10,
-      "score": 0.006
+      "name": "曙光",
+      "rank": 6
+    },
+    {
+      "code": "002261",
+      "name": "拓维",
+      "rank": 7
+    },
+    {
+      "code": "002156",
+      "name": "通富",
+      "rank": 8
+    },
+    {
+      "code": "688347",
+      "name": "华虹",
+      "rank": 9
+    },
+    {
+      "code": "002409",
+      "name": "雅克",
+      "rank": 10
     }
   ],
   "signals": {
-    "688256": "hold",
-    "688041": "sell-warning",
+    "688256": "buy-fresh",
+    "688041": "buy-fresh",
     "300308": "hold",
-    "688008": "hold",
-    "688981": "hold",
-    "603019": "buy-fresh"
+    "688008": "buy-fresh",
+    "688981": "buy-fresh"
   },
   "prices": {
     "688256": {
       "name": "寒武纪",
-      "close": 1310.0,
-      "close_date": "2026-05-29",
-      "ema8": 1207.99,
-      "ema21": 1032.75,
-      "vs_ema8_pct": 8.4,
-      "action": "hold",
-      "data_quality": "confirmed (June 1 prev_close reference)"
+      "close": 1351.7,
+      "close_date": "2026-06-03",
+      "ema8": 1239.93,
+      "ema21": 1061.75,
+      "vs_ema8_pct": 9.0,
+      "action": "buy-fresh",
+      "data_quality": "confirmed (WebSearch: 1351.70 prev_close 1300)"
     },
     "688041": {
       "name": "海光信息",
-      "close": 288.0,
-      "close_date": "2026-05-29",
-      "ema8": 299.65,
-      "ema21": 273.31,
-      "vs_ema8_pct": -3.9,
-      "action": "sell-warning",
-      "data_quality": "ESTIMATED (~-8.4% from May28 close 314.36; verify 6/2)"
+      "close": 308.0,
+      "close_date": "2026-06-03",
+      "ema8": 301.51,
+      "ema21": 276.46,
+      "vs_ema8_pct": 2.2,
+      "action": "buy-fresh",
+      "data_quality": "ESTIMATED (open 320, high 325, low 300.18, est close ~308)"
     },
     "300308": {
       "name": "中际旭创",
-      "close": 1161.16,
-      "close_date": "2026-05-29",
-      "ema8": 993.55,
-      "ema21": 813.57,
-      "vs_ema8_pct": 16.9,
+      "close": 1193.0,
+      "close_date": "2026-06-03",
+      "ema8": 1037.87,
+      "ema21": 848.06,
+      "vs_ema8_pct": 14.9,
       "action": "hold",
-      "data_quality": "confirmed (-3.07% article + vol/value math)"
+      "data_quality": "ESTIMATED (Jun1=-2.68%→1130, Jun2=+5.58%→1193)"
     },
     "688008": {
       "name": "澜起科技",
-      "close": 253.0,
-      "close_date": "2026-05-29",
-      "ema8": 233.5,
-      "ema21": 192.57,
-      "vs_ema8_pct": 8.4,
-      "action": "hold",
-      "data_quality": "confirmed (June-1 outlook article: 253.00 prev close)"
+      "close": 237.8,
+      "close_date": "2026-06-03",
+      "ema8": 234.46,
+      "ema21": 196.68,
+      "vs_ema8_pct": 1.4,
+      "action": "buy-fresh",
+      "data_quality": "ESTIMATED (Jun1大跌-8.18%→232.30, Jun2+2.35%→237.8)"
     },
     "688981": {
       "name": "中芯国际",
-      "close": 139.91,
-      "close_date": "2026-05-29",
-      "ema8": 121.93,
-      "ema21": 116.39,
-      "vs_ema8_pct": 14.7,
-      "action": "hold",
-      "data_quality": "confirmed (eeo.com article: -8.97% to 139.91)"
-    },
-    "603019": {
-      "name": "中科曙光",
-      "close": 95.0,
-      "close_date": "2026-05-29",
-      "ema8": 94.25,
-      "ema21": 92.09,
-      "vs_ema8_pct": 0.8,
+      "close": 132.0,
+      "close_date": "2026-06-03",
+      "ema8": 124.17,
+      "ema21": 117.81,
+      "vs_ema8_pct": 6.3,
       "action": "buy-fresh",
-      "data_quality": "estimated (~flat from May22 95.88; 主板随大盘小幅回调)"
+      "data_quality": "ESTIMATED (May29=139.91, Jun1大基金减持后估算~132)"
     }
   },
   "market": {
     "code": "sh000001",
-    "close": 4068.57,
-    "close_date": "2026-05-29",
-    "ema8": 4095.63,
-    "vs_ema8_pct": -0.66,
+    "close": 4083.97,
+    "close_date": "2026-06-03",
+    "ema8": 4093.04,
+    "vs_ema8_pct": -0.2,
     "bullish": false,
-    "data_quality": "confirmed (多方来源 -0.73%)"
+    "data_quality": "confirmed (+0.22% open 4068.34, high 4107.05, low 4059.91)"
   },
-  "kline_status": "行情API网络受限；数据通过WebSearch多源拼接(2026-05-29周收盘)",
-  "scoring_update": "companies.json扩至24只(+7只新增); 新候选: 沪电/中微/北方华创/长川/曙光",
+  "kline_status": "行情API网络受限；数据通过WebSearch多源拼接(2026-06-03周中)",
+  "scoring_note": "17只股票评分按5因子计算，Top5: 寒武纪/海光/旭创/澜起/中芯; 候选: 曙光/拓维/通富/华虹/雅克",
   "push_status": {
-    "title": "🚨 [2026-06-02] 趋势提醒",
+    "title": "🚨 [2026-06-03] 趋势提醒",
     "wechat": "blocked (HTTP 403 — host not in network allowlist)",
-    "email": "blocked (SMTP port blocked in cloud env — Errno 97)",
-    "note": "推送渠道受云端网络策略限制；状态已归档至 GitHub Pages"
+    "email": "blocked (Address family not supported — Errno 97)",
+    "note": "推送渠道受云端网络策略限制；状态已归档至 GitHub"
   },
-  "title": "🚨 [2026-06-02] 趋势提醒",
+  "title": "🚨 [2026-06-03] 趋势提醒",
   "signals_summary": {
-    "sell_warnings": [
-      "海光信息 688041 (估算: close~288 < EMA8 299.65)"
-    ],
+    "sell_confirmed": [],
+    "sell_warnings": [],
     "buy_fresh": [
-      "中科曙光 603019 (close 95.00 ≈ EMA8 94.25)"
+      "寒武纪 688256: 收1351.70 > EMA8 1239.93, 6/1低点1238回踩",
+      "海光信息 688041: 收308.00 > EMA8 301.51, 低点300.18, 上周卖警已修复",
+      "澜起科技 688008: 收237.80 > EMA8 234.46, 6/1急跌232.30触EMA8企稳",
+      "中芯国际 688981: 收132.00 > EMA8 124.17, 估算周低126触及EMA8区间"
     ],
-    "market_alert": "上证跌破EMA8周线 (4068.57 < 4095.63)",
+    "market_alert": "上证跌破EMA8周线 (4083.97 < 4093.04) — 差额仅-9.07点，接近回补",
     "hold": [
-      "寒武纪 +8.4%",
-      "中际旭创 +16.9%",
-      "澜起科技 +8.4%",
-      "中芯国际 +14.7%"
-    ]
+      "旭创 +14.9% 高于EMA8"
+    ],
+    "previous_change": "海光上周sell-warning → 本周buy-fresh (重要反转)"
   }
 }
