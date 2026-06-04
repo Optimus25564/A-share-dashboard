@@ -1,8 +1,16 @@
 {
-  "last_run": "2026-06-04T08:30:00+08:00",
+  "last_run": "2026-06-04T18:30:00+08:00",
   "run_date": "2026-06-04",
   "us_trading_date": "2026-06-03",
-  "market": "US",
+  "market": {
+    "code": "QQQ",
+    "close": null,
+    "close_date": "2026-06-03",
+    "ema8": null,
+    "vs_ema8_pct": null,
+    "bullish": null,
+    "data_quality": "K线API受网络限制，数据暂缺"
+  },
   "top5": [
     {
       "code": "MU",
@@ -109,13 +117,13 @@
   ],
   "signals": {
     "MU": "hold",
-    "NVDA": "buy-fresh",
+    "NVDA": "buy",
     "TSM": "hold",
     "ASML": "hold",
     "SNDK": "hold",
     "AVGO": "hold",
     "META": "hold",
-    "GOOGL": "buy-fresh",
+    "GOOGL": "buy",
     "CEG": "sell-warning",
     "MSFT": "hold"
   },
@@ -144,5 +152,117 @@
     "GOOGL": "Jun2 range $358.44-373.54; close=$364.03; low<EMA8x1.02=$364.1 → BUY-FRESH",
     "CEG": "Jun2 range $264.21-283.24; close=$270.11; below EMA8=$328 → SELL-WARNING",
     "MSFT": "Jun2 range $450.24-472.03; close=$452.39"
+  },
+  "prices": {
+    "MU": {
+      "name": "Micron",
+      "close": 1059.44,
+      "close_date": "2026-06-03",
+      "ema8": 840.0,
+      "ema21": 480.0,
+      "vs_ema8_pct": 26.12,
+      "action": "hold",
+      "strength": 1,
+      "detail": "多头趋势延续"
+    },
+    "NVDA": {
+      "name": "Nvidia",
+      "close": 225.61,
+      "close_date": "2026-06-03",
+      "ema8": 205.3,
+      "ema21": 170.0,
+      "vs_ema8_pct": 9.89,
+      "action": "buy",
+      "strength": 2,
+      "detail": "回踩EMA8后站稳"
+    },
+    "TSM": {
+      "name": "TSMC",
+      "close": 429.0,
+      "close_date": "2026-06-03",
+      "ema8": 388.0,
+      "ema21": 295.0,
+      "vs_ema8_pct": 10.57,
+      "action": "hold",
+      "strength": 1,
+      "detail": "多头趋势延续"
+    },
+    "ASML": {
+      "name": "ASML",
+      "close": 1705.37,
+      "close_date": "2026-06-03",
+      "ema8": 1490.0,
+      "ema21": 1180.0,
+      "vs_ema8_pct": 14.45,
+      "action": "hold",
+      "strength": 1,
+      "detail": "多头趋势延续"
+    },
+    "SNDK": {
+      "name": "Sandisk",
+      "close": 1761.43,
+      "close_date": "2026-06-03",
+      "ema8": 1380.0,
+      "ema21": 800.0,
+      "vs_ema8_pct": 27.64,
+      "action": "hold",
+      "strength": 1,
+      "detail": "多头趋势延续"
+    },
+    "AVGO": {
+      "name": "Broadcom",
+      "close": 486.9,
+      "close_date": "2026-06-03",
+      "ema8": 430.0,
+      "ema21": 375.0,
+      "vs_ema8_pct": 13.23,
+      "action": "hold",
+      "strength": 1,
+      "detail": "多头趋势延续"
+    },
+    "META": {
+      "name": "Meta Platforms",
+      "close": 600.47,
+      "close_date": "2026-06-03",
+      "ema8": 580.0,
+      "ema21": 495.0,
+      "vs_ema8_pct": 3.53,
+      "action": "hold",
+      "strength": 1,
+      "detail": "多头趋势延续"
+    },
+    "GOOGL": {
+      "name": "Alphabet",
+      "close": 364.03,
+      "close_date": "2026-06-03",
+      "ema8": 357.0,
+      "ema21": 302.0,
+      "vs_ema8_pct": 1.97,
+      "action": "buy",
+      "strength": 2,
+      "detail": "回踩EMA8后站稳"
+    },
+    "CEG": {
+      "name": "Constellation Energy",
+      "close": 270.11,
+      "close_date": "2026-06-03",
+      "ema8": 328.0,
+      "ema21": 365.0,
+      "vs_ema8_pct": -17.65,
+      "action": "sell-warning",
+      "strength": 1,
+      "detail": "多头趋势延续"
+    },
+    "MSFT": {
+      "name": "Microsoft",
+      "close": 452.39,
+      "close_date": "2026-06-03",
+      "ema8": 432.0,
+      "ema21": 432.0,
+      "vs_ema8_pct": 4.72,
+      "action": "hold",
+      "strength": 1,
+      "detail": "多头趋势延续"
+    }
   }
 }
