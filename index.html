@@ -3047,10 +3047,32 @@ function fetchUSQuotes(){
 async function refreshUSQuotes(){
   const all = await fetchUSQuotes();
   Object.entries(all).forEach(([c, q]) => { usQuotes[c] = q; });
-  // 找任意一只票的报价时间显示出来 (ET 时区)
+  // 找任意一只票的报价时间显示出来 + 计算延迟 (相对北京当前)
   const sample = Object.values(all).find(q => q && q.date);
   const tEl = document.getElementById("usQuoteTime");
-  if (tEl && sample) tEl.textContent = sample.date + " (ET 美东)";
+  if (tEl && sample) {
+    // sample.date 格式: "2026-06-04 12:49:59" (ET 美东)
+    // ET 加 12 小时 = 北京 (夏令时 EDT 是 +12, 冬令时 EST 是 +13)
+    // 简化: 假设 EDT (-04:00), BJ +08:00, 差 12 小时
+    const etParts = sample.date.match(/(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})/);
+    let label = sample.date + " ET";
+    if (etParts) {
+      const [_, y, mo, d, h, mi, s] = etParts.map(Number);
+      // 构造 ET 时间为 UTC-4 (EDT)
+      const etMs = Date.UTC(y, mo - 1, d, h, mi, s) + 4 * 3600 * 1000;
+      const ageMin = Math.floor((Date.now() - etMs) / 60000);
+      const bjDate = new Date(etMs);
+      const bjStr = bjDate.toLocaleString("zh-CN", {timeZone: "Asia/Shanghai", hour12: false}).replace(/\//g,"-");
+      let ageStr;
+      if (ageMin < 0) ageStr = `<span style="color:#f5b301">未来 ${-ageMin}min (时钟异常)</span>`;
+      else if (ageMin < 30) ageStr = `<span style="color:#7ee2a3">${ageMin} 分钟前 (盘中实时)</span>`;
+      else if (ageMin < 120) ageStr = `<span style="color:#f5b301">${ageMin} 分钟前</span>`;
+      else if (ageMin < 1440) ageStr = `<span style="color:#ff8a95">${Math.floor(ageMin/60)} 小时${ageMin%60}分前 (可能已收盘)</span>`;
+      else ageStr = `<span style="color:#ff8a95">${Math.floor(ageMin/1440)} 天前 (周末/休市)</span>`;
+      label = `${sample.date} ET = ${bjStr} 北京 · ${ageStr}`;
+    }
+    tEl.innerHTML = label;
+  }
   renderUSWatchlist();
 }
 function renderUSWatchlist(){
