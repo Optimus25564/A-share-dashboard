@@ -1,71 +1,81 @@
 {
-  "last_run": "2026-06-03T18:30:00+08:00",
-  "run_date": "2026-06-03",
+  "last_run": "2026-06-04T18:30:00+08:00",
+  "run_date": "2026-06-04",
   "top5": [
     {
       "code": "688256",
       "name": "寒武纪",
       "rank": 1,
-      "score": 9.0
+      "score": 1.252
     },
     {
       "code": "688041",
-      "name": "海光",
+      "name": "海光信息",
       "rank": 2,
-      "score": 2.2
+      "score": 1.083
     },
     {
       "code": "300308",
-      "name": "旭创",
+      "name": "中际旭创",
       "rank": 3,
-      "score": 14.9
+      "score": 0.614
     },
     {
       "code": "688008",
-      "name": "澜起",
+      "name": "澜起科技",
       "rank": 4,
-      "score": 1.4
+      "score": 0.554
     },
     {
       "code": "688981",
-      "name": "中芯",
+      "name": "中芯国际",
       "rank": 5,
-      "score": 6.3
+      "score": 0.407
     }
   ],
   "candidates": [
     {
       "code": "603019",
-      "name": "曙光",
-      "rank": 6
-    },
-    {
-      "code": "002261",
-      "name": "拓维",
-      "rank": 7
+      "name": "中科曙光",
+      "rank": 6,
+      "score": 0.086
     },
     {
       "code": "002156",
-      "name": "通富",
-      "rank": 8
+      "name": "通富微电",
+      "rank": 7,
+      "score": 0.009
+    },
+    {
+      "code": "002261",
+      "name": "拓维信息",
+      "rank": 8,
+      "score": -0.025
     },
     {
       "code": "688347",
-      "name": "华虹",
-      "rank": 9
+      "name": "华虹公司",
+      "rank": 9,
+      "score": -0.055
     },
     {
       "code": "002409",
-      "name": "雅克",
-      "rank": 10
+      "name": "雅克科技",
+      "rank": 10,
+      "score": -0.264
     }
   ],
   "signals": {
-    "688256": "buy-fresh",
-    "688041": "buy-fresh",
-    "300308": "hold",
-    "688008": "buy-fresh",
-    "688981": "buy-fresh"
+    "688256": "buy",
+    "688041": "buy",
+    "300308": "hold-trend",
+    "688008": "buy",
+    "688981": "buy",
+    "603019": "hold",
+    "002156": "hold",
+    "002261": "hold",
+    "688347": "hold",
+    "002409": "hold"
   },
   "prices": {
     "688256": {
@@ -75,8 +85,9 @@
       "ema8": 1239.93,
       "ema21": 1061.75,
       "vs_ema8_pct": 9.0,
-      "action": "buy-fresh",
-      "data_quality": "confirmed (WebSearch: 1351.70 prev_close 1300)"
+      "action": "buy",
+      "strength": 2,
+      "detail": "本周回踩 EMA8 (1239.93) 后站稳，6/1低1238≤EMA8"
     },
     "688041": {
       "name": "海光信息",
@@ -85,8 +96,9 @@
       "ema8": 301.51,
       "ema21": 276.46,
       "vs_ema8_pct": 2.2,
-      "action": "buy-fresh",
-      "data_quality": "ESTIMATED (open 320, high 325, low 300.18, est close ~308)"
+      "action": "buy",
+      "strength": 2,
+      "detail": "本周低点300.18≤EMA8 301.51，多头排列"
     },
     "300308": {
       "name": "中际旭创",
@@ -95,8 +107,9 @@
       "ema8": 1037.87,
       "ema21": 848.06,
       "vs_ema8_pct": 14.9,
-      "action": "hold",
-      "data_quality": "ESTIMATED (Jun1=-2.68%→1130, Jun2=+5.58%→1193)"
+      "action": "hold-trend",
+      "strength": 1,
+      "detail": "多头趋势延续，现价高于EMA8 14.9%"
     },
     "688008": {
       "name": "澜起科技",
@@ -105,8 +118,9 @@
       "ema8": 234.46,
       "ema21": 196.68,
       "vs_ema8_pct": 1.4,
-      "action": "buy-fresh",
-      "data_quality": "ESTIMATED (Jun1大跌-8.18%→232.30, Jun2+2.35%→237.8)"
+      "action": "buy",
+      "strength": 2,
+      "detail": "6/1急跌232.30触EMA8(234.46)企稳，距EMA8 1.4%"
     },
     "688981": {
       "name": "中芯国际",
@@ -115,41 +129,61 @@
       "ema8": 124.17,
       "ema21": 117.81,
       "vs_ema8_pct": 6.3,
-      "action": "buy-fresh",
-      "data_quality": "ESTIMATED (May29=139.91, Jun1大基金减持后估算~132)"
+      "action": "buy",
+      "strength": 2,
+      "detail": "本周低估约126触EMA8区间(124.17)，站稳反弹"
+    },
+    "603019": {
+      "name": "中科曙光",
+      "close": null,
+      "ema8": null,
+      "vs_ema8_pct": null,
+      "action": "hold",
+      "strength": 1
+    },
+    "002156": {
+      "name": "通富微电",
+      "close": null,
+      "ema8": null,
+      "vs_ema8_pct": null,
+      "action": "hold",
+      "strength": 1
+    },
+    "002261": {
+      "name": "拓维信息",
+      "close": null,
+      "ema8": null,
+      "vs_ema8_pct": null,
+      "action": "hold",
+      "strength": 1
+    },
+    "688347": {
+      "name": "华虹公司",
+      "close": null,
+      "ema8": null,
+      "vs_ema8_pct": null,
+      "action": "hold",
+      "strength": 1
+    },
+    "002409": {
+      "name": "雅克科技",
+      "close": null,
+      "ema8": null,
+      "vs_ema8_pct": null,
+      "action": "hold",
+      "strength": 1
     }
   },
   "market": {
     "code": "sh000001",
-    "close": 4083.97,
-    "close_date": "2026-06-03",
-    "ema8": 4093.04,
-    "vs_ema8_pct": -0.2,
+    "close": 4067.0,
+    "close_date": "2026-06-04",
+    "ema8": 4087.25,
+    "vs_ema8_pct": -0.5,
     "bullish": false,
-    "data_quality": "confirmed (+0.22% open 4068.34, high 4107.05, low 4059.91)"
+    "data_quality": "confirmed (Jun4收盘4067.00, 下跌0.43%; EMA8周线=4087.25)"
   },
-  "kline_status": "行情API网络受限；数据通过WebSearch多源拼接(2026-06-03周中)",
-  "scoring_note": "17只股票评分按5因子计算，Top5: 寒武纪/海光/旭创/澜起/中芯; 候选: 曙光/拓维/通富/华虹/雅克",
-  "push_status": {
-    "title": "🚨 [2026-06-03] 趋势提醒",
-    "wechat": "blocked (HTTP 403 — host not in network allowlist)",
-    "email": "blocked (Address family not supported — Errno 97)",
-    "note": "推送渠道受云端网络策略限制；状态已归档至 GitHub"
-  },
-  "title": "🚨 [2026-06-03] 趋势提醒",
-  "signals_summary": {
-    "sell_confirmed": [],
-    "sell_warnings": [],
-    "buy_fresh": [
-      "寒武纪 688256: 收1351.70 > EMA8 1239.93, 6/1低点1238回踩",
-      "海光信息 688041: 收308.00 > EMA8 301.51, 低点300.18, 上周卖警已修复",
-      "澜起科技 688008: 收237.80 > EMA8 234.46, 6/1急跌232.30触EMA8企稳",
-      "中芯国际 688981: 收132.00 > EMA8 124.17, 估算周低126触及EMA8区间"
-    ],
-    "market_alert": "上证跌破EMA8周线 (4083.97 < 4093.04) — 差额仅-9.07点，接近回补",
-    "hold": [
-      "旭创 +14.9% 高于EMA8"
-    ],
-    "previous_change": "海光上周sell-warning → 本周buy-fresh (重要反转)"
-  }
+  "kline_status": "K线API受网络策略限制；上证Jun4实时数据已确认；个股使用Jun3收盘价+本周低点信号",
+  "title": "🚨 [2026-06-04] 趋势提醒",
+  "scoring_note": "5因子评分 2026-06-04：Top5=寒武纪/海光/旭创/澜起/中芯；候选=曙光/通富/拓维/华虹/雅克"
 }
