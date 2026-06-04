@@ -27,6 +27,15 @@
     "avg_turnover_pct": 1.2,
     "quarters": [
       {
+        "q": "2025Q1",
+        "rev": 393.0,
+        "gm": 73.03,
+        "nm": 56.17,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000021/q4fy25pr.htm",
+        "note": "Q4 FY2025 ending Jan 25 2025"
+      },
+      {
         "q": "2025Q2",
         "rev": 441,
         "gm": 60.5,
@@ -64,7 +73,18 @@
         "source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027",
         "note": "FY27 Q1 (Feb-Apr 2026): 营收$81.6B同比+85%, 数据中心$75.2B创历史新高占总营收92%, GAAP净利$58.3B"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 816.0,
+      "yoy_pct": 85.0,
+      "gm_estimate": 72.0,
+      "nm_estimate": 55.0,
+      "catalyst": "Blackwell B200/B300 全速量产; H20 出口影响已消化; Q1 FY2027 营收 $81.6B/GM 74.93%/NM 71.46% 已公布.",
+      "source": "公司 Q1 FY2027 实际公布 2026-05-21",
+      "confidence": "high",
+      "data_type": "实际公布"
+    }
   },
   "AVGO": {
     "name": "Broadcom",
@@ -75,6 +95,15 @@
     "market_cap_billion": 20320,
     "avg_turnover_pct": 1.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 149.2,
+        "gm": 68.01,
+        "nm": 36.89,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/0001730168/000173016825000021/avgo-20250202.htm",
+        "note": "Q1 FY2025 ending Feb 2 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 150,
@@ -103,7 +132,18 @@
         "nm": 38.1,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 222.0,
+      "yoy_pct": 48.0,
+      "gm_estimate": 67.5,
+      "nm_estimate": 38.0,
+      "catalyst": "Q2 实际 $22.2B (超指引 $22.0B), YoY +48%; AI 半导体 $10.8B (+143%); EPS $2.44 超 consensus.",
+      "source": "公司 Q2 FY2026 实际公布 2026-06-05 (ending May 3 2026)",
+      "confidence": "high",
+      "data_type": "实际公布"
+    }
   },
   "AMD": {
     "name": "AMD",
@@ -114,6 +154,15 @@
     "market_cap_billion": 7577,
     "avg_turnover_pct": 4,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 74.4,
+        "gm": 50.23,
+        "nm": 9.53,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/0000002488/000000248825000045/q12025991.htm",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 76.9,
@@ -143,7 +192,18 @@
         "nm": 13.4,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 112.0,
+      "yoy_pct": 45.6,
+      "gm_estimate": 53.0,
+      "nm_estimate": 12.0,
+      "catalyst": "AMD 公司指引 Q2 营收 $11.2B(±$0.3B)，YoY +46%; 数据中心 +57%; Non-GAAP GM 56%。",
+      "source": "AMD 业绩说明会 2026-05-05 Q2 guidance $11.2B ± $0.3B",
+      "confidence": "high",
+      "data_type": "公司指引"
+    }
   },
   "INTC": {
     "name": "Intel",
@@ -154,6 +214,15 @@
     "market_cap_billion": 6387,
     "avg_turnover_pct": 3.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 126.7,
+        "gm": 36.88,
+        "nm": -7.0,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/intc/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025 (lossmaking)"
+      },
       {
         "q": "2025Q2",
         "rev": 128.6,
@@ -183,7 +252,18 @@
         "nm": -31.5,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 143.0,
+      "yoy_pct": 11.2,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Intel Q2 2026 营收指引 $13.8-14.8B (mid $14.3B), 超 consensus $13.03B; Google Xeon 合作 + Tesla 14A 代工 + NVDA Rubin Xeon 6.",
+      "source": "Intel 业绩说明会 2026-04-30 Q2 guidance $13.8-14.8B (mid $14.3B)",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "QCOM": {
     "name": "Qualcomm",
@@ -194,6 +274,15 @@
     "market_cap_billion": 2483,
     "avg_turnover_pct": 1.8,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 109.8,
+        "gm": 55.03,
+        "nm": 25.61,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/qcom/financials/?p=quarterly",
+        "note": "Q2 FY2025 ending Mar 30 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 103.7,
@@ -224,7 +313,18 @@
         "src": "A",
         "note": "⚠ NM 69.5% > GM 53.8%, 因当季约 $25-30 亿一次性税收抵免, 营业层面 NM 应在 30% 左右. 量化模型已 clip 到 60% 处理."
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 96.0,
+      "yoy_pct": -7.4,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Qualcomm Q3 FY2026 营收指引 $9.2-10B (mid $9.6B); QCT $7.9-8.5B / QTL $1.15-1.35B; 汽车 +50% YoY 加速.",
+      "source": "Qualcomm 业绩说明会 2026-04-29 Q3 FY2026 guidance $9.2-10.0B (mid $9.6B)",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "MRVL": {
     "name": "Marvell",
@@ -235,6 +335,15 @@
     "market_cap_billion": 1472,
     "avg_turnover_pct": 3.8,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 18.2,
+        "gm": 50.48,
+        "nm": 11.02,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/mrvl/financials/?p=quarterly",
+        "note": "Q4 FY2025 ending Feb 1 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 19,
@@ -273,7 +382,18 @@
         "source_url": "https://www.sec.gov/Archives/edgar/data/0001835632/000183563226000014/q127_8kx522026ex-991.htm",
         "note": "FY27 Q1 (Feb-May 2026): 营收$24.2亿记录新高同比+28%, 数据中心$18.3亿占76%; GAAP NM 1.4% 因无形资产摊销+SBC; Non-GAAP NM ~30%"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 24.18,
+      "yoy_pct": 27.3,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Marvell 实际 Q1 FY2027 营收 $2.418B; GM 52.15%; NM 1.43% (含 one-off charge).",
+      "source": "公司 Q1 FY2027 实际公布 (ending May 2 2026)",
+      "data_type": "实际公布",
+      "confidence": "high"
+    }
   },
   "APP": {
     "name": "AppLovin",
@@ -284,6 +404,15 @@
     "market_cap_billion": 1530,
     "avg_turnover_pct": 4.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 11.6,
+        "gm": 86.91,
+        "nm": 49.74,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/app/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 12.6,
@@ -312,7 +441,18 @@
         "nm": 65.4,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 19.3,
+      "yoy_pct": 53.2,
+      "gm_estimate": 87.5,
+      "nm_estimate": 50.0,
+      "catalyst": "AppLovin 公司指引 Q2 营收 $1.92-1.95B (mid $1.93, YoY +53%); Axon 6月开放 self-serve; Adj EBITDA $1.615-1.645B 84-85% 利润率.",
+      "source": "AppLovin 业绩说明会 2026-05 Q2 guidance $1.915-1.945B",
+      "confidence": "high",
+      "data_type": "公司指引"
+    }
   },
   "TSM": {
     "name": "TSMC",
@@ -323,6 +463,15 @@
     "market_cap_billion": 21040,
     "avg_turnover_pct": 1,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 255.3,
+        "gm": 58.79,
+        "nm": 42.98,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/0001046179/000104617925000035/a1q25e_withguidancexfinal.htm",
+        "note": "Q1 2025 ending Mar 31 2025 (USD)"
+      },
       {
         "q": "2025Q2",
         "rev": 301,
@@ -351,7 +500,18 @@
         "nm": 50.5,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 396.0,
+      "yoy_pct": 31.6,
+      "gm_estimate": 65.0,
+      "nm_estimate": 49.0,
+      "catalyst": "TSMC 公司指引 Q2 营收 $39-40.2B (mid $39.6, +10% QoQ, +32% YoY); GM guided 65.5-67.5%; OPM 56.5-58.5%.",
+      "source": "TSMC 业绩说明会 2026-04-17 Q2 guidance $39-40.2B (mid $39.6)",
+      "confidence": "high",
+      "data_type": "公司指引"
+    }
   },
   "ASML": {
     "name": "ASML",
@@ -362,6 +522,15 @@
     "market_cap_billion": 5972,
     "avg_turnover_pct": 1.2,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 77.4,
+        "gm": 54.0,
+        "nm": 30.4,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/asml/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025 (EUR→USD)"
+      },
       {
         "q": "2025Q2",
         "rev": 87,
@@ -390,7 +559,18 @@
         "nm": 30.3,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 94.0,
+      "yoy_pct": 8.0,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "ASML Q2 2026 营收指引 €8.4-9.0B (≈$9.4B), GM 51-52%; 2026 全年 €36-40B 上调; High-NA EUV 出货爬坡.",
+      "source": "ASML 业绩说明会 2026-04 Q2 guidance €8.4-9.0B (mid €8.7B ≈ $9.4B)",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "AMAT": {
     "name": "Applied Materials",
@@ -401,6 +581,15 @@
     "market_cap_billion": 3550,
     "avg_turnover_pct": 2.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 71.7,
+        "gm": 48.79,
+        "nm": 16.54,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/amat/financials/?p=quarterly",
+        "note": "Q1 FY2025 ending Jan 26 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 71,
@@ -438,7 +627,18 @@
         "source_url": "https://www.globenewswire.com/news-release/2026/05/14/3295316/0/en/applied-materials-announces-second-quarter-2026-results.html",
         "note": "FY26 Q2 (Feb-Apr 2026): 营收$79.1亿记录新高同比+11%, GAAP NM 35.5% 含$7.71亿非经营性收入(投资收益等); 经营 OM 31.9%"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 79.1,
+      "yoy_pct": 11.4,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Applied Materials 实际 Q2 FY2026 营收 $7.91B; GM 49.90%; NM 35.47%; 代工 CapEx 持续.",
+      "source": "公司 Q2 FY2026 实际公布 (ending Apr 26 2026)",
+      "data_type": "实际公布",
+      "confidence": "high"
+    }
   },
   "KLAC": {
     "name": "KLA Corp",
@@ -449,6 +649,15 @@
     "market_cap_billion": 2465,
     "avg_turnover_pct": 1.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 30.63,
+        "gm": 61.62,
+        "nm": 35.53,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/klac/financials/?p=quarterly",
+        "note": "Q3 FY2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 32,
@@ -477,7 +686,18 @@
         "nm": 35.2,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 35.75,
+      "yoy_pct": 11.7,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "KLA Q4 FY2026 营收指引 $3.575B (±$200M); GAAP GM 60.72%; Non-GAAP EPS $9.87±$1; 全年收入 high-teens YoY 增长.",
+      "source": "KLA 业绩说明会 2026-04 Q4 FY2026 guidance $3.575B ± $200M",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "ONTO": {
     "name": "Onto Innovation",
@@ -488,6 +708,15 @@
     "market_cap_billion": 141,
     "avg_turnover_pct": 4,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 2.67,
+        "gm": 53.72,
+        "nm": 24.04,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/onto/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 29 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 3,
@@ -516,7 +745,18 @@
         "nm": 11.6,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 3.25,
+      "yoy_pct": 8.3,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Onto Q2 2026 营收指引 $320-330M (mid $325M, 上调 8%); Dragonfly G5 平台 2.5D AI 封装 6 月出货; Dragonfly 2026 +50% 增长.",
+      "source": "Onto Innovation 业绩说明会 2026-04 Q2 guidance $320-330M (mid $325M)",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "SNPS": {
     "name": "Synopsys",
@@ -527,6 +767,15 @@
     "market_cap_billion": 751,
     "avg_turnover_pct": 1.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 14.55,
+        "gm": 81.45,
+        "nm": 20.44,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/snps/financials/?p=quarterly",
+        "note": "Q1 FY2025 ending Jan 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 16,
@@ -565,7 +814,18 @@
         "source_url": "https://www.sec.gov/Archives/edgar/data/0000883241/000119312526241911/d126227dex991.htm",
         "note": "FY26 Q2 (Feb-Apr 2026): 营收$22.8亿同比+42%, GAAP NM 0.8% 因 Ansys 收购摊销持续; Non-GAAP NM ~28%"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 22.76,
+      "yoy_pct": 42.3,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Synopsys 实际 Q2 FY2026 营收 $2.276B; GM 72.33% (含 Ansys 整合一次性影响); EDA 双寡头之一.",
+      "source": "公司 Q2 FY2026 实际公布 (ending Apr 30 2026)",
+      "data_type": "实际公布",
+      "confidence": "high"
+    }
   },
   "MU": {
     "name": "Micron",
@@ -576,6 +836,15 @@
     "market_cap_billion": 8900,
     "avg_turnover_pct": 4.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 80.5,
+        "gm": 36.79,
+        "nm": 19.63,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/mu/financials/?p=quarterly",
+        "note": "Q2 FY2025 ending Feb 27 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 93,
@@ -606,7 +875,18 @@
         "source_url": "https://investors.micron.com/news-releases/news-release-details/micron-technology-inc-reports-results-second-quarter-fiscal-2026",
         "note": "FY2026 Q2 (Dec25-Feb26): HBM/AI内存爆发, 营收同比+196%至$238.6亿, GM 74.4%创历史新高, GAAP净利润$137.9亿"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 335.0,
+      "yoy_pct": 260.2,
+      "gm_estimate": 74.0,
+      "nm_estimate": 55.0,
+      "catalyst": "Micron 公司指引 Q3 FY2026 营收 $33.5B(±$0.75B) record; HBM3E 量产 + HBM4 送样; 分析师 range $33.7-40.9B 偏乐观.",
+      "source": "Micron 业绩说明会 2026-03 Q3 FY2026 guidance $33.5B ± $0.75B",
+      "confidence": "high",
+      "data_type": "公司指引"
+    }
   },
   "SNDK": {
     "name": "Sandisk",
@@ -617,6 +897,15 @@
     "market_cap_billion": 2285,
     "avg_turnover_pct": 5.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 17.0,
+        "gm": 22.54,
+        "nm": -114.04,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/sndk/financials/?p=quarterly",
+        "note": "Q3 FY2025 ending Mar 28 2025 (spinoff loss)"
+      },
       {
         "q": "2025Q2",
         "rev": 19,
@@ -645,7 +934,18 @@
         "nm": 60.8,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 80.0,
+      "yoy_pct": 321.1,
+      "gm_estimate": 76.0,
+      "nm_estimate": 57.0,
+      "catalyst": "SanDisk 公司指引 Q4 FY2026 营收 $7.75-8.25B (mid $8B); NAND 涨价持续; backlog $42B 创高; Non-GAAP EPS $30-33.",
+      "source": "SanDisk 业绩说明会 2026-04 Q4 FY2026 guidance $7.75-8.25B",
+      "confidence": "high",
+      "data_type": "公司指引"
+    }
   },
   "COHR": {
     "name": "Coherent",
@@ -656,6 +956,15 @@
     "market_cap_billion": 618,
     "avg_turnover_pct": 4,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 14.98,
+        "gm": 35.23,
+        "nm": -1.13,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/cohr/financials/?p=quarterly",
+        "note": "Q3 FY2025 ending Mar 31 2025 (NM 由 NI/Rev 反推)"
+      },
       {
         "q": "2025Q2",
         "rev": 15.3,
@@ -684,7 +993,18 @@
         "nm": 10.1,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 19.8,
+      "yoy_pct": 29.4,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Coherent Q4 FY2026 营收指引 $1.91-2.05B (mid $1.98B); Non-GAAP GM 39-41%; Non-GAAP EPS $1.52-1.72; 数据中心 + 通信需求强劲.",
+      "source": "Coherent 业绩说明会 2026-05 Q4 FY2026 guidance $1.91-2.05B (mid $1.98B)",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "LITE": {
     "name": "Lumentum",
@@ -695,6 +1015,15 @@
     "market_cap_billion": 703,
     "avg_turnover_pct": 4.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 4.25,
+        "gm": 33.28,
+        "nm": -10.37,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/lite/financials/?p=quarterly",
+        "note": "Q3 FY2025 ending Mar 29 2025 (亏损)"
+      },
       {
         "q": "2025Q2",
         "rev": 4.81,
@@ -723,7 +1052,18 @@
         "nm": 17.8,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 9.85,
+      "yoy_pct": 104.8,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Lumentum Q4 FY2026 营收指引 $960M-1.01B (mid $985M) 创纪录; Non-GAAP OPM 35-36%; 供需 imbalance >30%; 收购 indium phosphide fab 扩产.",
+      "source": "Lumentum Q3 FY2026 后指引 Q4 FY2026 $960M-1.01B (mid $985M)",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "FN": {
     "name": "Fabrinet",
@@ -734,6 +1074,15 @@
     "market_cap_billion": 253,
     "avg_turnover_pct": 3,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 8.72,
+        "gm": 11.72,
+        "nm": 9.32,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/fn/financials/?p=quarterly",
+        "note": "Q4 FY2025 ending Mar 28 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 9.1,
@@ -762,7 +1111,18 @@
         "nm": 10.3,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 12.7,
+      "yoy_pct": 39.6,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Fabrinet Q4 FY2026 营收指引 $1.25-1.29B (mid $1.27B); datacom 供应受限延续; 新客户协议拉动增长.",
+      "source": "Fabrinet 业绩说明会 2026-05-04 Q4 FY2026 guidance $1.25-1.29B (mid $1.27B)",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "MSFT": {
     "name": "Microsoft",
@@ -773,6 +1133,15 @@
     "market_cap_billion": 30510,
     "avg_turnover_pct": 0.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 700.66,
+        "gm": 68.72,
+        "nm": 36.86,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/msft/financials/?p=quarterly",
+        "note": "Q3 FY2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 764.4,
@@ -801,7 +1170,18 @@
         "nm": 38.3,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 872.5,
+      "yoy_pct": 14.1,
+      "gm_estimate": 68.5,
+      "nm_estimate": 36.5,
+      "catalyst": "MSFT 公司指引 Q4 FY2026 营收 $86.7-87.8B (mid $87.25B); LSEG consensus $87.53B; 6月最新 consensus 上修至 $89.37B; 报告 7/28/2026.",
+      "source": "Microsoft 业绩说明会 2026-04-29 Q3 后指引",
+      "data_type": "公司指引+分析师一致预期",
+      "confidence": "high"
+    }
   },
   "GOOGL": {
     "name": "Alphabet",
@@ -812,6 +1192,15 @@
     "market_cap_billion": 47330,
     "avg_turnover_pct": 0.8,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 902.34,
+        "gm": 59.7,
+        "nm": 38.28,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/googl/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 964.3,
@@ -853,6 +1242,15 @@
     "avg_turnover_pct": 0.7,
     "quarters": [
       {
+        "q": "2025Q1",
+        "rev": 1556.7,
+        "gm": 50.55,
+        "nm": 11.0,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/amzn/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
+      {
         "q": "2025Q2",
         "rev": 1677,
         "gm": 51.8,
@@ -880,7 +1278,18 @@
         "nm": 16.7,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 1965.0,
+      "yoy_pct": 17.2,
+      "gm_estimate": 51.0,
+      "nm_estimate": 11.5,
+      "catalyst": "Amazon 公司指引 Q2 营收 $194-199B (mid $196.5, +16-19% YoY); AWS 增长 + Prime Day 提前到 Q2; 超 consensus $188.9B (LSEG).",
+      "source": "Amazon 业绩说明会 2026-05 Q2 guidance $194-199B (mid $196.5)",
+      "confidence": "high",
+      "data_type": "公司指引"
+    }
   },
   "META": {
     "name": "Meta Platforms",
@@ -891,6 +1300,15 @@
     "market_cap_billion": 15300,
     "avg_turnover_pct": 0.7,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 423.14,
+        "gm": 82.11,
+        "nm": 39.33,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/meta/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 475.2,
@@ -920,7 +1338,18 @@
         "nm": 47.5,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 595.0,
+      "yoy_pct": 25.2,
+      "gm_estimate": 82.0,
+      "nm_estimate": 39.0,
+      "catalyst": "Meta 公司指引 Q2 营收 $58-61B (mid $59.5, +25% YoY); 2026 资本开支提至 $125-145B; AI 投入持续。",
+      "source": "Meta 业绩说明会 2026-04-29 Q2 guidance $58-61B (mid $59.5)",
+      "confidence": "high",
+      "data_type": "公司指引"
+    }
   },
   "AAPL": {
     "name": "Apple",
@@ -931,6 +1360,15 @@
     "market_cap_billion": 42910,
     "avg_turnover_pct": 0.6,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 953.59,
+        "gm": 47.05,
+        "nm": 25.99,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/aapl/financials/?p=quarterly",
+        "note": "Q2 FY2025 ending Mar 29 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 940.4,
@@ -959,7 +1397,18 @@
         "nm": 26.6,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 1085.0,
+      "yoy_pct": 15.4,
+      "gm_estimate": 47.0,
+      "nm_estimate": 26.0,
+      "catalyst": "Apple 公司指引 Q3 FY2026 营收增长 +14-17% YoY (vs prior $94B → ~$107-110B); iPhone/Mac 需求强劲。",
+      "source": "Apple 业绩说明会 2026-04-30 Q3 FY2026 guidance +14-17% YoY",
+      "confidence": "high",
+      "data_type": "公司指引"
+    }
   },
   "TSLA": {
     "name": "Tesla",
@@ -970,6 +1419,15 @@
     "market_cap_billion": 16520,
     "avg_turnover_pct": 3.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 193.35,
+        "gm": 16.31,
+        "nm": 2.17,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/tsla/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 225,
@@ -1010,6 +1468,15 @@
     "avg_turnover_pct": 8,
     "quarters": [
       {
+        "q": "2025Q1",
+        "rev": 9.82,
+        "gm": 73.32,
+        "nm": -32.08,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/crwv/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025 (recent IPO)"
+      },
+      {
         "q": "2025Q2",
         "rev": 12.1,
         "gm": 74.2,
@@ -1037,7 +1504,18 @@
         "nm": -35.6,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 25.3,
+      "yoy_pct": 109.1,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "CoreWeave Q2 2026 营收指引 $2.45-2.6B (mid $2.53B), 略低 LSEG consensus $2.69B; 全年 $12-13B; 2026 CapEx 上调至 $31-35B.",
+      "source": "CoreWeave 业绩说明会 2026-05 Q2 guidance $2.45-2.6B (mid $2.53B)",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "CEG": {
     "name": "Constellation Energy",
@@ -1048,6 +1526,15 @@
     "market_cap_billion": 1073,
     "avg_turnover_pct": 2,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 67.88,
+        "gm": 12.65,
+        "nm": 1.9,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/ceg/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 61,
@@ -1089,6 +1576,15 @@
     "avg_turnover_pct": 3.5,
     "quarters": [
       {
+        "q": "2025Q1",
+        "rev": 20.4,
+        "gm": 33.72,
+        "nm": 8.08,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/vrt/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
+      {
         "q": "2025Q2",
         "rev": 26.4,
         "gm": 34,
@@ -1127,6 +1623,15 @@
     "market_cap_billion": 1681,
     "avg_turnover_pct": 1.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 63.8,
+        "gm": 38.37,
+        "nm": 15.13,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/etn/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 70.3,
@@ -1167,6 +1672,15 @@
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
+        "q": "2025Q1",
+        "rev": 80.32,
+        "gm": 18.3,
+        "nm": 3.29,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/gev/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
+      {
         "q": "2025Q2",
         "rev": 91.1,
         "gm": 20.3,
@@ -1206,6 +1720,15 @@
     "market_cap_billion": 508,
     "avg_turnover_pct": 3,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 5.52,
+        "gm": 41.9,
+        "nm": 8.84,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/ccj/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025 (CAD→USD 0.7x)"
+      },
       {
         "q": "2025Q2",
         "rev": 6.3,
@@ -1296,6 +1819,15 @@
     "avg_turnover_pct": 2,
     "quarters": [
       {
+        "q": "2025Q1",
+        "rev": 12.41,
+        "gm": 97.74,
+        "nm": 16.92,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/arm/financials/?p=quarterly",
+        "note": "Q4 FY2025 ending Mar 31 2025"
+      },
+      {
         "q": "2025Q2",
         "rev": 10.5,
         "gm": 97.2,
@@ -1335,6 +1867,15 @@
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
+        "q": "2025Q1",
+        "rev": 47.2,
+        "gm": 49.02,
+        "nm": 28.19,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/lrcx/financials/?p=quarterly",
+        "note": "Q3 FY2025 ending Mar 31 2025"
+      },
+      {
         "q": "2025Q2",
         "rev": 51.7,
         "gm": 50.1,
@@ -1362,7 +1903,18 @@
         "nm": 31.3,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 66.0,
+      "yoy_pct": 27.7,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Lam Q4 FY2026 营收指引 $6.60B (±$400M); GM 50.5%; OPM 36.5%; H2 营收超 H1; WFE 2026 上调至 $140B+.",
+      "source": "Lam Research 业绩说明会 2026-04 Q4 FY2026 guidance $6.60B ± $400M",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "CDNS": {
     "name": "Cadence Design",
@@ -1373,6 +1925,15 @@
     "market_cap_billion": 800,
     "avg_turnover_pct": 1.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 12.42,
+        "gm": 86.55,
+        "nm": 22.02,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/cdns/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 12.8,
@@ -1414,6 +1975,15 @@
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
+        "q": "2025Q1",
+        "rev": 45.0,
+        "gm": 16.0,
+        "nm": 4.5,
+        "src": "F",
+        "source_url": "https://investor.aseglobal.com/",
+        "note": "Q1 2025 估算 (stockanalysis 无数据, 基于 Q2 48.4亿$ 季节性反推)"
+      },
+      {
         "q": "2025Q2",
         "rev": 48.4,
         "gm": 17,
@@ -1453,6 +2023,15 @@
     "avg_turnover_pct": 3.5,
     "quarters": [
       {
+        "q": "2025Q1",
+        "rev": 13.22,
+        "gm": 11.92,
+        "nm": 1.65,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/amkr/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
+      {
         "q": "2025Q2",
         "rev": 15.1,
         "gm": 12,
@@ -1480,7 +2059,18 @@
         "nm": 5,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 18.0,
+      "yoy_pct": 19.2,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Amkor Q2 2026 营收指引 $1.75-1.85B (mid $1.80B); GM 14.5-15.5%; 全年 CapEx $2.5-3B; Q1 营收 +27% YoY 创纪录.",
+      "source": "Amkor 业绩说明会 2026-04 Q2 guidance $1.75-1.85B (mid $1.80B)",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "TER": {
     "name": "Teradyne",
@@ -1491,6 +2081,15 @@
     "market_cap_billion": 250,
     "avg_turnover_pct": 2.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 6.86,
+        "gm": 60.57,
+        "nm": 15.24,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/ter/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 30 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 6.5,
@@ -1519,7 +2118,18 @@
         "nm": 31.5,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 12.0,
+      "yoy_pct": 84.6,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Teradyne Q2 2026 营收指引 $1.15-1.25B (mid $1.20B); Q1 营收 +87% AI 驱动; ~70% 营收 AI 相关; 全年 ~$6B.",
+      "source": "Teradyne 业绩说明会 2026-04 Q2 guidance $1.15-1.25B (mid $1.20B)",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "ANET": {
     "name": "Arista Networks",
@@ -1530,6 +2140,15 @@
     "market_cap_billion": 1400,
     "avg_turnover_pct": 1.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 20.05,
+        "gm": 63.65,
+        "nm": 40.59,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/anet/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 22.1,
@@ -1558,7 +2177,18 @@
         "nm": 37.8,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 28.0,
+      "yoy_pct": 26.7,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Arista Q2 2026 营收指引 $2.8B; GM 62-63%; 2026 全年 $11.5B (+27.7%); AI fabric 上调至 $3.5B; 供应链 lead time 52周.",
+      "source": "Arista 业绩说明会 2026-05 Q2 guidance ~$2.8B",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "CRDO": {
     "name": "Credo Technology",
@@ -1569,6 +2199,15 @@
     "market_cap_billion": 150,
     "avg_turnover_pct": 6,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 1.35,
+        "gm": 63.65,
+        "nm": 21.75,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/crdo/financials/?p=quarterly",
+        "note": "Q3 FY2025 ending Feb 1 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 1.7,
@@ -1613,7 +2252,18 @@
         "src": "F",
         "note": "FY26 Q4 (Feb-May 2026) 财报预计 2026/06 公布; 公司指引 $4.25-4.35亿, GM 63.9-65.9%"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 4.37,
+      "yoy_pct": 157.1,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Credo 实际 Q4 FY2026 营收 $437M; GM 68.21%; NM 38.70%; PCIe 5.0/6.0 互连 + AEC 量产爬坡.",
+      "source": "公司 Q4 FY2026 实际公布 (ending May 2 2026)",
+      "data_type": "实际公布",
+      "confidence": "high"
+    }
   },
   "ALAB": {
     "name": "Astera Labs",
@@ -1624,6 +2274,15 @@
     "market_cap_billion": 250,
     "avg_turnover_pct": 5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 1.59,
+        "gm": 74.89,
+        "nm": 19.96,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/alab/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 1.9,
@@ -1652,7 +2311,18 @@
         "nm": 26,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 3.6,
+      "yoy_pct": 89.5,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Astera Labs Q2 2026 营收指引 $355-365M (mid $360M, +15-18% QoQ); Non-GAAP EPS $0.68-0.70; GM ~73%; Scorpio/Aries/Torus 全线放量.",
+      "source": "Astera Labs 业绩说明会 2026-05-05 Q2 guidance $355-365M (mid $360M)",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "CIEN": {
     "name": "Ciena",
@@ -1663,6 +2333,15 @@
     "market_cap_billion": 150,
     "avg_turnover_pct": 3,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 10.72,
+        "gm": 44.0,
+        "nm": 4.16,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/cien/financials/?p=quarterly",
+        "note": "Q1 FY2025 ending Feb 1 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 11.3,
@@ -1692,7 +2371,18 @@
         "nm": 10.5,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 15.71,
+      "yoy_pct": 39.0,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Ciena 实际 Q2 FY2026 营收 $1.571B; GM 44.03%; NM 13.89%; DCI 数据中心互联 + 800G coherent 持续放量.",
+      "source": "公司 Q2 FY2026 实际公布 (ending May 2 2026)",
+      "data_type": "实际公布",
+      "confidence": "high"
+    }
   },
   "CSCO": {
     "name": "Cisco Systems",
@@ -1703,6 +2393,15 @@
     "market_cap_billion": 2800,
     "avg_turnover_pct": 1.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 139.91,
+        "gm": 65.12,
+        "nm": 17.35,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/csco/financials/?p=quarterly",
+        "note": "Q2 FY2025 ending Jan 25 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 141.5,
@@ -1732,7 +2431,18 @@
         "nm": 20.7,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 158.4,
+      "yoy_pct": 11.9,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Cisco 实际 Q3 FY2026 营收 $15.84B; GM 63.63%; NM 21.29%; AI 网络订单 ramp.",
+      "source": "公司 Q3 FY2026 实际公布 (ending Apr 25 2026)",
+      "data_type": "实际公布",
+      "confidence": "high"
+    }
   },
   "MPWR": {
     "name": "Monolithic Power",
@@ -1743,6 +2453,15 @@
     "market_cap_billion": 450,
     "avg_turnover_pct": 2.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 6.38,
+        "gm": 55.4,
+        "nm": 21.18,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/mpwr/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 6.6,
@@ -1771,7 +2490,18 @@
         "nm": 24,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 9.0,
+      "yoy_pct": 36.4,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Monolithic Power Q2 2026 营收指引 $890-910M (mid $900M, +35-36% YoY); 超 consensus $817M; GAAP GM 55.1-55.7%; AI 服务器 + 光模块电源驱动.",
+      "source": "MPWR 业绩说明会 2026-04 Q2 guidance $890-910M (mid $900M)",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "GLW": {
     "name": "Corning",
@@ -1782,6 +2512,15 @@
     "market_cap_billion": 600,
     "avg_turnover_pct": 2,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 34.52,
+        "gm": 35.17,
+        "nm": 5.36,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/glw/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 38.6,
@@ -1810,7 +2549,18 @@
         "nm": 9.9,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 46.0,
+      "yoy_pct": 19.2,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Corning Q2 2026 营收指引 $4.6B (+14% YoY); 上调自 $4.20-4.30B; Core EPS $0.73-0.77 +25%; AI 光纤主线驱动.",
+      "source": "Corning 业绩说明会 2026-04-28 Q2 guidance ~$4.6B",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "PWR": {
     "name": "Quanta Services",
@@ -1821,6 +2571,15 @@
     "market_cap_billion": 600,
     "avg_turnover_pct": 2,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 62.33,
+        "gm": 13.38,
+        "nm": 2.39,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/pwr/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 67.7,
@@ -1861,6 +2620,15 @@
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
+        "q": "2025Q1",
+        "rev": 38.67,
+        "gm": 18.69,
+        "nm": 6.22,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/eme/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
+      {
         "q": "2025Q2",
         "rev": 43,
         "gm": 19.4,
@@ -1888,7 +2656,18 @@
         "nm": 6.6,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 42.0,
+      "yoy_pct": -2.3,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "EMCOR Q2 2026 分析师 consensus 营收 $4.20B (EPS $5.90); 全年 guidance 上调至 $18.5-19.25B; backlog $15.62B +33%; AI DC 业务大幅增长.",
+      "source": "EMCOR 业绩说明会 2026-04 + 分析师 consensus Q2 ~$4.20B",
+      "data_type": "分析师一致预期",
+      "confidence": "high"
+    }
   },
   "FIX": {
     "name": "Comfort Systems",
@@ -1899,6 +2678,15 @@
     "market_cap_billion": 250,
     "avg_turnover_pct": 3,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 18.31,
+        "gm": 22.03,
+        "nm": 9.24,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/fix/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 21.7,
@@ -1938,6 +2726,15 @@
     "market_cap_billion": 80,
     "avg_turnover_pct": 3.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 6.47,
+        "gm": 25.65,
+        "nm": 12.9,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/mod/financials/?p=quarterly",
+        "note": "Q4 FY2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 6.8,
@@ -1981,6 +2778,15 @@
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
+        "q": "2025Q1",
+        "rev": 46.89,
+        "gm": 35.78,
+        "nm": 13.18,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/tt/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
+      {
         "q": "2025Q2",
         "rev": 57.5,
         "gm": 37.6,
@@ -2019,6 +2825,15 @@
     "market_cap_billion": 700,
     "avg_turnover_pct": 2,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 56.76,
+        "gm": 36.45,
+        "nm": 8.37,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/jci/financials/?p=quarterly",
+        "note": "Q2 FY2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 60.5,
@@ -2060,6 +2875,15 @@
     "avg_turnover_pct": 2,
     "quarters": [
       {
+        "q": "2025Q1",
+        "rev": 13.65,
+        "gm": 32.42,
+        "nm": 12.05,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/hubb/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
+      {
         "q": "2025Q2",
         "rev": 14.8,
         "gm": 37.2,
@@ -2098,6 +2922,15 @@
     "market_cap_billion": 50,
     "avg_turnover_pct": 4.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 2.78,
+        "gm": 29.94,
+        "nm": 16.63,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/powl/financials/?p=quarterly",
+        "note": "Q2 FY2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 2.9,
@@ -2138,6 +2971,15 @@
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
+        "q": "2025Q1",
+        "rev": 39.33,
+        "gm": 10.22,
+        "nm": -6.81,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/vst/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025 (Q1 lossmaking)"
+      },
+      {
         "q": "2025Q2",
         "rev": 42.5,
         "gm": 26.5,
@@ -2176,6 +3018,15 @@
     "market_cap_billion": 250,
     "avg_turnover_pct": 2,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 85.85,
+        "gm": 17.18,
+        "nm": 8.74,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/nrg/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 67.4,
@@ -2216,6 +3067,15 @@
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
+        "q": "2025Q1",
+        "rev": 42.41,
+        "gm": 65.2,
+        "nm": 17.52,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/kmi/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
+      {
         "q": "2025Q2",
         "rev": 40.4,
         "gm": 70,
@@ -2254,6 +3114,15 @@
     "market_cap_billion": 800,
     "avg_turnover_pct": 1.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 30.48,
+        "gm": 61.12,
+        "nm": 23.92,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/wmb/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 27.8,
@@ -2295,6 +3164,15 @@
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
+        "q": "2025Q1",
+        "rev": 141.3,
+        "gm": 70.31,
+        "nm": 20.78,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/orcl/financials/?p=quarterly",
+        "note": "Q3 FY2025 ending Feb 28 2025"
+      },
+      {
         "q": "2025Q2",
         "rev": 133.1,
         "gm": 70.7,
@@ -2322,7 +3200,18 @@
         "nm": 21.6,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 194.8,
+      "yoy_pct": 46.4,
+      "gm_estimate": 70.5,
+      "nm_estimate": 21.0,
+      "catalyst": "Oracle 公司指引 Q4 FY2026 营收 +19-21% YoY USD; Cloud +46-50%; 分析师 consensus $19.48B.",
+      "source": "ORCL Q4 FY2026 analyst consensus $19.48B (业绩 6/16 公布)",
+      "confidence": "high",
+      "data_type": "分析师一致预期"
+    }
   },
   "IREN": {
     "name": "IREN",
@@ -2333,6 +3222,15 @@
     "market_cap_billion": 130,
     "avg_turnover_pct": 8,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 1.45,
+        "gm": 71.03,
+        "nm": -11.15,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/iren/financials/?p=quarterly",
+        "note": "Q3 FY2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 1.9,
@@ -2375,6 +3273,15 @@
     "avg_turnover_pct": 4,
     "quarters": [
       {
+        "q": "2025Q1",
+        "rev": 8.84,
+        "gm": 80.43,
+        "nm": 24.63,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/pltr/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
+      {
         "q": "2025Q2",
         "rev": 10,
         "gm": 80.8,
@@ -2402,7 +3309,18 @@
         "nm": 53.7,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 18.0,
+      "yoy_pct": 80.0,
+      "gm_estimate": 81.0,
+      "nm_estimate": 30.0,
+      "catalyst": "Palantir 公司指引 Q2 营收 $1.80B (YoY +80%); 美国商业 +120% 指引; Foundry/AIP 持续高增, 远超 consensus $1.68-1.71B.",
+      "source": "Palantir 业绩说明会 2026-05 Q2 guidance $1.797-1.801B",
+      "confidence": "high",
+      "data_type": "公司指引"
+    }
   },
   "NOW": {
     "name": "ServiceNow",
@@ -2413,6 +3331,15 @@
     "market_cap_billion": 2200,
     "avg_turnover_pct": 1.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 30.88,
+        "gm": 78.92,
+        "nm": 14.9,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/now/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 32.2,
@@ -2441,7 +3368,18 @@
         "nm": 12.4,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 39.2,
+      "yoy_pct": 21.7,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "ServiceNow Q2 FY2026 订阅营收指引 $3.815-3.820B (+21-21.5% YoY CC); cRPO 增速 19.5%; 总营收按订阅×1.03 推算 ≈$3.92B.",
+      "source": "ServiceNow 业绩说明会 2026-04 Q2 FY2026 subscription guidance $3.815-3.820B (推算总营收 ≈$3.92B)",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   },
   "CRM": {
     "name": "Salesforce",
@@ -2452,6 +3390,15 @@
     "market_cap_billion": 2500,
     "avg_turnover_pct": 1.5,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 99.93,
+        "gm": 77.81,
+        "nm": 17.09,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/crm/financials/?p=quarterly",
+        "note": "Q4 FY2025 ending Jan 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 102.4,
@@ -2480,7 +3427,18 @@
         "nm": 15.7,
         "src": "A"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 111.0,
+      "yoy_pct": 8.4,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Salesforce 实际 Q1 FY2027 营收 $11.1B (+13% YoY); 含 Informatica $444M; Non-GAAP EPS $3.88 +50%; Q2 FY27 guidance $11.27-11.35B.",
+      "source": "公司 Q1 FY2027 实际公布 2026-05-27 (ending Apr 30 2026)",
+      "data_type": "实际公布",
+      "confidence": "high"
+    }
   },
   "RKLB": {
     "name": "Rocket Lab",
@@ -2491,6 +3449,15 @@
     "market_cap_billion": 722,
     "avg_turnover_pct": 6,
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 1.23,
+        "gm": 28.76,
+        "nm": -49.45,
+        "src": "A",
+        "source_url": "https://stockanalysis.com/stocks/rklb/financials/?p=quarterly",
+        "note": "Q1 2025 ending Mar 31 2025"
+      },
       {
         "q": "2025Q2",
         "rev": 1.4,
@@ -2523,6 +3490,17 @@
         "src": "A",
         "source_url": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-first-quarter-2026-financial-results"
       }
-    ]
+    ],
+    "q2_outlook": {
+      "q": "2026Q2",
+      "rev_estimate": 2.325,
+      "yoy_pct": 66.1,
+      "gm_estimate": null,
+      "nm_estimate": null,
+      "catalyst": "Rocket Lab Q2 2026 营收指引 $225-240M (mid $232.5M, +16% QoQ); Non-GAAP GM 38-40%; Backlog $2.2B; Neutron 中型火箭 2026 H2 首飞.",
+      "source": "Rocket Lab 业绩说明会 2026-05-07 Q2 guidance $225-240M (mid $232.5M)",
+      "data_type": "公司指引",
+      "confidence": "high"
+    }
   }
 }

@@ -1,7 +1,20 @@
 {
   "300308": {
+    "name": "中际旭创",
+    "cat": "infra",
+    "catLabel": "光模块",
+    "w": 9,
     "intro": "全球光模块龙头，800G/1.6T 高端光模块主供英伟达/谷歌/亚马逊。全球 AI 数据中心建设的核心受益者。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 66.74,
+        "gm": 36.7,
+        "nm": 23.71,
+        "src": "A",
+        "source_url": "https://www.stcn.com/article/detail/3756750.html",
+        "note": "2025Q1: 营收 66.74亿/归母 15.82亿(+56.83% YoY); NM=15.82/66.74=23.71%"
+      },
       {
         "q": "2025Q2",
         "rev": 81.2,
@@ -36,12 +49,25 @@
       }
     ],
     "strategic": 7,
-    "market_cap_billion": 9870,
+    "market_cap_billion": 12000,
     "avg_turnover_pct": 3
   },
   "300475": {
+    "name": "香农芯创",
+    "cat": "base",
+    "catLabel": "HBM 配套",
+    "w": 3,
     "intro": "存储分销 + HBM 配套，三星/海力士授权代理。HBM3/3E 渗透国内 AI 芯片厂商核心受益。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 79.03,
+        "gm": 3.2,
+        "nm": 1.5,
+        "src": "A",
+        "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202505141672598132_1.pdf",
+        "note": "2025Q1: H1 171.23亿 - Q2 92.2亿 = 79.03亿; GM/NM 估 (H1: GM 3.2/NM 1.5)"
+      },
       {
         "q": "2025Q2",
         "rev": 92.2,
@@ -80,8 +106,21 @@
     "avg_turnover_pct": 9.5
   },
   "601138": {
+    "name": "工业富联",
+    "cat": "infra",
+    "catLabel": "服务器代工",
+    "w": 2,
     "intro": "全球最大服务器 ODM/代工厂（富士康旗下），英伟达 GB200 主力供应商。AI 服务器代工绝对龙头但毛利率薄。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 1604.15,
+        "gm": 6.73,
+        "nm": 3.26,
+        "src": "A",
+        "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202411141640884986_1.pdf",
+        "note": "2025Q1: 营收 1604.15亿/归母 52.31亿(+24.99% YoY); GM 6.73%; NM 3.26%"
+      },
       {
         "q": "2025Q2",
         "rev": 2003.4,
@@ -120,8 +159,21 @@
     "avg_turnover_pct": 1.5
   },
   "603019": {
+    "name": "中科曙光",
+    "cat": "hw",
+    "catLabel": "整机集成",
+    "w": 7,
     "intro": "国家队服务器整机+海光大股东。高端通用算力+智能算力双布局，政企/超算订单稳定。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 25.86,
+        "gm": 26.07,
+        "nm": 7.19,
+        "src": "A",
+        "source_url": "https://stock.stockstar.com/RB2025050100003644.shtml",
+        "note": "2025Q1: 营收 25.86亿/归母 1.86亿(+30.79% YoY); NM=1.86/25.86=7.19%"
+      },
       {
         "q": "2025Q2",
         "rev": 32.6,
@@ -162,8 +214,21 @@
     "avg_turnover_pct": 3.8
   },
   "688008": {
+    "name": "澜起科技",
+    "cat": "base",
+    "catLabel": "存储接口",
+    "w": 5,
     "intro": "全球内存接口芯片三巨头之一，DDR5 RCD/DB/MRCD 等高速产品市占率领先。AI 服务器 HBM/DDR5 渗透核心受益。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 12.22,
+        "gm": 64.5,
+        "nm": 42.96,
+        "src": "A",
+        "source_url": "http://stcn.com/article/detail/1689533.html",
+        "note": "2025Q1: 营收 12.22亿/归母 5.25亿(+135% YoY); NM=42.96%"
+      },
       {
         "q": "2025Q2",
         "rev": 14.1,
@@ -203,8 +268,21 @@
     "avg_turnover_pct": 5.5
   },
   "688041": {
+    "name": "海光信息",
+    "cat": "core",
+    "catLabel": "核心芯片",
+    "w": 12,
     "intro": "国产服务器 CPU/DCU 双线龙头，海光 7 号 CPU + DCU 深算系列已量产。政企+互联网双驱动，营收增速最快的国产芯片之一。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 24.0,
+        "gm": 61.19,
+        "nm": 21.08,
+        "src": "A",
+        "source_url": "https://news.qq.com/rain/a/20250423A017FM00",
+        "note": "2025Q1: 营收 24亿/归母 5.06亿(+75% YoY); NM=NI/Rev=5.06/24=21.08%"
+      },
       {
         "q": "2025Q2",
         "rev": 30.6,
@@ -240,12 +318,25 @@
       }
     ],
     "strategic": 10,
-    "market_cap_billion": 6870,
+    "market_cap_billion": 7500,
     "avg_turnover_pct": 5.2
   },
   "688047": {
+    "name": "龙芯中科",
+    "cat": "core",
+    "catLabel": "自主指令集",
+    "w": 2,
     "intro": "国产自主指令集 LoongArch CPU 唯一供应商，工控+政务+教育多场景。亏损中但战略价值显著。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 1.25,
+        "gm": 38.0,
+        "nm": -120,
+        "src": "A",
+        "source_url": "https://stockmc.xueqiu.com/202604/688047_20260429_EN5Q.pdf",
+        "note": "2025Q1: 营收 ~1.25亿 (基于 2026Q1 1.35亿 -7.96% 反推); 持续亏损 NM 估 -120%"
+      },
       {
         "q": "2025Q2",
         "rev": 1.2,
@@ -286,8 +377,21 @@
     "avg_turnover_pct": 6.5
   },
   "688256": {
+    "name": "寒武纪",
+    "cat": "core",
+    "catLabel": "核心芯片",
+    "w": 12,
     "intro": "国产云端 AI 芯片龙头，思元系列对标英伟达，主线 ToB 政企/算力中心。受益国产替代+国内 AI 推训需求爆发。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 11.11,
+        "gm": 55.99,
+        "nm": 31.96,
+        "src": "A",
+        "source_url": "https://stock.stockstar.com/RB2025042000000504.shtml",
+        "note": "2025Q1: 营收+4230% YoY, 归母 3.55亿"
+      },
       {
         "q": "2025Q2",
         "rev": 17.7,
@@ -326,8 +430,21 @@
     "avg_turnover_pct": 4.5
   },
   "688347": {
+    "name": "华虹公司",
+    "cat": "base",
+    "catLabel": "晶圆代工",
+    "w": 2,
     "intro": "国内第二大晶圆代工厂，特色工艺（功率/模拟/存储）龙头。8 寸+12 寸双线，受益 IDM 国产替代。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 39.13,
+        "gm": 17.75,
+        "nm": 0.58,
+        "src": "A",
+        "source_url": "http://www.jjckb.cn/20250514/e616871f9057425896f058998987d093/c.html",
+        "note": "2025Q1: 营收 39.13亿/归母 0.23亿(-89.73% YoY); GM 17.75%; NM=0.23/39.13=0.58%"
+      },
       {
         "q": "2025Q2",
         "rev": 41.1,
@@ -366,8 +483,21 @@
     "avg_turnover_pct": 3
   },
   "688981": {
+    "name": "中芯国际",
+    "cat": "base",
+    "catLabel": "晶圆代工",
+    "w": 5,
     "intro": "国内最大晶圆代工厂，14nm/28nm 成熟制程产能领先。受美国制裁但国产替代订单饱满。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 163.01,
+        "gm": 22.5,
+        "nm": 8.32,
+        "src": "A",
+        "source_url": "https://finance.eastmoney.com/a/202602103646748960.html",
+        "note": "2025Q1: 营收 163.01亿/归母 13.56亿(+166.5% YoY); GM 22.5%; NM 8.32%"
+      },
       {
         "q": "2025Q2",
         "rev": 160.5,
@@ -421,8 +551,21 @@
     }
   },
   "002261": {
+    "name": "拓维信息",
+    "cat": "hw",
+    "catLabel": "昇腾整机",
+    "w": 9,
     "intro": "昇腾整机/华为生态合作核心，鲲鹏+昇腾全栈一体机供应商。教育信息化为基本盘，AI 算力是高弹性看点。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 6.23,
+        "gm": 13.86,
+        "nm": 10.49,
+        "src": "A",
+        "source_url": "https://www.163.com/dy/article/JU25OEKG051984TV.html",
+        "note": "2025Q1: 营收 6.23亿/归母 0.65亿; NM=0.6535/6.23=10.49%"
+      },
       {
         "q": "2025Q2",
         "rev": 6.8,
@@ -462,8 +605,21 @@
     "avg_turnover_pct": 8
   },
   "002837": {
+    "name": "英维克",
+    "cat": "infra",
+    "catLabel": "液冷",
+    "w": 8,
     "intro": "数据中心液冷/精密温控龙头，冷板/浸没式方案均布局，CDU/Manifold 全产业链。AI 服务器液冷渗透率提升核心受益。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 9.33,
+        "gm": 26.45,
+        "nm": 5.15,
+        "src": "A",
+        "source_url": "https://m.jiemian.com/article/12651539.html",
+        "note": "2025Q1: 营收 9.33亿/归母 0.48亿(-22.53% YoY); NM=0.4801/9.33=5.15%"
+      },
       {
         "q": "2025Q2",
         "rev": 16.4,
@@ -502,8 +658,21 @@
     "avg_turnover_pct": 3.5
   },
   "000977": {
+    "name": "浪潮信息",
+    "cat": "hw",
+    "catLabel": "整机集成",
+    "w": 6,
     "intro": "全球第二大 X86 服务器厂商，国内市占率第一。AI 服务器订单旺盛但毛利率受供应链压制。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 468.58,
+        "gm": 5.5,
+        "nm": 0.99,
+        "src": "A",
+        "source_url": "https://m.jiemian.com/article/12721535.html",
+        "note": "2025Q1: 营收 468.58亿/归母 4.63亿(+52.78% YoY); GM 估 5.5% (低毛利服务器); NM=4.63/468.58=0.99%"
+      },
       {
         "q": "2025Q2",
         "rev": 333.3,
@@ -542,8 +711,21 @@
     "avg_turnover_pct": 4.5
   },
   "000034": {
+    "name": "神州数码",
+    "cat": "hw",
+    "catLabel": "昇腾整机",
+    "w": 5,
     "intro": "ICT 分销+昇腾整机生态。云联管平台向 AaaS 服务转型，鲲鹏/昇腾一体机收入快速放量。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 317.78,
+        "gm": 3.73,
+        "nm": 0.68,
+        "src": "A",
+        "source_url": "http://stock.stockstar.com/RB2025042700001308.shtml",
+        "note": "2025Q1: 营收 317.78亿/归母 2.17亿(-7.51% YoY); NM=2.17/317.78=0.68%"
+      },
       {
         "q": "2025Q2",
         "rev": 398.1,
@@ -582,8 +764,21 @@
     "avg_turnover_pct": 5.5
   },
   "000938": {
+    "name": "紫光股份",
+    "cat": "hw",
+    "catLabel": "算力网络",
+    "w": 5,
     "intro": "国产数据中心交换机/路由器龙头（紫光/新华三），DPU/AI 网络芯片协同。算力网络互联核心标的。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 207.9,
+        "gm": 15.67,
+        "nm": 1.68,
+        "src": "A",
+        "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202505011665622181_1.pdf",
+        "note": "2025Q1: 营收 207.90亿/归母 3.49亿(-15.75%); NM=3.49/207.9=1.68%"
+      },
       {
         "q": "2025Q2",
         "rev": 266.4,
@@ -622,8 +817,21 @@
     "avg_turnover_pct": 3.2
   },
   "002156": {
+    "name": "通富微电",
+    "cat": "base",
+    "catLabel": "先进封装",
+    "w": 5,
     "intro": "国内先进封装龙头，AMD 主供 + 海光合作。HBM 封装/Chiplet/2.5D 方案布局，AI 芯片国产化关键环节。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 60.92,
+        "gm": 12.0,
+        "nm": 1.66,
+        "src": "A",
+        "source_url": "https://www.cls.cn/detail/2019088",
+        "note": "2025Q1: 营收 60.92亿/归母 1.01亿(+2.94% YoY); NM=1.01/60.92=1.66%; GM 估 12% (接近 Q2)"
+      },
       {
         "q": "2025Q2",
         "rev": 69.5,
@@ -662,8 +870,21 @@
     "avg_turnover_pct": 4.8
   },
   "002409": {
+    "name": "雅克科技",
+    "cat": "base",
+    "catLabel": "HBM 材料",
+    "w": 3,
     "intro": "半导体材料平台，光刻胶/前驱体/电子特气全布局，HBM 用 LCP 薄膜独家供应。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 13.5,
+        "gm": 36.0,
+        "nm": 17.0,
+        "src": "A",
+        "source_url": "https://www.shidaotec.com/fina-analysis/2025-03-31/002409.html",
+        "note": "2025Q1: 营收增速 +30.88%, NM 增速 +5.85%; 营收/GM/NM 由 H1 拆估"
+      },
       {
         "q": "2025Q2",
         "rev": 21.8,
@@ -702,8 +923,21 @@
     "avg_turnover_pct": 6
   },
   "600584": {
+    "name": "长电科技",
+    "cat": "base",
+    "catLabel": "先进封装",
+    "w": 6,
     "intro": "国内封测龙头，全球Top3 OSAT。XDFOI芯粒高密度多维异构集成系列工艺量产，AI先进封装业务占比超42%，2025年先进封装收入达270亿元创新高，CPO实现样品出货，深度受益AI算力封装需求。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 91.71,
+        "gm": 14.55,
+        "nm": 2.17,
+        "src": "A",
+        "source_url": "https://www.sdyanbao.com/detail/745541",
+        "note": "2025Q1: 营收 91.71亿(-1.76%)/归母 2.0亿(+42.74%); GM 14.55%; NM 2.17%"
+      },
       {
         "q": "2025Q2",
         "rev": 92.7,
@@ -742,8 +976,21 @@
     "avg_turnover_pct": 7.5
   },
   "002463": {
+    "name": "沪电股份",
+    "cat": "infra",
+    "catLabel": "AI PCB",
+    "w": 8,
     "intro": "AI服务器/交换机PCB龙头，英伟达GB200/GB300核心供应商，北美AI服务器份额超80%。GB300订单排至2026Q3，单机柜价值量超500美元，泰国二期产能2026年贡献50-60亿元营收。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 40.38,
+        "gm": 32.75,
+        "nm": 18.87,
+        "src": "A",
+        "source_url": "https://wallstreetcn.com/articles/3770620",
+        "note": "2025Q1: 营收 40.38亿/归母 7.62亿(+48.11% YoY); GM 32.75%; NM=7.62/40.38=18.87%"
+      },
       {
         "q": "2025Q2",
         "rev": 44.56,
@@ -782,48 +1029,78 @@
     "avg_turnover_pct": 4.5
   },
   "300476": {
+    "name": "胜宏科技",
+    "cat": "infra",
+    "catLabel": "AI PCB",
+    "w": 7,
     "intro": "AI高端HDI/PCB领军，英伟达GB200/GB300服务器PCB全球份额超50%，2026年4月港股上市市值破3000亿港元。泰国二期产能放量，叠加谷歌TPU V7P订单贡献，2025年净利润同比+273.5%。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 43.12,
+        "gm": 36.5,
+        "nm": 21.36,
+        "src": "A",
+        "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202504251662227376_1.pdf",
+        "note": "2025Q1: 营收 43.12亿/归母 9.21亿; H1 90.31亿/21.43亿; NM=9.21/43.12=21.36%; GM 估 36.5% (接近 H1 36.22)"
+      },
       {
         "q": "2025Q2",
         "rev": 47.19,
         "gm": 36.22,
-        "nm": 25.9,
+        "nm": 25.89,
         "src": "A",
-        "source_url": "https://wap.stockstar.com/detail/RB2025090600006117"
+        "source_url": "https://wap.stockstar.com/detail/RB2025090600006117",
+        "note": "H1 90.31亿/归母21.43亿; Q1 43.12亿/9.21亿; Q2=H1-Q1"
       },
       {
         "q": "2025Q3",
-        "rev": 51.0,
+        "rev": 50.86,
         "gm": 35.85,
-        "nm": 21.6,
+        "nm": 21.66,
         "src": "A",
-        "source_url": "https://wallstreetcn.com/articles/3757994"
+        "source_url": "https://wallstreetcn.com/articles/3757994",
+        "note": "9M 141.17亿/归母32.45亿; Q3 单季 50.86亿/11.02亿 (公司三季报)"
       },
       {
         "q": "2025Q4",
         "rev": 51.75,
-        "gm": 34.0,
-        "nm": 20.6,
+        "gm": 35.0,
+        "nm": 20.62,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/roll/2026-03-12/doc-inhqtyyi4632124.shtml"
+        "source_url": "https://finance.sina.com.cn/roll/2026-03-12/doc-inhqtyyi4632124.shtml",
+        "note": "FY 192.92亿/归母43.12亿/扣非43.04亿 (+273.52% YoY); Q4=FY-9M=51.75亿/10.67亿"
       },
       {
         "q": "2026Q1",
-        "rev": 63.8,
-        "gm": 34.46,
-        "nm": 33.86,
+        "rev": 55.19,
+        "gm": 34.5,
+        "nm": 23.34,
         "src": "A",
-        "source_url": "https://caifuhao.eastmoney.com/news/20260422031335093485810"
+        "source_url": "https://cj.sina.com.cn/articles/view/7935425109/1d8fcfa5502001f7mw",
+        "note": "营收 55.19亿/归母 12.88亿/扣非 12.57亿 (差 2.4% 主营驱动); NM=23.34% 与 FY 2025 NM 22.4% 一致, 非一次性"
       }
     ],
     "strategic": 7,
-    "market_cap_billion": 380,
+    "market_cap_billion": 3300,
     "avg_turnover_pct": 6
   },
   "002371": {
+    "name": "北方华创",
+    "cat": "base",
+    "catLabel": "半导体设备",
+    "w": 8,
     "intro": "国内半导体设备综合龙头，刻蚀/沉积/扩散/CMP/清洗/离子注入全平台布局，控股芯源微进一步拓展涂胶显影/清洗/封装设备。受益AI驱动晶圆厂史诗级扩产，2026年全球设备销售预期1450亿美元。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 82.06,
+        "gm": 41.5,
+        "nm": 19.11,
+        "src": "A",
+        "source_url": "https://www.shidaotec.com/fina-analysis/2025-03-31/002371.html",
+        "note": "2025Q1: 营收 82.06亿/归母 15.68亿(+40.13% YoY); GM 估 41.5% (2024 全年); NM=15.68/82.06=19.11%"
+      },
       {
         "q": "2025Q2",
         "rev": 79.4,
@@ -863,8 +1140,21 @@
     "avg_turnover_pct": 1.5
   },
   "688012": {
+    "name": "中微公司",
+    "cat": "base",
+    "catLabel": "刻蚀设备",
+    "w": 7,
     "intro": "国产刻蚀设备龙头，CCP/ICP全覆盖，台积电/中芯/长江存储核心供应商，刻蚀反应台全球累计出货超6800台。新一代低温刻蚀设备已交付验证，薄膜LPCVD设备2025年收入同比+224%，5nm及以下产线批量应用。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 21.01,
+        "gm": 41.5,
+        "nm": 14.2,
+        "src": "A",
+        "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202504251662192766_1.pdf",
+        "note": "2025Q1: 营收 21.01亿/归母 3.1亿(+25.7% YoY); GM 41.5%; NM 14.2%"
+      },
       {
         "q": "2025Q2",
         "rev": 27.87,
@@ -903,8 +1193,21 @@
     "avg_turnover_pct": 2.5
   },
   "688120": {
+    "name": "华海清科",
+    "cat": "base",
+    "catLabel": "CMP 设备",
+    "w": 4,
     "intro": "国产CMP设备唯一龙头，全球第三家12英寸CMP量产商。2026年4月第1000台CMP装备出机，存储/逻辑订单占比大，部分产能被核心客户提前锁定。先进制程机型订单显著增长，离子注入机交付存储龙头。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 9.12,
+        "gm": 46.37,
+        "nm": 25.58,
+        "src": "A",
+        "source_url": "https://news.qq.com/rain/a/20250430A01H4X00",
+        "note": "2025Q1: 营收 9.12亿/归母 2.33亿(+15.47% YoY); GM 46.37%; NM 25.58%"
+      },
       {
         "q": "2025Q2",
         "rev": 12.65,
@@ -943,8 +1246,21 @@
     "avg_turnover_pct": 3
   },
   "300604": {
+    "name": "长川科技",
+    "cat": "base",
+    "catLabel": "测试设备",
+    "w": 4,
     "intro": "国内测试设备No.1，覆盖SoC/逻辑/混合信号/RF芯片测试机+分选机+AOI。D9000数字测试机性能逼近国际先进水平，深度受益AI芯片+存储测试需求+封测厂扩产，在手订单覆盖2026全年1.6倍。",
     "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 8.15,
+        "gm": 52.75,
+        "nm": 13.42,
+        "src": "A",
+        "source_url": "https://stock.stockstar.com/RB2025043000009341.shtml",
+        "note": "2025Q1: 营收 8.15亿(+45.74% YoY); GM 52.75%; NM 13.42%"
+      },
       {
         "q": "2025Q2",
         "rev": 11.45,
@@ -981,5 +1297,233 @@
     "strategic": 7,
     "market_cap_billion": 380,
     "avg_turnover_pct": 5
+  },
+  "002028": {
+    "name": "思源电气",
+    "cat": "power",
+    "catLabel": "中高压配电",
+    "w": 7,
+    "intro": "国内中高压一次设备龙头，GIS/开关柜/变压器/智能配电全布局。AI 数据中心 10kV+ 中压配电核心供应商，2026 北美数据中心订单目标 15亿+；常州东芝二期高压厂房 2025-11 投产专攻北美智算；国家电网 2025 中标金额同比 +82% 远超行业。",
+    "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 32.27,
+        "gm": 31.0,
+        "nm": 13.85,
+        "src": "A",
+        "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202510251768794186_1.pdf",
+        "note": "2025Q1: H1 84.97-Q2 52.7=32.27亿; 归母 12.93-8.46=4.47亿; NM=4.47/32.27=13.85%; GM 估 (H1 偏低)"
+      },
+      {
+        "q": "2025Q2",
+        "rev": 52.7,
+        "gm": 32.5,
+        "nm": 16.05,
+        "src": "A",
+        "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202510251768794186_1.pdf",
+        "note": "Q1 营收32.27/归母4.47亿; H1 营收84.97/归母12.93亿; Q2=H1-Q1; GM由FY 32.32%估算"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 53.3,
+        "gm": 33.0,
+        "nm": 16.87,
+        "src": "A",
+        "source_url": "https://stock.stockstar.com/RB2025101900001302.shtml",
+        "note": "9M 138.27亿/归母21.91亿; Q3=9M-H1=53.3亿/8.99亿; GM 由9M 32.32%-H1反推"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 77.13,
+        "gm": 32.5,
+        "nm": 12.43,
+        "src": "A",
+        "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202604191821323096_1.pdf",
+        "note": "FY 215.4亿/归母31.5亿; Q4=FY-9M=77.13亿/9.59亿"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 45.69,
+        "gm": 28.95,
+        "nm": 12.04,
+        "src": "A",
+        "source_url": "https://finance.eastmoney.com/a/202604253718989616.html",
+        "note": "营收+41.6% YoY; GM下滑1.36pct系储能/EPC低毛利占比提升"
+      }
+    ],
+    "strategic": 8,
+    "market_cap_billion": 1700,
+    "avg_turnover_pct": 3
+  },
+  "688676": {
+    "name": "金盘科技",
+    "cat": "power",
+    "catLabel": "干式变压器",
+    "w": 5,
+    "intro": "国内干式变压器龙头，数据中心专用变压器主力供应商。2025 数据中心营收 +196.78%；海外 SST 在手订单 69.6亿元（≈H1 全年 1.4x）；10kV/2.4MW 固态变压器适配 HVDC 800V，进入华为/百度/阿里 AI 供应链；海外占比 30%+，三厂爬坡中。",
+    "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 13.0,
+        "gm": 24.0,
+        "nm": 7.69,
+        "src": "A",
+        "source_url": "https://caifuhao.eastmoney.com/news/20250331152604206338980",
+        "note": "2025Q1: H1 31.54-Q2 18.54=13亿; 归母 2.65-1.65(est Q2)≈1.0亿; NM 估 7.7%; GM 估 24% (H1 25.87)"
+      },
+      {
+        "q": "2025Q2",
+        "rev": 18.54,
+        "gm": 25.5,
+        "nm": 8.9,
+        "src": "F",
+        "source_url": "https://caifuhao.eastmoney.com/news/20250331152604206338980",
+        "note": "H1 31.54亿/归母2.65亿; Q1 估13亿/1.0亿; Q2=H1-Q1 估算单季"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 20.4,
+        "gm": 26.39,
+        "nm": 10.76,
+        "src": "A",
+        "source_url": "https://stock.stockstar.com/RB2026042500020445.shtml",
+        "note": "公司三季报披露单季 GM/NM 实测值"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 21.06,
+        "gm": 26.0,
+        "nm": 8.26,
+        "src": "A",
+        "source_url": "https://view.inews.qq.com/a/20260425A01YP900",
+        "note": "FY 73亿/归母6.6亿; Q4=FY-9M=21.06亿/1.74亿"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 15.23,
+        "gm": 25.74,
+        "nm": 7.35,
+        "src": "A",
+        "source_url": "https://finance.sina.com.cn/jjxw/2026-04-24/doc-inhvqfhe4435411.shtml",
+        "note": "营收+13.41% YoY; 归母+4.83% YoY"
+      }
+    ],
+    "strategic": 7,
+    "market_cap_billion": 320,
+    "avg_turnover_pct": 5
+  },
+  "002335": {
+    "name": "科华数据",
+    "cat": "power",
+    "catLabel": "数据中心 UPS",
+    "w": 5,
+    "intro": "国内大功率 UPS 龙头（高端 UPS 市占 18.6% 全国第一），数据中心电源+IDC 自营运营双主业。HVDC 240V/336V 自研产品已部署互联网/金融智算中心；2025 全年归母 +32.62%；前三季度受新能源拖累但 Q4 单季大幅回升。",
+    "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 12.2,
+        "gm": 22.0,
+        "nm": 6.54,
+        "src": "A",
+        "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202504291664460281_1.pdf",
+        "note": "2025Q1: H1 37.33-Q2 25.13=12.20亿; 归母 0.80亿(est); NM 估 6.5%; GM 估 22% (H1 平均)"
+      },
+      {
+        "q": "2025Q2",
+        "rev": 25.13,
+        "gm": 24.5,
+        "nm": 6.54,
+        "src": "A",
+        "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202504291664460281_1.pdf",
+        "note": "H1 37.33亿/归母2.44亿; Q1 估12.2亿; Q2=H1-Q1=25.13亿; GM 由数据中心29.35%/智慧电能36.39%/新能源17.51%加权"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 16.6,
+        "gm": 25.0,
+        "nm": -0.36,
+        "src": "A",
+        "source_url": "https://news.qq.com/rain/a/20251101A012RB00",
+        "note": "9M 53.93亿/归母2.38亿(-46.53% YoY); Q3=9M-H1=16.6亿/-0.06亿单季亏损"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 27.67,
+        "gm": 28.0,
+        "nm": 6.5,
+        "src": "A",
+        "source_url": "https://finance.sina.com.cn/stock/bxjj/2026-04-26/doc-inhvvkkh9956084.shtml",
+        "note": "FY 81.6亿/归母4.18亿; Q4=FY-9M=27.67亿/1.80亿大幅回升"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 14.3,
+        "gm": 27.85,
+        "nm": 5.45,
+        "src": "A",
+        "source_url": "https://news.qq.com/rain/a/20260428A01SV800",
+        "note": "营收+17.57% YoY; 归母+13.15% YoY"
+      }
+    ],
+    "strategic": 7,
+    "market_cap_billion": 280,
+    "avg_turnover_pct": 5
+  },
+  "002518": {
+    "name": "科士达",
+    "cat": "power",
+    "catLabel": "UPS + 储能",
+    "w": 3,
+    "intro": "数据中心 UPS + 储能 PCS 双主业。2025 全年归母 +54.97%（业绩快报），25Q3 单季营收 +41.71% 加速增长；模块化 UPS + 锂电 BBU 切入 AI 高密机柜备电；海外储能（户储+大储）+ 国内 IDC 配套双轮，AI 用电弹性标的。",
+    "quarters": [
+      {
+        "q": "2025Q1",
+        "rev": 9.43,
+        "gm": 28.0,
+        "nm": 11.77,
+        "src": "A",
+        "source_url": "https://m.jiemian.com/article/13271574.html",
+        "note": "2025Q1: 营收 9.43亿/归母 1.11亿(-10.44% YoY); NM=1.11/9.43=11.77%; GM 估 28%"
+      },
+      {
+        "q": "2025Q2",
+        "rev": 12.2,
+        "gm": 28.99,
+        "nm": 11.8,
+        "src": "A",
+        "source_url": "https://m.jiemian.com/article/13271574.html",
+        "note": "Q1 9.43亿/归母1.11亿; H1 21.63亿/归母2.55亿; Q2=H1-Q1=12.2亿/1.44亿; GM=H1 28.99%"
+      },
+      {
+        "q": "2025Q3",
+        "rev": 14.46,
+        "gm": 27.73,
+        "nm": 13.14,
+        "src": "A",
+        "source_url": "https://stock.stockstar.com/RB2025102800006840.shtml",
+        "note": "单Q3 营收+41.71% YoY/归母+38.36%; GM 由9M 28.57%-H1反推"
+      },
+      {
+        "q": "2025Q4",
+        "rev": 16.61,
+        "gm": 29.5,
+        "nm": 9.93,
+        "src": "A",
+        "source_url": "https://www.fxbaogao.com/detail/5109660",
+        "note": "FY 52.70亿/归母6.11亿; Q4=FY-9M=16.61亿/1.65亿; GM由FY 28.98%-9M反推"
+      },
+      {
+        "q": "2026Q1",
+        "rev": 12.4,
+        "gm": 29.71,
+        "nm": 11.21,
+        "src": "A",
+        "source_url": "https://news.qq.com/rain/a/20260428A01SUM00",
+        "note": "营收+31.47% YoY; 归母+24.84% YoY; GM 同比+1.16pct"
+      }
+    ],
+    "strategic": 6,
+    "market_cap_billion": 150,
+    "avg_turnover_pct": 6
   }
 }

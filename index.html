@@ -94,6 +94,7 @@
   .L2 .num{background:var(--gold)}
   .L3 .num{background:var(--cyan)}
   .L4 .num{background:var(--purple)}
+  .L5 .num{background:#2ecc71}
   .layer .desc{font-size:12px;color:var(--muted)}
   .layer h3 .layer-avg{
     margin-left:auto;font-size:11px;font-weight:700;
@@ -125,6 +126,7 @@
   .pill.infra{background:rgba(41,214,214,.18);color:#7ce7e7}
   .pill.hw{background:rgba(245,179,1,.18);color:#ffd466}
   .pill.base{background:rgba(157,123,255,.18);color:#c0a8ff}
+  .pill.power{background:rgba(46,204,113,.18);color:#7ee2a3}
 
   .pf-wrap{position:relative;height:240px}
   .pf-legend{margin-top:10px;display:flex;flex-direction:column;gap:6px;font-size:12px}
@@ -444,6 +446,11 @@
         <h3><span class="num">4</span>物理层 · 液冷 / 光模块 / PCB<span class="layer-avg" id="aLayerAvg4">--</span></h3>
         <div class="desc">液冷必选，800G/1.6T 光模块，AI 服务器高多层 PCB。</div>
         <div class="chips"><span class="chip">英维克</span><span class="chip">中际旭创</span><span class="chip">工业富联</span><span class="chip">沪电股份</span><span class="chip">胜宏科技</span></div>
+      </div>
+      <div class="layer L5" style="grid-column:1 / -1">
+        <h3><span class="num">5</span>电力配套 · 配电 / UPS / 变压器<span class="layer-avg" id="aLayerAvg5">--</span></h3>
+        <div class="desc">下半场瓶颈：AI 算力翻倍 → 园区电力配套先行。中高压一次设备 / 数据中心 UPS / 干式变压器，AI 用电的最后一公里。</div>
+        <div class="chips"><span class="chip">思源电气</span><span class="chip">金盘科技</span><span class="chip">科华数据</span><span class="chip">科士达</span></div>
       </div>
     </div>
 
@@ -829,7 +836,7 @@
     <h3 id="infoTitle">--</h3>
     <div class="info-stats" id="infoStats"></div>
 
-    <!-- 公司基本面 (业务简介 + 4 季度财务) -->
+    <!-- 公司基本面 (业务简介 + 5 季度财务 + Q2 预期) -->
     <div id="companyBasics" style="margin:14px 0;padding:14px;background:rgba(245,179,1,.04);border:1px solid rgba(245,179,1,.2);border-radius:8px"></div>
 
     <div class="info-add">
@@ -875,40 +882,23 @@ window.addEventListener('unhandledrejection', (ev) => {
   console.error('[unhandled rejection]', ev.reason);
 });
 
-// ============ Watchlist (static base data) ============
-const WATCH = [
-  {code:"688256",name:"寒武纪",   cat:"core",  catLabel:"核心芯片", w:12},
-  {code:"688041",name:"海光信息", cat:"core",  catLabel:"核心芯片", w:12},
-  {code:"002261",name:"拓维信息", cat:"hw",    catLabel:"昇腾整机", w:9},
-  {code:"300308",name:"中际旭创", cat:"infra", catLabel:"光模块",   w:9},
-  {code:"002837",name:"英维克",   cat:"infra", catLabel:"液冷",     w:8},
-  {code:"603019",name:"中科曙光", cat:"hw",    catLabel:"整机集成", w:7},
-  {code:"000977",name:"浪潮信息", cat:"hw",    catLabel:"整机集成", w:6},
-  {code:"000034",name:"神州数码", cat:"hw",    catLabel:"昇腾整机", w:5},
-  {code:"000938",name:"紫光股份", cat:"hw",    catLabel:"算力网络", w:5},
-  {code:"002156",name:"通富微电", cat:"base",  catLabel:"先进封装", w:5},
-  {code:"688008",name:"澜起科技", cat:"base",  catLabel:"存储接口", w:5},
-  {code:"688981",name:"中芯国际", cat:"base",  catLabel:"晶圆代工", w:5},
-  {code:"300475",name:"香农芯创", cat:"base",  catLabel:"HBM 配套", w:3},
-  {code:"002409",name:"雅克科技", cat:"base",  catLabel:"HBM 材料", w:3},
-  {code:"688347",name:"华虹公司", cat:"base",  catLabel:"晶圆代工", w:2},
-  {code:"688047",name:"龙芯中科", cat:"core",  catLabel:"自主指令集", w:2},
-  {code:"601138",name:"工业富联", cat:"infra", catLabel:"服务器代工", w:2},
-  // 2026-05 新增观察
-  {code:"600584",name:"长电科技", cat:"base",  catLabel:"先进封装", w:6},
-  {code:"002463",name:"沪电股份", cat:"infra", catLabel:"AI PCB",   w:8},
-  {code:"300476",name:"胜宏科技", cat:"infra", catLabel:"AI PCB",   w:7},
-  {code:"002371",name:"北方华创", cat:"base",  catLabel:"半导体设备", w:8},
-  {code:"688012",name:"中微公司", cat:"base",  catLabel:"刻蚀设备", w:7},
-  {code:"688120",name:"华海清科", cat:"base",  catLabel:"CMP 设备",  w:4},
-  {code:"300604",name:"长川科技", cat:"base",  catLabel:"测试设备", w:4},
-];
+// ============ Watchlist ============
+// WATCH 从 data/companies.json 派生 (loadCompanies 完成后填充)
+// 单一数据源, 与 .github/scripts/scan_signals.py 共享同一个 companies.json
+let WATCH = [];
+function buildWatchFromCompanies(){
+  if (!companiesData) return;
+  WATCH = Object.entries(companiesData)
+    .filter(([code, c]) => !code.startsWith('_') && c.name && c.cat)
+    .map(([code, c]) => ({ code, name: c.name, cat: c.cat, catLabel: c.catLabel || '', w: c.w || 5 }));
+}
 // A 股产业链分层 → 成分股代码 (用于当日涨跌幅平均)
 const A_LAYER_CODES = {
   1: ["688256","688041","688047"],                                                                     // L1 核心算力芯片 (昇腾未上市)
   2: ["603019","000977","002261","000034","000938"],                                                   // L2 服务器整机
   3: ["002156","600584","688008","300475","002409","688981","688347","002371","688012","688120","300604"], // L3 上游支撑 封装/设备/材料
-  4: ["002837","300308","601138","002463","300476"]                                                    // L4 物理层 液冷/光模块/PCB
+  4: ["002837","300308","601138","002463","300476"],                                                   // L4 物理层 液冷/光模块/PCB
+  5: ["002028","688676","002335","002518"]                                                             // L5 电力配套 配电/UPS/变压器
 };
 
 // 渲染产业链分层每层当日涨跌幅平均 (市场热度)
@@ -936,7 +926,6 @@ function pfx(code){
   // 6xx → sh (Shanghai), others → sz (Shenzhen)
   return (code[0] === '6') ? ('sh' + code) : ('sz' + code);
 }
-const QUOTE_KEYS = WATCH.map(w => pfx(w.code));
 
 // ============ Tencent quote API via JSONP-style script tag ============
 // qt.gtimg.cn returns: v_sh688256="1~寒武纪~688256~price~prevClose~open~vol~...~time~chg~chgPct~high~low~..."
@@ -944,15 +933,17 @@ const QUOTE_KEYS = WATCH.map(w => pfx(w.code));
 let lastQuotes = {};
 
 function fetchQuotes(){
+  const keys = WATCH.map(w => pfx(w.code));
+  if (keys.length === 0) return Promise.resolve({});
   return new Promise((resolve) => {
     const script = document.createElement("script");
     script.charset = "GBK"; // Tencent endpoint returns GBK
-    script.src = `https://qt.gtimg.cn/q=${QUOTE_KEYS.join(",")}&_=${Date.now()}`;
+    script.src = `https://qt.gtimg.cn/q=${keys.join(",")}&_=${Date.now()}`;
     let done = false;
     const finish = () => {
       if (done) return; done = true;
       const out = {};
-      QUOTE_KEYS.forEach(k => {
+      keys.forEach(k => {
         const raw = window["v_" + k];
         if (raw) out[k.slice(2)] = parseQuote(raw);
       });
@@ -1013,10 +1004,10 @@ function colorClass(n){
 let _quantWeights = null;
 function computeQuantWeights(){
   if (!companiesData) return null;  // 数据没加载时 fallback 到硬编码 r.w
-  // 仅对有完整 4 季 quarters 数据的票打分; 新加入未补数据的票自动跳过量化排名
+  // 严格要求 5 季 (Q1 同期 → Q1, 真 YoY); 不足 5 季自动跳过
   const codes = WATCH.map(s => s.code).filter(code => {
     const c = companiesData[code];
-    return c && c.quarters && c.quarters.length >= 4
+    return c && c.quarters && c.quarters.length >= 5
       && c.quarters.every(q => q.rev !== null && q.gm !== null && q.nm !== null);
   });
   // 收集每只的原始因子值
@@ -1024,9 +1015,9 @@ function computeQuantWeights(){
   const raw = codes.map(code => {
     const c = companiesData[code];
     const qs = c.quarters;
-    const revLatest = qs[qs.length-1].rev;
-    const revYoYBase = qs[0].rev;
-    const revYoY = revYoYBase > 0 ? (revLatest / revYoYBase - 1) * 100 : 0;
+    const revLatest = qs[qs.length-1].rev;   // 2026Q1
+    const revYoYBase = qs[0].rev;             // 2025Q1 (同期)
+    const revYoY = revYoYBase > 0 ? (revLatest / revYoYBase - 1) * 100 : 0;  // 真 YoY
     const gmLatest = qs[qs.length-1].gm;
     const nmLatest = qs[qs.length-1].nm;
     // NM clip 防极端亏损 (如龙芯 -84%) 拉爆 z-score 方差
@@ -1334,12 +1325,15 @@ let acct = loadAccount();
 
 // ============ Populate stock select ============
 const stockSel = document.getElementById("tradeStock");
-WATCH.forEach(r => {
-  const opt = document.createElement("option");
-  opt.value = r.code;
-  opt.textContent = `${r.code} · ${r.name}`;
-  stockSel.appendChild(opt);
-});
+function populateStockSel(){
+  stockSel.innerHTML = "";
+  WATCH.forEach(r => {
+    const opt = document.createElement("option");
+    opt.value = r.code;
+    opt.textContent = `${r.code} · ${r.name}`;
+    stockSel.appendChild(opt);
+  });
+}
 
 // ============ Trading UI ============
 function onStockChange(){
@@ -1675,6 +1669,8 @@ async function loadCompanies(){
     companiesData = await r.json();
     const n = Object.keys(companiesData).filter(k => !k.startsWith('_')).length;
     console.log(`[基本面] 已加载 ${n} 家公司数据`);
+    buildWatchFromCompanies();
+    console.log(`[关注列表] 从 companies.json 派生 ${WATCH.length} 只`);
   } catch(e){
     console.error('[基本面] 加载失败:', e);
     companiesData = {};
@@ -1702,9 +1698,23 @@ function renderCompanyBasics(code){
   }
   const meta = (dataset._meta && dataset._meta.note) || "";
   const currency = isUS ? "亿$" : "亿元";
-  const qs = data.quarters || [];
-  // 增长率
-  const revGrowth = qs.length >= 2 ? ((qs[qs.length-1].rev / qs[0].rev - 1) * 100) : null;
+  const qsActual = data.quarters || [];
+  // 把 Q2 outlook 合成成一行 (src=F) 追加到 qs, 与 5 季同表显示 / 同图表绘制
+  const fcq = data.q2_outlook ? {
+    q: data.q2_outlook.q,
+    rev: data.q2_outlook.rev_estimate,
+    gm: data.q2_outlook.gm_estimate,
+    nm: data.q2_outlook.nm_estimate,
+    src: "F",
+    _yoy: data.q2_outlook.yoy_pct,
+    _confidence: data.q2_outlook.confidence,
+    _data_type: data.q2_outlook.data_type,
+    _catalyst: data.q2_outlook.catalyst,
+    _source: data.q2_outlook.source,
+  } : null;
+  const qs = fcq ? [...qsActual, fcq] : qsActual;
+  // 增长率: 真 YoY 用实数据 (不含预测)
+  const revGrowth = qsActual.length >= 2 ? ((qsActual[qsActual.length-1].rev / qsActual[0].rev - 1) * 100) : null;
 
   // src badge: A=绿色实数据 / F=橙色估算
   const srcBadge = (src) => {
@@ -1721,8 +1731,8 @@ function renderCompanyBasics(code){
     <div style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:6px">📋 业务简介</div>
     <div style="font-size:13px;line-height:1.6;color:#cdd6e6;margin-bottom:12px">${data.intro || "--"}</div>
     <div style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:6px;display:flex;justify-content:space-between;align-items:baseline;gap:10px">
-      <span>📊 近 4 季度财务 ${sourceTag}</span>
-      ${revGrowth !== null ? `<span style="font-size:11px;color:${revGrowth>=0?'#ff8a95':'#7ee2a3'};font-weight:400">收入${revGrowth>=0?'+':''}${revGrowth.toFixed(1)}% (${qs[0].q}→${qs[qs.length-1].q})</span>` : ""}
+      <span>📊 近 5 季度财务 ${sourceTag}</span>
+      ${revGrowth !== null ? `<span style="font-size:11px;color:${revGrowth>=0?'#ff8a95':'#7ee2a3'};font-weight:400">营收 YoY ${revGrowth>=0?'+':''}${revGrowth.toFixed(1)}% (${qsActual[0].q}→${qsActual[qsActual.length-1].q})</span>` : ""}
     </div>
     <div style="position:relative;height:180px;margin-bottom:8px"><canvas id="companyFinChart"></canvas></div>
     <table style="width:100%;font-size:12px;border-collapse:collapse;margin-bottom:6px">
@@ -1741,17 +1751,33 @@ function renderCompanyBasics(code){
           const gmArrow = prev ? (q.gm > prev.gm ? '<span style="color:#ff8a95">↑</span>' : q.gm < prev.gm ? '<span style="color:#7ee2a3">↓</span>' : '<span style="color:var(--muted)">→</span>') : '';
           const nmArrow = prev ? (q.nm > prev.nm ? '<span style="color:#ff8a95">↑</span>' : q.nm < prev.nm ? '<span style="color:#7ee2a3">↓</span>' : '<span style="color:var(--muted)">→</span>') : '';
           const isF = q.src === "F";
-          const dim = isF ? "opacity:.75;font-style:italic" : "";
+          // 预测行: 虚线 border, 斜体, 半透明 + 顶部虚线分隔
+          const rowStyle = isF
+            ? "border-top:1px dashed var(--gold);border-bottom:1px dashed rgba(245,179,1,.3);opacity:.85;font-style:italic;background:rgba(245,179,1,.04)"
+            : "border-bottom:1px solid var(--border)";
+          // 数据来源标签 (仅预测行): 实际/指引/一致预期
+          const confDot = (isF && q._data_type) ? (() => {
+            const colors = {"实际公布":"#7ee2a3", "公司指引":"#29d6d6", "公司指引+分析师一致预期":"#29d6d6", "分析师一致预期":"#f5b301"};
+            const c = colors[q._data_type] || "#8aa0c0";
+            return `<span title="${q._data_type}" style="display:inline-block;margin-left:4px;font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;background:${c}22;color:${c};font-style:normal">${q._data_type}</span>`;
+          })() : "";
+          // YoY 标签 (仅预测行)
+          const yoyTag = (isF && q._yoy != null) ? (() => {
+            const yc = q._yoy >= 0 ? "#ff8a95" : "#7ee2a3";
+            return ` <span style="color:${yc};font-size:10px;font-weight:700;font-style:normal">YoY ${q._yoy>=0?'+':''}${q._yoy.toFixed(1)}%</span>`;
+          })() : "";
+          const titleAttr = (isF && q._catalyst) ? ` title="催化: ${q._catalyst.replace(/"/g,'&quot;')}${q._source?'\n源: '+q._source.replace(/"/g,'&quot;'):''}"` : "";
           return `
-            <tr style="border-bottom:1px solid var(--border);${dim}">
-              <td style="padding:5px 8px;color:#cdd6e6">${q.q}${srcBadge(q.src)}</td>
-              <td style="text-align:right;padding:5px 8px">${q.rev.toFixed(1)} ${revArrow}</td>
+            <tr style="${rowStyle}"${titleAttr}>
+              <td style="padding:5px 8px;color:#cdd6e6">${q.q}${srcBadge(q.src)}${confDot}</td>
+              <td style="text-align:right;padding:5px 8px">${q.rev.toFixed(1)} ${revArrow}${yoyTag}</td>
               <td style="text-align:right;padding:5px 8px">${q.gm.toFixed(1)}% ${gmArrow}</td>
               <td style="text-align:right;padding:5px 8px;${q.nm<0?'color:#7ee2a3':''}">${q.nm.toFixed(1)}% ${nmArrow}</td>
             </tr>`;
         }).join("")}
       </tbody>
     </table>
+    ${fcq && fcq._catalyst ? `<div style="font-size:10px;color:var(--muted);line-height:1.5;margin-top:4px;padding:4px 8px;border-left:2px dashed var(--gold)"><span style="color:var(--gold)">📈 ${fcq.q} 催化:</span> ${fcq._catalyst}${fcq._source?` · <span style="opacity:.7">源: ${fcq._source}</span>`:''}</div>` : ""}
     ${meta ? `<div style="font-size:10px;color:var(--muted);margin-top:6px">${meta}</div>` : ""}
   `;
 
@@ -2384,9 +2410,13 @@ function evalWeeklyEMA(weekBars, indexBullish){
   const e8Prev = ema8[n-2];
   const lastClosed = isLastWeeklyBarClosed();
 
+  // ============ 反转检测：上周破位但本周强势收回 EMA8 → 不判 sell-confirmed，继续走 buy 判定 ============
+  const prevBroke = prev.close < e8Prev;
+  const reboundReclaim = prevBroke && last.close >= e8 * 1.005;  // 本周明确收回 EMA8 (≥ +0.5%)
+
   // ============ 卖出（两档） ============
-  // 1) sell-confirmed: 上一根完整周线 close < EMA8 — 已成定局
-  if (prev.close < e8Prev) {
+  // 1) sell-confirmed: 上一根完整周线 close < EMA8 + 本周未强势收回
+  if (prevBroke && !reboundReclaim) {
     return {
       action:"sell-confirmed", strength:3,
       detail:`上一周收盘 ${prev.close.toFixed(2)} < EMA8(${e8Prev.toFixed(2)}) — 周线趋势已破位`,
@@ -2438,33 +2468,35 @@ function evalWeeklyEMA(weekBars, indexBullish){
   if (indexBullish === true) bonuses.push(`大盘多头`);
   else if (indexBullish === false) bonuses.push(`⚠ 大盘未站上 EMA8`);
   const bonusSfx = bonuses.length ? ` · ${bonuses.join(" · ")}` : "";
+  // 反转标识 — 若是从上周破位反弹来的买点，在 detail 加"⚡反转"高亮
+  const rebPfx = reboundReclaim ? "⚡反转 · " : "";
 
   // ============ 买入（三档 + hold-trend 兜底） ============
   // 1) buy-deep: 本周 low 触及 EMA21 ±1%（深回踩，黄金坑）
   if (last.low <= e21 * 1.01) {
     return {
       action:"buy-deep", strength:3,
-      detail:`🎯 深回踩 EMA21 (${e21.toFixed(2)}) — 强趋势中的黄金坑${bonusSfx}`,
-      ema8:e8, ema21:e21, volRatio, hasVolume:volBonus, indexBullish
+      detail:`${rebPfx}🎯 深回踩 EMA21 (${e21.toFixed(2)}) — 强趋势中的黄金坑${bonusSfx}`,
+      ema8:e8, ema21:e21, volRatio, hasVolume:volBonus, indexBullish, rebound:reboundReclaim
     };
   }
   // 2) buy: 本周 low 触及 EMA8 ±0.5%（标准回踩 — 最高 2 星, 3 星留给 buy-deep）
   if (last.low <= e8 * 1.005) {
-    let strength = 2;
-    if (!volBonus && indexBullish === false) strength = 1;  // 两项加分都缺才降级
+    let strength = reboundReclaim ? 3 : 2;  // 反转买点强度+1
+    if (!volBonus && indexBullish === false && !reboundReclaim) strength = 1;
     return {
       action:"buy", strength,
-      detail:`✅ 本周回踩 EMA8 (${e8.toFixed(2)}) 后站稳，现价 ${last.close.toFixed(2)} — 标准买点${bonusSfx}`,
-      ema8:e8, ema21:e21, volRatio, hasVolume:volBonus, indexBullish, fresh:true
+      detail:`${rebPfx}✅ 本周${reboundReclaim?"假破位后强势收回":"回踩"} EMA8 (${e8.toFixed(2)})，现价 ${last.close.toFixed(2)}${bonusSfx}`,
+      ema8:e8, ema21:e21, volRatio, hasVolume:volBonus, indexBullish, fresh:true, rebound:reboundReclaim
     };
   }
-  // 3) buy-near: 距 EMA8 ≤ 3%（接近回踩 — 固定 1 星）
+  // 3) buy-near: 距 EMA8 ≤ 3%（接近回踩 — 固定 1 星，反转情形提升到 2 星）
   const aboveE8Pct = (last.close - e8) / e8 * 100;
   if (aboveE8Pct <= 3) {
     return {
-      action:"buy-near", strength:1,
-      detail:`🟡 距 EMA8 仅 ${aboveE8Pct.toFixed(1)}% — 接近回踩区，等真回踩到 EMA8 更确定${bonusSfx}`,
-      ema8:e8, ema21:e21, aboveE8Pct, indexBullish
+      action:"buy-near", strength: reboundReclaim ? 2 : 1,
+      detail:`${rebPfx}🟡 距 EMA8 +${aboveE8Pct.toFixed(1)}% — ${reboundReclaim?"假破位反扑站回":"接近回踩区"}${bonusSfx}`,
+      ema8:e8, ema21:e21, aboveE8Pct, indexBullish, rebound:reboundReclaim
     };
   }
 
@@ -2876,11 +2908,11 @@ function computeQuantWeightsUS(){
   if (!companiesUS) return null;
   const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
   const IDEAL_TURNOVER = 5;
-  // 先过滤出有完整 quarters 数据的 (ETF 没有 quarters, 跳过; null 字段也跳过, 如 CRDO/MOD 财年错位未发布)
+  // 严格 5 季 (Q1 同期 → Q1, 真 YoY); ETF / 不足 5 季 / 含 null 字段自动跳过
   const valid = codes.filter(code => {
     const c = companiesUS[code];
     return c.quarters
-      && c.quarters.length >= 4
+      && c.quarters.length >= 5
       && c.quarters.every(q => q.rev !== null && q.gm !== null && q.nm !== null);
   });
   if (valid.length < 4) return null;
@@ -3357,32 +3389,31 @@ document.querySelectorAll(".tab").forEach(t => {
 });
 
 // Init
-renderWatchlist();
 renderAccount();
 renderPnLCurve();
-refresh(true);
-setInterval(() => refresh(false), 10000);
+
+// 启动顺序: loadCompanies 必须先完成 (它会派生 WATCH), 再启动行情/扫描/选择器
+loadCompanies().then(() => {
+  populateStockSel();
+  renderWatchlist();        // 触发 computeQuantWeights → KPI / 权重列
+  renderPortfolioPie();     // Top 5 持仓配比饼图
+  if (publicNews) { renderWatchlist(); renderGlobalFeed(); }  // news 先到则补渲染
+  refresh(true);
+  setInterval(() => refresh(false), 10000);
+  // 周线 EMA 趋势扫描 — 启动时跑一次，之后每 30 分钟刷新一次
+  runWatchScan(false);
+  setInterval(() => {
+    Object.keys(klCache).forEach(k => { if (k.endsWith(":week")) delete klCache[k]; });
+    _indexBullishCache = null; _indexDistancePct = null;
+    watchScanState.results = null;
+    runWatchScan(true);
+  }, 30 * 60 * 1000);
+});
 
 // Eager-load news → re-render watchlist with signal icons + render global feed
 loadPublicNews().then(() => {
-  renderWatchlist();
-  renderGlobalFeed();
+  if (WATCH.length) { renderWatchlist(); renderGlobalFeed(); }
 });
-
-// Eager-load companies (基本面+量化权重数据) → 重算并刷新 watchlist + KPIs + 组合
-loadCompanies().then(() => {
-  renderWatchlist();  // 触发 computeQuantWeights → KPI / 权重列
-  renderPortfolioPie();  // Top 5 持仓配比饼图
-});
-
-// 周线 EMA 趋势扫描 — 启动时跑一次，之后每 30 分钟刷新一次
-runWatchScan(false);
-setInterval(() => {
-  Object.keys(klCache).forEach(k => { if (k.endsWith(":week")) delete klCache[k]; });
-  _indexBullishCache = null; _indexDistancePct = null;
-  watchScanState.results = null;
-  runWatchScan(true);
-}, 30 * 60 * 1000);
 
 // === Strategy / Catalysts (data-driven) ===
 let catalystsData = null;

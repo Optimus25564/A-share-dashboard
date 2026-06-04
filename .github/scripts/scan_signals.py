@@ -20,34 +20,22 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 DATA_DIR = os.path.join(ROOT, "data")
 
 # ============================================================
-# A-share watch list (mirrors WATCH array in index.html)
+# Watchlist 从 data/companies.json 派生 (与 index.html WATCH 共享)
 # ============================================================
-WATCH_A = [
-    ("688256", "寒武纪", "core", "核心芯片"),
-    ("688041", "海光信息", "core", "核心芯片"),
-    ("002261", "拓维信息", "hw", "昇腾整机"),
-    ("300308", "中际旭创", "infra", "光模块"),
-    ("002837", "英维克", "infra", "液冷"),
-    ("603019", "中科曙光", "hw", "整机集成"),
-    ("000977", "浪潮信息", "hw", "整机集成"),
-    ("000034", "神州数码", "hw", "昇腾整机"),
-    ("000938", "紫光股份", "hw", "算力网络"),
-    ("002156", "通富微电", "base", "先进封装"),
-    ("688008", "澜起科技", "base", "存储接口"),
-    ("688981", "中芯国际", "base", "晶圆代工"),
-    ("300475", "香农芯创", "base", "HBM 配套"),
-    ("002409", "雅克科技", "base", "HBM 材料"),
-    ("688347", "华虹公司", "base", "晶圆代工"),
-    ("688047", "龙芯中科", "core", "自主指令集"),
-    ("601138", "工业富联", "infra", "服务器代工"),
-    ("600584", "长电科技", "base", "先进封装"),
-    ("002463", "沪电股份", "infra", "AI PCB"),
-    ("300476", "胜宏科技", "infra", "AI PCB"),
-    ("002371", "北方华创", "base", "半导体设备"),
-    ("688012", "中微公司", "base", "刻蚀设备"),
-    ("688120", "华海清科", "base", "CMP 设备"),
-    ("300604", "长川科技", "base", "测试设备"),
-]
+def derive_watchlist(companies):
+    """Filter to entries with name+cat metadata (mirrors index.html buildWatchFromCompanies)."""
+    out = []
+    for code, c in companies.items():
+        if code.startswith("_"):
+            continue
+        if c.get("cat") == "etf":
+            continue
+        name = c.get("name")
+        cat = c.get("cat")
+        if not name or not cat:
+            continue
+        out.append((code, name, cat, c.get("catLabel", "")))
+    return out
 
 # US exchange mapping (mirrors US_EXCHANGE in index.html)
 US_EXCHANGE = {
@@ -130,8 +118,12 @@ def eval_weekly_ema(bars, index_bullish=None):
     e21 = e21_arr[-1]
     e8_prev = e8_arr[-2]
 
-    # sell-confirmed: 上一根完整周线 close < EMA8
-    if prev["close"] < e8_prev:
+    # 反转检测: 上周破位但本周强势收回 EMA8 → 跳过 sell-confirmed, 继续走 buy 判定
+    prev_broke = prev["close"] < e8_prev
+    rebound_reclaim = prev_broke and last["close"] >= e8 * 1.005
+
+    # sell-confirmed: 上一根完整周线 close < EMA8 + 本周未强势收回
+    if prev_broke and not rebound_reclaim:
         return {
             "action": "sell-confirmed", "strength": 3,
             "detail": f"上一周收盘 {prev['close']:.2f} < EMA8({e8_prev:.2f}) — 趋势已破位",
@@ -167,30 +159,35 @@ def eval_weekly_ema(bars, index_bullish=None):
     vol_ratio = last["volume"] / vol10
     vol_bonus = vol_ratio > 1.0
 
+    reb_pfx = "⚡反转 · " if rebound_reclaim else ""
+
     # buy-deep: 本周 low ≤ EMA21 × 1.01
     if last["low"] <= e21 * 1.01:
         return {
             "action": "buy-deep", "strength": 3,
-            "detail": f"深回踩 EMA21 ({e21:.2f}) — 黄金坑",
+            "detail": f"{reb_pfx}深回踩 EMA21 ({e21:.2f}) — 黄金坑",
             "ema8": e8, "ema21": e21, "vol_ratio": vol_ratio, "index_bullish": index_bullish,
+            "rebound": rebound_reclaim,
         }
     # buy: 本周 low ≤ EMA8 × 1.005
     if last["low"] <= e8 * 1.005:
-        strength = 2
-        if not vol_bonus and index_bullish is False:
+        strength = 3 if rebound_reclaim else 2
+        if not vol_bonus and index_bullish is False and not rebound_reclaim:
             strength = 1
         return {
             "action": "buy", "strength": strength,
-            "detail": f"本周回踩 EMA8 ({e8:.2f}) 后站稳，现价 {last['close']:.2f}",
+            "detail": f"{reb_pfx}本周{'假破位后强势收回' if rebound_reclaim else '回踩'} EMA8 ({e8:.2f})，现价 {last['close']:.2f}",
             "ema8": e8, "ema21": e21, "vol_ratio": vol_ratio, "index_bullish": index_bullish,
+            "rebound": rebound_reclaim,
         }
     # buy-near: 距 EMA8 ≤ 3%
     above_pct = (last["close"] - e8) / e8 * 100
     if above_pct <= 3:
         return {
-            "action": "buy-near", "strength": 1,
-            "detail": f"距 EMA8 仅 {above_pct:.1f}% — 接近回踩区",
+            "action": "buy-near", "strength": 2 if rebound_reclaim else 1,
+            "detail": f"{reb_pfx}距 EMA8 +{above_pct:.1f}% — {'假破位反扑站回' if rebound_reclaim else '接近回踩区'}",
             "ema8": e8, "ema21": e21, "above_ema8_pct": above_pct,
+            "rebound": rebound_reclaim,
         }
 
     return {
@@ -204,6 +201,7 @@ def eval_weekly_ema(bars, index_bullish=None):
 # 5-factor quant model (mirrors computeQuantWeights in index.html)
 # ============================================================
 def compute_quant(companies, watch_codes):
+    """5 因子量化模型. quarters 严格要求 5 季 (Q1 同期 → Q1) → q[-1]/q[0]-1 = 真 YoY."""
     IDEAL_T = 5
     valid = []
     for code in watch_codes:
@@ -211,13 +209,13 @@ def compute_quant(companies, watch_codes):
         if not c:
             continue
         qs = c.get("quarters") or []
-        if len(qs) < 4:
+        if len(qs) < 5:
             continue
         if not all(q.get("rev") is not None and q.get("gm") is not None and q.get("nm") is not None for q in qs):
             continue
-        rev_latest = qs[-1]["rev"]
-        rev_base = qs[0]["rev"]
-        rev_yoy = (rev_latest / rev_base - 1) * 100 if rev_base > 0 else 0
+        rev_latest = qs[-1]["rev"]      # 2026Q1
+        rev_base = qs[0]["rev"]          # 2025Q1 (同期)
+        rev_yoy = (rev_latest / rev_base - 1) * 100 if rev_base > 0 else 0  # 真 YoY
         rev_yoy = max(-50, min(300, rev_yoy))
         gm = qs[-1]["gm"]
         nm = qs[-1]["nm"]
@@ -365,7 +363,8 @@ def main():
     # A 股
     with open(os.path.join(DATA_DIR, "companies.json"), encoding="utf-8") as f:
         companies_a = json.load(f)
-    state_a = scan_market("a", WATCH_A, "sh000001", companies_a)
+    watch_a = derive_watchlist(companies_a)
+    state_a = scan_market("a", watch_a, "sh000001", companies_a)
     with open(os.path.join(DATA_DIR, "alerts_state.json"), "w", encoding="utf-8") as f:
         json.dump(state_a, f, ensure_ascii=False, indent=2)
     print(f"\n写入 alerts_state.json — top5: {[t['name'] for t in state_a['top5']]}")
@@ -375,13 +374,7 @@ def main():
     # 美股
     with open(os.path.join(DATA_DIR, "companies_us.json"), encoding="utf-8") as f:
         companies_us = json.load(f)
-    watch_us = []
-    for code, c in companies_us.items():
-        if code.startswith("_"):
-            continue
-        if c.get("cat") == "etf":  # ETF 不参与扫描
-            continue
-        watch_us.append((code, c.get("name", code), c.get("cat", ""), c.get("catLabel", "")))
+    watch_us = derive_watchlist(companies_us)
     state_us = scan_market("us", watch_us, sym_us("QQQ"), companies_us)
     with open(os.path.join(DATA_DIR, "alerts_state_us.json"), "w", encoding="utf-8") as f:
         json.dump(state_us, f, ensure_ascii=False, indent=2)
