@@ -491,7 +491,7 @@
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
         <div>
           <div style="font-size:16px;font-weight:700;color:#4ea8ff;margin-bottom:4px">🇺🇸 美股 · AI 算力 + 能源主线</div>
-          <div style="font-size:12px;color:var(--muted)"><span id="usCountDisplay">--</span> 只观察清单 · 行情来源 腾讯美股 (15-20 分钟延迟) · 5 因子量化模型实时计算</div>
+          <div style="font-size:12px;color:var(--muted)"><span id="usCountDisplay">--</span> 只观察清单 · 行情来源 腾讯美股 (15-20 分钟延迟) · 5 因子量化模型实时计算<br>报价时间 (ET): <b id="usQuoteTime" style="color:var(--gold)">--</b></div>
         </div>
         <button id="usRefreshBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:6px 14px;border-radius:4px;font-size:12px;cursor:pointer">🔄 刷新</button>
       </div>
@@ -3004,26 +3004,53 @@ async function loadCompaniesUS(){
   }
   return companiesUS;
 }
-// 美股实时行情用腾讯日 K 末尾两根 (vs Stooq 因为现在收费)
-async function fetchUSQuote(ticker){
-  const bars = await fetchUSKLine(ticker, "day", 2);
-  if (bars.length === 0) return null;
-  const last = bars[bars.length - 1];
-  const prev = bars.length >= 2 ? bars[bars.length - 2] : last;
-  const changePct = prev.close > 0 ? (last.close - prev.close) / prev.close * 100 : 0;
-  return {
-    close: last.close, open: last.open, high: last.high, low: last.low,
-    volume: last.volume, changePct, date: last.date
-  };
+// 美股实时行情 - 腾讯 qt.gtimg.cn JSONP 批量 (与 A 股同接口家族, 15-20 分钟延迟而非 8 小时)
+// 注意: 美股 ticker 不带交易所后缀, 直接 usNVDA/usAAPL/usMU. 返回 v_usXXX 全局变量, GBK 编码.
+function fetchUSQuotes(){
+  if (!companiesUS) return Promise.resolve({});
+  const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
+  if (codes.length === 0) return Promise.resolve({});
+  const keys = codes.map(c => "us" + c);
+  return new Promise((resolve) => {
+    const script = document.createElement("script");
+    script.charset = "GBK";
+    script.src = `https://qt.gtimg.cn/q=${keys.join(",")}&_=${Date.now()}`;
+    let done = false;
+    const finish = () => {
+      if (done) return; done = true;
+      const out = {};
+      keys.forEach(k => {
+        const raw = window["v_" + k];
+        if (raw && String(raw).split("~").length > 30) {
+          const p = parseQuote(raw);  // 复用 A 股解析: name/code/price/prevClose/open/high/low/change/changePct/time
+          const ticker = k.slice(2);
+          out[ticker] = {
+            close: p.price, open: p.open, prevClose: p.prevClose,
+            high: p.high, low: p.low,
+            changePct: p.changePct,
+            volume: 0,
+            date: p.time,  // ET 时区 yyyy-MM-dd HH:mm:ss
+          };
+        }
+        // 清理全局变量避免污染
+        try { delete window["v_" + k]; } catch(e){}
+      });
+      try { document.head.removeChild(script); } catch(e){}
+      resolve(out);
+    };
+    script.onload = finish;
+    script.onerror = finish;
+    setTimeout(finish, 8000);
+    document.head.appendChild(script);
+  });
 }
 async function refreshUSQuotes(){
-  if (!companiesUS) return;
-  const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
-  const results = await Promise.all(codes.map(async c => {
-    const q = await fetchUSQuote(c);
-    return [c, q];
-  }));
-  results.forEach(([c, q]) => { if (q) usQuotes[c] = q; });
+  const all = await fetchUSQuotes();
+  Object.entries(all).forEach(([c, q]) => { usQuotes[c] = q; });
+  // 找任意一只票的报价时间显示出来 (ET 时区)
+  const sample = Object.values(all).find(q => q && q.date);
+  const tEl = document.getElementById("usQuoteTime");
+  if (tEl && sample) tEl.textContent = sample.date + " (ET 美东)";
   renderUSWatchlist();
 }
 function renderUSWatchlist(){
