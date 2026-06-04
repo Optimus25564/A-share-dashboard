@@ -257,6 +257,14 @@
       "url": "https://www.marketbeat.com/earnings/reports/2026-6-3-broadcom-inc-stock/",
       "source": "MarketBeat / Alphastreet",
       "content": "Broadcom reports Q2 FY2026 after close June 3. Guided $22B total revenue (+47% YoY), AI semiconductor revenue $10.7B (+140% YoY), non-GAAP gross margin ~77%. $73B AI backlog across custom accelerators and networking. CEO Hock Tan targets >$100B AI chip revenue in 2027. EPS consensus $2.40 (37 analysts)."
+    },
+    {
+      "date": "2026-06-03",
+      "type": "announcement",
+      "title": "Broadcom Q2 FY2026 Record Results: Revenue $22.2B (+48% YoY), AI Semiconductor $10.8B (+143%); Q3 Guidance $29.4B; Dividend $0.65/Share",
+      "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-second-quarter-fiscal-year-2026-financial",
+      "source": "Broadcom Investor Relations / StockTitan",
+      "content": "Broadcom Q2 FY2026 (ended May 3, 2026): revenue $22.19B (+48% YoY), GAAP NI $9.31B (+88%), non-GAAP EPS $2.44. AI semiconductor revenue $10.8B (+143% YoY) driven by custom accelerators (Google TPU, Meta MTIA, OpenAI ASIC) and AI networking. Adj. EBITDA margin 69%, FCF $10.26B (46% of revenue). Q3 FY2026 guidance ~$29.4B (+84% YoY); AI revenue to more than triple YoY to ~$16B. Dividend $0.65/share declared. Stock -1.13% on June 4 despite record-breaking results — 'buy the rumor, sell the news' dynamic."
     }
   ],
   "AMD": [
@@ -673,6 +681,14 @@
       "url": "https://investor.marvell.com/news-events/press-releases/detail/1022/marvell-keynote-at-computex-2026-the-future-of-aiscaling-depends-on-connectivity",
       "source": "Marvell IR",
       "content": "Marvell introduces Teralynx T100, industry's first 102.4 Tbps switch silicon engineered for AI infrastructure, addressing large AI cluster bottlenecks with lower power and reduced latency. CEO Matt Murphy to deliver Computex 2026 keynote June 2. MRVL +9.42% on June 1."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "announcement",
+      "title": "Jensen Huang Joins Marvell Computex Keynote; NVIDIA $2B Investment Highlighted; CEO Matt Murphy: 'Marvell Could Be Next Trillion-Dollar Company'",
+      "url": "https://www.hpcwire.com/off-the-wire/nvidias-jensen-huang-to-join-marvell-ceo-matt-murphy-at-computex-2026-keynote/",
+      "source": "HPCwire / ServeTheHome",
+      "content": "NVIDIA CEO Jensen Huang made a special appearance alongside Marvell CEO Matt Murphy at Marvell's Computex 2026 keynote 'The Future of AI Scaling Depends on Connectivity.' Huang endorsed Marvell's connectivity strategy and stated that Marvell 'could be the next trillion-dollar company,' spotlighting NVIDIA's $2B strategic investment. The keynote showcased Teralynx T100 (102.4 Tbps switch) and 100T Teralink for AI cluster connectivity beyond a single rack. Jensen Huang also coined 'use optics where you must' — boosting COHR/LITE stocks 16-13%."
     }
   ],
   "APP": [
@@ -723,6 +739,14 @@
       "url": "https://stockstotrade.com/news/applovin-corporation-app-news-2026_05_27-2/",
       "source": "StocksToTrade",
       "content": "AppLovin surged 11.95% on May 27 after UBS, Deutsche Bank, Macquarie, Wedbush, Oppenheimer, and Jefferies issued Buy/Outperform upgrades or raised price targets. Q1 2026: revenue .84B beat .78B est; Q2 guided .915-1.945B and adjusted EBITDA .615-1.645B, both above Street. Key catalyst: Axon self-serve advertising platform confirmed for June 2026 public launch, expected to unlock significant new advertiser growth."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "announcement",
+      "title": "AppLovin Opens Axon Platform to All Global Advertisers in June; CEO Projects 100,000 New Customers Adding ~$7B Annual Ad Spend",
+      "url": "https://commonthreadco.com/blogs/coachs-corner/applovin-axon-self-serve-ecommerce-june-2026",
+      "source": "Common Thread Collective / ppc.land",
+      "content": "AppLovin opened its Axon AI advertising platform to all global advertisers via full self-serve in June 2026, eliminating the referral-based gating in place since October 2025. CEO Adam Foroughi: 'Come June, advertisers across the world will be able to sign up for Axon and start running campaigns — that changes the trajectory of this company in a very meaningful way.' Unit economics: sub-30-day payback, near-zero churn after day 30, $70K+ annualized spend per advertiser. CEO projection: 100,000 new customers in year one = ~$7B incremental ad spend. AI video creative tool concurrently entering GA to reduce onboarding friction."
     }
   ],
   "TSM": [
@@ -1087,6 +1111,14 @@
       "url": "https://www.sec.gov/Archives/edgar/data/0000883241/000119312526241911/d126227dex991.htm",
       "source": "Synopsys / SEC EDGAR",
       "content": "Synopsys Q2 FY2026: Revenue $2.276B vs $1.604B prior year (+42% YoY), beating $2.25B consensus. Raised full-year non-GAAP EPS guidance midpoint to $14.76. CEO Sassine Ghazi: 'AI is scaling semiconductor demand, architectural diversity and complexity of chips, driving demand across our portfolio.' Cooperation agreement with Elliott Investment Management; Jesse Cohn appointed to board effective June 1, 2026."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "industry",
+      "title": "Synopsys Rises 3.4% as Cadence ChipStack Level-5 AI Agent Validates EDA Autonomy Wave; SNPS AgentEngineer in Development Pipeline",
+      "url": "https://www.gurufocus.com/news/8893128/cadence-cdns-unveils-first-fully-autonomous-ai-design-engineer-at-computex-2026",
+      "source": "GuruFocus / Cadence Computex 2026",
+      "content": "Synopsys (SNPS) shares rose 3.4% on June 1-2 as Cadence's ChipStack AI Super Agent Level-5 announcement at Computex validated the full EDA industry's shift toward AI autonomy. Synopsys is developing its own AgentEngineer™ AI technology, alongside planned multiphysics integration from the Ansys acquisition across Synopsys' full EDA stack (available early 2026). SNPS Q2 FY2026 (reported May 27): revenue $2.276B (+42% YoY), raised full-year EPS guidance. Elliott Management activist stake ongoing — potential catalyst for strategic focus."
     }
   ],
   "MU": [
@@ -1275,6 +1307,14 @@
       "url": "https://www.fool.com/investing/2026/05/28/roundhill-memory-etf-dram-micron-sandisk-dram/",
       "source": "Motley Fool",
       "content": "SanDisk stock reached $1,571 (+3.25%) on May 28. The newly launched Roundhill DRAM Memory ETF (ticker: DRAM) amassed $6.5B in AUM in just 27 trading days — fastest ETF launch in history — packaging exposure to SanDisk, Micron, Samsung and SK Hynix. AI data centers consuming ~70% of memory chip supply."
+    },
+    {
+      "date": "2026-06-03",
+      "type": "news",
+      "title": "Sandisk +6.97% on June 3 as Goldman Bullish on AI Memory Shortage Through 2028; Q4 FY2026 Revenue Guided $7.75-8.25B",
+      "url": "https://stockstotrade.com/news/sandisk-corporation-sndk-news-2026_06_03-2/",
+      "source": "StocksToTrade / Benzinga",
+      "content": "Sandisk (SNDK) rose 6.97% on June 3 as Goldman Sachs and Melius Research reiterated bullish stance on AI-driven NAND memory shortage extending to 2028. Q3 FY2026 (reported April 30): revenue $5.95B (+251% YoY, +97% QoQ), crushed guidance of $4.4-4.8B; data center segment +233%; non-GAAP GM 78.4% vs 65-67% guided. Q4 FY2026 guidance $7.75-8.25B, non-GAAP EPS $30-33. Nearly a third of FY2027 revenue already contracted. Stock up ~500% YTD; Goldman cites structural undersupply driven by AI eSSD demand."
     }
   ],
   "COHR": [
@@ -1333,6 +1373,14 @@
       "url": "https://finance.yahoo.com/news/lumentum-coherent-vertiv-added-p-225126453.html",
       "source": "Yahoo Finance",
       "content": "Coherent, Lumentum, and Vertiv added to S&P 500 in AI-dominated index rebalancing. COHR Q3 FY2026 (May 6): revenue $1.81B beat estimates, up 21% YoY; Datacenter & Communications = 75% of total revenue. Stock up 112% YTD as 800G optical demand accelerates."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "news",
+      "title": "Coherent Surges 16% to All-Time High After Jensen Huang 'Use Optics Where You Must' Endorsement at Marvell Computex Keynote",
+      "url": "https://247wallst.com/investing/2026/06/02/coherent-advances-16-lumentum-climbs-13-applied-optoelectronics-adds-8-as-optics-rally-broadens/",
+      "source": "24/7 Wall St. / Invezz",
+      "content": "Coherent (COHR) hit all-time high, surging 16-17% on June 2 after Nvidia CEO Jensen Huang at Marvell Computex keynote declared AI clusters should 'use optics where you must' — validating co-packaged optics as the next-gen AI networking standard. NVIDIA's $2B strategic investment in Coherent and Spectrum-X Ethernet Photonics entering full production (announced June 2 by NVIDIA) reinforce Coherent's structural position. COHR supplies 800G/1.6T transceivers and is developing 3.2T silicon photonics with Tower Semiconductor."
     }
   ],
   "LITE": [
@@ -1375,6 +1423,14 @@
       "url": "https://finance.yahoo.com/news/lumentum-coherent-vertiv-added-p-225126453.html",
       "source": "Yahoo Finance / Bank of America",
       "content": "Lumentum added to S&P 500 alongside Coherent and Vertiv in AI-focused rebalancing. BofA raised Ciena target to $660 and Cisco to $135, citing 800G optical market expanding ~10x. LITE stock up 180% YTD. Optics becoming critical AI data center interconnect bottleneck."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "news",
+      "title": "Lumentum Jumps 13% on Jensen Huang AI Optical Endorsement; Nvidia 'Use Optics Where You Must' Validates Photonic AI Networking",
+      "url": "https://invezz.com/news/2026/06/02/why-coherent-and-lumentum-stocks-jumped-on-tuesday/",
+      "source": "Invezz / 24/7 Wall St.",
+      "content": "Lumentum (LITE) surged 13-14% on June 2 as Nvidia CEO Jensen Huang's 'optics where you must' statement at Marvell Computex keynote triggered broad re-rating of optical component suppliers. LITE provides critical 800G/1.6T transceivers and VCSEL components for AI data center interconnects. Added to S&P 500 on May 28 as AI infrastructure supply-chain play. Nvidia's $2B Coherent investment (LITE's direct competitor) highlights the sector tailwind; both LITE and COHR are positioned as core photonics beneficiaries of AI infrastructure scaling."
     }
   ],
   "FN": [
@@ -1965,6 +2021,14 @@
       "url": "https://www.investing.com/news/stock-market-news/why-is-applovin-stock-rallying-5-today-93CH-4709724",
       "source": "Investing.com",
       "content": "Tesla Robotaxi confirmed live in Austin (joining Dallas and Houston); management guiding to ~12 US states by year-end 2026. New lens-cleaning patent supports autonomous fleet operations. Stock at $441.01 on May 28 despite Q1 2026 deliveries of 358,023 missing 365,645 consensus. Kalshi places 52% odds on Tesla-SpaceX merger before May 2027."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "news",
+      "title": "Tesla Optimus Gen 3 Mass Production Preparations Underway at Fremont (1M Robots/Year Target); Robotaxi Expands to Dallas and Houston",
+      "url": "https://seekingalpha.com/news/4578385-tesla-signals-over-25b-2025minus-2026-capex-as-it-targets-optimus-production-by-late-july",
+      "source": "Seeking Alpha / Tesla IR",
+      "content": "Tesla began preparations for first large-scale Optimus Gen 3 mass-production factory at Fremont, CA, replacing Model S/X lines, designed for capacity of 1 million robots/year. A second Gigafactory Texas Gen 3 line is planned for 10M robots/year long-term. Unsupervised Robotaxi service now operational in Austin and expanded to Dallas and Houston in April 2026. FSD subscription at record net new subscriptions in Q1 2026. Total 2025-2026 CapEx plan: $25B+ across six factories including new Texas chip fab for Dojo. Elon Musk projects Optimus to drive 80% of future Tesla value."
     }
   ],
   "CRWV": [
@@ -2171,6 +2235,14 @@
       "url": "https://finance.yahoo.com/news/lumentum-coherent-vertiv-added-p-225126453.html",
       "source": "Yahoo Finance",
       "content": "Vertiv added to S&P 500 in AI-dominated rebalancing alongside Coherent and Lumentum. Q1 2026: adjusted EPS +83% YoY; revenue +30% YoY; $15B backlog up 109%. Stock up 115% YTD at $311 (down 2.61% on May 28). AI data center power/cooling demand remains structurally elevated."
+    },
+    {
+      "date": "2026-06-03",
+      "type": "announcement",
+      "title": "Vertiv Declares $0.0625 Q2 Dividend; Launches AI Factory Digital Twin for NVIDIA Omniverse DSX; Expands Fluid Management Services",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001674101/000162828026040031/exhibit991vrt-q22026divide.htm",
+      "source": "Vertiv Holdings / SEC EDGAR",
+      "content": "Vertiv Holdings declared a Q2 2026 quarterly cash dividend of $0.0625 per share on June 3, 2026 (payable ~July 2026). Separately, Vertiv introduced the first converged physical infrastructure digital twin for NVIDIA Omniverse DSX, enabling simulation-based data center design optimization for AI factory deployments. Also expanded fluid management services to reduce water use during commissioning. Vertiv backlog: $15B (109% YoY), Q1 2026 orders grew 252% YoY; added to S&P 500 May 28."
     }
   ],
   "ETN": [
@@ -2221,6 +2293,14 @@
       "url": "https://www.techi.com/ge-vernova-vertiv-ai-data-center/",
       "source": "TECHi",
       "content": "Eaton posted record Q4 2025 Electrical Americas revenue of $3.51B (+21% YoY). Pending $9.5B acquisition of Boyd Thermal to expand liquid cooling capabilities for AI data center infrastructure. Positioned alongside GE Vernova and Vertiv in the AI power and cooling stack."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "news",
+      "title": "Eaton Record Q1 2026 Revenue $7.5B (+17%); Boyd Thermal $9.5B Acquisition Advances Liquid Cooling for AI Data Centers",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001551182/000155118226000010/etn03312026exhibit99.htm",
+      "source": "Eaton Corp / SEC EDGAR",
+      "content": "Eaton Corporation reported record Q1 2026 sales of $7.5B (+17% YoY), EPS $2.22. Eaton's pending $9.5B acquisition of Boyd Thermal will significantly expand Eaton's liquid cooling capabilities for hyperscale AI data centers — acquiring Boyd's thermal management expertise for GPU and server systems. Electrical Americas segment driving growth on data center UPS and power distribution. AI infrastructure CapEx across hyperscalers represents a multi-year tailwind for Eaton's data center-focused electrical segment."
     }
   ],
   "GEV": [
@@ -2985,6 +3065,14 @@
       "url": "https://finance.yahoo.com/quote/CDNS/",
       "source": "Yahoo Finance",
       "content": "Cadence reported Q1 2026 non-GAAP EPS $1.96 and revenue $1.474B, beating estimates. Full-year guidance raised driven by strong AI chip design activity. EDA/IP tools essential for increasingly complex AI accelerator architectures at TSMC 3nm/2nm nodes."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "announcement",
+      "title": "Cadence Unveils Level-5 ChipStack AI Super Agent at Computex — Industry's First Fully Autonomous Virtual Chip Design Engineer; Stock +8.7%",
+      "url": "https://www.businesswire.com/news/home/20260531072918/en/Cadence-Unveils-Industrys-First-Fully-Autonomous-Virtual-Engineer-for-Chip-Design-powered-by-NVIDIA",
+      "source": "Cadence / BusinessWire",
+      "content": "Cadence Design Systems unveiled the industry's first fully autonomous Level-5 ChipStack AI Super Agent at Computex 2026, powered by NVIDIA Nemotron foundation models and NVIDIA OpenShell runtime. The agent independently executes complex RTL chip design and verification workflows — reducing standard 5-week verification cycles to under one day (40x+ acceleration). Also launched ViraStack AI Super Agent (analog/custom) and InnoStack AI Super Agent (digital implementation/signoff). Early-access availability H2 2026. CDNS stock soared 8.7%; SNPS rose 3.4% in sympathy. Core EDA revenue grew 18% YoY in Q1 2026."
     }
   ],
   "ORCL": [
@@ -3483,6 +3571,14 @@
       "url": "https://moneycheck.com/bofa-boosts-cisco-csco-and-ciena-cien-price-targets-on-ai-optical-networking-surge",
       "source": "Bank of America / MoneyCheck",
       "content": "BofA maintained Buy and raised Ciena price target to $660 (from $550) on AI optical networking acceleration. BofA forecasts 800G optics market expanding ~10x in 2026 as hyperscalers upgrade infrastructure. Ciena holds ~30% share of 800G segment. Global 800G ZR/ZR+ market expected to grow dramatically."
+    },
+    {
+      "date": "2026-06-04",
+      "type": "announcement",
+      "title": "Ciena Q2 FY2026 Earnings Release Today (June 4): Street Expects $1.50B Revenue (+33.6% YoY), EPS $1.45; 800G Optics Driving AI Data Center Demand",
+      "url": "https://news.alphastreet.com/ciena-q2-2026-earnings-preview-june-4-street-expects-1-45-eps/",
+      "source": "Alphastreet / Zacks",
+      "content": "Ciena (CIEN) reports Q2 FY2026 results on June 4 before market open. Consensus: $1.50B revenue (+33.6% YoY), adj. EPS $1.45 (+247.6% YoY). In Q1 FY2026 (ended Jan 31, 2026), Ciena delivered $1.43B revenue (+33% YoY), adj. EPS $1.35 (+111%); Networking Platforms segment (80.5% of total) up 40% YoY driven by hyperscaler and cloud provider 800G optics demand. Cisco Q3 FY2026 also showed $1B+ Acacia orders and AI-related optics up ~4x to ~$950M — confirming strong optical sector tailwind. Bank of America raised Ciena target to $660 from $550."
     }
   ],
   "CSCO": [
