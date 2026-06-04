@@ -1,14 +1,14 @@
 {
-  "last_run": "2026-06-03T08:30:00+08:00",
-  "run_date": "2026-06-03",
-  "us_trading_date": "2026-06-02",
+  "last_run": "2026-06-04T08:30:00+08:00",
+  "run_date": "2026-06-04",
+  "us_trading_date": "2026-06-03",
   "market": "US",
   "top5": [
     {
       "code": "MU",
       "name": "Micron",
       "rank": 1,
-      "score": 1.4414,
+      "score": 1.3788,
       "signal": "hold",
       "price": 1059.44,
       "ema8": 840.0,
@@ -18,7 +18,7 @@
       "code": "NVDA",
       "name": "Nvidia",
       "rank": 2,
-      "score": 1.2644,
+      "score": 1.2024,
       "signal": "buy-fresh",
       "price": 225.61,
       "ema8": 205.3,
@@ -28,31 +28,31 @@
       "code": "TSM",
       "name": "TSMC",
       "rank": 3,
-      "score": 0.861,
+      "score": 0.8172,
       "signal": "hold",
       "price": 429.0,
       "ema8": 388.0,
       "ema21": 295.0
     },
     {
-      "code": "SNDK",
-      "name": "Sandisk",
-      "rank": 4,
-      "score": 0.6957,
-      "signal": "hold",
-      "price": 1761.43,
-      "ema8": 1380.0,
-      "ema21": 800.0
-    },
-    {
       "code": "ASML",
       "name": "ASML",
-      "rank": 5,
-      "score": 0.6729,
+      "rank": 4,
+      "score": 0.6569,
       "signal": "hold",
       "price": 1705.37,
       "ema8": 1490.0,
       "ema21": 1180.0
+    },
+    {
+      "code": "SNDK",
+      "name": "Sandisk",
+      "rank": 5,
+      "score": 0.64,
+      "signal": "hold",
+      "price": 1761.43,
+      "ema8": 1380.0,
+      "ema21": 800.0
     }
   ],
   "candidates": [
@@ -60,7 +60,7 @@
       "code": "AVGO",
       "name": "Broadcom",
       "rank": 6,
-      "score": 0.6049,
+      "score": 0.5793,
       "signal": "hold",
       "price": 486.9,
       "ema8": 430.0,
@@ -70,7 +70,7 @@
       "code": "META",
       "name": "Meta Platforms",
       "rank": 7,
-      "score": 0.5432,
+      "score": 0.5063,
       "signal": "hold",
       "price": 600.47,
       "ema8": 580.0,
@@ -80,7 +80,7 @@
       "code": "GOOGL",
       "name": "Alphabet",
       "rank": 8,
-      "score": 0.5069,
+      "score": 0.4606,
       "signal": "buy-fresh",
       "price": 364.03,
       "ema8": 357.0,
@@ -90,7 +90,7 @@
       "code": "CEG",
       "name": "Constellation Energy",
       "rank": 9,
-      "score": 0.4006,
+      "score": 0.4086,
       "signal": "sell-warning",
       "price": 270.11,
       "ema8": 328.0,
@@ -100,7 +100,7 @@
       "code": "MSFT",
       "name": "Microsoft",
       "rank": 10,
-      "score": 0.3353,
+      "score": 0.3135,
       "signal": "hold",
       "price": 452.39,
       "ema8": 432.0,
@@ -111,8 +111,8 @@
     "MU": "hold",
     "NVDA": "buy-fresh",
     "TSM": "hold",
-    "SNDK": "hold",
     "ASML": "hold",
+    "SNDK": "hold",
     "AVGO": "hold",
     "META": "hold",
     "GOOGL": "buy-fresh",
@@ -120,21 +120,29 @@
     "MSFT": "hold"
   },
   "rank_changes": {
-    "new_in_top5": ["SNDK (rank4↑ from rank10)"],
-    "exit_top5":   ["AVGO (rank5→rank6, now candidate)"]
+    "new_in_top5": [
+      "none"
+    ],
+    "exit_top5": [
+      "none"
+    ],
+    "within_top5_reorder": [
+      "ASML: rank5→rank4",
+      "SNDK: rank4→rank5"
+    ]
   },
-  "kline_status": "estimated-web: stooq/yfinance blocked; prices from WebSearch (Yahoo/CNBC/TradingKey/Morningstar) 2026-06-02; EMA carried from 2026-05-30 weekly close",
-  "sources": "WebSearch 2026-06-02 market prices; EMA from prior weekly state (current week not closed)",
+  "kline_status": "partial: stooq/yahoo/fmp all blocked in sandbox; prices carried from 2026-06-03 run (US close 2026-06-02); signals valid as of last weekly close",
+  "sources": "5-factor model on companies_us.json (updated 2026-05-31); K-line: prior weekly state (Stooq network-blocked)",
   "price_note": {
-    "MU":   "Jun2 range $1017-1073; close=$1059.44; HBM supercycle, +196% YoY",
+    "MU": "Jun2 range $1017-1073; close=$1059.44; HBM supercycle, +196% YoY",
     "NVDA": "Jun2 range $225.05-232.28; close=$225.61; +6.9% vs prev; buy-fresh EMA8 touch continued from May-30 wk",
-    "TSM":  "Jun2 range $422.63-436.44; close≈$429; 52w-high chase",
+    "TSM": "Jun2 range $422.63-436.44; close≈$429; 52w-high chase",
     "SNDK": "Jun2 range $1686-1804; close=$1761.43; ATH; NAND supercycle YoY+215%; NEW TOP5",
     "ASML": "Jun2 +4.7% close=$1705.37; strong uptrend",
     "AVGO": "Jun2 range $458.82-492; close=$486.90; exits Top5 to candidate",
     "META": "Jun2 range $597.20-637.37; close=$600.47",
-    "GOOGL":"Jun2 range $358.44-373.54; close=$364.03; low<EMA8x1.02=$364.1 → BUY-FRESH",
-    "CEG":  "Jun2 range $264.21-283.24; close=$270.11; below EMA8=$328 → SELL-WARNING",
+    "GOOGL": "Jun2 range $358.44-373.54; close=$364.03; low<EMA8x1.02=$364.1 → BUY-FRESH",
+    "CEG": "Jun2 range $264.21-283.24; close=$270.11; below EMA8=$328 → SELL-WARNING",
     "MSFT": "Jun2 range $450.24-472.03; close=$452.39"
   }
 }
