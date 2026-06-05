@@ -1,69 +1,78 @@
 {
-  "last_run": "2026-06-04T20:48:30+08:00",
+  "last_run": "2026-06-05T08:30:00+08:00",
   "run_date": "2026-06-04",
+  "market": "US",
   "top5": [
     {
       "code": "MU",
       "name": "Micron",
       "rank": 1,
-      "score": 1.956
-    },
-    {
-      "code": "SNDK",
-      "name": "Sandisk",
-      "rank": 2,
-      "score": 1.938
-    },
-    {
-      "code": "PLTR",
-      "name": "Palantir",
-      "rank": 3,
-      "score": 1.361
+      "score": 1.157
     },
     {
       "code": "NVDA",
       "name": "Nvidia",
-      "rank": 4,
-      "score": 1.285
-    },
-    {
-      "code": "ALAB",
-      "name": "Astera Labs",
-      "rank": 5,
-      "score": 1.158
-    }
-  ],
-  "candidates": [
-    {
-      "code": "APP",
-      "name": "AppLovin",
-      "rank": 6,
-      "score": 1.094
+      "rank": 2,
+      "score": 1.111
     },
     {
       "code": "TSM",
       "name": "TSMC",
-      "rank": 7,
-      "score": 0.969
+      "rank": 3,
+      "score": 0.825
+    },
+    {
+      "code": "ASML",
+      "name": "ASML",
+      "rank": 4,
+      "score": 0.708
+    },
+    {
+      "code": "META",
+      "name": "Meta Platforms",
+      "rank": 5,
+      "score": 0.611
+    }
+  ],
+  "candidates": [
+    {
+      "code": "GOOGL",
+      "name": "Alphabet",
+      "rank": 6,
+      "score": 0.448
     },
     {
       "code": "AVGO",
       "name": "Broadcom",
-      "rank": 8,
-      "score": 0.889
+      "rank": 7,
+      "score": 0.445
     },
     {
-      "code": "LITE",
-      "name": "Lumentum",
-      "rank": 9,
-      "score": 0.888
+      "code": "SNDK",
+      "name": "Sandisk",
+      "rank": 8,
+      "score": 0.246
     },
     {
       "code": "AMD",
       "name": "AMD",
+      "rank": 9,
+      "score": 0.243
+    },
+    {
+      "code": "MSFT",
+      "name": "Microsoft",
       "rank": 10,
-      "score": 0.837
+      "score": 0.223
     }
+  ],
+  "rank_changes": [
+    "⬆ TSM 新入 Top5 (rank 3)",
+    "⬆ ASML 新入 Top5 (rank 4)",
+    "⬆ META 新入 Top5 (rank 5)",
+    "⬇ SNDK 退出 Top5",
+    "⬇ PLTR 退出 Top5",
+    "⬇ ALAB 退出 Top5"
   ],
   "signals": {
     "NVDA": "buy-near",
@@ -96,37 +105,12 @@
     "ETN": "buy",
     "GEV": "sell-confirmed",
     "CCJ": "hold",
-    "ARM": "hold-trend",
-    "LRCX": "hold-trend",
-    "CDNS": "hold-trend",
-    "AMKR": "buy",
-    "TER": "buy",
-    "ANET": "hold-trend",
-    "CRDO": "hold-trend",
-    "ALAB": "hold-trend",
-    "CIEN": "buy",
-    "CSCO": "hold-trend",
-    "MPWR": "buy",
-    "GLW": "buy",
-    "PWR": "buy",
-    "EME": "sell-confirmed",
-    "FIX": "buy",
-    "MOD": "hold-trend",
-    "TT": "hold",
-    "JCI": "buy-deep",
-    "HUBB": "sell-confirmed",
-    "POWL": "buy",
-    "VST": "sell-warning",
-    "NRG": "sell-confirmed",
-    "KMI": "sell-confirmed",
-    "WMB": "sell-confirmed",
-    "ORCL": "hold-trend",
-    "IREN": "hold-trend",
-    "PLTR": "sell-warning",
-    "NOW": "hold",
-    "CRM": "hold",
-    "RKLB": "buy-near",
-    "usQQQ.OQ": "hold"
+    "SMH": "hold",
+    "XLU": "hold",
+    "COPX": "hold",
+    "XME": "hold",
+    "EWY": "hold",
+    "RKLB": "buy-near"
   },
   "prices": {
     "NVDA": {
@@ -463,334 +447,25 @@
       "strength": 1,
       "detail": "已多头排列但 5 周斜率未向上 — 趋势未确认"
     },
-    "ARM": {
-      "name": "Arm Holdings",
-      "close": 411.83,
-      "close_date": "2026-06-03",
-      "ema8": 282.47,
-      "ema21": 210.05,
-      "vs_ema8_pct": 45.8,
-      "action": "hold-trend",
-      "strength": 1,
-      "detail": "多头趋势延续，现价高于 EMA8 45.8% (> 3%)"
+    "SMH": {
+      "name": "SMH",
+      "note": "ETF — K-line not fetched (network restricted)"
     },
-    "LRCX": {
-      "name": "Lam Research",
-      "close": 343.71,
-      "close_date": "2026-06-03",
-      "ema8": 296.31,
-      "ema21": 254.79,
-      "vs_ema8_pct": 16.0,
-      "action": "hold-trend",
-      "strength": 1,
-      "detail": "多头趋势延续，现价高于 EMA8 16.0% (> 3%)"
+    "XLU": {
+      "name": "XLU",
+      "note": "ETF — K-line not fetched (network restricted)"
     },
-    "CDNS": {
-      "name": "Cadence Design",
-      "close": 408.0,
-      "close_date": "2026-06-03",
-      "ema8": 359.19,
-      "ema21": 332.29,
-      "vs_ema8_pct": 13.59,
-      "action": "hold-trend",
-      "strength": 1,
-      "detail": "多头趋势延续，现价高于 EMA8 13.6% (> 3%)"
+    "COPX": {
+      "name": "COPX",
+      "note": "ETF — K-line not fetched (network restricted)"
     },
-    "AMKR": {
-      "name": "Amkor Technology",
-      "close": 75.2,
-      "close_date": "2026-06-03",
-      "ema8": 68.48,
-      "ema21": 58.75,
-      "vs_ema8_pct": 9.81,
-      "action": "buy",
-      "strength": 2,
-      "detail": "本周回踩 EMA8 (68.48)，现价 75.20"
+    "XME": {
+      "name": "XME",
+      "note": "ETF — K-line not fetched (network restricted)"
     },
-    "TER": {
-      "name": "Teradyne",
-      "close": 409.67,
-      "close_date": "2026-06-03",
-      "ema8": 366.65,
-      "ema21": 320.99,
-      "vs_ema8_pct": 11.73,
-      "action": "buy",
-      "strength": 2,
-      "detail": "本周回踩 EMA8 (366.65)，现价 409.67"
-    },
-    "ANET": {
-      "name": "Arista Networks",
-      "close": 174.37,
-      "close_date": "2026-06-03",
-      "ema8": 157.21,
-      "ema21": 147.48,
-      "vs_ema8_pct": 10.91,
-      "action": "hold-trend",
-      "strength": 1,
-      "detail": "多头趋势延续，现价高于 EMA8 10.9% (> 3%)"
-    },
-    "CRDO": {
-      "name": "Credo Technology",
-      "close": 214.6,
-      "close_date": "2026-06-03",
-      "ema8": 193.61,
-      "ema21": 163.78,
-      "vs_ema8_pct": 10.84,
-      "action": "hold-trend",
-      "strength": 1,
-      "detail": "多头趋势延续，现价高于 EMA8 10.8% (> 3%)"
-    },
-    "ALAB": {
-      "name": "Astera Labs",
-      "close": 363.54,
-      "close_date": "2026-06-03",
-      "ema8": 269.22,
-      "ema21": 208.86,
-      "vs_ema8_pct": 35.03,
-      "action": "hold-trend",
-      "strength": 1,
-      "detail": "多头趋势延续，现价高于 EMA8 35.0% (> 3%)"
-    },
-    "CIEN": {
-      "name": "Ciena",
-      "close": 620.37,
-      "close_date": "2026-06-03",
-      "ema8": 550.54,
-      "ema21": 444.94,
-      "vs_ema8_pct": 12.68,
-      "action": "buy",
-      "strength": 2,
-      "detail": "本周回踩 EMA8 (550.54)，现价 620.37"
-    },
-    "CSCO": {
-      "name": "Cisco Systems",
-      "close": 126.5,
-      "close_date": "2026-06-03",
-      "ema8": 109.42,
-      "ema21": 94.22,
-      "vs_ema8_pct": 15.61,
-      "action": "hold-trend",
-      "strength": 1,
-      "detail": "多头趋势延续，现价高于 EMA8 15.6% (> 3%)"
-    },
-    "MPWR": {
-      "name": "Monolithic Power",
-      "close": 1689.89,
-      "close_date": "2026-06-03",
-      "ema8": 1542.1,
-      "ema21": 1346.68,
-      "vs_ema8_pct": 9.58,
-      "action": "buy",
-      "strength": 2,
-      "detail": "本周回踩 EMA8 (1542.10)，现价 1689.89"
-    },
-    "GLW": {
-      "name": "Corning",
-      "close": 200.76,
-      "close_date": "2026-06-03",
-      "ema8": 180.86,
-      "ema21": 153.31,
-      "vs_ema8_pct": 11.01,
-      "action": "buy",
-      "strength": 2,
-      "detail": "本周回踩 EMA8 (180.86)，现价 200.76"
-    },
-    "PWR": {
-      "name": "Quanta Services",
-      "close": 715.67,
-      "close_date": "2026-06-03",
-      "ema8": 694.97,
-      "ema21": 615.76,
-      "vs_ema8_pct": 2.98,
-      "action": "buy",
-      "strength": 2,
-      "detail": "本周回踩 EMA8 (694.97)，现价 715.67"
-    },
-    "EME": {
-      "name": "EMCOR Group",
-      "close": 826.82,
-      "close_date": "2026-05-29",
-      "ema8": 846.53,
-      "ema21": 792.13,
-      "vs_ema8_pct": -2.33,
-      "current_close": 839.54,
-      "current_date": "2026-06-03",
-      "action": "sell-confirmed",
-      "strength": 3,
-      "detail": "上一周收盘 826.82 < EMA8(846.53) — 趋势已破位"
-    },
-    "FIX": {
-      "name": "Comfort Systems",
-      "close": 1850.04,
-      "close_date": "2026-06-03",
-      "ema8": 1792.9,
-      "ema21": 1554.36,
-      "vs_ema8_pct": 3.19,
-      "action": "buy",
-      "strength": 2,
-      "detail": "本周回踩 EMA8 (1792.90)，现价 1850.04"
-    },
-    "MOD": {
-      "name": "Modine Manufacturing",
-      "close": 302.03,
-      "close_date": "2026-06-03",
-      "ema8": 267.82,
-      "ema21": 232.01,
-      "vs_ema8_pct": 12.77,
-      "action": "hold-trend",
-      "strength": 1,
-      "detail": "多头趋势延续，现价高于 EMA8 12.8% (> 3%)"
-    },
-    "TT": {
-      "name": "Trane Technologies",
-      "close": 465.84,
-      "close_date": "2026-06-03",
-      "ema8": 459.83,
-      "ema21": 447.15,
-      "vs_ema8_pct": 1.31,
-      "action": "hold",
-      "strength": 1,
-      "detail": "已多头排列但 5 周斜率未向上 — 趋势未确认"
-    },
-    "JCI": {
-      "name": "Johnson Controls",
-      "close": 146.96,
-      "close_date": "2026-06-03",
-      "ema8": 140.23,
-      "ema21": 134.54,
-      "vs_ema8_pct": 4.8,
-      "action": "buy-deep",
-      "strength": 3,
-      "detail": "⚡反转 · 深回踩 EMA21 (134.54) — 黄金坑"
-    },
-    "HUBB": {
-      "name": "Hubbell",
-      "close": 473.61,
-      "close_date": "2026-05-29",
-      "ema8": 490.51,
-      "ema21": 486.64,
-      "vs_ema8_pct": -3.45,
-      "current_close": 484.91,
-      "current_date": "2026-06-03",
-      "action": "sell-confirmed",
-      "strength": 3,
-      "detail": "上一周收盘 473.61 < EMA8(490.51) — 趋势已破位"
-    },
-    "POWL": {
-      "name": "Powell Industries",
-      "close": 299.73,
-      "close_date": "2026-06-03",
-      "ema8": 272.89,
-      "ema21": 224.42,
-      "vs_ema8_pct": 9.84,
-      "action": "buy",
-      "strength": 2,
-      "detail": "本周回踩 EMA8 (272.89)，现价 299.73"
-    },
-    "VST": {
-      "name": "Vistra",
-      "close": 153.8,
-      "close_date": "2026-06-03",
-      "ema8": 154.63,
-      "ema21": 158.76,
-      "vs_ema8_pct": -0.54,
-      "action": "sell-warning",
-      "strength": 2,
-      "detail": "本周收盘 153.80 < EMA8(154.63)，但周线未收盘 — 等本周五收盘后确认"
-    },
-    "NRG": {
-      "name": "NRG Energy",
-      "close": 134.08,
-      "close_date": "2026-05-29",
-      "ema8": 142.94,
-      "ema21": 148.96,
-      "vs_ema8_pct": -6.2,
-      "current_close": 133.76,
-      "current_date": "2026-06-03",
-      "action": "sell-confirmed",
-      "strength": 3,
-      "detail": "上一周收盘 134.08 < EMA8(142.94) — 趋势已破位"
-    },
-    "KMI": {
-      "name": "Kinder Morgan",
-      "close": 31.08,
-      "close_date": "2026-05-29",
-      "ema8": 32.29,
-      "ema21": 31.35,
-      "vs_ema8_pct": -3.76,
-      "current_close": 31.37,
-      "current_date": "2026-06-03",
-      "action": "sell-confirmed",
-      "strength": 3,
-      "detail": "上一周收盘 31.08 < EMA8(32.29) — 趋势已破位"
-    },
-    "WMB": {
-      "name": "Williams Companies",
-      "close": 71.39,
-      "close_date": "2026-05-29",
-      "ema8": 73.98,
-      "ema21": 71.03,
-      "vs_ema8_pct": -3.5,
-      "current_close": 71.66,
-      "current_date": "2026-06-03",
-      "action": "sell-confirmed",
-      "strength": 3,
-      "detail": "上一周收盘 71.39 < EMA8(73.98) — 趋势已破位"
-    },
-    "ORCL": {
-      "name": "Oracle",
-      "close": 230.33,
-      "close_date": "2026-06-03",
-      "ema8": 198.12,
-      "ema21": 185.66,
-      "vs_ema8_pct": 16.26,
-      "action": "hold-trend",
-      "strength": 1,
-      "detail": "多头趋势延续，现价高于 EMA8 16.3% (> 3%)"
-    },
-    "IREN": {
-      "name": "IREN",
-      "close": 65.48,
-      "close_date": "2026-06-03",
-      "ema8": 56.17,
-      "ema21": 49.52,
-      "vs_ema8_pct": 16.57,
-      "action": "hold-trend",
-      "strength": 1,
-      "detail": "多头趋势延续，现价高于 EMA8 16.6% (> 3%)"
-    },
-    "PLTR": {
-      "name": "Palantir",
-      "close": 142.2,
-      "close_date": "2026-06-03",
-      "ema8": 143.31,
-      "ema21": 147.4,
-      "vs_ema8_pct": -0.77,
-      "action": "sell-warning",
-      "strength": 2,
-      "detail": "本周收盘 142.20 < EMA8(143.31)，但周线未收盘 — 等本周五收盘后确认"
-    },
-    "NOW": {
-      "name": "ServiceNow",
-      "close": 117.9,
-      "close_date": "2026-06-03",
-      "ema8": 106.64,
-      "ema21": 113.26,
-      "vs_ema8_pct": 10.56,
-      "action": "hold",
-      "strength": 1,
-      "detail": "EMA8 (106.64) ≤ EMA21 (113.26) — 尚未多头排列"
-    },
-    "CRM": {
-      "name": "Salesforce",
-      "close": 190.61,
-      "close_date": "2026-06-03",
-      "ema8": 185.0,
-      "ema21": 195.09,
-      "vs_ema8_pct": 3.03,
-      "action": "hold",
-      "strength": 1,
-      "detail": "EMA8 (185.00) ≤ EMA21 (195.09) — 尚未多头排列"
+    "EWY": {
+      "name": "EWY",
+      "note": "ETF — K-line not fetched (network restricted)"
     },
     "RKLB": {
       "name": "Rocket Lab",
@@ -804,13 +479,21 @@
       "detail": "距 EMA8 +2.9% — 接近回踩区"
     }
   },
-  "market": {
+  "market_index": {
     "code": "usQQQ.OQ",
     "close": 744.21,
     "ema8": 701.17,
     "vs_ema8_pct": 6.14,
     "bullish": true
   },
-  "kline_status": "ok (60/61) — failed: ASE",
-  "data_source": "Tencent ifzq.gtimg.cn (live)"
+  "kline_status": "warning: 使用 2026-06-03 收盘数据 (网络受限无法拉取 2026-06-04 收盘价); ETF K线未拉取",
+  "sources": "stooq weekly K-line (prev session 2026-06-03)",
+  "alert_count": 5,
+  "alert_tickers": [
+    "GOOGL",
+    "AMZN",
+    "META",
+    "CEG",
+    "GEV"
+  ]
 }
