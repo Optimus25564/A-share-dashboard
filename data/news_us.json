@@ -143,6 +143,14 @@
       "url": "https://blogs.nvidia.com/blog/nvidia-gtc-taipei-computex-2026-news/",
       "source": "NVIDIA Blog",
       "content": "Nvidia confirmed Vera Rubin NVL72 is in full production. Spectrum-X Ethernet Photonics (co-packaged optics next-gen switching) also entered full production. NVIDIA Cosmos 3 for robotics unveiled. DLSS 4.5 expanding to 11 new titles including Marvel Rivals and Phantom Blade Zero."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "policy",
+      "title": "US BIS Tightens Blackwell Export Controls to Chinese Company Overseas Subsidiaries; Closes Re-Export Loophole",
+      "url": "https://www.gurufocus.com/news/8892851/new-us-export-controls-impact-nvidia-nvda-and-amd-amd-ai-chips",
+      "source": "GuruFocus / Bureau of Industry and Security",
+      "content": "Effective May 31-June 1, US Commerce Dept/BIS issued new rules requiring export licenses for Nvidia Blackwell-class AI chips sold to overseas subsidiaries of Chinese companies — closing a loophole that allowed purchases through non-China entities. AMD chips similarly affected. Expands existing China restrictions to global Chinese corporate subsidiaries, adding material data center revenue uncertainty. NVDA Q2 FY2027 guidance already excludes China DC compute revenue."
     }
   ],
   "AVGO": [
@@ -265,6 +273,30 @@
       "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-second-quarter-fiscal-year-2026-financial",
       "source": "Broadcom Investor Relations / StockTitan",
       "content": "Broadcom Q2 FY2026 (ended May 3, 2026): revenue $22.19B (+48% YoY), GAAP NI $9.31B (+88%), non-GAAP EPS $2.44. AI semiconductor revenue $10.8B (+143% YoY) driven by custom accelerators (Google TPU, Meta MTIA, OpenAI ASIC) and AI networking. Adj. EBITDA margin 69%, FCF $10.26B (46% of revenue). Q3 FY2026 guidance ~$29.4B (+84% YoY); AI revenue to more than triple YoY to ~$16B. Dividend $0.65/share declared. Stock -1.13% on June 4 despite record-breaking results — 'buy the rumor, sell the news' dynamic."
+    },
+    {
+      "date": "2026-06-03",
+      "type": "announcement",
+      "title": "Broadcom Q2 FY2026 Earnings Call: Six ASIC Customers (Google/Meta/Anthropic/OpenAI+2); $100B+ AI Revenue Target FY2027; Q3 Guided $29.4B",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/06/03/broadcom-avgo-q2-2026-earnings-transcript/",
+      "source": "Motley Fool / Broadcom IR",
+      "content": "On the Q2 FY2026 earnings call, Broadcom confirmed six custom AI chip customers including Google, Meta, Anthropic, and OpenAI; AI bookings exceed 3x quarterly shipments. $100B+ annual AI semiconductor revenue target for FY2027+. Q3 FY2026 revenue guided $29.4B (+84% YoY), beating $28.53B consensus. Infrastructure software $7.18B slightly missed whisper $7.32B, contributing to post-earnings selloff."
+    },
+    {
+      "date": "2026-06-04",
+      "type": "research",
+      "title": "Macquarie Downgrades Broadcom to Neutral, Cuts PT to $437 from $513; Cites Google In-House ASIC Risk",
+      "url": "https://www.gurufocus.com/news/8900763/broadcom-avgo-downgraded-to-neutral-following-q2-earnings-report",
+      "source": "GuruFocus / Macquarie",
+      "content": "Macquarie downgraded AVGO from Outperform to Neutral post-Q2 FY2026 earnings, cutting PT to $437 from $513. Core concern: Google's strategic shift toward developing its own custom silicon could erode Broadcom's ASIC revenue. Lower-margin ASIC mix shift threatens structural gross margin compression. 26 of 28 other analysts maintain Buy/Outperform with consensus PT ~$490."
+    },
+    {
+      "date": "2026-06-04",
+      "type": "news",
+      "title": "AVGO Crashes 13.65% Post-Earnings Despite Record Results; Bernstein: Selloff on AI Annual Forecast Not Raised, Not Guidance Cut",
+      "url": "https://www.tradingkey.com/news/market-movers/261946667-market-movers-avgo-20260604",
+      "source": "TradingKey / Benzinga",
+      "content": "Broadcom shares fell 13.65% on June 4 despite Q2 FY2026 beat ($22.2B revenue, $10.8B AI semi +143%, EPS $2.44, Q3 guided $29.4B). Bernstein's Stacy Rasgon cited market disappointment that the AI chip annual revenue forecast was not raised. 26 of 28 analysts remain Buy. Management reaffirmed $100B+ AI chip revenue path for FY2027."
     }
   ],
   "AMD": [
@@ -599,6 +631,14 @@
       "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/261940757-qcom-computex-2026-dragonfly-nvad-tradingkey",
       "source": "TradingKey / Pulse2 / Blockonomi",
       "content": "Qualcomm CEO Cristiano Amon at Computex declared 2026 'Year of AI Agents' and unveiled Dragonfly brand for data center AI inference — QCOM's first formal DC entry. Stock fell 8.77% as Nvidia RTX Spark superchip (Arm CPU + Blackwell GPU, 128GB unified memory) enters Windows on Arm market directly competing with Snapdragon X Elite. Reports: Arm Holdings considering cancellation of Qualcomm architectural license."
+    },
+    {
+      "date": "2026-06-03",
+      "type": "news",
+      "title": "Qualcomm Automotive Revenue at $6B Annual Run Rate Post-Computex; Investor Day June 24 to Detail Dragonfly Data Center Pipeline",
+      "url": "https://www.qualcomm.com/news/onq/2026/03/snapdragon-automotive-market-traction-and-scale",
+      "source": "Qualcomm",
+      "content": "Qualcomm automotive revenue reached ~$1.33B in fiscal Q2 2026, pacing toward $6B annual run rate (long-term target $29B). Investor Day June 24, 2026 will reveal full Dragonfly data center product details and updated custom silicon pipeline (previously disclosed $45B+ signed contracts). Hyperscaler Dragonfly CPU/AI inference deployments began late 2025."
     }
   ],
   "MRVL": [
@@ -993,6 +1033,14 @@
       "url": "https://ir.appliedmaterials.com/events/event-details/bernstein-strategic-decisions-conference-2",
       "source": "Applied Materials IR / GlobeNewswire",
       "content": "AMAT CEO Gary Dickerson presented at Bernstein Strategic Decisions Conference (May 28, 9am ET). Reports indicate AMAT in preliminary discussions with Elon Musk's Terafab AI chip fab project (2nm, targeting 1 terawatt annual compute capacity). Citi massively raised AMAT price target. Stock at $448.29."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "announcement",
+      "title": "Applied Materials CFO at BofA 2026 Global Technology Conference: Semiconductor Systems Growth Forecast Raised to 30%+",
+      "url": "https://seekingalpha.com/article/4911070-applied-materials-inc-amat-presents-at-bank-of-america-2026-global-technology-conference",
+      "source": "Seeking Alpha / Applied Materials IR",
+      "content": "Applied Materials CFO Brice Hill presented at BofA Securities Global Technology Conference June 2. Key: AMAT raised full-year semiconductor systems business growth forecast to 30%+ for calendar 2026 on strong new orders. Q2 FY2026 revenue $7.91B record (+11% YoY), GAAP EPS $3.51 record. Advanced packaging expansion continues via EPIC Platform with Broadcom joining, and planned ASMPT NEXX business acquisition for panel-level packaging."
     }
   ],
   "KLAC": [
@@ -1043,6 +1091,22 @@
       "url": "https://drrobertcastellano.substack.com/p/kla-upgraded-by-jefferies-but-why",
       "source": "Substack / BofA Research",
       "content": "KLAC jumped 4.56% to $2,028.57 on June 1 post-Computex. Jefferies upgrades KLA. Bank of America forecasts WFE market $131B (+10% YoY) in 2026 and $150B (+14%) in 2027, driven by HBM expansion, leading-edge logic (3nm/2nm), and advanced packaging. KLAC's yield inspection and process control tools are critical for all these nodes."
+    },
+    {
+      "date": "2026-06-03",
+      "type": "announcement",
+      "title": "KLA Presents at BofA 2026 Global Technology Conference; June 4 Record Date for 10-for-1 Stock Split",
+      "url": "https://ir.kla.com/news-events/press-releases/detail/516/kla-announces-upcoming-investor-webcasts",
+      "source": "KLA Corporation IR",
+      "content": "KLA presented at BofA Securities 2026 Global Technology Conference on June 3 at 9:20 AM PT. June 4 is the record date for KLA's 10-for-1 forward stock split (announced May 7). Post-split trading begins June 12. KLA is up ~59.7% YTD 2026, holding ~58% global market share in semiconductor process control. Q4 FY2026 revenue guidance $3.575B ±$200M."
+    },
+    {
+      "date": "2026-06-04",
+      "type": "announcement",
+      "title": "KLA 10-for-1 Stock Split Record Date — Shareholders Receive 9 Additional Shares June 11; Split-Adjusted Trading June 12",
+      "url": "https://ir.kla.com/news-events/press-releases/detail/515/kla-corporation-announces-ten-to-one-stock-split-and",
+      "source": "KLA Corporation IR / PR Newswire",
+      "content": "June 4 is the record date for KLA's Board-approved 10-for-1 forward stock split. Each stockholder of record receives 9 additional shares on June 11; split-adjusted trading starts June 12. Quarterly dividend $2.30/share pre-split (21% increase approved March 12) was paid June 2. The split reflects management confidence in sustained earnings power from the AI-driven WFE cycle."
     }
   ],
   "ONTO": [
@@ -1241,6 +1305,14 @@
       "url": "https://www.globenewswire.com/news-release/2026/06/01/3304776/14450/en/Micron-Powers-AI-Everywhere-at-COMPUTEX-2026.html",
       "source": "GlobeNewswire / TechTimes",
       "content": "Micron Computex 2026: HBM4 36GB 12H (2.6x inference performance vs prior gen). All 2026 HBM4 production capacity is fully sold out. NVIDIA CEO Jensen Huang named Micron alongside Samsung and SK Hynix as Vera Rubin HBM4 suppliers. Also launched industry's first PCIe Gen6 SSD (9650) and 256GB SOCAMM2 module (1/3 power of RDIMM)."
+    },
+    {
+      "date": "2026-06-03",
+      "type": "news",
+      "title": "Digitimes: Micron May Supply Larger-Than-Expected HBM4 Share for Nvidia Vera Rubin; Targets 15K WPM Capacity",
+      "url": "https://www.digitimes.com/news/a20260603PD212/micron-hbm4-nvidia-equipment-rubin.html",
+      "source": "Digitimes",
+      "content": "Digitimes (citing South Korean memory equipment sources) reported Micron may supply a larger-than-expected share of HBM4 for Nvidia's Vera Rubin platform. Micron is ramping equipment investment targeting 15,000 wafers/month HBM4 capacity. Jensen Huang confirmed all three HBM4 suppliers (Samsung, SK Hynix, Micron) shipping for Vera Rubin at Computex. Q3 FY2026 earnings June 24; guidance ~$33.5B ±$0.75B, GM ~81%."
     }
   ],
   "SNDK": [
@@ -1555,6 +1627,14 @@
       "url": "https://windowsnews.ai/article/build-2026-microsoft-unleashes-ai-agents-across-office-365-windows-and-azure-at-san-francisco-keynot.421349",
       "source": "Windows News / Microsoft",
       "content": "Microsoft Build 2026 (Fort Mason, San Francisco): Copilot Agent Mode rolling out to Microsoft 365 subscribers late June, with persistent agents inside Word/Excel/Teams/Outlook. Azure AI Foundry achieves general availability. GitHub Copilot graduates to autonomous coding agent. US DoD signs $9.69B enterprise agreement for M365, Azure, Copilot AI — expected to save $422M."
+    },
+    {
+      "date": "2026-06-02",
+      "type": "research",
+      "title": "Morgan Stanley Projects 52% Azure Revenue Upside; Azure AI Annualized Run Rate $37B (+123% YoY); MSFT Strong Buy 34/2",
+      "url": "https://www.techtimes.com/articles/317597/20260602/microsoft-stock-msft-surges-build-2026-morgan-stanley-eyes-52-azure-upside.htm",
+      "source": "TechTimes / Morgan Stanley",
+      "content": "Morgan Stanley projected 52% upside in Azure revenue at Build 2026, citing accelerating AI workload adoption. Azure AI annualized run rate $37B (+123% YoY). MSFT stock surged 5.45% in pre-Build week. Wall Street consensus: 34 Buy / 2 Hold. Key Build 2026 (June 2-3): MAI-Thinking-1/Code-1 models, Azure Cobalt 200 VMs (+50% perf), GitHub Copilot as autonomous coding agent, Azure HorizonDB with vector/semantic search. Bill Ackman's Pershing Square disclosed major MSFT position."
     }
   ],
   "GOOGL": [
@@ -1685,6 +1765,22 @@
       "url": "https://www.proactiveinvestors.com/companies/news/1092628/alphabet-showcases-new-ai-models-and-agent-tools-at-google-i-o-2026-1092628.html",
       "source": "Proactive Investors / Al Jazeera",
       "content": "Google I/O 2026: Gemini 3.5 Flash, Gemini Omni Flash, Gemini Spark personal AI agent, and Universal Cart. Alphabet 2026 capex guided $180-190B. GOOGL opened -3.5% on dilution fears from $80B equity offering (Berkshire Hathaway $10B anchor, $30B bank-underwritten, $40B market). Piper Sandler: AI-assisted search citations up 16x since early 2025."
+    },
+    {
+      "date": "2026-06-03",
+      "type": "announcement",
+      "title": "Alphabet Announces $80B-$84.75B Equity Raise for AI Infrastructure — First New Share Issuance Since 2005; Berkshire Takes $10B",
+      "url": "https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Proposed-80-Billion-Equity-Capital-Raise-to-Expand-AI-Infrastructure-and-Compute-2026-b0myAMewCa/default.aspx",
+      "source": "Alphabet IR / CNBC / TechCrunch",
+      "content": "Alphabet announced an $80B equity raise (upsized to $84.75B) on June 3-4 — first new share issuance since 2005 and one of the largest equity offerings in corporate history. Structure: $40B at-the-market offering + $10B private placement from Berkshire Hathaway + additional tranches. Proceeds earmarked for AI infrastructure CapEx and compute scaling. Stock fell ~5.5% on dilution concerns. Offering closed June 4-5."
+    },
+    {
+      "date": "2026-06-04",
+      "type": "news",
+      "title": "GOOGL Shares Drop ~5.5% on $84.75B Equity Dilution; 62 Analysts Strong Buy, Avg PT ~$430; $0.22 Dividend Ex-Date June 8",
+      "url": "https://www.tipranks.com/news/alphabet-googl-expands-equity-raise-to-84-75b-for-ai-compute-growth-as-gemini-use-surges",
+      "source": "TipRanks / 247WallSt",
+      "content": "GOOGL fell ~5.5% on dilution concerns from $84.75B equity raise. 62 analysts maintain Strong Buy consensus with average 12-month PT ~$430. Berkshire Hathaway subscribed $10B in the private placement. Google Cloud grew 28% YoY as underlying backdrop. Dividend: $0.22/share declared, ex-date June 8, 2026. Analysts argue the AI infrastructure investment is strategically essential given MSFT/AMZN/META competition."
     }
   ],
   "AMZN": [
@@ -1767,6 +1863,14 @@
       "url": "https://aws.amazon.com/blogs/aws/top-announcements-of-the-whats-next-with-aws-2026/",
       "source": "AWS News Blog",
       "content": "AWS What's Next 2026: OpenAI models GPT-5.5 and GPT-5.4 available on Amazon Bedrock in preview; Codex and Amazon Bedrock Managed Agents powered by OpenAI in limited preview. Amazon Quick AI work assistant goes live with desktop app, Free/Plus tiers, multi-app integration."
+    },
+    {
+      "date": "2026-06-04",
+      "type": "announcement",
+      "title": "Amazon Prime Day 2026 Set for June 23-26 (4 Days, Earliest Since 2021); Pinterest Signs $4B AWS Deal Through 2031",
+      "url": "https://www.aboutamazon.com/news/retail/amazon-prime-day-2026-date",
+      "source": "About Amazon / Motley Fool",
+      "content": "Amazon officially announced Prime Day 2026 for June 23-26 — a 4-day event, earliest since 2021, spanning 35+ categories. Separately, Pinterest announced a $4B investment in AWS cloud services through 2031. These follow the Snowflake $6B 5-year AWS AI deal (May 27) and GPT-5.5 Bedrock partnership (June 2), reinforcing AWS's enterprise AI cloud dominance."
     }
   ],
   "META": [
@@ -1873,6 +1977,14 @@
       "url": "https://www.cnbc.com/2026/05/27/meta-testing-ai-subscription-services-cheapest-plan-at-7point99.html",
       "source": "CNBC / Bitcoin Ethereum News",
       "content": "Meta's Superintelligence Labs (led by Alexandr Wang) launches Muse Spark, matching Llama 4 mid-size capability at far lower compute. Meta begins testing subscription plans: Meta One Plus $7.99/month and Meta One Premium $19.99/month, launching first in Singapore, Guatemala, Bolivia. Full-year 2026 capex raised to $125-145B."
+    },
+    {
+      "date": "2026-06-04",
+      "type": "news",
+      "title": "Meta Muse Spark Developer API Delayed Again — No Launch Date Set; Behemoth 2T+ Model Shelved; $125-145B Capex ROI Questioned",
+      "url": "https://invezz.com/news/2026/06/04/metas-ai-push-hits-another-delay-is-meta-stock-still-a-buy/",
+      "source": "Invezz / Implicator AI",
+      "content": "Meta delayed the Muse Spark developer API (from Superintelligence Labs) for the third time with no confirmed launch date. Delays attributed to software bugs and insufficient infrastructure. The Behemoth 2T+ parameter model was also shelved after engineers failed to meaningfully improve capabilities. META stock at $617-$623. Investor debate intensifies on ROI for $125-145B capex guidance. Model launch (April) distinct from developer API availability."
     }
   ],
   "AAPL": [
@@ -1955,6 +2067,14 @@
       "url": "https://247wallst.com/investing/2026/06/01/prediction-microsoft-stock-will-trade-at-this-price-in-a-year/",
       "source": "24/7 Wall St",
       "content": "Apple WWDC 2026 starts June 8, 2026. The long-delayed Siri AI upgrade (pushed from 2025 after technical challenges) expected to launch alongside iOS 27. Analysts view as pivotal moment for Apple Intelligence rollout and device upgrade cycle."
+    },
+    {
+      "date": "2026-06-04",
+      "type": "news",
+      "title": "WWDC June 8 Make-or-Break for Apple AI Credibility; Google Gemini Integration Depth the Key Analyst Watch Item",
+      "url": "https://www.heygotrade.com/en/news/apple-wwdc-june-8-preview-catalyst/",
+      "source": "HeyGoTrade / MacRumors",
+      "content": "Analysts flagged WWDC June 8 keynote as near-term AAPL catalyst. Key watch: (1) Depth of Google Gemini integration in Apple Intelligence following January 2026 partnership; (2) Redesigned Siri chatbot credibility vs. Claude/ChatGPT; (3) iOS 27 'Snow Leopard'-style performance overhaul. Apple fell behind MSFT/GOOGL in AI 2024-25; WWDC 2026 is the reset moment. Q3 FY2026 earnings upcoming (guided +14-17% YoY). Hardware (Mac) reveals considered secondary."
     }
   ],
   "TSLA": [
@@ -2029,6 +2149,22 @@
       "url": "https://seekingalpha.com/news/4578385-tesla-signals-over-25b-2025minus-2026-capex-as-it-targets-optimus-production-by-late-july",
       "source": "Seeking Alpha / Tesla IR",
       "content": "Tesla began preparations for first large-scale Optimus Gen 3 mass-production factory at Fremont, CA, replacing Model S/X lines, designed for capacity of 1 million robots/year. A second Gigafactory Texas Gen 3 line is planned for 10M robots/year long-term. Unsupervised Robotaxi service now operational in Austin and expanded to Dallas and Houston in April 2026. FSD subscription at record net new subscriptions in Q1 2026. Total 2025-2026 CapEx plan: $25B+ across six factories including new Texas chip fab for Dojo. Elon Musk projects Optimus to drive 80% of future Tesla value."
+    },
+    {
+      "date": "2026-06-03",
+      "type": "announcement",
+      "title": "Tesla FSD v14.3.3 Waves 2-3 Roll Out June 3-4; 20% Reaction Time Improvement; Upgraded Vision Encoder",
+      "url": "https://www.notateslaapp.com/software-updates/version/2026.14.6.7/release-notes",
+      "source": "Not a Tesla App",
+      "content": "Tesla deployed 2nd and 3rd FSD Supervised v14.3.3 (build 2026.14.6.7) waves June 3-4. Key improvements: rewritten AI compiler with 20% better reaction time; upgraded neural network vision encoder for better 3D geometry comprehension and low-visibility performance; improved driver monitoring (DMS) with eye gaze tracking; new live FSD intervention-free distance stat."
+    },
+    {
+      "date": "2026-06-04",
+      "type": "news",
+      "title": "Tesla FSD v14 Lite for HW3 Targets Late-June North America Rollout; EU FSD Supervised Approval Secured in Netherlands",
+      "url": "https://www.notateslaapp.com/news/4235/what-to-expect-from-teslas-fsd-v14-lite-this-month",
+      "source": "Not a Tesla App",
+      "content": "Tesla confirmed FSD v14 Lite — bringing reversing, gear shifting, and parking automation to older Hardware 3 vehicles — targeting late-June 2026 North America rollout. HW3 owners represent a large installed base awaiting v14. Tesla received EU regulatory approval for FSD (Supervised) in Netherlands in April; full EU-wide recognition targeted summer 2026."
     }
   ],
   "CRWV": [
@@ -2399,6 +2535,14 @@
       "url": "https://www.gevernova.com/news/taxonomy/term/9211",
       "source": "GE Vernova",
       "content": "GEV board declares $0.50/share quarterly dividend (payable July 14, record June 16). CEO Scott Strazik: Power and Electrification demand accelerating; backlog grew $13B+ QoQ; expects at least 110GW combined gas turbine backlog and slot reservations by year-end 2026. Hosting Orchestrate 2026 in Atlanta, June 9-12."
+    },
+    {
+      "date": "2026-06-03",
+      "type": "news",
+      "title": "GEV Data Center Electrification Orders Pacing $24.8B in 2026 (+29% YoY); Total Backlog Approaching $200B; Orchestrate June 9-12",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-gev-power-ai-171216454.html",
+      "source": "Yahoo Finance",
+      "content": "Analyst notes highlight GEV data center electrification orders tracking toward $24.8B for full-year 2026 (+29% YoY), with Electrification segment book-to-bill ~2.5x in Q1 2026. Total backlog approaching $200B; Q1 Electrification backlog $45.3B estimate. Revenue guidance raised to $44.5-$45.5B. Orchestrate 2026 customer conference (June 9-12, Atlanta) is next expected catalyst with additional order announcements."
     }
   ],
   "CCJ": [
@@ -2925,6 +3069,14 @@
       "url": "https://www.arm.com/company/events/computex",
       "source": "ARM",
       "content": "ARM CEO Rene Haas keynotes Computex 2026 (June 2, Taipei) on how agentic AI is reshaping compute. ARM Q4 FY2026 revenue $1.49B (+20% YoY); committed customer demand for ARM AGI CPU exceeded $2B across FY27 and FY28."
+    },
+    {
+      "date": "2026-06-04",
+      "type": "news",
+      "title": "ARM Post-Computex: ByteDance and Oracle Named as AGI CPU Customers; $15B Revenue Target Ahead of Schedule; Stock at Record $421",
+      "url": "https://www.fool.com/investing/2026/06/04/arm-holdings-surged-15-on-nvidias-new-chip-announc/",
+      "source": "Motley Fool / Data Center Dynamics",
+      "content": "Post-Computex analysis confirmed ByteDance and Oracle as named ARM AGI CPU customers (alongside Meta), per Data Center Dynamics. ARM CEO Rene Haas said $15B chip revenue target on track ahead of schedule, with AGI CPU >$2B in committed orders. Stock hit record $421.69 (+14% on June 1-2 catalyst); ARM up ~250% YTD in 2026. Mizuho raised PT to $425. PC revenue ramp is a 2027 story."
     }
   ],
   "LRCX": [
@@ -3147,6 +3299,14 @@
       "url": "https://www.techi.com/oracle-earnings-preview-oci-backlog-ai-capex-test/",
       "source": "TECHi / Oracle IR",
       "content": "Oracle Q4 FY2026 earnings June 10. Q3 remaining performance obligations hit $553B (+325% YoY), OCI cloud infra revenue $4.9B (+84%). Q4 guidance: non-GAAP EPS $1.96-2.00, cloud revenue +46-50%. Analysts project $95B market cap swing. Key question: can OCI capacity keep pace with massive backlog without margin compression."
+    },
+    {
+      "date": "2026-06-04",
+      "type": "news",
+      "title": "Oracle Q4 FY2026 Earnings June 10: OCI +84% YoY, $553B RPO, $39.2B YTD CapEx; Options Imply 12% Post-Earnings Move",
+      "url": "https://www.fxleaders.com/news/2026/06/04/oracle-orcl-stock-analysis-553b-backlog-ai-revenue-surge-and-a-700b-bet-on-cloud-infrastructure/",
+      "source": "FX Leaders / TECHi",
+      "content": "Ahead of Oracle Q4 FY2026 earnings June 10 after close: OCI Cloud +84% YoY to $4.9B in Q3; RPO $553B (+325% YoY); $39.2B CapEx in 9-month FY2026 (vs $12.1B prior year); 10+ GW power capacity committed 3 years out; OCI multicloud expanded to 33 MSFT/14 Google/8 AWS regions. Non-GAAP EPS guided $1.96-$2.00. Options implying ~12% post-earnings move. Stock fell ~6% June 3 on macro profit-taking."
     }
   ],
   "PLTR": [
@@ -3221,6 +3381,22 @@
       "url": "https://www.tradingkey.com/news/market-movers/261941787-market-movers-pltr-20260602",
       "source": "TradingKey / Yahoo Finance",
       "content": "PLTR fell 5.74% (down up to 6.8% intraday) on June 2 amid broader AI stock pullback. President Trump signed executive order focused on ultra-high-performance AI software from defense contractors including Palantir and Anthropic, raising regulatory uncertainty. This follows June 1 +3.17% gain on strong Q1 results."
+    },
+    {
+      "date": "2026-06-04",
+      "type": "announcement",
+      "title": "Palantir AIPCon 2026: Google Cloud Partnership Announced; Kirkland & Ellis Private Equity Deal Signed; PLTR +2.1%",
+      "url": "https://parameter.io/palantir-pltr-stock-new-google-cloud-deal-unveiled-at-aipcon-2026/",
+      "source": "Parameter / Palantir IR",
+      "content": "At AIPCon 2026 (June 4), Palantir announced: (1) New Google Cloud collaboration making AIP platform available across Google Cloud infrastructure and Google Cloud Marketplace; (2) Multiyear partnership with Kirkland & Ellis to build AIP-powered enterprise platform for private equity fundraising. PLTR +2.11% on day. Annual meeting was June 3 (routine governance)."
+    },
+    {
+      "date": "2026-06-04",
+      "type": "news",
+      "title": "Palantir Defense Infrastructure: AIP/Gotham in Multi-Year Program-of-Record Roles Across US DoD, NSA, CIA, NATO; DIA Next",
+      "url": "https://www.timothysykes.com/news/palantir-technologies-inc-pltr-news-2026_06_04/",
+      "source": "Timothy Sykes / Palantir IR",
+      "content": "Palantir AIP and Gotham have secured multi-year program-of-record contracts across DoD, NSA, CIA, NATO, plus Ukraine battlefield deployments and Project Maven expansion. DIA (Defense Intelligence Agency) identified as next large potential contract target. Multibillion-dollar defense backlog creates infrastructure-like revenue visibility, distinct from commercial AIP growth."
     }
   ],
   "IREN": [
@@ -3579,6 +3755,22 @@
       "url": "https://news.alphastreet.com/ciena-q2-2026-earnings-preview-june-4-street-expects-1-45-eps/",
       "source": "Alphastreet / Zacks",
       "content": "Ciena (CIEN) reports Q2 FY2026 results on June 4 before market open. Consensus: $1.50B revenue (+33.6% YoY), adj. EPS $1.45 (+247.6% YoY). In Q1 FY2026 (ended Jan 31, 2026), Ciena delivered $1.43B revenue (+33% YoY), adj. EPS $1.35 (+111%); Networking Platforms segment (80.5% of total) up 40% YoY driven by hyperscaler and cloud provider 800G optics demand. Cisco Q3 FY2026 also showed $1B+ Acacia orders and AI-related optics up ~4x to ~$950M — confirming strong optical sector tailwind. Bank of America raised Ciena target to $660 from $550."
+    },
+    {
+      "date": "2026-06-04",
+      "type": "announcement",
+      "title": "Ciena Q2 FY2026 Results: Revenue $1.571B (+40% YoY), EPS $1.64 Beat $1.46; Full-Year Raised to $6.3B — Stock -16% on Guidance",
+      "url": "https://www.stocktitan.net/news/CIEN/ciena-reports-fiscal-second-quarter-2026-financial-s8y5ae6vcv5l.html",
+      "source": "StockTitan / Ciena Press Release",
+      "content": "Ciena reported Q2 FY2026 revenue $1.571B (+40% YoY), non-GAAP EPS $1.64 vs $1.46 consensus (+12.3%), earnings +290% YoY. Full-year FY2026 guidance raised to $6.3B ±$100M (~+32% YoY). Q3 FY2026 guided $1.625B ±$50M (vs $1.607B estimate). Stock fell ~16% — market expected a larger guidance raise. AI hyperscaler infrastructure demand cited as key growth driver."
+    },
+    {
+      "date": "2026-06-04",
+      "type": "research",
+      "title": "Raymond James Raises Ciena PT to $530 from $320, Maintains Outperform; Selloff Called Over-Reaction to Record Quarter",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-ciena-q2-2026-beats-forecasts-but-stock-dips-93CH-4726909",
+      "source": "Investing.com / Raymond James",
+      "content": "Raymond James raised Ciena PT to $530 from $320, maintaining Outperform after Q2 FY2026 beat. Called the -16% selloff an over-reaction, highlighting Ciena's leverage to AI-driven hyperscaler and cloud infrastructure investment. 800G coherent DCI and upcoming 1.2T/1.6T platforms remain long-term growth drivers."
     }
   ],
   "CSCO": [
