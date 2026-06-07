@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-05-31",
+    "updated": "2026-06-07",
     "note": "AI CapEx 产业链 8 层框架. 财报数据自然季度 (2025Q2→2026Q1). 单位 rev=亿$.",
     "categories": {
       "core_chip": "L1 算力芯片 & 加速器",
@@ -131,6 +131,15 @@
         "gm": 68.1,
         "nm": 38.1,
         "src": "A"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 222.0,
+        "gm": 77.1,
+        "nm": 42.0,
+        "src": "A",
+        "source_url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-second-quarter-fiscal-year-2026-financial",
+        "note": "FY26 Q2 (Feb-May 2026, ending May 3): 营收$222亿同比+48%, AI半导体$108亿+143%; GAAP GM 77.1%, GAAP NM 42.0%; Non-GAAP EPS $2.44"
       }
     ],
     "q2_outlook": {
@@ -2246,11 +2255,12 @@
       },
       {
         "q": "2026Q2",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "F",
-        "note": "FY26 Q4 (Feb-May 2026) 财报预计 2026/06 公布; 公司指引 $4.25-4.35亿, GM 63.9-65.9%"
+        "rev": 4.37,
+        "gm": 68.2,
+        "nm": 38.7,
+        "src": "A",
+        "source_url": "https://finance.yahoo.com/markets/stocks/articles/credo-technology-group-holding-ltd-200500381.html",
+        "note": "FY26 Q4 (Feb-May 2026, ending May 2): 营收$4.37亿同比+157%/环比+7%, GAAP GM 68.2%, GAAP NM 38.7%; Non-GAAP EPS $1.16; 超指引(GM 63.9-65.9%)"
       }
     ],
     "q2_outlook": {
