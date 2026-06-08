@@ -1,5 +1,6 @@
 {
-  "date": "2026-06-05",
+  "date": "2026-06-08",
+  "week_data_date": "2026-06-05",
   "top5": [
     "688041",
     "688256",
@@ -16,29 +17,29 @@
   ],
   "signals": {
     "688041": {
-      "signal": "sell-confirmed",
-      "close": 290,
-      "ema8": 313.41
+      "signal": "sell-warning",
+      "close": 274.06,
+      "ema8": 304.67
     },
     "688256": {
-      "signal": "hold",
-      "close": 1400,
-      "ema8": 1365.65
+      "signal": "sell-warning",
+      "close": 1238,
+      "ema8": 1337.28
     },
     "688008": {
-      "signal": "sell-confirmed",
-      "close": 240,
-      "ema8": 251.36
+      "signal": "sell-warning",
+      "close": 239.61,
+      "ema8": 248.75
     },
     "603019": {
-      "signal": "sell-confirmed",
-      "close": 87,
-      "ema8": 89.08
+      "signal": "sell-warning",
+      "close": 84.0,
+      "ema8": 87.95
     },
     "300308": {
-      "signal": "hold",
-      "close": 1042,
-      "ema8": 1025.72
+      "signal": "buy-fresh",
+      "close": 1179.99,
+      "ema8": 1060.0
     },
     "688981": {
       "signal": "data-insufficient",
@@ -67,10 +68,10 @@
     }
   },
   "index": {
-    "close": 4062.64,
-    "ema8": 4113.68,
+    "close": 4027.74,
+    "ema8": 4094.58,
     "status": "⚠跌破"
   },
-  "title": "🚨 [2026-06-05] 趋势提醒",
-  "data_note": "周线K线API受网络策略限制, 价格来源: 新闻搜索/Investing.com, EMA8为重建估算值"
+  "title": "🚨 [2026-06-08] A股周线趋势提醒",
+  "data_note": "周线K线API受网络策略限制，价格来源：新浪/Investing.com新闻搜索；EMA8为历史状态滚动更新估算值；候选池5只EMA待补充"
 }
