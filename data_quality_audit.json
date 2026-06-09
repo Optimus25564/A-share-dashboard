@@ -1,0 +1,278 @@
+{
+  "company_audits": [
+    {
+      "market": "A-share",
+      "path": "data/companies.json",
+      "companies": 28,
+      "quarter_rows": 140,
+      "issues": [],
+      "domain_counts": {
+        "stcn.com": 4,
+        "stock.stockstar.com": 25,
+        "finance.sina.com.cn": 21,
+        "news.qq.com": 13,
+        "file.finance.qq.com": 1,
+        "static.cninfo.com.cn": 7,
+        "pdf.dfcfw.com": 6,
+        "yicai.com": 2,
+        "caifuhao.eastmoney.com": 2,
+        "nbd.com.cn": 1,
+        "star.sse.com.cn": 1,
+        "finance.sina.cn": 1,
+        "dataclouds.cninfo.com.cn": 2,
+        "vip.stock.finance.sina.com.cn": 2,
+        "cj.sina.com.cn": 2,
+        "wallstreetcn.com": 4,
+        "jjckb.cn": 1,
+        "big5.sse.com.cn": 1,
+        "file.finance.sina.com.cn": 2,
+        "stockmc.xueqiu.com": 4,
+        "finance.eastmoney.com": 4,
+        "163.com": 1,
+        "m.jiemian.com": 2,
+        "paper.cnstock.com": 1,
+        "cnenergynews.cn": 1,
+        "shidaotec.com": 1,
+        "disc.static.szse.cn": 1,
+        "money.finance.sina.com.cn": 2,
+        "sdyanbao.com": 1,
+        "wap.stockstar.com": 2,
+        "stock.finance.sina.com.cn": 1,
+        "reportify.cn": 1,
+        "cls.cn": 1,
+        "view.inews.qq.com": 1
+      }
+    },
+    {
+      "market": "US",
+      "path": "data/companies_us.json",
+      "companies": 66,
+      "quarter_rows": 308,
+      "issues": [
+        {
+          "severity": "warn",
+          "type": "no_quarters",
+          "market": "US",
+          "code": "SMH",
+          "q": "",
+          "message": "No quarterly financial data. This is OK for ETF/watch-only names, but it cannot be used in financial ranking."
+        },
+        {
+          "severity": "warn",
+          "type": "no_quarters",
+          "market": "US",
+          "code": "XLU",
+          "q": "",
+          "message": "No quarterly financial data. This is OK for ETF/watch-only names, but it cannot be used in financial ranking."
+        },
+        {
+          "severity": "warn",
+          "type": "no_quarters",
+          "market": "US",
+          "code": "COPX",
+          "q": "",
+          "message": "No quarterly financial data. This is OK for ETF/watch-only names, but it cannot be used in financial ranking."
+        },
+        {
+          "severity": "warn",
+          "type": "no_quarters",
+          "market": "US",
+          "code": "XME",
+          "q": "",
+          "message": "No quarterly financial data. This is OK for ETF/watch-only names, but it cannot be used in financial ranking."
+        },
+        {
+          "severity": "warn",
+          "type": "no_quarters",
+          "market": "US",
+          "code": "EWY",
+          "q": "",
+          "message": "No quarterly financial data. This is OK for ETF/watch-only names, but it cannot be used in financial ranking."
+        }
+      ],
+      "domain_counts": {
+        "sec.gov": 245,
+        "nvidianews.nvidia.com": 6,
+        "investors.broadcom.com": 6,
+        "ir.amd.com": 5,
+        "intc.com": 6,
+        "s204.q4cdn.com": 1,
+        "investors.applovin.com": 1,
+        "investor.tsmc.com": 5,
+        "asml.com": 6,
+        "ir.appliedmaterials.com": 1,
+        "investors.ontoinnovation.com": 1,
+        "news.synopsys.com": 1,
+        "investors.micron.com": 2,
+        "micron.gcs-web.com": 4,
+        "investor.sandisk.com": 1,
+        "globenewswire.com": 4,
+        "investor.lumentum.com": 4,
+        "microsoft.com": 6,
+        "s206.q4cdn.com": 5,
+        "abc.xyz": 1,
+        "ir.aboutamazon.com": 6,
+        "s21.q4cdn.com": 4,
+        "apple.com": 1,
+        "ir.tesla.com": 2,
+        "investors.coreweave.com": 1,
+        "investors.constellationenergy.com": 1,
+        "investors.vertiv.com": 1,
+        "eaton.com": 1,
+        "gevernova.com": 1,
+        "cameco.com": 6,
+        "investors.arm.com": 1,
+        "investor.lamresearch.com": 1,
+        "cadence.com": 1,
+        "prnewswire.com": 7,
+        "aseglobal.com": 1,
+        "ir.amkor.com": 1,
+        "investors.teradyne.com": 1,
+        "arista.com": 1,
+        "investors.credosemi.com": 1,
+        "businesswire.com": 1,
+        "asteralabs.com": 1,
+        "investor.ciena.com": 1,
+        "investor.cisco.com": 1,
+        "investor.corning.com": 1,
+        "investors.quantaservices.com": 1,
+        "investors.emcorgroup.com": 1,
+        "comfortsystemsusa.gcs-web.com": 1,
+        "investors.modine.com": 1,
+        "investors.tranetechnologies.com": 1,
+        "powellindustriesinc.gcs-web.com": 2,
+        "investors.nrg.com": 1,
+        "ir.kindermorgan.com": 1,
+        "williams.com": 1,
+        "investor.oracle.com": 1,
+        "iren.gcs-web.com": 2,
+        "investor.servicenow.com": 1,
+        "investor.salesforce.com": 1,
+        "tradingview.com": 1,
+        "investors.rocketlabcorp.com": 2
+      }
+    }
+  ],
+  "kline_audits": [
+    {
+      "market": "A-share",
+      "path": "data/alerts_state.json",
+      "exists": true,
+      "status": "",
+      "source": "",
+      "failed": [],
+      "issues": [
+        {
+          "severity": "warn",
+          "type": "kline_not_ok",
+          "market": "A-share",
+          "message": "K-line status is not ok in the saved scan state: . Re-run the scan with network access before relying on fresh trend signals."
+        },
+        {
+          "severity": "warn",
+          "type": "unknown_kline_source",
+          "market": "A-share",
+          "message": "Unexpected K-line data source: "
+        }
+      ]
+    },
+    {
+      "market": "US",
+      "path": "data/alerts_state_us.json",
+      "exists": true,
+      "status": "partial: stooq/yahoo API sandbox限制(403/allowlist), 价格来源WebSearch公开数据; EMA基于近8周估算收盘价计算, 信号仅供参考 — 建议核实实盘K线",
+      "source": "",
+      "failed": [],
+      "issues": [
+        {
+          "severity": "warn",
+          "type": "kline_not_ok",
+          "market": "US",
+          "message": "K-line status is not ok in the saved scan state: partial: stooq/yahoo API sandbox限制(403/allowlist), 价格来源WebSearch公开数据; EMA基于近8周估算收盘价计算, 信号仅供参考 — 建议核实实盘K线. Re-run the scan with network access before relying on fresh trend signals."
+        },
+        {
+          "severity": "warn",
+          "type": "unknown_kline_source",
+          "market": "US",
+          "message": "Unexpected K-line data source: "
+        }
+      ]
+    }
+  ],
+  "issue_counts": {
+    "by_severity": {
+      "warn": 9
+    },
+    "by_type": {
+      "no_quarters": 5,
+      "kline_not_ok": 2,
+      "unknown_kline_source": 2
+    }
+  },
+  "issues": [
+    {
+      "severity": "warn",
+      "type": "no_quarters",
+      "market": "US",
+      "code": "SMH",
+      "q": "",
+      "message": "No quarterly financial data. This is OK for ETF/watch-only names, but it cannot be used in financial ranking."
+    },
+    {
+      "severity": "warn",
+      "type": "no_quarters",
+      "market": "US",
+      "code": "XLU",
+      "q": "",
+      "message": "No quarterly financial data. This is OK for ETF/watch-only names, but it cannot be used in financial ranking."
+    },
+    {
+      "severity": "warn",
+      "type": "no_quarters",
+      "market": "US",
+      "code": "COPX",
+      "q": "",
+      "message": "No quarterly financial data. This is OK for ETF/watch-only names, but it cannot be used in financial ranking."
+    },
+    {
+      "severity": "warn",
+      "type": "no_quarters",
+      "market": "US",
+      "code": "XME",
+      "q": "",
+      "message": "No quarterly financial data. This is OK for ETF/watch-only names, but it cannot be used in financial ranking."
+    },
+    {
+      "severity": "warn",
+      "type": "no_quarters",
+      "market": "US",
+      "code": "EWY",
+      "q": "",
+      "message": "No quarterly financial data. This is OK for ETF/watch-only names, but it cannot be used in financial ranking."
+    },
+    {
+      "severity": "warn",
+      "type": "kline_not_ok",
+      "market": "A-share",
+      "message": "K-line status is not ok in the saved scan state: . Re-run the scan with network access before relying on fresh trend signals."
+    },
+    {
+      "severity": "warn",
+      "type": "unknown_kline_source",
+      "market": "A-share",
+      "message": "Unexpected K-line data source: "
+    },
+    {
+      "severity": "warn",
+      "type": "kline_not_ok",
+      "market": "US",
+      "message": "K-line status is not ok in the saved scan state: partial: stooq/yahoo API sandbox限制(403/allowlist), 价格来源WebSearch公开数据; EMA基于近8周估算收盘价计算, 信号仅供参考 — 建议核实实盘K线. Re-run the scan with network access before relying on fresh trend signals."
+    },
+    {
+      "severity": "warn",
+      "type": "unknown_kline_source",
+      "market": "US",
+      "message": "Unexpected K-line data source: "
+    }
+  ]
+}

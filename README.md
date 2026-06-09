@@ -16,6 +16,12 @@ A股关注列表 + 模拟交易仪表盘，聚焦"国产算力 / 去英伟达化
 
 直接打开 [GitHub Pages 链接](https://optimus25564.github.io/A-share-dashboard/) 即可。模拟交易数据是浏览器本地的，每个用户独立。
 
+## 数据规范
+
+财务数据必须有真实公告来源，详见 [FINANCIAL_DATA_SOURCES.md](FINANCIAL_DATA_SOURCES.md)。
+
+当前数据质量审计见 [DATA_QUALITY_AUDIT.md](DATA_QUALITY_AUDIT.md)。
+
 ## 免责声明
 
 本项目仅作个人投资研究跟踪，**不构成任何投资建议**。行情数据来自腾讯免费接口，存在 15 秒级延迟；模拟盘不含手续费、印花税、T+1 限制。

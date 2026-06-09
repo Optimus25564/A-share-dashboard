@@ -28,8 +28,6 @@ def derive_watchlist(companies):
     for code, c in companies.items():
         if code.startswith("_"):
             continue
-        if c.get("cat") == "etf":
-            continue
         name = c.get("name")
         cat = c.get("cat")
         if not name or not cat:
@@ -38,14 +36,18 @@ def derive_watchlist(companies):
     return out
 
 # US exchange mapping (mirrors US_EXCHANGE in index.html)
+US_TICKER_ALIAS = {
+    "ASE": "ASX",  # ASE Technology Holding ADR trades on NYSE as ASX
+}
 US_EXCHANGE = {
     "TSM": "N", "ONTO": "N", "FN": "N", "VRT": "N", "ETN": "N",
     "GEV": "N", "CCJ": "N", "COHR": "N", "ANET": "N", "CIEN": "N",
     "GLW": "N", "PWR": "N", "EME": "N", "FIX": "N", "MOD": "N",
     "TT": "N", "JCI": "N", "HUBB": "N", "VST": "N", "NRG": "N",
     "KMI": "N", "WMB": "N", "ORCL": "N", "NOW": "N", "CRM": "N",
-    "ASE": "N",  # ASE Technology — NYSE
-    "EWY": "P",
+    "ASX": "N",
+    # NYSE Arca ETF 在腾讯美股 K 线接口里使用 .AM
+    "XLU": "AM", "COPX": "AM", "XME": "AM", "EWY": "AM",
 }
 
 
@@ -54,8 +56,9 @@ def pfx_a(code: str) -> str:
 
 
 def sym_us(ticker: str) -> str:
-    ex = US_EXCHANGE.get(ticker, "OQ")
-    return f"us{ticker}.{ex}"
+    api_ticker = US_TICKER_ALIAS.get(ticker, ticker)
+    ex = US_EXCHANGE.get(api_ticker, "OQ")
+    return f"us{api_ticker}.{ex}"
 
 
 # ============================================================
@@ -102,10 +105,24 @@ def ema(values, n):
     return out
 
 
+def is_last_weekly_bar_closed(market="a"):
+    """Whether the current week's weekly bar should be treated as final."""
+    now_cn = datetime.now(timezone(timedelta(hours=8)))
+    dow = now_cn.weekday()  # Mon=0 ... Sun=6
+    minute = now_cn.hour * 60 + now_cn.minute
+    if market == "a" and dow == 4 and minute >= 15 * 60:
+        return True
+    if dow in (5, 6):
+        return True
+    if dow == 0 and now_cn.hour < 9:
+        return True
+    return False
+
+
 # ============================================================
 # Signal engine (mirrors evalWeeklyEMA in index.html)
 # ============================================================
-def eval_weekly_ema(bars, index_bullish=None):
+def eval_weekly_ema(bars, index_bullish=None, market="a"):
     n = len(bars)
     if n < 22:
         return None
@@ -117,6 +134,7 @@ def eval_weekly_ema(bars, index_bullish=None):
     e8 = e8_arr[-1]
     e21 = e21_arr[-1]
     e8_prev = e8_arr[-2]
+    last_closed = is_last_weekly_bar_closed(market)
 
     # 反转检测: 上周破位但本周强势收回 EMA8 → 跳过 sell-confirmed, 继续走 buy 判定
     prev_broke = prev["close"] < e8_prev
@@ -130,8 +148,15 @@ def eval_weekly_ema(bars, index_bullish=None):
             "ema8": e8, "ema21": e21,
             "ref_close": prev["close"], "ref_ema8": e8_prev, "ref_date": prev["date"],
         }
-    # sell-warning: 本周(未收盘) close < EMA8
+    # last 周已收盘 + close < EMA8 → sell-confirmed; 未收盘 → sell-warning
     if last["close"] < e8:
+        if last_closed:
+            return {
+                "action": "sell-confirmed", "strength": 3,
+                "detail": f"本周收盘 {last['close']:.2f} < EMA8({e8:.2f}) — 周线已收盘且已破位",
+                "ema8": e8, "ema21": e21,
+                "ref_close": last["close"], "ref_ema8": e8, "ref_date": last["date"],
+            }
         return {
             "action": "sell-warning", "strength": 2,
             "detail": f"本周收盘 {last['close']:.2f} < EMA8({e8:.2f})，但周线未收盘 — 等本周五收盘后确认",
@@ -207,6 +232,8 @@ def compute_quant(companies, watch_codes):
     for code in watch_codes:
         c = companies.get(code)
         if not c:
+            continue
+        if c.get("cat") == "etf":
             continue
         qs = c.get("quarters") or []
         if len(qs) < 5:
@@ -288,7 +315,7 @@ def scan_market(market, watchlist, index_sym, companies):
         if len(bars) < 22:
             fail.append(code)
             continue
-        sig = eval_weekly_ema(bars, index_bullish)
+        sig = eval_weekly_ema(bars, index_bullish, market)
         if not sig:
             fail.append(code)
             continue

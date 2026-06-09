@@ -288,6 +288,10 @@
   }
   .signal-tag.buy{background:rgba(255,90,106,.2);color:#ff8a95}
   .signal-tag.sell{background:rgba(46,204,113,.2);color:#7ee2a3}
+  .signal-tag.buy-deep,.signal-tag.buy,.signal-tag.buy-near{background:rgba(255,90,106,.2);color:#ff8a95}
+  .signal-tag.sell-warning,.signal-tag.sell-confirmed{background:rgba(245,179,1,.16);color:#f5b301}
+  .signal-tag.exit-confirmed{background:rgba(255,90,106,.18);color:#ff8a95}
+  .signal-tag.hold-trend{background:rgba(138,160,192,.18);color:#b0c0d8}
   .signal-tag.hold{background:rgba(138,160,192,.18);color:#b0c0d8}
   .signal-text{flex:1;color:var(--text)}
   .signal-text .sub{color:var(--muted);font-size:11px;margin-top:2px}
@@ -403,7 +407,7 @@
     <div class="meta">
       最近刷新：<b id="lastUpdate">--</b><br>
       行情时间：<b id="quoteTime">--</b> · 延迟 <b id="quoteDelay" style="color:var(--gold)">--</b><br>
-      自动刷新 <b>10秒</b> · 北京时间 <b id="bjNow">--</b>
+      自动刷新 <b>10秒</b> · <span id="clockLabel">北京时间</span> <b id="bjNow">--</b>
       <button class="trade-action" id="refreshBtn" style="margin-left:6px">手动刷新</button>
     </div>
   </header>
@@ -472,13 +476,13 @@
       </div>
 
       <div class="card">
-        <h3>Top 5 仓位配比 <span style="font-size:11px;font-weight:400;color:var(--muted)">· 持有至趋势破位</span></h3>
+        <h3>Top 10 组合配比 <span style="font-size:11px;font-weight:400;color:var(--muted)">· 核心 80% / 卫星 20%</span></h3>
         <div class="pf-wrap"><canvas id="pfChart"></canvas></div>
         <div class="pf-legend" id="pfLegend"></div>
         <div style="margin-top:14px;padding-top:12px;border-top:1px dashed var(--border);font-size:12px;color:var(--muted);line-height:1.7">
-          <b style="color:var(--gold)">策略：</b>5 因子量化模型选 Top 5，权重归一化到 100%。<br>
-          <b style="color:var(--gold)">卖出：</b>单票周线收盘跌破 EMA8 = 趋势破位 → 卖出。<br>
-          <b style="color:var(--gold)">不调仓：</b>趋势内不轮动，即使 #6 排名上升也不替换。
+          <b style="color:var(--gold)">策略：</b>5 因子长期质量模型选 Top 10；前 5 核心仓合计 80%，后 5 卫星仓合计 20%。<br>
+          <b style="color:var(--gold)">控仓：</b>EMA8 跌破只做观察/减仓；EMA21 跌破才视为核心趋势破坏。<br>
+          <b style="color:var(--gold)">换仓：</b>不因短期排名波动换仓，只有基本面变坏或 EMA21 破坏才顺位替换。
         </div>
         <div id="pfWatchPool" style="margin-top:12px;padding-top:10px;border-top:1px dashed var(--border);font-size:11px;color:var(--muted)"></div>
       </div>
@@ -487,16 +491,6 @@
 
   <!-- ===================== TAB: US STOCKS ===================== -->
   <div class="tab-content" id="tab-us">
-    <div style="background:linear-gradient(135deg,rgba(78,168,255,.12),rgba(245,179,1,.06));border:1px solid rgba(78,168,255,.3);border-radius:8px;padding:14px 16px;margin-bottom:14px">
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-        <div>
-          <div style="font-size:16px;font-weight:700;color:#4ea8ff;margin-bottom:4px">🇺🇸 美股 · AI 算力 + 能源主线</div>
-          <div style="font-size:12px;color:var(--muted)"><span id="usCountDisplay">--</span> 只观察清单 · 行情来源 腾讯美股 (15-20 分钟延迟) · 5 因子量化模型实时计算<br>报价时间 (ET): <b id="usQuoteTime" style="color:var(--gold)">--</b></div>
-        </div>
-        <button id="usRefreshBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:6px 14px;border-radius:4px;font-size:12px;cursor:pointer">🔄 刷新</button>
-      </div>
-    </div>
-
     <!-- 美股周线 EMA 买点扫描 banner -->
     <div id="buyAlertBannerUS" style="background:linear-gradient(135deg,rgba(255,90,106,.12),rgba(245,179,1,.08));border:1px solid rgba(255,90,106,.35);border-radius:8px;padding:14px 16px;margin-bottom:14px">
       <div style="color:var(--muted);font-size:13px;padding:6px 0">📡 美股周线 EMA8 / EMA21 趋势扫描器初始化中...</div>
@@ -569,20 +563,20 @@
       </div>
 
       <div class="card">
-        <h3>Top 5 仓位配比 <span style="font-size:11px;font-weight:400;color:var(--muted)">· 持有至趋势破位</span></h3>
+        <h3>Top 10 组合配比 <span style="font-size:11px;font-weight:400;color:var(--muted)">· 核心 80% / 卫星 20%</span></h3>
         <div class="pf-wrap"><canvas id="pfChartUS"></canvas></div>
         <div class="pf-legend" id="pfLegendUS"></div>
         <div style="margin-top:14px;padding-top:12px;border-top:1px dashed var(--border);font-size:12px;color:var(--muted);line-height:1.7">
-          <b style="color:var(--gold)">策略：</b>5 因子量化模型选 Top 5，权重归一化到 100%。<br>
-          <b style="color:var(--gold)">卖出：</b>单票周线收盘跌破 EMA8 = 趋势破位 → 卖出。<br>
-          <b style="color:var(--gold)">不调仓：</b>趋势内不轮动，即使 #6 排名上升也不替换。
+          <b style="color:var(--gold)">策略：</b>5 因子长期质量模型选 Top 10；前 5 核心仓合计 80%，后 5 卫星仓合计 20%。<br>
+          <b style="color:var(--gold)">控仓：</b>EMA8 跌破只做观察/减仓；EMA21 跌破才视为核心趋势破坏。<br>
+          <b style="color:var(--gold)">换仓：</b>不因短期排名波动换仓，只有基本面变坏或 EMA21 破坏才顺位替换。
         </div>
         <div id="pfWatchPoolUS" style="margin-top:12px;padding-top:10px;border-top:1px dashed var(--border);font-size:11px;color:var(--muted)"></div>
       </div>
     </div>
 
     <div style="margin-top:14px;padding:10px 14px;background:rgba(245,179,1,.05);border-left:3px solid var(--gold);border-radius:4px;font-size:11px;color:var(--muted);line-height:1.7">
-      📌 5 因子量化模型 = 战略 40% / 增速 20% / 盈利 20% / 流动性 12% / 市值 8%. 行情: 腾讯美股 (15-20 分钟延迟). 周线 EMA8/EMA21 趋势扫描, ETF 不参与量化排名.
+      📌 5 因子长期质量模型 = 主题护城河 22% / 增长动能 20% / 盈利质量 20% / 规模现金流 18% / 周期资金风险 20%。没有 forecast 时用历史季度增长加速度，不因缺 forecast 扣分；ETF 不参与量化排名。
     </div>
   </div>
 
@@ -997,11 +991,89 @@ function colorClass(n){
   return n > 0 ? "up" : "down";
 }
 
-// ============ 量化权重模型 (5 因子) ============
-// Composite Score = 0.10×log(市值) + 0.30×YoY增速 + 0.15×最新毛利 + 0.15×换手率 + 0.30×战略评分
+// ============ 长期质量权重模型 (5 因子) ============
+// Composite Score = 主题护城河 22% + 增长动能 20% + 盈利质量 20% + 规模现金流 18% + 周期/资金风险 20%
 // 数据源: companies.json 的 quarters/strategic/market_cap_billion/avg_turnover_pct
 // 输出: { code: { weight, score, factors: {...} } }
 let _quantWeights = null;
+function getForwardRevenueEstimate(c){
+  const q2 = c && c.q2_outlook;
+  if (q2 && Number.isFinite(q2.rev_estimate)) return q2.rev_estimate;
+  const f = ((c && c.quarters) || []).find(q => q.src === "F" && Number.isFinite(q.rev));
+  return f ? f.rev : null;
+}
+function growthMomentumRaw(c){
+  const qs = ((c && c.quarters) || []).filter(q => Number.isFinite(q.rev));
+  if (qs.length < 5) return { raw: 0, label: "历史不足" };
+  const seq = [];
+  for (let i = 1; i < qs.length; i++) {
+    const prev = qs[i-1].rev;
+    seq.push(prev > 0 ? (qs[i].rev / prev - 1) * 100 : 0);
+  }
+  const early = (seq[0] + seq[1]) / 2;
+  const recent = (seq[seq.length-2] + seq[seq.length-1]) / 2;
+  const histAccel = recent - early;
+  const fwd = getForwardRevenueEstimate(c);
+  if (Number.isFinite(fwd) && qs[qs.length-1].rev > 0) {
+    const fwdSeq = (fwd / qs[qs.length-1].rev - 1) * 100;
+    const fwdAccel = fwdSeq - recent;
+    return {
+      raw: 0.70 * histAccel + 0.30 * fwdAccel,
+      label: `历史加速 ${histAccel.toFixed(1)}ppt / 前瞻 ${fwdAccel.toFixed(1)}ppt`
+    };
+  }
+  return { raw: histAccel, label: `历史加速 ${histAccel.toFixed(1)}ppt / 无forecast不扣分` };
+}
+function clamp(n, lo, hi){ return Math.max(lo, Math.min(hi, n)); }
+function latestQuarter(c){ const qs = c && c.quarters; return qs && qs.length ? qs[qs.length-1] : null; }
+function categoryCycleRisk(code, c){
+  const cat = c && c.cat;
+  const codeRisk = {
+    MU:1.00, SNDK:1.00,
+    LITE:0.75, COHR:0.70, FN:0.65, CIEN:0.55, GLW:0.45, CRDO:0.55, ALAB:0.45,
+    AMAT:0.55, KLAC:0.45, LRCX:0.55, ONTO:0.50, ASML:0.40, TER:0.45,
+    ASE:0.55, AMKR:0.60, AMD:0.35, MRVL:0.35, INTC:0.35,
+    CCJ:0.60, NRG:0.45, VST:0.35
+  };
+  if (codeRisk[code] !== undefined) return codeRisk[code];
+  const catRisk = {
+    memory:1.00, packaging:0.55, foundry:0.45, network:0.40,
+    core_chip:0.25, power:0.25, dc_infra:0.20, hyperscaler:0.10,
+    base:0.45, infra:0.40, hw:0.35, core:0.25
+  };
+  return catRisk[cat] || 0.20;
+}
+function downstreamCapexExposure(code, c){
+  if (!c) return 0;
+  if (["MSFT","GOOGL","AMZN","META","AAPL","ORCL"].includes(code)) return 0;
+  if (["memory","core_chip","foundry","network","packaging","dc_infra"].includes(c.cat)) return 1;
+  if (["infra","base","hw","core"].includes(c.cat)) return 0.6;
+  return 0.25;
+}
+function capexStressFromMetrics(qm){
+  if (!qm) return 0;
+  const ocf = qm.operating_cash_flow_billion;
+  const capex = qm.capex_billion;
+  if (!Number.isFinite(ocf) || !Number.isFinite(capex) || ocf <= 0) return 0.3;
+  return clamp(capex / ocf, 0, 2);
+}
+function computeHyperscalerFundingStress(dataset){
+  if (!dataset) return 0;
+  const names = ["MSFT","GOOGL","AMZN","META","ORCL","AAPL","CRWV"];
+  const vals = names.map(code => capexStressFromMetrics(dataset[code] && dataset[code].quality_metrics)).filter(Number.isFinite);
+  if (!vals.length) return 0;
+  const avg = vals.reduce((a,b)=>a+b,0) / vals.length;
+  return clamp((avg - 0.45) / 0.55, 0, 1.5);
+}
+function durabilityRaw(c){
+  const qm = c.quality_metrics || {};
+  const mc = c.market_cap_billion || 100;
+  const fcf = Number.isFinite(qm.free_cash_flow_billion) ? qm.free_cash_flow_billion : 0;
+  const fcfMargin = Number.isFinite(qm.fcf_margin_pct) ? qm.fcf_margin_pct : 0;
+  const netCash = Number.isFinite(qm.net_cash_billion) ? qm.net_cash_billion : 0;
+  const netCashToMC = netCash / Math.max(mc / 10, 1);
+  return Math.log(mc) + 0.08 * clamp(fcfMargin, -25, 35) + 0.18 * Math.log1p(Math.max(fcf, 0)) + 0.6 * clamp(netCashToMC, -0.4, 0.4);
+}
 function computeQuantWeights(){
   if (!companiesData) return null;  // 数据没加载时 fallback 到硬编码 r.w
   // 严格要求 5 季 (Q1 同期 → Q1, 真 YoY); 不足 5 季自动跳过
@@ -1024,6 +1096,13 @@ function computeQuantWeights(){
     const nmClipped = Math.max(-30, Math.min(60, nmLatest));
     const t = c.avg_turnover_pct || 3;
     const turnoverScore = -Math.abs(Math.log(t / IDEAL_TURNOVER));
+    const gmPrev = qs.length >= 2 ? qs[qs.length-2].gm : gmLatest;
+    const nmPrev = qs.length >= 2 ? qs[qs.length-2].nm : nmLatest;
+    const marginTrend = (gmLatest - gmPrev) * 0.6 + (nmLatest - nmPrev) * 0.4;
+    const momentum = growthMomentumRaw(c);
+    const extremeGrowthPenalty = Math.max(0, (revYoY - 80) / 120);
+    const marginExpansionPenalty = Math.max(0, marginTrend / 8);
+    const cyclePenalty = categoryCycleRisk(code, c) + extremeGrowthPenalty * categoryCycleRisk(code, c) + marginExpansionPenalty * 0.35;
     return {
       code,
       logMC: Math.log(c.market_cap_billion || 100),
@@ -1033,6 +1112,10 @@ function computeQuantWeights(){
       nmClipped,
       turnoverScore,
       turnoverRaw: t,
+      momentum: momentum.raw,
+      momentumLabel: momentum.label,
+      durability: durabilityRaw(c),
+      cyclePenalty,
       strategic: (c.strategic || 5) / 10
     };
   });
@@ -1049,15 +1132,18 @@ function computeQuantWeights(){
   const zGM = zscore(raw.map(r => r.gm));
   const zNM = zscore(raw.map(r => r.nmClipped));
   const zTO = zscore(raw.map(r => r.turnoverScore));
+  const zMOM = zscore(raw.map(r => r.momentum));
+  const zDUR = zscore(raw.map(r => r.durability));
+  const zRISK = zscore(raw.map(r => -r.cyclePenalty + 0.20 * r.turnoverScore));
 
   // 盈利能力合成因子: GM (行业竞争力) 占 0.6 + NM (运营效率) 占 0.4
   const zProfit = raw.map((_, i) => 0.6 * zGM[i] + 0.4 * zNM[i]);
 
-  // 5 因子权重: 战略 40 / 增速 20 / 盈利 20 / 流动性 12 / 市值 8
-  const W = { mc: 0.08, growth: 0.20, profit: 0.20, turnover: 0.12, strategic: 0.40 };
+  // 5 因子权重: 主题 22 / 增长动能 20 / 盈利质量 20 / 规模现金流 18 / 周期资金风险 20
+  const W = { strategic: 0.22, growth: 0.20, profit: 0.20, durability: 0.18, risk: 0.20 };
 
   const composites = raw.map((r, i) => {
-    return W.mc * zMC[i] + W.growth * zGrow[i] + W.profit * zProfit[i] + W.turnover * zTO[i] + W.strategic * r.strategic * 2;
+    return W.growth * (0.65 * zGrow[i] + 0.35 * zMOM[i]) + W.profit * zProfit[i] + W.durability * zDUR[i] + W.risk * zRISK[i] + W.strategic * r.strategic * 2;
   });
 
   // 平移到全部 ≥ 0.5 (避免负权重 + 给最弱的一只也保留至少 0.5%)
@@ -1085,10 +1171,10 @@ function computeQuantWeights(){
       weight: weights[i],
       score: composites[i],
       factors: {
-        market_cap: { val: Math.exp(r.logMC).toFixed(0) + "亿", z: zMC[i].toFixed(2), contrib: (W.mc * zMC[i]).toFixed(2) },
-        growth: { val: r.revYoY.toFixed(1) + "%", z: zGrow[i].toFixed(2), contrib: (W.growth * zGrow[i]).toFixed(2) },
+        growth: { val: `${r.revYoY.toFixed(1)}% / ${r.momentumLabel}`, z: (0.65 * zGrow[i] + 0.35 * zMOM[i]).toFixed(2), contrib: (W.growth * (0.65 * zGrow[i] + 0.35 * zMOM[i])).toFixed(2) },
         profit: { val: `GM ${r.gm.toFixed(1)}% / NM ${r.nm.toFixed(1)}%`, z: zProfit[i].toFixed(2), contrib: (W.profit * zProfit[i]).toFixed(2) },
-        turnover: { val: r.turnoverRaw.toFixed(1) + "% (理想 5%)", z: zTO[i].toFixed(2), contrib: (W.turnover * zTO[i]).toFixed(2) },
+        durability: { val: `市值 ${Math.exp(r.logMC).toFixed(0)}亿`, z: zDUR[i].toFixed(2), contrib: (W.durability * zDUR[i]).toFixed(2) },
+        risk: { val: `周期惩罚 ${r.cyclePenalty.toFixed(2)} / 换手 ${r.turnoverRaw.toFixed(1)}%`, z: zRISK[i].toFixed(2), contrib: (W.risk * zRISK[i]).toFixed(2) },
         strategic: { val: (r.strategic*10).toFixed(0) + "/10", contrib: (W.strategic * r.strategic * 2).toFixed(2) }
       }
     };
@@ -1110,9 +1196,12 @@ function renderWatchlist(){
     const wb = _quantWeights ? (_quantWeights[b.code]?.weight ?? 0) : b.w;
     return wb - wa;
   });
-  // 与饼图保持一致: Top 5 归一化到 100% 作为真实持仓配比
-  const top5Sum = _quantWeights
+  // 与饼图保持一致: 前 5 核心仓归一到 80%, #6-10 卫星仓归一到 20%
+  const coreSum = _quantWeights
     ? sorted.slice(0,5).reduce((s,r) => s + (_quantWeights[r.code]?.weight ?? 0), 0)
+    : 0;
+  const satelliteSum = _quantWeights
+    ? sorted.slice(5,10).reduce((s,r) => s + (_quantWeights[r.code]?.weight ?? 0), 0)
     : 0;
   sorted.forEach(r => {
     const q = lastQuotes[r.code] || {};
@@ -1125,34 +1214,36 @@ function renderWatchlist(){
       sig.bull ? `<span class="sig-icon" data-tip="${escapeAttr(sig.bull.title)}">🎯</span>` : "",
       sig.hot ?  `<span class="sig-icon" data-tip="${escapeAttr(sig.hot.title)}">✨</span>` : "",
     ].filter(Boolean).join("");
-    // 量化权重 + 因子分解 tooltip + 角色标签 (Top 5 vs 候选池 vs 其他)
+    // 量化权重 + 因子分解 tooltip + 角色标签 (核心仓 vs 卫星仓 vs 观察)
     const qw = _quantWeights ? _quantWeights[r.code] : null;
     // 在 sorted 数组中的位置就是排名 (1-based)
     const rankIdx = sorted.findIndex(s => s.code === r.code) + 1;
     let roleHtml;
     if (rankIdx <= 5) {
-      // Top 5 持仓 — 红色高亮, 显示归一化后 % (与饼图一致)
-      const normPct = (qw && top5Sum > 0) ? (qw.weight / top5Sum * 100).toFixed(1) : '?';
-      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(255,90,106,.2);color:#ff8a95;font-weight:700;font-size:12px">#${rankIdx} 持仓 ${normPct}%</span>`;
+      const normPct = (qw && coreSum > 0) ? (qw.weight / coreSum * 80).toFixed(1) : '?';
+      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(255,90,106,.2);color:#ff8a95;font-weight:700;font-size:12px">#${rankIdx} 核心 ${normPct}%</span>`;
     } else if (rankIdx <= 10) {
-      // 候选池 — 金色
-      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(245,179,1,.15);color:var(--gold);font-weight:600;font-size:12px">#${rankIdx} 候选</span>`;
+      const normPct = (qw && satelliteSum > 0) ? (qw.weight / satelliteSum * 20).toFixed(1) : '?';
+      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(245,179,1,.15);color:var(--gold);font-weight:600;font-size:12px">#${rankIdx} 卫星 ${normPct}%</span>`;
     } else {
       // 观察池 — 灰色
       roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;color:var(--muted);font-size:11px">#${rankIdx} 观察</span>`;
     }
     const rawPct = qw ? qw.weight.toFixed(1) : '?';
-    const normPctForTooltip = (qw && top5Sum > 0 && rankIdx <= 5) ? (qw.weight / top5Sum * 100).toFixed(1) : null;
+    const normPctForTooltip = qw && rankIdx <= 5 && coreSum > 0
+      ? (qw.weight / coreSum * 80).toFixed(1)
+      : (qw && rankIdx <= 10 && satelliteSum > 0 ? (qw.weight / satelliteSum * 20).toFixed(1) : null);
+    const sleeveForTooltip = rankIdx <= 5 ? "核心仓" : (rankIdx <= 10 ? "卫星仓" : "");
     const wTooltip = qw ? escapeAttr(
       `排名 #${rankIdx}\n` +
-      (normPctForTooltip ? `Top 5 配比 (实际买入): ${normPctForTooltip}%\n` : "") +
+      (normPctForTooltip ? `${sleeveForTooltip}配比 (实际买入): ${normPctForTooltip}%\n` : "") +
       `原始权重 (17 只里占比): ${rawPct}%\n` +
       `─── 因子分解 ───\n` +
       `战略: ${qw.factors.strategic.val} (贡献 ${qw.factors.strategic.contrib})\n` +
-      `增速: ${qw.factors.growth.val} (z=${qw.factors.growth.z}, 贡献 ${qw.factors.growth.contrib})\n` +
+      `增长动能: ${qw.factors.growth.val} (z=${qw.factors.growth.z}, 贡献 ${qw.factors.growth.contrib})\n` +
       `盈利: ${qw.factors.profit.val} (z=${qw.factors.profit.z}, 贡献 ${qw.factors.profit.contrib})\n` +
-      `换手: ${qw.factors.turnover.val} (z=${qw.factors.turnover.z}, 贡献 ${qw.factors.turnover.contrib})\n` +
-      `市值: ${qw.factors.market_cap.val} (z=${qw.factors.market_cap.z}, 贡献 ${qw.factors.market_cap.contrib})`
+      `规模现金流: ${qw.factors.durability.val} (z=${qw.factors.durability.z}, 贡献 ${qw.factors.durability.contrib})\n` +
+      `周期资金风险: ${qw.factors.risk.val} (z=${qw.factors.risk.z}, 贡献 ${qw.factors.risk.contrib})`
     ) : "";
     const tr = document.createElement("tr");
     tr.innerHTML = `
@@ -1208,30 +1299,30 @@ function updateCategoryKPIs(){
 }
 
 // ============ Portfolio chart ============
-// Top 5 持仓配比 (动态, 基于量化权重归一化)
-const PF_COLORS = ["#ff5a6a", "#f5b301", "#29d6d6", "#9d7bff", "#4ea8ff"];
+// Top 10 组合配比: 前 5 核心仓合计 80%, 后 5 卫星仓合计 20%
+const PF_COLORS = ["#ff5a6a", "#f5b301", "#29d6d6", "#9d7bff", "#4ea8ff", "#ff9f43", "#7ee2a3", "#c084fc", "#f472b6", "#94a3b8"];
 let pfChartInstance = null;
-// 从扫描结果提取已破位 / 警告代码集合 (供 Top 5 动态剔除)
+// 从扫描结果提取趋势状态。EMA8 只做观察/减仓；EMA21 破坏才剔除核心仓。
 function getSellExcludedCodes(scanResults){
   if (!scanResults) return new Set();
-  return new Set(scanResults.filter(r => r.signal.action === "sell-confirmed").map(r => r.stock.code));
+  return new Set(scanResults.filter(r => r.signal.action === "exit-confirmed").map(r => r.stock.code));
 }
 function getSellWarningCodes(scanResults){
   if (!scanResults) return new Set();
-  return new Set(scanResults.filter(r => r.signal.action === "sell-warning").map(r => r.stock.code));
+  return new Set(scanResults.filter(r => r.signal.action === "sell-warning" || r.signal.action === "sell-confirmed").map(r => r.stock.code));
 }
 
 function renderPortfolioPie(){
   const canvas = document.getElementById("pfChart");
-  if (!canvas) { console.warn('[Top5] canvas pfChart 不存在'); return; }
-  // 必须等量化数据就绪才画 — 否则会显示错的 Top 5 (WATCH.w 是旧硬编码值)
+  if (!canvas) { console.warn('[Top10] canvas pfChart 不存在'); return; }
+  // 必须等量化数据就绪才画 — 否则会显示错的 Top 10 (WATCH.w 是旧硬编码值)
   if (!_quantWeights) {
-    console.log('[Top5] _quantWeights 未就绪, 等待 loadCompanies 完成');
+    console.log('[Top10] _quantWeights 未就绪, 等待 loadCompanies 完成');
     const lg = document.getElementById("pfLegend");
     if (lg) lg.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:8px 0">⏳ 加载基本面数据中...</div>';
     return;
   }
-  console.log('[Top5] 渲染量化模型 Top 5');
+  console.log('[Top10] 渲染量化模型 Top 10');
   const excluded = getSellExcludedCodes(watchScanState && watchScanState.results);
   const warning  = getSellWarningCodes(watchScanState && watchScanState.results);
   const rankedAll = WATCH.map(s => ({
@@ -1241,24 +1332,31 @@ function renderPortfolioPie(){
     catLabel: s.catLabel,
     weight: _quantWeights[s.code]?.weight || 0
   })).sort((a,b) => b.weight - a.weight);
-  // 剔除已破位 (sell-confirmed) — 趋势已坏，按策略卖出
+  // 只剔除 EMA21 级别的核心趋势破坏；EMA8 破位只做观察/减仓提示
+  const originalTop10 = rankedAll.slice(0, 10);
+  const originalTop10Codes = new Set(originalTop10.map(s => s.code));
   const ranked = rankedAll.filter(s => !excluded.has(s.code));
   const excludedRanked = rankedAll.filter(s => excluded.has(s.code));
-  const top5 = ranked.slice(0, 5);
-  const restPool = ranked.slice(5);
-  // 归一化 Top 5 到 sum=100
-  const top5Sum = top5.reduce((a,b) => a + b.weight, 0);
-  const pfData = top5.map((s, i) => ({
+  const portfolio = ranked.slice(0, 10);
+  const core = portfolio.slice(0, 5);
+  const satellite = portfolio.slice(5, 10);
+  const restPool = ranked.slice(10);
+  const replacedFromTop10 = originalTop10.filter(s => excluded.has(s.code));
+  const replacementIntoTop10 = portfolio.filter(s => !originalTop10Codes.has(s.code));
+  const coreSum = core.reduce((a,b) => a + b.weight, 0);
+  const satelliteSum = satellite.reduce((a,b) => a + b.weight, 0);
+  const pfData = portfolio.map((s, i) => ({
     label: s.name,
     code: s.code,
     catLabel: s.catLabel,
     rawWeight: s.weight,
-    val: Math.round(s.weight / top5Sum * 1000) / 10,  // 1 decimal
+    sleeve: i < 5 ? "核心" : "卫星",
+    val: Math.round((i < 5 ? s.weight / coreSum * 80 : s.weight / satelliteSum * 20) * 10) / 10,
     color: PF_COLORS[i]
   }));
   // 修尾差 = 100
   const total = pfData.reduce((a,b) => a + b.val, 0);
-  pfData[0].val = Math.round((pfData[0].val + (100 - total)) * 10) / 10;
+  if (pfData.length) pfData[0].val = Math.round((pfData[0].val + (100 - total)) * 10) / 10;
 
   // 销毁旧图并重画 (用 Chart.getChart 找已挂在 canvas 上的实例)
   const existing = Chart.getChart(canvas);
@@ -1266,28 +1364,36 @@ function renderPortfolioPie(){
   pfChartInstance = new Chart(canvas, {
     type:"doughnut",
     data:{labels:pfData.map(d=>d.label),datasets:[{data:pfData.map(d=>d.val),backgroundColor:pfData.map(d=>d.color),borderColor:"#121a2b",borderWidth:2}]},
-    options:{responsive:true,maintainAspectRatio:false,cutout:"58%",plugins:{legend:{display:false},tooltip:{callbacks:{label:(c)=>` ${pfData[c.dataIndex].label} (${pfData[c.dataIndex].catLabel}): ${c.parsed}%`}}}}
+    options:{responsive:true,maintainAspectRatio:false,cutout:"58%",plugins:{legend:{display:false},tooltip:{callbacks:{label:(c)=>` ${pfData[c.dataIndex].sleeve} · ${pfData[c.dataIndex].label} (${pfData[c.dataIndex].catLabel}): ${c.parsed}%`}}}}
   });
   // 渲染 legend
   const lg = document.getElementById("pfLegend");
   lg.innerHTML = "";
   pfData.forEach((d, i) => {
-    const warnIco = warning.has(top5[i].code)
-      ? ' <span title="本周盘中跌破 EMA8，等周五收盘确认" style="color:#f5b301;font-size:11px">⚠</span>' : "";
+    const warnIco = warning.has(portfolio[i].code)
+      ? ' <span title="EMA8 观察/减仓信号；不自动换出核心仓" style="color:#f5b301;font-size:11px">⚠</span>' : "";
     const row = document.createElement("div");
     row.className = "row";
-    row.innerHTML = `<div class="left"><span class="sq" style="background:${d.color}"></span><span>${d.label}${warnIco}<span style="color:var(--muted);font-size:11px;margin-left:6px">${d.catLabel}</span></span></div><b>${d.val}%</b>`;
+    row.innerHTML = `<div class="left"><span class="sq" style="background:${d.color}"></span><span>${d.label}${warnIco}<span style="color:var(--muted);font-size:11px;margin-left:6px">${d.sleeve} · ${d.catLabel}</span></span></div><b>${d.val}%</b>`;
     lg.appendChild(row);
   });
-  // 候选池 (#6-10) + 已破位剔除
+  // 观察池 (#11-15) + 已破位剔除
   const pool = document.getElementById("pfWatchPool");
   if (pool) {
     const next5 = restPool.slice(0, 5);
-    const exHtml = excludedRanked.length ? (
-      `<div style="margin-top:8px;color:#7be0a8">🟢 已破位剔除（周线 close &lt; EMA8）：</div>` +
-      excludedRanked.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(46,204,113,.15);border:1px solid rgba(46,204,113,.4);border-radius:3px;color:#7be0a8;text-decoration:line-through">${s.name} ${s.weight.toFixed(1)}</span>`).join("")
+    const rebalanceHtml = replacedFromTop10.length ? (
+      `<div style="margin-bottom:8px;padding:8px 10px;background:rgba(245,179,1,.08);border:1px solid rgba(245,179,1,.25);border-radius:6px;color:var(--gold)">
+        🔁 本次换仓过程：EMA21 核心趋势破坏移出
+        ${replacedFromTop10.map(s => `<b>${s.name}</b>`).join(" / ")}
+        ${replacementIntoTop10.length ? `；顺位补入 ${replacementIntoTop10.map(s => `<b>${s.name}</b>`).join(" / ")}` : ""}
+      </div>`
     ) : "";
-    pool.innerHTML = `<div style="margin-bottom:4px">📋 候选池（#6-10，趋势破位时考虑替换）：</div>` +
+    const exHtml = excludedRanked.length ? (
+      `<div style="margin-top:8px;color:#ff8a95">🔴 已移出核心仓（周线 close &lt; EMA21）：</div>` +
+      excludedRanked.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(255,90,106,.12);border:1px solid rgba(255,90,106,.4);border-radius:3px;color:#ff8a95;text-decoration:line-through">${s.name} ${s.weight.toFixed(1)}</span>`).join("")
+    ) : "";
+    pool.innerHTML = rebalanceHtml +
+      `<div style="margin-bottom:4px">📋 观察池（#11-15，核心/卫星仓破坏或基本面变坏时考虑替换）：</div>` +
       next5.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(138,160,192,.1);border-radius:3px">${s.name} ${s.weight.toFixed(1)}</span>`).join("") +
       exHtml;
   }
@@ -1296,9 +1402,12 @@ function renderPortfolioPie(){
 renderPortfolioPie();
 
 // ============ Tabs ============
+let activeTab = "watch";
 function switchTab(name){
+  activeTab = name;
   document.querySelectorAll(".tab").forEach(t => t.classList.toggle("active", t.dataset.tab === name));
   document.querySelectorAll(".tab-content").forEach(c => c.classList.toggle("active", c.id === "tab-"+name));
+  updateLiveForActiveTab();
 }
 document.querySelectorAll(".tab").forEach(t => {
   t.onclick = () => switchTab(t.dataset.tab);
@@ -1593,9 +1702,13 @@ let publicNews = null;
 async function loadPublicNews(){
   if (publicNews !== null) return publicNews;
   try {
-    const r = await fetch("data/news.json?_=" + Date.now());
-    if (!r.ok) throw new Error("HTTP "+r.status);
-    publicNews = await r.json();
+    const stamp = Date.now();
+    const [a, us] = await Promise.all([
+      fetch("data/news.json?_=" + stamp),
+      fetch("data/news_us.json?_=" + stamp)
+    ]);
+    if (!a.ok || !us.ok) throw new Error(`HTTP A=${a.status} US=${us.status}`);
+    publicNews = {...await a.json(), ...await us.json()};
   } catch(e) {
     publicNews = {};
   }
@@ -1699,20 +1812,33 @@ function renderCompanyBasics(code){
   const meta = (dataset._meta && dataset._meta.note) || "";
   const currency = isUS ? "亿$" : "亿元";
   const qsActual = data.quarters || [];
-  // 把 Q2 outlook 合成成一行 (src=F) 追加到 qs, 与 5 季同表显示 / 同图表绘制
-  const fcq = data.q2_outlook ? {
-    q: data.q2_outlook.q,
-    rev: data.q2_outlook.rev_estimate,
-    gm: data.q2_outlook.gm_estimate,
-    nm: data.q2_outlook.nm_estimate,
+  // 把有效 outlook 合成成一行 (src=F)；如果 quarters 已经有同季度 forecast，则合并元数据避免重复画点。
+  const outlook = data.q2_outlook;
+  const profitabilityGuidance = outlook && outlook.profitability_guidance;
+  const hasOutlookValues = outlook && (
+    [outlook.rev_estimate, outlook.gm_estimate, outlook.nm_estimate, outlook.yoy_pct].some(Number.isFinite)
+    || (profitabilityGuidance && [profitabilityGuidance.value, profitabilityGuidance.margin_pct].some(Number.isFinite))
+  );
+  const fcq = hasOutlookValues ? {
+    q: outlook.q,
+    rev: outlook.rev_estimate,
+    gm: outlook.gm_estimate,
+    nm: outlook.nm_estimate,
     src: "F",
-    _yoy: data.q2_outlook.yoy_pct,
-    _confidence: data.q2_outlook.confidence,
-    _data_type: data.q2_outlook.data_type,
-    _catalyst: data.q2_outlook.catalyst,
-    _source: data.q2_outlook.source,
-  } : null;
-  const qs = fcq ? [...qsActual, fcq] : qsActual;
+    _yoy: outlook.yoy_pct,
+    _confidence: outlook.confidence,
+	    _data_type: outlook.data_type,
+	    _catalyst: outlook.catalyst,
+	    _source: outlook.source,
+	    _profitabilityGuidance: outlook.profitability_guidance,
+	  } : null;
+	  const existingForecastIdx = fcq ? qsActual.findIndex(q => q.q === fcq.q && q.src === "F") : -1;
+	  const qs = fcq
+	    ? (existingForecastIdx >= 0
+	      ? qsActual.map((q, i) => i === existingForecastIdx ? {...fcq, ...q, _yoy: fcq._yoy, _confidence: fcq._confidence, _data_type: fcq._data_type, _catalyst: fcq._catalyst, _source: fcq._source, _profitabilityGuidance: fcq._profitabilityGuidance} : q)
+	      : [...qsActual, fcq])
+	    : qsActual;
+	  const displayFcq = fcq ? (existingForecastIdx >= 0 ? qs[existingForecastIdx] : fcq) : null;
   // 增长率: 真 YoY 用实数据 (不含预测)
   const revGrowth = qsActual.length >= 2 ? ((qsActual[qsActual.length-1].rev / qsActual[0].rev - 1) * 100) : null;
 
@@ -1723,10 +1849,22 @@ function renderCompanyBasics(code){
   };
   // 全 A / 含 F 的整体提示
   const allActual = qs.every(q => q.src === "A");
-  const sourceTag = allActual
-    ? `<span style="font-size:10px;color:#7ee2a3;font-weight:400">✓ 全部已校核财报</span>`
-    : `<span style="font-size:10px;color:var(--gold);font-weight:400">⚠ 含估算数据</span>`;
-
+	  const sourceTag = allActual
+	    ? `<span style="font-size:10px;color:#7ee2a3;font-weight:400">✓ 全部已校核财报</span>`
+	    : `<span style="font-size:10px;color:var(--gold);font-weight:400">⚠ 含估算数据</span>`;
+	  const profitabilityGuidanceHtml = (g) => {
+	    if (!g || !g.metric) return "";
+	    const pieces = [];
+	    if (Number.isFinite(g.value)) pieces.push(`${g.value.toFixed(1)} ${g.unit || ""}`.trim());
+	    if (Number.isFinite(g.margin_pct)) pieces.push(`${g.margin_pct.toFixed(1)}% of revenue`);
+	    const valueText = pieces.length ? pieces.join(" / ") : "--";
+	    const derivedText = g.derived ? "（由官方收入指引和比例推算）" : "";
+	    return `<div style="font-size:10px;color:#cdd6e6;line-height:1.5;margin-top:4px;padding:4px 8px;border-left:2px dashed #29d6d6;background:rgba(41,214,214,.04)"><span style="color:#29d6d6">盈利能力指引:</span> ${g.metric} ${valueText} ${derivedText}${g.basis?` · <span style="opacity:.7">${g.basis}</span>`:""}</div>`;
+	  };
+	  const annualGuidanceHtml = (g) => {
+	    if (!g || !g.period || !g.summary) return "";
+	    return `<div style="font-size:10px;color:#cdd6e6;line-height:1.5;margin-top:4px;padding:4px 8px;border-left:2px dashed #8aa0c0;background:rgba(138,160,192,.05)"><span style="color:#8aa0c0">全年指引 ${escapeHtml(g.period)}:</span> ${escapeHtml(g.summary)}</div>`;
+	  };
   box.innerHTML = `
     <div style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:6px">📋 业务简介</div>
     <div style="font-size:13px;line-height:1.6;color:#cdd6e6;margin-bottom:12px">${data.intro || "--"}</div>
@@ -1747,9 +1885,14 @@ function renderCompanyBasics(code){
       <tbody>
         ${qs.map((q,i) => {
           const prev = i > 0 ? qs[i-1] : null;
-          const revArrow = prev ? (q.rev > prev.rev ? '<span style="color:#ff8a95">↑</span>' : q.rev < prev.rev ? '<span style="color:#7ee2a3">↓</span>' : '<span style="color:var(--muted)">→</span>') : '';
-          const gmArrow = prev ? (q.gm > prev.gm ? '<span style="color:#ff8a95">↑</span>' : q.gm < prev.gm ? '<span style="color:#7ee2a3">↓</span>' : '<span style="color:var(--muted)">→</span>') : '';
-          const nmArrow = prev ? (q.nm > prev.nm ? '<span style="color:#ff8a95">↑</span>' : q.nm < prev.nm ? '<span style="color:#7ee2a3">↓</span>' : '<span style="color:var(--muted)">→</span>') : '';
+          const arrow = (value, previous) => {
+            if (!Number.isFinite(value) || !Number.isFinite(previous)) return '';
+            return value > previous ? '<span style="color:#ff8a95">↑</span>' : value < previous ? '<span style="color:#7ee2a3">↓</span>' : '<span style="color:var(--muted)">→</span>';
+          };
+          const metric = (value, suffix='') => Number.isFinite(value) ? value.toFixed(1) + suffix : '--';
+          const revArrow = prev ? arrow(q.rev, prev.rev) : '';
+          const gmArrow = prev ? arrow(q.gm, prev.gm) : '';
+          const nmArrow = prev ? arrow(q.nm, prev.nm) : '';
           const isF = q.src === "F";
           // 预测行: 虚线 border, 斜体, 半透明 + 顶部虚线分隔
           const rowStyle = isF
@@ -1766,20 +1909,22 @@ function renderCompanyBasics(code){
             const yc = q._yoy >= 0 ? "#ff8a95" : "#7ee2a3";
             return ` <span style="color:${yc};font-size:10px;font-weight:700;font-style:normal">YoY ${q._yoy>=0?'+':''}${q._yoy.toFixed(1)}%</span>`;
           })() : "";
-          const titleAttr = (isF && q._catalyst) ? ` title="催化: ${q._catalyst.replace(/"/g,'&quot;')}${q._source?'\n源: '+q._source.replace(/"/g,'&quot;'):''}"` : "";
+          const titleAttr = (isF && q._catalyst) ? ` title="催化: ${q._catalyst.replace(/"/g,'&quot;')}"` : "";
           return `
             <tr style="${rowStyle}"${titleAttr}>
               <td style="padding:5px 8px;color:#cdd6e6">${q.q}${srcBadge(q.src)}${confDot}</td>
-              <td style="text-align:right;padding:5px 8px">${q.rev.toFixed(1)} ${revArrow}${yoyTag}</td>
-              <td style="text-align:right;padding:5px 8px">${q.gm.toFixed(1)}% ${gmArrow}</td>
-              <td style="text-align:right;padding:5px 8px;${q.nm<0?'color:#7ee2a3':''}">${q.nm.toFixed(1)}% ${nmArrow}</td>
+              <td style="text-align:right;padding:5px 8px">${metric(q.rev)} ${revArrow}${yoyTag}</td>
+              <td style="text-align:right;padding:5px 8px">${metric(q.gm, '%')} ${gmArrow}</td>
+              <td style="text-align:right;padding:5px 8px;${q.nm<0?'color:#7ee2a3':''}">${metric(q.nm, '%')} ${nmArrow}</td>
             </tr>`;
         }).join("")}
       </tbody>
     </table>
-    ${fcq && fcq._catalyst ? `<div style="font-size:10px;color:var(--muted);line-height:1.5;margin-top:4px;padding:4px 8px;border-left:2px dashed var(--gold)"><span style="color:var(--gold)">📈 ${fcq.q} 催化:</span> ${fcq._catalyst}${fcq._source?` · <span style="opacity:.7">源: ${fcq._source}</span>`:''}</div>` : ""}
-    ${meta ? `<div style="font-size:10px;color:var(--muted);margin-top:6px">${meta}</div>` : ""}
-  `;
+	    ${displayFcq && displayFcq._catalyst ? `<div style="font-size:10px;color:var(--muted);line-height:1.5;margin-top:4px;padding:4px 8px;border-left:2px dashed var(--gold)"><span style="color:var(--gold)">📈 ${displayFcq.q} 催化:</span> ${displayFcq._catalyst}</div>` : ""}
+	    ${displayFcq ? profitabilityGuidanceHtml(displayFcq._profitabilityGuidance) : ""}
+	    ${annualGuidanceHtml(outlook && outlook.annual_guidance)}
+	    ${meta ? `<div style="font-size:10px;color:var(--muted);margin-top:6px">${meta}</div>` : ""}
+	  `;
 
   // 渲染图表 (收入柱 + 毛利率/净利率双折线)
   // A 数据: 实色实线 / F 数据: 半透明 + 虚线边框, 折线点用空心圆
@@ -1834,7 +1979,7 @@ function renderCompanyBasics(code){
         },
         scales:{
           x:{ticks:{color:"#8aa0c0",font:{size:11}},grid:{display:false}},
-          y:{position:"left",ticks:{color:"#f5b301",font:{size:10},callback:v=>v+(isUS?"亿$":"亿")},grid:{color:"#1f2a44"},title:{display:false}},
+          y:{position:"left",ticks:{color:"#f5b301",font:{size:10},callback:v=>v},grid:{color:"#1f2a44"},title:{display:false}},
           y1:{position:"right",ticks:{color:"#ff8a95",font:{size:10},callback:v=>v+"%"},grid:{display:false},title:{display:false}}
         }
       }
@@ -2085,20 +2230,26 @@ async function fetchKLine(code, period="day", count=180){
 
 // 美股交易所映射 (默认 OQ=NASDAQ; N=NYSE; P=NYSE Arca)
 // 经实测验证 (count=100 bars 完整度): 大部分 OQ 默认即可
+const US_TICKER_ALIAS = {
+  ASE: "ASX", // ASE Technology Holding ADR trades on NYSE as ASX
+};
 const US_EXCHANGE = {
   // NYSE (.N)
   TSM: 'N', ONTO: 'N', FN: 'N', VRT: 'N', ETN: 'N', GEV: 'N', CCJ: 'N', COHR: 'N',
   ANET: 'N', CIEN: 'N', GLW: 'N', PWR: 'N', EME: 'N', FIX: 'N', MOD: 'N', TT: 'N',
   JCI: 'N', HUBB: 'N', VST: 'N', NRG: 'N', KMI: 'N', WMB: 'N', ORCL: 'N', NOW: 'N',
-  CRM: 'N',
-  // NYSE Arca ETF (.P)
-  EWY: 'P',
-  // 不支持: XLU, COPX, XME (腾讯无数据), ASE (代码 ASX 待定)
+  CRM: 'N', ASX: 'N',
+  // NYSE Arca ETF 在腾讯美股 K 线接口里使用 .AM
+  XLU: 'AM', COPX: 'AM', XME: 'AM', EWY: 'AM',
   // 默认 NASDAQ (.OQ): ARM, LRCX, CDNS, AMKR, TER, CRDO, ALAB, CSCO, MPWR, POWL, IREN, PLTR, 其余
 };
+function usApiTicker(ticker){
+  return US_TICKER_ALIAS[ticker] || ticker;
+}
 function usSym(ticker){
-  const ex = US_EXCHANGE[ticker] || 'OQ';
-  return `us${ticker}.${ex}`;
+  const apiTicker = usApiTicker(ticker);
+  const ex = US_EXCHANGE[apiTicker] || 'OQ';
+  return `us${apiTicker}.${ex}`;
 }
 
 // 美股 K 线 from 腾讯 (CORS 友好, 与 A 股同 API 家族)
@@ -2377,28 +2528,31 @@ function klOpts(showLegend){
 // buy-near ★     距 EMA8 ≤ 3% (未真回踩)     接近回踩
 // hold-trend     多头排列但距 EMA8 > 3%      趋势内不追
 // hold           未多头排列 / 斜率未上行      观望
-// sell-warning   本周(未收盘) close < EMA8   盘中警告 / 等周收盘
-// sell-confirmed 上一根完整周线 close < EMA8 已确认破位
+// sell-warning   本周(未收盘) close < EMA8   盘中警告 / 不自动换仓
+// sell-confirmed 上一根完整周线 close < EMA8 EMA8 减仓观察
+// exit-confirmed 周线 close < EMA21          核心趋势破坏 / 考虑换出
 function isBuyAction(a){ return typeof a === 'string' && a.startsWith('buy'); }
-function isSellAction(a){ return typeof a === 'string' && a.startsWith('sell'); }
+function isSellAction(a){ return typeof a === 'string' && (a.startsWith('sell') || a.startsWith('exit')); }
 function actionLabel(a){
   return ({'buy-deep':'深回踩','buy':'买入','buy-near':'接近回踩',
     'hold-trend':'持有','hold':'观望',
-    'sell-warning':'待确认','sell-confirmed':'清仓'})[a] || a;
+    'sell-warning':'盘中观察','sell-confirmed':'减仓观察','exit-confirmed':'考虑换出'})[a] || a;
 }
 
-// 判断最新一根周 K 是否已收盘定型 (周五收盘后 → 周一开盘前)
-// 北京周末 (Sat/Sun) 或 周一开盘前 (Mon < 09:00) → 上周线已收盘
-// 对美股也适用: 美股周五收盘 = 北京周六凌晨, 用户查看时基本都在北京周末窗口
-function isLastWeeklyBarClosed(){
-  const now = new Date();
+// 判断最新一根周 K 是否已收盘定型
+// A 股: 北京时间周五 15:00 后 → 周一开盘前, 本周线已收盘
+// 美股: 保持周末窗口, 避免北京时间周五下午提前确认美股周线
+function isLastWeeklyBarClosed(market="a"){
+  const now = typeof getBeijingNow === "function" ? getBeijingNow() : new Date();
   const dow = now.getDay();        // 0=Sun, 6=Sat
+  const min = now.getHours() * 60 + now.getMinutes();
+  if (market === "a" && dow === 5 && min >= 15 * 60) return true;
   if (dow === 0 || dow === 6) return true;
   if (dow === 1 && now.getHours() < 9) return true;
   return false;
 }
 
-function evalWeeklyEMA(weekBars, indexBullish){
+function evalWeeklyEMA(weekBars, indexBullish, market="a"){
   const n = weekBars.length;
   if (n < 22) return null;
   const closes = weekBars.map(b=>b.close);
@@ -2407,35 +2561,59 @@ function evalWeeklyEMA(weekBars, indexBullish){
   const last = weekBars[n-1];
   const prev = weekBars[n-2];
   const e8 = ema8[n-1], e21 = ema21[n-1];
-  const e8Prev = ema8[n-2];
-  const lastClosed = isLastWeeklyBarClosed();
+  const e8Prev = ema8[n-2], e21Prev = ema21[n-2];
+  const lastClosed = isLastWeeklyBarClosed(market);
 
-  // ============ 反转检测：上周破位但本周强势收回 EMA8 → 不判 sell-confirmed，继续走 buy 判定 ============
+  // ============ 反转检测：上周破位但本周强势收回 → 不判破位，继续走买点判定 ============
   const prevBroke = prev.close < e8Prev;
   const reboundReclaim = prevBroke && last.close >= e8 * 1.005;  // 本周明确收回 EMA8 (≥ +0.5%)
+  const prevCoreBroke = prev.close < e21Prev;
+  const coreReclaim = prevCoreBroke && last.close >= e21 * 1.005;
 
-  // ============ 卖出（两档） ============
-  // 1) sell-confirmed: 上一根完整周线 close < EMA8 + 本周未强势收回
-  if (prevBroke && !reboundReclaim) {
+  // ============ 风控（三档） ============
+  // 1) exit-confirmed: EMA21 级别核心趋势破坏，才考虑换出核心仓
+  if (prevCoreBroke && !coreReclaim) {
     return {
-      action:"sell-confirmed", strength:3,
-      detail:`上一周收盘 ${prev.close.toFixed(2)} < EMA8(${e8Prev.toFixed(2)}) — 周线趋势已破位`,
+      action:"exit-confirmed", strength:3,
+      detail:`上一周收盘 ${prev.close.toFixed(2)} < EMA21(${e21Prev.toFixed(2)}) — 核心趋势破坏，考虑换出/大幅降仓`,
       ema8:e8, ema21:e21
     };
   }
-  // 2) last 周已收盘 + close < EMA8 → sell-confirmed (周末/周一开盘前)
-  //    last 周未收盘 + close < EMA8 → sell-warning (周中盘中警告)
-  if (last.close < e8) {
+  if (last.close < e21) {
     if (lastClosed) {
       return {
-        action:"sell-confirmed", strength:3,
-        detail:`本周收盘 ${last.close.toFixed(2)} < EMA8(${e8.toFixed(2)}) — 周线已收盘且已破位`,
+        action:"exit-confirmed", strength:3,
+        detail:`本周收盘 ${last.close.toFixed(2)} < EMA21(${e21.toFixed(2)}) — 核心趋势破坏，考虑换出/大幅降仓`,
         ema8:e8, ema21:e21
       };
     }
     return {
       action:"sell-warning", strength:2,
-      detail:`⚠ 本周收盘 ${last.close.toFixed(2)} < EMA8(${e8.toFixed(2)})，但周线未收盘 — 等本周五收盘后确认，盘中假破位不算`,
+      detail:`⚠ 本周盘中跌破 EMA21(${e21.toFixed(2)}) — 先观察，等周线收盘确认后再决定是否换出`,
+      ema8:e8, ema21:e21
+    };
+  }
+
+  // 2) sell-confirmed: EMA8 确认跌破，只做观察/减仓，不踢出核心/卫星组合
+  if (prevBroke && !reboundReclaim) {
+    return {
+      action:"sell-confirmed", strength:3,
+      detail:`上一周收盘 ${prev.close.toFixed(2)} < EMA8(${e8Prev.toFixed(2)}) — 战术线转弱，核心仓观察/可减交易仓`,
+      ema8:e8, ema21:e21
+    };
+  }
+  // 3) last 周已收盘 + close < EMA8 → 减仓观察；未收盘 → 盘中警告
+  if (last.close < e8) {
+    if (lastClosed) {
+      return {
+        action:"sell-confirmed", strength:3,
+        detail:`本周收盘 ${last.close.toFixed(2)} < EMA8(${e8.toFixed(2)}) — 战术线转弱，暂停加仓/可减交易仓`,
+        ema8:e8, ema21:e21
+      };
+    }
+    return {
+      action:"sell-warning", strength:2,
+      detail:`⚠ 本周盘中低于 EMA8(${e8.toFixed(2)}) — 只做观察，不自动换出核心仓`,
       ema8:e8, ema21:e21
     };
   }
@@ -2521,7 +2699,8 @@ async function renderSignals(bars, currentPeriod){
     if (weekBars.length) klCache[cacheKey] = weekBars;
   }
   const indexBullish = await getIndexBullish();
-  const result = evalWeeklyEMA(weekBars, indexBullish);
+  const market = /[A-Za-z]/.test(klState.code) ? "us" : "a";
+  const result = evalWeeklyEMA(weekBars, indexBullish, market);
   if (!result) {
     list.innerHTML = `<div style="color:var(--muted);font-size:12px">周线数据不足 (需 ≥22 周)</div>`;
     return;
@@ -2537,10 +2716,12 @@ async function renderSignals(bars, currentPeriod){
     header = `<div style="background:rgba(255,90,106,.12);color:#ff8a95;padding:10px 12px;border-radius:6px;margin-bottom:10px">🔴 回踩 EMA8 买入 ★（加分项不足）</div>`;
   } else if (result.action === "buy-near") {
     header = `<div style="background:rgba(245,179,1,.14);color:#f5b301;padding:10px 12px;border-radius:6px;margin-bottom:10px">🟡 距 EMA8 ≤3% · 接近回踩</div>`;
+  } else if (result.action === "exit-confirmed") {
+    header = `<div style="background:rgba(255,90,106,.22);color:#ff8a95;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:700">🔴 EMA21 核心趋势破坏 · 考虑换出</div>`;
   } else if (result.action === "sell-confirmed") {
-    header = `<div style="background:rgba(46,204,113,.22);color:#7ee2a3;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:700">🟢 周线已确认破位</div>`;
+    header = `<div style="background:rgba(245,179,1,.14);color:#f5b301;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:700">🟠 EMA8 转弱 · 减仓观察</div>`;
   } else if (result.action === "sell-warning") {
-    header = `<div style="background:rgba(245,179,1,.14);color:#f5b301;padding:10px 12px;border-radius:6px;margin-bottom:10px">⚠ 本周盘中跌破 EMA8 — 等周收盘确认</div>`;
+    header = `<div style="background:rgba(245,179,1,.14);color:#f5b301;padding:10px 12px;border-radius:6px;margin-bottom:10px">⚠ 盘中跌破趋势线 — 周线收盘前不自动换仓</div>`;
   } else if (result.action === "hold-trend") {
     header = `<div style="color:var(--muted);font-size:12px;padding:6px 0">⚪ 趋势内持有 · 距 EMA8 较远</div>`;
   } else {
@@ -2594,7 +2775,7 @@ async function scanWatchlistBuySignals(){
           if (bars.length) klCache[cacheKey] = bars;
         }
         if (bars.length < 22) { failCount++; return null; }
-        const sig = evalWeeklyEMA(bars, indexBullish);
+        const sig = evalWeeklyEMA(bars, indexBullish, "a");
         okCount++;
         if (!sig) return null;
         return { stock, signal: sig, bars };
@@ -2623,9 +2804,10 @@ function renderBuyAlertBanner(results){
   const stdBuys  = results.filter(r => r.signal.action === "buy");
   const nearBuys = results.filter(r => r.signal.action === "buy-near");
   const buys = [...deepBuys, ...stdBuys, ...nearBuys];
+  const exits = results.filter(r => r.signal.action === "exit-confirmed");
   const sellsConfirmed = results.filter(r => r.signal.action === "sell-confirmed");
   const sellsWarning   = results.filter(r => r.signal.action === "sell-warning");
-  const sells = [...sellsConfirmed, ...sellsWarning];
+  const sells = [...exits, ...sellsConfirmed, ...sellsWarning];
   const holds = results.filter(r => r.signal.action === "hold" || r.signal.action === "hold-trend");
   const ts = watchScanState.lastRun ? new Date(watchScanState.lastRun).toLocaleTimeString("zh-CN", {hour12:false}) : "--";
   const ok = watchScanState.okCount || 0;
@@ -2669,9 +2851,10 @@ function renderBuyAlertBanner(results){
   const stdHtml     = mkRow("🔴 回踩 EMA8 · 标准买点", stdBuys,  "#ff8a95");
   const nearHtml    = mkRow("🟡 距 EMA8 ≤3% · 接近回踩", nearBuys, "#f5b301");
   const buyHtml     = deepHtml + stdHtml + nearHtml;
-  const sellConfHtml = mkRow("🟢 周线已确认破位", sellsConfirmed, "#7ee2a3", "rgba(46,204,113,.12)", "rgba(46,204,113,.5)");
-  const sellWarnHtml = mkRow("⚠ 本周盘中跌破 EMA8 · 等周收盘", sellsWarning, "#f5b301");
-  const sellHtml    = sellConfHtml + sellWarnHtml;
+  const exitHtml = mkRow("🔴 EMA21 核心趋势破坏 · 考虑换出", exits, "#ff8a95", "rgba(255,90,106,.12)", "rgba(255,90,106,.5)");
+  const sellConfHtml = mkRow("🟠 EMA8 转弱 · 减仓观察", sellsConfirmed, "#f5b301", "rgba(245,179,1,.10)", "rgba(245,179,1,.35)");
+  const sellWarnHtml = mkRow("⚠ 盘中跌破 EMA8/21 · 等周收盘", sellsWarning, "#f5b301");
+  const sellHtml    = exitHtml + sellConfHtml + sellWarnHtml;
 
   const emptyHtml = (buys.length === 0 && sells.length === 0) ? `
     <div style="background:rgba(46,204,113,.06);border:1px solid rgba(46,204,113,.2);padding:12px;border-radius:6px">
@@ -2714,7 +2897,7 @@ async function runWatchScan(force=false){
   }
   const results = await scanWatchlistBuySignals();
   renderBuyAlertBanner(results);
-  // 扫描完成 → 重渲染 Top 5 (剔除已破位的票)
+  // 扫描完成 → 重渲染 Top 10 (仅剔除 EMA21 核心趋势破坏的票)
   renderPortfolioPie();
 }
 
@@ -2825,6 +3008,72 @@ function isMarketHours(){
   const m = d.getHours()*60 + d.getMinutes();
   return (m >= 9*60+15 && m <= 11*60+30) || (m >= 13*60 && m <= 15*60+5);
 }
+function getNewYorkNowParts(){
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    weekday: "short",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  }).formatToParts(new Date());
+  const out = {};
+  parts.forEach(p => { if (p.type !== "literal") out[p.type] = p.value; });
+  return out;
+}
+function isUSMarketHours(){
+  const ny = getNewYorkNowParts();
+  if (ny.weekday === "Sat" || ny.weekday === "Sun") return false;
+  const hour = Number(ny.hour === "24" ? 0 : ny.hour);
+  const minute = Number(ny.minute);
+  const m = hour * 60 + minute;
+  return m >= 9 * 60 + 30 && m <= 16 * 60;
+}
+function updateLiveForActiveTab(){
+  updateClockForActiveTab();
+  if (activeTab === "us") {
+    setLive(isUSMarketHours(), isUSMarketHours() ? "美股盘中" : "美股盘后");
+    setUSHeaderQuoteMeta();
+  } else {
+    setLive(isMarketHours(), isMarketHours() ? "盘中实时" : "非交易时段（缓存）");
+  }
+}
+function setUSHeaderQuoteMeta(){
+  const quoteEl = document.getElementById("quoteTime");
+  const delayEl = document.getElementById("quoteDelay");
+  if (quoteEl) quoteEl.textContent = "美股刷新";
+  if (delayEl) {
+    delayEl.textContent = "约15-20分钟";
+    delayEl.style.color = "var(--gold)";
+  }
+}
+function formatTimeZoneNow(timeZone){
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false
+  }).formatToParts(new Date());
+  const out = {};
+  parts.forEach(p => { if (p.type !== "literal") out[p.type] = p.value; });
+  const hour = out.hour === "24" ? "00" : out.hour;
+  return `${out.year}-${out.month}-${out.day} ${hour}:${out.minute}:${out.second}`;
+}
+function updateClockForActiveTab(){
+  const label = document.getElementById("clockLabel");
+  const clock = document.getElementById("bjNow");
+  if (!clock) return;
+  if (activeTab === "us") {
+    if (label) label.textContent = "纽约时间";
+    clock.textContent = `${formatTimeZoneNow("America/New_York")} ET`;
+  } else {
+    if (label) label.textContent = "北京时间";
+    clock.textContent = formatTimeZoneNow("Asia/Shanghai");
+  }
+}
 // Parse Tencent timestamp "20260427101530" → Date in Beijing wall-clock; return age in seconds vs Beijing now
 function getQuoteAge(timeStr){
   if (!timeStr || timeStr.length < 14) return null;
@@ -2841,18 +3090,18 @@ function fmtBeijing(d){
 }
 
 async function refresh(force){
-  // Always update Beijing-now display
-  document.getElementById("bjNow").textContent = getBeijingNow().toISOString().replace("T"," ").slice(0,19);
+  // Always update the header clock for the active market tab.
+  updateClockForActiveTab();
 
   const inMarket = isMarketHours();
   if (!force && !inMarket && Object.keys(lastQuotes).length > 0) {
-    setLive(false, "非交易时段（缓存）");
+    if (activeTab !== "us") setLive(false, "非交易时段（缓存）");
     return;
   }
   try {
     const q = await fetchQuotes();
     if (Object.keys(q).length === 0) {
-      setLive(false, "接口无响应");
+      if (activeTab !== "us") setLive(false, "接口无响应");
       return;
     }
     lastQuotes = q;
@@ -2882,13 +3131,13 @@ async function refresh(force){
       delayEl.style.color = "var(--red)";
     }
 
-    setLive(true, inMarket ? "盘中实时" : "盘后");
+    if (activeTab !== "us") setLive(true, inMarket ? "盘中实时" : "盘后");
     renderWatchlist();
     renderAccount();
     onStockChange();
     snapshotPnL();
   } catch(e) {
-    setLive(false, "请求失败");
+    if (activeTab !== "us") setLive(false, "请求失败");
   }
 }
 function setLive(on, label){
@@ -2902,8 +3151,9 @@ document.getElementById("refreshBtn").onclick = () => refresh(true);
 let companiesUS = null;
 let usQuotes = {};
 let _quantWeightsUS = null;
+let _quantWeightsUSStatus = "";
 
-// 美股 5 因子量化模型 (与 A股 同公式)
+// 美股 5 因子长期质量模型 (与 A股 同公式)
 function computeQuantWeightsUS(){
   if (!companiesUS) return null;
   const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
@@ -2915,7 +3165,13 @@ function computeQuantWeightsUS(){
       && c.quarters.length >= 5
       && c.quarters.every(q => q.rev !== null && q.gm !== null && q.nm !== null);
   });
-  if (valid.length < 4) return null;
+  if (valid.length < 4) {
+    _quantWeightsUS = {};
+    _quantWeightsUSStatus = `合规财务数据不足：仅 ${valid.length} 只具备完整 5 季公告来源数据，暂不生成美股量化 Top 10`;
+    return _quantWeightsUS;
+  }
+  _quantWeightsUSStatus = "";
+  const hyperscalerFundingStress = computeHyperscalerFundingStress(companiesUS);
 
   const raw = valid.map(code => {
     const c = companiesUS[code];
@@ -2927,6 +3183,16 @@ function computeQuantWeightsUS(){
     const nmLatest = qs[qs.length-1].nm;
     const nmClipped = Math.max(-30, Math.min(60, nmLatest));
     const t = c.avg_turnover_pct || 3;
+    const gmPrev = qs.length >= 2 ? qs[qs.length-2].gm : gmLatest;
+    const nmPrev = qs.length >= 2 ? qs[qs.length-2].nm : nmLatest;
+    const marginTrend = (gmLatest - gmPrev) * 0.6 + (nmLatest - nmPrev) * 0.4;
+    const momentum = growthMomentumRaw(c);
+    const baseCycleRisk = categoryCycleRisk(code, c);
+    const extremeGrowthPenalty = Math.max(0, (revYoY - 80) / 120);
+    const marginExpansionPenalty = Math.max(0, marginTrend / 8);
+    const capexStress = capexStressFromMetrics(c.quality_metrics);
+    const downstreamStress = downstreamCapexExposure(code, c) * hyperscalerFundingStress;
+    const cyclePenalty = baseCycleRisk + extremeGrowthPenalty * baseCycleRisk + marginExpansionPenalty * 0.35 + downstreamStress * 0.45 + capexStress * baseCycleRisk * 0.25;
     return {
       code,
       logMC: Math.log(c.market_cap_billion || 100),
@@ -2936,6 +3202,11 @@ function computeQuantWeightsUS(){
       nmClipped,
       turnoverScore: -Math.abs(Math.log(t / IDEAL_TURNOVER)),
       turnoverRaw: t,
+      momentum: momentum.raw,
+      momentumLabel: momentum.label,
+      durability: durabilityRaw(c),
+      cyclePenalty,
+      qualityMetrics: c.quality_metrics || null,
       strategic: (c.strategic || 5) / 10
     };
   });
@@ -2951,11 +3222,14 @@ function computeQuantWeightsUS(){
   const zGM = zscore(raw.map(r => r.gm));
   const zNM = zscore(raw.map(r => r.nmClipped));
   const zTO = zscore(raw.map(r => r.turnoverScore));
+  const zMOM = zscore(raw.map(r => r.momentum));
+  const zDUR = zscore(raw.map(r => r.durability));
   const zProfit = raw.map((_, i) => 0.6 * zGM[i] + 0.4 * zNM[i]);
+  const zRISK = zscore(raw.map(r => -r.cyclePenalty + 0.20 * r.turnoverScore));
 
-  const W = { mc: 0.08, growth: 0.20, profit: 0.20, turnover: 0.12, strategic: 0.40 };
+  const W = { strategic: 0.22, growth: 0.20, profit: 0.20, durability: 0.18, risk: 0.20 };
   const composites = raw.map((r, i) =>
-    W.mc * zMC[i] + W.growth * zGrow[i] + W.profit * zProfit[i] + W.turnover * zTO[i] + W.strategic * r.strategic * 2
+    W.growth * (0.65 * zGrow[i] + 0.35 * zMOM[i]) + W.profit * zProfit[i] + W.durability * zDUR[i] + W.risk * zRISK[i] + W.strategic * r.strategic * 2
   );
   const minComp = Math.min(...composites);
   const shifted = composites.map(c => c - minComp + 0.5);
@@ -2970,10 +3244,10 @@ function computeQuantWeightsUS(){
       weight: weights[i],
       score: composites[i],
       factors: {
-        market_cap: { val: Math.exp(r.logMC).toFixed(0) + "亿$", contrib: (W.mc * zMC[i]).toFixed(2) },
-        growth: { val: r.revYoY.toFixed(1) + "%", contrib: (W.growth * zGrow[i]).toFixed(2) },
+        growth: { val: `${r.revYoY.toFixed(1)}% / ${r.momentumLabel}`, contrib: (W.growth * (0.65 * zGrow[i] + 0.35 * zMOM[i])).toFixed(2) },
         profit: { val: `GM ${r.gm.toFixed(1)}% / NM ${r.nm.toFixed(1)}%`, contrib: (W.profit * zProfit[i]).toFixed(2) },
-        turnover: { val: r.turnoverRaw.toFixed(1) + "%", contrib: (W.turnover * zTO[i]).toFixed(2) },
+        durability: { val: `市值 ${Math.exp(r.logMC).toFixed(0)}亿$ / FCF ${Number.isFinite(r.qualityMetrics?.free_cash_flow_billion) ? r.qualityMetrics.free_cash_flow_billion.toFixed(1) + "B" : "无SEC"}`, contrib: (W.durability * zDUR[i]).toFixed(2) },
+        risk: { val: `周期惩罚 ${r.cyclePenalty.toFixed(2)} / 下游资金压力 ${hyperscalerFundingStress.toFixed(2)}`, contrib: (W.risk * zRISK[i]).toFixed(2) },
         strategic: { val: (r.strategic*10).toFixed(0) + "/10", contrib: (W.strategic * r.strategic * 2).toFixed(2) }
       }
     };
@@ -3010,7 +3284,8 @@ function fetchUSQuotes(){
   if (!companiesUS) return Promise.resolve({});
   const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
   if (codes.length === 0) return Promise.resolve({});
-  const keys = codes.map(c => "us" + c);
+  const keyPairs = codes.map(code => ({ code, key: "us" + usApiTicker(code) }));
+  const keys = keyPairs.map(x => x.key);
   return new Promise((resolve) => {
     const script = document.createElement("script");
     script.charset = "GBK";
@@ -3019,12 +3294,11 @@ function fetchUSQuotes(){
     const finish = () => {
       if (done) return; done = true;
       const out = {};
-      keys.forEach(k => {
-        const raw = window["v_" + k];
+      keyPairs.forEach(({ code, key }) => {
+        const raw = window["v_" + key];
         if (raw && String(raw).split("~").length > 30) {
           const p = parseQuote(raw);  // 复用 A 股解析: name/code/price/prevClose/open/high/low/change/changePct/time
-          const ticker = k.slice(2);
-          out[ticker] = {
+          out[code] = {
             close: p.price, open: p.open, prevClose: p.prevClose,
             high: p.high, low: p.low,
             changePct: p.changePct,
@@ -3033,7 +3307,7 @@ function fetchUSQuotes(){
           };
         }
         // 清理全局变量避免污染
-        try { delete window["v_" + k]; } catch(e){}
+        try { delete window["v_" + key]; } catch(e){}
       });
       try { document.head.removeChild(script); } catch(e){}
       resolve(out);
@@ -3047,31 +3321,17 @@ function fetchUSQuotes(){
 async function refreshUSQuotes(){
   const all = await fetchUSQuotes();
   Object.entries(all).forEach(([c, q]) => { usQuotes[c] = q; });
-  // 找任意一只票的报价时间显示出来 + 计算延迟 (相对北京当前)
+  if (activeTab === "us") {
+    setLive(isUSMarketHours(), isUSMarketHours() ? "美股盘中" : "美股盘后");
+    setUSHeaderQuoteMeta();
+  }
+  // 腾讯美股 quote 字段时区不稳定；展示本次刷新时间, 不做伪精确延迟换算
   const sample = Object.values(all).find(q => q && q.date);
   const tEl = document.getElementById("usQuoteTime");
-  if (tEl && sample) {
-    // sample.date 格式: "2026-06-04 12:49:59" (ET 美东)
-    // ET 加 12 小时 = 北京 (夏令时 EDT 是 +12, 冬令时 EST 是 +13)
-    // 简化: 假设 EDT (-04:00), BJ +08:00, 差 12 小时
-    const etParts = sample.date.match(/(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})/);
-    let label = sample.date + " ET";
-    if (etParts) {
-      const [_, y, mo, d, h, mi, s] = etParts.map(Number);
-      // 构造 ET 时间为 UTC-4 (EDT)
-      const etMs = Date.UTC(y, mo - 1, d, h, mi, s) + 4 * 3600 * 1000;
-      const ageMin = Math.floor((Date.now() - etMs) / 60000);
-      const bjDate = new Date(etMs);
-      const bjStr = bjDate.toLocaleString("zh-CN", {timeZone: "Asia/Shanghai", hour12: false}).replace(/\//g,"-");
-      let ageStr;
-      if (ageMin < 0) ageStr = `<span style="color:#f5b301">未来 ${-ageMin}min (时钟异常)</span>`;
-      else if (ageMin < 30) ageStr = `<span style="color:#7ee2a3">${ageMin} 分钟前 (盘中实时)</span>`;
-      else if (ageMin < 120) ageStr = `<span style="color:#f5b301">${ageMin} 分钟前</span>`;
-      else if (ageMin < 1440) ageStr = `<span style="color:#ff8a95">${Math.floor(ageMin/60)} 小时${ageMin%60}分前 (可能已收盘)</span>`;
-      else ageStr = `<span style="color:#ff8a95">${Math.floor(ageMin/1440)} 天前 (周末/休市)</span>`;
-      label = `${sample.date} ET = ${bjStr} 北京 · ${ageStr}`;
-    }
-    tEl.innerHTML = label;
+  if (tEl) {
+    const refreshed = formatTimeZoneNow("Asia/Shanghai");
+    tEl.textContent = `${refreshed} 北京 · 腾讯美股约延迟 15-20 分钟`;
+    if (sample) tEl.title = `腾讯原始时间字段: ${sample.date || "--"}`;
   }
   renderUSWatchlist();
 }
@@ -3088,9 +3348,10 @@ function renderUSWatchlist(){
     if (wa === -1 && wb === -1) return (companiesUS[b].strategic || 0) - (companiesUS[a].strategic || 0);
     return wb - wa;
   });
-  // 计算 Top 5 归一化 (与 A股 一致)
+  // 计算 Top 10 组合配比: 前 5 核心仓合计 80%, 后 5 卫星仓合计 20%
   const quantCodes = codes.filter(c => _quantWeightsUS && _quantWeightsUS[c]);
-  const top5Sum = quantCodes.slice(0,5).reduce((s,c) => s + _quantWeightsUS[c].weight, 0);
+  const coreSum = quantCodes.slice(0,5).reduce((s,c) => s + _quantWeightsUS[c].weight, 0);
+  const satelliteSum = quantCodes.slice(5,10).reduce((s,c) => s + _quantWeightsUS[c].weight, 0);
 
   let upCount = 0, downCount = 0;
   const rows = codes.map((code, idx) => {
@@ -3109,26 +3370,28 @@ function renderUSWatchlist(){
     // 角色徽章
     const quantRank = quantCodes.indexOf(code) + 1;
     let roleHtml;
-    if (qw && quantRank > 0 && quantRank <= 5 && top5Sum > 0) {
-      const normPct = (qw.weight / top5Sum * 100).toFixed(1);
-      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(255,90,106,.2);color:#ff8a95;font-weight:700;font-size:12px">#${quantRank} 持仓 ${normPct}%</span>`;
+    if (qw && quantRank > 0 && quantRank <= 5 && coreSum > 0) {
+      const normPct = (qw.weight / coreSum * 80).toFixed(1);
+      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(255,90,106,.2);color:#ff8a95;font-weight:700;font-size:12px">#${quantRank} 核心 ${normPct}%</span>`;
     } else if (qw && quantRank > 0 && quantRank <= 10) {
-      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(245,179,1,.15);color:var(--gold);font-weight:600;font-size:12px">#${quantRank} 候选</span>`;
+      const normPct = (satelliteSum > 0) ? (qw.weight / satelliteSum * 20).toFixed(1) : '?';
+      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(245,179,1,.15);color:var(--gold);font-weight:600;font-size:12px">#${quantRank} 卫星 ${normPct}%</span>`;
     } else if (qw && quantRank > 0) {
       roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;color:var(--muted);font-size:11px">#${quantRank} 观察</span>`;
-    } else {
-      // ETF: 没 quant, 显示战略 + ETF 标签
+    } else if (c.cat === "etf") {
       roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(138,160,192,.15);color:var(--muted);font-size:11px">ETF · 战略 ${c.strategic}/10</span>`;
+    } else {
+      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;color:var(--muted);font-size:11px">未参与量化 · 战略 ${c.strategic}/10</span>`;
     }
 
-    // tooltip 显示因子分解 (Top 5 / 候选池) 或基本信息
+    // tooltip 显示因子分解 (核心/卫星/观察) 或基本信息
     const tooltip = qw ? escapeAttr(
       `排名 #${quantRank} · 综合分 ${qw.weight.toFixed(1)}%\n` +
       `战略: ${qw.factors.strategic.val} (贡献 ${qw.factors.strategic.contrib})\n` +
-      `增速: ${qw.factors.growth.val} (贡献 ${qw.factors.growth.contrib})\n` +
+      `增长动能: ${qw.factors.growth.val} (贡献 ${qw.factors.growth.contrib})\n` +
       `盈利: ${qw.factors.profit.val} (贡献 ${qw.factors.profit.contrib})\n` +
-      `换手: ${qw.factors.turnover.val} (贡献 ${qw.factors.turnover.contrib})\n` +
-      `市值: ${qw.factors.market_cap.val} (贡献 ${qw.factors.market_cap.contrib})`
+      `规模现金流: ${qw.factors.durability.val} (贡献 ${qw.factors.durability.contrib})\n` +
+      `周期资金风险: ${qw.factors.risk.val} (贡献 ${qw.factors.risk.contrib})`
     ) : escapeAttr(`战略评分: ${c.strategic}/10\n${c.intro || ""}`);
 
     return `
@@ -3146,7 +3409,7 @@ function renderUSWatchlist(){
         <td>
           <button class="trade-action us-info-btn" data-code="${code}" style="margin-right:4px">📋</button>
           <button class="trade-action us-kline-btn" data-code="${code}" style="margin-right:4px">K线</button>
-          <a href="https://finance.yahoo.com/quote/${code}" target="_blank" class="trade-action" style="text-decoration:none;display:inline-block">📊</a>
+          <a href="https://finance.yahoo.com/quote/${usApiTicker(code)}" target="_blank" class="trade-action" style="text-decoration:none;display:inline-block">📊</a>
         </td>
       </tr>`;
   });
@@ -3158,7 +3421,7 @@ function renderUSWatchlist(){
   tb.querySelectorAll(".us-kline-btn").forEach(b => b.onclick = () => openKLine(b.dataset.code));
   // 渲染产业链分层
   renderUSLayers();
-  // 渲染 Top 5 饼图
+  // 渲染 Top 10 饼图
   renderUSPortfolioPie();
 }
 
@@ -3171,6 +3434,13 @@ function renderUSPortfolioPie(){
     if (lg) lg.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:8px 0">⏳ 加载基本面数据中...</div>';
     return;
   }
+  if (Object.keys(_quantWeightsUS).length < 4) {
+    const lg = document.getElementById("pfLegendUS");
+    if (lg) lg.innerHTML = `<div style="color:var(--gold);font-size:12px;padding:8px 0">⚠ ${escapeHtml(_quantWeightsUSStatus || "合规财务数据不足，暂不生成美股量化 Top 10")}</div>`;
+    const pool = document.getElementById("pfWatchPoolUS");
+    if (pool) pool.innerHTML = '<div style="color:var(--muted);font-size:12px">补齐公司公告 source 后恢复组合池。</div>';
+    return;
+  }
   const excluded = getSellExcludedCodes(watchScanStateUS && watchScanStateUS.results);
   const warning  = getSellWarningCodes(watchScanStateUS && watchScanStateUS.results);
   const rankedAll = Object.keys(_quantWeightsUS).map(code => ({
@@ -3179,51 +3449,67 @@ function renderUSPortfolioPie(){
     catLabel: companiesUS[code]?.catLabel || "",
     weight: _quantWeightsUS[code].weight
   })).sort((a,b) => b.weight - a.weight);
-  // 剔除已破位 (sell-confirmed) — 趋势已坏，按策略卖出
+  // 只剔除 EMA21 级别的核心趋势破坏；EMA8 破位只做观察/减仓提示
+  const originalTop10 = rankedAll.slice(0, 10);
+  const originalTop10Codes = new Set(originalTop10.map(s => s.code));
   const ranked = rankedAll.filter(s => !excluded.has(s.code));
   const excludedRanked = rankedAll.filter(s => excluded.has(s.code));
-  const top5 = ranked.slice(0, 5);
-  const restPool = ranked.slice(5);
-  if (top5.length === 0) return;
-  const top5Sum = top5.reduce((a,b) => a + b.weight, 0);
-  const pfData = top5.map((s, i) => ({
+  const portfolio = ranked.slice(0, 10);
+  const core = portfolio.slice(0, 5);
+  const satellite = portfolio.slice(5, 10);
+  const restPool = ranked.slice(10);
+  const replacedFromTop10 = originalTop10.filter(s => excluded.has(s.code));
+  const replacementIntoTop10 = portfolio.filter(s => !originalTop10Codes.has(s.code));
+  if (portfolio.length === 0) return;
+  const coreSum = core.reduce((a,b) => a + b.weight, 0);
+  const satelliteSum = satellite.reduce((a,b) => a + b.weight, 0);
+  const pfData = portfolio.map((s, i) => ({
     label: s.name,
     code: s.code,
     catLabel: s.catLabel,
     rawWeight: s.weight,
-    val: Math.round(s.weight / top5Sum * 1000) / 10,
+    sleeve: i < 5 ? "核心" : "卫星",
+    val: Math.round((i < 5 ? s.weight / coreSum * 80 : s.weight / satelliteSum * 20) * 10) / 10,
     color: PF_COLORS[i]
   }));
   const total = pfData.reduce((a,b) => a + b.val, 0);
-  pfData[0].val = Math.round((pfData[0].val + (100 - total)) * 10) / 10;
+  if (pfData.length) pfData[0].val = Math.round((pfData[0].val + (100 - total)) * 10) / 10;
 
   const existing = Chart.getChart(canvas);
   if (existing) { try{existing.destroy();}catch(e){} }
   new Chart(canvas, {
     type:"doughnut",
     data:{labels:pfData.map(d=>d.label),datasets:[{data:pfData.map(d=>d.val),backgroundColor:pfData.map(d=>d.color),borderColor:"#121a2b",borderWidth:2}]},
-    options:{responsive:true,maintainAspectRatio:false,cutout:"58%",plugins:{legend:{display:false},tooltip:{callbacks:{label:(c)=>` ${pfData[c.dataIndex].label} (${pfData[c.dataIndex].catLabel}): ${c.parsed}%`}}}}
+    options:{responsive:true,maintainAspectRatio:false,cutout:"58%",plugins:{legend:{display:false},tooltip:{callbacks:{label:(c)=>` ${pfData[c.dataIndex].sleeve} · ${pfData[c.dataIndex].label} (${pfData[c.dataIndex].catLabel}): ${c.parsed}%`}}}}
   });
   const lg = document.getElementById("pfLegendUS");
   if (lg) {
     lg.innerHTML = "";
     pfData.forEach((d, i) => {
-      const warnIco = warning.has(top5[i].code)
-        ? ' <span title="本周盘中跌破 EMA8，等周收盘确认" style="color:#f5b301;font-size:11px">⚠</span>' : "";
+      const warnIco = warning.has(portfolio[i].code)
+        ? ' <span title="EMA8 观察/减仓信号；不自动换出核心仓" style="color:#f5b301;font-size:11px">⚠</span>' : "";
       const row = document.createElement("div");
       row.className = "row";
-      row.innerHTML = `<div class="left"><span class="sq" style="background:${d.color}"></span><span>${d.code} · ${d.label}${warnIco}<span style="color:var(--muted);font-size:11px;margin-left:6px">${d.catLabel}</span></span></div><b>${d.val}%</b>`;
+      row.innerHTML = `<div class="left"><span class="sq" style="background:${d.color}"></span><span>${d.code} · ${d.label}${warnIco}<span style="color:var(--muted);font-size:11px;margin-left:6px">${d.sleeve} · ${d.catLabel}</span></span></div><b>${d.val}%</b>`;
       lg.appendChild(row);
     });
   }
   const pool = document.getElementById("pfWatchPoolUS");
   if (pool) {
     const next5 = restPool.slice(0, 5);
-    const exHtml = excludedRanked.length ? (
-      `<div style="margin-top:8px;color:#7be0a8">🟢 已破位剔除（周线 close &lt; EMA8）：</div>` +
-      excludedRanked.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(46,204,113,.15);border:1px solid rgba(46,204,113,.4);border-radius:3px;color:#7be0a8;text-decoration:line-through">${s.code} ${s.weight.toFixed(1)}</span>`).join("")
+    const rebalanceHtml = replacedFromTop10.length ? (
+      `<div style="margin-bottom:8px;padding:8px 10px;background:rgba(245,179,1,.08);border:1px solid rgba(245,179,1,.25);border-radius:6px;color:var(--gold)">
+        🔁 本次换仓过程：EMA21 核心趋势破坏移出
+        ${replacedFromTop10.map(s => `<b>${s.code}</b>`).join(" / ")}
+        ${replacementIntoTop10.length ? `；顺位补入 ${replacementIntoTop10.map(s => `<b>${s.code}</b>`).join(" / ")}` : ""}
+      </div>`
     ) : "";
-    pool.innerHTML = `<div style="margin-bottom:4px">📋 候选池（#6-10，趋势破位时考虑替换）：</div>` +
+    const exHtml = excludedRanked.length ? (
+      `<div style="margin-top:8px;color:#ff8a95">🔴 已移出核心仓（周线 close &lt; EMA21）：</div>` +
+      excludedRanked.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(255,90,106,.12);border:1px solid rgba(255,90,106,.4);border-radius:3px;color:#ff8a95;text-decoration:line-through">${s.code} ${s.weight.toFixed(1)}</span>`).join("")
+    ) : "";
+    pool.innerHTML = rebalanceHtml +
+      `<div style="margin-bottom:4px">📋 观察池（#11-15，核心/卫星仓破坏或基本面变坏时考虑替换）：</div>` +
       next5.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(138,160,192,.1);border-radius:3px">${s.code} ${s.weight.toFixed(1)}</span>`).join("") +
       exHtml;
   }
@@ -3318,7 +3604,7 @@ async function scanWatchlistBuySignalsUS(){
           if (bars.length) klCacheUS[cacheKey] = bars;
         }
         if (bars.length < 22) { failCount++; failedCodes.push(code); return null; }
-        const sig = evalWeeklyEMA(bars, indexBullish);
+        const sig = evalWeeklyEMA(bars, indexBullish, "us");
         okCount++;
         if (!sig) return null;
         return { stock: { code, name: c.name }, signal: sig, bars };
@@ -3347,9 +3633,10 @@ function renderBuyAlertBannerUS(results){
   const stdBuys  = results.filter(r => r.signal.action === "buy");
   const nearBuys = results.filter(r => r.signal.action === "buy-near");
   const buys = [...deepBuys, ...stdBuys, ...nearBuys];
+  const exits = results.filter(r => r.signal.action === "exit-confirmed");
   const sellsConfirmed = results.filter(r => r.signal.action === "sell-confirmed");
   const sellsWarning   = results.filter(r => r.signal.action === "sell-warning");
-  const sells = [...sellsConfirmed, ...sellsWarning];
+  const sells = [...exits, ...sellsConfirmed, ...sellsWarning];
   const holds = results.filter(r => r.signal.action === "hold" || r.signal.action === "hold-trend");
   const ts = watchScanStateUS.lastRun ? new Date(watchScanStateUS.lastRun).toLocaleTimeString("zh-CN", {hour12:false}) : "--";
   const ok = watchScanStateUS.okCount || 0;
@@ -3384,9 +3671,10 @@ function renderBuyAlertBannerUS(results){
   const nearHtml    = mkRowUS("🟡 距 EMA8 ≤3% · 接近回踩", nearBuys, "#f5b301");
   const strongBuyHtml = deepHtml + stdHtml;
   const weakBuyHtml   = nearHtml;
-  const sellConfHtml = mkRowUS("🟢 周线已确认破位", sellsConfirmed, "#7ee2a3", "rgba(46,204,113,.12)", "rgba(46,204,113,.5)");
-  const sellWarnHtml = mkRowUS("⚠ 本周盘中跌破 EMA8 · 等周收盘", sellsWarning, "#f5b301");
-  const sellHtml    = sellConfHtml + sellWarnHtml;
+  const exitHtml = mkRowUS("🔴 EMA21 核心趋势破坏 · 考虑换出", exits, "#ff8a95", "rgba(255,90,106,.12)", "rgba(255,90,106,.5)");
+  const sellConfHtml = mkRowUS("🟠 EMA8 转弱 · 减仓观察", sellsConfirmed, "#f5b301", "rgba(245,179,1,.10)", "rgba(245,179,1,.35)");
+  const sellWarnHtml = mkRowUS("⚠ 盘中跌破 EMA8/21 · 等周收盘", sellsWarning, "#f5b301");
+  const sellHtml    = exitHtml + sellConfHtml + sellWarnHtml;
   const emptyHtml = (buys.length === 0 && sells.length === 0) ? `
     <div style="background:rgba(46,204,113,.06);border:1px solid rgba(46,204,113,.2);padding:12px;border-radius:6px">
       <div style="color:#7ee2a3;font-size:13px;font-weight:600;margin-bottom:4px">✓ 当前无买卖信号</div>
@@ -3394,7 +3682,7 @@ function renderBuyAlertBannerUS(results){
     </div>` : "";
 
   const failedCodes = watchScanStateUS.failedCodes || [];
-  const failHtml = fail ? ` · <span style="color:#ff8a95" title="腾讯接口不支持以下 ETF: ${failedCodes.join(', ')}">${fail} 不支持 (${failedCodes.join('/')})</span>` : "";
+  const failHtml = fail ? ` · <span style="color:#ff8a95" title="以下标的 K 线不足或抓取失败: ${failedCodes.join(', ')}">${fail} 失败 (${failedCodes.join('/')})</span>` : "";
   banner.innerHTML = `
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
       <div style="font-size:13px;color:var(--muted)">📡 美股周线 EMA8/EMA21 趋势扫描 · ${ok} 只已评估${failHtml} · ${idxLabel} · 更新于 ${ts}</div>
@@ -3417,12 +3705,13 @@ async function runWatchScanUS(force=false){
   const banner = document.getElementById("buyAlertBannerUS");
   if (!banner) return;
   if (force || !watchScanStateUS.results) {
+    const total = companiesUS ? Object.keys(companiesUS).filter(k => !k.startsWith('_')).length : "--";
     banner.style.display = "block";
-    banner.innerHTML = `<div style="color:var(--muted);font-size:13px;padding:6px 0">📡 正在扫描 36 只美股的周线趋势...</div>`;
+    banner.innerHTML = `<div style="color:var(--muted);font-size:13px;padding:6px 0">📡 正在扫描 ${total} 只美股的周线趋势...</div>`;
   }
   const results = await scanWatchlistBuySignalsUS();
   renderBuyAlertBannerUS(results);
-  // 扫描完成 → 重渲染 Top 5 (剔除已破位的票)
+  // 扫描完成 → 重渲染 Top 10 (仅剔除 EMA21 核心趋势破坏的票)
   renderUSPortfolioPie();
 }
 const usRefreshBtn = document.getElementById("usRefreshBtn");
@@ -3445,7 +3734,7 @@ renderPnLCurve();
 loadCompanies().then(() => {
   populateStockSel();
   renderWatchlist();        // 触发 computeQuantWeights → KPI / 权重列
-  renderPortfolioPie();     // Top 5 持仓配比饼图
+  renderPortfolioPie();     // Top 10 组合配比饼图
   if (publicNews) { renderWatchlist(); renderGlobalFeed(); }  // news 先到则补渲染
   refresh(true);
   setInterval(() => refresh(false), 10000);
