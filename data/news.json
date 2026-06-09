@@ -458,6 +458,14 @@
       "url": "https://www.sohu.com/a/1030649581_115377",
       "source": "搜狐财经",
       "content": "工业富联于2026年6月1日披露2025年度股东会会议资料，会议将于6月9日召开，股权登记日6月2日。9项议案包括审议2025年度董事会/监事会工作报告、财务决算、2025年度利润分配方案（每10股派6.5元含税，合计约129亿元）、2026年度高级管理人员薪酬方案、2026年度日常关联交易预计等"
+    },
+    {
+      "date": "2026-06-09",
+      "type": "announcement",
+      "title": "2025年度股东大会召开：9项议案全部审议通过 2025年度分红每10股派6.5元合计约129亿元",
+      "url": "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=601138",
+      "source": "上海证券交易所",
+      "content": "公司于6月9日在深圳南山联合总部大厦52层召开2025年度股东大会，9项议案均获审议通过，包括：2025年度利润分配方案（每10股派6.5元含税，合计约129亿元），2026年度高管薪酬方案，2026年度日常关联交易预计等。本年度（含中期红利）合计分红194.51亿元，分红比例55.12%。"
     }
   ],
   "603019": [
@@ -705,6 +713,14 @@
       "source": "上交所公告",
       "url": "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=688008",
       "content": "上海融迎及一致行动人WLT Partners询价转让完成，合计持股从6.84%降至5.78%，触及1%整数刻度"
+    },
+    {
+      "date": "2026-06-04",
+      "type": "industry",
+      "title": "纳入富时中国A50指数（FTSE China A50）6月18日收市后生效 被动资金增量可期",
+      "url": "https://finance.sina.com.cn/stock/relnews/cn/2026-06-04/doc-iniafmmv2695506.shtml",
+      "source": "新浪财经",
+      "content": "富时罗素宣布2026年上半年定期调样，澜起科技（688008）纳入富时中国A50指数（FTSE China A50），同批调入的还有兆易创新、东山精密、胜宏科技、潍柴动力，调整于6月18日收市后生效。叠加此前纳入上证50（6月13日生效），澜起科技同时进入两大核心宽基指数，被动资金增量双向催化。"
     }
   ],
   "688012": [
@@ -1563,7 +1579,7 @@
     }
   ],
   "_meta": {
-    "last_updated": "2026-06-08",
+    "last_updated": "2026-06-09",
     "schema": "{ code: [{ date, type, title, content, source, url, tags }] }",
     "types": [
       "news",
@@ -2220,6 +2236,14 @@
       "url": "https://www.cninfo.com.cn/new/disclosure/detail?stockCode=002156&announcementId=1225348000",
       "source": "巨潮资讯",
       "content": "通富微电披露2026年度向特定对象发行A股股票募集说明书（修订稿），补充回复深交所审核问询函，更新2025年报及2026Q1财务数据等申请文件，44亿元定增申请继续推进；当日股价下跌6.98%。"
+    },
+    {
+      "date": "2026-06-04",
+      "type": "announcement",
+      "title": "44亿元定增申请获深交所审核通过 提交注册稿至证监会 进入最终注册阶段",
+      "url": "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?CompanyCode=80097729&gather=1&id=12375175",
+      "source": "新浪财经",
+      "content": "向特定对象发行A股股票申请于2026年6月3日获深交所审核通过，公司随即于6月4日向证监会提交募集说明书注册稿等申请文件，44亿元定增进入最终注册阶段，尚需证监会同意注册后方可实施。募资用途：存储芯片、汽车电子、晶圆级封装、高性能计算及通信等先进封装产能扩充，以及补充流动资金偿还银行贷款。"
     }
   ],
   "002409": [
