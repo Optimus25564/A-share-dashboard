@@ -167,6 +167,14 @@
       "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-6-5-why-nvidia-nvda-shares-are-getting-obliterated-today",
       "source": "FinancialContent / CoinCentral",
       "content": "Nvidia shares fell 2-3% on June 5. Headwinds included: director Mark Stevens sold 500,000 shares for ~$109.9M; Taiwan authorities detained 3 individuals for fraudulent declarations while exporting Super Micro AI servers (containing Nvidia chips) to China; Jensen Huang publicly urged Super Micro to improve export compliance. Broader chip equipment sector also sold off (AMAT -7.3%, LRCX -7.5%, KLAC -6.15%)."
+    },
+    {
+      "date": "2026-06-07",
+      "type": "announcement",
+      "title": "NVIDIA and SK Hynix Announce Multiyear Technology Partnership to Advance Memory for AI Factories",
+      "url": "https://nvidianews.nvidia.com/news/sk-hynix-ai-factory",
+      "source": "NVIDIA Newsroom",
+      "content": "NVIDIA and SK hynix will codevelop next-generation memory for Vera Rubin AI supercomputers, Vera CPUs, RTX Spark PCs and Jetson Thor robotics platforms. Partnership accelerates semiconductor design and manufacturing for global AI factory buildout; SK hynix HBM4 already certified for Vera Rubin."
     }
   ],
   "AVGO": [
@@ -427,6 +435,14 @@
       "url": "https://siliconanalysts.com/analysis/amd-vs-nvidia-ai-gpu-market-share-2026",
       "source": "Silicon Analysts / S&P Global",
       "content": "AMD's Instinct MI350 (CDNA 4, TSMC 3nm) is shipping in volume, offering 288 GB HBM3E memory and 2x FP64 perf vs. Nvidia B200. Eight of the top 10 AI companies now use AMD Instinct GPUs in production. Data center GPU revenue forecast to surge 114% YoY to $15B in 2026. DA Davidson raised AMD to Buy with $375 target; consensus Wall Street target ~$261-290."
+    },
+    {
+      "date": "2026-06-05",
+      "type": "news",
+      "title": "AMD Drops 10.86% in Sector-Wide Chip Sell-Off Triggered by Broadcom Q3 Guidance Below Estimates",
+      "url": "https://www.kavout.com/market-lens/what-triggered-the-recent-semiconductor-sell-off",
+      "source": "Kavout / Bloomberg",
+      "content": "AMD shares fell 10.86% to 66.38 on June 5 as Broadcom's Q3 AI revenue guidance of 6B missed the 7.2B analyst estimate, triggering a broad semiconductor sell-off. AMD MI350 GPU momentum and Meta 6GW Instinct deployment commitment remain intact. Q2 2026 guidance of 1.2B +46% YoY unchanged."
     }
   ],
   "INTC": [
@@ -597,6 +613,14 @@
       "url": "https://www.tikr.com/blog/intel-stock-up-450-in-2026-heres-what-investors-need-to-know",
       "source": "TIKR.com",
       "content": "Intel is up approximately 250% in 2026, trading near $130, with AI-linked revenue now ~60% of quarterly sales. Data center revenue grew 22% to $5.1B in Q1. Q2 2026 guidance confirmed at $13.8-14.8B (mid $14.3B). Microsoft signed multi-year 18A wafer agreement, AWS expanded Xeon footprint for AI inference. Analyst street mean target ~$89 now well below current price."
+    },
+    {
+      "date": "2026-06-05",
+      "type": "news",
+      "title": "Intel Drops 11.28% on June 5 in Chip Sector Sell-Off; AI Revenue ~60% of Sales, Apple 18A Agreement Intact",
+      "url": "https://www.kavout.com/market-lens/what-triggered-the-recent-semiconductor-sell-off",
+      "source": "Kavout / CNBC",
+      "content": "Intel fell 11.28% to 9.17 on June 5 alongside a broad semiconductor sell-off driven by Broadcom's Q3 AI guidance miss. Despite the single-day decline, INTC is up ~250% YTD in 2026. Apple 18A foundry agreement, Google TPU EMIB partnership, and Xeon 6+ ramp on Intel 18A remain intact. Q2 guidance 3.8-14.8B."
     }
   ],
   "QCOM": [
@@ -843,6 +867,14 @@
       "url": "https://commonthreadco.com/blogs/coachs-corner/applovin-axon-self-serve-ecommerce-june-2026",
       "source": "Common Thread Collective / ppc.land",
       "content": "AppLovin opened its Axon AI advertising platform to all global advertisers via full self-serve in June 2026, eliminating the referral-based gating in place since October 2025. CEO Adam Foroughi: 'Come June, advertisers across the world will be able to sign up for Axon and start running campaigns — that changes the trajectory of this company in a very meaningful way.' Unit economics: sub-30-day payback, near-zero churn after day 30, $70K+ annualized spend per advertiser. CEO projection: 100,000 new customers in year one = ~$7B incremental ad spend. AI video creative tool concurrently entering GA to reduce onboarding friction."
+    },
+    {
+      "date": "2026-06-05",
+      "type": "research",
+      "title": "AppLovin Upgraded to Outperform at Edgewater Research; Shareholders Approve Governance Changes at Annual Meeting",
+      "url": "https://finance.yahoo.com/quote/APP/",
+      "source": "Edgewater Research / Yahoo Finance",
+      "content": "Edgewater Research upgraded AppLovin (APP) from Neutral to Outperform on June 5, citing Axon platform global rollout to all advertisers in June as a major monetization catalyst. Shareholders also approved board and governance changes at June 5 annual meeting. Q2 2026 revenue guidance .92-1.95B (+53% YoY); EBITDA margin guided 84-85%."
     }
   ],
   "TSM": [
@@ -965,6 +997,22 @@
       "url": "https://www.tipranks.com/news/company-announcements/tsmc-shareholders-approve-2025-results-and-charter-changes-at-june-4-meeting",
       "source": "TipRanks / TSMC",
       "content": "TSMC held its 2026 Annual Shareholders' Meeting on June 4. CEO CC Wei confirmed full-year 2026 revenue will grow more than 30% in USD terms, driven by AI chip demand. Wei noted AI chip supply remains constrained but demand is unconstrained. 2025 annual revenue NT$3,809.05B (+40% YoY), net income NT$1,717.88B, diluted EPS NT$66.25."
+    },
+    {
+      "date": "2026-06-05",
+      "type": "news",
+      "title": "TSMC ADR Falls 6.60% to 15.57 in June 5 Chip Sector Sell-Off; Fundamentals Unchanged",
+      "url": "https://www.cnbc.com/quotes/TSM",
+      "source": "CNBC / TradingKey",
+      "content": "TSM ADR fell 6.60% to 15.57 on June 5 as the semiconductor sector sold off post-Broadcom guidance. TSMC fundamentals remain intact: >30% 2026 revenue growth guidance, Q2 2026 guided 9-40.2B (+32% YoY), April 2026 monthly revenue NT10.73B (+17.5% YoY). AI chip demand from NVDA/AMD/AVGO unchanged."
+    },
+    {
+      "date": "2026-06-07",
+      "type": "industry",
+      "title": "TSMC Delays High-NA EUV Deployment to 2029 — Each Machine Costs €350M+; 2nm Production Unaffected",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/tsmc-says-asml-latest-chipmaking-095255944.html",
+      "source": "Yahoo Finance",
+      "content": "TSMC will hold off on deploying ASML's most advanced High-NA EUV lithography machines through 2029, citing cost exceeding €350M per unit. TSMC's 2nm/3nm AI chip production for NVDA, AMD, Apple uses existing EUV tools and is unaffected. Delay signals High-NA EUV volume production won't begin at TSMC before 2030, a near-term overhang for ASML High-NA order ramp."
     }
   ],
   "ASML": [
@@ -1055,6 +1103,22 @@
       "url": "https://www.tomshardware.com/tech-industry/semiconductors/asml-is-prepared-for-chinas-rare-earth-export-controls-finance-head-says-company-has-stock-thanks-to-long-lead-times",
       "source": "Tom's Hardware",
       "content": "SK Hynix placed a multi-year EUV order exceeding $7B with ASML to support HBM expansion for AI. ASML's finance head confirmed the company has rare-earth material inventory stockpiled (long lead times). China DUV export ban risk persists (MATCH Act April 2026), but China was already 19% of Q1 sales vs 36% in Q4 2025. FY2026 guidance maintained at EUR 36-40B."
+    },
+    {
+      "date": "2026-06-05",
+      "type": "news",
+      "title": "ASML Drops 6.49% to ,643.39 in June 5 Semiconductor Equipment Sell-Off",
+      "url": "https://www.cnbc.com/quotes/ASML",
+      "source": "CNBC / MarketWatch",
+      "content": "ASML fell 6.49% to ,643.39 on June 5 alongside semiconductor equipment sector sell-off (LRCX -9.85%, KLAC -9.47%, AMAT -7.3%). Sell-off triggered by Broadcom Q3 guidance miss and US orders to halt tool shipments to Hua Hong (China's second-largest chipmaker). ASML Q2 2026 guidance €8.4-9.0B unchanged."
+    },
+    {
+      "date": "2026-06-07",
+      "type": "industry",
+      "title": "TSMC to Skip ASML High-NA EUV Until 2029 — Creates Near-Term Revenue Mix Uncertainty for ASML",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/tsmc-says-asml-latest-chipmaking-095255944.html",
+      "source": "Yahoo Finance",
+      "content": "TSMC (ASML's largest customer) will delay High-NA EUV deployment until 2029, as units cost upwards of €350M each. Intel remains the primary High-NA EUV early adopter for 18A/14A. Near-term ASML High-NA unit volume will be limited; existing EUV tools (€150-200M/unit) continue to drive revenue. ASML 2026 full-year guidance €36-40B maintained."
     }
   ],
   "AMAT": [
@@ -1409,6 +1473,14 @@
       "url": "https://www.fxleaders.com/news/2026/06/05/micron-mu-stock-hits-1089-ath-in-2026-800-rally-on-ai-hbm-demand/",
       "source": "FX Leaders",
       "content": "Micron stock hit an all-time high of $1,089 before pulling back to ~$996. UBS raised MU target to $1,625 (from $535); 39 of 44 analyst ratings are Buy/Strong Buy. Q3 FY2026 earnings scheduled June 24; consensus expects $34.8B revenue (+45% QoQ) and $19.82 EPS. Entire 2026 HBM4 production sold out under long-term binding contracts. Micron is a top supplier for Nvidia Vera Rubin platform."
+    },
+    {
+      "date": "2026-06-08",
+      "type": "news",
+      "title": "Micron HBM Sold Out Through 2026; HBM4 Volume Shipments Begin for NVIDIA Vera Rubin; Earnings June 24",
+      "url": "https://www.techtimes.com/articles/318017/20260608/micron-stock-climbs-hbm-sells-out-june-24-earnings-decides-ai-memory-trade.htm",
+      "source": "TechTimes / Investing.com",
+      "content": "Micron has begun volume shipment of HBM4 36GB 12H for NVIDIA's Vera Rubin platform (>2.8TB/s bandwidth, 20%+ better power efficiency than HBM3E). HBM supply fully sold out through 2026 with pricing locked in. MU trades near ATH ~,046 (up ~70% YTD). Q3 FY2026 earnings due June 24; consensus 3.5B revenue — bull case validates AI memory supercycle."
     }
   ],
   "SNDK": [
@@ -2359,6 +2431,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/coreweave-long-term-ai-deals-091238303.html",
       "source": "Yahoo Finance",
       "content": "CoreWeave invested in AI networking startup Tensormesh, expanding its infrastructure stack. Reiterated full-year 2026 revenue outlook of $12-13B. Meta contract (~$21B through December 2032) and Anthropic multi-year deal provide strong revenue visibility. CEO Mike Intrator confirmed CoreWeave has reached 'hyperscale' with 3.5+ GW of contracted power. Russell 3000 Index inclusion begins June 27, 2026."
+    },
+    {
+      "date": "2026-06-01",
+      "type": "announcement",
+      "title": "CoreWeave First AI Cloud to Deploy NVIDIA Vera Rubin NVL72; Completes Industry-First Rack-Scale Bring-Up",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/coreweave-completes-industry-first-bring-120000422.html",
+      "source": "Yahoo Finance / CoreWeave",
+      "content": "CoreWeave became the first AI cloud provider to complete bring-up and validation of NVIDIA Vera Rubin NVL72 rack-scale AI architecture on CoreWeave Cloud. Milestone positions CRWV to offer next-gen Vera Rubin compute commercially ahead of rivals. CRWV Q1 2026 revenue .1B (+112% YoY), backlog 9.4B, 0B+ new customer commitments in Q1."
     }
   ],
   "CEG": [
@@ -2745,6 +2825,14 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1009001/000119312526139305/d852335dex993.htm",
       "source": "Cameco SEC Filing / 6-K",
       "content": "Cameco and Orano Canada reached an agreement to acquire TEPCO's 5% participating interest in the Cigar Lake Joint Venture, increasing Cameco's ownership stake to 57.418%. Cigar Lake is one of the world's highest-grade uranium mines. The deal consolidates supply ownership among Western producers as AI data center nuclear demand drives a long-term uranium demand upcycle."
+    },
+    {
+      "date": "2026-06-03",
+      "type": "industry",
+      "title": "Urenco USA Plans Multi-Billion-Dollar Enrichment Expansion (+2.1M SWU by 2032); Uranium Stocks Rally",
+      "url": "https://www.gurufocus.com/news/8898314/cameco-ccj-stock-soars-on-urencos-expansion-announcement",
+      "source": "GuruFocus",
+      "content": "Cameco (CCJ) and Energy Fuels surged on June 3 after Urenco USA announced a multi-billion-dollar expansion adding 2.1 million SWU of enrichment capacity at its New Mexico facility, expected online 2032. Strengthens global nuclear fuel supply chain for reactor builds driven by AI data center electricity demand. Cameco also signed .6B India uranium supply deal in 2026 H1."
     }
   ],
   "SMH": [
@@ -3021,6 +3109,14 @@
       "url": "https://247wallst.com/investing/2026/06/04/virgin-galactic-surges-14-rocket-lab-gains-6-as-spacex-ipo-roadshow-fuels-the-space-trade/",
       "source": "24/7 Wall St.",
       "content": "Rocket Lab climbed 6% to ~$122 on June 4 as SpaceX's IPO roadshow ignited space sector sentiment. SpaceX plans to raise ~$75B at $135/share (~$1.75T valuation), with potential June 12 debut under ticker SPCX. Analysts warn of sell-the-news reversal post-IPO. RKLB has risen 350% over the past year; Q1 2026 revenue $200M (+64% YoY); backlog $2.2B."
+    },
+    {
+      "date": "2026-06-06",
+      "type": "research",
+      "title": "Stifel Raises Rocket Lab Price Target to 32 from 10; Maintains Buy Rating on Q2 Pipeline and Neutron Progress",
+      "url": "https://seekingalpha.com/article/4911545-rocket-lab-upgraded-to-buy-a-new-era-of-growth",
+      "source": "Stifel Nicolaus / Seeking Alpha",
+      "content": "Stifel Nicolaus analyst Erik Rasmussen raised Rocket Lab (RKLB) price target to 32 from 10, maintaining Buy. Thesis: Q2 2026 revenue guided 25-240M (+16% QoQ), Neutron medium-lift rocket targeting H2 2026 first flight, .2B backlog. RKLB shares had declined ~14% over 5 days on SpaceX IPO roadshow competition fears despite strong fundamentals."
     }
   ],
   "HUBB": [
@@ -4385,6 +4481,14 @@
       "url": "https://www.sec.gov/Archives/edgar/data/0001122411/000095010326006339/dp245865_6k.htm",
       "source": "SEC Filing / ASE Technology",
       "content": "ASE Q1 2026: Net revenues NT$112.4B (+29.7% YoY, +2.5% QoQ), net income NT$14.1B, EPS NT$3.24/ADS $0.205. CoWoS and advanced packaging capacity expansions driven by NVDA Blackwell and AI chip demand from hyperscalers."
+    },
+    {
+      "date": "2026-05-20",
+      "type": "announcement",
+      "title": "ASE Technology Launches Largest-Ever Global Expansion: 6 New Fabs Worldwide in 2026; CPO Mass Production This Year",
+      "url": "https://www.trendforce.com/news/2026/04/20/news-semiconductor-packaging-and-testing-capacity-race-intensifies-as-ase-samsung-and-amkor-announced-new-moves/",
+      "source": "TrendForce",
+      "content": "ASE Technology launched its largest-ever fab construction program with six new facilities breaking ground worldwide in 2026, adding 3,000 technical recruits. Co-packaged optics (CPO) enters mass production this year for AI data center networking. Q1 2026 revenue NT12.4B +29.7% YoY driven by AI CoWoS/SoIC advanced packaging demand. Capacity race intensifies with Samsung and Amkor."
     }
   ],
   "AMKR": [
@@ -4427,6 +4531,14 @@
       "url": "https://ca.finance.yahoo.com/quote/AMKR/",
       "source": "Yahoo Finance",
       "content": "AMKR Q1 2026: Revenue $1.69B (+5% YoY), advanced packaging (2.5D/3D) for AI chips growing. Company expanding capacity for AI accelerator packaging alongside ASE. Market cap ~$80B."
+    },
+    {
+      "date": "2026-05-22",
+      "type": "announcement",
+      "title": "Amkor Expands Peoria Arizona Campus +67 Acres; B Facility for AI Advanced Packaging Targets 2028 Production",
+      "url": "https://ir.amkor.com/press-releases",
+      "source": "Amkor Technology IR",
+      "content": "Amkor Technology is expanding its Peoria, Arizona advanced packaging campus with an additional 67-acre parcel as part of a planned B facility expected to complete in 2027 with production ramp 2028. Targets AI chip 2.5D/3D CoWoS packaging demand from NVIDIA, AMD, and Apple on Intel 18A. Q1 2026 revenue .68B +27.5% YoY; Q2 guide .80B."
     }
   ],
   "TER": [
@@ -4585,6 +4697,14 @@
       "url": "https://www.businesswire.com/news/home/20260528198039/en/Salesforce-Announces-Quarterly-Dividend",
       "source": "BusinessWire / Salesforce",
       "content": "Salesforce declared a quarterly cash dividend of $0.44/share, ex-date June 11, 2026, payable July 2. Agentforce AI agent platform has surpassed $1B annual recurring revenue; largest deal signed with CVS Health. Q2 FY2027 guidance $11.27-11.35B (+8-9% YoY). CRM Q1 FY2027 actual: revenue $11.13B (+13%), non-GAAP EPS $3.88."
+    },
+    {
+      "date": "2026-06-06",
+      "type": "announcement",
+      "title": "Salesforce Named Official Tournament Supporter of FIFA World Cup 2026; Agentforce Powers Fan Engagement",
+      "url": "https://www.salesforce.com/news/press-releases/",
+      "source": "Salesforce Newsroom",
+      "content": "Salesforce announced partnership as Official Tournament Supporter of the FIFA World Cup 2026 (North America & Europe), deploying Agentforce AI agents for fan engagement, ticketing, and sponsorship management — a major enterprise AI showcase. Agentforce has surpassed B annual recurring revenue. Q1 FY2027 results (reported May 27): revenue 1.1B (+13% incl. Informatica), EPS .88 +50%."
     }
   ]
 }
