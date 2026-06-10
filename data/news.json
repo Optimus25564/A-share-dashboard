@@ -1579,7 +1579,7 @@
     }
   ],
   "_meta": {
-    "last_updated": "2026-06-09",
+    "last_updated": "2026-06-10",
     "schema": "{ code: [{ date, type, title, content, source, url, tags }] }",
     "types": [
       "news",
@@ -2466,6 +2466,22 @@
       "url": "https://caifuhao.eastmoney.com/news/20251106095851967310290",
       "source": "东方财富",
       "content": "北美 AI 数据中心新增电力需求 GW 级别，本地变压器/开关柜产能严重不足，中国头部厂商（思源/平高/金盘等）拿下千亿级设备替换订单窗口。"
+    },
+    {
+      "date": "2026-05-11",
+      "type": "news",
+      "title": "2025年报业绩说明会：1-4月海外订单同增60%+ 北美变压器6亿+开关3亿双线突破 在手北美订单约16亿元 ✨",
+      "url": "http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002028&id=12310579",
+      "source": "新浪财经",
+      "content": "思源电气召开2025年年报网上业绩说明会。核心增量数据：2026年1-4月海外订单同比增长60%+，其中北美新签变压器订单6亿元、开关（GIS）订单3亿元，公司正式突破毛利率更高的北美开关市场；叠加2025年底在手订单，当前北美在手订单约16亿元。常州思源东芝二期工厂近期投产，全面达产后具备400+台高压变压器年产能。"
+    },
+    {
+      "date": "2026-05-07",
+      "type": "announcement",
+      "title": "回购进展公告：股份回购计划实施中",
+      "url": "https://finance.sina.com.cn/stock/bxjj/2026-05-06/doc-inhwycsa8286854.shtml",
+      "source": "新浪财经",
+      "content": "思源电气披露股份回购进展，公司通过集中竞价方式实施股票回购计划，回购资金来源为自有资金，回购股份将用于员工持股计划或股权激励。"
     }
   ],
   "002335": [
