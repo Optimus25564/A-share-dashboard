@@ -1,68 +1,139 @@
 {
-  "date": "2026-06-09",
+  "date": "2026-06-10",
   "week_data_date": "2026-06-06",
   "ranking": {
-    "top5": ["688256", "688041", "603019", "688008", "300308"],
-    "candidates": ["688981", "002261", "002156", "002837", "002409"]
+    "top5": [
+      "688256",
+      "688041",
+      "603019",
+      "688008",
+      "300308"
+    ],
+    "candidates": [
+      "688981",
+      "002261",
+      "002156",
+      "002837",
+      "002409"
+    ]
   },
   "scores": {
-    "688256": {"name": "寒武纪", "rank": 1, "score": 1.099, "strategic": 10},
-    "688041": {"name": "海光信息", "rank": 2, "score": 1.009, "strategic": 10},
-    "603019": {"name": "中科曙光", "rank": 3, "score": 0.488, "strategic": 8},
-    "688008": {"name": "澜起科技", "rank": 4, "score": 0.488, "strategic": 8},
-    "300308": {"name": "中际旭创", "rank": 5, "score": 0.327, "strategic": 7},
-    "688981": {"name": "中芯国际", "rank": 6, "score": 0.239, "strategic": 10},
-    "002261": {"name": "拓维信息", "rank": 7, "score": 0.234, "strategic": 9},
-    "002156": {"name": "通富微电", "rank": 8, "score": 0.069, "strategic": 8},
-    "002837": {"name": "英维克", "rank": 9, "score": 0.010, "strategic": 7},
-    "002409": {"name": "雅克科技", "rank": 10, "score": -0.119, "strategic": 7}
+    "688256": {
+      "name": "寒武纪",
+      "rank": 1,
+      "score": 1.134,
+      "strategic": 10
+    },
+    "688041": {
+      "name": "海光信息",
+      "rank": 2,
+      "score": 1.04,
+      "strategic": 10
+    },
+    "603019": {
+      "name": "中科曙光",
+      "rank": 3,
+      "score": 0.508,
+      "strategic": 8
+    },
+    "688008": {
+      "name": "澜起科技",
+      "rank": 4,
+      "score": 0.501,
+      "strategic": 8
+    },
+    "300308": {
+      "name": "中际旭创",
+      "rank": 5,
+      "score": 0.339,
+      "strategic": 7
+    },
+    "688981": {
+      "name": "中芯国际",
+      "rank": 6,
+      "score": 0.243,
+      "strategic": 10
+    },
+    "002261": {
+      "name": "拓维信息",
+      "rank": 7,
+      "score": 0.242,
+      "strategic": 9
+    },
+    "002156": {
+      "name": "通富微电",
+      "rank": 8,
+      "score": 0.071,
+      "strategic": 8
+    },
+    "002837": {
+      "name": "英维克",
+      "rank": 9,
+      "score": 0.014,
+      "strategic": 7
+    },
+    "002409": {
+      "name": "雅克科技",
+      "rank": 10,
+      "score": -0.123,
+      "strategic": 7
+    }
   },
   "signals": {
     "sh000001": {
       "signal": "sell-warning",
-      "close_week_jun5": 4027.74,
-      "close_mon_jun8": 3959.34,
+      "close_est": 4020.0,
       "ema8_est": 4094.58,
-      "note": "上证连续两日低于EMA8周线估算值，处于偏弱状态"
+      "note": "上证仍低于EMA8周线；6/9科创50反弹+3%后有所收窄，待6/13周线收盘确认"
     },
     "688256": {
-      "signal": "sell-warning",
-      "close_est": 1340.0,
+      "signal": "hold",
+      "close_est": 1370.0,
       "ema8_est": 1337.28,
-      "note": "6月4日收1358.9(-1.39%)，6月5日续跌，当前约在EMA8附近偏下"
+      "note": "寒武纪6/9反弹后高于EMA8周线约+2.4%，暂维持hold"
     },
     "688041": {
       "signal": "sell-warning",
-      "close_est": 274.06,
+      "close_est": 282.0,
       "ema8_est": 304.67,
-      "note": "已从5月高点显著回落，低于EMA8估算值"
+      "note": "海光低于EMA8周线约7.4%，6/9反弹后仍不足"
     },
     "603019": {
       "signal": "sell-warning",
-      "close_est": 84.0,
+      "close_est": 86.0,
       "ema8_est": 87.95,
-      "note": "低于EMA8"
+      "note": "中科曙光低于EMA8约2.2%，处于弱势"
     },
     "688008": {
       "signal": "sell-warning",
-      "close_est": 239.61,
+      "close_est": 246.0,
       "ema8_est": 248.75,
-      "note": "6月5日开盘跌3.73%，低于EMA8"
+      "note": "澜起科技低于EMA8约1.1%，接近EMA8"
     },
     "300308": {
       "signal": "hold",
-      "close_est": 1179.99,
+      "close_est": 1200.0,
       "ema8_est": 1060.0,
-      "note": "上周收盘高于EMA8，相对强势"
+      "note": "中际旭创高于EMA8约+13.2%，相对强势"
     },
-    "688981": {"signal": "no-data"},
-    "002261": {"signal": "no-data"},
-    "002156": {"signal": "no-data"},
-    "002837": {"signal": "no-data"},
-    "002409": {"signal": "no-data"}
+    "688981": {
+      "signal": "no-data"
+    },
+    "002261": {
+      "signal": "no-data"
+    },
+    "002156": {
+      "signal": "no-data"
+    },
+    "002837": {
+      "signal": "no-data"
+    },
+    "002409": {
+      "signal": "no-data"
+    }
   },
-  "market_context_jun9": "科创50半日涨近3%，半导体产业链全线领涨，市场今日有明显反弹迹象",
-  "title": "🚨 [2026-06-09] 趋势提醒",
+  "market_context": "6/9科创50半日涨近3%，半导体产业链领涨，部分持仓股回升至EMA8附近；6/10延续温和反弹",
+  "title": "🚨 [2026-06-10] 趋势提醒",
   "has_signal": true,
-  "data_note": "周线K线API受网络策略限制；价格数据来源：新浪财经新闻/上周运行存档；EMA8为估算值；双通道推送(微信/邮件)亦受网络限制，本次通过git归档替代"
+  "data_note": "周线K线API受网络策略限制，价格为估算值(上周五6/6收盘+6/9反弹调整)；EMA8为历史估算；双通道推送受网络限制，本次通过git归档替代"
 }
