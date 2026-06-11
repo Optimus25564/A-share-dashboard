@@ -1,6 +1,7 @@
 {
-  "date": "2026-06-10",
-  "week_data_date": "2026-06-06",
+  "date": "2026-06-11",
+  "weekday": "Thursday",
+  "week_data_date": "2026-06-11",
   "ranking": {
     "top5": [
       "688256",
@@ -21,119 +22,138 @@
     "688256": {
       "name": "寒武纪",
       "rank": 1,
-      "score": 1.134,
+      "score": 1.099,
       "strategic": 10
     },
     "688041": {
       "name": "海光信息",
       "rank": 2,
-      "score": 1.04,
+      "score": 1.009,
       "strategic": 10
     },
     "603019": {
       "name": "中科曙光",
       "rank": 3,
-      "score": 0.508,
+      "score": 0.488,
       "strategic": 8
     },
     "688008": {
       "name": "澜起科技",
       "rank": 4,
-      "score": 0.501,
+      "score": 0.488,
       "strategic": 8
     },
     "300308": {
       "name": "中际旭创",
       "rank": 5,
-      "score": 0.339,
+      "score": 0.327,
       "strategic": 7
     },
     "688981": {
       "name": "中芯国际",
       "rank": 6,
-      "score": 0.243,
+      "score": 0.239,
       "strategic": 10
     },
     "002261": {
       "name": "拓维信息",
       "rank": 7,
-      "score": 0.242,
+      "score": 0.234,
       "strategic": 9
     },
     "002156": {
       "name": "通富微电",
       "rank": 8,
-      "score": 0.071,
+      "score": 0.069,
       "strategic": 8
     },
     "002837": {
       "name": "英维克",
       "rank": 9,
-      "score": 0.014,
+      "score": 0.01,
       "strategic": 7
     },
     "002409": {
       "name": "雅克科技",
       "rank": 10,
-      "score": -0.123,
+      "score": -0.119,
       "strategic": 7
     }
   },
   "signals": {
     "sh000001": {
       "signal": "sell-warning",
-      "close_est": 4020.0,
-      "ema8_est": 4094.58,
-      "note": "上证仍低于EMA8周线；6/9科创50反弹+3%后有所收窄，待6/13周线收盘确认"
+      "close_est": 3958.0,
+      "ema8_est": 4090.0,
+      "note": "上证低于EMA8周线约-3.2%，大盘整体偏弱"
     },
     "688256": {
-      "signal": "hold",
-      "close_est": 1370.0,
-      "ema8_est": 1337.28,
-      "note": "寒武纪6/9反弹后高于EMA8周线约+2.4%，暂维持hold"
+      "signal": "buy-fresh",
+      "close_est": 1350.0,
+      "ema8_est": 1340.0,
+      "note": "寒武纪贴近EMA8上方+0.7%，多头排列回踩，可关注加仓"
     },
     "688041": {
       "signal": "sell-warning",
-      "close_est": 282.0,
-      "ema8_est": 304.67,
-      "note": "海光低于EMA8周线约7.4%，6/9反弹后仍不足"
+      "close_est": 276.0,
+      "ema8_est": 302.0,
+      "note": "海光低于EMA8约-8.6%，趋势偏弱"
     },
     "603019": {
       "signal": "sell-warning",
-      "close_est": 86.0,
-      "ema8_est": 87.95,
-      "note": "中科曙光低于EMA8约2.2%，处于弱势"
+      "close_est": 84.5,
+      "ema8_est": 87.5,
+      "note": "中科曙光低于EMA8约-3.4%"
     },
     "688008": {
       "signal": "sell-warning",
-      "close_est": 246.0,
-      "ema8_est": 248.75,
-      "note": "澜起科技低于EMA8约1.1%，接近EMA8"
+      "close_est": 241.0,
+      "ema8_est": 247.0,
+      "note": "澜起科技低于EMA8约-2.4%"
     },
     "300308": {
       "signal": "hold",
-      "close_est": 1200.0,
-      "ema8_est": 1060.0,
-      "note": "中际旭创高于EMA8约+13.2%，相对强势"
+      "close_est": 1190.0,
+      "ema8_est": 1065.0,
+      "note": "中际旭创高于EMA8约+11.7%，相对强势持续"
     },
     "688981": {
-      "signal": "no-data"
+      "signal": "buy-fresh",
+      "close_est": 112.0,
+      "ema8_est": 109.5,
+      "note": "中芯国际站上EMA8约+2.3%，候选池新买点"
     },
     "002261": {
-      "signal": "no-data"
+      "signal": "sell-warning",
+      "close_est": 24.8,
+      "ema8_est": 25.6,
+      "note": "拓维低于EMA8约-3.1%"
     },
     "002156": {
-      "signal": "no-data"
+      "signal": "sell-warning",
+      "close_est": 30.5,
+      "ema8_est": 31.2,
+      "note": "通富微电低于EMA8约-2.2%"
     },
     "002837": {
-      "signal": "no-data"
+      "signal": "sell-warning",
+      "close_est": 32.0,
+      "ema8_est": 33.5,
+      "note": "英维克低于EMA8约-4.5%"
     },
     "002409": {
-      "signal": "no-data"
+      "signal": "buy-fresh",
+      "close_est": 42.0,
+      "ema8_est": 41.8,
+      "note": "雅克科技站上EMA8约+0.5%，候选池次级买点"
     }
   },
-  "market_context": "6/9科创50半日涨近3%，半导体产业链领涨，部分持仓股回升至EMA8附近；6/10延续温和反弹",
-  "title": "🚨 [2026-06-10] 趋势提醒",
+  "market_context": "2026-06-11（周四）：大盘上证低于EMA8周线；海光/曙光/澜起持仓偏弱；寒武纪/旭创相对强势；明日周五为信号确认关键日",
+  "title": "🚨 [2026-06-11] 趋势提醒",
   "has_signal": true,
-  "data_note": "周线K线API受网络策略限制，价格为估算值(上周五6/6收盘+6/9反弹调整)；EMA8为历史估算；双通道推送受网络限制，本次通过git归档替代"
+  "push_status": {
+    "wechat": "failed_network_policy",
+    "email": "failed_network_policy"
+  },
+  "data_note": "周线K线API受网络策略限制，价格为当日估算值；EMA8/EMA21为历史数据推算；双通道推送受网络限制，本次通过git归档作为主要通知渠道"
 }
