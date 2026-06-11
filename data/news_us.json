@@ -369,6 +369,14 @@
       "url": "https://www.thestreet.com/investing/stocks/jpmorgan-raises-broadcom-avgo-stock-price-target",
       "source": "TheStreet",
       "content": "Following Q2 earnings, JPMorgan lifted Broadcom price target maintaining Overweight. Jefferies, DA Davidson, and TD Cowen also reaffirmed Buy. Consensus: 24 Buy, 4 Hold among 28 analysts."
+    },
+    {
+      "date": "2026-06-09",
+      "type": "announcement",
+      "title": "Broadcom, Apollo, Blackstone Launch $35B AI Infrastructure Platform; AVGO Falls 1.75% on Geopolitical Tensions",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/spill-broadcom-avgo-other-ai-214117164.html",
+      "source": "Yahoo Finance / The Street",
+      "content": "Broadcom joined Apollo and Blackstone to launch a $35B AI infrastructure platform on June 9; AVGO stock fell 1.75% underperforming the market on renewed geopolitical tensions. Q3 AI semiconductor revenue guidance $16B (+200% YoY); FY2027 AI semiconductor revenue target >$100B."
     }
   ],
   "AMD": [
@@ -1149,6 +1157,14 @@
       "url": "https://www.gurufocus.com/news/8900265/tsm-expects-over-30-revenue-growth-by-2026-driven-by-ai-demand",
       "source": "GuruFocus",
       "content": "TSMC reaffirmed 30%+ revenue growth in 2026 driven by AI semiconductor demand. Senior VP noted 'energy efficiency is the area customers most want improvement in.'"
+    },
+    {
+      "date": "2026-06-10",
+      "type": "announcement",
+      "title": "TSMC May 2026 Revenue Record NT$416.98B (+30.1% YoY) — AI Chip Demand Drives New Monthly High",
+      "url": "https://pr.tsmc.com/english/news/3320",
+      "source": "TSMC Investor Relations",
+      "content": "TSMC reported May 2026 consolidated net revenue of NT$416.98B (+1.5% MoM, +30.1% YoY), a new monthly record (≈USD $13.25B). Jan-May YTD NT$1,961.80B (+30.0%). Q2 2026 guidance $39-40.2B on track; Q2 earnings scheduled July 16."
     }
   ],
   "ASML": [
@@ -1427,6 +1443,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/261947123-market-movers-anet-20260604",
       "source": "TradingKey / KLA IR",
       "content": "KLA Corporation fell 6.15% on June 5 alongside semiconductor equipment peers in a China WFE export restriction-driven selloff (AMAT -7.3%, LRCX -7.5%). Separately, KLA's 10-for-1 stock split becomes effective June 11 after market close, with shares trading split-adjusted from June 12 open. Post-split dividend will be $0.23/share (+21% vs. pre-split $2.30 on a per-share basis)."
+    },
+    {
+      "date": "2026-06-10",
+      "type": "announcement",
+      "title": "KLA +8.73% on June 10 Ahead of 10-for-1 Stock Split Effective June 11; Cantor Raises Price Target",
+      "url": "https://www.tradingkey.com/news/market-movers/261958818-market-movers-klac-20260610",
+      "source": "TradingKey / Cantor Fitzgerald",
+      "content": "KLA Corp (KLAC) rose 8.73% on June 10 ahead of the 10-for-1 forward stock split effective after Nasdaq close June 11 (trading on split-adjusted basis begins June 12); Cantor Fitzgerald raised KLAC price target in the session on improved semiconductor capex outlook."
     }
   ],
   "ONTO": [
@@ -1689,6 +1713,14 @@
       "url": "https://www.investing.com/analysis/microns-soldout-hbm-supply-makes-the-bull-case-hard-to-dismiss-200681391",
       "source": "Investing.com",
       "content": "All 2026 MU HBM supply sold out. FQ3 2026 guidance: $33.5B revenue and $19.15 non-GAAP EPS (~10x YoY). UBS holds street-high target at $1,625. June 24 earnings are the key event for the AI memory supercycle thesis."
+    },
+    {
+      "date": "2026-06-09",
+      "type": "announcement",
+      "title": "Micron Appoints Dr. Alexis Black Björlin to Board of Directors — Former NVIDIA SVP DGX Cloud",
+      "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000110465926071845/tm2617112d1_ex99-1.htm",
+      "source": "Micron Technology / SEC EDGAR",
+      "content": "Micron Technology appointed Dr. Alexis Black Björlin to its board of directors; former Chief Strategy Officer at General Catalyst and ex-SVP/GM DGX Cloud at NVIDIA; previously held senior roles at Meta, Broadcom and Intel. Brings deep AI infrastructure and cloud semiconductor expertise."
     }
   ],
   "SNDK": [
@@ -2481,6 +2513,14 @@
       "url": "https://krebsonsecurity.com/2026/06/hackers-used-metas-ai-support-bot-to-seize-instagram-accounts/",
       "source": "Krebs on Security",
       "content": "Meta confirmed a bug in its AI-powered Instagram support chatbot's password-reset flow allowed attackers to hijack 20,000+ accounts from April 17 to early June 2026. Issue patched June 5; impacted accounts being secured."
+    },
+    {
+      "date": "2026-06-10",
+      "type": "announcement",
+      "title": "Meta Partners with Reliance Industries to Build First AI Data Center in India",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-10/meta-partners-with-reliance-on-its-first-ai-data-center-in-india",
+      "source": "Bloomberg",
+      "content": "Meta Platforms announced partnership with Reliance Industries to build its first AI data center in India, adding to global AI infrastructure investment wave. Complements META's custom MTIA AI chip deployments and India consumer market expansion strategy."
     }
   ],
   "AAPL": [
@@ -3085,6 +3125,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/261942093-market-movers-etn-20260602",
       "source": "TradingKey",
       "content": "Following strong Q1 2026 earnings, Eaton issued Q2 EPS guidance of $2.29-$2.39. Electrical Americas segment posted large YoY data center revenue growth, aided by the March 2026 Boyd Thermal liquid cooling acquisition."
+    },
+    {
+      "date": "2026-06-10",
+      "type": "research",
+      "title": "BNP Paribas Names Eaton Top AI Data Center Cooling Winner; Boyd Thermal Acquisition Adds Liquid Cooling Capability",
+      "url": "https://seekingalpha.com/news/4602325-vertiv-eaton-seen-as-top-ai-data-center-cooling-winners-bnp-paribas",
+      "source": "BNP Paribas / Seeking Alpha",
+      "content": "BNP Paribas June 10 report names Eaton as best positioned AI data center power/cooling stock alongside Vertiv; ETN's Boyd Thermal ($9.5B) acquisition completed March 2026, adding liquid cooling to broadest electrical portfolio in sector."
     }
   ],
   "GEV": [
@@ -3339,6 +3387,14 @@
       "url": "https://stockanalysis.com/etf/smh/",
       "source": "StockAnalysis",
       "content": "SMH fell on June 5 as major AI semiconductor holdings sold off: AVGO down 13-15% post-earnings (Hock Tan didn't raise $100B AI target), QCOM -9.52% (NVIDIA PC chip threat), LRCX -7.5% and AMAT -7.3% (China WFE export fears), KLAC -6.15%, NVDA -2-3% (Senate hearing + insider selling). Underlying AI demand remains robust: hyperscaler combined CapEx $725B in 2026, up 77% YoY."
+    },
+    {
+      "date": "2026-06-09",
+      "type": "news",
+      "title": "Semiconductor Shorts Pile On as Winning Trade Reverses — SMH Off >10% From Record High; YTD Still +64%",
+      "url": "https://www.cnbc.com/2026/06/09/semiconductor-shorts-pile-on-as-winning-trade-reverses.html",
+      "source": "CNBC",
+      "content": "VanEck Semiconductor ETF (SMH) fell >10% from its recent record high by June 9 as short interest built; YTD return +64.11%. Semiconductor short sellers emerged as sector-wide selling driven by geopolitical and valuation concerns; SOXX YTD +86.78%."
     }
   ],
   "XLU": [
@@ -3999,6 +4055,22 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/lam-research-faces-match-act-180349019.html",
       "source": "Yahoo Finance",
       "content": "The MATCH Act advancing in Congress would impose the most significant chip equipment export controls since October 2022, targeting Chinese fabs. Lam faces ongoing questions around 43% China revenue exposure."
+    },
+    {
+      "date": "2026-06-09",
+      "type": "research",
+      "title": "UBS Raises Lam Research Price Target to $375; Advanced Packaging Revenue Growth >50% in 2026",
+      "url": "https://www.tradingkey.com/news/market-movers/261955932-market-movers-lrcx-20260609",
+      "source": "UBS / TradingKey",
+      "content": "UBS raised LRCX price target to $375 from $310 on June 9; stock +3.99% on day. Lam Research expects advanced packaging revenue to exceed 50% growth in CY2026, driven by CoWoS and HBM stacking demand for AI chips."
+    },
+    {
+      "date": "2026-06-10",
+      "type": "research",
+      "title": "Cantor Fitzgerald Raises Lam Research Price Target to $425 Overweight; Semiconductor Equipment Billings Rising",
+      "url": "https://www.tradingkey.com/news/market-movers/261958817-market-movers-lrcx-20260610",
+      "source": "Cantor Fitzgerald / TradingKey",
+      "content": "Cantor Fitzgerald raised LRCX price target to $425 maintaining Overweight on June 10; stock +3.51%. Global semiconductor equipment billings up notably in Q1 2026; Lam positioned as critical AI and leading-edge chip manufacturing supplier."
     }
   ],
   "CDNS": [
@@ -4163,6 +4235,14 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/06/53092310/oracles-cloud-could-accelerate-to-94-growth-in-q4-as-capacity-ramps",
       "source": "Benzinga",
       "content": "Analysts focused on OCI capacity ramp and $553B RPO backlog. Cloud revenue could reach ~$10B, +49% YoY. AI Fusion Agentic Applications are key investor focus ahead of June 10 report."
+    },
+    {
+      "date": "2026-06-10",
+      "type": "announcement",
+      "title": "Oracle Q4 FY2026 Record Results: Revenue $19.2B +21% YoY; IaaS +93%; RPO $638B; Stock -7% AH on $40B AI Raise Plan",
+      "url": "https://www.prnewswire.com/news-releases/oracle-announces-record-q4-and-fy-2026-results-driven-by-cloud-infrastructure--cloud-applications-302797201.html",
+      "source": "Oracle / PR Newswire",
+      "content": "Oracle Q4 FY2026 (June 10): revenue $19.2B (+21% YoY); cloud revenue $9.9B (+47%): IaaS +93%, SaaS +10%; GAAP EPS $1.45; RPO $638B (+363% YoY, +$85B QoQ). FY2026 total revenue $67.4B (+17%). Q1 FY2027 guidance: revenue +27-29%, cloud +57-63%. Stock -7% AH on $40B AI fundraising plan."
     }
   ],
   "PLTR": [
@@ -4673,6 +4753,14 @@
       "url": "https://www.asteralabs.com/news/astera-labs-expands-taiwan-operations-to-accelerate-global-ai-infrastructure-buildout/",
       "source": "Astera Labs",
       "content": "Astera Labs expanded its Taiwan operations and Cloud-Scale Interop Lab, deepening collaboration with AMD, Arm, Intel, NVIDIA and ODMs including GIGABYTE, Inventec, Quanta, and Wiwynn to validate rack-scale AI systems."
+    },
+    {
+      "date": "2026-06-07",
+      "type": "news",
+      "title": "Astera Labs Named Key Anthropic IPO Beneficiary; Scorpio X-Series 320-Lane AI Fabric Switch Shipping to Cloud Customers",
+      "url": "https://www.fool.com/investing/2026/06/07/anthropic-ipo-make-ai-stocks-winner-cls-crdo-alab/",
+      "source": "The Motley Fool",
+      "content": "Motley Fool names ALAB as key Anthropic IPO beneficiary; Scorpio X-Series 320-Lane AI Fabric Switch now shipping to leading cloud customers; Q1 2026 record revenue $308.4M (+93% YoY). Anthropic's 10GW compute commitments (AWS+Google) drive structural ALAB demand."
     }
   ],
   "CIEN": [
