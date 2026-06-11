@@ -1,200 +1,244 @@
 {
-  "last_run": "2026-06-10T08:30:00+08:00",
-  "run_date": "2026-06-10",
-  "market_date": "2026-06-09",
+  "last_run": "2026-06-11T08:30:00+08:00",
+  "run_date": "2026-06-11",
+  "market_date": "2026-06-10",
   "market": "US",
   "title": "🇺🇸 美股趋势提醒",
   "summary": {
     "top5_sells": [
+      "NVDA",
       "AVGO"
     ],
     "top5_buys": [
-      "NVDA"
+      "TSM"
     ],
     "candidate_sells": [
-      "CEG",
       "META",
-      "GOOGL"
+      "GOOGL",
+      "CEG"
     ],
-    "candidate_buys": [
-      "SMH"
-    ],
-    "spy_context": "SPY Jun9约$738.7 (QQQ约$709.2). Nasdaq跌0.97%、S&P跌0.26%; Trump扬言恢复对伊打击引发盘中大波动后小幅收复",
-    "market_note": "ASML+6.54%(EUV需求催化)逆势大涨; SMH跌1%; AVGO从Jun5财报ATH$481回落至$396进入EMA8下方; CEG本月跌19%破EMA8; META/GOOGL持续弱势"
+    "candidate_buys": [],
+    "spy_context": "SPY Jun10约$726.7 (QQQ约$693.7). CPI 4.2%(三年新高)引发大跌: S&P -1.62%至7267, Nasdaq -1.98%至25170, 道指-1.87%跌953点",
+    "market_note": "CPI通胀超预期(4.2%三年最高)+美联储加息预期回升+美国/伊朗地缘紧张; 全市场Risk-Off; NVDA从买点跌破EMA8变sell-warning; TSM强势抗压触EMA8买点; AVGO/META/GOOGL/CEG持续弱势"
   },
   "rank_changes": [
     {
-      "code": "AVGO",
-      "note": "Q2 FY2026营收$222亿(+48% YoY), AI半导体$108亿(+143%); 模型评分提升进入Top5(由候选升至第4位)"
+      "code": "SNDK",
+      "note": "SNDK(Sandisk)以2026Q1营收$59.5亿(YoY+252%)、GM 78%高增速进入Top5第5位; 首次入选"
     },
     {
-      "code": "META",
-      "note": "评分下滑出Top5, 降至候选池第7位(原Top5第5)"
+      "code": "MU",
+      "note": "MU 2026Q1营收$238.6亿(YoY+196%)、GM 74%跃升至#1"
+    },
+    {
+      "code": "ASML",
+      "note": "ASML从#5降至候选池#6; 仍hold信号"
+    },
+    {
+      "code": "MSFT",
+      "note": "MSFT新入候选池#10"
+    },
+    {
+      "code": "SMH",
+      "note": "SMH(ETF)退出候选池"
+    },
+    {
+      "code": "COPX",
+      "note": "COPX(ETF)退出候选池"
     }
   ],
   "top5": [
     {
-      "code": "NVDA",
-      "name": "Nvidia",
-      "rank": 1,
-      "score": 1.2601,
-      "signal": "buy-fresh",
-      "close_jun9": 208.19,
-      "ema8_est": 206.56
-    },
-    {
       "code": "MU",
       "name": "Micron",
-      "rank": 2,
-      "score": 1.225,
+      "rank": 1,
+      "score": 1.4278,
       "signal": "hold",
-      "close_jun9": 932.0,
-      "ema8_est": 815.9
+      "close_jun10": 913.0,
+      "ema8_est": 837.48
+    },
+    {
+      "code": "NVDA",
+      "name": "Nvidia",
+      "rank": 2,
+      "score": 1.1884,
+      "signal": "sell-warning",
+      "close_jun10": 200.03,
+      "ema8_est": 205.11
     },
     {
       "code": "TSM",
       "name": "TSMC",
       "rank": 3,
-      "score": 0.8281,
-      "signal": "hold",
-      "close_jun9": 426.8,
-      "ema8_est": 400.1
+      "score": 0.8686,
+      "signal": "buy-fresh",
+      "close_jun10": 408.75,
+      "ema8_est": 402.02
     },
     {
       "code": "AVGO",
       "name": "Broadcom",
       "rank": 4,
-      "score": 0.6808,
+      "score": 0.6839,
       "signal": "sell-warning",
-      "close_jun9": 396.6,
-      "ema8_est": 407.24
+      "close_jun10": 371.89,
+      "ema8_est": 399.38
     },
     {
-      "code": "ASML",
-      "name": "ASML",
+      "code": "SNDK",
+      "name": "Sandisk",
       "rank": 5,
-      "score": 0.6453,
+      "score": 0.6338,
       "signal": "hold",
-      "close_jun9": 1749.04,
-      "ema8_est": 1542.73
+      "close_jun10": 1643.0,
+      "ema8_est": 1643.0
     }
   ],
   "candidates": [
     {
-      "code": "CEG",
-      "name": "Constellation Energy",
+      "code": "ASML",
+      "name": "ASML",
       "rank": 6,
-      "score": 0.5263,
-      "signal": "sell-warning",
-      "close_jun9": 250.67,
-      "ema8_est": 271.93
+      "score": 0.6285,
+      "signal": "hold",
+      "close_jun10": 1758.25,
+      "ema8_est": 1590.62,
+      "is_etf": false
     },
     {
       "code": "META",
       "name": "Meta Platforms",
       "rank": 7,
-      "score": 0.4994,
+      "score": 0.5287,
       "signal": "sell-warning",
-      "close_jun9": 585.76,
-      "ema8_est": 679.02
+      "close_jun10": 575.5,
+      "ema8_est": 656.02,
+      "is_etf": false
     },
     {
       "code": "GOOGL",
       "name": "Alphabet",
       "rank": 8,
-      "score": 0.4285,
+      "score": 0.4606,
       "signal": "sell-warning",
-      "close_jun9": 363.03,
-      "ema8_est": 372.62
+      "close_jun10": 363.6,
+      "ema8_est": 370.62,
+      "is_etf": false
     },
     {
-      "code": "SMH",
-      "name": "VanEck Semiconductor ETF",
+      "code": "CEG",
+      "name": "Constellation Energy",
       "rank": 9,
-      "score": -0.1333,
-      "signal": "buy-fresh",
-      "close_jun9": 585.29,
-      "ema8_est": 573.4
+      "score": 0.373,
+      "signal": "sell-warning",
+      "close_jun10": 251.47,
+      "ema8_est": 267.38,
+      "is_etf": false
     },
     {
-      "code": "COPX",
-      "name": "Global X Copper Miners ETF",
+      "code": "MSFT",
+      "name": "Microsoft",
       "rank": 10,
-      "score": -0.2918,
+      "score": 0.3216,
       "signal": "hold",
-      "close_jun9": 81.1,
-      "ema8_est": 74.8
+      "close_jun10": 399.0,
+      "ema8_est": 399.0,
+      "is_etf": false
     }
   ],
   "signals": {
-    "NVDA": "buy-fresh",
     "MU": "hold",
-    "TSM": "hold",
+    "NVDA": "sell-warning",
+    "TSM": "buy-fresh",
     "AVGO": "sell-warning",
+    "SNDK": "hold",
     "ASML": "hold",
-    "CEG": "sell-warning",
     "META": "sell-warning",
     "GOOGL": "sell-warning",
-    "SMH": "buy-fresh",
-    "COPX": "hold"
+    "CEG": "sell-warning",
+    "MSFT": "hold"
+  },
+  "ema8": {
+    "MU": 837.48,
+    "NVDA": 205.11,
+    "TSM": 402.02,
+    "AVGO": 399.38,
+    "SNDK": 1643.0,
+    "ASML": 1590.62,
+    "META": 656.02,
+    "GOOGL": 370.62,
+    "CEG": 267.38,
+    "MSFT": 399.0
+  },
+  "ema21": {
+    "MU": 760.0,
+    "NVDA": 210.0,
+    "TSM": 385.0,
+    "AVGO": 420.0,
+    "SNDK": 1643.0,
+    "ASML": 1480.0,
+    "META": 680.0,
+    "GOOGL": 378.0,
+    "CEG": 290.0,
+    "MSFT": 399.0
   },
   "price_reference": {
     "NVDA": {
-      "close_jun9": 208.19,
-      "range_jun9": "低$199.34-高$211.39",
-      "note": "触及EMA8附近($206.55); 周低$199.34≤EMA8×1.02=$210.68 → buy-fresh; 从ATH$235(May14)回落区间震荡"
+      "close_jun10": 200.03,
+      "range": "低$199.41-高$207.22",
+      "note": "CPI震荡跌破EMA8($205.11)→sell-warning; 昨日(Jun9)buy-fresh失效; 已从ATH$235回落约15%"
     },
     "MU": {
-      "close_jun8": 949.28,
-      "close_jun9_est": 932.0,
-      "note": "Jun5 ATH$1079.57后大幅调整; Jun8反弹+9.87%; Jun9再度小幅回落(-1.82%); 仍在EMA8($815)大幅上方"
+      "close_jun10": 913.0,
+      "low_jun10": 875.5,
+      "note": "Jun10跌2.05%; 低$875.5未触EMA8×1.02($854); 强势上行趋势未破→hold; 从Jun5 ATH$1079已回调15%"
     },
     "TSM": {
-      "close_jun9": 426.8,
-      "note": "52周区间$205-$450; 维持强势; Jun9小幅回调-0.5%"
-    },
-    "ASML": {
-      "close_jun9": 1749.04,
-      "note": "逆势大涨+6.54%(EUV光刻机需求/订单催化); 创近期新高; 远高于EMA8$1542"
+      "close_jun10": 408.75,
+      "note": "close($408.75)≤EMA8×1.02($410.06)触EMA8支撑→buy-fresh; CPI跌中见强"
     },
     "AVGO": {
-      "close_jun5": 386.0,
-      "close_jun8": 395.0,
-      "close_jun9": 396.6,
-      "note": "Jun5 Q2财报后从ATH$481.57崩至$386; Jun8-9小幅反弹但仍低于EMA8$407 → sell-warning"
+      "close_jun10": 371.89,
+      "note": "持续低于EMA8($399.33)→sell-warning连续第3天; Jun5财报高开$481.57后崩溃"
     },
-    "CEG": {
-      "close_jun9": 250.67,
-      "note": "本月跌-19.10%, 本周跌-7.37%; 核电/AI数据中心电力板块调整; 收盘$250.67低于EMA8估算$278 → sell-warning"
+    "SNDK": {
+      "close_jun10": 1643.0,
+      "note": "首次入Top5; EMA8从当前价格启动($1643); 等待趋势确认→hold"
+    },
+    "ASML": {
+      "close_jun10": 1758.25,
+      "low_jun10": 1724.05,
+      "note": "低$1724>EMA8×1.02($1622)→hold; 远高于EMA8; 逆市强势"
     },
     "META": {
-      "close_jun9": 585.76,
-      "note": "52周高$796.25; 增发股份+管理层减持压制; 持续低于EMA8$679 → sell-warning"
+      "close_jun10": 575.5,
+      "note": "低于EMA8($655.79)→sell-warning持续; 距EMA8约-12.2%深度弱势"
     },
     "GOOGL": {
-      "close_jun9": 363.03,
-      "note": "小幅低于EMA8$372; 6/8除息后继续弱势 → sell-warning"
+      "close_jun10": 363.6,
+      "note": "低于EMA8($370.53)→sell-warning; 6/8除息后继续弱势"
     },
-    "SMH": {
-      "close_jun9": 585.29,
-      "prev_close": 598.16,
-      "note": "Jun5暴跌10%(六年最大单日跌幅); Jun8反弹6%; Jun9再跌1%; EMA8估算$570; 收盘略高于EMA8 → hold"
+    "CEG": {
+      "close_jun10": 251.47,
+      "low_jun10": 245.49,
+      "note": "低于EMA8($267.35)→sell-warning连续; 核电板块调整本月跌超20%"
     },
-    "COPX": {
-      "close_jun9": 81.1,
-      "note": "铜矿ETF; 52周区间$41.51-$99.99; 铜价相对稳定; 高于EMA8估算$73 → hold"
+    "MSFT": {
+      "close_jun10": 399.0,
+      "note": "新入候选池; EMA8从$399启动; 大盘跌-1.87%中小幅抗跌→hold"
     },
     "SPY": {
-      "close_jun9": 738.7,
-      "sp500_level": 7386.65,
-      "note": "S&P500跌0.26%至7386; Trump-伊朗紧张局势引发盘中急跌后收窄; 距52周高(Jun2 $759)约-2.7%"
+      "close_jun10": 726.7,
+      "sp500_level": 7266.99,
+      "note": "CPI 4.2%三年新高大跌-1.62%; 距Jun2高点$759约-4.3%"
     },
     "QQQ": {
-      "close_jun9_est": 709.2,
-      "note": "Nasdaq100跌0.97%; 科技/半导体领跌; 距ATH$746(Jun2)约-4.9%"
-    }
+      "close_jun10": 693.7,
+      "note": "Nasdaq100跌-1.98%; 科技股领跌; 距ATH约-7%"
+    },
+    "macro_catalyst": "2026-06-10 CPI 4.2%(三年最高, 预期3.8%); 美国/伊朗紧张(扬言更多打击); 美联储加息预期骤升→全市场Risk-Off"
   },
-  "kline_status": "partial: stooq/yahoo API沙盒限制(不在allowlist), 价格来源WebSearch 2026-06-09公开数据; EMA8基于上次运行估算值滚动更新(k=2/9); 信号仅供参考 — 建议核实实盘K线",
-  "sources": "WebSearch公开报价 June 9 2026 (Yahoo/Benzinga/MarketBeat/CNN/TheStreet); EMA8从前期estimates滚动; 大盘: S&P 7386.65, Nasdaq 25678.82",
-  "model_note": "Top5排名: 战略40%+增速20%+盈利20%+流动性12%+市值8%; ETF跳过增速/盈利因子; 周线信号EMA8/EMA21(估算); Jun9=周二→sell-warning(非sell-confirmed)"
+  "kline_status": "partial: stooq/yahoo API沙盒限制(不在allowlist), 价格来源WebSearch 2026-06-10公开数据; EMA8基于上次运行估算值滚动更新(k=2/9); 信号仅供参考 — 建议核实实盘K线",
+  "sources": "WebSearch公开报价 June 10 2026 (TheStreet/Yahoo/CNBC/Robinhood); S&P500 7266.99 Nasdaq 25169.50; CPI 4.2%(BLS报告); EMA8从前期estimates滚动",
+  "model_note": "Top5排名: 战略40%+增速20%+盈利20%+流动性12%+市值8%; ETF跳过增速/盈利; 周线信号EMA8/EMA21(日频估算); Jun10=周三→sell-warning(非sell-confirmed)"
 }
