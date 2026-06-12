@@ -1,244 +1,446 @@
 {
-  "last_run": "2026-06-11T08:30:00+08:00",
+  "last_run": "2026-06-12T08:30:00+08:00",
   "run_date": "2026-06-11",
-  "market_date": "2026-06-10",
   "market": "US",
-  "title": "🇺🇸 美股趋势提醒",
-  "summary": {
-    "top5_sells": [
-      "NVDA",
-      "AVGO"
-    ],
-    "top5_buys": [
-      "TSM"
-    ],
-    "candidate_sells": [
-      "META",
-      "GOOGL",
-      "CEG"
-    ],
-    "candidate_buys": [],
-    "spy_context": "SPY Jun10约$726.7 (QQQ约$693.7). CPI 4.2%(三年新高)引发大跌: S&P -1.62%至7267, Nasdaq -1.98%至25170, 道指-1.87%跌953点",
-    "market_note": "CPI通胀超预期(4.2%三年最高)+美联储加息预期回升+美国/伊朗地缘紧张; 全市场Risk-Off; NVDA从买点跌破EMA8变sell-warning; TSM强势抗压触EMA8买点; AVGO/META/GOOGL/CEG持续弱势"
+  "is_friday_bar": false,
+  "market_context": {
+    "SPY": {
+      "close": 734.54,
+      "ath": 760.4,
+      "ath_date": "2026-06-02",
+      "pct_off_ath": -3.4
+    },
+    "QQQ": {
+      "close": 717.12,
+      "52w_high": 748.65,
+      "52w_low": 523.65,
+      "pct_off_52w_high": -4.2
+    },
+    "note": "市场从6月初ATH小幅回调; ASML创历史新高; INTC单日+12%受益于晶圆代工突破; 半导体指数从6/5 AVGO引发的大跌中恢复",
+    "catalyst": "Google下单310万颗TPU交Intel 18A节点代工(2028交付); Nvidia评估18A工艺; BofA将INTC双升评级至Buy目标价$135。AVGO 6/5财报后持续下跌，AI芯片指引$160亿不及预期$172亿。"
   },
-  "rank_changes": [
-    {
-      "code": "SNDK",
-      "note": "SNDK(Sandisk)以2026Q1营收$59.5亿(YoY+252%)、GM 78%高增速进入Top5第5位; 首次入选"
-    },
-    {
-      "code": "MU",
-      "note": "MU 2026Q1营收$238.6亿(YoY+196%)、GM 74%跃升至#1"
-    },
-    {
-      "code": "ASML",
-      "note": "ASML从#5降至候选池#6; 仍hold信号"
-    },
-    {
-      "code": "MSFT",
-      "note": "MSFT新入候选池#10"
-    },
-    {
-      "code": "SMH",
-      "note": "SMH(ETF)退出候选池"
-    },
-    {
-      "code": "COPX",
-      "note": "COPX(ETF)退出候选池"
-    }
-  ],
   "top5": [
-    {
-      "code": "MU",
-      "name": "Micron",
-      "rank": 1,
-      "score": 1.4278,
-      "signal": "hold",
-      "close_jun10": 913.0,
-      "ema8_est": 837.48
-    },
     {
       "code": "NVDA",
       "name": "Nvidia",
+      "rank": 1,
+      "score": 1.1915
+    },
+    {
+      "code": "MU",
+      "name": "Micron",
       "rank": 2,
-      "score": 1.1884,
-      "signal": "sell-warning",
-      "close_jun10": 200.03,
-      "ema8_est": 205.11
+      "score": 1.0206
     },
     {
       "code": "TSM",
       "name": "TSMC",
       "rank": 3,
-      "score": 0.8686,
-      "signal": "buy-fresh",
-      "close_jun10": 408.75,
-      "ema8_est": 402.02
+      "score": 0.8984
     },
-    {
-      "code": "AVGO",
-      "name": "Broadcom",
-      "rank": 4,
-      "score": 0.6839,
-      "signal": "sell-warning",
-      "close_jun10": 371.89,
-      "ema8_est": 399.38
-    },
-    {
-      "code": "SNDK",
-      "name": "Sandisk",
-      "rank": 5,
-      "score": 0.6338,
-      "signal": "hold",
-      "close_jun10": 1643.0,
-      "ema8_est": 1643.0
-    }
-  ],
-  "candidates": [
     {
       "code": "ASML",
       "name": "ASML",
-      "rank": 6,
-      "score": 0.6285,
-      "signal": "hold",
-      "close_jun10": 1758.25,
-      "ema8_est": 1590.62,
-      "is_etf": false
+      "rank": 4,
+      "score": 0.824
     },
     {
       "code": "META",
       "name": "Meta Platforms",
-      "rank": 7,
-      "score": 0.5287,
-      "signal": "sell-warning",
-      "close_jun10": 575.5,
-      "ema8_est": 656.02,
-      "is_etf": false
+      "rank": 5,
+      "score": 0.6712
+    }
+  ],
+  "candidates": [
+    {
+      "code": "AVGO",
+      "name": "Broadcom",
+      "rank": 6,
+      "score": 0.5604
     },
     {
       "code": "GOOGL",
       "name": "Alphabet",
-      "rank": 8,
-      "score": 0.4606,
-      "signal": "sell-warning",
-      "close_jun10": 363.6,
-      "ema8_est": 370.62,
-      "is_etf": false
-    },
-    {
-      "code": "CEG",
-      "name": "Constellation Energy",
-      "rank": 9,
-      "score": 0.373,
-      "signal": "sell-warning",
-      "close_jun10": 251.47,
-      "ema8_est": 267.38,
-      "is_etf": false
+      "rank": 7,
+      "score": 0.474
     },
     {
       "code": "MSFT",
       "name": "Microsoft",
+      "rank": 8,
+      "score": 0.3387
+    },
+    {
+      "code": "AMD",
+      "name": "AMD",
+      "rank": 9,
+      "score": 0.2997
+    },
+    {
+      "code": "INTC",
+      "name": "Intel",
       "rank": 10,
-      "score": 0.3216,
-      "signal": "hold",
-      "close_jun10": 399.0,
-      "ema8_est": 399.0,
-      "is_etf": false
+      "score": 0.1487
     }
   ],
   "signals": {
-    "MU": "hold",
     "NVDA": "sell-warning",
-    "TSM": "buy-fresh",
-    "AVGO": "sell-warning",
-    "SNDK": "hold",
+    "MU": "hold",
+    "TSM": "hold",
     "ASML": "hold",
     "META": "sell-warning",
+    "AVGO": "sell-warning",
     "GOOGL": "sell-warning",
-    "CEG": "sell-warning",
-    "MSFT": "hold"
+    "MSFT": "sell-warning",
+    "AMD": "sell-warning",
+    "INTC": "buy-fresh"
   },
-  "ema8": {
-    "MU": 837.48,
-    "NVDA": 205.11,
-    "TSM": 402.02,
-    "AVGO": 399.38,
-    "SNDK": 1643.0,
-    "ASML": 1590.62,
-    "META": 656.02,
-    "GOOGL": 370.62,
-    "CEG": 267.38,
-    "MSFT": 399.0
-  },
-  "ema21": {
-    "MU": 760.0,
-    "NVDA": 210.0,
-    "TSM": 385.0,
-    "AVGO": 420.0,
-    "SNDK": 1643.0,
-    "ASML": 1480.0,
-    "META": 680.0,
-    "GOOGL": 378.0,
-    "CEG": 290.0,
-    "MSFT": 399.0
-  },
-  "price_reference": {
+  "signal_detail": {
     "NVDA": {
-      "close_jun10": 200.03,
-      "range": "低$199.41-高$207.22",
-      "note": "CPI震荡跌破EMA8($205.11)→sell-warning; 昨日(Jun9)buy-fresh失效; 已从ATH$235回落约15%"
+      "close": 205.0,
+      "ema8": 206.32,
+      "ema21": 183.18,
+      "weekly_low": 201.61,
+      "close_vs_ema8_pct": -0.64,
+      "buy_zone": 210.45,
+      "ema8_vs_ema21_pct": 12.63
     },
     "MU": {
-      "close_jun10": 913.0,
-      "low_jun10": 875.5,
-      "note": "Jun10跌2.05%; 低$875.5未触EMA8×1.02($854); 强势上行趋势未破→hold; 从Jun5 ATH$1079已回调15%"
+      "close": 912.0,
+      "ema8": 697.33,
+      "ema21": 446.55,
+      "weekly_low": 895.5,
+      "close_vs_ema8_pct": 30.78,
+      "buy_zone": 711.28,
+      "ema8_vs_ema21_pct": 56.16
     },
     "TSM": {
-      "close_jun10": 408.75,
-      "note": "close($408.75)≤EMA8×1.02($410.06)触EMA8支撑→buy-fresh; CPI跌中见强"
-    },
-    "AVGO": {
-      "close_jun10": 371.89,
-      "note": "持续低于EMA8($399.33)→sell-warning连续第3天; Jun5财报高开$481.57后崩溃"
-    },
-    "SNDK": {
-      "close_jun10": 1643.0,
-      "note": "首次入Top5; EMA8从当前价格启动($1643); 等待趋势确认→hold"
+      "close": 421.0,
+      "ema8": 380.56,
+      "ema21": 292.82,
+      "weekly_low": 407.7,
+      "close_vs_ema8_pct": 10.63,
+      "buy_zone": 388.17,
+      "ema8_vs_ema21_pct": 29.96
     },
     "ASML": {
-      "close_jun10": 1758.25,
-      "low_jun10": 1724.05,
-      "note": "低$1724>EMA8×1.02($1622)→hold; 远高于EMA8; 逆市强势"
+      "close": 1805.0,
+      "ema8": 1534.33,
+      "ema21": 1164.09,
+      "weekly_low": 1735.0,
+      "close_vs_ema8_pct": 17.64,
+      "buy_zone": 1565.02,
+      "ema8_vs_ema21_pct": 31.81
     },
     "META": {
-      "close_jun10": 575.5,
-      "note": "低于EMA8($655.79)→sell-warning持续; 距EMA8约-12.2%深度弱势"
+      "close": 571.0,
+      "ema8": 671.33,
+      "ema21": 597.36,
+      "weekly_low": 557.01,
+      "close_vs_ema8_pct": -14.94,
+      "buy_zone": 684.76,
+      "ema8_vs_ema21_pct": 12.38
+    },
+    "AVGO": {
+      "close": 385.0,
+      "ema8": 409.89,
+      "ema21": 335.0,
+      "weekly_low": 367.0,
+      "close_vs_ema8_pct": -6.07,
+      "buy_zone": 418.09,
+      "ema8_vs_ema21_pct": 22.36
     },
     "GOOGL": {
-      "close_jun10": 363.6,
-      "note": "低于EMA8($370.53)→sell-warning; 6/8除息后继续弱势"
-    },
-    "CEG": {
-      "close_jun10": 251.47,
-      "low_jun10": 245.49,
-      "note": "低于EMA8($267.35)→sell-warning连续; 核电板块调整本月跌超20%"
+      "close": 347.31,
+      "ema8": 353.29,
+      "ema21": 304.3,
+      "weekly_low": 343.0,
+      "close_vs_ema8_pct": -1.69,
+      "buy_zone": 360.36,
+      "ema8_vs_ema21_pct": 16.1
     },
     "MSFT": {
-      "close_jun10": 399.0,
-      "note": "新入候选池; EMA8从$399启动; 大盘跌-1.87%中小幅抗跌→hold"
+      "close": 391.0,
+      "ema8": 409.67,
+      "ema21": 381.0,
+      "weekly_low": 384.0,
+      "close_vs_ema8_pct": -4.56,
+      "buy_zone": 417.86,
+      "ema8_vs_ema21_pct": 7.52
     },
-    "SPY": {
-      "close_jun10": 726.7,
-      "sp500_level": 7266.99,
-      "note": "CPI 4.2%三年新高大跌-1.62%; 距Jun2高点$759约-4.3%"
+    "AMD": {
+      "close": 487.0,
+      "ema8": 502.56,
+      "ema21": 426.09,
+      "weekly_low": 452.4,
+      "close_vs_ema8_pct": -3.1,
+      "buy_zone": 512.61,
+      "ema8_vs_ema21_pct": 17.95
     },
-    "QQQ": {
-      "close_jun10": 693.7,
-      "note": "Nasdaq100跌-1.98%; 科技股领跌; 距ATH约-7%"
-    },
-    "macro_catalyst": "2026-06-10 CPI 4.2%(三年最高, 预期3.8%); 美国/伊朗紧张(扬言更多打击); 美联储加息预期骤升→全市场Risk-Off"
+    "INTC": {
+      "close": 94.75,
+      "ema8": 81.72,
+      "ema21": 63.16,
+      "weekly_low": 83.0,
+      "close_vs_ema8_pct": 15.94,
+      "buy_zone": 83.35,
+      "ema8_vs_ema21_pct": 29.39
+    }
   },
-  "kline_status": "partial: stooq/yahoo API沙盒限制(不在allowlist), 价格来源WebSearch 2026-06-10公开数据; EMA8基于上次运行估算值滚动更新(k=2/9); 信号仅供参考 — 建议核实实盘K线",
-  "sources": "WebSearch公开报价 June 10 2026 (TheStreet/Yahoo/CNBC/Robinhood); S&P500 7266.99 Nasdaq 25169.50; CPI 4.2%(BLS报告); EMA8从前期estimates滚动",
-  "model_note": "Top5排名: 战略40%+增速20%+盈利20%+流动性12%+市值8%; ETF跳过增速/盈利; 周线信号EMA8/EMA21(日频估算); Jun10=周三→sell-warning(非sell-confirmed)"
+  "kline_status": "partial: stooq/yahoo blocked(网络策略); EMA由2026-06-05底仓基础+6/11收盘价(WebSearch)更新推算",
+  "sources": "WebSearch: StocksToTrade/247WallSt/GFValue/GuruFocus/Robinhood/Investing.com (2026-06-11~06-12)",
+  "score_details": {
+    "NVDA": {
+      "score": 1.1915,
+      "strategic": 10,
+      "yoy_pct": 45.1,
+      "avg_gm": 71.5,
+      "avg_nm_clipped": 55.2
+    },
+    "AVGO": {
+      "score": 0.5604,
+      "strategic": 9,
+      "yoy_pct": 20.8,
+      "avg_gm": 69.4,
+      "avg_nm_clipped": 37.2
+    },
+    "AMD": {
+      "score": 0.2997,
+      "strategic": 8,
+      "yoy_pct": 38.0,
+      "avg_gm": 49.8,
+      "avg_nm_clipped": 12.5
+    },
+    "INTC": {
+      "score": 0.1487,
+      "strategic": 9,
+      "yoy_pct": 8.1,
+      "avg_gm": 35.6,
+      "avg_nm_clipped": -6.1
+    },
+    "QCOM": {
+      "score": -0.6971,
+      "strategic": 6,
+      "yoy_pct": 11.6,
+      "avg_gm": 55.1,
+      "avg_nm_clipped": 21.7
+    },
+    "MRVL": {
+      "score": -0.2859,
+      "strategic": 7,
+      "yoy_pct": 8.9,
+      "avg_gm": 51.2,
+      "avg_nm_clipped": 28.1
+    },
+    "APP": {
+      "score": 0.0982,
+      "strategic": 6,
+      "yoy_pct": 43.1,
+      "avg_gm": 88.0,
+      "avg_nm_clipped": 57.8
+    },
+    "TSM": {
+      "score": 0.8984,
+      "strategic": 10,
+      "yoy_pct": 32.1,
+      "avg_gm": 61.1,
+      "avg_nm_clipped": 46.0
+    },
+    "ASML": {
+      "score": 0.824,
+      "strategic": 10,
+      "yoy_pct": 39.1,
+      "avg_gm": 52.9,
+      "avg_nm_clipped": 29.9
+    },
+    "AMAT": {
+      "score": -0.1078,
+      "strategic": 8,
+      "yoy_pct": -1.3,
+      "avg_gm": 49.1,
+      "avg_nm_clipped": 28.6
+    },
+    "KLAC": {
+      "score": -0.0322,
+      "strategic": 8,
+      "yoy_pct": 7.8,
+      "avg_gm": 60.9,
+      "avg_nm_clipped": 33.5
+    },
+    "ONTO": {
+      "score": -0.5211,
+      "strategic": 7,
+      "yoy_pct": 0.0,
+      "avg_gm": 49.8,
+      "avg_nm_clipped": 13.2
+    },
+    "SNPS": {
+      "score": -0.0061,
+      "strategic": 7,
+      "yoy_pct": 50.6,
+      "avg_gm": 76.5,
+      "avg_nm_clipped": 10.6
+    },
+    "MU": {
+      "score": 1.0206,
+      "strategic": 9,
+      "yoy_pct": 69.4,
+      "avg_gm": 49.9,
+      "avg_nm_clipped": 32.9
+    },
+    "SNDK": {
+      "score": -0.0541,
+      "strategic": 6,
+      "yoy_pct": 78.7,
+      "avg_gm": 41.6,
+      "avg_nm_clipped": 12.0
+    },
+    "COHR": {
+      "score": -0.1461,
+      "strategic": 8,
+      "yoy_pct": 12.7,
+      "avg_gm": 36.4,
+      "avg_nm_clipped": 5.3
+    },
+    "LITE": {
+      "score": -0.0254,
+      "strategic": 7,
+      "yoy_pct": 55.8,
+      "avg_gm": 35.3,
+      "avg_nm_clipped": 12.9
+    },
+    "FN": {
+      "score": -0.537,
+      "strategic": 7,
+      "yoy_pct": 29.9,
+      "avg_gm": 12.0,
+      "avg_nm_clipped": 9.8
+    },
+    "MSFT": {
+      "score": 0.3387,
+      "strategic": 9,
+      "yoy_pct": 16.0,
+      "avg_gm": 68.4,
+      "avg_nm_clipped": 38.8
+    },
+    "GOOGL": {
+      "score": 0.474,
+      "strategic": 9,
+      "yoy_pct": 26.2,
+      "avg_gm": 60.2,
+      "avg_nm_clipped": 37.8
+    },
+    "AMZN": {
+      "score": 0.0394,
+      "strategic": 8,
+      "yoy_pct": 37.1,
+      "avg_gm": 50.7,
+      "avg_nm_clipped": 12.0
+    },
+    "META": {
+      "score": 0.6712,
+      "strategic": 9,
+      "yoy_pct": 41.6,
+      "avg_gm": 82.0,
+      "avg_nm_clipped": 33.8
+    },
+    "AAPL": {
+      "score": -0.4541,
+      "strategic": 6,
+      "yoy_pct": 50.8,
+      "avg_gm": 47.2,
+      "avg_nm_clipped": 26.6
+    },
+    "TSLA": {
+      "score": -0.6623,
+      "strategic": 6,
+      "yoy_pct": 28.8,
+      "avg_gm": 18.5,
+      "avg_nm_clipped": 3.6
+    },
+    "CRWV": {
+      "score": 0.0059,
+      "strategic": 7,
+      "yoy_pct": 60.2,
+      "avg_gm": 70.7,
+      "avg_nm_clipped": -24.1
+    },
+    "CEG": {
+      "score": -0.0755,
+      "strategic": 9,
+      "yoy_pct": -10.6,
+      "avg_gm": 42.7,
+      "avg_nm_clipped": 10.2
+    },
+    "VRT": {
+      "score": 0.1459,
+      "strategic": 8,
+      "yoy_pct": 41.2,
+      "avg_gm": 36.4,
+      "avg_nm_clipped": 13.1
+    },
+    "ETN": {
+      "score": -0.2576,
+      "strategic": 8,
+      "yoy_pct": 10.5,
+      "avg_gm": 37.2,
+      "avg_nm_clipped": 14.3
+    },
+    "GEV": {
+      "score": -0.324,
+      "strategic": 7,
+      "yoy_pct": 36.5,
+      "avg_gm": 19.6,
+      "avg_nm_clipped": 19.5
+    },
+    "CCJ": {
+      "score": -0.4503,
+      "strategic": 6,
+      "yoy_pct": 56.4,
+      "avg_gm": 29.9,
+      "avg_nm_clipped": 15.5
+    },
+    "SMH": {
+      "score": -0.2222,
+      "strategic": 8,
+      "yoy_pct": null,
+      "avg_gm": null,
+      "avg_nm_clipped": null
+    },
+    "XLU": {
+      "score": -0.6659,
+      "strategic": 7,
+      "yoy_pct": null,
+      "avg_gm": null,
+      "avg_nm_clipped": null
+    },
+    "COPX": {
+      "score": -0.4863,
+      "strategic": 7,
+      "yoy_pct": null,
+      "avg_gm": null,
+      "avg_nm_clipped": null
+    },
+    "XME": {
+      "score": -0.9833,
+      "strategic": 6,
+      "yoy_pct": null,
+      "avg_gm": null,
+      "avg_nm_clipped": null
+    },
+    "EWY": {
+      "score": -0.6902,
+      "strategic": 7,
+      "yoy_pct": null,
+      "avg_gm": null,
+      "avg_nm_clipped": null
+    },
+    "RKLB": {
+      "score": -0.2514,
+      "strategic": 7,
+      "yoy_pct": 50.0,
+      "avg_gm": 34.8,
+      "avg_nm_clipped": -24.7
+    }
+  }
 }
