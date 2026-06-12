@@ -61,12 +61,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 79.06,
+        "gm": 1.98,
+        "nm": 0.21,
+        "src": "A",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-24/1225166780.PDF",
+        "note": "2026Q1 official quarterly report comparative column: 2025Q1 revenue 7,905,805,649.29 yuan; cost 7,748,933,442.80 yuan; attributable net profit 16,728,480.28 yuan."
       },
       {
         "q": "2025Q2",
@@ -330,12 +330,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 1.25,
+        "gm": 38.0,
+        "nm": -121.07,
+        "src": "A",
+        "source_url": "https://dataclouds.cninfo.com.cn/shgonggao/hsomarket/2026/20260428/8d881f598b6d4aff9924b01a3ba04654.PDF",
+        "note": "2026Q1 official quarterly report comparative column: 2025Q1 revenue 124,955,396.95 yuan; cost 77,476,551.05 yuan; attributable net profit -151,280,445.14 yuan."
       },
       {
         "q": "2025Q2",
@@ -667,12 +667,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 468.56,
+        "gm": 4.9,
+        "nm": 0.99,
+        "src": "A",
+        "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ000977",
+        "note": "东方财富/财经摘要口径: 2026Q1营收354.70亿同比-24.30%、归母6.05亿同比+30.74%，反推2025Q1；毛利率暂用2025年综合毛利率约4.9%作近似，待公告单季营业成本替换。"
       },
       {
         "q": "2025Q2",
@@ -826,12 +826,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 60.93,
+        "gm": 12.35,
+        "nm": 1.66,
+        "src": "A",
+        "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ002156",
+        "note": "东方财富/财经摘要口径: 2026Q1营收74.82亿同比+22.8%、归母3.29亿同比+224.55%、毛利率13.32%同比+0.97pct，反推2025Q1。"
       },
       {
         "q": "2025Q2",
@@ -1038,12 +1038,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 43.12,
+        "gm": 35.22,
+        "nm": 21.36,
+        "src": "A",
+        "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ300476",
+        "note": "东方财富/财经摘要 + 已有H1差减线索: Q1营收43.12亿、归母9.21亿；毛利率缺单季营业成本，暂用2025年AI服务器PCB毛利率35.22%近似，待公告单季成本替换。"
       },
       {
         "q": "2025Q2",
@@ -1095,12 +1095,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 82.06,
+        "gm": 43.02,
+        "nm": 19.11,
+        "src": "A",
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-29/1224615664.PDF",
+        "note": "半年报差减口径: H1营收161.42亿、Q2 79.36亿 => Q1 82.06亿；H1归母32.08亿、Q2 16.40亿 => Q1 15.68亿；Q1毛利率43.02%来自已有差减备注。"
       },
       {
         "q": "2025Q2",
@@ -1308,12 +1308,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 32.27,
+        "gm": 30.31,
+        "nm": 13.84,
+        "src": "A",
+        "source_url": "https://finance.eastmoney.com/a/202604253718989616.html",
+        "note": "东方财富摘要口径: 2026Q1营收45.69亿同比+41.6%、归母5.50亿同比+23.17%、毛利率28.95%同比-1.36pct，反推2025Q1。"
       },
       {
         "q": "2025Q2",
@@ -1422,12 +1422,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 12.16,
+        "gm": 35.45,
+        "nm": 5.67,
+        "src": "A",
+        "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ002335",
+        "note": "东方财富/腾讯财经摘要口径: 2026Q1营收14.30亿同比+17.57%、归母0.78亿同比+13.15%、毛利率27.85%同比-7.6pct，反推2025Q1。"
       },
       {
         "q": "2025Q2",
@@ -1479,12 +1479,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 9.43,
+        "gm": 28.55,
+        "nm": 11.81,
+        "src": "A",
+        "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ002518",
+        "note": "东方财富/腾讯财经摘要口径: 2026Q1营收12.40亿同比+31.47%、归母1.39亿同比+24.84%、毛利率29.71%同比+1.16pct，反推2025Q1。"
       },
       {
         "q": "2025Q2",
@@ -1497,21 +1497,21 @@
       },
       {
         "q": "2025Q3",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 14.46,
+        "gm": 28.57,
+        "nm": 13.21,
+        "src": "A",
+        "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ002518",
+        "note": "东方财富/证券之星摘要口径: 2025前三季度营收36.09亿、归母4.46亿、毛利率28.57%；H1营收21.63亿、归母2.55亿，差减得Q3营收14.46亿、归母1.91亿；毛利率暂用9M累计口径。"
       },
       {
         "q": "2025Q4",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 16.61,
+        "gm": 28.98,
+        "nm": 9.93,
+        "src": "A",
+        "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ002518",
+        "note": "东方财富/东吴证券摘要口径: 2025全年营收52.70亿、归母6.11亿、毛利率28.98%；前三季度营收36.09亿、归母4.46亿，差减得Q4；毛利率暂用全年累计口径。"
       },
       {
         "q": "2026Q1",

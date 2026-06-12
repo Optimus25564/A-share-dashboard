@@ -579,7 +579,7 @@
     ],
     "q2_outlook": {
       "q": "2026Q2",
-      "rev_estimate": 270,
+      "rev_estimate": 27,
       "yoy_pct": null,
       "gm_estimate": null,
       "nm_estimate": null,
@@ -1391,7 +1391,7 @@
     "cat": "memory",
     "catLabel": "NAND",
     "intro": "Western Digital 2025 年分拆出来的 NAND 闪存独立公司, 与铠侠 (Kioxia) 合资生产.",
-    "strategic": 6,
+    "strategic": 7,
     "market_cap_billion": 2285,
     "avg_turnover_pct": 5.5,
     "quarters": [
@@ -2165,7 +2165,7 @@
     "cat": "hyperscaler",
     "catLabel": "硬件/Apple Intelligence",
     "intro": "Apple Intelligence 端侧 AI + 自研 M 系列芯片. AI 落地终端市场最大平台.",
-    "strategic": 6,
+    "strategic": 8,
     "market_cap_billion": 42910,
     "avg_turnover_pct": 0.6,
     "quarters": [

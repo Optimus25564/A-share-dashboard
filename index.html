@@ -576,7 +576,7 @@
     </div>
 
     <div style="margin-top:14px;padding:10px 14px;background:rgba(245,179,1,.05);border-left:3px solid var(--gold);border-radius:4px;font-size:11px;color:var(--muted);line-height:1.7">
-      📌 5 因子长期质量模型 = 主题护城河 22% / 增长动能 20% / 盈利质量 20% / 规模现金流 18% / 周期资金风险 20%。没有 forecast 时用历史季度增长加速度，不因缺 forecast 扣分；ETF 不参与量化排名。
+      📌 5 因子长期质量模型 = 主题护城河 22% / 增长动能 20% / 盈利质量 20% / 规模现金流 18% / 周期资金风险 20%。增长动能用收入同比增速 + 同比加速度；没有 forecast 不扣分；ETF 不参与量化排名。
     </div>
   </div>
 
@@ -1002,27 +1002,47 @@ function getForwardRevenueEstimate(c){
   const f = ((c && c.quarters) || []).find(q => q.src === "F" && Number.isFinite(q.rev));
   return f ? f.rev : null;
 }
+function revenueYoYSeries(qs){
+  const seq = [];
+  for (let i = 4; i < qs.length; i++) {
+    const prevYear = qs[i-4].rev;
+    seq.push(prevYear > 0 ? (qs[i].rev / prevYear - 1) * 100 : 0);
+  }
+  return seq;
+}
 function growthMomentumRaw(c){
   const qs = ((c && c.quarters) || []).filter(q => Number.isFinite(q.rev));
   if (qs.length < 5) return { raw: 0, label: "历史不足" };
-  const seq = [];
-  for (let i = 1; i < qs.length; i++) {
-    const prev = qs[i-1].rev;
-    seq.push(prev > 0 ? (qs[i].rev / prev - 1) * 100 : 0);
-  }
-  const early = (seq[0] + seq[1]) / 2;
-  const recent = (seq[seq.length-2] + seq[seq.length-1]) / 2;
-  const histAccel = recent - early;
+  const yoySeq = revenueYoYSeries(qs);
+  const latestYoY = yoySeq[yoySeq.length - 1];
+  const histAccel = yoySeq.length >= 2 ? latestYoY - yoySeq[yoySeq.length - 2] : null;
   const fwd = getForwardRevenueEstimate(c);
+  let fwdYoY = null;
+  let fwdAccel = null;
   if (Number.isFinite(fwd) && qs[qs.length-1].rev > 0) {
-    const fwdSeq = (fwd / qs[qs.length-1].rev - 1) * 100;
-    const fwdAccel = fwdSeq - recent;
-    return {
-      raw: 0.70 * histAccel + 0.30 * fwdAccel,
-      label: `历史加速 ${histAccel.toFixed(1)}ppt / 前瞻 ${fwdAccel.toFixed(1)}ppt`
-    };
+    const priorYear = qs[qs.length - 4] && qs[qs.length - 4].rev;
+    if (priorYear > 0) {
+      fwdYoY = (fwd / priorYear - 1) * 100;
+      fwdAccel = fwdYoY - latestYoY;
+    }
   }
-  return { raw: histAccel, label: `历史加速 ${histAccel.toFixed(1)}ppt / 无forecast不扣分` };
+  const parts = [`收入同比 ${latestYoY.toFixed(1)}%`];
+  if (Number.isFinite(histAccel)) parts.push(`同比加速 ${histAccel.toFixed(1)}ppt`);
+  else parts.push("同比加速 历史不足");
+  if (Number.isFinite(fwdYoY) && Number.isFinite(fwdAccel)) parts.push(`指引同比 ${fwdYoY.toFixed(1)}% / 指引加速 ${fwdAccel.toFixed(1)}ppt`);
+  else parts.push("无forecast不扣分");
+
+  let raw = 0;
+  if (Number.isFinite(histAccel) && Number.isFinite(fwdAccel)) raw = 0.70 * histAccel + 0.30 * fwdAccel;
+  else if (Number.isFinite(histAccel)) raw = histAccel;
+  else if (Number.isFinite(fwdAccel)) raw = fwdAccel;
+  return { raw: clamp(raw, -100, 100), label: parts.join(" / ") };
+}
+function latestRevenueYoY(c){
+  const qs = ((c && c.quarters) || []).filter(q => Number.isFinite(q.rev));
+  if (qs.length < 5) return 0;
+  const base = qs[qs.length - 5].rev;
+  return base > 0 ? (qs[qs.length - 1].rev / base - 1) * 100 : 0;
 }
 function clamp(n, lo, hi){ return Math.max(lo, Math.min(hi, n)); }
 function latestQuarter(c){ const qs = c && c.quarters; return qs && qs.length ? qs[qs.length-1] : null; }
@@ -1054,8 +1074,11 @@ function capexStressFromMetrics(qm){
   if (!qm) return 0;
   const ocf = qm.operating_cash_flow_billion;
   const capex = qm.capex_billion;
-  if (!Number.isFinite(ocf) || !Number.isFinite(capex) || ocf <= 0) return 0.3;
-  return clamp(capex / ocf, 0, 2);
+  if (!Number.isFinite(ocf) || !Number.isFinite(capex) || ocf <= 0) return 0.2;
+  const ratio = capex / ocf;
+  const fcfMargin = Number.isFinite(qm.fcf_margin_pct) ? qm.fcf_margin_pct : 0;
+  const stressFloor = fcfMargin >= 15 ? 0.80 : 0.50;
+  return clamp(ratio - stressFloor, 0, 1.5);
 }
 function computeHyperscalerFundingStress(dataset){
   if (!dataset) return 0;
@@ -1069,10 +1092,17 @@ function durabilityRaw(c){
   const qm = c.quality_metrics || {};
   const mc = c.market_cap_billion || 100;
   const fcf = Number.isFinite(qm.free_cash_flow_billion) ? qm.free_cash_flow_billion : 0;
-  const fcfMargin = Number.isFinite(qm.fcf_margin_pct) ? qm.fcf_margin_pct : 0;
+  const recentRev = ((c.quarters || []).slice(-4).reduce((s, q) => s + (Number.isFinite(q.rev) ? q.rev : 0), 0)) / 10;
+  const fcfMargin = recentRev > 0 ? (fcf / recentRev * 100) : (Number.isFinite(qm.fcf_margin_pct) ? qm.fcf_margin_pct : 0);
   const netCash = Number.isFinite(qm.net_cash_billion) ? qm.net_cash_billion : 0;
-  const netCashToMC = netCash / Math.max(mc / 10, 1);
+  const netCashToMC = netCash / Math.max(mc, 1);
   return Math.log(mc) + 0.08 * clamp(fcfMargin, -25, 35) + 0.18 * Math.log1p(Math.max(fcf, 0)) + 0.6 * clamp(netCashToMC, -0.4, 0.4);
+}
+function turnoverRiskScore(t){
+  if (!Number.isFinite(t) || t <= 0) return -0.3;
+  if (t < 1) return -Math.log(1 / t);
+  if (t > 10) return -Math.log(t / 10);
+  return 0;
 }
 function computeQuantWeights(){
   if (!companiesData) return null;  // 数据没加载时 fallback 到硬编码 r.w
@@ -1083,19 +1113,17 @@ function computeQuantWeights(){
       && c.quarters.every(q => q.rev !== null && q.gm !== null && q.nm !== null);
   });
   // 收集每只的原始因子值
-  const IDEAL_TURNOVER = 5;  // 健康活跃区间的中点 (%); <1% 流动性差, >10% 投机过热
+  // 换手只作为极端风险项: <1% 流动性差, >10% 投机过热; 1%-10% 不额外奖惩
   const raw = codes.map(code => {
     const c = companiesData[code];
     const qs = c.quarters;
-    const revLatest = qs[qs.length-1].rev;   // 2026Q1
-    const revYoYBase = qs[0].rev;             // 2025Q1 (同期)
-    const revYoY = revYoYBase > 0 ? (revLatest / revYoYBase - 1) * 100 : 0;  // 真 YoY
+    const revYoY = latestRevenueYoY(c);
     const gmLatest = qs[qs.length-1].gm;
     const nmLatest = qs[qs.length-1].nm;
     // NM clip 防极端亏损 (如龙芯 -84%) 拉爆 z-score 方差
     const nmClipped = Math.max(-30, Math.min(60, nmLatest));
     const t = c.avg_turnover_pct || 3;
-    const turnoverScore = -Math.abs(Math.log(t / IDEAL_TURNOVER));
+    const turnoverScore = turnoverRiskScore(t);
     const gmPrev = qs.length >= 2 ? qs[qs.length-2].gm : gmLatest;
     const nmPrev = qs.length >= 2 ? qs[qs.length-2].nm : nmLatest;
     const marginTrend = (gmLatest - gmPrev) * 0.6 + (nmLatest - nmPrev) * 0.4;
@@ -1134,7 +1162,7 @@ function computeQuantWeights(){
   const zTO = zscore(raw.map(r => r.turnoverScore));
   const zMOM = zscore(raw.map(r => r.momentum));
   const zDUR = zscore(raw.map(r => r.durability));
-  const zRISK = zscore(raw.map(r => -r.cyclePenalty + 0.20 * r.turnoverScore));
+  const zRISK = zscore(raw.map(r => -r.cyclePenalty + 0.10 * r.turnoverScore));
 
   // 盈利能力合成因子: GM (行业竞争力) 占 0.6 + NM (运营效率) 占 0.4
   const zProfit = raw.map((_, i) => 0.6 * zGM[i] + 0.4 * zNM[i]);
@@ -1171,7 +1199,7 @@ function computeQuantWeights(){
       weight: weights[i],
       score: composites[i],
       factors: {
-        growth: { val: `${r.revYoY.toFixed(1)}% / ${r.momentumLabel}`, z: (0.65 * zGrow[i] + 0.35 * zMOM[i]).toFixed(2), contrib: (W.growth * (0.65 * zGrow[i] + 0.35 * zMOM[i])).toFixed(2) },
+        growth: { val: r.momentumLabel, z: (0.65 * zGrow[i] + 0.35 * zMOM[i]).toFixed(2), contrib: (W.growth * (0.65 * zGrow[i] + 0.35 * zMOM[i])).toFixed(2) },
         profit: { val: `GM ${r.gm.toFixed(1)}% / NM ${r.nm.toFixed(1)}%`, z: zProfit[i].toFixed(2), contrib: (W.profit * zProfit[i]).toFixed(2) },
         durability: { val: `市值 ${Math.exp(r.logMC).toFixed(0)}亿`, z: zDUR[i].toFixed(2), contrib: (W.durability * zDUR[i]).toFixed(2) },
         risk: { val: `周期惩罚 ${r.cyclePenalty.toFixed(2)} / 换手 ${r.turnoverRaw.toFixed(1)}%`, z: zRISK[i].toFixed(2), contrib: (W.risk * zRISK[i]).toFixed(2) },
@@ -1330,8 +1358,9 @@ function renderPortfolioPie(){
     name: s.name,
     cat: s.cat,
     catLabel: s.catLabel,
+    score: _quantWeights[s.code]?.score ?? -Infinity,
     weight: _quantWeights[s.code]?.weight || 0
-  })).sort((a,b) => b.weight - a.weight);
+  })).sort((a,b) => (b.score - a.score) || (b.weight - a.weight));
   // 只剔除 EMA21 级别的核心趋势破坏；EMA8 破位只做观察/减仓提示
   const originalTop10 = rankedAll.slice(0, 10);
   const originalTop10Codes = new Set(originalTop10.map(s => s.code));
@@ -1390,11 +1419,11 @@ function renderPortfolioPie(){
     ) : "";
     const exHtml = excludedRanked.length ? (
       `<div style="margin-top:8px;color:#ff8a95">🔴 已移出核心仓（周线 close &lt; EMA21）：</div>` +
-      excludedRanked.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(255,90,106,.12);border:1px solid rgba(255,90,106,.4);border-radius:3px;color:#ff8a95;text-decoration:line-through">${s.name} ${s.weight.toFixed(1)}</span>`).join("")
+      excludedRanked.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(255,90,106,.12);border:1px solid rgba(255,90,106,.4);border-radius:3px;color:#ff8a95;text-decoration:line-through">${s.name} score ${s.score.toFixed(3)}</span>`).join("")
     ) : "";
     pool.innerHTML = rebalanceHtml +
       `<div style="margin-bottom:4px">📋 观察池（#11-15，核心/卫星仓破坏或基本面变坏时考虑替换）：</div>` +
-      next5.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(138,160,192,.1);border-radius:3px">${s.name} ${s.weight.toFixed(1)}</span>`).join("") +
+      next5.map((s, i) => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(138,160,192,.1);border-radius:3px">#${11+i} ${s.name} score ${s.score.toFixed(3)}</span>`).join("") +
       exHtml;
   }
 }
@@ -3157,7 +3186,6 @@ let _quantWeightsUSStatus = "";
 function computeQuantWeightsUS(){
   if (!companiesUS) return null;
   const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
-  const IDEAL_TURNOVER = 5;
   // 严格 5 季 (Q1 同期 → Q1, 真 YoY); ETF / 不足 5 季 / 含 null 字段自动跳过
   const valid = codes.filter(code => {
     const c = companiesUS[code];
@@ -3176,9 +3204,7 @@ function computeQuantWeightsUS(){
   const raw = valid.map(code => {
     const c = companiesUS[code];
     const qs = c.quarters;
-    const revLatest = qs[qs.length-1].rev;
-    const revYoYBase = qs[0].rev;
-    const revYoY = revYoYBase > 0 ? (revLatest / revYoYBase - 1) * 100 : 0;
+    const revYoY = latestRevenueYoY(c);
     const gmLatest = qs[qs.length-1].gm;
     const nmLatest = qs[qs.length-1].nm;
     const nmClipped = Math.max(-30, Math.min(60, nmLatest));
@@ -3200,7 +3226,7 @@ function computeQuantWeightsUS(){
       gm: gmLatest,
       nm: nmLatest,
       nmClipped,
-      turnoverScore: -Math.abs(Math.log(t / IDEAL_TURNOVER)),
+      turnoverScore: turnoverRiskScore(t),
       turnoverRaw: t,
       momentum: momentum.raw,
       momentumLabel: momentum.label,
@@ -3225,7 +3251,7 @@ function computeQuantWeightsUS(){
   const zMOM = zscore(raw.map(r => r.momentum));
   const zDUR = zscore(raw.map(r => r.durability));
   const zProfit = raw.map((_, i) => 0.6 * zGM[i] + 0.4 * zNM[i]);
-  const zRISK = zscore(raw.map(r => -r.cyclePenalty + 0.20 * r.turnoverScore));
+  const zRISK = zscore(raw.map(r => -r.cyclePenalty + 0.10 * r.turnoverScore));
 
   const W = { strategic: 0.22, growth: 0.20, profit: 0.20, durability: 0.18, risk: 0.20 };
   const composites = raw.map((r, i) =>
@@ -3244,7 +3270,7 @@ function computeQuantWeightsUS(){
       weight: weights[i],
       score: composites[i],
       factors: {
-        growth: { val: `${r.revYoY.toFixed(1)}% / ${r.momentumLabel}`, contrib: (W.growth * (0.65 * zGrow[i] + 0.35 * zMOM[i])).toFixed(2) },
+        growth: { val: r.momentumLabel, contrib: (W.growth * (0.65 * zGrow[i] + 0.35 * zMOM[i])).toFixed(2) },
         profit: { val: `GM ${r.gm.toFixed(1)}% / NM ${r.nm.toFixed(1)}%`, contrib: (W.profit * zProfit[i]).toFixed(2) },
         durability: { val: `市值 ${Math.exp(r.logMC).toFixed(0)}亿$ / FCF ${Number.isFinite(r.qualityMetrics?.free_cash_flow_billion) ? r.qualityMetrics.free_cash_flow_billion.toFixed(1) + "B" : "无SEC"}`, contrib: (W.durability * zDUR[i]).toFixed(2) },
         risk: { val: `周期惩罚 ${r.cyclePenalty.toFixed(2)} / 下游资金压力 ${hyperscalerFundingStress.toFixed(2)}`, contrib: (W.risk * zRISK[i]).toFixed(2) },
@@ -3341,12 +3367,14 @@ function renderUSWatchlist(){
   // 触发量化分计算
   computeQuantWeightsUS();
   const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
-  // 排序: 有 quant 分的按 quant 降序, 其他 (ETF) 按战略降序排在后面
+  // 排序: 有 quant 分的按原始量化总分降序, 其他 (ETF) 按战略降序排在后面
   codes.sort((a,b) => {
-    const wa = _quantWeightsUS && _quantWeightsUS[a] ? _quantWeightsUS[a].weight : -1;
-    const wb = _quantWeightsUS && _quantWeightsUS[b] ? _quantWeightsUS[b].weight : -1;
-    if (wa === -1 && wb === -1) return (companiesUS[b].strategic || 0) - (companiesUS[a].strategic || 0);
-    return wb - wa;
+    const qa = _quantWeightsUS && _quantWeightsUS[a];
+    const qb = _quantWeightsUS && _quantWeightsUS[b];
+    if (!qa && !qb) return (companiesUS[b].strategic || 0) - (companiesUS[a].strategic || 0);
+    if (!qa) return 1;
+    if (!qb) return -1;
+    return (qb.score - qa.score) || (qb.weight - qa.weight);
   });
   // 计算 Top 10 组合配比: 前 5 核心仓合计 80%, 后 5 卫星仓合计 20%
   const quantCodes = codes.filter(c => _quantWeightsUS && _quantWeightsUS[c]);
@@ -3386,7 +3414,7 @@ function renderUSWatchlist(){
 
     // tooltip 显示因子分解 (核心/卫星/观察) 或基本信息
     const tooltip = qw ? escapeAttr(
-      `排名 #${quantRank} · 综合分 ${qw.weight.toFixed(1)}%\n` +
+      `排名 #${quantRank} · 量化分 ${qw.score.toFixed(3)} · 原始权重 ${qw.weight.toFixed(1)}%\n` +
       `战略: ${qw.factors.strategic.val} (贡献 ${qw.factors.strategic.contrib})\n` +
       `增长动能: ${qw.factors.growth.val} (贡献 ${qw.factors.growth.contrib})\n` +
       `盈利: ${qw.factors.profit.val} (贡献 ${qw.factors.profit.contrib})\n` +
@@ -3447,8 +3475,9 @@ function renderUSPortfolioPie(){
     code,
     name: companiesUS[code]?.name || code,
     catLabel: companiesUS[code]?.catLabel || "",
+    score: _quantWeightsUS[code].score,
     weight: _quantWeightsUS[code].weight
-  })).sort((a,b) => b.weight - a.weight);
+  })).sort((a,b) => (b.score - a.score) || (b.weight - a.weight));
   // 只剔除 EMA21 级别的核心趋势破坏；EMA8 破位只做观察/减仓提示
   const originalTop10 = rankedAll.slice(0, 10);
   const originalTop10Codes = new Set(originalTop10.map(s => s.code));
@@ -3506,11 +3535,11 @@ function renderUSPortfolioPie(){
     ) : "";
     const exHtml = excludedRanked.length ? (
       `<div style="margin-top:8px;color:#ff8a95">🔴 已移出核心仓（周线 close &lt; EMA21）：</div>` +
-      excludedRanked.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(255,90,106,.12);border:1px solid rgba(255,90,106,.4);border-radius:3px;color:#ff8a95;text-decoration:line-through">${s.code} ${s.weight.toFixed(1)}</span>`).join("")
+      excludedRanked.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(255,90,106,.12);border:1px solid rgba(255,90,106,.4);border-radius:3px;color:#ff8a95;text-decoration:line-through">${s.code} score ${s.score.toFixed(3)}</span>`).join("")
     ) : "";
     pool.innerHTML = rebalanceHtml +
       `<div style="margin-bottom:4px">📋 观察池（#11-15，核心/卫星仓破坏或基本面变坏时考虑替换）：</div>` +
-      next5.map(s => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(138,160,192,.1);border-radius:3px">${s.code} ${s.weight.toFixed(1)}</span>`).join("") +
+      next5.map((s, i) => `<span style="display:inline-block;padding:2px 7px;margin:2px 3px 0 0;background:rgba(138,160,192,.1);border-radius:3px">#${11+i} ${s.code} score ${s.score.toFixed(3)}</span>`).join("") +
       exHtml;
   }
 }
