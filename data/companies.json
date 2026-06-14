@@ -176,21 +176,21 @@
       },
       {
         "q": "2025Q2",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 32.64,
+        "gm": 27.1,
+        "nm": 16.6,
+        "src": "A",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2025-08-29/1224607447.PDF",
+        "note": "差减法: H1 rev=58.50亿/GM=26.65%(半年报2025-08-29) - Q1 rev=25.86亿/GM=26.07%(一季报) → Q2 GP=8.85亿/GM=27.1%; H1 NI=7.29亿-Q1 NI=1.86亿→Q2 NI=5.43亿/NM=16.6%"
       },
       {
         "q": "2025Q3",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 29.7,
+        "gm": 20.1,
+        "nm": 7.98,
+        "src": "A",
+        "source_url": "https://m.jiemian.com/article/13569893.html",
+        "note": "差减法: 9M rev=88.20亿/GM=24.45%(三季报) - H1 rev=58.50亿/GM=26.65%(半年报) → Q3 GP=5.97亿/GM=20.1%; 9M NI=9.66亿-H1 NI=7.29亿→Q3 NI=2.37亿/NM=7.98%"
       },
       {
         "q": "2025Q4",
@@ -306,7 +306,7 @@
         "nm": null,
         "src": "NA",
         "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "note": "Q4 rev≈48.87亿(FY 143.77-9M 94.9)/NI≈5.84亿(FY 25.45-9M 19.61)/NM≈11.95%; 未找到FY2025年报毛利率可核实公告来源，GM暂不可确认，保持NA"
       },
       {
         "q": "2026Q1",
@@ -339,12 +339,12 @@
       },
       {
         "q": "2025Q2",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 1.19,
+        "gm": 47.1,
+        "nm": -120.2,
+        "src": "A",
+        "source_url": "https://news.qq.com/rain/a/20250829A01EOD00",
+        "note": "差减法: H1 rev=2.44亿/GM=42.44%/NI=-2.94亿(中报) - Q1 rev=1.25亿/GM=38.0%/NI=-1.51亿(一季报) → Q2 rev=1.19亿(中报直接披露验证)/NI=-1.43亿/NM=-120.2%; Q2 GP=(2.44×0.4244-1.25×0.38)/1.19=47.1%"
       },
       {
         "q": "2025Q3",
@@ -356,12 +356,12 @@
       },
       {
         "q": "2025Q4",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 2.84,
+        "gm": 52.3,
+        "nm": -21.5,
+        "src": "A",
+        "source_url": "https://stockmc.xueqiu.com/202604/688047_20260429_EN5Q.pdf",
+        "note": "差减法: FY rev=6.35亿/GM=47.06%/NI=-4.55亿(年报) - 9M rev=3.51亿/NI=-3.94亿(三季报) → Q4 rev=2.84亿/NI=-0.61亿/NM=-21.5%; Q4 GP=FY GP(2.988)-[H1 GP(1.036)+Q3 GP(0.466)]=1.486/2.84=52.3%"
       },
       {
         "q": "2026Q1",
@@ -536,7 +536,7 @@
     "avg_turnover_pct": 1.8
   },
   "_meta": {
-    "updated": "2026-06-07",
+    "updated": "2026-06-14",
     "note": "收入: 亿元 · 毛利率/净利率: % · src: A=Actual(真实公告/监管披露) F=Forecast(有公告/guidance/consensus 来源) NA=无合规来源，数值置空且不参与模型。",
     "quarters_label": "近 4 个季度（2025Q2 → 2026Q1）",
     "src_legend": {
@@ -544,7 +544,7 @@
       "F": "Forecast — 必须来自公司 guidance、管理层公开 outlook 或明确可追溯 consensus",
       "NA": "No approved source — 无合规来源，rev/gm/nm 置空"
     },
-    "stats": "周扫(2026-06-07): 688676金盘科技 2025Q2 F→A (差减法: rev 18.11亿/GM 26.6%/NM 8.73%); 同步修正Q1实测值(rev 13.0→13.43亿/GM 24.0→24.9%/NM 7.69→7.97%); 全库F=0; 2026Q2 尚未结束(截止6/30), 无新季度可追加; 上次修正(2026-05-31): F=0 无新增",
+    "stats": "周扫(2026-06-14): 6个NA→A: 603019 中科曙光 2025Q2(差减H1 GM=26.65%→rev=32.64/gm=27.1%/nm=16.6%)+2025Q3(差减9M GM=24.45%→rev=29.7/gm=20.1%/nm=7.98%); 688047 龙芯中科 2025Q2(中报直披→rev=1.19/gm=47.1%/nm=-120.2%)+2025Q4(差减FY GM=47.06%→rev=2.84/gm=52.3%/nm=-21.5%); 002028 思源电气 2025Q2(差减→rev=52.7/gm=32.6%/nm=16.0%)+2025Q3(三季报直接→rev=53.3/gm=33.3%/nm=16.9%); 688041 海光 2025Q4 保持NA(FY2025年报毛利率未找到); F=0; 2026Q2 尚未结束(6/30)无新季度",
     "factor_legend": {
       "strategic": "1-10 国产 AI 算力主线战略稀缺度评分 (高=独家卡位/低=英伟达供应链)",
       "market_cap_billion": "估算总市值 (亿元), 来源: 收盘价×总股本",
@@ -1317,21 +1317,20 @@
       },
       {
         "q": "2025Q2",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 52.7,
+        "gm": 32.6,
+        "nm": 16.0,
+        "src": "A",
+        "source_url": "https://stock.stockstar.com/RB2025101900001302.shtml",
+        "note": "差减法: 9M rev=138.27亿/GM=32.32% - Q3 rev=53.3亿/GM=33.25%(三季报单季) → H1 rev=84.97亿/GP=26.99亿; H1-Q1(32.27亿/GM=30.31%) → Q2 rev=52.7亿/GP=17.2亿/GM=32.6%; H1 NI=12.92亿-Q1 NI=4.47亿→Q2 NI=8.45亿/NM=16.0%"
       },
       {
         "q": "2025Q3",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 53.3,
+        "gm": 33.3,
+        "nm": 16.9,
+        "src": "A",
+        "source_url": "https://finance.sina.com.cn/roll/2025-10-19/doc-infumwnh4608188.shtml"
       },
       {
         "q": "2025Q4",
