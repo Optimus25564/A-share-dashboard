@@ -1,111 +1,104 @@
 {
-  "date": "2026-06-16",
-  "weekday": "Tuesday",
+  "date": "2026-06-17",
+  "weekday": "Wednesday",
   "week_data_date": "2026-06-12",
   "ranking": {
     "top5": [
       "688256",
       "688041",
+      "300308",
       "688008",
-      "603019",
-      "300308"
+      "688981"
     ],
     "candidates": [
-      "688981",
+      "603019",
+      "002156",
       "002261",
-      "688047",
-      "002837",
-      "002156"
+      "688347",
+      "002409"
     ]
   },
   "scores": {
     "688256": {
       "name": "寒武纪",
       "rank": 1,
-      "score": 1.1494,
+      "score": 1.416,
       "strategic": 10
     },
     "688041": {
       "name": "海光信息",
       "rank": 2,
-      "score": 1.0949,
+      "score": 1.136,
       "strategic": 10
-    },
-    "688008": {
-      "name": "澜起科技",
-      "rank": 3,
-      "score": 0.5241,
-      "strategic": 8
-    },
-    "603019": {
-      "name": "中科曙光",
-      "rank": 4,
-      "score": 0.5146,
-      "strategic": 8
     },
     "300308": {
       "name": "中际旭创",
-      "rank": 5,
-      "score": 0.3513,
+      "rank": 3,
+      "score": 0.57,
       "strategic": 7
+    },
+    "688008": {
+      "name": "澜起科技",
+      "rank": 4,
+      "score": 0.564,
+      "strategic": 8
     },
     "688981": {
       "name": "中芯国际",
-      "rank": 6,
-      "score": 0.2673,
+      "rank": 5,
+      "score": 0.318,
       "strategic": 10
     },
-    "002261": {
-      "name": "拓维信息",
-      "rank": 7,
-      "score": 0.2571,
-      "strategic": 9
-    },
-    "688047": {
-      "name": "龙芯中科",
-      "rank": 8,
-      "score": 0.0278,
-      "strategic": 7
-    },
-    "002837": {
-      "name": "英维克",
-      "rank": 9,
-      "score": 0.0232,
-      "strategic": 7
+    "603019": {
+      "name": "中科曙光",
+      "rank": 6,
+      "score": 0.097,
+      "strategic": 8
     },
     "002156": {
       "name": "通富微电",
-      "rank": 10,
-      "score": -0.0483,
+      "rank": 7,
+      "score": -0.029,
       "strategic": 8
+    },
+    "002261": {
+      "name": "拓维信息",
+      "rank": 8,
+      "score": -0.05,
+      "strategic": 9
+    },
+    "688347": {
+      "name": "华虹公司",
+      "rank": 9,
+      "score": -0.117,
+      "strategic": 8
+    },
+    "002409": {
+      "name": "雅克科技",
+      "rank": 10,
+      "score": -0.119,
+      "strategic": 7
     }
   },
   "ranking_changes": {
     "in_top5": [
       {
-        "code": "603019",
-        "name": "中科曙光",
-        "prev_rank": 6,
-        "new_rank": 4
+        "code": "688981",
+        "name": "中芯国际",
+        "prev_rank": 99,
+        "new_rank": 5
       }
     ],
     "out_top5": [
       {
-        "code": "688981",
-        "name": "中芯国际",
-        "prev_rank": 5,
+        "code": "603019",
+        "name": "中科曙光",
+        "prev_rank": 4,
         "new_rank": 6
       }
     ]
   },
   "signals": {
-    "sh000001": {
-      "signal": "sell-confirmed",
-      "close_est": 3958.0,
-      "ema8_est": 4090.0,
-      "note": "上周五(2026-06-12)数据carry-forward: 上证低于EMA8约-3.2%，上周五确认破位(数据carry-forward)",
-      "data_source": "carry-forward"
-    },
     "688256": {
       "signal": "buy-fresh",
       "close_est": 1350.0,
@@ -120,25 +113,18 @@
       "note": "上周五carry-forward: 海光低于EMA8约-8.6%，上周五确认破位",
       "data_source": "carry-forward"
     },
-    "688008": {
-      "signal": "sell-confirmed",
-      "close_est": 241.0,
-      "ema8_est": 247.0,
-      "note": "上周五carry-forward: 澜起科技低于EMA8约-2.4%，上周五确认破位",
-      "data_source": "carry-forward"
-    },
-    "603019": {
-      "signal": "sell-confirmed",
-      "close_est": 84.5,
-      "ema8_est": 87.5,
-      "note": "上周五carry-forward: 中科曙光跌出Top5→候选，EMA8下方-3.4%",
-      "data_source": "carry-forward"
-    },
     "300308": {
       "signal": "hold",
       "close_est": 1190.0,
       "ema8_est": 1065.0,
       "note": "上周五carry-forward: 中际旭创高于EMA8约+11.7%，相对强势",
+      "data_source": "carry-forward"
+    },
+    "688008": {
+      "signal": "sell-confirmed",
+      "close_est": 241.0,
+      "ema8_est": 247.0,
+      "note": "上周五carry-forward: 澜起科技低于EMA8约-2.4%，上周五确认破位",
       "data_source": "carry-forward"
     },
     "688981": {
@@ -148,26 +134,12 @@
       "note": "上周五carry-forward: 中芯国际站上EMA8约+2.3%，新晋Top5，候选转持仓",
       "data_source": "carry-forward"
     },
-    "002261": {
+    "603019": {
       "signal": "sell-confirmed",
-      "close_est": 24.8,
-      "ema8_est": 25.6,
-      "note": "上周五carry-forward: 拓维候选低于EMA8约-3.1%",
+      "close_est": 84.5,
+      "ema8_est": 87.5,
+      "note": "上周五carry-forward: 中科曙光跌出Top5→候选，EMA8下方-3.4%",
       "data_source": "carry-forward"
-    },
-    "688047": {
-      "signal": "hold",
-      "close_est": null,
-      "ema8_est": null,
-      "note": "龙芯中科首次进入监控池",
-      "data_source": "new-entry"
-    },
-    "002837": {
-      "signal": "hold",
-      "close_est": null,
-      "ema8_est": null,
-      "note": "英维克首次进入监控池",
-      "data_source": "new-entry"
     },
     "002156": {
       "signal": "sell-confirmed",
@@ -175,15 +147,43 @@
       "ema8_est": 31.2,
       "note": "上周五carry-forward: 通富微电候选低于EMA8约-2.2%",
       "data_source": "carry-forward"
+    },
+    "002261": {
+      "signal": "sell-confirmed",
+      "close_est": 24.8,
+      "ema8_est": 25.6,
+      "note": "上周五carry-forward: 拓维候选低于EMA8约-3.1%",
+      "data_source": "carry-forward"
+    },
+    "688347": {
+      "signal": "hold",
+      "close_est": null,
+      "ema8_est": null,
+      "note": "华虹公司新进入监控池，K线数据待补充",
+      "data_source": "new-entry"
+    },
+    "002409": {
+      "signal": "hold",
+      "close_est": null,
+      "ema8_est": null,
+      "note": "雅克科技新进入监控池，K线数据待补充",
+      "data_source": "new-entry"
+    },
+    "sh000001": {
+      "signal": "sell-confirmed",
+      "close_est": 3958.0,
+      "ema8_est": 4090.0,
+      "note": "上周五(2026-06-12)数据carry-forward: 上证低于EMA8约-3.2%，上周五确认破位(数据carry-forward)",
+      "data_source": "carry-forward"
     }
   },
-  "market_context": "2026-06-16（周二）：排名调整-中科曙光新晋Top5；大盘上证sell-confirmed(carry-forward)；持仓中海光/澜起sell-confirmed，寒武buy-fresh，旭创hold，曙光新晋且sell-confirmed；候选池中芯buy-fresh",
-  "title": "🚨 [2026-06-16] 趋势提醒",
+  "market_context": "2026-06-17（周三）：排名调整-中芯国际新晋Top5（#6→#5），中科曙光降至候选（#4→#6）；持仓中海光/澜起carry-forward sell-confirmed；大盘carry-forward sell-confirmed(上证)",
+  "title": "🚨 [2026-06-17] 趋势提醒",
   "has_signal": true,
   "push_status": {
     "wechat": "failed: HTTP Error 403: Forbidden (network policy)",
     "email": "failed: [Errno 97] Address family not supported (network policy)",
     "push_notification": "sent via Claude PushNotification tool"
   },
-  "data_note": "周线K线API受环境网络策略限制（仅允许github.com）；技术信号carry-forward自2026-06-12(上周五)；因子评分用2026Q1最新财报数据计算，今日排名已更新：603019曙光晋升Top5，688981中芯降至候选#6。"
+  "data_note": "周线K线API受环境网络策略限制；技术信号carry-forward自2026-06-12；因子评分用2026Q1最新财报，今日排名更新：688981中芯晋升Top5(#5)，603019曙光降至候选(#6)"
 }
