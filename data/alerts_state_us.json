@@ -1,512 +1,212 @@
 {
-  "last_run": "2026-06-17T08:30:00+08:00",
-  "run_date": "2026-06-17",
+  "last_run": "2026-06-18T08:30:00+08:00",
+  "run_date": "2026-06-18",
   "market": "US",
   "is_friday_bar": false,
   "market_context": {
     "SPY": {
-      "close": 752.64,
-      "sp500_index": 7548.6,
-      "sp500_chg_pct": -0.08,
-      "nasdaq_close": 26376.34,
-      "nasdaq_chg_pct": -1.15,
-      "dow_chg_pct": 0.64,
-      "note": "2026-06-16 收盘: Dow新高+0.64%; 纳指-1.15%科技承压; S&P500平收-0.08%; Fed新主席Warsh首次会议备受关注"
+      "close": 742.44,
+      "sp500_index": 7420.1,
+      "sp500_chg_pct": -1.21,
+      "nasdaq_close": 26021.66,
+      "nasdaq_chg_pct": -1.34,
+      "dow_chg_pct": -0.98,
+      "note": "2026-06-17收盘: S&P500 -1.21%至7420; 纳指 -1.34%至26022; 道指 -0.98%; Fed Warsh首次会议维持利率不变但点阵图鹰派转向: 9/18成员预期年内至少一次加息, 6/18成员预期两次; META法律风险+AI重组 -5.4%; NVDA跌穿EMA8转sell-warning"
     },
-    "note": "6/16(周二)美股: 纳指回调科技股承压; NVDA触及EMA8回弹(buy-fresh持续); AVGO仍在EMA8下方(sell-warning); MU财报催化窗口(Q3 FY2026 6/24预期); 大盘SPY $752附近整固",
-    "catalyst": "MU 6/24财报催化; AVGO Q2 AI半导体+143%强劲但股价仍低于EMA8; Fed Warsh首次决议; 纳指-1.15%引发科技股轮动"
+    "note": "6/17(周三): Fed鹰派点阵图是最大冲击; 市场重新定价加息风险; NVDA/MSFT信号翻转(buy-fresh→sell-warning); MU 6/24财报窗口临近; AVGO盘后回升至$395.45(+3.1%)",
+    "catalyst": "Fed点阵图转鹰(9/18成员预期2026年内加息); META法律+AI重组 -5.4%; NVDA破EMA8; MSFT信号翻转; MU Q3 FY2026财报6/24"
   },
   "top5": [
     {
-      "code": "MU",
-      "name": "Micron",
-      "rank": 1,
-      "score": 1.391
-    },
-    {
       "code": "NVDA",
       "name": "Nvidia",
-      "rank": 2,
-      "score": 1.2582
+      "rank": 1,
+      "score": 1.2711
     },
     {
-      "code": "SNDK",
-      "name": "Sandisk",
-      "rank": 3,
-      "score": 0.8933
+      "code": "MU",
+      "name": "Micron",
+      "rank": 2,
+      "score": 1.2109
     },
     {
       "code": "TSM",
       "name": "TSMC",
-      "rank": 4,
-      "score": 0.8649
+      "rank": 3,
+      "score": 0.8533
     },
     {
       "code": "AVGO",
       "name": "Broadcom",
+      "rank": 4,
+      "score": 0.6841
+    },
+    {
+      "code": "ASML",
+      "name": "ASML",
       "rank": 5,
-      "score": 0.6682
+      "score": 0.6765
     }
   ],
   "candidates": [
     {
-      "code": "ASML",
-      "name": "ASML",
+      "code": "SNDK",
+      "name": "Sandisk",
       "rank": 6,
-      "score": 0.6296
-    },
-    {
-      "code": "META",
-      "name": "Meta Platforms",
-      "rank": 7,
-      "score": 0.513
-    },
-    {
-      "code": "GOOGL",
-      "name": "Alphabet",
-      "rank": 8,
-      "score": 0.4467
+      "score": 0.5733
     },
     {
       "code": "CEG",
       "name": "Constellation Energy",
+      "rank": 7,
+      "score": 0.5154
+    },
+    {
+      "code": "META",
+      "name": "Meta Platforms",
+      "rank": 8,
+      "score": 0.5149
+    },
+    {
+      "code": "GOOGL",
+      "name": "Alphabet",
       "rank": 9,
-      "score": 0.3586
+      "score": 0.4371
     },
     {
       "code": "MSFT",
       "name": "Microsoft",
       "rank": 10,
-      "score": 0.3098
+      "score": 0.37
     }
   ],
   "rank_changes": {
     "promoted_to_top5": [
-      "TSM",
-      "AVGO"
+      "ASML"
     ],
     "demoted_from_top5": [
-      "APP",
-      "META"
+      "SNDK"
     ],
     "new_to_candidates": [
-      "ASML",
-      "META",
-      "GOOGL",
-      "CEG",
-      "MSFT"
+      "SNDK"
     ],
-    "dropped_from_candidates": [
-      "LITE",
-      "AMD",
-      "CRWV"
-    ],
-    "note": "AVGO因Q2 FY2026财报(GM 77.1% AI芯片+143%)分数大幅提升入Top5; TSM增速+40.6%战略10分维持; APP/META滑出Top5"
+    "dropped_from_candidates": [],
+    "note": "ASML战略10分+高毛利+增速18.8%进Top5第5席(前次score 0.6296→今次0.6765); SNDK因相对增速z-score下滑退候选池第6; AVGO维持Top5第4; 总体排序NVDA>MU>TSM>AVGO>ASML"
   },
   "signals": {
+    "NVDA": "sell-warning",
     "MU": "hold",
-    "NVDA": "buy-fresh",
-    "SNDK": "hold",
     "TSM": "hold",
     "AVGO": "sell-warning",
-    "META": "sell-warning",
     "ASML": "hold",
-    "GOOGL": "sell-warning",
+    "SNDK": "hold",
     "CEG": "sell-warning",
-    "MSFT": "buy-fresh"
+    "META": "sell-warning",
+    "GOOGL": "sell-warning",
+    "MSFT": "sell-warning"
   },
   "signal_detail": {
-    "MU": {
-      "close": 1080.0,
-      "ema8": 885.3,
-      "ema21": 596.13,
-      "close_vs_ema8_pct": 21.99,
-      "ema8_vs_ema21_pct": 48.51,
-      "buy_zone": 903.01,
-      "weekly_low": 1020.0,
-      "ema_source": "updated-from-prev"
-    },
     "NVDA": {
-      "close": 208.44,
-      "ema8": 207.44,
-      "ema21": 189.43,
-      "close_vs_ema8_pct": 0.48,
-      "ema8_vs_ema21_pct": 9.51,
-      "buy_zone": 211.59,
-      "weekly_low": 208.42,
+      "close": 205.35,
+      "ema8": 206.98,
+      "ema21": 190.88,
+      "close_vs_ema8_pct": -0.79,
+      "ema8_vs_ema21_pct": 8.43,
+      "buy_zone": 211.12,
+      "weekly_low": 203.45,
       "ema_source": "updated-from-prev"
     },
-    "SNDK": {
-      "close": 2080.0,
-      "ema8": 1774.31,
-      "ema21": 1338.14,
-      "close_vs_ema8_pct": 17.23,
-      "ema8_vs_ema21_pct": 32.6,
-      "buy_zone": 1809.8,
-      "weekly_low": 2021.11,
+    "MU": {
+      "close": 1059.09,
+      "ema8": 923.92,
+      "ema21": 638.22,
+      "close_vs_ema8_pct": 14.63,
+      "ema8_vs_ema21_pct": 44.77,
+      "buy_zone": 942.4,
+      "weekly_low": 1014.14,
       "ema_source": "updated-from-prev"
     },
     "TSM": {
-      "close": 441.4,
-      "ema8": 409.47,
-      "ema21": 327.97,
-      "close_vs_ema8_pct": 7.8,
-      "ema8_vs_ema21_pct": 24.85,
-      "buy_zone": 417.66,
-      "weekly_low": 430.0,
+      "close": 431.0,
+      "ema8": 414.25,
+      "ema21": 337.34,
+      "close_vs_ema8_pct": 4.04,
+      "ema8_vs_ema21_pct": 22.8,
+      "buy_zone": 422.54,
+      "weekly_low": 427.8,
       "ema_source": "updated-from-prev"
     },
     "AVGO": {
-      "close": 394.82,
-      "ema8": 399.46,
-      "ema21": 348.68,
-      "close_vs_ema8_pct": -1.16,
-      "ema8_vs_ema21_pct": 14.56,
-      "buy_zone": 407.45,
-      "weekly_low": 385.0,
-      "ema_source": "updated-from-prev"
-    },
-    "META": {
-      "close": 598.11,
-      "ema8": 622.66,
-      "ema21": 592.45,
-      "close_vs_ema8_pct": -3.94,
-      "ema8_vs_ema21_pct": 5.1,
-      "buy_zone": 635.11,
-      "weekly_low": 591.0,
+      "close": 383.5,
+      "ema8": 395.91,
+      "ema21": 351.85,
+      "close_vs_ema8_pct": -3.14,
+      "ema8_vs_ema21_pct": 12.52,
+      "buy_zone": 403.83,
+      "weekly_low": 381.63,
       "ema_source": "updated-from-prev"
     },
     "ASML": {
-      "close": 1880.0,
-      "ema8": 1760.0,
-      "ema21": 1575.0,
-      "close_vs_ema8_pct": 6.82,
-      "ema8_vs_ema21_pct": 11.75,
-      "buy_zone": 1795.2,
-      "weekly_low": 1855.0,
+      "close": 1863.55,
+      "ema8": 1783.01,
+      "ema21": 1601.23,
+      "close_vs_ema8_pct": 4.52,
+      "ema8_vs_ema21_pct": 11.35,
+      "buy_zone": 1818.67,
+      "weekly_low": 1830.0,
       "ema_source": "estimated"
     },
-    "GOOGL": {
-      "close": 373.44,
-      "ema8": 385.0,
-      "ema21": 345.0,
-      "close_vs_ema8_pct": -3.0,
-      "ema8_vs_ema21_pct": 11.59,
-      "buy_zone": 392.7,
-      "weekly_low": 367.08,
-      "ema_source": "estimated"
+    "SNDK": {
+      "close": 2035.11,
+      "ema8": 1832.27,
+      "ema21": 1401.5,
+      "close_vs_ema8_pct": 11.07,
+      "ema8_vs_ema21_pct": 30.74,
+      "buy_zone": 1868.91,
+      "weekly_low": 1980.18,
+      "ema_source": "updated-from-prev"
     },
     "CEG": {
-      "close": 262.35,
-      "ema8": 278.0,
-      "ema21": 308.0,
-      "close_vs_ema8_pct": -5.63,
-      "ema8_vs_ema21_pct": -9.74,
-      "buy_zone": 283.56,
+      "close": 267.17,
+      "ema8": 275.59,
+      "ema21": 304.29,
+      "close_vs_ema8_pct": -3.06,
+      "ema8_vs_ema21_pct": -9.43,
+      "buy_zone": 281.11,
       "weekly_low": 255.0,
       "ema_source": "estimated"
     },
+    "META": {
+      "close": 567.58,
+      "ema8": 610.42,
+      "ema21": 590.19,
+      "close_vs_ema8_pct": -7.02,
+      "ema8_vs_ema21_pct": 3.43,
+      "buy_zone": 622.63,
+      "weekly_low": 558.0,
+      "ema_source": "estimated"
+    },
+    "GOOGL": {
+      "close": 370.84,
+      "ema8": 381.85,
+      "ema21": 347.35,
+      "close_vs_ema8_pct": -2.88,
+      "ema8_vs_ema21_pct": 9.93,
+      "buy_zone": 389.49,
+      "weekly_low": 367.08,
+      "ema_source": "updated-from-prev"
+    },
     "MSFT": {
-      "close": 398.5,
-      "ema8": 395.0,
-      "ema21": 378.0,
-      "close_vs_ema8_pct": 0.89,
-      "ema8_vs_ema21_pct": 4.5,
-      "buy_zone": 402.9,
-      "weekly_low": 389.76,
+      "close": 393.08,
+      "ema8": 394.57,
+      "ema21": 379.37,
+      "close_vs_ema8_pct": -0.38,
+      "ema8_vs_ema21_pct": 4.01,
+      "buy_zone": 402.46,
+      "weekly_low": 390.69,
       "ema_source": "estimated"
     }
   },
-  "kline_status": "partial: stooq.com/Yahoo Finance/AlphaVantage均被网络策略禁止; 价格来自 WebSearch(MacroTrends/MarketBeat/CNBC/TradingKey 2026-06-16); EMA8/21: MU/NVDA/SNDK/TSM/AVGO/META 由前次6/16状态+6/16收盘更新; ASML/GOOGL/CEG/MSFT EMA 为估算值 (ema_source=estimated)",
-  "sources": "WebSearch: MacroTrends / MarketBeat / CNBC / TheStreet / Yahoo Finance (2026-06-16~06-17)",
-  "score_details": {
-    "NVDA": {
-      "score": 1.2582,
-      "strategic": 10,
-      "market_cap_billion": 53900,
-      "yoy_pct": 107.7,
-      "avg_gm": 74.9,
-      "avg_nm_clipped": 60
-    },
-    "AVGO": {
-      "score": 0.6682,
-      "strategic": 9,
-      "market_cap_billion": 20320,
-      "yoy_pct": 48.8,
-      "avg_gm": 77.1,
-      "avg_nm_clipped": 42.0
-    },
-    "AMD": {
-      "score": 0.1857,
-      "strategic": 8,
-      "market_cap_billion": 7577,
-      "yoy_pct": 37.8,
-      "avg_gm": 53,
-      "avg_nm_clipped": 13.49
-    },
-    "INTC": {
-      "score": 0.1753,
-      "strategic": 9,
-      "market_cap_billion": 6387,
-      "yoy_pct": 7.3,
-      "avg_gm": 39.4,
-      "avg_nm_clipped": -27.21
-    },
-    "QCOM": {
-      "score": -0.6776,
-      "strategic": 6,
-      "market_cap_billion": 2483,
-      "yoy_pct": -3.5,
-      "avg_gm": 53.77,
-      "avg_nm_clipped": 60
-    },
-    "MRVL": {
-      "score": -0.3056,
-      "strategic": 7,
-      "market_cap_billion": 1472,
-      "yoy_pct": 27.4,
-      "avg_gm": 52.15,
-      "avg_nm_clipped": 1.43
-    },
-    "APP": {
-      "score": -0.0905,
-      "strategic": 6,
-      "market_cap_billion": 1530,
-      "yoy_pct": 58.6,
-      "avg_gm": 88.95,
-      "avg_nm_clipped": 60
-    },
-    "TSM": {
-      "score": 0.8649,
-      "strategic": 10,
-      "market_cap_billion": 21040,
-      "yoy_pct": 40.6,
-      "avg_gm": 66.2,
-      "avg_nm_clipped": 50.5
-    },
-    "ASML": {
-      "score": 0.6296,
-      "strategic": 10,
-      "market_cap_billion": 5972,
-      "yoy_pct": 18.8,
-      "avg_gm": 53,
-      "avg_nm_clipped": 31.82
-    },
-    "AMAT": {
-      "score": 0.0262,
-      "strategic": 8,
-      "market_cap_billion": 3550,
-      "yoy_pct": 11.4,
-      "avg_gm": 49.9,
-      "avg_nm_clipped": 35.47
-    },
-    "KLAC": {
-      "score": -0.0072,
-      "strategic": 8,
-      "market_cap_billion": 2465,
-      "yoy_pct": 11.8,
-      "avg_gm": 61.12,
-      "avg_nm_clipped": 35.17
-    },
-    "ONTO": {
-      "score": -0.4412,
-      "strategic": 7,
-      "market_cap_billion": 141,
-      "yoy_pct": 7.4,
-      "avg_gm": 50.14,
-      "avg_nm_clipped": 11.56
-    },
-    "SNPS": {
-      "score": -0.3167,
-      "strategic": 7,
-      "market_cap_billion": 751,
-      "yoy_pct": 42.5,
-      "avg_gm": 72.33,
-      "avg_nm_clipped": 0.75
-    },
-    "MU": {
-      "score": 1.391,
-      "strategic": 9,
-      "market_cap_billion": 8900,
-      "yoy_pct": 196.4,
-      "avg_gm": 74.41,
-      "avg_nm_clipped": 57.77
-    },
-    "SNDK": {
-      "score": 0.8933,
-      "strategic": 7,
-      "market_cap_billion": 2285,
-      "yoy_pct": 252.1,
-      "avg_gm": 78.35,
-      "avg_nm_clipped": 60
-    },
-    "COHR": {
-      "score": -0.0803,
-      "strategic": 8,
-      "market_cap_billion": 618,
-      "yoy_pct": 20.7,
-      "avg_gm": 37.66,
-      "avg_nm_clipped": 10.06
-    },
-    "LITE": {
-      "score": -0.0858,
-      "strategic": 7,
-      "market_cap_billion": 703,
-      "yoy_pct": 88.4,
-      "avg_gm": 44.16,
-      "avg_nm_clipped": 17.84
-    },
-    "FN": {
-      "score": -0.6001,
-      "strategic": 7,
-      "market_cap_billion": 253,
-      "yoy_pct": 39.1,
-      "avg_gm": 11.89,
-      "avg_nm_clipped": 10.31
-    },
-    "MSFT": {
-      "score": 0.3098,
-      "strategic": 9,
-      "market_cap_billion": 30510,
-      "yoy_pct": 18.3,
-      "avg_gm": 67.63,
-      "avg_nm_clipped": 38.34
-    },
-    "GOOGL": {
-      "score": 0.4467,
-      "strategic": 9,
-      "market_cap_billion": 47330,
-      "yoy_pct": 21.8,
-      "avg_gm": 62.45,
-      "avg_nm_clipped": 56.94
-    },
-    "AMZN": {
-      "score": -0.143,
-      "strategic": 8,
-      "market_cap_billion": 29300,
-      "yoy_pct": 16.6,
-      "avg_gm": 51.82,
-      "avg_nm_clipped": 16.67
-    },
-    "META": {
-      "score": 0.513,
-      "strategic": 9,
-      "market_cap_billion": 15300,
-      "yoy_pct": 33.1,
-      "avg_gm": 81.85,
-      "avg_nm_clipped": 47.54
-    },
-    "AAPL": {
-      "score": -0.1412,
-      "strategic": 8,
-      "market_cap_billion": 42910,
-      "yoy_pct": 16.6,
-      "avg_gm": 49.27,
-      "avg_nm_clipped": 26.6
-    },
-    "TSLA": {
-      "score": -0.7997,
-      "strategic": 6,
-      "market_cap_billion": 16520,
-      "yoy_pct": 15.8,
-      "avg_gm": 21.08,
-      "avg_nm_clipped": 2.13
-    },
-    "CRWV": {
-      "score": -0.0954,
-      "strategic": 7,
-      "market_cap_billion": 427,
-      "yoy_pct": 112.2,
-      "avg_gm": 65.54,
-      "avg_nm_clipped": -30
-    },
-    "CEG": {
-      "score": 0.3586,
-      "strategic": 9,
-      "market_cap_billion": 1073,
-      "yoy_pct": 63.8,
-      "avg_gm": 42.89,
-      "avg_nm_clipped": 14.41
-    },
-    "VRT": {
-      "score": -0.0326,
-      "strategic": 8,
-      "market_cap_billion": 1129,
-      "yoy_pct": 29.9,
-      "avg_gm": 37.73,
-      "avg_nm_clipped": 14.72
-    },
-    "ETN": {
-      "score": -0.2366,
-      "strategic": 8,
-      "market_cap_billion": 1681,
-      "yoy_pct": 16.8,
-      "avg_gm": 35.59,
-      "avg_nm_clipped": 11.65
-    },
-    "GEV": {
-      "score": -0.4501,
-      "strategic": 7,
-      "market_cap_billion": 2903,
-      "yoy_pct": 16.3,
-      "avg_gm": 19.07,
-      "avg_nm_clipped": 50.81
-    },
-    "CCJ": {
-      "score": -0.8536,
-      "strategic": 6,
-      "market_cap_billion": 508,
-      "yoy_pct": 9.1,
-      "avg_gm": 35.74,
-      "avg_nm_clipped": 15.5
-    },
-    "SMH": {
-      "score": -0.2595,
-      "strategic": 8,
-      "market_cap_billion": 300,
-      "yoy_pct": null,
-      "avg_gm": null,
-      "avg_nm_clipped": null
-    },
-    "XLU": {
-      "score": -0.7316,
-      "strategic": 7,
-      "market_cap_billion": 200,
-      "yoy_pct": null,
-      "avg_gm": null,
-      "avg_nm_clipped": null
-    },
-    "COPX": {
-      "score": -0.5517,
-      "strategic": 7,
-      "market_cap_billion": 50,
-      "yoy_pct": null,
-      "avg_gm": null,
-      "avg_nm_clipped": null
-    },
-    "XME": {
-      "score": -1.0771,
-      "strategic": 6,
-      "market_cap_billion": 25,
-      "yoy_pct": null,
-      "avg_gm": null,
-      "avg_nm_clipped": null
-    },
-    "EWY": {
-      "score": -0.7557,
-      "strategic": 7,
-      "market_cap_billion": 50,
-      "yoy_pct": null,
-      "avg_gm": null,
-      "avg_nm_clipped": null
-    },
-    "RKLB": {
-      "score": -0.3369,
-      "strategic": 7,
-      "market_cap_billion": 722,
-      "yoy_pct": 66.7,
-      "avg_gm": 38.2,
-      "avg_nm_clipped": -22.5
-    }
-  }
+  "kline_status": "partial: stooq.com/Yahoo Finance/AlphaVantage均被网络策略禁止; 收盘价来自 WebSearch(CNBC/Yahoo/Robinhood/TheStreet 2026-06-17); NVDA/MU/SNDK/TSM/AVGO/GOOGL EMA由前次6/17状态+6/17收盘更新; ASML/CEG/META/MSFT EMA部分估算(low/high=estimated)",
+  "sources": "WebSearch: CNBC / Yahoo Finance / TheStreet / Robinhood / TradingKey (2026-06-17)"
 }
