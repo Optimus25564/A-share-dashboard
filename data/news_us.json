@@ -231,6 +231,14 @@
       "url": "https://invezz.com/news/2026/06/01/intel-amd-and-qualcomm-slide-as-nvidia-targets-ai-pc-market-with-rtx-spark-chip/",
       "source": "Invezz",
       "content": "AMD and Intel fell 4-6% on June 16 as Nvidia RTX Spark — combining Grace CPU with Blackwell GPU for Windows PCs — raised investor concerns about market share risk for both chipmakers ahead of fall 2026 OEM launches."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "announcement",
+      "title": "NVIDIA and HPE Expand AI Infrastructure Partnership at HPE Discover; Vultr Selects Joint Platform",
+      "url": "https://nvidianews.nvidia.com/news/hpe-discover-ai-infrastructure-partnership-2026",
+      "source": "NVIDIA Newsroom",
+      "content": "At HPE Discover Las Vegas (June 16-18), NVIDIA and HPE announced expanded AI infrastructure collaboration. Cloud provider Vultr selected HPE-NVIDIA platform for large-scale AI datacenter deployments."
     }
   ],
   "AVGO": [
@@ -417,6 +425,14 @@
       "url": "https://www.prnewswire.com/news-releases/broadcom-inc-announces-second-quarter-fiscal-year-2026-financial-results-and-quarterly-dividend-302790698.html",
       "source": "PR Newswire",
       "content": "Broadcom launched $2.5B senior notes tender offer for balance sheet management post-VMware integration. Q3 FY2026 guidance: AI semiconductor revenue exceeding $16B (+200% YoY)."
+    },
+    {
+      "date": "2026-06-12",
+      "type": "news",
+      "title": "Broadcom CFO Kirsten Spears Retires; Amie Thuener Appointed as Successor",
+      "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-cfr-retirement",
+      "source": "Broadcom Investor Relations",
+      "content": "Broadcom's long-serving CFO Kirsten M. Spears retired effective June 12, 2026. Amie Thuener appointed as new CFO, announced alongside Q2 FY2026 earnings report."
     }
   ],
   "AMD": [
@@ -587,6 +603,14 @@
       "url": "https://www.amd.com/en/newsroom/press-releases/2026-6-16-amd-and-rackspace-technology-sign-definitive.html",
       "source": "AMD Newsroom",
       "content": "AMD and Rackspace signed a definitive agreement for phased deployment of 30 MW of AMD AI compute across Rackspace global data centers late 2026–2028. Rackspace shares rose 16%; company announced 15% workforce reduction to fund AI transformation."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "announcement",
+      "title": "AMD Instinct GPUs Set Breakthrough MLPerf Training 6.0 Records Across LLM and Multi-Node Workloads",
+      "url": "https://ir.amd.com/news-events/press-releases/mlperf-training-6-0-2026",
+      "source": "AMD Investor Relations",
+      "content": "AMD announced breakthrough MLPerf Training 6.0 results, with AMD Instinct GPUs delivering leading performance across LLM and multi-node FLUX.1 scale benchmarks on June 17."
     }
   ],
   "INTC": [
@@ -813,6 +837,22 @@
       "url": "https://www.timothysykes.com/news/intel-corporation-intc-news-2026_06_16/",
       "source": "TimothySykes / Wedbush",
       "content": "Intel fell 5-6% on June 16 after Wedbush flagged Nvidia RTX Spark as a direct threat to Intel PC CPU franchise. Nvidia Grace+Blackwell Superchip enters Windows laptop market in fall 2026, targeting OEMs already supplied by Intel."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "announcement",
+      "title": "Intel Initiates Risk Production of Next-Generation 18A-P Process Node; Shares Gain ~3%",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/intel-bets-18a-xeon-6-070403655.html",
+      "source": "Yahoo Finance",
+      "content": "Intel initiated risk production of its 18A-P chip process, promising improved performance and power efficiency over 18A. Shares gained ~3% on the news, reinforcing Intel's foundry recovery narrative."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "research",
+      "title": "Bernstein Raises Intel Price Target to 00 (from 5) on Growing 18A Foundry Conviction",
+      "url": "https://finance.yahoo.com/quote/INTC/news/",
+      "source": "Yahoo Finance / Bernstein",
+      "content": "Bernstein raised Intel price target from \u0005 to \u0000, citing growing conviction in Intel's 18A execution and AI/foundry strategy. INTC had hit an all-time high of \u001a.46 on June 15."
     }
   ],
   "QCOM": [
@@ -1211,6 +1251,14 @@
       "url": "https://www.stocktitan.net/news/APP/app-lovin-to-participate-in-the-54th-nasdaq-jefferies-investor-wpx9vk7pszno.html",
       "source": "StockTitan",
       "content": "AppLovin presented at the Nasdaq & Jefferies Investor Conference June 9, highlighting Q1 beat ($1.84B revenue, +59% YoY) and Axon global self-serve launch momentum as the key near-term catalyst."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "news",
+      "title": "AppLovin Falls 3.3% on Heavy CEO and CAO Insider Selling Ahead of AXON Global Self-Serve Launch",
+      "url": "https://www.tradingkey.com/news/market-movers/261973656-market-movers-app-20260617",
+      "source": "TradingKey",
+      "content": "APP fell ~3.3% to $479.49. CEO Arash Foroughi sold 74,000+ shares ($14.6M+) and CAO Victoria Valenzuela sold 20,000 shares per SEC Form 4 filings. Investors cautious ahead of AXON AI ad engine global self-serve launch in late June."
     }
   ],
   "TSM": [
@@ -1405,6 +1453,14 @@
       "url": "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000302/tsm-agmx20260604x6k.htm",
       "source": "SEC Form 6-K",
       "content": "TSMC Annual Shareholders Meeting June 4 approved 2025 results: consolidated revenue NT$3,809.05B, net income NT$1,717.88B, diluted EPS NT$66.25. CEO C.C. Wei confirmed openness to selective price hikes to maintain healthy margins."
+    },
+    {
+      "date": "2026-06-16",
+      "type": "announcement",
+      "title": "TSMC and Amkor Technology Sign 10-Year Advanced Packaging Partnership in Arizona",
+      "url": "https://sg.finance.yahoo.com/news/tsmc-amkor-technology-announce-long-130000168.html",
+      "source": "Yahoo Finance / PR Newswire",
+      "content": "TSMC and Amkor Technology announced a 10-year agreement to expand advanced semiconductor packaging and testing in Arizona. Amkor's large-scale campus in Peoria, AZ targets 2028 operations; deal supports a complete domestic chip supply chain as part of TSMC's U.S. investment strategy."
     }
   ],
   "ASML": [
@@ -1583,6 +1639,14 @@
       "url": "https://finance.yahoo.com/quote/ASML/news/",
       "source": "Yahoo Finance",
       "content": "JPMorgan raised ASML target from EUR 1,515 to EUR 1,900 (Overweight). Morgan Stanley lifted to EUR 1,660. BofA maintained Buy at $2,268. ASML closed at $1,892.66 on June 15, up 27% over one month."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "industry",
+      "title": "ASML Surges as SpaceX IPO Funds Musk's $55B 'Terafab' AI Chip Fab Plan — ASML Named Key EUV Supplier",
+      "url": "https://www.tradingkey.com/analysis/stocks/more/261962611-spacex-ipo-asml-musk-spcx-tradingkey",
+      "source": "TradingKey",
+      "content": "ASML surged on June 17 after SpaceX IPO proceeds funded Elon Musk's Terafab semiconductor project — a $55B initial investment by SpaceX, Tesla, and xAI to build a 2nm AI chip fab using ASML's EUV machines, targeting 100-200B AI chips/year. ASML is the sole EUV supplier globally."
     }
   ],
   "AMAT": [
@@ -1943,6 +2007,14 @@
       "url": "https://www.stocktitan.net/news/SNPS/murata-collaborates-with-synopsys-to-provide-simulation-models-07v1io7mu3zx.html",
       "source": "StockTitan / Synopsys",
       "content": "Murata and Synopsys announced integration of Murata's component models into Ansys HFSS and Icepak for advanced electronic package simulation, strengthening multi-physics design capabilities for AI chip packaging."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "news",
+      "title": "Synopsys Shares Rise 5.4% on Ansys Integration Momentum, Multiphysics Fusion Launch, and Elliott Stake",
+      "url": "https://www.tradingkey.com/news/market-movers/261973854-market-movers-snps-20260617",
+      "source": "TradingKey",
+      "content": "SNPS gained 5.41% on June 17, driven by Q2 FY2026 beat (revenue $2.28B vs $2.25B est., EPS $3.35 vs $3.15), raised FY2026 guidance (EPS $14.72-$14.80), Multiphysics Fusion solution launches, Murata/Samsung partnerships, Citi PT raise to $610, and Elliott Investment Management disclosing a stake and board seat."
     }
   ],
   "MU": [
@@ -2283,6 +2355,22 @@
       "url": "https://www.cnbc.com/quotes/SNDK",
       "source": "CNBC / Benzinga",
       "content": "Bank of America raised SNDK price target to $2,100 on June 8, reflecting bullish expectations for NAND memory demand driven by AI data center buildout. Analyst consensus target ~$1,604, high of $3,250."
+    },
+    {
+      "date": "2026-06-16",
+      "type": "announcement",
+      "title": "SanDisk June 22 WDC Share Swap Confirmed; Stock Hits ATH ,167.33 on AI Memory Demand",
+      "url": "https://www.top1markets.com/news/sndk-stock-2026-sandisk-ai-storage-analysis",
+      "source": "TOPONE Markets",
+      "content": "SanDisk executing share swap with Western Digital on June 22, positioning as standalone NAND/SSD company. Stock hit all-time high of ,167.33 on June 16 amid SpaceX/xAI Terafab AI memory demand cited as catalyst."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "research",
+      "title": "Cantor Fitzgerald Raises SanDisk Target to ,900 on AI Memory Demand Surge",
+      "url": "https://www.tipranks.com/news/why-is-sandisk-stock-sndk-rising-today-6-17-2026",
+      "source": "TipRanks / Cantor Fitzgerald",
+      "content": "Cantor Fitzgerald's CJ Muse raised SNDK target to ,900 from ,800 (45.6% upside implied). AI memory demand, 2026 capacity fully sold out with \u0002B contracts, and strong 2027 booking strength cited."
     }
   ],
   "COHR": [
@@ -2389,6 +2477,14 @@
       "url": "https://congress.net/j-p-morgan-says-coherent-cohr-and-lumentum-lite-are-buys-after-steep-june-pullback/",
       "source": "Congress.net / J.P. Morgan",
       "content": "J.P. Morgan reiterated Buy ratings on both Coherent (COHR) and Lumentum (LITE) after steep pullbacks from early June highs, arguing the AI datacenter optical upcycle remains intact despite co-packaged optics adoption delay concerns."
+    },
+    {
+      "date": "2026-06-16",
+      "type": "policy",
+      "title": "Coherent Signs $50M CHIPS Act LOI to Expand Indium Phosphide Facility in Texas for AI Optical Networking",
+      "url": "https://www.globenewswire.com/news-release/2026/06/16/3312664/11543/en/Coherent-Announces-a-CHIPS-Letter-of-Intent-for-50-Million-to-Expand-World-Leading-Manufacturing-Facility-for-AI-Infrastructure.html",
+      "source": "GlobeNewswire / NIST",
+      "content": "Coherent Corp signed a letter of intent with the U.S. Dept of Commerce for up to $50M in CHIPS Act funding to expand its 6-inch Indium Phosphide facility in Sherman, TX. Expansion doubles manufacturing space, quadruples wafer capacity, creates 1,000+ jobs. Groundbreaking held with NVIDIA. Supports AI datacenter optical networking demand."
     }
   ],
   "LITE": [
@@ -2495,6 +2591,14 @@
       "url": "https://www.quiverquant.com/news/Lumentum+Stock+(LITE)+Opinions+on+AI+Infrastructure+Growth",
       "source": "QuiverQuant",
       "content": "LITE closed at $957.24 on June 15. CEO commentary centered on broadening demand beyond largest hyperscaler clients, with a several-hundred-million-dollar co-packaged optics order due H1 2027 and growing optical circuit switch backlog."
+    },
+    {
+      "date": "2026-06-18",
+      "type": "announcement",
+      "title": "Lumentum Chair Penny Herscher and CEO Michael Hurlston Speak at Rome AI Ethics Conference (June 18-20)",
+      "url": "https://www.stocktitan.net/news/LITE/lumentum-chair-of-the-board-penny-herscher-and-ceo-michael-hurlston-xa8x20muerai.html",
+      "source": "StockTitan / Lumentum IR",
+      "content": "Lumentum's board chair and CEO participate as expert speakers at the Rome Conference on AI, Ethics and Governance (June 18-20). CEO Hurlston joins a panel on 'The Energy of AI: Infrastructure, Stewardship, and the Common Good', highlighting Lumentum's optical products (OCS, TRO modules, CPO lasers) as power-efficient AI infrastructure solutions."
     }
   ],
   "FN": [
@@ -2561,6 +2665,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/why-fabrinet-fn-12-7-051318582.html",
       "source": "Yahoo Finance",
       "content": "iPronics' dedicated manufacturing line at Fabrinet for silicon photonics-based optical circuit switching systems reached full operational readiness in the June 2026 quarter, underpinning AI data-center optical interconnect scaling."
+    },
+    {
+      "date": "2026-06-15",
+      "type": "research",
+      "title": "Barclays Upgrades Fabrinet on Silicon Photonics and AI Optics Expansion; Q4 FY2026 Guidance .25-1.29B",
+      "url": "https://simplywall.st/stocks/us/tech/nyse-fn/fabrinet/news/assessing-fabrinet-fn-valuation-after-barclays-upgrade-and-g",
+      "source": "Simply Wall St / Barclays",
+      "content": "Barclays upgraded Fabrinet, citing expanding silicon photonics manufacturing for iPronics optical circuit switching. Q4 FY2026 revenue guidance: .25-.29B."
     }
   ],
   "MSFT": [
@@ -2723,6 +2835,14 @@
       "url": "https://www.kavout.com/market-lens/has-microsoft-msft-found-its-next-growth-catalyst-in-ai-agents",
       "source": "Kavout / Microsoft Build",
       "content": "At Build 2026, Microsoft unveiled Project Solara, Microsoft Scout agent, and new in-house MAI model family, marking a strategic pivot from app-first to agent-first strategy."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "news",
+      "title": "Microsoft Faces Investor Class-Action Lawsuit Alleging Azure Growth and Copilot Disclosure Failures; Stock -3%",
+      "url": "https://www.tradingkey.com/news/market-movers/261974013-market-movers-msft-20260617",
+      "source": "TradingKey",
+      "content": "Multiple investor rights firms filed a securities class-action lawsuit against Microsoft, alleging executives concealed Azure cloud growth deceleration, hid massive AI capex requirements, and downplayed structural issues with Copilot. MSFT dropped 3.13% on June 17."
     }
   ],
   "GOOGL": [
@@ -2941,6 +3061,14 @@
       "url": "https://phemex.com/academy/alphabet-googl-stock-2026",
       "source": "Phemex / Alphabet",
       "content": "Alphabet June 2026 investor presentation: Gemini AI surpassed 900M monthly active users, Google Cloud expanded 63% YoY with AI subscriptions reaching 350M. Waymo now completes 500,000+ rides per week."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "announcement",
+      "title": "Alphabet Prices Upsized 4.75B Equity Offering for AI Infrastructure; 2026 Capex Target 80-190B",
+      "url": "https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Upsize-and-Pricing-of-84-75-Billion-Equity-Capital-Raise-to-Expand-AI-Infrastructure--and-Compute-2026-QzN3D9yMAj/default.aspx",
+      "source": "Alphabet Investor Relations",
+      "content": "Alphabet priced its equity offering at \u0004.75B (above \u0000B original target) to fund AI infrastructure. Plans 80-190B capex in 2026, 6x 2022 levels. Combined debt exceeds \u0000B."
     }
   ],
   "AMZN": [
@@ -3087,6 +3215,22 @@
       "url": "https://www.gurufocus.com/news/8915692/amazon-amzn-ceo-voices-security-concerns-over-ai-model-risks",
       "source": "GuruFocus",
       "content": "Amazon CEO Andy Jassy voiced security concerns about advanced AI models developed by Anthropic during discussions with Trump administration officials, flagging potential national security risks of frontier AI."
+    },
+    {
+      "date": "2026-06-16",
+      "type": "announcement",
+      "title": "Amazon Unveils Next-Gen Proteus Robot in London; Plans €10B European Fulfillment Investment",
+      "url": "https://www.aboutamazon.com/news",
+      "source": "About Amazon",
+      "content": "Amazon unveiled its next-generation Proteus autonomous robot at a London event, part of a planned €10B investment in European fulfillment. The upgraded Proteus understands natural language commands and handles 400kg carts; deployment expected by early 2027."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "announcement",
+      "title": "Amazon Kuiper LE-03 Reaches 100th Leo Satellite Launch Milestone; Competes with SpaceX Starlink",
+      "url": "https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-le03-100-satellites",
+      "source": "About Amazon",
+      "content": "Amazon's Project Kuiper LE-03 mission from Kourou, French Guiana marks 100 Amazon Leo satellites launched in under five months across three missions. Milestone escalates competition with SpaceX Starlink in broadband satellite services."
     }
   ],
   "META": [
@@ -3273,6 +3417,14 @@
       "url": "https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/",
       "source": "TechCrunch",
       "content": "Meta launched its WhatsApp Business AI agent globally, enabling businesses to automate customer support, product recommendations, appointment booking, and sales qualification via WhatsApp."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "announcement",
+      "title": "Meta Expands AI Business Agents with Shopify and Zendesk Enterprise Integrations for Customer Automation",
+      "url": "https://about.fb.com/news/2026/06/meta-ai-business-agents-enterprise/",
+      "source": "Meta Newsroom",
+      "content": "Meta expanded AI business agent capabilities with automatic customer responses, lead qualification, and appointment booking. New integrations with Shopify and Zendesk for enterprise customers announced in mid-June."
     }
   ],
   "AAPL": [
@@ -3427,6 +3579,14 @@
       "url": "https://www.tomsguide.com/tech-events/apples-wwdc-2026-conference-kicks-off-in-june-heres-what-we-expect-to-see",
       "source": "Tom's Guide",
       "content": "Apple confirmed a significant partnership with Google, integrating Gemini as a core underlying model powering the new Siri AI, adding to existing OpenAI ChatGPT integration."
+    },
+    {
+      "date": "2026-06-15",
+      "type": "announcement",
+      "title": "Apple 2027 Roadmap Confirmed: Camera-Equipped AirPods and Second-Generation Foldable iPhone",
+      "url": "https://finance.yahoo.com/quote/AAPL/news/",
+      "source": "Yahoo Finance",
+      "content": "Reports in mid-June 2026 confirmed Apple is preparing camera-equipped AirPods and a second-generation foldable iPhone for 2027, one of Apple's largest product pushes. Shares near $295 (vs ~$317 WWDC peak) on Siri exclusion from Europe/China (~35% of shipments)."
     }
   ],
   "TSLA": [
@@ -3865,6 +4025,14 @@
       "url": "https://www.cnbc.com/quotes/CEG",
       "source": "Calpine / Constellation Energy",
       "content": "Calpine, a Constellation Energy business unit, completed a 25 MW capacity expansion at The Geysers geothermal complex in California, adding clean baseload power capacity aligned with Constellation's strategy to serve AI data center and grid clean energy demand."
+    },
+    {
+      "date": "2026-06-15",
+      "type": "research",
+      "title": "Bernstein Initiates Constellation Energy at Outperform; 19 Buy Ratings, Zero Sells",
+      "url": "https://finance.yahoo.com/quote/CEG/",
+      "source": "Yahoo Finance / Bernstein",
+      "content": "Bernstein initiated coverage of Constellation Energy with an Outperform rating, citing the company's role as a key provider of clean, reliable electricity for AI data centers. Analyst consensus stands at 19 Buy ratings and zero Sells."
     }
   ],
   "VRT": [
@@ -3995,6 +4163,14 @@
       "url": "https://www.prnewswire.com/news-releases/vertiv-expands-fluid-management-services-to-help-reduce-water-use-during-data-center-fluid-system-commissioning-302790111.html",
       "source": "PR Newswire",
       "content": "Vertiv introduced PurgeRite NearZero service designed to significantly reduce water and wastewater generated during data center liquid cooling system commissioning."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "research",
+      "title": "Bernstein Initiates Vertiv at Outperform; Shares Jump 7.4% on AI Data Center Cooling Demand",
+      "url": "https://www.tradingkey.com/news/market-movers/261973741-market-movers-vrt-20260617",
+      "source": "TradingKey / Bernstein",
+      "content": "Vertiv shares surged 7.4% on June 17. Bernstein initiated at Outperform. FY2026 guidance: $13.75B revenue (+34% YoY), adjusted EPS midpoint $6.35 (+51% YoY). Catalyzed by completed ThermoKey acquisition and sustained AI data center cooling demand."
     }
   ],
   "ETN": [
@@ -4247,6 +4423,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/261968279-market-movers-gev-20260615",
       "source": "TradingKey",
       "content": "GE Vernova rose 3.76% on June 15, trading at $907-944. Management's record $163B backlog and raised 2026 guidance ($44.5-45.5B revenue, 12-14% EBITDA margin, $6.5-7.5B FCF) continue to attract investors in the AI power trade."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "research",
+      "title": "Bernstein Initiates GE Vernova at Outperform with $1,206 Price Target; Stock Surges 6.8%",
+      "url": "https://www.tradingkey.com/news/market-movers/261973569-market-movers-gev-20260617",
+      "source": "TradingKey / Bernstein",
+      "content": "GEV surged 6.77% to $1,048.86 on June 17 after Bernstein initiated at Outperform with a $1,206 target, highlighting GEV's position in global electricity infrastructure, grid upgrades, industrial electrification, and AI datacenter power demand."
     }
   ],
   "CCJ": [
@@ -4733,6 +4917,14 @@
       "url": "https://stocktwits.com/news-articles/markets/equity/rklb-stock-record-launch-blitz-after-nasdaq-100-entry/cZKf5pTR7df",
       "source": "StockTwits / TheStreet",
       "content": "Rocket Lab has more Electron rockets staged than at any prior point. Q1 2026 revenue $200.3M (+63.5% YoY), backlog $2.2B (+108% YoY), Neutron first flight on track for Q4 2026 with 5 commercial contracts signed."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "announcement",
+      "title": "Rocket Lab Delays 90th Electron Mission '10 Owl Of Ten' for Additional Pre-Flight Checks",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/rklb-stock-jumps-overnight-retail-054849541.html",
+      "source": "Yahoo Finance",
+      "content": "Rocket Lab delayed its 90th Electron launch ('Ten Owl Of Ten' for Synspective) from June 18 NZT target for additional pre-flight checkouts. 17 remaining Synspective missions contracted through 2030 remain on schedule."
     }
   ],
   "HUBB": [
@@ -4841,6 +5033,14 @@
       "url": "https://www.stocktitan.net/sec-filings/POWL/form-4-powell-industries-inc-insider-trading-activity-db1dd0dc307d.html",
       "source": "StockTitan / SEC Form 4",
       "content": "Powell Industries CEO Brett Cope sold 4,440 shares at $272.64/share ($1.21M) via open-market sale on June 11. Total insider selling has reached $32.5M in the past 3 months with no buying, as the stock has surged 150%+ YTD on data center power demand."
+    },
+    {
+      "date": "2026-06-16",
+      "type": "news",
+      "title": "Powell Industries Consolidates 3.6% to 92.70 After 150%+ YTD Run; Quarterly Dividend Paid June 17",
+      "url": "https://simplywall.st/stocks/us/capital-goods/nasdaq-powl/powell-industries/news/powell-industries-powl-stock-valuation-after-strong-sector-d",
+      "source": "Simply Wall St",
+      "content": "Powell Industries shares fell 3.57% on June 16 to 92.70, modest consolidation after a 150%+ YTD gain driven by power infrastructure and a record \u0000M+ AI data center order. Quarterly dividend of /bin/bash.09/share paid June 17."
     }
   ],
   "ANET": [
@@ -5133,6 +5333,14 @@
       "url": "https://www.startuphub.ai/ai-news/ai-stocks-daily/2026/ai-stocks-2026-06-15",
       "source": "StartupHub.ai",
       "content": "ARM Holdings surged 8.3% on June 15, driven by a U.S.-Iran peace agreement easing global supply concerns and triggering a broad semiconductor rally (SOXX +5.4%)."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "research",
+      "title": "Bernstein Raises ARM Holdings Target on Agentic AI Server CPU Demand; Stock Rebounds 5.9%",
+      "url": "https://www.tradingkey.com/news/market-movers/261973571-market-movers-arm-20260617",
+      "source": "TradingKey / Bernstein",
+      "content": "Bernstein raised its ARM price target on June 17, citing growing agentic AI workloads driving server CPU demand. ARM stock rebounded 5.92% on the day, recovering from prior session's -3.6% pullback. ARM is up ~260% YTD."
     }
   ],
   "LRCX": [
@@ -5515,6 +5723,22 @@
       "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/261959450-oracle-record-q4-2026-earnings-report-cloud-data-center-stock-tradingkey",
       "source": "TradingKey",
       "content": "Despite record results, ORCL shares dropped ~12% after-hours as Oracle disclosed plans to raise $40B through debt and equity (including $20B share sale) and revealed capex of $55.7B, stoking concern over capital intensity."
+    },
+    {
+      "date": "2026-06-11",
+      "type": "news",
+      "title": "Microsoft Cancels $3B Oracle Cloud Leasing Arrangement Over Security Concerns",
+      "url": "https://finance.yahoo.com/quote/ORCL/news/",
+      "source": "Yahoo Finance",
+      "content": "Microsoft cancelled a $3 billion Oracle cloud leasing arrangement citing security concerns, a notable setback for Oracle's OCI hyperscaler partnership. The cancellation surfaced days after Oracle's Q4 FY2026 earnings (June 10), contributing to the ~12% post-earnings share decline."
+    },
+    {
+      "date": "2026-06-15",
+      "type": "research",
+      "title": "DA Davidson Raises Oracle Price Target to $225 (from $200) After Q4 Earnings Beat",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/da-davidson-boosts-oracle-orcl-020349200.html",
+      "source": "Yahoo Finance / DA Davidson",
+      "content": "DA Davidson raised its price objective on Oracle from $200 to $225 (Buy maintained), citing Q4 FY2026 beat: revenue $19.18B (+21% YoY), OCI IaaS +93%, RPO backlog $638B. Oracle shares rebounded 5.7% on June 15 following macro tailwinds."
     }
   ],
   "PLTR": [
@@ -5645,6 +5869,14 @@
       "url": "https://www.bloomberg.com/news/articles/2026-06-02/palantir-s-330-million-nhs-deal-under-fire-from-uk-lawmakers",
       "source": "Bloomberg",
       "content": "Bloomberg reported growing bipartisan UK parliamentary pressure on Palantir's £330M NHS contract, citing concerns over patient data privacy, US government ties, and over-reliance on a single American AI vendor."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "research",
+      "title": "Wolfe Research Upgrades Palantir to Peer Perform from Underperform Upon Resuming Coverage",
+      "url": "https://finance.yahoo.com/quote/PLTR/news/",
+      "source": "Yahoo Finance / Wolfe Research",
+      "content": "Wolfe Research upgraded Palantir to Peer Perform from Underperform upon resuming coverage, citing improving fundamentals. PLTR traded between $129.62-$135.00 on June 17."
     }
   ],
   "IREN": [
@@ -5841,6 +6073,14 @@
       "url": "https://www.businesswire.com/news/home/20260610500794/en/KKR-Launches-Helix-Digital-Infrastructure-a-New-Company-to-Finance-and-Deliver-the-Next-Generation-of-AI-Infrastructure",
       "source": "BusinessWire / KKR",
       "content": "KKR (with Kuwait Investment Authority), NVIDIA, and Vistra launched Helix Digital Infrastructure — $10B+ committed capital led by ex-AWS CEO Adam Selipsky. Vistra is preferred power partner to Helix, serving hyperscaler data center power and connectivity needs."
+    },
+    {
+      "date": "2026-06-15",
+      "type": "research",
+      "title": "Seaport Research Raises Vistra Price Target to $230 on AI Data Center Power Demand",
+      "url": "https://finance.yahoo.com/quote/VST/",
+      "source": "Seaport Research / Yahoo Finance",
+      "content": "Seaport Research raised its price target on Vistra Corp (VST) to $230 from $227, maintaining a bullish outlook amid rising AI infrastructure electricity demand."
     }
   ],
   "MPWR": [
@@ -5915,6 +6155,14 @@
       "url": "https://www.globenewswire.com/news-release/2026/06/12/3311305/0/en/Monolithic-Power-Systems-Announces-Second-Quarter-2026-Dividend.html",
       "source": "GlobeNewswire",
       "content": "MPWR declared Q2 2026 dividend of $2.00/share (payable July 15) and signaled 30-40% growth in enterprise data segment for 2026 driven by AI server power management demand. Stock surged 7.91% on June 12 to $1,589.55."
+    },
+    {
+      "date": "2026-06-15",
+      "type": "research",
+      "title": "Analyst Consensus Raises Monolithic Power Systems Price Target 27% to ~,797 After Earnings Beat",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/analysts-upgrading-monolithic-power-systems-132737384.html",
+      "source": "Yahoo Finance",
+      "content": "Multiple analysts lifted consensus target ~27% to ~,797. Wells Fargo issued Buy on June 9. Stock surged 7.91% on June 12 to ,589.55, up 135%+ from 52-week low. AI power management demand driving momentum."
     }
   ],
   "GLW": [
@@ -6135,6 +6383,22 @@
       "url": "https://investors.credosemi.com/news-events/news/news-details/2026/Credo-Technology-Group-Holding-Ltd-Reports-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results/default.aspx",
       "source": "Credo Technology IR",
       "content": "Credo Q4 FY2026 revenue $437M (+157% YoY), full-year revenue $1.3B+ (+206%). Non-GAAP EPS $1.16 beat $1.02 consensus. Q1 FY2027 guidance $465-475M above estimates. Also announced acquisition of Dust Photonics to expand silicon photonics portfolio. Mizuho raised PT to $290."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "announcement",
+      "title": "Credo Technology FY2026 Annual Results: Revenue Triples to ~.3B; Q4 37M Revenue (+157% YoY)",
+      "url": "https://www.insidermonkey.com/blog/credo-technology-crdo-reports-record-fy26-results-with-triple-digit-revenue-growth-1783881/",
+      "source": "Insider Monkey",
+      "content": "Credo reported record FY2026 results with revenue tripling to ~.3B. Q4 FY26: \u001fM revenue (+157% YoY), GAAP gross margin ~68%, EBIT margin ~35.6%. Q1 FY27 guided 5-=M. AEC cables and optical DSPs are key growth drivers."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "research",
+      "title": "Roth 00, Jefferies 70, Goldman 50 — Wave of CRDO Price Target Raises After Record FY26 Beat",
+      "url": "https://stockstotrade.com/news/credo-technology-group-holding-ltd-crdo-news-2026_06_17/",
+      "source": "StocksToTrade",
+      "content": "CRDO up 5.32% on June 17 after analyst upgrades. Roth PT \u0000 from \u0000; Jefferies 8; Mizuho 90; JPMorgan (; Goldman Sachs ( from 8. Q1 FY27 guided 5-=M. Strong Buy consensus, avg PT ..30."
     }
   ],
   "ALAB": [
@@ -7057,6 +7321,14 @@
       "url": "https://www.stocktitan.net/news/ASX/ase-technology-holding-co-ltd-announces-monthly-net-j5yv6gc48gq3.html",
       "source": "Stock Titan / SEC 6-K",
       "content": "ASE Technology reported May 2026 net revenue NT$63,033M (+28.6% YoY), driven by advanced packaging demand for AI accelerators and data center HPC chips. Shares surged 7.3% the following day on 310mm panel-level packaging line ramp expected H1 2027."
+    },
+    {
+      "date": "2026-06-15",
+      "type": "research",
+      "title": "UBS Upgrades ASE Technology to Buy; Consensus Target $38.65 on AI Packaging Transformation",
+      "url": "https://simplywall.st/stocks/us/semiconductors/nyse-asx/ase-technology-holding/future",
+      "source": "Simply Wall St / UBS",
+      "content": "UBS issued a Buy upgrade on ASE Technology. Analyst consensus: 'Strong Buy' with 12-month average target of $38.65. Upgrade reflects ASE's growing role as a critical AI infrastructure provider via advanced semiconductor packaging for AI accelerators."
     }
   ],
   "AMKR": [
@@ -7213,6 +7485,14 @@
       "url": "https://investors.teradyne.com/financial-results",
       "source": "Teradyne IR",
       "content": "Teradyne introduced Integrated Test Solution for AI and data center devices in collaboration with Tokyo Electron, targeting high-throughput test of AI accelerators, HBM memory, and advanced logic devices."
+    },
+    {
+      "date": "2026-06-16",
+      "type": "announcement",
+      "title": "Teradyne Robotics to Showcase Physical AI at Automate 2026 (June 22-25, Chicago)",
+      "url": "https://www.stocktitan.net/news/TER/teradyne-robotics-unveils-wide-range-of-production-ready-physical-ai-ohcoj1z0qp1w.html",
+      "source": "StockTitan",
+      "content": "Teradyne Robotics will demonstrate production-ready physical AI automation at Automate 2026 in Chicago (June 22-25), including the MiR1200 Pallet Jack described as its 'first physical AI product'."
     }
   ],
   "NOW": [
