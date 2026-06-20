@@ -893,6 +893,14 @@
       "url": "https://finance.yahoo.com/quote/INTC/news/",
       "source": "Yahoo Finance / Bernstein",
       "content": "Bernstein raised Intel price target from \u0005 to \u0000, citing growing conviction in Intel's 18A execution and AI/foundry strategy. INTC had hit an all-time high of \u001a.46 on June 15."
+    },
+    {
+      "date": "2026-06-18",
+      "type": "announcement",
+      "title": "Intel Names Seok-Hee Lee (Ex-SK Hynix CEO) as EVP of Intel Foundry to Lead Advanced Packaging",
+      "url": "https://newsroom.intel.com/corporate/intel-announces-leadership-appointment-at-intel-foundry-to-accelerate-development-and-manufacturing",
+      "source": "Intel Newsroom",
+      "content": "Intel appointed Seok-Hee Lee, former CEO of SK hynix and SK On, as Executive VP of Intel Foundry responsible for advanced packaging, system integration, and back-end manufacturing. EVP Navid Shahriari retires after 37 years. Part of CEO Lip-Bu Tan's foundry restructuring to accelerate 18A and 14A ramp."
     }
   ],
   "QCOM": [
@@ -1055,6 +1063,14 @@
       "url": "https://www.theregister.com/systems/2026/06/16/qualcomm-said-to-be-circling-ai-chip-biz-tenstorrent-in-10b-risc-v-power-play/5256084",
       "source": "The Register / GuruFocus",
       "content": "Qualcomm reportedly in advanced discussions to acquire Tenstorrent, a RISC-V AI chip startup founded by Jim Keller, for $8-10B. Would accelerate Qualcomm push into data-center AI accelerators ahead of June 24 Investor Day."
+    },
+    {
+      "date": "2026-06-19",
+      "type": "news",
+      "title": "Qualcomm +6.2% on June 19 as JPMorgan Raises Target to $265; Hyperscaler Custom Silicon Deal Pre-Confirmed Ahead of Investor Day",
+      "url": "https://www.tradingkey.com/news/market-movers/261978257-market-movers-qcom-20260619",
+      "source": "TradingKey / JPMorgan",
+      "content": "QCOM rose 6.17% on June 19 ahead of its June 24 Investor Day in New York. JPMorgan raised its target to $265 and placed QCOM on Positive Catalyst Watch. Qualcomm has pre-announced that a custom silicon engagement with a leading hyperscaler (announced June 18) is already beginning to ship in late 2026. Investor Day to detail data center, physical AI, agentic AI, and 6G roadmaps."
     }
   ],
   "MRVL": [
@@ -1541,6 +1557,14 @@
       "url": "https://sg.finance.yahoo.com/news/tsmc-amkor-technology-announce-long-130000168.html",
       "source": "Yahoo Finance / PR Newswire",
       "content": "TSMC and Amkor Technology announced a 10-year agreement to expand advanced semiconductor packaging and testing in Arizona. Amkor's large-scale campus in Peoria, AZ targets 2028 operations; deal supports a complete domestic chip supply chain as part of TSMC's U.S. investment strategy."
+    },
+    {
+      "date": "2026-06-18",
+      "type": "policy",
+      "title": "Republican Lawmakers Urge ITC to Block Imports of TSMC Chips Over UMC Patent Infringement; Ruling Imminent",
+      "url": "https://www.tomshardware.com/tech-industry/republican-lawmakers-urge-itc-to-block-imports-of-infringing-tsmc-chips-as-patent-ruling-imminent",
+      "source": "Tom's Hardware",
+      "content": "US Republican lawmakers sent letters urging the ITC to block imports of TSMC-manufactured chips (Apple, Qualcomm, Broadcom named as respondents) found to infringe five patents held by United Microelectronics Corporation (UMC). A preliminary ITC ruling is imminent and could result in an import ban affecting AI-accelerator chips."
     }
   ],
   "ASML": [
@@ -1735,6 +1759,14 @@
       "url": "https://www.tradingkey.com/analysis/stocks/more/261962611-spacex-ipo-asml-musk-spcx-tradingkey",
       "source": "TradingKey",
       "content": "ASML surged on June 17 after SpaceX IPO proceeds funded Elon Musk's Terafab semiconductor project — a $55B initial investment by SpaceX, Tesla, and xAI to build a 2nm AI chip fab using ASML's EUV machines, targeting 100-200B AI chips/year. ASML is the sole EUV supplier globally."
+    },
+    {
+      "date": "2026-06-19",
+      "type": "policy",
+      "title": "US Commerce Secretary Alleges ASML EUV Machine Was Transferred to China in Violation of Export Rules; ASML Denies",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-19/us-tells-asml-it-s-concerned-china-may-have-top-chip-tool",
+      "source": "Bloomberg",
+      "content": "US Commerce Secretary Howard Lutnick told ASML senior leaders that one of its top-of-the-line EUV lithography machines may have been transferred to China in violation of export restrictions. Multiple US officials claim to have evidence ASML did not act in good faith. ASML denied the allegations, stating full compliance with all applicable regulations."
     }
   ],
   "AMAT": [
@@ -1857,6 +1889,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/applied-materials-amat-teams-essilorluxottica-211136873.html",
       "source": "Yahoo Finance",
       "content": "Applied Materials and EssilorLuxottica announced partnership to co-develop advanced AR and AI-powered smart eyewear optical systems, extending AMAT materials engineering capabilities into consumer optics."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "research",
+      "title": "Citi Raises Applied Materials Price Target to $290 (Post-Split); Singapore AI Infrastructure Buildout Cited",
+      "url": "https://stockstotrade.com/news/applied-materials-inc-amat-news-2026_06_17/",
+      "source": "StocksToTrade / Citi",
+      "content": "Citi raised its Applied Materials price target (post-10-for-1 split) to $290, joining Cantor Fitzgerald, Barclays, and UBS in lifting targets. Key catalyst cited: accelerating AI infrastructure buildout in Singapore as a near-term demand driver on top of AI-driven WFE capex cycle."
     }
   ],
   "KLAC": [
@@ -1947,6 +1987,22 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/kla-klac-stock-split-strong-041245930.html",
       "source": "Yahoo Finance",
       "content": "U.S. export controls targeting semiconductor equipment to China are estimated to cost KLA $300–$350M in forfeited FY2026 revenue, ongoing headwind despite strong overall AI-driven equipment demand from non-China customers."
+    },
+    {
+      "date": "2026-06-18",
+      "type": "research",
+      "title": "KLA Corp +8.7% on June 18 Following Citi Sector-Wide WFE Price Target Hikes; Post-Split High of $259.56",
+      "url": "https://www.tradingkey.com/news/market-movers/261976856-market-movers-klac-20260618",
+      "source": "TradingKey / Citigroup",
+      "content": "KLAC surged 8.7% on June 18 to $259.56 after Citigroup issued broad price target upgrades across the wafer fab equipment sector, reflecting AI-driven capex demand optimism. Stock extended gains +8.73% on June 19, approaching a new 52-week high."
+    },
+    {
+      "date": "2026-06-19",
+      "type": "research",
+      "title": "Cantor Fitzgerald Raises KLA Corp Target to $2,500 Pre-Split (Overweight); KLAC New 52-Week High $260.62",
+      "url": "https://www.tradingkey.com/news/market-movers/261978193-market-movers-klac-20260619",
+      "source": "TradingKey / Cantor Fitzgerald",
+      "content": "Cantor Fitzgerald lifted its KLAC price target to $2,500 pre-split (Overweight), citing multi-year AI equipment upcycle with booking visibility into 2028. Following a 10-for-1 stock split effective June 12, KLAC hit a new 52-week high of $260.62 on June 19."
     }
   ],
   "ONTO": [
@@ -2369,6 +2425,14 @@
       "url": "https://seekingalpha.com/article/4915106-micron-technology-buy-ahead-of-earnings-preview",
       "source": "Seeking Alpha",
       "content": "Micron guided Q3 FY2026 to record revenue $33.5B ±$0.75B, GAAP gross margin ~81%, non-GAAP diluted EPS $19.15 ±$0.40. Q3 CapEx ~$7.0B. Earnings report scheduled June 24-25."
+    },
+    {
+      "date": "2026-06-18",
+      "type": "research",
+      "title": "Micron Q3 FY2026 Earnings Preview (June 24): Consensus EPS $19.72 on Revenue of $34.52B (+932% YoY)",
+      "url": "https://news.alphastreet.com/micron-technology-q3-2026-earnings-preview-june-24-street-expects-19-72-eps/",
+      "source": "Alphastreet",
+      "content": "31 analysts expect Micron to report Q3 FY2026 EPS of $19.72 on revenue of $34.52B — implying 932% EPS growth YoY vs $1.91 in Q3 FY2025. Micron had guided for record revenue of $33.5B ±$0.75B and ~81% gross margin, driven by sustained HBM demand for AI. Earnings scheduled June 24."
     }
   ],
   "SNDK": [
@@ -3019,6 +3083,22 @@
       "url": "https://www.tradingkey.com/news/market-movers/261974013-market-movers-msft-20260617",
       "source": "TradingKey",
       "content": "Multiple investor rights firms filed a securities class-action lawsuit against Microsoft, alleging executives concealed Azure cloud growth deceleration, hid massive AI capex requirements, and downplayed structural issues with Copilot. MSFT dropped 3.13% on June 17."
+    },
+    {
+      "date": "2026-06-18",
+      "type": "news",
+      "title": "Multiple Securities Class Action Lawsuits Filed Against Microsoft Over Alleged Copilot AI Misrepresentation",
+      "url": "https://www.cnbc.com/quotes/MSFT",
+      "source": "CNBC",
+      "content": "Class action lawsuits were filed on June 18 alleging Microsoft made material misrepresentations about Microsoft Copilot's AI capabilities, contributing to a significant stock decline (~10%) on the day. Investors claim the company overstated Copilot's functionality and enterprise adoption."
+    },
+    {
+      "date": "2026-06-18",
+      "type": "announcement",
+      "title": "Microsoft Deploys M365 Copilot to 505,000 NHS England Clinicians; Saves Average 43 Minutes/Day on Admin",
+      "url": "https://news.microsoft.com/source/view-all/",
+      "source": "Microsoft Newsroom",
+      "content": "Microsoft announced deployment of Microsoft 365 Copilot across NHS England covering 505,000 clinicians and support staff. Trial data showed Copilot saved an average of 43 minutes of administrative time per person per day, representing a major healthcare AI deployment milestone."
     }
   ],
   "GOOGL": [
@@ -3245,6 +3325,14 @@
       "url": "https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Upsize-and-Pricing-of-84-75-Billion-Equity-Capital-Raise-to-Expand-AI-Infrastructure--and-Compute-2026-QzN3D9yMAj/default.aspx",
       "source": "Alphabet Investor Relations",
       "content": "Alphabet priced its equity offering at \u0004.75B (above \u0000B original target) to fund AI infrastructure. Plans 80-190B capex in 2026, 6x 2022 levels. Combined debt exceeds \u0000B."
+    },
+    {
+      "date": "2026-06-19",
+      "type": "news",
+      "title": "Waymo Recalls ~3,900 Robotaxis After Software Glitch Discovered; NHTSA Investigation Opened",
+      "url": "https://www.cnbc.com/quotes/GOOGL",
+      "source": "CNBC",
+      "content": "Alphabet's Waymo unit issued a software recall affecting approximately 3,900 robotaxis due to a software glitch that could affect safe vehicle operation. The recall is a significant safety and regulatory event for Alphabet's autonomous vehicle division, which is the market leader in commercial robotaxi services."
     }
   ],
   "AMZN": [
@@ -3625,6 +3713,22 @@
       "url": "https://about.fb.com/news/2026/06/meta-ai-business-agents-enterprise/",
       "source": "Meta Newsroom",
       "content": "Meta expanded AI business agent capabilities with automatic customer responses, lead qualification, and appointment booking. New integrations with Shopify and Zendesk for enterprise customers announced in mid-June."
+    },
+    {
+      "date": "2026-06-18",
+      "type": "policy",
+      "title": "US Appeals Court Allows Ohio Parental Consent Law for Under-16 Social Media Users; Affects Meta's Instagram, Facebook",
+      "url": "https://www.cnbc.com/quotes/META",
+      "source": "CNBC",
+      "content": "A US appeals court ruled Ohio can enforce a law requiring parental consent before users under 16 can access social media platforms. The ruling affects Meta's Instagram, Facebook, and Threads and could set precedent for similar laws across other states, creating significant regulatory compliance burden."
+    },
+    {
+      "date": "2026-06-18",
+      "type": "news",
+      "title": "Child Safety Lawsuit Against Meta Allowed to Proceed; AI Data Center Deal Advances Simultaneously",
+      "url": "https://finviz.com/news/303805/meta-platforms-meta-child-safety-lawsuit-proceeds-as-ai-data-center-deal-advances",
+      "source": "Finviz / Court Filing",
+      "content": "A court ruled a child safety lawsuit against Meta can proceed, citing alleged harm caused by Meta's platforms to minors. Simultaneously, Meta advanced a major new AI data center infrastructure deal, illustrating the company's dual legal exposure and AI expansion push."
     }
   ],
   "AAPL": [
@@ -3795,6 +3899,14 @@
       "url": "https://finance.yahoo.com/quote/AAPL/news/",
       "source": "Yahoo Finance",
       "content": "Reports in mid-June 2026 confirmed Apple is preparing camera-equipped AirPods and a second-generation foldable iPhone for 2027, one of Apple's largest product pushes. Shares near $295 (vs ~$317 WWDC peak) on Siri exclusion from Europe/China (~35% of shipments)."
+    },
+    {
+      "date": "2026-06-18",
+      "type": "announcement",
+      "title": "Apple and Intel Announce US Chip Manufacturing Collaboration Following Trump Administration Push for Domestic Production",
+      "url": "https://www.cnbc.com/quotes/AAPL",
+      "source": "CNBC",
+      "content": "Apple announced a collaboration with Intel on US-based chip manufacturing, spurred by the Trump administration's domestic semiconductor manufacturing push. The partnership is seen as a milestone for domestic chip supply chain and boosted Intel shares ~9% on the announcement."
     }
   ],
   "TSLA": [
@@ -3973,6 +4085,14 @@
       "url": "https://www.sec.gov/Archives/edgar/data/0001318605/000162828026026673/tsla-20260331.htm",
       "source": "SEC 10-Q / Capital.com",
       "content": "Tesla raised its 2026 capital expenditure guidance to approximately $25 billion (up from $20B), directed toward AI compute infrastructure and robotaxi fleet buildout."
+    },
+    {
+      "date": "2026-06-18",
+      "type": "policy",
+      "title": "Tesla FSD Wins Regulatory Approval in Denmark; Faces Potential EU-Wide Block After Swedish Warning on Speed Limits",
+      "url": "https://www.notateslaapp.com/",
+      "source": "Not a Tesla App / CNBC",
+      "content": "Tesla's Full Self-Driving (FSD) software received regulatory approval in Denmark. However, EU-wide deployment faces a significant hurdle after Swedish regulators issued a formal warning about FSD's handling of speed limit features, potentially triggering a bloc-wide block that would bar FSD across all 27 EU member states."
     }
   ],
   "CRWV": [
@@ -4143,6 +4263,14 @@
       "url": "https://moneymorning.com/2026/06/17/coreweave-crwv-stock-nasdaq-100-june-2026",
       "source": "Money Morning",
       "content": "CoreWeave management guided contracted backlog to grow from ~$100B (March 2026) to $131B by end of Q2 2026, reflecting surging demand for AI compute infrastructure."
+    },
+    {
+      "date": "2026-06-18",
+      "type": "news",
+      "title": "CoreWeave Contracted Backlog Tops $99.4B with $32B in Recent Additions; 2026 Revenue Guidance $12-13B; Joins Nasdaq-100 June 22",
+      "url": "https://247wallst.com/investing/2026/06/18/coreweave-just-added-32-billion-to-its-ai-backlog-ahead-of-joining-the-nasdaq-100-is-crwv-a-buy-at-117/",
+      "source": "24/7 Wall St.",
+      "content": "CoreWeave enters Nasdaq-100 (effective June 22) with $99.4B contracted revenue backlog, including $32B in new commitments added recently and $40B+ signed in Q1 alone. FY2026 management guidance: $12-13B revenue with an exit run rate of $18-19B; 2027 run rate targeted above $30B (75%+ already contracted). Major commitments: $21B Meta, $6B Jane Street, $2.2B Chicago hyperscale data center."
     }
   ],
   "CEG": [
@@ -5475,6 +5603,14 @@
       "url": "https://simplywall.st/stocks/us/tech/nyse-anet/arista-networks/news/analyst-upgrades-highlight-arista-networks-ai-growth-and-val",
       "source": "Simply Wall St / MarketBeat",
       "content": "Morgan Stanley maintained Overweight and raised ANET price target, citing strong AI inference-stage positioning. Q1 2026 revenue $2.71B beat estimates by 3.4%. FY2026 revenue outlook raised to $11.5B, AI networking to $3.5B."
+    },
+    {
+      "date": "2026-06-18",
+      "type": "research",
+      "title": "KeyBanc and BofA Both Raise Arista Networks Price Target to $200; AI Networking Demand Drives +3% Stock Gain",
+      "url": "https://www.gurufocus.com/news/8922852/arista-networks-anet-price-target-raised-to-200-amid-ai-demand-surge",
+      "source": "KeyBanc Capital Markets / GuruFocus",
+      "content": "KeyBanc Capital raised Arista Networks price target to $200 from $178 (Overweight) on June 18, followed by Bank of America also raising to $200. Both cited strong AI networking demand and solid revenue growth prospects (~28% for 2026). ANET shares rose 3.06%. Catalyst: management meeting feedback indicated healthy AI infrastructure spend outlook."
     }
   ],
   "ARM": [
@@ -6059,6 +6195,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/da-davidson-boosts-oracle-orcl-020349200.html",
       "source": "Yahoo Finance / DA Davidson",
       "content": "DA Davidson raised its price objective on Oracle from $200 to $225 (Buy maintained), citing Q4 FY2026 beat: revenue $19.18B (+21% YoY), OCI IaaS +93%, RPO backlog $638B. Oracle shares rebounded 5.7% on June 15 following macro tailwinds."
+    },
+    {
+      "date": "2026-06-18",
+      "type": "research",
+      "title": "Oracle Rebounds ~6% as Analysts Including Mizuho Reaffirm Outperform; Debate on $638B RPO vs $95B CapEx Continues",
+      "url": "https://www.quiverquant.com/news/Oracle+Corporation+Stock+(ORCL)+Opinions+on+Earnings+and+AI+Capex+Plans",
+      "source": "Quiver Quantitative / Mizuho",
+      "content": "Oracle shares rose ~6% around June 18 after steep post-earnings selloff. Mizuho reiterated Outperform with $320 target, citing strong IaaS growth momentum. Analyst debate centers on whether $638B RPO backlog (including $300B OpenAI 5-year deal) justifies aggressive $95B FY2027 capex and $40B debt/equity capital raise."
     }
   ],
   "PLTR": [
@@ -6637,6 +6781,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/261971091-market-movers-glw-20260616",
       "source": "TradingKey",
       "content": "GLW dropped 4.31% on June 16 on analyst downgrades to Hold citing P/E near 90x (double 5-year median). Solar division production delays added ~$30M in quarterly expenses. CEO recently sold 100,000 shares ($18.6M)."
+    },
+    {
+      "date": "2026-06-19",
+      "type": "news",
+      "title": "Corning Surges +8% June 18, +11.2% June 19 on Amazon Fiber Deal Momentum; Insiders Sell $30.7M of Stock",
+      "url": "https://www.tradingkey.com/news/market-movers/261978316-market-movers-glw-20260619",
+      "source": "TradingKey / SEC Filings",
+      "content": "Corning shares continued their post-Amazon deal surge, rising 8% on June 18 and 11.2% on June 19, extending the rally from the multi-billion dollar Amazon optical fiber supply agreement. Concurrently, SEC filings disclosed that corporate insiders sold 160,655 shares valued at $30.7M+ in mid-June, a notable insider activity signal."
     }
   ],
   "CRDO": [
@@ -8015,6 +8167,14 @@
       "url": "https://www.gurufocus.com/news/8918544/servicenow-now-expands-ai-integration-with-digimarcs-verification-capabilities",
       "source": "GuruFocus",
       "content": "Digimarc will enhance provenance and verification tools within ServiceNow, enabling AI agents to cryptographically verify their outputs upon creation, targeting AI governance use cases."
+    },
+    {
+      "date": "2026-06-17",
+      "type": "announcement",
+      "title": "ServiceNow Expands Agentic AI Ecosystem: Wipro Deployment, Digimarc Verification, Microsoft Governance, NVIDIA Desktop Agent",
+      "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-expands-AI-agent-governance-through-deeper-integration-with-Microsoft/default.aspx",
+      "source": "ServiceNow Newsroom",
+      "content": "ServiceNow announced a wave of agentic AI partnerships: Wipro deploying ServiceNow workflows enterprise-wide; Digimarc integrating cryptographic verification into AI agents; deeper Microsoft AI governance integration; and Project Arc with NVIDIA — an autonomous desktop AI agent governed through ServiceNow AI Control Tower. Reinforces ServiceNow as the enterprise AI orchestration backbone."
     }
   ],
   "CRM": [
