@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-06-14",
+    "updated": "2026-06-21",
     "note": "AI CapEx 产业链 8 层框架. 财报数据自然季度 (2025Q2→2026Q1). 单位 rev=亿$.",
     "categories": {
       "core_chip": "L1 算力芯片 & 加速器",
@@ -569,16 +569,25 @@
       },
       {
         "q": "2026Q1",
+        "rev": 22.2,
+        "gm": 51.7,
+        "nm": 17.85,
+        "src": "A",
+        "source_url": "https://investor.marvell.com/news-events/press-releases/detail/1011/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2026-financial-results",
+        "note": "MRVL Q4 FY2026 ended Jan 31 2026 (reported Mar 5 2026): revenue $2.219B, GAAP gross profit $1.147B (51.7%), GAAP net income $0.396B"
+      },
+      {
+        "q": "2026Q2",
         "rev": 24.2,
         "gm": 52.15,
         "nm": 1.43,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000019/0001835632-26-000019-index.html",
-        "note": "SEC Companyfacts CY2026Q1: revenue $2.418B, gross profit $1.261B, net income $0.035B"
+        "note": "MRVL Q1 FY2027 ended May 3 2026 (reported May 27 2026): revenue $2.418B, GAAP gross profit $1.261B (52.1%), GAAP net income $0.035B"
       }
     ],
     "q2_outlook": {
-      "q": "2026Q2",
+      "q": "2026Q3",
       "rev_estimate": 27,
       "yoy_pct": null,
       "gm_estimate": null,
@@ -1244,6 +1253,15 @@
         "src": "A",
         "note": "SEC Companyfacts CY2026Q1: revenue $2.276B, gross profit $1.646B, net income $0.017B",
         "source_url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000018/0000883241-26-000018-index.html"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 22.8,
+        "gm": 72.33,
+        "nm": 0.75,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000018/0000883241-26-000018-index.html",
+        "note": "SNPS Q2 FY2026 ended Apr 30 2026 (reported May 27 2026): revenue $2.276B, GAAP gross profit $1.646B (72.3%), GAAP net income $0.017B"
       }
     ],
     "q2_outlook": {
