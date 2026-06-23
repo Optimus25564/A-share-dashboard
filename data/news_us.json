@@ -247,6 +247,14 @@
       "url": "https://nvidianews.nvidia.com/news/hpe-discover-ai-infrastructure-partnership-2026",
       "source": "NVIDIA Newsroom",
       "content": "At HPE Discover Las Vegas (June 16-18), NVIDIA and HPE announced expanded AI infrastructure collaboration. Cloud provider Vultr selected HPE-NVIDIA platform for large-scale AI datacenter deployments."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "announcement",
+      "title": "NVIDIA 2026 Annual Stockholder Meeting Set for June 24; Agenda: Blackwell/Vera Ramp Outlook, Capital Return Plans; Open to Individual Investors Online",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-stockholder-meeting-set-for-june-24-individuals-can-participate-online",
+      "source": "NVIDIA Newsroom",
+      "content": "NVIDIA年度股东大会将于北京时间6月25日凌晨举行，议程包括选举十名董事、批准高管薪酬及审视Blackwell/Vera产能爬坡进展与资本回报计划。任何个人均可线上注册参会。"
     }
   ],
   "AVGO": [
@@ -901,6 +909,14 @@
       "url": "https://newsroom.intel.com/corporate/intel-announces-leadership-appointment-at-intel-foundry-to-accelerate-development-and-manufacturing",
       "source": "Intel Newsroom",
       "content": "Intel appointed Seok-Hee Lee, former CEO of SK hynix and SK On, as Executive VP of Intel Foundry responsible for advanced packaging, system integration, and back-end manufacturing. EVP Navid Shahriari retires after 37 years. Part of CEO Lip-Bu Tan's foundry restructuring to accelerate 18A and 14A ramp."
+    },
+    {
+      "date": "2026-06-18",
+      "type": "announcement",
+      "title": "Trump Announces Apple-Intel US Chip Design and Manufacturing Partnership; INTC Surges 10.5% to All-Time High $135.32 — Neither Company Issues Formal Confirmation",
+      "url": "https://www.cbsnews.com/news/intel-intc-shares-trump-apple-chip-agreement/",
+      "source": "CBS News",
+      "content": "特朗普在Truth Social宣布苹果将与英特尔合作在美国设计制造芯片，英特尔股价盘中涨10.5%触达历史高点$135.32。据报道初期聚焦低量或成熟节点芯片，苹果与英特尔均未正式确认。该消息与18A制程推进背景叠加，提振Foundry业务预期。"
     }
   ],
   "QCOM": [
@@ -1249,6 +1265,14 @@
       "url": "https://investor.marvell.com/news-events/press-releases",
       "source": "Marvell Technology IR",
       "content": "Marvell announced availability of the industry's first 102.4 Tbps switch purpose-built for AI and cloud data-center infrastructure."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "news",
+      "title": "Marvell Officially Joins S&P 500 on June 22 Replacing Campbell's; MRVL Closes +7.27% at $310.58 as Index Funds Complete Forced Purchases",
+      "url": "https://press.spglobal.com/2026-06-05-Marvell-Technology-and-Flex-Set-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600",
+      "source": "S&P Global",
+      "content": "Marvell Technology正式于6月22日纳入S&P 500（取代Campbell's公司），与Flex同步加入。所有追踪标普500的指数基金被迫建仓，叠加NVIDIA CEO黄仁勋称其为下一个万亿美元公司及NVIDIA投资20亿美元，MRVL 2026年迄今累计涨幅达265%。"
     }
   ],
   "APP": [
@@ -1767,6 +1791,14 @@
       "url": "https://www.bloomberg.com/news/articles/2026-06-19/us-tells-asml-it-s-concerned-china-may-have-top-chip-tool",
       "source": "Bloomberg",
       "content": "US Commerce Secretary Howard Lutnick told ASML senior leaders that one of its top-of-the-line EUV lithography machines may have been transferred to China in violation of export restrictions. Multiple US officials claim to have evidence ASML did not act in good faith. ASML denied the allegations, stating full compliance with all applicable regulations."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "policy",
+      "title": "ASML Denies EUV Machine in China; US BIS Escalates with Evidence of Components and Transport Equipment; Applied Materials $252.5M Penalty Sets Enforcement Precedent",
+      "url": "https://www.techtimes.com/articles/318852/20260622/asml-euv-components-china-us-cites-shipment-evidence-bis-enforcement-looms.htm",
+      "source": "TechTimes / Bloomberg",
+      "content": "ASML否认向中国出口EUV整机，但美国商务部BIS称掌握EUV组件及运输设备证据，较整机违规更具可执行性。2026年2月Applied Materials因类似违规被罚$2.525亿，被视为ASML可能面临的先例。荷兰ASML股价承压。"
     }
   ],
   "AMAT": [
@@ -2433,6 +2465,14 @@
       "url": "https://news.alphastreet.com/micron-technology-q3-2026-earnings-preview-june-24-street-expects-19-72-eps/",
       "source": "Alphastreet",
       "content": "31 analysts expect Micron to report Q3 FY2026 EPS of $19.72 on revenue of $34.52B — implying 932% EPS growth YoY vs $1.91 in Q3 FY2025. Micron had guided for record revenue of $33.5B ±$0.75B and ~81% gross margin, driven by sustained HBM demand for AI. Earnings scheduled June 24."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "announcement",
+      "title": "Micron and Anthropic Sign Strategic Partnership: AI Memory Supply Agreement, Claude Enterprise Deployment at Micron, Series H Investment",
+      "url": "https://investors.micron.com/news-releases/news-release-details/micron-and-anthropic-announce-strategic-agreement-scale-next",
+      "source": "Micron Investor Relations",
+      "content": "美光与Anthropic签署战略合作：①共同评估HBM/NAND在LLM训练推理中的架构；②美光数据中心产品组合长期供货协议；③美光企业内部部署Claude加速工程/制造；④美光参与Anthropic Series H融资。MU盘前涨逾4%。美光Q3 FY2026财报将于6月24日发布。"
     }
   ],
   "SNDK": [
@@ -2579,6 +2619,14 @@
       "url": "https://www.tipranks.com/news/why-is-sandisk-stock-sndk-rising-today-6-17-2026",
       "source": "TipRanks / Cantor Fitzgerald",
       "content": "Cantor Fitzgerald's CJ Muse raised SNDK target to ,900 from ,800 (45.6% upside implied). AI memory demand, 2026 capacity fully sold out with \u0002B contracts, and strong 2027 booking strength cited."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "announcement",
+      "title": "Western Digital Completes Full Divestiture of 1.04M SNDK Shares (~$2.2B) via Private Share Swap on June 22; SanDisk Fully Independent Public Company",
+      "url": "https://www.gurufocus.com/news/8913924/western-digital-wdc-to-exchange-104m-sandisk-shares",
+      "source": "GuruFocus / SEC Filing",
+      "content": "西部数据（WDC）于6月22日通过私人股权置换方式，将所持全部1,038,681股SanDisk（SNDK）股份（市值逾$22亿）出售给机构投资者，完成SanDisk的彻底剥离。SNDK当日开盘涨5.09%，成为完全独立的上市公司，专注AI NAND存储器业务。"
     }
   ],
   "COHR": [
@@ -3333,6 +3381,14 @@
       "url": "https://www.cnbc.com/quotes/GOOGL",
       "source": "CNBC",
       "content": "Alphabet's Waymo unit issued a software recall affecting approximately 3,900 robotaxis due to a software glitch that could affect safe vehicle operation. The recall is a significant safety and regulatory event for Alphabet's autonomous vehicle division, which is the market leader in commercial robotaxi services."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "news",
+      "title": "Alphabet Developing TPU v9 \"Triggerfish\" Next-Gen AI Chip Exclusively with MediaTek; Targets Superior Inference vs Current TPU v9; GOOGL Stock Dips Pre-Market",
+      "url": "https://finance.yahoo.com/technology/ai/articles/googl-stock-dips-premarket-breakout-080934887.html",
+      "source": "Yahoo Finance",
+      "content": "Alphabet正在与联发科（MediaTek）独家合作开发TPU v9升级版AI芯片（代号Triggerfish），重点强化推理能力，建立在现有TPU v9基础上。这延续了Google自研AI芯片战略，减少对NVIDIA依赖。GOOGL盘前股价小幅回调。"
     }
   ],
   "AMZN": [
@@ -3511,6 +3567,22 @@
       "url": "https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-le03-100-satellites",
       "source": "About Amazon",
       "content": "Amazon's Project Kuiper LE-03 mission from Kourou, French Guiana marks 100 Amazon Leo satellites launched in under five months across three missions. Milestone escalates competition with SpaceX Starlink in broadband satellite services."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "news",
+      "title": "Amazon Exploring Selling Custom Trainium AI Chips to Third-Party Customers Beyond AWS; Would Enter NVIDIA-Dominated Enterprise AI Chip Market",
+      "url": "https://finance.yahoo.com/quote/AMZN/press-releases/",
+      "source": "Yahoo Finance",
+      "content": "据报道亚马逊正研究将自研Trainium AI芯片销售给第三方企业客户，不再局限于AWS内部。若成功，将直接进入NVIDIA主导的企业AI加速器市场，对AI算力格局产生重大影响。"
+    },
+    {
+      "date": "2026-06-23",
+      "type": "news",
+      "title": "Amazon Prime Day 2026 Launches June 23-26; Earliest Since 2021; AI-Powered Personalization Deployed; Walmart Intensifies Competition",
+      "url": "https://www.nbcnews.com/select/shopping/amazon-prime-day-dates-2026-rcna347962",
+      "source": "NBC News",
+      "content": "Amazon Prime Day 2026于6月23日至26日举行，为2021年以来最早。AMZN利用AI个性化推荐提升转化率，沃尔玛同期推出大额电子产品折扣展开竞争。Prime Day通常是AMZN季度GMV重要驱动因素。"
     }
   ],
   "META": [
@@ -3729,6 +3801,22 @@
       "url": "https://finviz.com/news/303805/meta-platforms-meta-child-safety-lawsuit-proceeds-as-ai-data-center-deal-advances",
       "source": "Finviz / Court Filing",
       "content": "A court ruled a child safety lawsuit against Meta can proceed, citing alleged harm caused by Meta's platforms to minors. Simultaneously, Meta advanced a major new AI data center infrastructure deal, illustrating the company's dual legal exposure and AI expansion push."
+    },
+    {
+      "date": "2026-06-20",
+      "type": "news",
+      "title": "Meta Secures 1.6 GW AI Computing Capacity from Crusoe Data Centers in Texas and Missouri; Part of $600B AI Infrastructure Plan Through 2028",
+      "url": "https://techgolly.com/news/meta-secures-1-6-gigawatts-of-ai-computing-power-from-crusoe-data-centers",
+      "source": "TechGolly / Reuters",
+      "content": "Meta与数据中心开发商Crusoe签署协议，获取约1.6吉瓦AI算力（分布于德克萨斯Childress和密苏里Warrenton两处）。Crusoe将提供可再生能源及移动能源方案。Meta承诺2028年前在AI基础设施上总投入高达$6000亿。"
+    },
+    {
+      "date": "2026-06-21",
+      "type": "news",
+      "title": "Meta AI for Work Division Chief Emily Dalton Smith Departs; Key Executive Behind Internal Enterprise AI Tooling Exits Amid Reorganization",
+      "url": "https://finance.yahoo.com/quote/META/news/",
+      "source": "The Information / Yahoo Finance",
+      "content": "Meta AI for Work部门负责人Emily Dalton Smith离职，其团队主导企业内部AI工具及Copilot类产品研发。此次人事变动被部分投资者视为Meta内部AI战略调整信号，叠加Crusoe算力扩张消息，市场关注Meta AI组织架构走向。"
     }
   ],
   "AAPL": [
@@ -5341,6 +5429,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/rklb-stock-jumps-overnight-retail-054849541.html",
       "source": "Yahoo Finance",
       "content": "Rocket Lab delayed its 90th Electron launch ('Ten Owl Of Ten' for Synspective) from June 18 NZT target for additional pre-flight checkouts. 17 remaining Synspective missions contracted through 2030 remain on schedule."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "news",
+      "title": "Rocket Lab Joins Nasdaq-100 on June 22; Stock Drops 9.6% on Profit-Taking After Pre-Index Rally; Motiv Space Systems Acquisition Complete",
+      "url": "https://simplywall.st/stocks/us/capital-goods/nasdaq-rklb/rocket-lab/news/rocket-lab-rklb-joins-the-nasdaq-100-as-motiv-deal-reshapes",
+      "source": "Simply Wall St",
+      "content": "Rocket Lab正式纳入Nasdaq-100（6月22日），但当日股价下跌9.6%（盘中区间$96.50-$107.72）——典型的消息兑现卖出反应。同时，太空机器人公司Motiv Space Systems收购完成，拓展卫星系统能力。"
     }
   ],
   "HUBB": [
@@ -7025,6 +7121,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/astera-labs-targets-core-ai-071110284.html",
       "source": "Yahoo Finance",
       "content": "Ahead of Nasdaq-100 entry June 22, Astera Labs highlighted Taiwan semiconductor partnership expansions and Scorpio X-Series 320-lane Smart Fabric Switch. Leo memory controller ramping for CXL-attached memory on Microsoft Azure M-series VMs, with KV-cache design win expected in 2027."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "news",
+      "title": "Astera Labs Officially Joins Nasdaq-100 on June 22 Alongside CRWV, MRVL, RKLB, TER, SNDK; Index Rebalancing Creates AI Semiconductor Demand Wave",
+      "url": "https://finance.yahoo.com/quote/ALAB/",
+      "source": "Yahoo Finance / Nasdaq",
+      "content": "Astera Labs正式于6月22日纳入Nasdaq-100指数，与CoreWeave、Marvell、Rocket Lab、Teradyne、SanDisk同批加入，共同构成一波AI半导体/基础设施指数化买入潮。Astera Q1 2026营收$3.08亿（+93% YoY），Scorpio X系列320通道AI交换芯片出货中。"
     }
   ],
   "CIEN": [
@@ -8069,6 +8173,14 @@
       "url": "https://www.stocktitan.net/news/TER/teradyne-robotics-unveils-wide-range-of-production-ready-physical-ai-ohcoj1z0qp1w.html",
       "source": "StockTitan",
       "content": "Teradyne Robotics will demonstrate production-ready physical AI automation at Automate 2026 in Chicago (June 22-25), including the MiR1200 Pallet Jack described as its 'first physical AI product'."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "news",
+      "title": "Teradyne Joins Nasdaq-100 on June 22; Automate 2026 Showcase Kicks Off June 22-25 in Chicago; Physical AI and Robotics Test Platforms Featured",
+      "url": "https://finance.yahoo.com/quote/TER/news/",
+      "source": "Yahoo Finance",
+      "content": "Teradyne正式纳入Nasdaq-100指数（6月22日），同日Automate 2026展会（芝加哥，6月22-25日）开幕，Teradyne Robotics展示物理AI与机器人测试解决方案。TER此前获$1.399亿美国空军合同，AI测试需求持续增长。"
     }
   ],
   "NOW": [
