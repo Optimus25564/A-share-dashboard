@@ -1,54 +1,62 @@
 {
-  "last_run": "2026-06-20T08:30:00+08:00",
-  "run_date": "2026-06-19",
+  "last_run": "2026-06-23T08:46:39+08:00",
+  "run_date": "2026-06-23",
   "market": "US",
-  "is_friday_bar": true,
-  "market_context": {
-    "SPY": {
-      "note": "S&P 500 near ATH zone; QQQ ATH $748.65 on June 2; mild rotation"
-    },
-    "QQQ": {
-      "est_close": 730,
-      "range_52w_low": 523.65,
-      "range_52w_high": 748.65
-    },
-    "week_theme": "AI memory cycle (MU+SNDK ATH); MSFT/META/AVGO pullback from highs"
-  },
   "top5": [
     {
       "code": "MU",
       "name": "Micron",
       "rank": 1,
       "score": 1.194,
-      "signal": "hold"
+      "signal": "hold",
+      "last_close": 1133.99,
+      "ema8_est": "~$900",
+      "ema21_est": "~$650",
+      "last_date": "2026-06-18"
     },
     {
       "code": "NVDA",
       "name": "Nvidia",
       "rank": 2,
       "score": 1.1576,
-      "signal": "buy-fresh"
+      "signal": "sell-warning",
+      "last_close": 210.69,
+      "ema8_est": "~$218",
+      "ema21_est": "~$195",
+      "last_date": "2026-06-18"
     },
     {
       "code": "TSM",
       "name": "TSMC",
       "rank": 3,
       "score": 0.8872,
-      "signal": "hold"
+      "signal": "hold",
+      "last_close": 432.15,
+      "ema8_est": "~$380",
+      "ema21_est": "~$340",
+      "last_date": "2026-06-18"
     },
     {
       "code": "ASML",
       "name": "ASML",
       "rank": 4,
       "score": 0.7935,
-      "signal": "hold"
+      "signal": "hold",
+      "last_close": 1867.83,
+      "ema8_est": "~$1620",
+      "ema21_est": "~$1350",
+      "last_date": "2026-06-18"
     },
     {
       "code": "META",
       "name": "Meta Platforms",
       "rank": 5,
       "score": 0.6482,
-      "signal": "sell-confirmed"
+      "signal": "sell-warning",
+      "last_close": 577.22,
+      "ema8_est": "~$620",
+      "ema21_est": "~$680",
+      "last_date": "2026-06-18"
     }
   ],
   "candidates": [
@@ -57,394 +65,193 @@
       "name": "Sandisk",
       "rank": 6,
       "score": 0.5808,
-      "signal": "hold"
+      "signal": "hold",
+      "last_close": 2184.75,
+      "ema8_est": "~$1500",
+      "ema21_est": "~$900",
+      "last_date": "2026-06-18"
     },
     {
       "code": "AVGO",
       "name": "Broadcom",
       "rank": 7,
       "score": 0.5579,
-      "signal": "sell-confirmed"
+      "signal": "sell-warning",
+      "last_close": 411.35,
+      "ema8_est": "~$453",
+      "ema21_est": "~$420",
+      "last_date": "2026-06-18"
     },
     {
       "code": "GOOGL",
       "name": "Alphabet",
       "rank": 8,
       "score": 0.4822,
-      "signal": "buy-fresh"
+      "signal": "hold",
+      "last_close": 348.78,
+      "ema8_est": "~$355",
+      "ema21_est": "~$335",
+      "last_date": "2026-06-18"
     },
     {
       "code": "AMD",
       "name": "AMD",
       "rank": 9,
       "score": 0.2721,
-      "signal": "hold"
+      "signal": "hold",
+      "last_close": 537.37,
+      "ema8_est": "~$470",
+      "ema21_est": "~$390",
+      "last_date": "2026-06-18"
     },
     {
       "code": "MSFT",
       "name": "Microsoft",
       "rank": 10,
       "score": 0.2654,
-      "signal": "sell-confirmed"
+      "signal": "sell-warning",
+      "last_close": 379.1,
+      "ema8_est": "~$408",
+      "ema21_est": "~$445",
+      "last_date": "2026-06-18"
     }
   ],
   "signals": {
     "MU": "hold",
-    "NVDA": "buy-fresh",
+    "NVDA": "sell-warning",
     "TSM": "hold",
     "ASML": "hold",
-    "META": "sell-confirmed",
+    "META": "sell-warning",
     "SNDK": "hold",
-    "AVGO": "sell-confirmed",
-    "GOOGL": "buy-fresh",
+    "AVGO": "sell-warning",
+    "GOOGL": "hold",
     "AMD": "hold",
-    "MSFT": "sell-confirmed"
+    "MSFT": "sell-warning"
   },
-  "signal_detail": {
+  "ema_notes": {
     "MU": {
-      "close": 1151.8,
-      "low": 1086.71,
-      "ema8": 813.54,
-      "ema21": 517.93,
-      "close_vs_ema8_pct": 41.58,
-      "buy_zone_upper": 829.81
+      "close": 1133.99,
+      "ema8_est": "~$900",
+      "ema21_est": "~$650",
+      "last_date": "2026-06-18"
     },
     "NVDA": {
-      "close": 210.33,
-      "low": 206.5,
-      "ema8": 207.9,
-      "ema21": 185.98,
-      "close_vs_ema8_pct": 1.17,
-      "buy_zone_upper": 212.06
+      "close": 210.69,
+      "ema8_est": "~$218",
+      "ema21_est": "~$195",
+      "last_date": "2026-06-18"
     },
     "TSM": {
-      "close": 462.12,
-      "low": 432.0,
-      "ema8": 401.96,
-      "ema21": 309.78,
-      "close_vs_ema8_pct": 14.97,
-      "buy_zone_upper": 410.0
+      "close": 432.15,
+      "ema8_est": "~$380",
+      "ema21_est": "~$340",
+      "last_date": "2026-06-18"
     },
     "ASML": {
       "close": 1867.83,
-      "low": 1840.0,
-      "ema8": 1600.67,
-      "ema21": 1224.35,
-      "close_vs_ema8_pct": 16.69,
-      "buy_zone_upper": 1632.68
+      "ema8_est": "~$1620",
+      "ema21_est": "~$1350",
+      "last_date": "2026-06-18"
     },
     "META": {
-      "close": 574.89,
-      "low": 563.1,
-      "ema8": 654.91,
-      "ema21": 597.72,
-      "close_vs_ema8_pct": -12.22,
-      "buy_zone_upper": 668.01
+      "close": 577.22,
+      "ema8_est": "~$620",
+      "ema21_est": "~$680",
+      "last_date": "2026-06-18"
     },
     "SNDK": {
-      "close": 2100.0,
-      "low": 1990.0,
-      "ema8": 1476.91,
-      "ema21": 837.19,
-      "close_vs_ema8_pct": 42.19,
-      "buy_zone_upper": 1506.45
+      "close": 2184.75,
+      "ema8_est": "~$1500",
+      "ema21_est": "~$900",
+      "last_date": "2026-06-18"
     },
     "AVGO": {
-      "close": 407.0,
-      "low": 402.28,
-      "ema8": 411.84,
-      "ema21": 342.79,
-      "close_vs_ema8_pct": -1.18,
-      "buy_zone_upper": 420.08
+      "close": 411.35,
+      "ema8_est": "~$453",
+      "ema21_est": "~$420",
+      "last_date": "2026-06-18"
     },
     "GOOGL": {
-      "close": 365.05,
-      "low": 356.61,
-      "ema8": 359.83,
-      "ema21": 311.7,
-      "close_vs_ema8_pct": 1.45,
-      "buy_zone_upper": 367.03
+      "close": 348.78,
+      "ema8_est": "~$355",
+      "ema21_est": "~$335",
+      "last_date": "2026-06-18"
     },
     "AMD": {
-      "close": 512.0,
-      "low": 495.0,
-      "ema8": 401.56,
-      "ema21": 273.4,
-      "close_vs_ema8_pct": 27.5,
-      "buy_zone_upper": 409.59
+      "close": 537.37,
+      "ema8_est": "~$470",
+      "ema21_est": "~$390",
+      "last_date": "2026-06-18"
     },
     "MSFT": {
       "close": 379.1,
-      "low": 373.28,
-      "ema8": 405.29,
-      "ema21": 381.98,
-      "close_vs_ema8_pct": -6.46,
-      "buy_zone_upper": 413.4
+      "ema8_est": "~$408",
+      "ema21_est": "~$445",
+      "last_date": "2026-06-18"
     }
   },
-  "sell_alert": [
+  "price_data_sources": {
+    "MU": {
+      "close": 1133.99,
+      "note": "Jun 18 close, ATH $1149.43 intraday; post-earnings to $1211 on Jun 22"
+    },
+    "NVDA": {
+      "close": 210.69,
+      "note": "Jun 18 close; ATH $236.54 May 14; daily 20-EMA ~$215"
+    },
+    "TSM": {
+      "close": 432.15,
+      "note": "Jun 18 implied (Jun 22 was $467.67, prev close $432.15)"
+    },
+    "ASML": {
+      "close": 1867.83,
+      "note": "NASDAQ USD; Jun 22 prev close $1867.83; near ATH"
+    },
+    "META": {
+      "close": 577.22,
+      "note": "Jun 18 close; 52wk high $796.25; sell signals from all MAs"
+    },
+    "SNDK": {
+      "close": 2184.75,
+      "note": "Jun 18 ATH; up 725% YTD; strong uptrend"
+    },
+    "AVGO": {
+      "close": 411.35,
+      "note": "Jun 18 close; 52wk high $495 Jun 3; 50-day EMA $422.9"
+    },
+    "GOOGL": {
+      "close": 348.78,
+      "note": "Jun 22 ~$349; 50-day SMA $367 (above); 200-day SMA $310 (below)"
+    },
+    "AMD": {
+      "close": 537.37,
+      "note": "Jun 18 close; ATH $558.37 Jun 15; up 133% YTD"
+    },
+    "MSFT": {
+      "close": 379.1,
+      "note": "Jun 21 close; 20-day EMA $412.45; below all short-term EMAs"
+    },
+    "SPY": {
+      "close": null,
+      "note": "Not available"
+    },
+    "QQQ": {
+      "close": null,
+      "note": "Not available"
+    }
+  },
+  "benchmark": {
+    "SPY": "data-unavailable",
+    "QQQ": "data-unavailable",
+    "note": "Benchmark data not available this run"
+  },
+  "sell_alerts": [
+    "NVDA",
     "META",
     "AVGO",
     "MSFT"
   ],
-  "buy_alert": [
-    "NVDA",
-    "GOOGL"
-  ],
-  "kline_status": "estimated: stooq/yahoo blocked; EMA propagated from June-05 baseline using 2-bar update; prices from WebSearch (Yahoo/Robinhood/MacroTrends/MidForex)",
-  "sources": "WebSearch: Yahoo Finance / Robinhood / MacroTrends (June 19-20 2026)",
-  "score_details": {
-    "NVDA": {
-      "score": 1.1576,
-      "strategic": 10,
-      "yoy_pct": 45.1,
-      "gm": 74.9,
-      "nm_clipped": 60
-    },
-    "AVGO": {
-      "score": 0.5579,
-      "strategic": 9,
-      "yoy_pct": 20.8,
-      "gm": 77.1,
-      "nm_clipped": 42.0
-    },
-    "AMD": {
-      "score": 0.2721,
-      "strategic": 8,
-      "yoy_pct": 38.0,
-      "gm": 53,
-      "nm_clipped": 13.5
-    },
-    "INTC": {
-      "score": 0.0986,
-      "strategic": 9,
-      "yoy_pct": 8.1,
-      "gm": 39.4,
-      "nm_clipped": -27.2
-    },
-    "QCOM": {
-      "score": -0.6842,
-      "strategic": 6,
-      "yoy_pct": 11.6,
-      "gm": 53.8,
-      "nm_clipped": 60
-    },
-    "MRVL": {
-      "score": -0.4467,
-      "strategic": 7,
-      "yoy_pct": 8.9,
-      "gm": 52.1,
-      "nm_clipped": 1.4
-    },
-    "APP": {
-      "score": -0.0328,
-      "strategic": 6,
-      "yoy_pct": 43.1,
-      "gm": 89.0,
-      "nm_clipped": 60
-    },
-    "TSM": {
-      "score": 0.8872,
-      "strategic": 10,
-      "yoy_pct": 32.1,
-      "gm": 66.2,
-      "nm_clipped": 50.5
-    },
-    "ASML": {
-      "score": 0.7935,
-      "strategic": 10,
-      "yoy_pct": 39.1,
-      "gm": 53,
-      "nm_clipped": 31.8
-    },
-    "AMAT": {
-      "score": -0.1506,
-      "strategic": 8,
-      "yoy_pct": -1.3,
-      "gm": 49.9,
-      "nm_clipped": 35.5
-    },
-    "KLAC": {
-      "score": -0.1023,
-      "strategic": 8,
-      "yoy_pct": 7.8,
-      "gm": 61.1,
-      "nm_clipped": 35.2
-    },
-    "ONTO": {
-      "score": -0.5921,
-      "strategic": 7,
-      "yoy_pct": 0.0,
-      "gm": 50.1,
-      "nm_clipped": 11.6
-    },
-    "SNPS": {
-      "score": -0.1326,
-      "strategic": 7,
-      "yoy_pct": 50.6,
-      "gm": 72.3,
-      "nm_clipped": 0.8
-    },
-    "MU": {
-      "score": 1.194,
-      "strategic": 9,
-      "yoy_pct": 69.4,
-      "gm": 74.4,
-      "nm_clipped": 57.8
-    },
-    "SNDK": {
-      "score": 0.5808,
-      "strategic": 7,
-      "yoy_pct": 78.7,
-      "gm": 78.3,
-      "nm_clipped": 60
-    },
-    "COHR": {
-      "score": -0.1635,
-      "strategic": 8,
-      "yoy_pct": 12.7,
-      "gm": 37.7,
-      "nm_clipped": 10.1
-    },
-    "LITE": {
-      "score": -0.0191,
-      "strategic": 7,
-      "yoy_pct": 55.8,
-      "gm": 44.2,
-      "nm_clipped": 17.8
-    },
-    "FN": {
-      "score": -0.5926,
-      "strategic": 7,
-      "yoy_pct": 29.9,
-      "gm": 11.9,
-      "nm_clipped": 10.3
-    },
-    "MSFT": {
-      "score": 0.2654,
-      "strategic": 9,
-      "yoy_pct": 16.0,
-      "gm": 67.6,
-      "nm_clipped": 38.3
-    },
-    "GOOGL": {
-      "score": 0.4822,
-      "strategic": 9,
-      "yoy_pct": 26.2,
-      "gm": 62.5,
-      "nm_clipped": 56.9
-    },
-    "AMZN": {
-      "score": 0.0106,
-      "strategic": 8,
-      "yoy_pct": 37.1,
-      "gm": 51.8,
-      "nm_clipped": 16.7
-    },
-    "META": {
-      "score": 0.6482,
-      "strategic": 9,
-      "yoy_pct": 41.6,
-      "gm": 81.8,
-      "nm_clipped": 47.5
-    },
-    "AAPL": {
-      "score": 0.137,
-      "strategic": 8,
-      "yoy_pct": 50.8,
-      "gm": 49.3,
-      "nm_clipped": 26.6
-    },
-    "TSLA": {
-      "score": -0.7185,
-      "strategic": 6,
-      "yoy_pct": 28.8,
-      "gm": 21.1,
-      "nm_clipped": 2.1
-    },
-    "CRWV": {
-      "score": -0.0745,
-      "strategic": 7,
-      "yoy_pct": 60.2,
-      "gm": 65.5,
-      "nm_clipped": -30
-    },
-    "CEG": {
-      "score": -0.0911,
-      "strategic": 9,
-      "yoy_pct": -10.6,
-      "gm": 42.9,
-      "nm_clipped": 14.4
-    },
-    "VRT": {
-      "score": 0.1107,
-      "strategic": 8,
-      "yoy_pct": 41.2,
-      "gm": 37.7,
-      "nm_clipped": 14.7
-    },
-    "ETN": {
-      "score": -0.3255,
-      "strategic": 8,
-      "yoy_pct": 10.5,
-      "gm": 35.6,
-      "nm_clipped": 11.7
-    },
-    "GEV": {
-      "score": -0.3008,
-      "strategic": 7,
-      "yoy_pct": 36.5,
-      "gm": 19.1,
-      "nm_clipped": 50.8
-    },
-    "CCJ": {
-      "score": -0.4974,
-      "strategic": 6,
-      "yoy_pct": 56.4,
-      "gm": 35.7,
-      "nm_clipped": 15.5
-    },
-    "SMH": {
-      "score": -0.2599,
-      "strategic": 8,
-      "yoy_pct": null,
-      "gm": null,
-      "nm_clipped": null
-    },
-    "XLU": {
-      "score": -0.7318,
-      "strategic": 7,
-      "yoy_pct": null,
-      "gm": null,
-      "nm_clipped": null
-    },
-    "COPX": {
-      "score": -0.5521,
-      "strategic": 7,
-      "yoy_pct": null,
-      "gm": null,
-      "nm_clipped": null
-    },
-    "XME": {
-      "score": -1.0773,
-      "strategic": 6,
-      "yoy_pct": null,
-      "gm": null,
-      "nm_clipped": null
-    },
-    "EWY": {
-      "score": -0.7561,
-      "strategic": 7,
-      "yoy_pct": null,
-      "gm": null,
-      "nm_clipped": null
-    },
-    "RKLB": {
-      "score": -0.2453,
-      "strategic": 7,
-      "yoy_pct": 50.0,
-      "gm": 38.2,
-      "nm_clipped": -22.5
-    }
-  }
+  "buy_alerts": [],
+  "kline_status": "estimated: Stooq blocked; signals derived from web-search price data (Jun 18-22 closes, daily EMA proxies). Last trading day Thu Jun 18 (Juneteenth Jun 19 holiday). EMA values are approximate.",
+  "sources": "web search: Yahoo Finance/CNBC/Bloomberg via search (Jun 18-22 2026), stooq.com blocked in this environment"
 }
