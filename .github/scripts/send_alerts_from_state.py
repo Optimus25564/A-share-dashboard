@@ -59,8 +59,35 @@ def section_for(market_label, state, index_label):
         if isinstance(pdata, dict) and pdata.get("name"):
             name_map[code] = pdata["name"]
 
-    buckets = {k: [] for k in list(BUY_LABEL) + list(SELL_LABEL)}
+    # Normalize: A-share signals are dicts {"signal": "sell-warning", "close_est": ...}
+    # US signals are plain strings. Build a synthetic prices overlay from signal dicts.
+    sig_prices = {}
+    normalized_signals = {}
     for code, sig in signals.items():
+        if isinstance(sig, dict):
+            sig_prices[code] = {
+                "close": sig.get("close_est", "--"),
+                "ema8":  sig.get("ema8_est",  "--"),
+                "vs_ema8_pct": sig.get("vs_ema8_pct"),
+            }
+            normalized_signals[code] = sig.get("signal", "hold")
+        else:
+            normalized_signals[code] = sig if isinstance(sig, str) else "hold"
+    # Merge sig_prices with prices (prices wins for existing keys)
+    for code, pdata in sig_prices.items():
+        if code not in prices:
+            prices[code] = pdata
+
+    # Also absorb US ema_notes if present
+    for code, en in state.get("ema_notes", {}).items():
+        if code not in prices:
+            prices[code] = {
+                "close": en.get("close"),
+                "ema8":  en.get("ema8_est", "--"),
+            }
+
+    buckets = {k: [] for k in list(BUY_LABEL) + list(SELL_LABEL)}
+    for code, sig in normalized_signals.items():
         if sig in buckets:
             buckets[sig].append(code)
 
@@ -68,7 +95,9 @@ def section_for(market_label, state, index_label):
 
     lines = [f"\n## 🏛 {market_label}"]
     # 大盘
-    mkt = state.get("market") or {}
+    mkt = state.get("market")
+    if not isinstance(mkt, dict):
+        mkt = {}
     if mkt:
         pct = mkt.get("vs_ema8_pct")
         bull = mkt.get("bullish")
