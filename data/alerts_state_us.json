@@ -1,257 +1,186 @@
 {
-  "last_run": "2026-06-23T08:46:39+08:00",
-  "run_date": "2026-06-23",
+  "last_run": "2026-06-24T08:30:00+08:00",
+  "run_date": "2026-06-24",
   "market": "US",
+  "trading_day": "2026-06-23",
   "top5": [
     {
       "code": "MU",
       "name": "Micron",
       "rank": 1,
-      "score": 1.194,
+      "score": 1.3417,
       "signal": "hold",
-      "last_close": 1133.99,
-      "ema8_est": "~$900",
-      "ema21_est": "~$650",
-      "last_date": "2026-06-18"
+      "last_close": 1055.0,
+      "ema8_est": "~$934",
+      "ema21_est": "~$687",
+      "last_date": "2026-06-23",
+      "note": "暴跌 12.89% 至 ~$1055 (半导体板块卖压); 今日盘后报 Q3 FY2026 财报 (共识 EPS $19.72, 期权定价 ±17% 波动); 仍远高于 EMA8. Hold"
     },
     {
       "code": "NVDA",
       "name": "Nvidia",
       "rank": 2,
-      "score": 1.1576,
+      "score": 1.3173,
       "signal": "sell-warning",
-      "last_close": 210.69,
-      "ema8_est": "~$218",
-      "ema21_est": "~$195",
-      "last_date": "2026-06-18"
+      "last_close": 200.04,
+      "ema8_est": "~$214",
+      "ema21_est": "~$196",
+      "last_date": "2026-06-23",
+      "note": "收于 $200.04 (-2.78%), 连续低于 EMA8 (~$214). 板块普跌; 非周五 -> sell-warning"
+    },
+    {
+      "code": "SNDK",
+      "name": "Sandisk",
+      "rank": 3,
+      "score": 0.8990,
+      "signal": "hold",
+      "last_close": 2016.0,
+      "ema8_est": "~$1615",
+      "ema21_est": "~$1001",
+      "last_date": "2026-06-23",
+      "note": "下跌约 11% 至 ~$2016 (板块卖压); 仍大幅高于 EMA8 (~$1615); 强势上行趋势维持. Hold"
     },
     {
       "code": "TSM",
       "name": "TSMC",
-      "rank": 3,
-      "score": 0.8872,
-      "signal": "hold",
-      "last_close": 432.15,
-      "ema8_est": "~$380",
-      "ema21_est": "~$340",
-      "last_date": "2026-06-18"
-    },
-    {
-      "code": "ASML",
-      "name": "ASML",
       "rank": 4,
-      "score": 0.7935,
+      "score": 0.8786,
       "signal": "hold",
-      "last_close": 1867.83,
-      "ema8_est": "~$1620",
-      "ema21_est": "~$1350",
-      "last_date": "2026-06-18"
-    },
-    {
-      "code": "META",
-      "name": "Meta Platforms",
-      "rank": 5,
-      "score": 0.6482,
-      "signal": "sell-warning",
-      "last_close": 577.22,
-      "ema8_est": "~$620",
-      "ema21_est": "~$680",
-      "last_date": "2026-06-18"
-    }
-  ],
-  "candidates": [
-    {
-      "code": "SNDK",
-      "name": "Sandisk",
-      "rank": 6,
-      "score": 0.5808,
-      "signal": "hold",
-      "last_close": 2184.75,
-      "ema8_est": "~$1500",
-      "ema21_est": "~$900",
-      "last_date": "2026-06-18"
+      "last_close": 436.39,
+      "ema8_est": "~$393",
+      "ema21_est": "~$349",
+      "last_date": "2026-06-23",
+      "note": "收跌 6.69% 至 $436.39; 仍高于 EMA8 (~$393) 且 EMA8 > EMA21. Hold"
     },
     {
       "code": "AVGO",
       "name": "Broadcom",
-      "rank": 7,
-      "score": 0.5579,
+      "rank": 5,
+      "score": 0.7897,
       "signal": "sell-warning",
-      "last_close": 411.35,
-      "ema8_est": "~$453",
-      "ema21_est": "~$420",
-      "last_date": "2026-06-18"
+      "last_close": 382.0,
+      "ema8_est": "~$437",
+      "ema21_est": "~$417",
+      "last_date": "2026-06-23",
+      "note": "收于 ~$382 (区间 $374-$391), 低于 EMA8 (~$437). 非周五 -> sell-warning"
+    }
+  ],
+  "candidates": [
+    {
+      "code": "ASML",
+      "name": "ASML",
+      "rank": 6,
+      "score": 0.6931,
+      "signal": "hold",
+      "last_close": 1802.0,
+      "ema8_est": "~$1660",
+      "ema21_est": "~$1391",
+      "last_date": "2026-06-23",
+      "note": "下跌 7.60% 至 ~$1802; 仍高于 EMA8 (~$1660), 趋势完好. Hold"
+    },
+    {
+      "code": "CEG",
+      "name": "Constellation Energy",
+      "rank": 7,
+      "score": 0.6327,
+      "signal": "hold",
+      "last_close": 270.26,
+      "ema8_est": "est ~$270",
+      "ema21_est": "est ~$250",
+      "last_date": "2026-06-23",
+      "note": "新进候选池 (替换 AMD); YTD 已跌 26%; 无历史 EMA 基准, 信号待下次确认. Hold (data-limited)"
+    },
+    {
+      "code": "META",
+      "name": "Meta Platforms",
+      "rank": 8,
+      "score": 0.6062,
+      "signal": "sell-warning",
+      "last_close": 566.0,
+      "ema8_est": "~$608",
+      "ema21_est": "~$670",
+      "last_date": "2026-06-23",
+      "note": "收于 ~$566 (区间 $558-$572), 低于 EMA8 (~$608) 且 EMA8 < EMA21 下行趋势. 从上周 Top5 #5 降至候选 #8. sell-warning"
     },
     {
       "code": "GOOGL",
       "name": "Alphabet",
-      "rank": 8,
-      "score": 0.4822,
-      "signal": "hold",
-      "last_close": 348.78,
-      "ema8_est": "~$355",
-      "ema21_est": "~$335",
-      "last_date": "2026-06-18"
-    },
-    {
-      "code": "AMD",
-      "name": "AMD",
       "rank": 9,
-      "score": 0.2721,
-      "signal": "hold",
-      "last_close": 537.37,
-      "ema8_est": "~$470",
-      "ema21_est": "~$390",
-      "last_date": "2026-06-18"
+      "score": 0.5333,
+      "signal": "sell-warning",
+      "last_close": 346.13,
+      "ema8_est": "~$353",
+      "ema21_est": "~$336",
+      "last_date": "2026-06-23",
+      "note": "收于 $346.13, 低于 EMA8 (~$353); 上周 hold, 本次新增 sell-warning."
     },
     {
       "code": "MSFT",
       "name": "Microsoft",
       "rank": 10,
-      "score": 0.2654,
+      "score": 0.4677,
       "signal": "sell-warning",
-      "last_close": 379.1,
-      "ema8_est": "~$408",
-      "ema21_est": "~$445",
-      "last_date": "2026-06-18"
+      "last_close": 373.94,
+      "ema8_est": "~$400",
+      "ema21_est": "~$439",
+      "last_date": "2026-06-23",
+      "note": "收于 $373.94, 低于 EMA8 (~$400), EMA8 < EMA21 持续下行趋势. sell-warning"
     }
   ],
   "signals": {
     "MU": "hold",
     "NVDA": "sell-warning",
-    "TSM": "hold",
-    "ASML": "hold",
-    "META": "sell-warning",
     "SNDK": "hold",
+    "TSM": "hold",
     "AVGO": "sell-warning",
-    "GOOGL": "hold",
-    "AMD": "hold",
+    "ASML": "hold",
+    "CEG": "hold",
+    "META": "sell-warning",
+    "GOOGL": "sell-warning",
     "MSFT": "sell-warning"
   },
-  "ema_notes": {
-    "MU": {
-      "close": 1133.99,
-      "ema8_est": "~$900",
-      "ema21_est": "~$650",
-      "last_date": "2026-06-18"
-    },
-    "NVDA": {
-      "close": 210.69,
-      "ema8_est": "~$218",
-      "ema21_est": "~$195",
-      "last_date": "2026-06-18"
-    },
-    "TSM": {
-      "close": 432.15,
-      "ema8_est": "~$380",
-      "ema21_est": "~$340",
-      "last_date": "2026-06-18"
-    },
-    "ASML": {
-      "close": 1867.83,
-      "ema8_est": "~$1620",
-      "ema21_est": "~$1350",
-      "last_date": "2026-06-18"
-    },
-    "META": {
-      "close": 577.22,
-      "ema8_est": "~$620",
-      "ema21_est": "~$680",
-      "last_date": "2026-06-18"
-    },
-    "SNDK": {
-      "close": 2184.75,
-      "ema8_est": "~$1500",
-      "ema21_est": "~$900",
-      "last_date": "2026-06-18"
-    },
-    "AVGO": {
-      "close": 411.35,
-      "ema8_est": "~$453",
-      "ema21_est": "~$420",
-      "last_date": "2026-06-18"
-    },
-    "GOOGL": {
-      "close": 348.78,
-      "ema8_est": "~$355",
-      "ema21_est": "~$335",
-      "last_date": "2026-06-18"
-    },
-    "AMD": {
-      "close": 537.37,
-      "ema8_est": "~$470",
-      "ema21_est": "~$390",
-      "last_date": "2026-06-18"
-    },
-    "MSFT": {
-      "close": 379.1,
-      "ema8_est": "~$408",
-      "ema21_est": "~$445",
-      "last_date": "2026-06-18"
-    }
+  "sell_alerts": ["NVDA", "AVGO", "META", "GOOGL", "MSFT"],
+  "buy_alerts": [],
+  "ranking_changes": {
+    "summary": "Top5 稳定 (MU/NVDA/SNDK/TSM/AVGO). 候选池变动: CEG 新进 #7, META 从 Top5 #5 降至候选 #8, ASML 从 Top5 #4 降至候选 #6. GOOGL 信号从 hold 转 sell-warning.",
+    "top5_vs_prev": "MU#1 NVDA#2 不变; SNDK#3(上周#6 晋升 Top5), TSM#4(下降), AVGO#5(上周#7 晋升 Top5); 上周 ASML#4 META#5 出局 Top5",
+    "new_in_candidates": ["CEG"],
+    "exited_candidates": []
   },
-  "price_data_sources": {
-    "MU": {
-      "close": 1133.99,
-      "note": "Jun 18 close, ATH $1149.43 intraday; post-earnings to $1211 on Jun 22"
+  "market_context": {
+    "date": "2026-06-23",
+    "event": "半导体板块大幅下跌 — Semiconductor Sector Sell-Off",
+    "severity": "重大",
+    "SPY_close": 734.96,
+    "QQQ_close": 736.17,
+    "sector_moves": {
+      "MU": "-12.89%",
+      "SNDK": "-11%",
+      "ASML": "-7.60%",
+      "TSM": "-6.69%",
+      "AVGO": "~-8%",
+      "NVDA": "-2.78%"
     },
-    "NVDA": {
-      "close": 210.69,
-      "note": "Jun 18 close; ATH $236.54 May 14; daily 20-EMA ~$215"
-    },
-    "TSM": {
-      "close": 432.15,
-      "note": "Jun 18 implied (Jun 22 was $467.67, prev close $432.15)"
-    },
-    "ASML": {
-      "close": 1867.83,
-      "note": "NASDAQ USD; Jun 22 prev close $1867.83; near ATH"
-    },
-    "META": {
-      "close": 577.22,
-      "note": "Jun 18 close; 52wk high $796.25; sell signals from all MAs"
-    },
-    "SNDK": {
-      "close": 2184.75,
-      "note": "Jun 18 ATH; up 725% YTD; strong uptrend"
-    },
-    "AVGO": {
-      "close": 411.35,
-      "note": "Jun 18 close; 52wk high $495 Jun 3; 50-day EMA $422.9"
-    },
-    "GOOGL": {
-      "close": 348.78,
-      "note": "Jun 22 ~$349; 50-day SMA $367 (above); 200-day SMA $310 (below)"
-    },
-    "AMD": {
-      "close": 537.37,
-      "note": "Jun 18 close; ATH $558.37 Jun 15; up 133% YTD"
-    },
-    "MSFT": {
-      "close": 379.1,
-      "note": "Jun 21 close; 20-day EMA $412.45; below all short-term EMAs"
-    },
-    "SPY": {
-      "close": null,
-      "note": "Not available"
-    },
-    "QQQ": {
-      "close": null,
-      "note": "Not available"
-    }
+    "trigger": "Broadcom Q3 AI 芯片指引低于市场 whisper ($160亿 vs $172亿预期) + 未上调全年指引 + 三星潜在罢工消息 + TSMC 减持消息",
+    "catalyst_tonight": "⚡ MU 今日盘后 (6月24日 ET) 报 Q3 FY2026 财报. 共识 EPS $19.72, 收入 ~$346 亿; 期权定价 ±17% 单日波动 (隐含区间 $940-$1327). Wall Street 强烈看多 HBM4 需求."
+  },
+  "ema_notes": {
+    "MU":   { "close": 1055.0,  "ema8": 934,  "ema21": 687,  "last_date": "2026-06-23" },
+    "NVDA": { "close": 200.04,  "ema8": 214,  "ema21": 196,  "last_date": "2026-06-23" },
+    "SNDK": { "close": 2016.0,  "ema8": 1615, "ema21": 1001, "last_date": "2026-06-23" },
+    "TSM":  { "close": 436.39,  "ema8": 393,  "ema21": 349,  "last_date": "2026-06-23" },
+    "AVGO": { "close": 382.0,   "ema8": 437,  "ema21": 417,  "last_date": "2026-06-23" },
+    "ASML": { "close": 1802.0,  "ema8": 1660, "ema21": 1391, "last_date": "2026-06-23" },
+    "CEG":  { "close": 270.26,  "ema8": null, "ema21": null, "last_date": "2026-06-23" },
+    "META": { "close": 566.0,   "ema8": 608,  "ema21": 670,  "last_date": "2026-06-23" },
+    "GOOGL":{ "close": 346.13,  "ema8": 353,  "ema21": 336,  "last_date": "2026-06-23" },
+    "MSFT": { "close": 373.94,  "ema8": 400,  "ema21": 439,  "last_date": "2026-06-23" }
   },
   "benchmark": {
-    "SPY": "data-unavailable",
-    "QQQ": "data-unavailable",
-    "note": "Benchmark data not available this run"
+    "SPY": 734.96,
+    "QQQ": 736.17,
+    "note": "Jun 23 收盘; 大盘相对抗跌 (~-0.6%), 半导体板块跌幅大幅超出大盘"
   },
-  "sell_alerts": [
-    "NVDA",
-    "META",
-    "AVGO",
-    "MSFT"
-  ],
-  "buy_alerts": [],
-  "kline_status": "estimated: Stooq blocked; signals derived from web-search price data (Jun 18-22 closes, daily EMA proxies). Last trading day Thu Jun 18 (Juneteenth Jun 19 holiday). EMA values are approximate.",
-  "sources": "web search: Yahoo Finance/CNBC/Bloomberg via search (Jun 18-22 2026), stooq.com blocked in this environment"
+  "kline_status": "estimated: Stooq/Yahoo Finance blocked by proxy egress policy. EMA values derived by single-step update from Jun 18 estimates using Jun 23 closes (k=2/9 EMA8, k=2/22 EMA21). Approx accuracy ±5%.",
+  "sources": "WebSearch via CNBC/Yahoo Finance/Motley Fool/TradingKey/TheStreet (Jun 23 2026 closes); stooq.com/finance.yahoo.com blocked by proxy policy"
 }
