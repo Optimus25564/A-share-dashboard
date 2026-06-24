@@ -825,6 +825,14 @@
       "url": "https://cn.investing.com/news/stock-market-news/article-3399126",
       "source": "智通财经",
       "content": "富时罗素2026年上半年定期调样于6月18日收盘后正式生效，澜起科技(688008/06809.HK)正式纳入富时中国A50指数，与上证50（6月13日生效）同步完成双宽基指数建仓，追踪两大宽基指数的被动资金完成强制增配，形成持续买盘。"
+    },
+    {
+      "date": "2026-06-24",
+      "type": "announcement",
+      "title": "2025年度股东大会召开：审议年度报告、利润分配预案及授权董事会制定2026年度中期分红方案等议案",
+      "url": "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=688008",
+      "source": "上海证券交易所",
+      "content": "澜起科技2025年度股东会于2026年6月24日召开（现场+网络投票），审议议案包括：2025年度报告及董监事工作报告、年度利润分配预案、授权董事会制定2026年度中期分红方案、2026年度对外担保额度上限、聘任财务及内部控制审计机构等。"
     }
   ],
   "688012": [
@@ -1795,7 +1803,7 @@
     }
   ],
   "_meta": {
-    "last_updated": "2026-06-22",
+    "last_updated": "2026-06-24",
     "schema": "{ code: [{ date, type, title, content, source, url, tags }] }",
     "types": [
       "news",
