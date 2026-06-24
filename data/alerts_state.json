@@ -1,6 +1,6 @@
 {
-  "date": "2026-06-23",
-  "weekday": "Tuesday",
+  "date": "2026-06-24",
+  "weekday": "Wednesday",
   "week_data_date": "2026-06-12",
   "ranking": {
     "top5": [
@@ -202,13 +202,13 @@
       "data_source": "carry-forward"
     }
   },
-  "market_context": "2026-06-23（周二）：排名无变化；持仓中海光/澜起/曙光sell-warning；寒武纪buy-fresh；旭创hold；大盘上证sell-warning(3958 < EMA8 4090)",
-  "title": "🚨 [2026-06-23] 趋势提醒",
+  "market_context": "2026-06-24（周三）：排名无变化；持仓中海光/澜起/曙光sell-warning；寒武纪buy-fresh；旭创hold；大盘上证sell-warning(3958 < EMA8 4090)；候选池中芯buy-fresh",
+  "title": "🚨 [2026-06-24] 趋势提醒",
   "has_signal": true,
   "push_status": {
     "wechat": "failed: HTTP 403 (network policy)",
     "email": "failed: ENETUNREACH (IPv6 not supported)",
     "push_notification": "sent via routine_summary"
   },
-  "data_note": "周线K线API受环境网络策略限制；技术信号carry-forward自2026-06-12；今日为周二"
+  "data_note": "周线K线API受环境网络策略限制；技术信号carry-forward自2026-06-12；今日为周三"
 }
