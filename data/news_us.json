@@ -255,6 +255,14 @@
       "url": "https://nvidianews.nvidia.com/news/nvidia-stockholder-meeting-set-for-june-24-individuals-can-participate-online",
       "source": "NVIDIA Newsroom",
       "content": "NVIDIA年度股东大会将于北京时间6月25日凌晨举行，议程包括选举十名董事、批准高管薪酬及审视Blackwell/Vera产能爬坡进展与资本回报计划。任何个人均可线上注册参会。"
+    },
+    {
+      "date": "2026-06-22",
+      "type": "announcement",
+      "title": "NVIDIA Unveils 35 Vera Rubin AI Supercomputers Across 23 European Countries at ISC 2026",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-vera-rubin-delivers-world-class-supercomputers-for-science",
+      "source": "NVIDIA Newsroom",
+      "content": "At ISC High Performance 2026 in Hamburg, NVIDIA announced 35 Vera Rubin-based AI supercomputers under development across 23 European countries — the continent's largest single-year supercomputing expansion, delivering over 7 exaflops of AI compute per rack and serving more than 3 million researchers."
     }
   ],
   "AVGO": [
@@ -643,6 +651,14 @@
       "url": "https://ir.amd.com/news-events/press-releases/mlperf-training-6-0-2026",
       "source": "AMD Investor Relations",
       "content": "AMD announced breakthrough MLPerf Training 6.0 results, with AMD Instinct GPUs delivering leading performance across LLM and multi-node FLUX.1 scale benchmarks on June 17."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "news",
+      "title": "AMD Powers 4 of Top 10 Supercomputers on New TOP500 List at ISC 2026, Advancing HPC Challenge to NVIDIA",
+      "url": "https://www.amd.com/en/blogs/2026/amd-powers-4-of-10-most-powerful-supercomputers.html",
+      "source": "AMD Newsroom / HPCwire",
+      "content": "At ISC 2026 in Hamburg, the new TOP500 list showed AMD powers 4 of the 10 fastest and 4 of the 10 most energy-efficient supercomputers globally, including El Capitan (No. 2) and Frontier (No. 3), with 191 AMD-powered systems total — an 11% year-over-year increase."
     }
   ],
   "INTC": [
@@ -1087,6 +1103,30 @@
       "url": "https://www.tradingkey.com/news/market-movers/261978257-market-movers-qcom-20260619",
       "source": "TradingKey / JPMorgan",
       "content": "QCOM rose 6.17% on June 19 ahead of its June 24 Investor Day in New York. JPMorgan raised its target to $265 and placed QCOM on Positive Catalyst Watch. Qualcomm has pre-announced that a custom silicon engagement with a leading hyperscaler (announced June 18) is already beginning to ship in late 2026. Investor Day to detail data center, physical AI, agentic AI, and 6G roadmaps."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "news",
+      "title": "Bloomberg: Qualcomm in Advanced Talks for ~$4B All-Stock Acquisition of AI Software Startup Modular to Challenge NVIDIA CUDA",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-22/qualcomm-is-said-to-near-deal-for-ai-chip-startup-modular",
+      "source": "Bloomberg",
+      "content": "Bloomberg reported Qualcomm was in advanced negotiations to acquire Modular Inc. for approximately $4 billion in an all-stock deal. Modular's hardware-agnostic AI platform enables models to run across chips from NVIDIA, AMD, and Intel, directly targeting CUDA's software ecosystem dominance."
+    },
+    {
+      "date": "2026-06-24",
+      "type": "announcement",
+      "title": "Qualcomm Officially Confirms $3.9B All-Stock Acquisition of Modular to Challenge NVIDIA CUDA Ecosystem",
+      "url": "https://investor.qualcomm.com/news-events/press-releases/news-details/2026/Qualcomm-to-Acquire-Modular/default.aspx",
+      "source": "Qualcomm IR / CNBC",
+      "content": "Qualcomm confirmed the $3.9B all-stock acquisition of Modular Inc. (19.2 million shares), expected to close H2 2026 pending regulatory approval. Modular's hardware-agnostic AI deployment platform gives Qualcomm a software stack to compete with NVIDIA's CUDA across data center and edge environments."
+    },
+    {
+      "date": "2026-06-24",
+      "type": "announcement",
+      "title": "Qualcomm Investor Day 2026: Unveils Dragonfly AI200/AI250 Data Center Accelerators, Targets $18+ Non-GAAP EPS for FY2029",
+      "url": "https://www.servethehome.com/qualcomm-investor-day-2026-data-center-announcements-cpus-ai-accelerators-and-more/",
+      "source": "ServeTheHome / Qualcomm IR",
+      "content": "At its June 24 Investor Day, Qualcomm unveiled the Dragonfly portfolio (AI200/AI250) data center AI accelerators, announced a hyperscaler custom silicon engagement targeting initial shipments in 2026, and set a $2–5B data center TAM target by FY2027–2028 with >$18 non-GAAP EPS for FY2029."
     }
   ],
   "MRVL": [
@@ -1589,6 +1629,14 @@
       "url": "https://www.tomshardware.com/tech-industry/republican-lawmakers-urge-itc-to-block-imports-of-infringing-tsmc-chips-as-patent-ruling-imminent",
       "source": "Tom's Hardware",
       "content": "US Republican lawmakers sent letters urging the ITC to block imports of TSMC-manufactured chips (Apple, Qualcomm, Broadcom named as respondents) found to infringe five patents held by United Microelectronics Corporation (UMC). A preliminary ITC ruling is imminent and could result in an import ban affecting AI-accelerator chips."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "research",
+      "title": "S&P Global Revises TSMC Outlook to Positive, Affirms AA- Rating on Dominant ~72% Global Foundry Market Share",
+      "url": "https://www.investing.com/news/stock-market-news/tsmc-outlook-raised-to-positive-by-sp-on-market-leadership-93CH-4756139",
+      "source": "Investing.com / S&P Global Ratings",
+      "content": "S&P Global Ratings revised its outlook on TSMC to Positive from Stable while affirming its AA- long-term issuer credit rating, citing TSMC's ~72% share of global foundry revenue — up from 54.6% in 2021 — and a revenue scale roughly 8.7x larger than its nearest competitor."
     }
   ],
   "ASML": [
@@ -1799,6 +1847,14 @@
       "url": "https://www.techtimes.com/articles/318852/20260622/asml-euv-components-china-us-cites-shipment-evidence-bis-enforcement-looms.htm",
       "source": "TechTimes / Bloomberg",
       "content": "ASML否认向中国出口EUV整机，但美国商务部BIS称掌握EUV组件及运输设备证据，较整机违规更具可执行性。2026年2月Applied Materials因类似违规被罚$2.525亿，被视为ASML可能面临的先例。荷兰ASML股价承压。"
+    },
+    {
+      "date": "2026-06-22",
+      "type": "research",
+      "title": "BofA Raises ASML Price Target to $2,345, Wells Fargo to $2,200 on Strong EUV Order Book Ahead of Q2 Results",
+      "url": "https://www.tipranks.com/news/bofa-boosts-asml-stock-price-target-on-strong-fy27-order-book",
+      "source": "TipRanks / BofA Securities",
+      "content": "Bank of America raised its ASML price target to $2,345 (from $2,268) and Wells Fargo raised its target to $2,200 (from $1,750), both maintaining Buy/Overweight ratings. BofA cited increased EUV unit forecasts and expects ASML's 2027 order book to be fully subscribed by the time Q2 results are reported July 15."
     }
   ],
   "AMAT": [
@@ -1929,6 +1985,14 @@
       "url": "https://stockstotrade.com/news/applied-materials-inc-amat-news-2026_06_17/",
       "source": "StocksToTrade / Citi",
       "content": "Citi raised its Applied Materials price target (post-10-for-1 split) to $290, joining Cantor Fitzgerald, Barclays, and UBS in lifting targets. Key catalyst cited: accelerating AI infrastructure buildout in Singapore as a near-term demand driver on top of AI-driven WFE capex cycle."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "research",
+      "title": "Wells Fargo Upgrades Applied Materials to Buy ($715 PT), BofA Raises to $720 on New GAA Transistor Chip Tools",
+      "url": "https://finance.yahoo.com/technology/ai/articles/applied-materials-amat-unveils-two-201154929.html",
+      "source": "Yahoo Finance / Wells Fargo",
+      "content": "Wells Fargo upgraded Applied Materials to Buy with a $715 price target (from $520) and Bank of America raised its target to $720 (from $540), citing AMAT's new Centris Spectral SiN ALD and Producer Selectra Mo Etch systems for GAA transistor manufacturing and strong positioning for next-gen AI chips."
     }
   ],
   "KLAC": [
@@ -2035,6 +2099,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/261978193-market-movers-klac-20260619",
       "source": "TradingKey / Cantor Fitzgerald",
       "content": "Cantor Fitzgerald lifted its KLAC price target to $2,500 pre-split (Overweight), citing multi-year AI equipment upcycle with booking visibility into 2028. Following a 10-for-1 stock split effective June 12, KLAC hit a new 52-week high of $260.62 on June 19."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "research",
+      "title": "BofA Raises KLA Corporation Price Target 51% to $317, Citing $2.7 Trillion Semiconductor TAM Forecast",
+      "url": "https://www.gurufocus.com/news/8927704/klac-maintained-by-b-of-a-securities-price-target-raised-to-317",
+      "source": "GuruFocus / BofA Securities",
+      "content": "Bank of America maintained its Buy rating on KLA and raised its price target to $317 from $210 — a 51% increase — after updating semiconductor industry models to reflect a new 2030 TAM forecast of $2.7 trillion (up from $2.3 trillion), driven by data center and memory demand."
     }
   ],
   "ONTO": [
@@ -2093,6 +2165,14 @@
       "url": "https://www.investing.com/news/analyst-ratings/morgan-stanley-initiates-onto-innovation-stock-with-overweight-rating-93CH-4741209",
       "source": "Investing.com / Morgan Stanley",
       "content": "Morgan Stanley initiated ONTO with Overweight/$371 target citing strong HBM and advanced packaging inspection demand. Adds to Deutsche Bank (Buy/$350) and Oppenheimer (Outperform/$370) bullish calls."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "research",
+      "title": "Oppenheimer Raises Onto Innovation Price Target to $450 from $370, Maintains Outperform on AI/Advanced Packaging Demand",
+      "url": "https://finance.yahoo.com/quote/ONTO/news/",
+      "source": "Oppenheimer",
+      "content": "Oppenheimer maintained an Outperform rating and raised its Onto Innovation price target from $370 to $450, citing continued AI and advanced packaging demand momentum and the company's record Q1 2026 revenue of $292M with projected 30%+ revenue growth for full-year 2026."
     }
   ],
   "SNPS": [
@@ -2473,6 +2553,22 @@
       "url": "https://investors.micron.com/news-releases/news-release-details/micron-and-anthropic-announce-strategic-agreement-scale-next",
       "source": "Micron Investor Relations",
       "content": "美光与Anthropic签署战略合作：①共同评估HBM/NAND在LLM训练推理中的架构；②美光数据中心产品组合长期供货协议；③美光企业内部部署Claude加速工程/制造；④美光参与Anthropic Series H融资。MU盘前涨逾4%。美光Q3 FY2026财报将于6月24日发布。"
+    },
+    {
+      "date": "2026-06-24",
+      "type": "announcement",
+      "title": "Micron Reports Record Q3 FY2026 Earnings Results; Issues Strong Q4 Revenue Guidance on AI Memory Demand",
+      "url": "https://www.stocktitan.net/news/MU/micron-technology-inc-reports-record-results-for-the-third-quarter-6f50161e5zxh.html",
+      "source": "StockTitan / Micron IR",
+      "content": "Micron reported record fiscal Q3 FY2026 results significantly exceeding consensus estimates, driven by accelerating HBM and NAND AI demand. The company issued strong Q4 revenue guidance, citing 16 Strategic Customer Agreements with approximately $100 billion in remaining performance obligations."
+    },
+    {
+      "date": "2026-06-24",
+      "type": "announcement",
+      "title": "Micron Signs Multi-Year EUV Supply Agreement with ASML to Support Next-Gen 1-Delta Node Ramp",
+      "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000013/a2026q3ex991-pressrelease.htm",
+      "source": "SEC / Micron IR",
+      "content": "As part of its Q3 FY2026 earnings disclosure, Micron revealed a multi-year agreement with ASML for EUV lithography machines to support next-generation 1-delta and future process nodes, underpinning planned capacity expansions across Idaho, New York, Virginia, Taiwan, Singapore, and Japan."
     }
   ],
   "SNDK": [
@@ -2627,6 +2723,14 @@
       "url": "https://www.gurufocus.com/news/8913924/western-digital-wdc-to-exchange-104m-sandisk-shares",
       "source": "GuruFocus / SEC Filing",
       "content": "西部数据（WDC）于6月22日通过私人股权置换方式，将所持全部1,038,681股SanDisk（SNDK）股份（市值逾$22亿）出售给机构投资者，完成SanDisk的彻底剥离。SNDK当日开盘涨5.09%，成为完全独立的上市公司，专注AI NAND存储器业务。"
+    },
+    {
+      "date": "2026-06-24",
+      "type": "industry",
+      "title": "SK Hynix Announces Nasdaq ADR Listing for July 10, 2026, Targeting Up to $29.4B Raise — Adding Competitive Pressure on AI Memory Peers",
+      "url": "https://finance.yahoo.com/quote/SNDK/",
+      "source": "Yahoo Finance / Reuters",
+      "content": "SK Hynix officially announced its Nasdaq ADR listing scheduled for July 10, 2026, aiming to raise up to $29.4B, adding competitive pressure on SanDisk as another major NAND/DRAM player gains US capital markets access amid the AI memory demand cycle."
     }
   ],
   "COHR": [
@@ -2749,6 +2853,14 @@
       "url": "https://www.globenewswire.com/news-release/2026/06/16/3312664/11543/en/Coherent-Announces-a-CHIPS-Letter-of-Intent-for-50-Million-to-Expand-World-Leading-Manufacturing-Facility-for-AI-Infrastructure.html",
       "source": "GlobeNewswire / NIST",
       "content": "Coherent Corp signed a letter of intent with the U.S. Dept of Commerce for up to $50M in CHIPS Act funding to expand its 6-inch Indium Phosphide facility in Sherman, TX. Expansion doubles manufacturing space, quadruples wafer capacity, creates 1,000+ jobs. Groundbreaking held with NVIDIA. Supports AI datacenter optical networking demand."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "news",
+      "title": "Coherent Management Flags 'Healthy' Datacom Demand Exceeding Supply at JPMorgan Investor Meetings; JPMorgan Reiterates Overweight",
+      "url": "https://seekingalpha.com/news/4594059-datacom-market-outlook-increase-proves-positive-for-optical-suppliers-jpmorgan",
+      "source": "Seeking Alpha / JPMorgan",
+      "content": "Coherent management described aggregate datacom pricing as healthy with demand continuing to exceed supply at JPMorgan investor meetings on June 22, 2026. JPMorgan reaffirmed an Overweight rating on COHR, with shares rallying sharply on the positive AI data center optical demand outlook."
     }
   ],
   "LITE": [
@@ -2863,6 +2975,14 @@
       "url": "https://www.stocktitan.net/news/LITE/lumentum-chair-of-the-board-penny-herscher-and-ceo-michael-hurlston-xa8x20muerai.html",
       "source": "StockTitan / Lumentum IR",
       "content": "Lumentum's board chair and CEO participate as expert speakers at the Rome Conference on AI, Ethics and Governance (June 18-20). CEO Hurlston joins a panel on 'The Energy of AI: Infrastructure, Stewardship, and the Common Good', highlighting Lumentum's optical products (OCS, TRO modules, CPO lasers) as power-efficient AI infrastructure solutions."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "research",
+      "title": "JPMorgan Reiterates Overweight on Lumentum, Cites Healthy Datacom Demand and Co-Packaged Optics Progress at AI Data Centers",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/lumentum-lite-jpmorgan-pushback-helps-193000476.html",
+      "source": "Yahoo Finance / JPMorgan",
+      "content": "JPMorgan reiterated an Overweight rating on Lumentum following Coherent's positive JPMorgan investor meeting readouts, arguing concerns over co-packaged optics adoption delays were overdone given the strong AI data center optical demand environment."
     }
   ],
   "FN": [
@@ -3389,6 +3509,22 @@
       "url": "https://finance.yahoo.com/technology/ai/articles/googl-stock-dips-premarket-breakout-080934887.html",
       "source": "Yahoo Finance",
       "content": "Alphabet正在与联发科（MediaTek）独家合作开发TPU v9升级版AI芯片（代号Triggerfish），重点强化推理能力，建立在现有TPU v9基础上。这延续了Google自研AI芯片战略，减少对NVIDIA依赖。GOOGL盘前股价小幅回调。"
+    },
+    {
+      "date": "2026-06-24",
+      "type": "news",
+      "title": "YouTube Settles Child Social Media Addiction Lawsuit Ahead of Bellwether Trial; Meta, Snap, TikTok Remain Defendants",
+      "url": "https://www.cnbc.com/amp/2026/06/24/googles-youtube-settles-case-over-social-media-harm-to-children.html",
+      "source": "CNBC",
+      "content": "Google's YouTube reached a confidential settlement with a Florida teenager alleging the platform contributed to social media addiction and mental health harm. The remaining defendants — Meta's Instagram, Snap's Snapchat, and ByteDance's TikTok — proceed to a bellwether trial in July."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "news",
+      "title": "Two Key Gemini AI Researchers Depart Alphabet for Anthropic; UK Plans Under-16 Social Media Ban Targeting YouTube",
+      "url": "https://finance.yahoo.com/quote/GOOGL/press-releases/",
+      "source": "Yahoo Finance",
+      "content": "Two key Gemini AI researchers departed Alphabet for Anthropic, adding competitive pressure on Google's AI capabilities. Separately, the UK government announced plans to ban social media access for users under 16, directly targeting YouTube alongside other platforms."
     }
   ],
   "AMZN": [
@@ -3817,6 +3953,22 @@
       "url": "https://finance.yahoo.com/quote/META/news/",
       "source": "The Information / Yahoo Finance",
       "content": "Meta AI for Work部门负责人Emily Dalton Smith离职，其团队主导企业内部AI工具及Copilot类产品研发。此次人事变动被部分投资者视为Meta内部AI战略调整信号，叠加Crusoe算力扩张消息，市场关注Meta AI组织架构走向。"
+    },
+    {
+      "date": "2026-06-22",
+      "type": "announcement",
+      "title": "Meta Invests $900 Million in Indian Fintech Cred (~20% Stake), Appoints Cred Founder Kunal Shah as New WhatsApp Global Head",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-22/meta-taps-new-whatsapp-boss-as-part-of-900-million-investment",
+      "source": "Bloomberg",
+      "content": "Meta Platforms announced a $900 million investment in Indian fintech startup Cred, acquiring roughly a 20% stake at a $4.5B valuation. Cred founder Kunal Shah will become the new global head of WhatsApp, succeeding Will Cathcart, tying the investment to a major leadership change for Meta's flagship messaging platform."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "announcement",
+      "title": "Meta's Threads Reaches 500 Million Monthly Active Users, Launches New Communities Features",
+      "url": "https://socialbee.com/blog/facebook-updates/",
+      "source": "SocialBee / Meta Newsroom",
+      "content": "Meta announced Threads reached 500 million monthly active users and launched new communities features to mark the milestone. The company also expanded Instagram to Samsung smart TVs in the US to target longer-form video content consumption."
     }
   ],
   "AAPL": [
@@ -4181,6 +4333,22 @@
       "url": "https://www.notateslaapp.com/",
       "source": "Not a Tesla App / CNBC",
       "content": "Tesla's Full Self-Driving (FSD) software received regulatory approval in Denmark. However, EU-wide deployment faces a significant hurdle after Swedish regulators issued a formal warning about FSD's handling of speed limit features, potentially triggering a bloc-wide block that would bar FSD across all 27 EU member states."
+    },
+    {
+      "date": "2026-06-24",
+      "type": "announcement",
+      "title": "Tesla, Sunrun, and Renew Home Announce 16 GW Virtual Power Plant Deal to Supply Flexible Power to Data Centers",
+      "url": "https://www.globenewswire.com/news-release/2026/06/24/3316793/0/en/Sunrun-Renew-Home-and-Tesla-Team-Up-to-Deliver-More-Than-16-Gigawatts-of-Fast-Flexible-Power-for-Data-Centers-and-Large-Loads.html",
+      "source": "GlobeNewswire / Bloomberg",
+      "content": "Tesla, Sunrun, and Renew Home announced a deal to deliver more than 16 GW of flexible energy capacity to hyperscalers and utilities by aggregating home batteries, EVs, and 8 million smart thermostats into a virtual power plant requiring no new hardware, sending Sunrun shares surging over 30%."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "news",
+      "title": "U.S. Federal Regulators Open Formal Investigation into Fatal Tesla Driver-Assistance Crash in Texas",
+      "url": "https://www.investing.com/equities/tesla-motors-news",
+      "source": "Investing.com / NHTSA",
+      "content": "U.S. federal regulators opened a formal investigation into a fatal crash in Texas involving Tesla's driver-assistance system, adding regulatory scrutiny as the company continues its autonomous driving push. The investigation contributed to downward pressure on Tesla shares."
     }
   ],
   "CRWV": [
@@ -4473,6 +4641,14 @@
       "url": "https://finance.yahoo.com/quote/CEG/",
       "source": "Yahoo Finance / Bernstein",
       "content": "Bernstein initiated coverage of Constellation Energy with an Outperform rating, citing the company's role as a key provider of clean, reliable electricity for AI data centers. Analyst consensus stands at 19 Buy ratings and zero Sells."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "announcement",
+      "title": "Constellation Energy and Walmart Sign First-Ever Corporate Nuclear Power Purchase Agreement (176 MW, Dresden Nuclear Plant, Illinois)",
+      "url": "https://corporate.walmart.com/news/2026/06/23/constellation-and-walmart-announce-longterm-agreement-to-support-reliable-emissionsfree-nuclear-energy-in-illinois",
+      "source": "Walmart Corporate / Reuters",
+      "content": "Constellation Energy (CEG) and Walmart signed a landmark long-term nuclear PPA on June 23, covering approximately 176 MW of emissions-free output from Constellation's Dresden Clean Energy Center in Illinois — Walmart's first-ever nuclear deal, with two 15-year supply terms beginning 2029 and 2030."
     }
   ],
   "VRT": [
@@ -4887,6 +5063,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/261973569-market-movers-gev-20260617",
       "source": "TradingKey / Bernstein",
       "content": "GEV surged 6.77% to $1,048.86 on June 17 after Bernstein initiated at Outperform with a $1,206 target, highlighting GEV's position in global electricity infrastructure, grid upgrades, industrial electrification, and AI datacenter power demand."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "announcement",
+      "title": "GE Vernova Secures Order for Two 9HA.02 H-Class Gas Turbines for Vietnam's Quang Trach II LNG Power Plant (1.6 GW+)",
+      "url": "https://www.gevernova.com/news/press-releases/ge-vernova-secures-h-class-equipment-order-evns-quang",
+      "source": "GE Vernova / LNG Industry",
+      "content": "GE Vernova secured an order for two 9HA.02 gas turbines and two H78 generators for Vietnam Electricity's (EVN) Quang Trach II LNG Power Plant, a combined-cycle facility expected to generate over 1.6 GW of electricity by 2030, expanding GEV's Southeast Asia LNG-to-power footprint."
     }
   ],
   "CCJ": [
@@ -4985,6 +5169,38 @@
       "url": "https://www.foreignpolicyjournal.com/2026/06/15/nuclear-capital-flows-heat-up-cameco-nyse-ccj-global-x-uranium-etf-nysearca-ura-and-centrus-energy-nyse-leu-lead-the-charge/",
       "source": "Foreign Policy Journal",
       "content": "Cameco and uranium peers attracting institutional capital flows driven by AI hyperscaler nuclear offtake agreements (Meta up to 6.6 GWe), 38-country pledge to triple nuclear capacity by 2050, and uranium spot at $91.50/lb. Cameco maintains 2026 guidance $3.13-3.37B revenue, 29-32M lbs at $85-89/lb."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "policy",
+      "title": "Canada Launches First-Ever National Nuclear Energy Strategy, Targets 10 New Reactors and Doubled Uranium Exports by 2035",
+      "url": "https://www.canada.ca/en/natural-resources-canada/news/2026/06/government-of-canada-launches-nuclear-energy-strategy.html",
+      "source": "Natural Resources Canada / BNN Bloomberg",
+      "content": "Canada's Energy Minister unveiled the country's first national Nuclear Energy Strategy on June 22, targeting up to 10 new reactors built by 2040, two large-scale reactors under construction by 2035, and a doubling of uranium exports by 2035 — a direct demand catalyst for Cameco (CCJ) as Canada's dominant uranium miner supplying ~24% of global output."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "policy",
+      "title": "DOE Announces $17.5B in Conditional Loans for 10 AP1000 Nuclear Reactors; Cameco-Backed Westinghouse is Sole Qualified Supplier",
+      "url": "https://www.energy.gov/articles/department-energy-announces-american-nuclear-supply-chain-loans",
+      "source": "U.S. Department of Energy / CNBC",
+      "content": "The U.S. DOE announced $17.5B in conditional loans for five projects (two AP1000 reactors each), directly benefiting Cameco which owns 49% of Westinghouse — the sole licensed AP1000 supplier. CEO Tim Gitzel highlighted significant growth opportunities for Westinghouse's energy systems segment during procurement and construction phases."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "announcement",
+      "title": "Cameco Files 6-K with SEC Formally Welcoming DOE $17.5B AP1000 Nuclear Supply Chain Loan Package",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001009001/000119312526279269/d83887dex991.htm",
+      "source": "SEC / Cameco Corporation",
+      "content": "Cameco filed a Form 6-K formally welcoming the DOE's $17.5B conditional loan announcement for the American Nuclear Supply Chain, with CEO Tim Gitzel outlining expected growth in Westinghouse's energy systems segment and positioning the company as the primary uranium and fuel services beneficiary."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "policy",
+      "title": "NRC Proposes Sweeping Modernization of Nuclear Fuel Cycle Licensing Under ADVANCE Act; Comments Due August 10",
+      "url": "https://www.ans.org/news/2026-06-23/article-8141/nrc-to-make-sweeping-changes-to-fuel-cycle-regs/",
+      "source": "American Nuclear Society / Nuclear Newswire",
+      "content": "The NRC announced proposed rulemaking to modernize fuel cycle and materials licensing requirements, accelerating construction timelines for uranium fuel cycle facilities and streamlining licensing of plutonium processing and fuel fabrication plants in response to the ADVANCE Act of 2024."
     }
   ],
   "SMH": [
@@ -5083,6 +5299,22 @@
       "url": "https://eciks.org/9048-66449-smh-semiconductor-etf-ai-demand-rally",
       "source": "ECIKS / VanEck",
       "content": "SMH surged near $644 on June 15, up 72% YTD. Deloitte projects global semiconductor industry reaching $975B in 2026. AI infrastructure buildout driving broad demand across memory, processors, and networking."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "industry",
+      "title": "Global Semiconductor Rout: SOXX ETF Falls 7.88%, ARM Drops 10% as South Korea KOSPI Crash Spreads to Chip Sector",
+      "url": "https://www.startuphub.ai/ai-news/ai-stocks-daily/2026/ai-stocks-2026-06-23",
+      "source": "StartupHub.ai / CNBC",
+      "content": "The SOXX semiconductor ETF fell 7.88% on June 23, erasing an estimated $1.4 trillion in AI chip market cap, as South Korea's KOSPI meltdown (circuit breaker triggered) spread through global chip names. ARM Holdings dropped 10.1%, Nasdaq fell 2.21%, S&P 500 shed 1.44%."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "industry",
+      "title": "Samsung Foundry Wins Nvidia, Tesla, and Qualcomm Orders as TSMC Advanced-Node Capacity Below 3nm Fills Up",
+      "url": "https://www.techspot.com/news/112800-samsung-foundry-booming-tsmc-struggles-demand-bags-nvidia.html",
+      "source": "TechSpot",
+      "content": "Samsung Foundry secured or is negotiating chip manufacturing orders from Nvidia, Tesla, Qualcomm, Google, AMD, and BYD on sub-5nm nodes as TSMC's 2nm-and-below capacity has been pre-booked by Apple and Nvidia, with Samsung co-CEO meeting Jensen Huang in Seoul to reinforce foundry cooperation."
     }
   ],
   "XLU": [
@@ -5143,6 +5375,22 @@
       "url": "https://www.whitehouse.gov/fact-sheets/2026/06/fact-sheet-president-donald-j-trump-updates-tariffs-on-steel-aluminum-and-copper-imports/",
       "source": "White House / Bloomberg",
       "content": "Trump signed updated Section 232 proclamation on June 1 (effective June 8). Commerce Secretary has until June 30 to recommend refined copper tariff (expected ≥25%). Goldman raised year-end 2026 copper price forecast to $13,735/tonne."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "policy",
+      "title": "China Adds MP Materials and USA Rare Earth to Export Control List in Retaliation for US Military Companies Designation",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-22/china-places-two-us-rare-earths-producers-on-export-control-list",
+      "source": "Bloomberg",
+      "content": "China's Ministry of Commerce added 10 US companies to its export control list including MP Materials and USA Rare Earth, barring Chinese exporters from supplying dual-use items to these firms — targeting the very companies the US government has funded to reduce reliance on Chinese critical minerals."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "announcement",
+      "title": "Vedanta's CopperTech Metals Launches NYSE IPO Targeting $3.6B Valuation, Highlighting AI Infrastructure Copper Demand",
+      "url": "https://www.bnnbloomberg.ca/investing/commodities/2026/06/23/vedantas-coppertech-metals-targets-us36-billion-valuation-in-us-ipo/",
+      "source": "BNN Bloomberg",
+      "content": "CopperTech Metals (Vedanta subsidiary operating Konkola Copper Mines in Zambia) launched a US IPO targeting a $3.57B valuation and up to $423.5M raise at $16–$18/share on NYSE (ticker: CUX), highlighting surging investor demand for copper exposure driven by AI infrastructure, grid modernization, and electrification."
     }
   ],
   "XME": [
@@ -5169,6 +5417,14 @@
       "url": "https://www.whitehouse.gov/fact-sheets/2026/06/fact-sheet-president-donald-j-trump-updates-tariffs-on-steel-aluminum-and-copper-imports/xme",
       "source": "White House / Construction Dive",
       "content": "New proclamation effective June 8 adjusts Section 232 metals tariff thresholds: products with ≤15% steel/aluminum/copper content now exempt. Impacts XME holdings across steel and metals mining sector."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "policy",
+      "title": "Trump Updates Section 232 Tariffs on Steel, Aluminum, and Copper Through 2027 — Domestic Steel Prices Remain Near $1,109/Ton",
+      "url": "https://www.supplychaindive.com/news/trump-further-tweaks-steel-aluminum-copper-tariffs/821719/",
+      "source": "Supply Chain Dive / White House",
+      "content": "President Trump's June 2026 Section 232 proclamation adjusted tariff rates for derivative steel and aluminum products, reducing rates for agricultural equipment combines to 15% and extending lower rates to equipment from trade-deal partners. Domestic hot-rolled coil steel prices remain near $1,109/ton, supporting XME holdings such as Nucor and Steel Dynamics."
     }
   ],
   "EWY": [
@@ -5243,6 +5499,30 @@
       "url": "https://en.cryptonomist.ch/2026/06/11/south-korea-ai-stocks-kospi-rally/ewy",
       "source": "Cryptonomist / European Business Magazine",
       "content": "KOSPI, which had surged >90% YTD driven by SK Hynix and Samsung on HBM/AI chip demand, fell ~8.8% on June 10, triggering a 20-minute circuit breaker. EWY NAV fell ~$9.57 (-5.11%) on the day."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "industry",
+      "title": "SK Hynix Overtakes Samsung to Become South Korea's Most Valuable Company for First Time in 25 Years on HBM Dominance",
+      "url": "https://www.kedglobal.com/korean-chipmakers/newsView/ked202606220007",
+      "source": "KED Global",
+      "content": "SK Hynix surged past Samsung Electronics on June 22 to claim the top KOSPI spot by market cap for the first time in 25 years, reaching 2,080.4 trillion won ($1.35 trillion) on a 340%+ year-to-date rally driven by HBM chip dominance for AI customers including Nvidia and Google."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "policy",
+      "title": "MSCI Denies South Korea Developed Market Status for 12th Time; KOSPI Crashes ~10% with Circuit Breaker Triggered",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-23/msci-maintains-korea-s-emerging-market-status-in-latest-review",
+      "source": "Bloomberg",
+      "content": "MSCI's 2026 Annual Market Classification Review again excluded South Korea from Developed Markets, triggering a ~10% KOSPI crash with a circuit-breaker halt as Samsung and SK Hynix each plunged 12%+, driven by inadequate Korean won offshore trading access and short-selling oversight gaps cited by MSCI."
+    },
+    {
+      "date": "2026-06-24",
+      "type": "policy",
+      "title": "South Korea Government in Active Talks with Samsung and SK Hynix on Second Semiconductor Cluster, Accelerated Fab Timeline",
+      "url": "https://www.kedglobal.com/korean-chipmakers/newsView/ked202606240009",
+      "source": "KED Global",
+      "content": "South Korea's presidential policy adviser confirmed discussions with Samsung and SK Hynix about a new chip cluster with AI-driven fab construction timelines potentially accelerated to 2034–2035. KOSPI rebounded 3.26% with Samsung surging 9.11% and SK Hynix gaining 2.74%."
     }
   ],
   "RKLB": [
@@ -5437,6 +5717,14 @@
       "url": "https://simplywall.st/stocks/us/capital-goods/nasdaq-rklb/rocket-lab/news/rocket-lab-rklb-joins-the-nasdaq-100-as-motiv-deal-reshapes",
       "source": "Simply Wall St",
       "content": "Rocket Lab正式纳入Nasdaq-100（6月22日），但当日股价下跌9.6%（盘中区间$96.50-$107.72）——典型的消息兑现卖出反应。同时，太空机器人公司Motiv Space Systems收购完成，拓展卫星系统能力。"
+    },
+    {
+      "date": "2026-06-22",
+      "type": "announcement",
+      "title": "Rocket Lab Launches U.S. Space Force VICTUS HAZE Mission in Record 16 Hours 42 Minutes, Shattering Responsive-Space Record",
+      "url": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-shatters-responsive-space-record-launches-us-space",
+      "source": "Rocket Lab / GlobeNewswire",
+      "content": "Rocket Lab launched the U.S. Space Force VICTUS HAZE mission 16 hours and 42 minutes after receiving its Notice to Launch — obliterating the previous responsive-space record by over 10 hours. The Pioneer spacecraft is now conducting Rendezvous and Proximity Operations (RPO), tracking the JACKAL-0004 satellite built by True Anomaly."
     }
   ],
   "HUBB": [
@@ -6047,6 +6335,22 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/lam-research-lrcx-stock-fair-221059616.html",
       "source": "Yahoo Finance",
       "content": "Lam Research CFO raised full-year WFE market forecast to $140B (from ~$135B) with upside bias. Advanced packaging revenue expected to grow 50%+ in calendar 2026, driven by AI infrastructure demand."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "research",
+      "title": "Wells Fargo and Citi Issue New Street-High Price Targets on Lam Research, Citing NAND Equipment Demand Surge from Agentic AI",
+      "url": "https://www.barchart.com/story/news/2609124/lam-research-stock-just-got-a-new-street-high-price-target-nand-equipment-demand-can-take-lrcx-higher",
+      "source": "Barchart / Wells Fargo / Citi",
+      "content": "Wells Fargo raised its Lam Research price target to $450 from $365 on June 22, matching Citi's new Street-high target; Cantor also named LRCX a top semiconductor pick. Analysts cited rising NAND equipment demand driven by agentic AI workloads, KV cache offloading, and tighter memory supply."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "research",
+      "title": "Bank of America Raises Lam Research Price Target to $480, Citing 50%+ Advanced Packaging Revenue Growth in 2026",
+      "url": "https://finance.yahoo.com/quote/LRCX/",
+      "source": "Bank of America Securities",
+      "content": "Bank of America Securities raised its Lam Research price target to $480 from $330 on June 23, highlighting expectations of over 50% advanced packaging revenue growth in 2026 and raising its global wafer fabrication equipment outlook to $140B."
     }
   ],
   "CDNS": [
@@ -6299,6 +6603,14 @@
       "url": "https://www.quiverquant.com/news/Oracle+Corporation+Stock+(ORCL)+Opinions+on+Earnings+and+AI+Capex+Plans",
       "source": "Quiver Quantitative / Mizuho",
       "content": "Oracle shares rose ~6% around June 18 after steep post-earnings selloff. Mizuho reiterated Outperform with $320 target, citing strong IaaS growth momentum. Analyst debate centers on whether $638B RPO backlog (including $300B OpenAI 5-year deal) justifies aggressive $95B FY2027 capex and $40B debt/equity capital raise."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "news",
+      "title": "Oracle Annual Filing Reveals 21,000 Layoffs (13% of Workforce) as AI Automation Accelerates and $70B Datacenter Build-Out Proceeds",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-22/oracle-layoffs-fueled-by-ai-reduces-workforce-by-21-000",
+      "source": "Bloomberg / CNBC",
+      "content": "Oracle's annual regulatory filing revealed approximately 21,000 employees cut (about 13% of workforce) over the prior 12 months, citing AI-driven automation replacing roles. The company incurred $1.8B in severance costs while funding a $70B AI datacenter build-out through aggressive debt and equity issuance."
     }
   ],
   "PLTR": [
@@ -6453,6 +6765,22 @@
       "url": "https://finance.yahoo.com/quote/PLTR/news/",
       "source": "Yahoo Finance / Wolfe Research",
       "content": "Wolfe Research upgraded Palantir to Peer Perform from Underperform upon resuming coverage, citing improving fundamentals. PLTR traded between $129.62-$135.00 on June 17."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "news",
+      "title": "Palantir Shares Hit 52-Week Low as European Contract Losses Accelerate; NHS FDP Under UK Parliamentary Scrutiny",
+      "url": "https://www.tradingkey.com/news/market-movers/261982215-market-movers-pltr-20260622",
+      "source": "TradingKey / Markets Daily",
+      "content": "Palantir shares fell to a 52-week low on June 22 following significant contract losses, with renewed UK parliamentary pressure to cancel Palantir's £330 million NHS Federated Data Platform contract weighing on sentiment. PLTR did win a foundational role in the US Army's NGC2 Data Layer program."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "announcement",
+      "title": "Palantir Announces Strategic Partnership with Zeta Global to Expand Commercial AI Platform Reach",
+      "url": "https://public.com/stocks/pltr/news",
+      "source": "Palantir / Public.com",
+      "content": "Palantir Technologies announced a strategic partnership with Zeta Global on June 23, combining Palantir's AI platform with Zeta's data-driven marketing capabilities to expand Palantir's commercial sector reach beyond its core government business."
     }
   ],
   "IREN": [
@@ -7259,6 +7587,22 @@
       "url": "https://www.sec.gov/Archives/edgar/data/0000936395/000162828026040614/ex9912026q2earningspressre.htm",
       "source": "SEC / Ciena IR",
       "content": "Ciena Q2 FY2026: revenue $1.57B (+40% YoY) vs $1.53B est., adj. EPS $1.64 vs $1.49 est. (+290% YoY). FY2026 guidance raised to $6.3B ±$100M (+32% YoY). CEO cited AI-driven demand as multi-year structural tailwind."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "announcement",
+      "title": "Ciena Appoints Grant Hoffman as Chief Supply Chain Officer and Brodie Gage as Chief Product and Technology Officer",
+      "url": "https://salestechstar.com/scheduling-appointment-setting/ciena-strengthens-leadership-team-with-key-executive-appointments/",
+      "source": "Ciena / SDxCentral",
+      "content": "Ciena named Grant Hoffman as Chief Supply Chain Officer and expanded Brodie Gage's role to Chief Product and Technology Officer (CPTO), both reporting to CEO Gary Smith, aimed at scaling AI infrastructure supply chain capabilities for optical networking."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "announcement",
+      "title": "Ciena's Blue Planet and Telefonica Deutschland Complete AI-Agent PoC Reducing 5G Network Slice Design from Weeks to Minutes",
+      "url": "https://investor.ciena.com/news/news-details/2026/Telefnica-Deutschland-and-Blue-Planet-Demonstrate-How-AI-Agents-Can-Accelerate-5G-Network-Slicing-Service-Design/default.aspx",
+      "source": "Ciena Investor Relations",
+      "content": "Telefonica Deutschland and Ciena's Blue Planet division completed a proof of concept showing AI agents can reduce complex 5G network slice design and fulfillment from weeks to minutes, using Blue Planet AI Studio's agentic AI to autonomously define slice specifications and generate standards-compliant service payloads."
     }
   ],
   "CSCO": [
@@ -7357,6 +7701,14 @@
       "url": "https://www.gurufocus.com/news/8913985/csco-maintained-by-morgan-stanley-price-target-raised-to-130",
       "source": "GuruFocus / Morgan Stanley",
       "content": "Morgan Stanley maintained Overweight and raised Cisco target from $120 to $130, arguing growing inference workloads are driving an underappreciated front-end infrastructure upgrade cycle."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "news",
+      "title": "U.S. Supreme Court Dismisses Falun Gong Surveillance Lawsuit Against Cisco in 6-3 Ruling, Eliminating Major Legal Liability",
+      "url": "https://www.washingtonpost.com/politics/2026/06/23/falun-gong-members-cannot-sue-us-tech-giant-supreme-court-says/",
+      "source": "Washington Post",
+      "content": "The U.S. Supreme Court voted 6-3 to dismiss a long-running lawsuit alleging Cisco helped China's government surveil and persecute Falun Gong members via its 'Golden Shield' internet surveillance system, ruling the Alien Tort Statute does not allow aiding-and-abetting claims against corporations for overseas human rights abuses."
     }
   ],
   "PWR": [
@@ -7515,6 +7867,14 @@
       "url": "https://app.dealroom.co/news/feed/comfort-systems-backlog-nearly-doubles-to-12b-driven-by-data-center-and-ai-infrastructure-demand",
       "source": "Dealroom / Simply Wall St",
       "content": "Comfort Systems USA's backlog reached a record ~$12B, doubling YoY, driven by hyperscaler data center and AI-related HVAC/mechanical projects. Management notes supply constraints, not demand, are the primary growth governor."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "announcement",
+      "title": "Comfort Systems USA Names Craig Sasser as COO and Briston Blair as Chief Strategy & Innovation Officer, Both Effective July 1, 2026",
+      "url": "https://investors.comfortsystemsusa.com/news-releases/news-release-details/comfort-systems-announces-leadership-transitions-and",
+      "source": "Comfort Systems USA IR / TipRanks",
+      "content": "Comfort Systems USA named Craig Sasser (Regional VP, Atlantic Region) as COO effective July 1 with a $600,000 base salary, alongside Briston Blair's appointment as Chief Strategy & Innovation Officer, aimed at scaling AI data center HVAC infrastructure capabilities."
     }
   ],
   "MOD": [
@@ -7869,6 +8229,22 @@
       "url": "https://finance.yahoo.com/sectors/energy/articles/kinder-morgan-projects-monument-acquisition-121144499.html",
       "source": "Yahoo Finance",
       "content": "Kinder Morgan's $505M Monument Pipeline acquisition (225-mile natural gas system, Houston area) expected to close Q2 2026 at under 8x EBITDA. KMI's $10.1B project backlog supports 41% YoY adjusted EPS growth."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "policy",
+      "title": "FERC's Proposed Blanket Certificate Expansion Could Accelerate Kinder Morgan's $10.1B Natural Gas Project Backlog",
+      "url": "https://undergroundinfrastructure.com/news/2026/june/ferc-proposes-major-expansion-of-natural-gas-pipeline-blanket-certificate-program",
+      "source": "Underground Infrastructure / FERC",
+      "content": "FERC's proposed rulemaking to more than double project cost thresholds for blanket certificates could directly benefit Kinder Morgan, whose $10.1B project backlog is ~92% natural gas. The NOPR could accelerate KMI's Trident, SSE4, and Mississippi Crossing projects by bypassing case-specific FERC approval."
+    },
+    {
+      "date": "2026-06-23",
+      "type": "news",
+      "title": "Kinder Morgan's $455M Gulf Coast Express Expansion Fully Ramping, Lifting Waha Hub Natural Gas Prices from Negative Levels",
+      "url": "https://energynewsbeat.co/exploration-and-production/kinder-morgans-gulf-coast-express-expansion-about-to-come-on-line-and-it-will-impact-more-than-natural-gas-prices/",
+      "source": "Energy News Beat",
+      "content": "Kinder Morgan's Gulf Coast Express pipeline expansion (570 MMcf/d) entered service in mid-2026, helping lift Permian (Waha) natural gas cash prices from deeply negative levels to around -$0.37/MMBtu, alleviating Permian gas takeaway constraints and validating KMI's infrastructure expansion strategy."
     }
   ],
   "WMB": [
@@ -7911,6 +8287,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/does-williams-wmb-dividend-hike-171557129.html",
       "source": "Yahoo Finance",
       "content": "Williams Companies declared $0.525/share quarterly dividend ($2.10 annualized, +5% YoY) payable June 29, 2026. Reaffirmed 2026 adjusted EBITDA guidance. Fee-based Transco pipeline contracts provide revenue stability."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "policy",
+      "title": "FERC Blanket Certificate NOPR Would Reduce Regulatory Burden on Williams' Transco Pipeline Expansion Projects Including Power Express",
+      "url": "https://www.troutmanenergyreport.com/2026/05/ferc-proposes-increased-cost-limits-and-other-changes-to-natural-gas-blanket-certificate-program/",
+      "source": "Troutman Energy Report / FERC",
+      "content": "FERC's proposed overhaul of blanket certificate regulations — actively supported by Williams Companies — could reduce regulatory burden on Transco expansion projects including Williams' 750 MMcf/d Power Express project and Southeast Supply Enhancement work, if finalized. Public comments due July 27, 2026."
     }
   ],
   "ASE": [
@@ -8181,6 +8565,14 @@
       "url": "https://finance.yahoo.com/quote/TER/news/",
       "source": "Yahoo Finance",
       "content": "Teradyne正式纳入Nasdaq-100指数（6月22日），同日Automate 2026展会（芝加哥，6月22-25日）开幕，Teradyne Robotics展示物理AI与机器人测试解决方案。TER此前获$1.399亿美国空军合同，AI测试需求持续增长。"
+    },
+    {
+      "date": "2026-06-22",
+      "type": "announcement",
+      "title": "Teradyne Robotics and Vention Announce Digital Twin Creation Platform for Universal Robots Cobot Cells at Automate 2026",
+      "url": "https://www.prnewswire.com/news-releases/vention-and-teradyne-robotics-collaborate-on-digital-twin-creation-platform-optimized-for-ur-robotic-cells-302805956.html",
+      "source": "PR Newswire",
+      "content": "Vention and Teradyne Robotics announced a strategic collaboration to build a digital twin creation platform for Universal Robots (UR) cobot cells, extending Vention's MachineBuilder software with pre-loaded UR specifications, a UR+ component marketplace, and high-fidelity 3D simulation. Unveiled at Automate 2026 in Chicago."
     }
   ],
   "NOW": [
@@ -8417,6 +8809,14 @@
       "url": "https://www.msn.com/en-us/news/other/salesforce-launches-summer-26-ai-upgrade-amid-stock-slump/gm-GM88D93973",
       "source": "MSN / TheStreet",
       "content": "Salesforce Summer '26 release features multi-agent orchestration, Slack-first workflows, real-time data activation. Agentforce ARR $800M (+169% YoY), combined AI revenue surpassed $2.9B. Shift to usage-based AI pricing."
+    },
+    {
+      "date": "2026-06-22",
+      "type": "announcement",
+      "title": "Salesforce Summer 2026 Release: Multi-Agent Orchestration in Agentforce Goes Generally Available Across All Enterprise Functions",
+      "url": "https://www.salesforce.com/news/stories/summer-2026-product-release-announcement/",
+      "source": "Salesforce",
+      "content": "Salesforce's Summer 2026 release became fully available, headlined by Multi-Agent Orchestration in Agentforce — enabling AI agents to collaborate as unified teams handling complex end-to-end workflows. The release also introduced Agentic Advisor for financial services and a new Agentic Sales Package for mid-market clients."
     }
   ]
 }
