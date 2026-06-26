@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-06-25T08:30:00+08:00",
+  "last_run": "2026-06-26T08:43:34+08:00",
   "run_date": "2026-06-25",
   "market": "US",
   "is_friday_bar": false,
@@ -10,77 +10,81 @@
     ],
     "sell_warning_candidates": [
       "META",
-      "GOOGL",
       "CEG",
+      "GOOGL",
       "MSFT"
     ],
     "buy_fresh": [],
-    "headline": "Top5持仓警告: NVDA, AVGO | 候选池警告: META, GOOGL, CEG, MSFT | 今日暴跌: MU -10%, SNDK -11% (Nasdaq -2.21%)"
+    "headline": "🚨 MU +16% 历史性爆发 (Q3营收$414.6亿+4倍YoY, HBM全年售罄) | SNDK +16% 同涨 | Top5持仓警告: NVDA, AVGO | 候选池警告: META, CEG, GOOGL, MSFT | Mag7承压: AAPL-6.1%, MSFT-2.8%, NVDA-1.4%"
   },
   "market_context": {
-    "QQQ": {
-      "close_est": 698.0,
-      "prior_close_jun23": 713.6,
-      "chg_pct": -2.21,
-      "trend": "down from Jun5 ATH $742.58"
+    "QQQ_est": {
+      "close_est": 694.8,
+      "prior_close_jun24": 698.0,
+      "chg_pct": -0.46
     },
-    "SPY": {
-      "close_est": 570.0,
-      "trend": "declining with Nasdaq"
+    "SPY_est": {
+      "close_est": 569.9,
+      "chg_pct": -0.01
     },
-    "catalyst": "Jun 25 memory chip selloff: MU -10%, SNDK -11%, MRVL -8%; Nasdaq -2.21%; similar to Jun 5 pattern",
-    "sector_note": "Memory/AI chip crowded trade stress-test; broader tech weak (MSFT/META/GOOGL all below weekly EMA8)"
+    "catalyst": "Jun25 2026 landmark: Micron Q3 FY2026 revenue $41.46B (4x YoY, +16% vs Q2), adj EPS $25.11 vs $20.78 est. HBM sold out all 2026. Q4 guidance ~$50B (vs $43.6B consensus). MU +17%, SNDK +15.6%. Simultaneously, Apple (-6.1%) and Microsoft (-3.2%) announced consumer hardware price hikes citing surging memory costs. Nasdaq -0.46%, S&P500 -0.01%.",
+    "sector_note": "Memory AI momentum (MU/SNDK) vs software/consumer tech pressure (Mag7 broadly weak). NVDA -1.4% despite MU bullish read-through — supply chain concerns on AI hardware pricing."
   },
   "top5": [
     {
       "code": "NVDA",
       "name": "Nvidia",
       "rank": 1,
-      "score": 1.2449,
+      "score": 1.2722,
       "signal": "sell-warning",
-      "close": 198.7,
-      "ema8": 205.0,
-      "ema21": 187.0
+      "close": 196.2,
+      "ema8": 203.04,
+      "ema21": 187.84,
+      "close_vs_ema8_pct": -3.37
     },
     {
       "code": "MU",
       "name": "Micron",
       "rank": 2,
-      "score": 1.2433,
+      "score": 1.2115,
       "signal": "hold",
-      "close": 1057.0,
-      "ema8": 878.0,
-      "ema21": 573.0
+      "close": 1230.0,
+      "ema8": 956.22,
+      "ema21": 632.73,
+      "close_vs_ema8_pct": 28.63
     },
     {
       "code": "TSM",
       "name": "TSMC",
       "rank": 3,
-      "score": 0.8825,
+      "score": 0.8545,
       "signal": "hold",
-      "close": 438.91,
-      "ema8": 410.0,
-      "ema21": 321.0
+      "close": 435.4,
+      "ema8": 415.64,
+      "ema21": 331.4,
+      "close_vs_ema8_pct": 4.75
     },
     {
       "code": "AVGO",
       "name": "Broadcom",
       "rank": 4,
-      "score": 0.6627,
+      "score": 0.6853,
       "signal": "sell-warning",
-      "close": 373.0,
-      "ema8": 400.0,
-      "ema21": 344.0
+      "close": 382.1,
+      "ema8": 396.02,
+      "ema21": 347.46,
+      "close_vs_ema8_pct": -3.51
     },
     {
       "code": "ASML",
       "name": "ASML",
       "rank": 5,
-      "score": 0.661,
+      "score": 0.6777,
       "signal": "hold",
-      "close": 1720.0,
-      "ema8": 1587.0,
-      "ema21": 1250.0
+      "close": 1778.5,
+      "ema8": 1629.56,
+      "ema21": 1298.05,
+      "close_vs_ema8_pct": 9.14
     }
   ],
   "candidates": [
@@ -88,51 +92,56 @@
       "code": "SNDK",
       "name": "Sandisk",
       "rank": 6,
-      "score": 0.6183,
+      "score": 0.5736,
       "signal": "hold",
-      "close": 1767.0,
-      "ema8": 1535.0,
-      "ema21": 700.0
+      "close": 2050.0,
+      "ema8": 1649.44,
+      "ema21": 822.73,
+      "close_vs_ema8_pct": 24.28
     },
     {
       "code": "META",
       "name": "Meta Platforms",
       "rank": 7,
-      "score": 0.5175,
+      "score": 0.5164,
       "signal": "sell-warning",
-      "close": 548.0,
-      "ema8": 629.0,
-      "ema21": 520.0
-    },
-    {
-      "code": "GOOGL",
-      "name": "Alphabet",
-      "rank": 8,
-      "score": 0.4232,
-      "signal": "sell-warning",
-      "close": 341.0,
-      "ema8": 355.0,
-      "ema21": 289.0
+      "close": 543.0,
+      "ema8": 609.89,
+      "ema21": 522.09,
+      "close_vs_ema8_pct": -10.97
     },
     {
       "code": "CEG",
       "name": "Constellation Energy",
-      "rank": 9,
-      "score": 0.3871,
+      "rank": 8,
+      "score": 0.5162,
       "signal": "sell-warning",
-      "close": 272.0,
-      "ema8": 303.0,
-      "ema21": 333.0
+      "close": 271.0,
+      "ema8": 295.89,
+      "ema21": 327.36,
+      "close_vs_ema8_pct": -8.41
+    },
+    {
+      "code": "GOOGL",
+      "name": "Alphabet",
+      "rank": 9,
+      "score": 0.4384,
+      "signal": "sell-warning",
+      "close": 336.4,
+      "ema8": 350.87,
+      "ema21": 293.31,
+      "close_vs_ema8_pct": -4.12
     },
     {
       "code": "MSFT",
       "name": "Microsoft",
       "rank": 10,
-      "score": 0.369,
+      "score": 0.3713,
       "signal": "sell-warning",
-      "close": 357.0,
-      "ema8": 398.0,
-      "ema21": 359.0
+      "close": 347.0,
+      "ema8": 386.67,
+      "ema21": 357.91,
+      "close_vs_ema8_pct": -10.26
     }
   ],
   "signals": {
@@ -143,346 +152,82 @@
     "ASML": "hold",
     "SNDK": "hold",
     "META": "sell-warning",
-    "GOOGL": "sell-warning",
     "CEG": "sell-warning",
+    "GOOGL": "sell-warning",
     "MSFT": "sell-warning"
   },
   "signal_detail": {
     "NVDA": {
-      "close": 198.7,
-      "ema8": 205.0,
-      "ema21": 187.0,
-      "close_vs_ema8_pct": -3.07,
-      "buy_zone": 209.1,
-      "note": "Below 50d-EMA $206.76; declining from ATH $235.47 May 14"
+      "close": 196.2,
+      "ema8": 203.04,
+      "ema21": 187.84,
+      "close_vs_ema8_pct": -3.37,
+      "note": "2nd week below EMA8; -1.4% today despite MU bull catalyst; AI hardware pricing pressure weighs"
     },
     "MU": {
-      "close": 1057.0,
-      "ema8": 878.0,
-      "ema21": 573.0,
-      "close_vs_ema8_pct": 20.39,
-      "buy_zone": 895.56,
-      "note": "Down 10%+ today; still well above weekly EMA8; watch closely"
+      "close": 1230.0,
+      "ema8": 956.22,
+      "ema21": 632.73,
+      "close_vs_ema8_pct": 28.63,
+      "note": "Q3 FY26 blowout: rev $41.46B (+347% YoY), EPS $25.11 est $20.78. HBM sold-out 2026. Q4 guide $50B. Strong hold — no EMA8 test."
     },
     "TSM": {
-      "close": 438.91,
-      "ema8": 410.0,
-      "ema21": 321.0,
-      "close_vs_ema8_pct": 7.05,
-      "buy_zone": 418.2,
-      "note": "Pulled back from high; holding above EMA8"
+      "close": 435.4,
+      "ema8": 415.64,
+      "ema21": 331.4,
+      "close_vs_ema8_pct": 4.75,
+      "note": "Pulling back from Jun22 ATH $467.67. Still +4.8% above EMA8. Hold."
     },
     "AVGO": {
-      "close": 373.0,
-      "ema8": 400.0,
-      "ema21": 344.0,
-      "close_vs_ema8_pct": -6.75,
-      "buy_zone": 408.0,
-      "note": "Persistent below EMA8 since Jun 5 earnings miss; 3rd week sell"
+      "close": 382.1,
+      "ema8": 396.02,
+      "ema21": 347.46,
+      "close_vs_ema8_pct": -3.51,
+      "note": "4th week below EMA8 since Jun5 earnings. Persistent sell warning."
     },
     "ASML": {
-      "close": 1720.0,
-      "ema8": 1587.0,
-      "ema21": 1250.0,
-      "close_vs_ema8_pct": 8.38,
-      "buy_zone": 1618.74,
-      "note": "Strong; EUV monopoly; price well above EMA8"
+      "close": 1778.5,
+      "ema8": 1629.56,
+      "ema21": 1298.05,
+      "close_vs_ema8_pct": 9.14,
+      "note": "Strong +3.4%; well above EMA8. EUV monopoly. Hold."
     },
     "SNDK": {
-      "close": 1767.0,
-      "ema8": 1535.0,
-      "ema21": 700.0,
-      "close_vs_ema8_pct": 15.11,
-      "buy_zone": 1565.7,
-      "note": "Down 11% today but still above EMA8; volatile"
+      "close": 2050.0,
+      "ema8": 1649.44,
+      "ema21": 822.73,
+      "close_vs_ema8_pct": 24.28,
+      "note": "MU sympathy rally +16%. Well above EMA8. Momentum candidate."
     },
     "META": {
-      "close": 548.0,
-      "ema8": 629.0,
-      "ema21": 520.0,
-      "close_vs_ema8_pct": -12.88,
-      "buy_zone": 641.58,
-      "note": "Persistent below EMA8 since Jun 5; 3rd week"
-    },
-    "GOOGL": {
-      "close": 341.0,
-      "ema8": 355.0,
-      "ema21": 289.0,
-      "close_vs_ema8_pct": -3.94,
-      "buy_zone": 362.1,
-      "note": "Slipped below EMA8 this week"
+      "close": 543.0,
+      "ema8": 609.89,
+      "ema21": 522.09,
+      "close_vs_ema8_pct": -10.97,
+      "note": "4th week below EMA8. Persistent sell warning."
     },
     "CEG": {
-      "close": 272.0,
-      "ema8": 303.0,
-      "ema21": 333.0,
-      "close_vs_ema8_pct": -10.23,
-      "buy_zone": 309.06,
-      "note": "Persistent sell since Jun 5; YTD -26%; down from $412 high"
+      "close": 271.0,
+      "ema8": 295.89,
+      "ema21": 327.36,
+      "close_vs_ema8_pct": -8.41,
+      "note": "EMA8 < EMA21 (deep downtrend). Nuclear energy sector lagging."
+    },
+    "GOOGL": {
+      "close": 336.4,
+      "ema8": 350.87,
+      "ema21": 293.31,
+      "close_vs_ema8_pct": -4.12,
+      "note": "2nd week below EMA8. Mag7 correction continues."
     },
     "MSFT": {
-      "close": 357.0,
-      "ema8": 398.0,
-      "ema21": 359.0,
-      "close_vs_ema8_pct": -10.3,
-      "buy_zone": 405.96,
-      "note": "Significant decline from $430 Jun 5; well below EMA8"
+      "close": 347.0,
+      "ema8": 386.67,
+      "ema21": 357.91,
+      "close_vs_ema8_pct": -10.26,
+      "note": "Price-hike announcement hurt. 3rd week below EMA8. EMA8 approaching EMA21."
     }
   },
-  "kline_status": "partial: stooq/yahoo 403 blocked; prices from WebSearch Jun 24-25 2026; EMAs estimated from Jun5 baseline + 3-week EMA projection",
-  "sources": "WebSearch: Yahoo Finance / CNBC / Macrotrends / StockAnalysis (Jun 24-25 2026); EMA8/EMA21 estimated from Jun5 actual baseline",
-  "score_details": {
-    "NVDA": {
-      "score": 1.2449,
-      "strategic": 10,
-      "yoy_pct": 85.2,
-      "avg_gm": 73.9,
-      "avg_nm_clipped": 60
-    },
-    "AVGO": {
-      "score": 0.6627,
-      "strategic": 9,
-      "yoy_pct": 48.0,
-      "avg_gm": 70.1,
-      "avg_nm_clipped": 38.4
-    },
-    "AMD": {
-      "score": 0.1904,
-      "strategic": 8,
-      "yoy_pct": 37.8,
-      "avg_gm": 49.8,
-      "avg_nm_clipped": 13.2
-    },
-    "INTC": {
-      "score": 0.219,
-      "strategic": 9,
-      "yoy_pct": 7.3,
-      "avg_gm": 35.3,
-      "avg_nm_clipped": -6.0
-    },
-    "QCOM": {
-      "score": -0.7476,
-      "strategic": 6,
-      "yoy_pct": -3.5,
-      "avg_gm": 55.1,
-      "avg_nm_clipped": 23.1
-    },
-    "MRVL": {
-      "score": -0.1253,
-      "strategic": 7,
-      "yoy_pct": 20.4,
-      "avg_gm": 51.7,
-      "avg_nm_clipped": 50.6
-    },
-    "APP": {
-      "score": -0.0186,
-      "strategic": 6,
-      "yoy_pct": 58.6,
-      "avg_gm": 88.3,
-      "avg_nm_clipped": 60
-    },
-    "TSM": {
-      "score": 0.8825,
-      "strategic": 10,
-      "yoy_pct": 40.6,
-      "avg_gm": 61.6,
-      "avg_nm_clipped": 46.8
-    },
-    "ASML": {
-      "score": 0.661,
-      "strategic": 10,
-      "yoy_pct": 18.8,
-      "avg_gm": 52.6,
-      "avg_nm_clipped": 29.8
-    },
-    "AMAT": {
-      "score": 0.0369,
-      "strategic": 8,
-      "yoy_pct": 11.4,
-      "avg_gm": 49.1,
-      "avg_nm_clipped": 28.3
-    },
-    "KLAC": {
-      "score": 0.0283,
-      "strategic": 8,
-      "yoy_pct": 11.8,
-      "avg_gm": 60.7,
-      "avg_nm_clipped": 33.0
-    },
-    "ONTO": {
-      "score": -0.4304,
-      "strategic": 7,
-      "yoy_pct": 7.4,
-      "avg_gm": 48.8,
-      "avg_nm_clipped": 10.5
-    },
-    "SNPS": {
-      "score": -0.3107,
-      "strategic": 7,
-      "yoy_pct": 31.0,
-      "avg_gm": 74.1,
-      "avg_nm_clipped": 4.5
-    },
-    "MU": {
-      "score": 1.2433,
-      "strategic": 9,
-      "yoy_pct": 196.4,
-      "avg_gm": 53.2,
-      "avg_nm_clipped": 36.2
-    },
-    "SNDK": {
-      "score": 0.6183,
-      "strategic": 7,
-      "yoy_pct": 252.1,
-      "avg_gm": 46.3,
-      "avg_nm_clipped": 22.7
-    },
-    "COHR": {
-      "score": -0.0803,
-      "strategic": 8,
-      "yoy_pct": 20.7,
-      "avg_gm": 36.7,
-      "avg_nm_clipped": 6.6
-    },
-    "LITE": {
-      "score": -0.1,
-      "strategic": 7,
-      "yoy_pct": 88.4,
-      "avg_gm": 36.9,
-      "avg_nm_clipped": 18.7
-    },
-    "FN": {
-      "score": -0.5868,
-      "strategic": 7,
-      "yoy_pct": 39.1,
-      "avg_gm": 12.0,
-      "avg_nm_clipped": 9.9
-    },
-    "MSFT": {
-      "score": 0.369,
-      "strategic": 9,
-      "yoy_pct": 18.3,
-      "avg_gm": 68.3,
-      "avg_nm_clipped": 39.3
-    },
-    "GOOGL": {
-      "score": 0.4232,
-      "strategic": 9,
-      "yoy_pct": 21.8,
-      "avg_gm": 60.3,
-      "avg_nm_clipped": 37.7
-    },
-    "AMZN": {
-      "score": -0.1386,
-      "strategic": 8,
-      "yoy_pct": 16.6,
-      "avg_gm": 50.7,
-      "avg_nm_clipped": 12.3
-    },
-    "META": {
-      "score": 0.5175,
-      "strategic": 9,
-      "yoy_pct": 33.1,
-      "avg_gm": 81.9,
-      "avg_nm_clipped": 32.4
-    },
-    "AAPL": {
-      "score": -0.1175,
-      "strategic": 8,
-      "yoy_pct": 16.6,
-      "avg_gm": 47.2,
-      "avg_nm_clipped": 26.7
-    },
-    "TSLA": {
-      "score": -0.7972,
-      "strategic": 6,
-      "yoy_pct": 15.8,
-      "avg_gm": 19.1,
-      "avg_nm_clipped": 3.9
-    },
-    "CRWV": {
-      "score": -0.0468,
-      "strategic": 7,
-      "yoy_pct": 112.2,
-      "avg_gm": 70.1,
-      "avg_nm_clipped": -24.1
-    },
-    "CEG": {
-      "score": 0.3871,
-      "strategic": 9,
-      "yoy_pct": 63.8,
-      "avg_gm": 44.5,
-      "avg_nm_clipped": 12.3
-    },
-    "VRT": {
-      "score": -0.0143,
-      "strategic": 8,
-      "yoy_pct": 29.9,
-      "avg_gm": 37.1,
-      "avg_nm_clipped": 14.3
-    },
-    "ETN": {
-      "score": -0.1984,
-      "strategic": 8,
-      "yoy_pct": 16.8,
-      "avg_gm": 36.9,
-      "avg_nm_clipped": 14.0
-    },
-    "GEV": {
-      "score": -0.5016,
-      "strategic": 7,
-      "yoy_pct": 16.3,
-      "avg_gm": 19.9,
-      "avg_nm_clipped": 23.6
-    },
-    "CCJ": {
-      "score": -0.8689,
-      "strategic": 6,
-      "yoy_pct": 9.1,
-      "avg_gm": 28.9,
-      "avg_nm_clipped": 17.2
-    },
-    "SMH": {
-      "score": -0.2599,
-      "strategic": 8,
-      "yoy_pct": null,
-      "avg_gm": null,
-      "avg_nm_clipped": null
-    },
-    "XLU": {
-      "score": -0.7318,
-      "strategic": 7,
-      "yoy_pct": null,
-      "avg_gm": null,
-      "avg_nm_clipped": null
-    },
-    "COPX": {
-      "score": -0.5521,
-      "strategic": 7,
-      "yoy_pct": null,
-      "avg_gm": null,
-      "avg_nm_clipped": null
-    },
-    "XME": {
-      "score": -1.0773,
-      "strategic": 6,
-      "yoy_pct": null,
-      "avg_gm": null,
-      "avg_nm_clipped": null
-    },
-    "EWY": {
-      "score": -0.7561,
-      "strategic": 7,
-      "yoy_pct": null,
-      "avg_gm": null,
-      "avg_nm_clipped": null
-    },
-    "RKLB": {
-      "score": -0.3747,
-      "strategic": 7,
-      "yoy_pct": 66.7,
-      "avg_gm": 36.4,
-      "avg_nm_clipped": -27.5
-    }
-  }
+  "kline_status": "partial: stooq.com 403 policy-blocked; prices sourced from WebSearch Jun25 2026 (CNBC, TheStreet, stockanalysis.com); EMAs forward-projected from Jun24 baseline",
+  "sources": "WebSearch: TheStreet Jun25 2026 / stockanalysis.com / CNBC live updates Jun25 2026; EMA8/EMA21 projected from Jun24 run baseline"
 }
