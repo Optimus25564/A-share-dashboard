@@ -1,120 +1,53 @@
 {
-  "date": "2026-06-25",
-  "weekday": "Wednesday",
-  "week_data_date": "2026-06-12",
-  "ranking": {
-    "top5": ["688041", "688256", "688981", "688008", "603019"],
-    "candidates": ["002261", "300308", "002156", "688047", "002837"]
-  },
-  "scores": {
-    "688041": {"name": "海光信息", "score": 4.6053, "strategic": 10, "rank": 1},
-    "688256": {"name": "寒武纪",   "score": 4.5103, "strategic": 10, "rank": 2},
-    "688981": {"name": "中芯国际", "score": 3.6619, "strategic": 10, "rank": 3},
-    "688008": {"name": "澜起科技", "score": 3.5915, "strategic": 8,  "rank": 4},
-    "603019": {"name": "中科曙光", "score": 3.5675, "strategic": 8,  "rank": 5},
-    "002261": {"name": "拓维信息", "score": 3.4846, "strategic": 9,  "rank": 6},
-    "300308": {"name": "中际旭创", "score": 3.2543, "strategic": 7,  "rank": 7},
-    "002156": {"name": "通富微电", "score": 3.0345, "strategic": 8,  "rank": 8},
-    "688047": {"name": "龙芯中科", "score": 2.9369, "strategic": 7,  "rank": 9},
-    "002837": {"name": "英维克",   "score": 2.9336, "strategic": 7,  "rank": 10},
-    "688347": {"name": "华虹公司", "score": 2.9268, "strategic": 8,  "rank": 11},
-    "002409": {"name": "雅克科技", "score": 2.8159, "strategic": 7,  "rank": 12},
-    "000034": {"name": "神州数码", "score": 2.5405, "strategic": 7,  "rank": 13},
-    "000938": {"name": "紫光股份", "score": 2.3465, "strategic": 7,  "rank": 14},
-    "000977": {"name": "浪潮信息", "score": 2.0348, "strategic": 6,  "rank": 15},
-    "300475": {"name": "香农芯创", "score": 1.5550, "strategic": 5,  "rank": 16},
-    "601138": {"name": "工业富联", "score": 1.4002, "strategic": 4,  "rank": 17}
-  },
-  "ranking_changes": {
-    "entered_top5": ["688981"],
-    "exited_top5":  ["300308"]
-  },
+  "date": "2026-06-26",
+  "top5": [
+    {"code": "688041", "name": "海光",  "score": 1.2365},
+    {"code": "688256", "name": "寒武纪","score": 1.1386},
+    {"code": "688008", "name": "澜起",  "score": 0.5203},
+    {"code": "603019", "name": "曙光",  "score": 0.4955},
+    {"code": "300308", "name": "旭创",  "score": 0.3370}
+  ],
+  "candidates": [
+    {"code": "688981", "name": "中芯",  "score": 0.2641},
+    {"code": "002261", "name": "拓维",  "score": 0.2457},
+    {"code": "688047", "name": "龙芯",  "score": 0.0099},
+    {"code": "002837", "name": "英维克","score": 0.0064},
+    {"code": "002156", "name": "通富",  "score": -0.0539}
+  ],
   "signals": {
-    "688041": {
-      "signal": "sell-warning",
-      "close_est": 276.0,
-      "ema8_est": 302.0,
-      "note": "carry-forward(2026-06-12)",
-      "data_source": "carry-forward"
-    },
-    "688256": {
-      "signal": "buy-fresh",
-      "close_est": 1350.0,
-      "ema8_est": 1340.0,
-      "note": "carry-forward(2026-06-12)",
-      "data_source": "carry-forward"
-    },
-    "688981": {
-      "signal": "buy-fresh",
-      "close_est": 112.0,
-      "ema8_est": 109.50,
-      "note": "carry-forward(2026-06-12)",
-      "data_source": "carry-forward"
-    },
-    "688008": {
-      "signal": "sell-warning",
-      "close_est": 241.0,
-      "ema8_est": 247.0,
-      "note": "carry-forward(2026-06-12)",
-      "data_source": "carry-forward"
-    },
-    "603019": {
-      "signal": "sell-warning",
-      "close_est": 84.5,
-      "ema8_est": 87.5,
-      "note": "carry-forward(2026-06-12)",
-      "data_source": "carry-forward"
-    },
-    "002261": {
-      "signal": "sell-warning",
-      "close_est": 24.8,
-      "ema8_est": 25.6,
-      "note": "carry-forward(2026-06-12)",
-      "data_source": "carry-forward"
-    },
-    "300308": {
-      "signal": "hold",
-      "close_est": 1190.0,
-      "ema8_est": 1065.0,
-      "note": "carry-forward(2026-06-12)",
-      "data_source": "carry-forward"
-    },
-    "002156": {
-      "signal": "sell-warning",
-      "close_est": 30.5,
-      "ema8_est": 31.2,
-      "note": "carry-forward(2026-06-12)",
-      "data_source": "carry-forward"
-    },
-    "688047": {
-      "signal": "hold",
-      "close_est": null,
-      "ema8_est": null,
-      "note": "候选池，无K线数据",
-      "data_source": "carry-forward"
-    },
-    "002837": {
-      "signal": "hold",
-      "close_est": null,
-      "ema8_est": null,
-      "note": "候选池，无K线数据",
-      "data_source": "carry-forward"
-    },
-    "sh000001": {
-      "signal": "sell-warning",
-      "close_est": 3958.0,
-      "ema8_est": 4090.0,
-      "note": "carry-forward(2026-06-12)",
-      "data_source": "carry-forward"
-    }
+    "688041": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
+               "last_known": {"signal": "sell-warning", "close_est": 276.0, "ema8_est": 302.0, "as_of": "2026-06-12"}},
+    "688256": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
+               "last_known": {"signal": "buy-fresh",   "close_est": 1350.0, "ema8_est": 1340.0, "as_of": "2026-06-12"}},
+    "688008": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
+               "last_known": {"signal": "sell-warning", "close_est": 241.0, "ema8_est": 247.0, "as_of": "2026-06-12"}},
+    "603019": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
+               "last_known": {"signal": "sell-warning", "close_est": 84.5, "ema8_est": 87.5, "as_of": "2026-06-12"}},
+    "300308": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
+               "last_known": {"signal": "hold",         "close_est": 1190.0, "ema8_est": 1065.0, "as_of": "2026-06-12"}},
+    "688981": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
+               "last_known": {"signal": "buy-fresh",   "close_est": 112.0, "ema8_est": 109.5, "as_of": "2026-06-12"}},
+    "002261": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
+               "last_known": {"signal": "sell-warning", "close_est": 24.8, "ema8_est": 25.6, "as_of": "2026-06-12"}},
+    "688047": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
+               "last_known": {"signal": "hold", "close_est": null, "ema8_est": null, "as_of": "2026-06-12"}},
+    "002837": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
+               "last_known": {"signal": "hold", "close_est": null, "ema8_est": null, "as_of": "2026-06-12"}},
+    "002156": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
+               "last_known": {"signal": "sell-warning", "close_est": 30.5, "ema8_est": 31.2, "as_of": "2026-06-12"}}
   },
-  "market_context": "2026-06-25（周三）：中芯国际升入Top5(#3)，中际旭创退出Top5(#7候选池)；大盘上证sell-warning(3958<EMA8 4090)；持仓3/5 sell-warning(海光/澜起/曙光)；寒武纪/中芯buy-fresh",
-  "title": "🚨 [2026-06-25] 趋势提醒",
-  "has_signal": true,
+  "index": {
+    "signal": "n/a-kline-blocked",
+    "close": null,
+    "ema8": null,
+    "last_known": {"signal": "sell-warning", "close_est": 3958.0, "ema8_est": 4090.0, "as_of": "2026-06-12"}
+  },
+  "title": "⚠️ [2026-06-26] 运行正常·K线受限",
+  "kline_blocked": true,
+  "kline_blocked_note": "周线K线API (web.ifzq.gtimg.cn) 被环境网络策略封锁 (403)，技术信号无法刷新。最后已知信号来自 2026-06-12 carry-forward。",
   "push_status": {
     "wechat": "failed: HTTP 403 (network policy)",
-    "email": "failed: ENETUNREACH (IPv6 not supported)",
+    "email": "failed: ENETUNREACH",
     "push_notification": "sent via routine_summary"
-  },
-  "data_note": "周线K线API受环境网络策略限制；技术信号carry-forward自2026-06-12；今日为周三"
+  }
 }
