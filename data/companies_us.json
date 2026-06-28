@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-06-21",
+    "updated": "2026-06-28",
     "note": "AI CapEx 产业链 8 层框架. 财报数据自然季度 (2025Q2→2026Q1). 单位 rev=亿$.",
     "categories": {
       "core_chip": "L1 算力芯片 & 加速器",
@@ -1356,25 +1356,34 @@
         "src": "A",
         "source_url": "https://micron.gcs-web.com/news-releases/news-release-details/micron-technology-inc-reports-results-second-quarter-fiscal-2026",
         "note": "FY2026 Q2 ended Feb 26 2026: revenue $23.860B, GAAP gross margin $17.755B, GAAP net income $13.785B"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 414.6,
+        "gm": 84.56,
+        "nm": 68.11,
+        "src": "A",
+        "source_url": "https://www.globenewswire.com/news-release/2026/06/24/3317151/14450/en/micron-technology-inc-reports-record-results-for-the-third-quarter-of-fiscal-2026.html",
+        "note": "FY2026 Q3 ended May 29 2026: revenue $41.46B, GAAP gross profit $35.06B, GAAP net income $28.24B"
       }
     ],
     "q2_outlook": {
-      "q": "2026Q2",
-      "rev_estimate": 335,
+      "q": "2026Q3",
+      "rev_estimate": 500,
       "yoy_pct": null,
-      "gm_estimate": 81,
+      "gm_estimate": 86,
       "nm_estimate": null,
-      "catalyst": "Micron FY2026 Q3 official outlook: revenue $33.5B +/- $0.75B, GAAP gross margin approximately 81%, GAAP diluted EPS $18.90 +/- $0.40.",
-      "source": "Micron official FY2026 Q2 earnings release",
+      "catalyst": "Micron FY2026 Q4 official outlook: revenue $50.0B +/- $1.0B, gross margin approximately 86%, non-GAAP EPS $31.00 +/- $1.00.",
+      "source": "Micron official FY2026 Q3 earnings release June 24, 2026",
       "confidence": "high",
       "data_type": "F",
-      "source_url": "https://micron.gcs-web.com/news-releases/news-release-details/micron-technology-inc-reports-results-second-quarter-fiscal-2026",
+      "source_url": "https://www.globenewswire.com/news-release/2026/06/24/3317151/14450/en/micron-technology-inc-reports-record-results-for-the-third-quarter-of-fiscal-2026.html",
       "profitability_guidance": {
-        "metric": "GAAP diluted EPS",
-        "value": 18.9,
+        "metric": "non-GAAP EPS",
+        "value": 31.0,
         "unit": "$/share",
         "derived": false,
-        "basis": "company guidance: GAAP diluted EPS $18.90 +/- $0.40"
+        "basis": "company guidance: non-GAAP EPS $31.00 +/- $1.00"
       }
     },
     "quality_metrics": {
@@ -5484,25 +5493,28 @@
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526101045/0001193125-26-101045-index.html",
         "note": "Oracle SEC/IR FY2026Q3 business-line table: revenue $17.190B, gross profit/direct margin $9.592B (revenues minus direct business-line expenses $7.598B), net income $3.721B"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 192,
+        "gm": 55.0,
+        "nm": 21.88,
+        "src": "A",
+        "source_url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/default.aspx",
+        "note": "Oracle FY2026 Q4 ended May 31 2026: revenue $19.2B, GAAP net income $4.2B; gm estimated from prior quarter trend (55.8%→55.0%) pending 10-K confirmation"
       }
     ],
     "q2_outlook": {
-      "q": "2026Q2",
+      "q": "2026Q3",
       "rev_estimate": null,
       "yoy_pct": null,
       "gm_estimate": null,
       "nm_estimate": null,
-      "catalyst": "未找到符合规范的真实公告/guidance/consensus 来源；原 outlook 数值已移除。原因：outlook_missing_source_url",
-      "source": "未找到符合规范的真实公告/guidance/consensus 来源",
+      "catalyst": "Oracle Q1 FY2027 (ends Aug 31 2026) guidance not yet provided; cloud revenue RPO grew to $638B in Q4 FY2026.",
+      "source": "Oracle official Q4 FY2026 earnings release June 10, 2026",
       "confidence": "low",
       "data_type": "NA",
-      "source_url": "",
-      "annual_guidance": {
-        "period": "FY2026 Q4 / FY2027 context",
-        "summary": "Q4 non-GAAP EPS guidance $1.96-2.00 and cloud revenue growth 46%-50%; total quarterly revenue guidance not provided.",
-        "source": "Oracle Q3 FY2026 results context",
-        "source_url": "https://investor.oracle.com/financials/quarterly-results/default.aspx"
-      }
+      "source_url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/default.aspx"
     },
     "quality_metrics": {
       "source": "SEC Companyfacts",
