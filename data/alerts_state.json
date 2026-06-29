@@ -1,40 +1,46 @@
 {
-  "date": "2026-06-26",
+  "date": "2026-06-29",
   "top5": [
-    {"code": "688041", "name": "海光",  "score": 1.2365},
-    {"code": "688256", "name": "寒武纪","score": 1.1386},
-    {"code": "688008", "name": "澜起",  "score": 0.5203},
-    {"code": "603019", "name": "曙光",  "score": 0.4955},
-    {"code": "300308", "name": "旭创",  "score": 0.3370}
+    {"code": "688041", "name": "海光信息", "score": 4.61, "rank": 1},
+    {"code": "688256", "name": "寒武纪",   "score": 4.52, "rank": 2},
+    {"code": "688012", "name": "中微公司", "score": 3.87, "rank": 3},
+    {"code": "688008", "name": "澜起科技", "score": 3.63, "rank": 4},
+    {"code": "688981", "name": "中芯国际", "score": 3.61, "rank": 5}
   ],
   "candidates": [
-    {"code": "688981", "name": "中芯",  "score": 0.2641},
-    {"code": "002261", "name": "拓维",  "score": 0.2457},
-    {"code": "688047", "name": "龙芯",  "score": 0.0099},
-    {"code": "002837", "name": "英维克","score": 0.0064},
-    {"code": "002156", "name": "通富",  "score": -0.0539}
+    {"code": "603019", "name": "中科曙光", "score": 3.54, "rank": 6},
+    {"code": "002028", "name": "思源电气", "score": 3.48, "rank": 7},
+    {"code": "002261", "name": "拓维信息", "score": 3.43, "rank": 8},
+    {"code": "002371", "name": "北方华创", "score": 3.38, "rank": 9},
+    {"code": "300604", "name": "长川科技", "score": 3.38, "rank": 10}
   ],
+  "rebalance": {
+    "entered_top5":   [{"code": "688012", "name": "中微公司", "reason": "首次入选#3"}, {"code": "688981", "name": "中芯国际", "reason": "候选池升格#5"}],
+    "exited_top5":    [{"code": "603019", "name": "中科曙光", "to": "候选池#6"}, {"code": "300308", "name": "中际旭创", "to": "全榜#12"}],
+    "entered_cand":   [{"code": "002028", "name": "思源电气"}, {"code": "002371", "name": "北方华创"}, {"code": "300604", "name": "长川科技"}],
+    "exited_cand":    [{"code": "688047", "name": "龙芯中科"}, {"code": "002837", "name": "英维克"}, {"code": "002156", "name": "通富微电"}]
+  },
   "signals": {
     "688041": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
                "last_known": {"signal": "sell-warning", "close_est": 276.0, "ema8_est": 302.0, "as_of": "2026-06-12"}},
     "688256": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
                "last_known": {"signal": "buy-fresh",   "close_est": 1350.0, "ema8_est": 1340.0, "as_of": "2026-06-12"}},
+    "688012": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
+               "last_known": null},
     "688008": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
                "last_known": {"signal": "sell-warning", "close_est": 241.0, "ema8_est": 247.0, "as_of": "2026-06-12"}},
-    "603019": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
-               "last_known": {"signal": "sell-warning", "close_est": 84.5, "ema8_est": 87.5, "as_of": "2026-06-12"}},
-    "300308": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
-               "last_known": {"signal": "hold",         "close_est": 1190.0, "ema8_est": 1065.0, "as_of": "2026-06-12"}},
     "688981": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
                "last_known": {"signal": "buy-fresh",   "close_est": 112.0, "ema8_est": 109.5, "as_of": "2026-06-12"}},
+    "603019": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
+               "last_known": {"signal": "sell-warning", "close_est": 84.5, "ema8_est": 87.5, "as_of": "2026-06-12"}},
+    "002028": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
+               "last_known": null},
     "002261": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
                "last_known": {"signal": "sell-warning", "close_est": 24.8, "ema8_est": 25.6, "as_of": "2026-06-12"}},
-    "688047": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
-               "last_known": {"signal": "hold", "close_est": null, "ema8_est": null, "as_of": "2026-06-12"}},
-    "002837": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
-               "last_known": {"signal": "hold", "close_est": null, "ema8_est": null, "as_of": "2026-06-12"}},
-    "002156": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
-               "last_known": {"signal": "sell-warning", "close_est": 30.5, "ema8_est": 31.2, "as_of": "2026-06-12"}}
+    "002371": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
+               "last_known": null},
+    "300604": {"signal": "n/a-kline-blocked", "close": null, "ema8": null,
+               "last_known": null}
   },
   "index": {
     "signal": "n/a-kline-blocked",
@@ -42,12 +48,25 @@
     "ema8": null,
     "last_known": {"signal": "sell-warning", "close_est": 3958.0, "ema8_est": 4090.0, "as_of": "2026-06-12"}
   },
-  "title": "⚠️ [2026-06-26] 运行正常·K线受限",
+  "title": "🚨 [2026-06-29] 组合调仓·趋势提醒",
   "kline_blocked": true,
-  "kline_blocked_note": "周线K线API (web.ifzq.gtimg.cn) 被环境网络策略封锁 (403)，技术信号无法刷新。最后已知信号来自 2026-06-12 carry-forward。",
+  "kline_blocked_weeks": 3,
+  "kline_blocked_note": "周线K线API (web.ifzq.gtimg.cn) 已连续3周被环境网络策略封锁(403)，技术信号无法刷新。最后已知信号来自2026-06-12。",
   "push_status": {
-    "wechat": "failed: HTTP 403 (network policy)",
-    "email": "failed: ENETUNREACH",
-    "push_notification": "sent via routine_summary"
-  }
+    "wechat": "failed: network policy 403",
+    "email": "failed: EAFNOSUPPORT (IPv6 not available)",
+    "push_notification": "sent via PushNotification tool (routine_summary)"
+  },
+  "factor_scores_top10": [
+    {"rank":1,  "code":"688041","name":"海光信息", "score":4.61,"strategic":10},
+    {"rank":2,  "code":"688256","name":"寒武纪",   "score":4.52,"strategic":10},
+    {"rank":3,  "code":"688012","name":"中微公司", "score":3.87,"strategic":9},
+    {"rank":4,  "code":"688008","name":"澜起科技", "score":3.63,"strategic":8},
+    {"rank":5,  "code":"688981","name":"中芯国际", "score":3.61,"strategic":10},
+    {"rank":6,  "code":"603019","name":"中科曙光", "score":3.54,"strategic":8},
+    {"rank":7,  "code":"002028","name":"思源电气", "score":3.48,"strategic":8},
+    {"rank":8,  "code":"002261","name":"拓维信息", "score":3.43,"strategic":9},
+    {"rank":9,  "code":"002371","name":"北方华创", "score":3.38,"strategic":9},
+    {"rank":10, "code":"300604","name":"长川科技", "score":3.38,"strategic":7}
+  ]
 }
