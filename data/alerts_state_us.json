@@ -1,233 +1,225 @@
 {
-  "last_run": "2026-06-27T08:30:00+08:00",
-  "run_date": "2026-06-26",
+  "last_run": "2026-06-30T08:30:00+08:00",
+  "run_date": "2026-06-30",
+  "us_trade_date": "2026-06-29",
+  "is_friday_bar": false,
   "market": "US",
-  "is_friday_bar": true,
   "alert_summary": {
-    "sell_confirmed_top5": [
+    "sell_warning_top5": [
       "NVDA",
       "AVGO"
     ],
-    "sell_confirmed_candidates": [
-      "CEG",
+    "sell_warning_candidates": [
       "META",
-      "GOOGL",
-      "MSFT"
+      "MSFT",
+      "CEG"
     ],
-    "buy_fresh": [],
+    "buy_fresh": [
+      "GOOGL"
+    ],
     "hold_top5": [
       "MU",
-      "SNDK",
-      "TSM"
+      "TSM",
+      "ASML"
     ],
-    "ranking_change": "SNDK升入Top5(#3), ASML退至候选池(#6)",
-    "headline": "🚨 Top5持仓卖出确认: NVDA, AVGO (Friday周五收盘) | 持仓平稳: MU, SNDK, TSM | 候选池卖出确认: CEG, META, GOOGL, MSFT | OpenAI IPO传延迟 | SNDK周五-7.6%回调 (MU财报轧空消退) | GOOGL将于6月29日入道琼斯 | Nasdaq-0.24% SPX-0.05%"
+    "ranking_change": "ASML升入Top5(#4,score+0.06), SNDK降至候选池(#8,score-0.50); CEG降至候选池#10",
+    "headline": "🚨 买点: GOOGL | 持仓卖出警告: NVDA,AVGO (周一非周五, 待确认) | 候选池卖出警告: META,MSFT,CEG | Nasdaq+2.25%(GOOGL+4.96%道琼斯纳入,MU-5%供给担忧)"
   },
   "market_context": {
-    "QQQ_close": 707.72,
-    "SPY_note": "S&P500 -0.05%",
-    "nasdaq_note": "Nasdaq -0.24%",
-    "catalyst": "Jun26 2026 (Friday): OpenAI据报推迟IPO至2027年; SNDK周五-7.6%回调 (MU交易拥挤消退); AVGO连续第5周EMA8下方; GOOGL宣布将于6月29日入道琼斯. 市场温和下跌, 科技轮换.",
-    "sector_note": "内存/AI芯片(MU/SNDK)高于EMA8持有; Mag7及候选池大多周五卖出确认."
+    "QQQ_close": 724.08,
+    "SPY_note": "S&P500 上涨, Jun29收盘约$732",
+    "nasdaq_note": "Nasdaq +2.25% Jun29",
+    "catalyst": "Jun29 2026 (周一): Alphabet正式纳入道琼斯指数(取代Verizon)→GOOGL+4.96%; TSLA+8.45%, AMZN+3.18%, META+2.2%; MU-5%/SNDK-7%供给过剩担忧分化; WDC+6%(独立上涨); 科技大盘强势, 但内存芯片板块承压.",
+    "sector_note": "AI大盘科技强(GOOGL/META/TSLA), 内存板块(MU/SNDK)回调, 算力芯片(NVDA/AVGO)弱势"
   },
   "top5": [
     {
       "code": "MU",
       "name": "Micron",
       "rank": 1,
-      "score": 1.3717,
+      "score": 1.4988,
       "signal": "hold",
-      "close": 1213.56,
-      "ema8": 1013.41,
-      "ema21": 685.53,
-      "close_vs_ema8_pct": 19.75
+      "close": 1153.0,
+      "ema8": 1044.43,
+      "ema21": 728.03,
+      "close_vs_ema8_pct": 10.4
     },
     {
       "code": "NVDA",
       "name": "Nvidia",
       "rank": 2,
-      "score": 1.2076,
-      "signal": "sell-confirmed",
-      "close": 192.71,
-      "ema8": 200.74,
-      "ema21": 188.28,
-      "close_vs_ema8_pct": -4.0
-    },
-    {
-      "code": "SNDK",
-      "name": "Sandisk",
-      "rank": 3,
-      "score": 0.9159,
-      "signal": "hold",
-      "close": 2150.0,
-      "ema8": 1760.68,
-      "ema21": 943.39,
-      "close_vs_ema8_pct": 22.11
+      "score": 1.2734,
+      "signal": "sell-warning",
+      "close": 196.0,
+      "ema8": 199.69,
+      "ema21": 188.98,
+      "close_vs_ema8_pct": -1.85
     },
     {
       "code": "TSM",
       "name": "TSMC",
-      "rank": 4,
-      "score": 0.8192,
+      "rank": 3,
+      "score": 0.892,
       "signal": "hold",
-      "close": 434.99,
-      "ema8": 419.94,
-      "ema21": 340.82,
-      "close_vs_ema8_pct": 3.58
+      "close": 432.35,
+      "ema8": 422.7,
+      "ema21": 349.14,
+      "close_vs_ema8_pct": 2.28
+    },
+    {
+      "code": "ASML",
+      "name": "ASML",
+      "rank": 4,
+      "score": 0.6862,
+      "signal": "hold",
+      "close": 1794.62,
+      "ema8": 1692.24,
+      "ema21": 1383.02,
+      "close_vs_ema8_pct": 6.05
     },
     {
       "code": "AVGO",
       "name": "Broadcom",
       "rank": 5,
-      "score": 0.6777,
-      "signal": "sell-confirmed",
-      "close": 378.91,
-      "ema8": 392.22,
-      "ema21": 350.32,
-      "close_vs_ema8_pct": -3.39
+      "score": 0.6619,
+      "signal": "sell-warning",
+      "close": 374.51,
+      "ema8": 388.28,
+      "ema21": 352.52,
+      "close_vs_ema8_pct": -3.55
     }
   ],
   "candidates": [
     {
-      "code": "ASML",
-      "name": "ASML",
-      "rank": 6,
-      "score": 0.626,
-      "signal": "hold",
-      "close": 1780.0,
-      "ema8": 1662.99,
-      "ema21": 1341.86,
-      "close_vs_ema8_pct": 7.04
-    },
-    {
-      "code": "CEG",
-      "name": "Constellation Energy",
-      "rank": 7,
-      "score": 0.4984,
-      "signal": "sell-confirmed",
-      "close": 262.37,
-      "ema8": 288.44,
-      "ema21": 321.45,
-      "close_vs_ema8_pct": -9.04
-    },
-    {
       "code": "META",
       "name": "Meta Platforms",
-      "rank": 8,
-      "score": 0.4906,
-      "signal": "sell-confirmed",
-      "close": 549.0,
-      "ema8": 596.36,
-      "ema21": 524.54,
-      "close_vs_ema8_pct": -7.94
+      "rank": 6,
+      "score": 0.535,
+      "signal": "sell-warning",
+      "close": 563.49,
+      "ema8": 589.06,
+      "ema21": 528.08,
+      "close_vs_ema8_pct": -4.34
     },
     {
       "code": "GOOGL",
       "name": "Alphabet",
-      "rank": 9,
-      "score": 0.4454,
-      "signal": "sell-confirmed",
-      "close": 339.28,
-      "ema8": 348.29,
-      "ema21": 297.49,
-      "close_vs_ema8_pct": -2.59
+      "rank": 7,
+      "score": 0.4426,
+      "signal": "buy-fresh",
+      "close": 355.0,
+      "ema8": 349.78,
+      "ema21": 302.72,
+      "close_vs_ema8_pct": 1.49
+    },
+    {
+      "code": "SNDK",
+      "name": "Sandisk",
+      "rank": 8,
+      "score": 0.4131,
+      "signal": "hold",
+      "close": 2000.01,
+      "ema8": 1813.86,
+      "ema21": 1039.45,
+      "close_vs_ema8_pct": 10.26
     },
     {
       "code": "MSFT",
       "name": "Microsoft",
+      "rank": 9,
+      "score": 0.3887,
+      "signal": "sell-warning",
+      "close": 368.57,
+      "ema8": 377.38,
+      "ema21": 358.73,
+      "close_vs_ema8_pct": -2.33
+    },
+    {
+      "code": "CEG",
+      "name": "Constellation Energy",
       "rank": 10,
-      "score": 0.2975,
-      "signal": "sell-confirmed",
-      "close": 356.2,
-      "ema8": 379.9,
-      "ema21": 357.75,
-      "close_vs_ema8_pct": -6.24
+      "score": 0.3519,
+      "signal": "sell-warning",
+      "close": 259.07,
+      "ema8": 281.91,
+      "ema21": 315.78,
+      "close_vs_ema8_pct": -8.1
     }
   ],
   "signals": {
     "MU": "hold",
-    "NVDA": "sell-confirmed",
-    "SNDK": "hold",
+    "NVDA": "sell-warning",
     "TSM": "hold",
-    "AVGO": "sell-confirmed",
     "ASML": "hold",
-    "CEG": "sell-confirmed",
-    "META": "sell-confirmed",
-    "GOOGL": "sell-confirmed",
-    "MSFT": "sell-confirmed"
+    "AVGO": "sell-warning",
+    "META": "sell-warning",
+    "GOOGL": "buy-fresh",
+    "SNDK": "hold",
+    "MSFT": "sell-warning",
+    "CEG": "sell-warning"
   },
   "signal_detail": {
     "NVDA": {
-      "close": 192.71,
-      "ema8": 200.74,
-      "ema21": 188.28,
-      "close_vs_ema8_pct": -4.0,
-      "note": "3周连续收于EMA8下方(-4.0%), 周五确认卖出. AI算力板块整体受OpenAI IPO延迟消息压制."
-    },
-    "MU": {
-      "close": 1213.56,
-      "ema8": 1013.41,
-      "ema21": 685.53,
-      "close_vs_ema8_pct": 19.75,
-      "note": "Q3 FY26 历史性爆发(营收$414.6亿+347% YoY, HBM全年售罄), 仍高于EMA8 +19.8%. 强势持有."
-    },
-    "TSM": {
-      "close": 434.99,
-      "ema8": 419.94,
-      "ema21": 340.82,
-      "close_vs_ema8_pct": 3.58,
-      "note": "从6月ATH小幅回落, +3.6%高于EMA8. 先进制程垄断, 稳定持有."
+      "close": 196.0,
+      "ema8": 199.69,
+      "close_vs_ema8_pct": -1.85,
+      "note": "连续3周低于EMA8(199.69), 周一卖出警告. 待周五确认."
     },
     "AVGO": {
-      "close": 378.91,
-      "ema8": 392.22,
-      "ema21": 350.32,
-      "close_vs_ema8_pct": -3.39,
-      "note": "5周连续低于EMA8(-3.4%), 周五确认卖出. 6月5日财报后持续弱势."
+      "close": 374.51,
+      "ema8": 388.28,
+      "close_vs_ema8_pct": -3.55,
+      "note": "6周持续低于EMA8(388.28), 周一卖出警告."
     },
-    "SNDK": {
-      "close": 2150.0,
-      "ema8": 1760.68,
-      "ema21": 943.39,
-      "close_vs_ema8_pct": 22.11,
-      "note": "周五-7.6%回调 (MU财报轧空消退). 仍高于EMA8 +22.1%; 动量持有. '排名晋升至Top5候选'."
+    "MU": {
+      "close": 1153.0,
+      "ema8": 1044.43,
+      "close_vs_ema8_pct": 10.4,
+      "note": "周一-5%(供给过剩担忧), 仍高于EMA8+10.5%. 持有."
+    },
+    "TSM": {
+      "close": 432.35,
+      "ema8": 422.7,
+      "close_vs_ema8_pct": 2.28,
+      "note": "高于EMA8+2.3%, 先进制程卡位, 持有."
     },
     "ASML": {
-      "close": 1780.0,
-      "ema8": 1662.99,
-      "ema21": 1341.86,
-      "close_vs_ema8_pct": 7.04,
-      "note": "EUV垄断, 周五-3.1%. 仍高于EMA8 +7.0%, 候选池持有."
+      "close": 1794.62,
+      "ema8": 1692.24,
+      "close_vs_ema8_pct": 6.05,
+      "note": "升入Top5#4, 高于EMA8+6.0%. EUV垄断地位稳固."
     },
     "META": {
-      "close": 549.0,
-      "ema8": 596.36,
-      "ema21": 524.54,
-      "close_vs_ema8_pct": -7.94,
-      "note": "持续低于EMA8(-7.9%), 周五确认卖出. AI算力成本压制估值."
-    },
-    "CEG": {
-      "close": 262.37,
-      "ema8": 288.44,
-      "ema21": 321.45,
-      "close_vs_ema8_pct": -9.04,
-      "note": "EMA8($288)<EMA21($321)深度空头排列, 周五确认卖出. 核能板块持续承压."
+      "close": 563.49,
+      "ema8": 589.06,
+      "close_vs_ema8_pct": -4.34,
+      "note": "周一+2.6%但仍低于EMA8(589.06)(-4.3%), 卖出警告持续."
     },
     "GOOGL": {
-      "close": 339.28,
-      "ema8": 348.29,
-      "ema21": 297.49,
-      "close_vs_ema8_pct": -2.59,
-      "note": "低于EMA8(-2.6%), 周五确认卖出. 利好: 6月29日入道琼斯, 短期技术面仍偏弱."
+      "close": 355.0,
+      "ema8": 349.78,
+      "close_vs_ema8_pct": 1.49,
+      "note": "道琼斯纳入+4.96%, 收盘首次回到EMA8上方(+1.5%). buy-fresh信号. 关注本周持续性."
+    },
+    "SNDK": {
+      "close": 2000.01,
+      "ema8": 1813.86,
+      "close_vs_ema8_pct": 10.26,
+      "note": "周一-7%(供给担忧), 评分下降至#8候选池. 仍高于EMA8+10.3%, 持有."
     },
     "MSFT": {
-      "close": 356.2,
-      "ema8": 379.9,
-      "ema21": 357.75,
-      "close_vs_ema8_pct": -6.24,
-      "note": "低于EMA8(-6.2%), EMA8($379.9)接近EMA21($357.8)死叉边缘. 周五确认卖出."
+      "close": 368.57,
+      "ema8": 377.38,
+      "close_vs_ema8_pct": -2.33,
+      "note": "低于EMA8(377.38)(-2.3%), 周一卖出警告."
+    },
+    "CEG": {
+      "close": 259.07,
+      "ema8": 281.91,
+      "close_vs_ema8_pct": -8.1,
+      "note": "深度低于EMA8-8.1%, EMA8(281.91)<EMA21(315.78)死叉, 卖出警告深度."
     }
   },
-  "kline_status": "partial: stooq.com/finance.yahoo.com 403 policy-blocked; Jun26 2026 prices sourced from WebSearch (TheStreet, Robinhood, TradingKey, stockanalysis.com); EMAs updated from Jun25 state baseline",
-  "sources": "WebSearch: TheStreet Jun26 2026 / TradingKey Jun26 ASML / Robinhood/stockanalysis.com; EMA8/EMA21 updated from Jun25 run baseline"
+  "kline_status": "partial: stooq.com/finance.yahoo.com 403 policy-blocked; Jun29 2026 prices sourced from WebSearch (Yahoo Finance/TheStreet/Robinhood/CNBC); EMA8/EMA21 updated incrementally from Jun26 baseline",
+  "sources": "WebSearch: TheStreet Jun29 2026 market summary, Robinhood/CNBC/Yahoo price quotes; EMA8/EMA21 rolled from 2026-06-26 run baseline"
 }
