@@ -1907,7 +1907,7 @@
     }
   ],
   "_meta": {
-    "last_updated": "2026-07-01",
+    "last_updated": "2026-07-02",
     "schema": "{ code: [{ date, type, title, content, source, url, tags }] }",
     "types": [
       "news",
@@ -2319,6 +2319,14 @@
     }
   ],
   "000034": [
+    {
+      "date": "2026-07-01",
+      "type": "announcement",
+      "title": "子公司上海神州数码预中标杭州瀚融Token工厂项目7.17亿元 国产AI智算超节点服务器业务获重大突破",
+      "url": "https://www.stcn.com/article/detail/3993026.html",
+      "source": "证券时报",
+      "content": "上海神州数码有限公司为国产智算Token工厂项目第一中标候选人，投标报价7.17亿元，招标人杭州瀚融信息技术有限公司，产品为超节点服务器及配套产品，公示期2026年6月30日至7月3日，合同签订生效后30日历天内交货。系公司在国产AI智算领域重大业务突破。"
+    },
     {
       "date": "2026-06-18",
       "type": "announcement",
