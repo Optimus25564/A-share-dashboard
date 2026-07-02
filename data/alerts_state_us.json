@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-07-01T08:30:00+08:00",
-  "run_date": "2026-07-01",
+  "last_run": "2026-07-02T08:30:00+08:00",
+  "run_date": "2026-07-02",
   "market": "US",
   "top5": [
     {
@@ -8,55 +8,75 @@
       "name": "Micron",
       "rank": 1,
       "score": 1.6897,
-      "signal": "hold",
-      "close": 1217.3,
-      "ema8": 1093.6,
-      "ema21": 777.6,
-      "close_vs_ema8_pct": 11.32
+      "signal": "no-kline",
+      "cat": "DRAM/HBM",
+      "factor_detail": {
+        "yoy_raw": 300.0,
+        "gm_last": 84.56,
+        "nm_last": 60.0,
+        "strategic": 9,
+        "mcap_B": 8900
+      }
     },
     {
       "code": "NVDA",
       "name": "Nvidia",
       "rank": 2,
-      "score": 1.2239,
-      "signal": "sell-warning",
-      "close": 197.5,
-      "ema8": 198.99,
-      "ema21": 189.69,
-      "close_vs_ema8_pct": -0.75
+      "score": 1.2237,
+      "signal": "no-kline",
+      "cat": "核心 AI 芯片",
+      "factor_detail": {
+        "yoy_raw": 107.7,
+        "gm_last": 74.9,
+        "nm_last": 60.0,
+        "strategic": 10,
+        "mcap_B": 53900
+      }
     },
     {
       "code": "TSM",
       "name": "TSMC",
       "rank": 3,
-      "score": 0.8667,
-      "signal": "hold",
-      "close": 455.1,
-      "ema8": 431.56,
-      "ema21": 359.55,
-      "close_vs_ema8_pct": 5.46
+      "score": 0.8666,
+      "signal": "no-kline",
+      "cat": "晶圆代工",
+      "factor_detail": {
+        "yoy_raw": 40.6,
+        "gm_last": 66.2,
+        "nm_last": 50.5,
+        "strategic": 10,
+        "mcap_B": 21040
+      }
     },
     {
       "code": "SNDK",
       "name": "Sandisk",
       "rank": 4,
-      "score": 0.7659,
-      "signal": "hold",
-      "close": 2253.7,
-      "ema8": 1920.62,
-      "ema21": 1154.02,
-      "close_vs_ema8_pct": 17.34
+      "score": 0.766,
+      "signal": "no-kline",
+      "cat": "NAND",
+      "factor_detail": {
+        "yoy_raw": 252.1,
+        "gm_last": 78.35,
+        "nm_last": 60.0,
+        "strategic": 7,
+        "mcap_B": 2285
+      }
     },
     {
       "code": "AVGO",
       "name": "Broadcom",
       "rank": 5,
-      "score": 0.6608,
-      "signal": "sell-warning",
-      "close": 376.0,
-      "ema8": 385.67,
-      "ema21": 354.62,
-      "close_vs_ema8_pct": -2.51
+      "score": 0.6607,
+      "signal": "no-kline",
+      "cat": "AI 定制芯片",
+      "factor_detail": {
+        "yoy_raw": 48.8,
+        "gm_last": 77.1,
+        "nm_last": 42.0,
+        "strategic": 9,
+        "mcap_B": 20320
+      }
     }
   ],
   "candidates": [
@@ -65,99 +85,309 @@
       "name": "ASML",
       "rank": 6,
       "score": 0.643,
-      "signal": "hold",
-      "close": 1883.11,
-      "ema8": 1743.89,
-      "ema21": 1433.07,
-      "close_vs_ema8_pct": 7.98
+      "signal": "no-kline",
+      "cat": "光刻机",
+      "factor_detail": {
+        "yoy_raw": 18.8,
+        "gm_last": 53,
+        "nm_last": 31.82,
+        "strategic": 10,
+        "mcap_B": 5972
+      }
     },
     {
       "code": "META",
       "name": "Meta Platforms",
       "rank": 7,
       "score": 0.5122,
-      "signal": "sell-warning",
-      "close": 562.3,
-      "ema8": 581.58,
-      "ema21": 530.5,
-      "close_vs_ema8_pct": -3.32
+      "signal": "no-kline",
+      "cat": "社交/AI 训练",
+      "factor_detail": {
+        "yoy_raw": 33.1,
+        "gm_last": 81.85,
+        "nm_last": 47.54,
+        "strategic": 9,
+        "mcap_B": 15300
+      }
     },
     {
       "code": "GOOGL",
       "name": "Alphabet",
       "rank": 8,
-      "score": 0.4545,
-      "signal": "buy-fresh",
-      "close": 349.0,
-      "ema8": 348.27,
-      "ema21": 306.25,
-      "close_vs_ema8_pct": 0.21
+      "score": 0.4543,
+      "signal": "no-kline",
+      "cat": "搜索/云/AI",
+      "factor_detail": {
+        "yoy_raw": 21.8,
+        "gm_last": 62.45,
+        "nm_last": 56.94,
+        "strategic": 9,
+        "mcap_B": 47330
+      }
     },
     {
       "code": "CEG",
       "name": "Constellation Energy",
       "rank": 9,
-      "score": 0.3423,
-      "signal": "sell-warning",
-      "close": 247.08,
-      "ema8": 272.26,
-      "ema21": 308.61,
-      "close_vs_ema8_pct": -9.25
+      "score": 0.3425,
+      "signal": "no-kline",
+      "cat": "核电",
+      "factor_detail": {
+        "yoy_raw": 63.8,
+        "gm_last": 42.89,
+        "nm_last": 14.41,
+        "strategic": 9,
+        "mcap_B": 1073
+      }
     },
     {
       "code": "MSFT",
       "name": "Microsoft",
       "rank": 10,
-      "score": 0.3171,
-      "signal": "sell-warning",
-      "close": 368.57,
-      "ema8": 376.28,
-      "ema21": 359.99,
-      "close_vs_ema8_pct": -2.05
+      "score": 0.317,
+      "signal": "no-kline",
+      "cat": "云/AI 平台",
+      "factor_detail": {
+        "yoy_raw": 18.3,
+        "gm_last": 67.63,
+        "nm_last": 38.34,
+        "strategic": 9,
+        "mcap_B": 30510
+      }
     }
   ],
   "signals": {
-    "MU": "hold",
-    "NVDA": "sell-warning",
-    "TSM": "hold",
-    "SNDK": "hold",
-    "AVGO": "sell-warning",
-    "ASML": "hold",
-    "META": "sell-warning",
-    "GOOGL": "buy-fresh",
-    "CEG": "sell-warning",
-    "MSFT": "sell-warning"
+    "MU": "no-kline",
+    "NVDA": "no-kline",
+    "TSM": "no-kline",
+    "SNDK": "no-kline",
+    "AVGO": "no-kline",
+    "ASML": "no-kline",
+    "META": "no-kline",
+    "GOOGL": "no-kline",
+    "CEG": "no-kline",
+    "MSFT": "no-kline"
   },
-  "ema_snapshot": {
-    "MU":    {"close": 1217.3,  "ema8": 1093.60,  "ema21": 777.60,   "last_bar_date": "2026-06-30"},
-    "NVDA":  {"close": 197.5,   "ema8": 198.99,   "ema21": 189.69,   "last_bar_date": "2026-06-30"},
-    "TSM":   {"close": 455.1,   "ema8": 431.56,   "ema21": 359.55,   "last_bar_date": "2026-06-30"},
-    "SNDK":  {"close": 2253.7,  "ema8": 1920.62,  "ema21": 1154.02,  "last_bar_date": "2026-06-30"},
-    "AVGO":  {"close": 376.0,   "ema8": 385.67,   "ema21": 354.62,   "last_bar_date": "2026-06-30"},
-    "ASML":  {"close": 1883.11, "ema8": 1743.89,  "ema21": 1433.07,  "last_bar_date": "2026-06-30"},
-    "META":  {"close": 562.3,   "ema8": 581.58,   "ema21": 530.50,   "last_bar_date": "2026-06-30"},
-    "GOOGL": {"close": 349.0,   "ema8": 348.27,   "ema21": 306.25,   "last_bar_date": "2026-06-30"},
-    "CEG":   {"close": 247.08,  "ema8": 272.26,   "ema21": 308.61,   "last_bar_date": "2026-06-30"},
-    "MSFT":  {"close": 368.57,  "ema8": 376.28,   "ema21": 359.99,   "last_bar_date": "2026-06-30"}
-  },
-  "market_context": {
-    "sp500_close": 7449.36,
-    "sp500_pct": "+0.79%",
-    "nasdaq_close": 26213.72,
-    "nasdaq_pct": "+1.52%",
-    "dow_pct": "+0.26%",
-    "date": "2026-06-30",
-    "note": "科技股反弹日，纳指+1.52%，Q2收官创2020疫情以来最强季度涨幅"
-  },
-  "kline_status": "partial: stooq.com/finance.yahoo.com 403 policy-blocked; Jun30 2026 prices sourced from WebSearch (Yahoo Finance/TheStreet/Robinhood/TradingKey); EMA8/EMA21 updated incrementally from Jun26 weekly baseline (2-day: Jun29+Jun30 closes)",
-  "sources": "WebSearch Jun30 closes; EMA incremental update from Jun26 weekly K-line baseline",
-  "summary": {
-    "sell_signals": 5,
-    "buy_signals": 1,
-    "hold_signals": 4,
-    "no_data": 0,
-    "is_friday_close": false,
-    "week_of": "2026-06-29",
-    "last_complete_weekly_bar": "2026-06-26"
-  }
+  "market_index": {},
+  "kline_status": "unavailable: proxy blocks stooq.com and finance.yahoo.com (403 egress policy denial)",
+  "sources": "5-factor scoring from companies_us.json; K-line unavailable this run",
+  "full_ranking": [
+    {
+      "rank": 1,
+      "code": "MU",
+      "name": "Micron",
+      "score": 1.6897
+    },
+    {
+      "rank": 2,
+      "code": "NVDA",
+      "name": "Nvidia",
+      "score": 1.2237
+    },
+    {
+      "rank": 3,
+      "code": "TSM",
+      "name": "TSMC",
+      "score": 0.8666
+    },
+    {
+      "rank": 4,
+      "code": "SNDK",
+      "name": "Sandisk",
+      "score": 0.766
+    },
+    {
+      "rank": 5,
+      "code": "AVGO",
+      "name": "Broadcom",
+      "score": 0.6607
+    },
+    {
+      "rank": 6,
+      "code": "ASML",
+      "name": "ASML",
+      "score": 0.643
+    },
+    {
+      "rank": 7,
+      "code": "META",
+      "name": "Meta Platforms",
+      "score": 0.5122
+    },
+    {
+      "rank": 8,
+      "code": "GOOGL",
+      "name": "Alphabet",
+      "score": 0.4543
+    },
+    {
+      "rank": 9,
+      "code": "CEG",
+      "name": "Constellation Energy",
+      "score": 0.3425
+    },
+    {
+      "rank": 10,
+      "code": "MSFT",
+      "name": "Microsoft",
+      "score": 0.317
+    },
+    {
+      "rank": 11,
+      "code": "INTC",
+      "name": "Intel",
+      "score": 0.1913
+    },
+    {
+      "rank": 12,
+      "code": "AMD",
+      "name": "AMD",
+      "score": 0.1814
+    },
+    {
+      "rank": 13,
+      "code": "AMAT",
+      "name": "Applied Materials",
+      "score": 0.0359
+    },
+    {
+      "rank": 14,
+      "code": "KLAC",
+      "name": "KLA Corp",
+      "score": 0.0003
+    },
+    {
+      "rank": 15,
+      "code": "VRT",
+      "name": "Vertiv",
+      "score": -0.0331
+    },
+    {
+      "rank": 16,
+      "code": "COHR",
+      "name": "Coherent",
+      "score": -0.0759
+    },
+    {
+      "rank": 17,
+      "code": "APP",
+      "name": "AppLovin",
+      "score": -0.1164
+    },
+    {
+      "rank": 18,
+      "code": "LITE",
+      "name": "Lumentum",
+      "score": -0.1233
+    },
+    {
+      "rank": 19,
+      "code": "AAPL",
+      "name": "Apple",
+      "score": -0.1368
+    },
+    {
+      "rank": 20,
+      "code": "AMZN",
+      "name": "Amazon",
+      "score": -0.139
+    },
+    {
+      "rank": 21,
+      "code": "CRWV",
+      "name": "CoreWeave",
+      "score": -0.1502
+    },
+    {
+      "rank": 22,
+      "code": "ETN",
+      "name": "Eaton",
+      "score": -0.2318
+    },
+    {
+      "rank": 23,
+      "code": "SMH",
+      "name": "VanEck Semiconductor ETF",
+      "score": -0.2635
+    },
+    {
+      "rank": 24,
+      "code": "MRVL",
+      "name": "Marvell",
+      "score": -0.3104
+    },
+    {
+      "rank": 25,
+      "code": "SNPS",
+      "name": "Synopsys",
+      "score": -0.3335
+    },
+    {
+      "rank": 26,
+      "code": "RKLB",
+      "name": "Rocket Lab",
+      "score": -0.3639
+    },
+    {
+      "rank": 27,
+      "code": "ONTO",
+      "name": "Onto Innovation",
+      "score": -0.4356
+    },
+    {
+      "rank": 28,
+      "code": "GEV",
+      "name": "GE Vernova",
+      "score": -0.446
+    },
+    {
+      "rank": 29,
+      "code": "COPX",
+      "name": "Global X Copper Miners ETF",
+      "score": -0.5599
+    },
+    {
+      "rank": 30,
+      "code": "FN",
+      "name": "Fabrinet",
+      "score": -0.6107
+    },
+    {
+      "rank": 31,
+      "code": "QCOM",
+      "name": "Qualcomm",
+      "score": -0.6696
+    },
+    {
+      "rank": 32,
+      "code": "XLU",
+      "name": "Utilities Select Sector SPDR",
+      "score": -0.7421
+    },
+    {
+      "rank": 33,
+      "code": "EWY",
+      "name": "iShares MSCI Korea",
+      "score": -0.7667
+    },
+    {
+      "rank": 34,
+      "code": "TSLA",
+      "name": "Tesla",
+      "score": -0.8003
+    },
+    {
+      "rank": 35,
+      "code": "CCJ",
+      "name": "Cameco",
+      "score": -0.8529
+    },
+    {
+      "rank": 36,
+      "code": "XME",
+      "name": "SPDR Metals & Mining",
+      "score": -1.0926
+    }
+  ],
+  "scoring_note": "Top5 excludes ETFs (SMH/XLU/COPX/XME/EWY). ETFs eligible for candidates pool."
 }
