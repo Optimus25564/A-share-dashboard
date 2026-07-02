@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-01",
+  "date": "2026-07-02",
   "top5": [
     {
       "code": "688041",
@@ -174,8 +174,8 @@
     }
   },
   "kline_blocked": true,
-  "kline_blocked_weeks": 5,
-  "kline_blocked_note": "周线K线API (web.ifzq.gtimg.cn) 已连续5周被环境网络策略封锁(403)，技术信号无法刷新。最后已知信号来自2026-06-12。",
+  "kline_blocked_weeks": 6,
+  "kline_blocked_note": "周线K线API (web.ifzq.gtimg.cn) 已连续6周被环境网络策略封锁(403)，技术信号无法刷新。最后已知信号来自2026-06-12。",
   "notification_channels_blocked": true,
   "notification_note": "sctapi.ftqq.com 和 smtp.gmail.com 均被环境网络策略封锁，推送通过 PushNotification 工具发出。",
   "factor_scores_top10": [
@@ -250,5 +250,5 @@
       "strategic": 9
     }
   ],
-  "title": "⚠️ [2026-07-01] K线封锁第5周·因子持仓不变"
+  "title": "🚨 [2026-07-02] 趋势提醒"
 }
