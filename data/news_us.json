@@ -497,6 +497,22 @@
       "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-cfr-retirement",
       "source": "Broadcom Investor Relations",
       "content": "Broadcom's long-serving CFO Kirsten M. Spears retired effective June 12, 2026. Amie Thuener appointed as new CFO, announced alongside Q2 FY2026 earnings report."
+    },
+    {
+      "date": "2026-06-24",
+      "type": "announcement",
+      "title": "OpenAI and Broadcom Unveil Jalapeño — OpenAI's First Custom AI Inference Chip; Targeting 50% Lower Cost vs NVIDIA GPUs",
+      "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/",
+      "source": "OpenAI / CNBC",
+      "content": "OpenAI and Broadcom announced Jalapeño: a purpose-built LLM inference accelerator co-developed in just 9 months — claimed fastest ASIC development cycle ever. Targets ~50% lower inference cost per token vs NVIDIA. Initial deployment targeted by late 2026; 10GW multi-year supply agreement through 2029. OpenAI becomes Broadcom's 6th major custom silicon customer."
+    },
+    {
+      "date": "2026-07-01",
+      "type": "research",
+      "title": "Wall Street Maintains Buy on Broadcom Despite 26% Pullback from Highs; Analysts See 40% Upside as OpenAI Jalapeno Deal Expands TAM",
+      "url": "https://finance.yahoo.com/technology/ai/articles/following-broadcom-openai-deal-wall-130002699.html",
+      "source": "Yahoo Finance / TIKR",
+      "content": "AVGO has declined ~26% from its record high after CEO Hock Tan maintained (did not raise) the 00B FY AI revenue target post-Q2. However, 26 analysts maintain Buy consensus as of July 1. The OpenAI Jalapeño deal adds a 6th hyperscaler ASIC customer, with a contractual 1.3 GW compute deployment in 2027 and 10 GW through 2029 extending long-term TAM."
     }
   ],
   "AMD": [
@@ -699,6 +715,14 @@
       "url": "https://www.amd.com/en/blogs/2026/amd-named-current-company-to-beat-in-gartner-ai-vendor.html",
       "source": "AMD / Gartner",
       "content": "Gartner published a vendor rating positioning AMD as the current front-runner for enterprise AI server CPUs, citing consistent roadmap execution, broad OEM alignment, and architectural leadership with EPYC and Instinct products."
+    },
+    {
+      "date": "2026-07-01",
+      "type": "announcement",
+      "title": "AMD Advancing AI 2026 Event Set for July 22-23 in San Francisco: MI450 Instinct Accelerators and EPYC Venice Zen 6 CPUs to Debut; Q2 Earnings July 28",
+      "url": "https://www.amd.com/en/newsroom/press-releases/2026-4-28-amd-announces-advancing-ai-2026-.html",
+      "source": "AMD Newsroom",
+      "content": "AMD's flagship AI event at San Francisco Moscone Center July 22-23, livestreamed globally. CEO Lisa Su to showcase next-gen Instinct MI450 accelerators and EPYC Venice (Zen 6) CPUs. Event marks AMD's largest AI product reveal since the original Advancing AI 2023. AMD Q2 2026 earnings (1.2B revenue guided) expected July 28 after close."
     }
   ],
   "INTC": [
@@ -981,6 +1005,14 @@
       "url": "https://www.insidermonkey.com/blog/goldman-sachs-starts-intel-intc-coverage-1790617/",
       "source": "Insider Monkey / Goldman Sachs",
       "content": "Goldman Sachs analyst James Schneider initiated coverage of Intel on June 25, 2026 with a Neutral rating and $150 price target (~12% upside), citing a need for clearer revenue visibility vs. AMD and Nvidia in the AI infrastructure race."
+    },
+    {
+      "date": "2026-07-01",
+      "type": "announcement",
+      "title": "Intel to Report Q2 2026 Results on July 23 After Close; Q2 Revenue Guidance $13.8-14.8B",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1774/intel-to-report-second-quarter-2026-financial-results",
+      "source": "Intel IR",
+      "content": "Intel scheduled Q2 2026 earnings for July 23 after market close, with conference call at 2pm PDT. Company guided Q2 revenue 3.8-14.8B, GAAP EPS /bin/bash.08, non-GAAP EPS /bin/bash.20. Key focus: 18A process ramp, Foundry revenue, Xeon 6 traction in DGX Rubin NVL8 systems."
     }
   ],
   "QCOM": [
@@ -2081,6 +2113,14 @@
       "url": "https://www.gurufocus.com/news/8936332/applied-materials-amat-price-target-raised-to-750-by-keybanc",
       "source": "GuruFocus / KeyBanc",
       "content": "KeyBanc Capital Markets raised its Applied Materials price target to $750 from $550, maintaining Overweight, ahead of the August 13 Q3 earnings date. Firm noted expectations are 'higher than ever' and shares need beats on key metrics to hold gains. Q3 estimates: EPS ~$3.38, revenue ~$9B (~36% YoY growth)."
+    },
+    {
+      "date": "2026-06-29",
+      "type": "industry",
+      "title": "South Korea Unveils $518B Samsung and SK Hynix Semiconductor Investment; Applied Materials Surges ~10% to Record High",
+      "url": "https://www.cnbc.com/2026/06/29/samsung-sk-hynix-reported-1point3-reported-trillion-spending-plans.html",
+      "source": "CNBC",
+      "content": "South Korea announced 800 trillion KRW (18B+) national semiconductor plan with Samsung and SK Hynix building four new advanced fabs targeting double DRAM capacity in 5 years. AMAT surged ~10% to record high; Citi upgraded global WFE market forecast to 45B for 2026, 00B for 2027, 50B for 2028 bull case."
     }
   ],
   "KLAC": [
@@ -4137,6 +4177,14 @@
       "url": "https://socialbee.com/blog/facebook-updates/",
       "source": "SocialBee / Meta Newsroom",
       "content": "Meta announced Threads reached 500 million monthly active users and launched new communities features to mark the milestone. The company also expanded Instagram to Samsung smart TVs in the US to target longer-form video content consumption."
+    },
+    {
+      "date": "2026-07-01",
+      "type": "news",
+      "title": "Meta Plans to Launch Meta Compute Cloud Service Rivaling AWS and Azure; Stock Jumps 9%+ on July 1",
+      "url": "https://247wallst.com/investing/2026/07/01/meta-platforms-jumps-9-on-potential-plans-to-sell-ai-cloud-computing-business/",
+      "source": "24/7 Wall St.",
+      "content": "Meta reportedly plans Meta Compute — a cloud infrastructure service selling GPU compute, hosted Llama models, and AI agent tools — to compete directly with AWS, Azure, and Google Cloud. Meta aims to undercut rivals by 20-30% using proprietary MTIA chips. Stock surged 9%+ on July 1. Meta's 2026 CapEx guidance raised to 25-145B."
     }
   ],
   "AAPL": [
@@ -4331,6 +4379,14 @@
       "url": "https://www.tipranks.com/news/why-apple-aapl-stock-is-plunging-today-june-25-2026",
       "source": "TipRanks / Motley Fool",
       "content": "Apple announced price increases for MacBook and iPad models due to rising high-bandwidth memory chip costs driven by surging AI demand. Apple is simultaneously lobbying the US government for permission to source memory chips from a blacklisted Chinese supplier. iPhones were not included in the price hikes. China iPhone sell-in declined 19% YoY in May 2026."
+    },
+    {
+      "date": "2026-07-02",
+      "type": "announcement",
+      "title": "Apple Sets Q3 FY2026 Earnings Call for July 30 — Tim Cook's Final Earnings as CEO Before John Ternus Takes Over September 1",
+      "url": "https://9to5mac.com/2026/07/02/apple-sets-q3-2026-earnings-release-for-july-30/",
+      "source": "9to5Mac",
+      "content": "Apple confirmed Q3 FY2026 (fiscal quarter ending Jun 28) earnings release for July 30 after close, followed by conference call at 2pm PT. Analyst consensus: revenue ~11B, EPS ~.89. This will be CEO Tim Cook's final earnings call before John Ternus assumes the CEO role September 1, 2026."
     }
   ],
   "TSLA": [
@@ -4549,6 +4605,14 @@
       "url": "https://www.teslarati.com/tesla-tsla-q1-2026-earnings-results/",
       "source": "Teslarati / Yahoo Finance",
       "content": "Morgan Stanley analyst Andrew Percoco raised his Q2 2026 delivery estimate for Tesla to 413,000 vehicles (up from 373,000), citing solid recovery in Europe and China sales. Consensus estimates cluster around 401,000-420,000 vehicles. Tesla is scheduled to report Q2 deliveries imminently and Q2 earnings on July 22, 2026."
+    },
+    {
+      "date": "2026-07-02",
+      "type": "announcement",
+      "title": "Tesla Q2 2026 Deliveries Jump 25% YoY to Record 480,126 Vehicles — Beat Consensus by 74,000 Units",
+      "url": "https://www.cnbc.com/2026/07/02/tesla-tsla-q2-2026-vehicle-delivery-production.html",
+      "source": "CNBC",
+      "content": "Tesla delivered 480,126 vehicles in Q2 2026, a 25% YoY increase and +34% vs Q1. Beat consensus estimate of ~406,000 by 74,000 units — highest Q2 ever. Model 3/Y accounted for 467,762 units; energy storage deployments reached 13.5 GWh (+41% YoY)."
     }
   ],
   "CRWV": [
@@ -5019,6 +5083,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/261973741-market-movers-vrt-20260617",
       "source": "TradingKey / Bernstein",
       "content": "Vertiv shares surged 7.4% on June 17. Bernstein initiated at Outperform. FY2026 guidance: $13.75B revenue (+34% YoY), adjusted EPS midpoint $6.35 (+51% YoY). Catalyzed by completed ThermoKey acquisition and sustained AI data center cooling demand."
+    },
+    {
+      "date": "2026-07-01",
+      "type": "announcement",
+      "title": "Vertiv Opens 236,000 Sq Ft AI Data Center Manufacturing Facility in Johor, Malaysia to Serve Asia Pacific",
+      "url": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/2026/vertiv-increases-manufacturing-capacity-with-new-facility-in-malaysia-to-support-growing-demand-for-ai-and-digital-infrastructure-across-asia/",
+      "source": "Vertiv IR",
+      "content": "Vertiv opened a 236,000 sq ft facility in Senai, Johor, Malaysia, expanding regional manufacturing capacity for high-density thermal and power solutions. The plant will serve Southeast Asia, North Asia, Australia, and NZ AI data center buildout. Q2 2026 results expected July 29."
     }
   ],
   "ETN": [
@@ -6631,6 +6703,14 @@
       "url": "https://finance.yahoo.com/quote/LRCX/",
       "source": "Bank of America Securities",
       "content": "Bank of America Securities raised its Lam Research price target to $480 from $330 on June 23, highlighting expectations of over 50% advanced packaging revenue growth in 2026 and raising its global wafer fabrication equipment outlook to $140B."
+    },
+    {
+      "date": "2026-06-29",
+      "type": "industry",
+      "title": "Korea's $518B Semiconductor Mega-Investment Drives Lam Research +6%; Global WFE Market Upgraded to $145B for 2026",
+      "url": "https://www.bitget.com/amp/news/detail/12560605484963",
+      "source": "CNBC / Bitget News",
+      "content": "South Korea's 800 trillion KRW ($518B+) fab investment announcement triggered a 6% surge in Lam Research on June 29. LRCX benefits from NAND-heavy Korean fab buildout via its etch and deposition stronghold. Citi raised its global wafer fab equipment forecast to $145B for 2026, $200B for 2027, and $250B (bull case) for 2028."
     }
   ],
   "CDNS": [
@@ -7077,6 +7157,14 @@
       "url": "https://www.businesswire.com/news/home/20260629390275/en/Palantir-Launches-Engine-for-Deploying-NVIDIA-Nemotron-Open-Models-in-Sovereign-Environments",
       "source": "BusinessWire",
       "content": "Palantir announced a strategic partnership with NVIDIA to deploy NVIDIA Nemotron open-source AI models inside U.S. government sovereign and classified computing environments. The joint offering combines NVIDIA Blackwell Ultra GPU systems with Palantir's AIP, Ontology, Foundry, and Apollo platforms, enabling government agencies to train and fine-tune AI on their own data in air-gapped environments. PLTR stock rose ~4.6% on the news."
+    },
+    {
+      "date": "2026-07-02",
+      "type": "research",
+      "title": "DA Davidson Upgrades Palantir to Buy as Stock Adds $22B in Market Cap After NVIDIA Sovereign AI Deal",
+      "url": "https://www.gurufocus.com/news/8943542/palantir-technologies-pltr-stock-rises-following-upgrade-and-nvidia-partnership",
+      "source": "GuruFocus",
+      "content": "DA Davidson upgraded PLTR to Buy on July 2 following the June 29 NVIDIA sovereign AI OS partnership and a new Army data-layer contract win. Palantir stock added ~2B in market cap on July 1 alone. Stock +3% on July 2 on the dual catalyst of upgrade and sovereign AI deal momentum."
     }
   ],
   "IREN": [
@@ -8021,6 +8109,14 @@
       "url": "https://www.washingtonpost.com/politics/2026/06/23/falun-gong-members-cannot-sue-us-tech-giant-supreme-court-says/",
       "source": "Washington Post",
       "content": "The U.S. Supreme Court voted 6-3 to dismiss a long-running lawsuit alleging Cisco helped China's government surveil and persecute Falun Gong members via its 'Golden Shield' internet surveillance system, ruling the Alien Tort Statute does not allow aiding-and-abetting claims against corporations for overseas human rights abuses."
+    },
+    {
+      "date": "2026-07-01",
+      "type": "announcement",
+      "title": "Cisco Declares Quarterly Dividend of $0.42/Share; Ex-Dividend Date July 6, Payment Date July 22, 2026",
+      "url": "https://stockanalysis.com/stocks/csco/dividend/",
+      "source": "Cisco Systems / StockAnalysis",
+      "content": "Cisco Systems declared a quarterly cash dividend of $0.42 per share, ex-dividend date July 6, 2026, payable July 22 to shareholders of record as of July 8. Dividend yield approximately 1.1% annualized at current price."
     }
   ],
   "PWR": [
@@ -9031,6 +9127,14 @@
       "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-expands-AI-agent-governance-through-deeper-integration-with-Microsoft/default.aspx",
       "source": "ServiceNow Newsroom",
       "content": "ServiceNow announced a wave of agentic AI partnerships: Wipro deploying ServiceNow workflows enterprise-wide; Digimarc integrating cryptographic verification into AI agents; deeper Microsoft AI governance integration; and Project Arc with NVIDIA — an autonomous desktop AI agent governed through ServiceNow AI Control Tower. Reinforces ServiceNow as the enterprise AI orchestration backbone."
+    },
+    {
+      "date": "2026-07-01",
+      "type": "research",
+      "title": "Guggenheim Upgrades ServiceNow to Buy with $125 Price Target; Stock +5% as AI 'SaaSpocalypse' Fears Seen as Overdone",
+      "url": "https://seekingalpha.com/news/4608941-servicenow-rises-as-guggenheim-upgrades-to-buy",
+      "source": "Guggenheim / Seeking Alpha",
+      "content": "Guggenheim analyst John DiFucci upgraded ServiceNow to Buy from Neutral with a $125 price target (7.5x EV/NTM recurring revenue). Analyst says AI disruption fears have driven SaaS valuations to levels implying perpetual decline. Expects subscription revenue growth to stabilize in 2026 and reaccelerate in 2027. NOW stock rose 5%+ on the upgrade."
     }
   ],
   "CRM": [
@@ -9177,6 +9281,14 @@
       "url": "https://www.salesforce.com/news/stories/agentforce-help-agent-announcement/",
       "source": "Salesforce Newsroom",
       "content": "Salesforce launched Agentforce Help Agent, an autonomous AI service agent deployable in minutes across all channels. The product introduces pay-per-resolution pricing at $2 per successfully resolved case, with no charge if human escalation is requested. Already handled 4.3 million inquiries on help.salesforce.com, resolving 70% autonomously. GA slated for July 2026."
+    },
+    {
+      "date": "2026-07-01",
+      "type": "research",
+      "title": "Guggenheim Upgrades Salesforce to Buy with $228 Price Target After 41% YTD Decline; AI Integration Not as Disruptive as Feared",
+      "url": "https://ca.finance.yahoo.com/news/guggenheim-upgrades-salesforce-check-point-212009164.html",
+      "source": "Guggenheim / Yahoo Finance",
+      "content": "Guggenheim upgraded Salesforce (CRM) to Buy from Neutral with a $228 PT, citing the stock's 41% YTD decline creating an attractive entry point. Analyst argues that AI model commoditization and Agentforce ARR hitting 00M (+169% YoY) demonstrate Salesforce's AI integration is additive rather than cannibalistic. CRM stock rose ~4% on the upgrade."
     }
   ]
 }
