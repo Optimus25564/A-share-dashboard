@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-07-02T08:30:00+08:00",
+  "last_run": "2026-07-03T08:30:00+08:00",
   "run_date": "2026-07-02",
   "market": "US",
   "top5": [
@@ -7,7 +7,7 @@
       "code": "MU",
       "name": "Micron",
       "rank": 1,
-      "score": 1.6897,
+      "score": 1.7133,
       "signal": "no-kline",
       "cat": "DRAM/HBM",
       "factor_detail": {
@@ -22,7 +22,7 @@
       "code": "NVDA",
       "name": "Nvidia",
       "rank": 2,
-      "score": 1.2237,
+      "score": 1.2477,
       "signal": "no-kline",
       "cat": "核心 AI 芯片",
       "factor_detail": {
@@ -37,7 +37,7 @@
       "code": "TSM",
       "name": "TSMC",
       "rank": 3,
-      "score": 0.8666,
+      "score": 0.9013,
       "signal": "no-kline",
       "cat": "晶圆代工",
       "factor_detail": {
@@ -52,7 +52,7 @@
       "code": "SNDK",
       "name": "Sandisk",
       "rank": 4,
-      "score": 0.766,
+      "score": 0.8069,
       "signal": "no-kline",
       "cat": "NAND",
       "factor_detail": {
@@ -64,27 +64,10 @@
       }
     },
     {
-      "code": "AVGO",
-      "name": "Broadcom",
-      "rank": 5,
-      "score": 0.6607,
-      "signal": "no-kline",
-      "cat": "AI 定制芯片",
-      "factor_detail": {
-        "yoy_raw": 48.8,
-        "gm_last": 77.1,
-        "nm_last": 42.0,
-        "strategic": 9,
-        "mcap_B": 20320
-      }
-    }
-  ],
-  "candidates": [
-    {
       "code": "ASML",
       "name": "ASML",
-      "rank": 6,
-      "score": 0.643,
+      "rank": 5,
+      "score": 0.6982,
       "signal": "no-kline",
       "cat": "光刻机",
       "factor_detail": {
@@ -94,12 +77,29 @@
         "strategic": 10,
         "mcap_B": 5972
       }
+    }
+  ],
+  "candidates": [
+    {
+      "code": "AVGO",
+      "name": "Broadcom",
+      "rank": 6,
+      "score": 0.6819,
+      "signal": "no-kline",
+      "cat": "AI 定制芯片",
+      "factor_detail": {
+        "yoy_raw": 48.8,
+        "gm_last": 77.1,
+        "nm_last": 42.0,
+        "strategic": 9,
+        "mcap_B": 20320
+      }
     },
     {
       "code": "META",
       "name": "Meta Platforms",
       "rank": 7,
-      "score": 0.5122,
+      "score": 0.5266,
       "signal": "no-kline",
       "cat": "社交/AI 训练",
       "factor_detail": {
@@ -114,7 +114,7 @@
       "code": "GOOGL",
       "name": "Alphabet",
       "rank": 8,
-      "score": 0.4543,
+      "score": 0.4988,
       "signal": "no-kline",
       "cat": "搜索/云/AI",
       "factor_detail": {
@@ -129,7 +129,7 @@
       "code": "CEG",
       "name": "Constellation Energy",
       "rank": 9,
-      "score": 0.3425,
+      "score": 0.4217,
       "signal": "no-kline",
       "cat": "核电",
       "factor_detail": {
@@ -144,7 +144,7 @@
       "code": "MSFT",
       "name": "Microsoft",
       "rank": 10,
-      "score": 0.317,
+      "score": 0.3542,
       "signal": "no-kline",
       "cat": "云/AI 平台",
       "factor_detail": {
@@ -161,232 +161,246 @@
     "NVDA": "no-kline",
     "TSM": "no-kline",
     "SNDK": "no-kline",
-    "AVGO": "no-kline",
     "ASML": "no-kline",
+    "AVGO": "no-kline",
     "META": "no-kline",
     "GOOGL": "no-kline",
     "CEG": "no-kline",
     "MSFT": "no-kline"
   },
   "market_index": {},
-  "kline_status": "unavailable: proxy blocks stooq.com and finance.yahoo.com (403 egress policy denial)",
+  "kline_status": "unavailable: proxy blocks stooq.com and finance.yahoo.com (403 egress policy denial); signals defaulted to no-kline",
   "sources": "5-factor scoring from companies_us.json; K-line unavailable this run",
+  "rank_changes": {
+    "new_in_top5": [
+      "ASML"
+    ],
+    "dropped_from_top5": [
+      "AVGO"
+    ],
+    "note": "ASML 升入 Top5 (EUV 光刻机唯一供应商, strategic=10, yoy=18.8%); AVGO 降至候选池 rank=6"
+  },
   "full_ranking": [
     {
       "rank": 1,
       "code": "MU",
       "name": "Micron",
-      "score": 1.6897
+      "score": 1.7133
     },
     {
       "rank": 2,
       "code": "NVDA",
       "name": "Nvidia",
-      "score": 1.2237
+      "score": 1.2477
     },
     {
       "rank": 3,
       "code": "TSM",
       "name": "TSMC",
-      "score": 0.8666
+      "score": 0.9013
     },
     {
       "rank": 4,
       "code": "SNDK",
       "name": "Sandisk",
-      "score": 0.766
+      "score": 0.8069
     },
     {
       "rank": 5,
-      "code": "AVGO",
-      "name": "Broadcom",
-      "score": 0.6607
+      "code": "ASML",
+      "name": "ASML",
+      "score": 0.6982
     },
     {
       "rank": 6,
-      "code": "ASML",
-      "name": "ASML",
-      "score": 0.643
+      "code": "AVGO",
+      "name": "Broadcom",
+      "score": 0.6819
     },
     {
       "rank": 7,
       "code": "META",
       "name": "Meta Platforms",
-      "score": 0.5122
+      "score": 0.5266
     },
     {
       "rank": 8,
       "code": "GOOGL",
       "name": "Alphabet",
-      "score": 0.4543
+      "score": 0.4988
     },
     {
       "rank": 9,
       "code": "CEG",
       "name": "Constellation Energy",
-      "score": 0.3425
+      "score": 0.4217
     },
     {
       "rank": 10,
       "code": "MSFT",
       "name": "Microsoft",
-      "score": 0.317
+      "score": 0.3542
     },
     {
       "rank": 11,
       "code": "INTC",
       "name": "Intel",
-      "score": 0.1913
+      "score": 0.2701
     },
     {
       "rank": 12,
       "code": "AMD",
       "name": "AMD",
-      "score": 0.1814
+      "score": 0.2443
     },
     {
       "rank": 13,
       "code": "AMAT",
       "name": "Applied Materials",
-      "score": 0.0359
+      "score": 0.1037
     },
     {
       "rank": 14,
-      "code": "KLAC",
-      "name": "KLA Corp",
-      "score": 0.0003
+      "code": "VRT",
+      "name": "Vertiv",
+      "score": 0.0557
     },
     {
       "rank": 15,
-      "code": "VRT",
-      "name": "Vertiv",
-      "score": -0.0331
+      "code": "KLAC",
+      "name": "KLA Corp",
+      "score": 0.0512
     },
     {
       "rank": 16,
       "code": "COHR",
       "name": "Coherent",
-      "score": -0.0759
+      "score": 0.0124
     },
     {
       "rank": 17,
-      "code": "APP",
-      "name": "AppLovin",
-      "score": -0.1164
+      "code": "LITE",
+      "name": "Lumentum",
+      "score": -0.0366
     },
     {
       "rank": 18,
-      "code": "LITE",
-      "name": "Lumentum",
-      "score": -0.1233
+      "code": "AAPL",
+      "name": "Apple",
+      "score": -0.0655
     },
     {
       "rank": 19,
-      "code": "AAPL",
-      "name": "Apple",
-      "score": -0.1368
+      "code": "AMZN",
+      "name": "Amazon",
+      "score": -0.072
     },
     {
       "rank": 20,
-      "code": "AMZN",
-      "name": "Amazon",
-      "score": -0.139
+      "code": "CRWV",
+      "name": "CoreWeave",
+      "score": -0.0957
     },
     {
       "rank": 21,
-      "code": "CRWV",
-      "name": "CoreWeave",
-      "score": -0.1502
+      "code": "APP",
+      "name": "AppLovin",
+      "score": -0.1009
     },
     {
       "rank": 22,
       "code": "ETN",
       "name": "Eaton",
-      "score": -0.2318
+      "score": -0.1385
     },
     {
       "rank": 23,
-      "code": "SMH",
-      "name": "VanEck Semiconductor ETF",
-      "score": -0.2635
+      "code": "MRVL",
+      "name": "Marvell",
+      "score": -0.2409
     },
     {
       "rank": 24,
-      "code": "MRVL",
-      "name": "Marvell",
-      "score": -0.3104
+      "code": "RKLB",
+      "name": "Rocket Lab",
+      "score": -0.2687
     },
     {
       "rank": 25,
       "code": "SNPS",
       "name": "Synopsys",
-      "score": -0.3335
+      "score": -0.2934
     },
     {
       "rank": 26,
-      "code": "RKLB",
-      "name": "Rocket Lab",
-      "score": -0.3639
+      "code": "GEV",
+      "name": "GE Vernova",
+      "score": -0.3224
     },
     {
       "rank": 27,
       "code": "ONTO",
       "name": "Onto Innovation",
-      "score": -0.4356
+      "score": -0.3631
     },
     {
       "rank": 28,
-      "code": "GEV",
-      "name": "GE Vernova",
-      "score": -0.446
+      "code": "FN",
+      "name": "Fabrinet",
+      "score": -0.4729
     },
     {
       "rank": 29,
-      "code": "COPX",
-      "name": "Global X Copper Miners ETF",
-      "score": -0.5599
+      "code": "QCOM",
+      "name": "Qualcomm",
+      "score": -0.5985
     },
     {
       "rank": 30,
-      "code": "FN",
-      "name": "Fabrinet",
-      "score": -0.6107
+      "code": "TSLA",
+      "name": "Tesla",
+      "score": -0.677
     },
     {
       "rank": 31,
-      "code": "QCOM",
-      "name": "Qualcomm",
-      "score": -0.6696
+      "code": "CCJ",
+      "name": "Cameco",
+      "score": -0.7518
     },
     {
       "rank": 32,
-      "code": "XLU",
-      "name": "Utilities Select Sector SPDR",
-      "score": -0.7421
+      "code": "SMH",
+      "name": "VanEck Semiconductor ETF",
+      "score": -0.1559,
+      "is_etf": true
     },
     {
       "rank": 33,
-      "code": "EWY",
-      "name": "iShares MSCI Korea",
-      "score": -0.7667
+      "code": "COPX",
+      "name": "Global X Copper Miners ETF",
+      "score": -0.3313,
+      "is_etf": true
     },
     {
       "rank": 34,
-      "code": "TSLA",
-      "name": "Tesla",
-      "score": -0.8003
+      "code": "XLU",
+      "name": "Utilities Select Sector SPDR",
+      "score": -0.4391,
+      "is_etf": true
     },
     {
       "rank": 35,
-      "code": "CCJ",
-      "name": "Cameco",
-      "score": -0.8529
+      "code": "EWY",
+      "name": "iShares MSCI Korea",
+      "score": -0.4536,
+      "is_etf": true
     },
     {
       "rank": 36,
       "code": "XME",
       "name": "SPDR Metals & Mining",
-      "score": -1.0926
+      "score": -0.6464,
+      "is_etf": true
     }
   ],
   "scoring_note": "Top5 excludes ETFs (SMH/XLU/COPX/XME/EWY). ETFs eligible for candidates pool."
