@@ -1,75 +1,69 @@
 {
-  "date": "2026-07-02",
+  "date": "2026-07-03",
   "top5": [
     {
       "code": "688041",
       "name": "海光信息",
-      "score": 1.3281,
+      "score": 1.237,
       "rank": 1
     },
     {
       "code": "688256",
       "name": "寒武纪",
-      "score": 1.2411,
+      "score": 1.139,
       "rank": 2
-    },
-    {
-      "code": "688012",
-      "name": "中微公司",
-      "score": 0.6981,
-      "rank": 3
     },
     {
       "code": "688008",
       "name": "澜起科技",
-      "score": 0.5626,
-      "rank": 4
+      "score": 0.52,
+      "rank": 3
     },
     {
       "code": "603019",
       "name": "中科曙光",
-      "score": 0.4728,
+      "score": 0.495,
+      "rank": 4
+    },
+    {
+      "code": "300308",
+      "name": "中际旭创",
+      "score": 0.337,
       "rank": 5
     }
   ],
   "candidates": [
     {
-      "code": "300604",
-      "name": "长川科技",
-      "score": 0.4198,
-      "rank": 6
-    },
-    {
-      "code": "002028",
-      "name": "思源电气",
-      "score": 0.4159,
-      "rank": 7
-    },
-    {
       "code": "688981",
       "name": "中芯国际",
-      "score": 0.3227,
-      "rank": 8
-    },
-    {
-      "code": "300308",
-      "name": "中际旭创",
-      "score": 0.309,
-      "rank": 9
+      "score": 0.264,
+      "rank": 6
     },
     {
       "code": "002261",
       "name": "拓维信息",
-      "score": 0.2566,
+      "score": 0.246,
+      "rank": 7
+    },
+    {
+      "code": "688047",
+      "name": "龙芯中科",
+      "score": 0.01,
+      "rank": 8
+    },
+    {
+      "code": "002837",
+      "name": "英维克",
+      "score": 0.006,
+      "rank": 9
+    },
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "score": -0.054,
       "rank": 10
     }
   ],
-  "rebalance": {
-    "entered_top5": [],
-    "exited_top5": [],
-    "entered_cand": [],
-    "exited_cand": []
-  },
   "signals": {
     "688041": {
       "signal": "n/a-kline-blocked",
@@ -93,12 +87,6 @@
         "as_of": "2026-06-12"
       }
     },
-    "688012": {
-      "signal": "n/a-kline-blocked",
-      "close": null,
-      "ema8": null,
-      "last_known": null
-    },
     "688008": {
       "signal": "n/a-kline-blocked",
       "close": null,
@@ -121,13 +109,7 @@
         "as_of": "2026-06-12"
       }
     },
-    "300604": {
-      "signal": "n/a-kline-blocked",
-      "close": null,
-      "ema8": null,
-      "last_known": null
-    },
-    "002028": {
+    "300308": {
       "signal": "n/a-kline-blocked",
       "close": null,
       "ema8": null,
@@ -144,12 +126,6 @@
         "as_of": "2026-06-12"
       }
     },
-    "300308": {
-      "signal": "n/a-kline-blocked",
-      "close": null,
-      "ema8": null,
-      "last_known": null
-    },
     "002261": {
       "signal": "n/a-kline-blocked",
       "close": null,
@@ -160,6 +136,24 @@
         "ema8_est": 25.6,
         "as_of": "2026-06-12"
       }
+    },
+    "688047": {
+      "signal": "n/a-kline-blocked",
+      "close": null,
+      "ema8": null,
+      "last_known": null
+    },
+    "002837": {
+      "signal": "n/a-kline-blocked",
+      "close": null,
+      "ema8": null,
+      "last_known": null
+    },
+    "002156": {
+      "signal": "n/a-kline-blocked",
+      "close": null,
+      "ema8": null,
+      "last_known": null
     }
   },
   "index": {
@@ -174,81 +168,73 @@
     }
   },
   "kline_blocked": true,
-  "kline_blocked_weeks": 6,
-  "kline_blocked_note": "周线K线API (web.ifzq.gtimg.cn) 已连续6周被环境网络策略封锁(403)，技术信号无法刷新。最后已知信号来自2026-06-12。",
+  "kline_blocked_weeks": 7,
+  "kline_blocked_note": "周线K线API (web.ifzq.gtimg.cn 及备选源) 已连续7周被环境网络策略封锁(403)，技术信号无法刷新。最后已知信号来自2026-06-12。",
   "notification_channels_blocked": true,
   "notification_note": "sctapi.ftqq.com 和 smtp.gmail.com 均被环境网络策略封锁，推送通过 PushNotification 工具发出。",
+  "universe": "17只标准股票 (按指令)",
+  "universe_note": "宇宙从扩展版切回17股标准版：旭创(300308)进入Top5，中微(688012)不在17股名单内",
   "factor_scores_top10": [
     {
       "rank": 1,
       "code": "688041",
       "name": "海光信息",
-      "score": 1.3281,
-      "strategic": 10
+      "score": 1.237
     },
     {
       "rank": 2,
       "code": "688256",
       "name": "寒武纪",
-      "score": 1.2411,
-      "strategic": 10
+      "score": 1.139
     },
     {
       "rank": 3,
-      "code": "688012",
-      "name": "中微公司",
-      "score": 0.6981,
-      "strategic": 9
+      "code": "688008",
+      "name": "澜起科技",
+      "score": 0.52
     },
     {
       "rank": 4,
-      "code": "688008",
-      "name": "澜起科技",
-      "score": 0.5626,
-      "strategic": 8
+      "code": "603019",
+      "name": "中科曙光",
+      "score": 0.495
     },
     {
       "rank": 5,
-      "code": "603019",
-      "name": "中科曙光",
-      "score": 0.4728,
-      "strategic": 8
+      "code": "300308",
+      "name": "中际旭创",
+      "score": 0.337
     },
     {
       "rank": 6,
-      "code": "300604",
-      "name": "长川科技",
-      "score": 0.4198,
-      "strategic": 7
+      "code": "688981",
+      "name": "中芯国际",
+      "score": 0.264
     },
     {
       "rank": 7,
-      "code": "002028",
-      "name": "思源电气",
-      "score": 0.4159,
-      "strategic": 8
+      "code": "002261",
+      "name": "拓维信息",
+      "score": 0.246
     },
     {
       "rank": 8,
-      "code": "688981",
-      "name": "中芯国际",
-      "score": 0.3227,
-      "strategic": 10
+      "code": "688047",
+      "name": "龙芯中科",
+      "score": 0.01
     },
     {
       "rank": 9,
-      "code": "300308",
-      "name": "中际旭创",
-      "score": 0.309,
-      "strategic": 7
+      "code": "002837",
+      "name": "英维克",
+      "score": 0.006
     },
     {
       "rank": 10,
-      "code": "002261",
-      "name": "拓维信息",
-      "score": 0.2566,
-      "strategic": 9
+      "code": "002156",
+      "name": "通富微电",
+      "score": -0.054
     }
   ],
-  "title": "🚨 [2026-07-02] 趋势提醒"
+  "title": "🚨 [2026-07-03] 趋势提醒"
 }
