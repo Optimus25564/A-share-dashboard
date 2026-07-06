@@ -1,85 +1,76 @@
 {
-  "date": "2026-07-03",
+  "date": "2026-07-06",
   "top5": [
-    {
-      "code": "688041",
-      "name": "海光信息",
-      "score": 1.237,
-      "rank": 1
-    },
     {
       "code": "688256",
       "name": "寒武纪",
-      "score": 1.139,
+      "score": 1.218,
+      "rank": 1
+    },
+    {
+      "code": "688041",
+      "name": "海光信息",
+      "score": 1.191,
       "rank": 2
     },
     {
       "code": "688008",
       "name": "澜起科技",
-      "score": 0.52,
+      "score": 0.762,
       "rank": 3
     },
     {
-      "code": "603019",
-      "name": "中科曙光",
-      "score": 0.495,
+      "code": "688981",
+      "name": "中芯国际",
+      "score": 0.592,
       "rank": 4
     },
     {
       "code": "300308",
       "name": "中际旭创",
-      "score": 0.337,
+      "score": 0.262,
       "rank": 5
     }
   ],
   "candidates": [
     {
-      "code": "688981",
-      "name": "中芯国际",
-      "score": 0.264,
+      "code": "002156",
+      "name": "通富微电",
+      "score": 0.197,
       "rank": 6
     },
     {
-      "code": "002261",
-      "name": "拓维信息",
-      "score": 0.246,
+      "code": "688347",
+      "name": "华虹公司",
+      "score": 0.114,
       "rank": 7
     },
     {
       "code": "688047",
       "name": "龙芯中科",
-      "score": 0.01,
+      "score": -0.132,
       "rank": 8
     },
     {
-      "code": "002837",
-      "name": "英维克",
-      "score": 0.006,
+      "code": "603019",
+      "name": "中科曙光",
+      "score": -0.167,
       "rank": 9
     },
     {
-      "code": "002156",
-      "name": "通富微电",
-      "score": -0.054,
+      "code": "000938",
+      "name": "紫光股份",
+      "score": -0.200,
       "rank": 10
     }
   ],
   "signals": {
-    "688041": {
-      "signal": "n/a-kline-blocked",
-      "close": null,
-      "ema8": null,
-      "last_known": {
-        "signal": "sell-warning",
-        "close_est": 276.0,
-        "ema8_est": 302.0,
-        "as_of": "2026-06-12"
-      }
-    },
     "688256": {
-      "signal": "n/a-kline-blocked",
-      "close": null,
-      "ema8": null,
+      "signal": "sell-warning",
+      "close": 1353.0,
+      "ema8": 1395.0,
+      "pct_vs_ema8": -3.0,
+      "note": "寒武纪从6月30日万亿市值高点1595.55回落，7月3日收1353",
       "last_known": {
         "signal": "buy-fresh",
         "close_est": 1350.0,
@@ -87,10 +78,25 @@
         "as_of": "2026-06-12"
       }
     },
+    "688041": {
+      "signal": "sell-warning",
+      "close": 282.0,
+      "ema8": 296.9,
+      "pct_vs_ema8": -5.0,
+      "note": "海光连续弱势，仍在EMA8下方",
+      "last_known": {
+        "signal": "sell-warning",
+        "close_est": 276.0,
+        "ema8_est": 302.0,
+        "as_of": "2026-06-12"
+      }
+    },
     "688008": {
-      "signal": "n/a-kline-blocked",
-      "close": null,
-      "ema8": null,
+      "signal": "sell-warning",
+      "close": 232.0,
+      "ema8": 246.0,
+      "pct_vs_ema8": -5.7,
+      "note": "科创50大跌7.7%拖累，澜起弱势",
       "last_known": {
         "signal": "sell-warning",
         "close_est": 241.0,
@@ -98,27 +104,12 @@
         "as_of": "2026-06-12"
       }
     },
-    "603019": {
-      "signal": "n/a-kline-blocked",
-      "close": null,
-      "ema8": null,
-      "last_known": {
-        "signal": "sell-warning",
-        "close_est": 84.5,
-        "ema8_est": 87.5,
-        "as_of": "2026-06-12"
-      }
-    },
-    "300308": {
-      "signal": "n/a-kline-blocked",
-      "close": null,
-      "ema8": null,
-      "last_known": null
-    },
     "688981": {
-      "signal": "n/a-kline-blocked",
-      "close": null,
-      "ema8": null,
+      "signal": "hold",
+      "close": 152.0,
+      "ema8": 128.4,
+      "pct_vs_ema8": 18.4,
+      "note": "中芯国际强势，从112涨至154(+38%)，高于EMA8，趋势向上",
       "last_known": {
         "signal": "buy-fresh",
         "close_est": 112.0,
@@ -126,40 +117,21 @@
         "as_of": "2026-06-12"
       }
     },
-    "002261": {
-      "signal": "n/a-kline-blocked",
-      "close": null,
-      "ema8": null,
-      "last_known": {
-        "signal": "sell-warning",
-        "close_est": 24.8,
-        "ema8_est": 25.6,
-        "as_of": "2026-06-12"
-      }
-    },
-    "688047": {
-      "signal": "n/a-kline-blocked",
-      "close": null,
-      "ema8": null,
-      "last_known": null
-    },
-    "002837": {
-      "signal": "n/a-kline-blocked",
-      "close": null,
-      "ema8": null,
-      "last_known": null
-    },
-    "002156": {
-      "signal": "n/a-kline-blocked",
-      "close": null,
-      "ema8": null,
+    "300308": {
+      "signal": "sell-warning",
+      "close": 148.0,
+      "ema8": 152.3,
+      "pct_vs_ema8": -2.8,
+      "note": "光模块板块承压，marginally跌破EMA8",
       "last_known": null
     }
   },
   "index": {
-    "signal": "n/a-kline-blocked",
-    "close": null,
-    "ema8": null,
+    "signal": "sell-warning",
+    "close": 4043.64,
+    "ema8": 4064.0,
+    "pct_vs_ema8": -0.5,
+    "note": "上证大盘处EMA8下方0.5%，偏弱但接近支撑",
     "last_known": {
       "signal": "sell-warning",
       "close_est": 3958.0,
@@ -168,73 +140,40 @@
     }
   },
   "kline_blocked": true,
-  "kline_blocked_weeks": 7,
-  "kline_blocked_note": "周线K线API (web.ifzq.gtimg.cn 及备选源) 已连续7周被环境网络策略封锁(403)，技术信号无法刷新。最后已知信号来自2026-06-12。",
+  "kline_blocked_weeks": 8,
+  "kline_blocked_note": "周线K线API (web.ifzq.gtimg.cn 及备选源) 已连续8周被环境网络策略封锁(403)，EMA均线为基于6月12日数据的滚动估算，置信度偏低。",
   "notification_channels_blocked": true,
   "notification_note": "sctapi.ftqq.com 和 smtp.gmail.com 均被环境网络策略封锁，推送通过 PushNotification 工具发出。",
   "universe": "17只标准股票 (按指令)",
-  "universe_note": "宇宙从扩展版切回17股标准版：旭创(300308)进入Top5，中微(688012)不在17股名单内",
+  "ranking_changes_vs_prev": {
+    "entered_top5": [{"code": "688981", "name": "中芯国际", "prev_rank": 6, "new_rank": 4}],
+    "left_top5": [{"code": "603019", "name": "中科曙光", "prev_rank": 4, "new_rank": 9}],
+    "entered_pool": [
+      {"code": "688347", "name": "华虹公司", "prev_rank": null, "new_rank": 7},
+      {"code": "000938", "name": "紫光股份", "prev_rank": null, "new_rank": 10}
+    ],
+    "left_pool": [
+      {"code": "002261", "name": "拓维信息", "prev_rank": 7, "new_rank": 11},
+      {"code": "002837", "name": "英维克", "prev_rank": 9, "new_rank": 15}
+    ]
+  },
   "factor_scores_top10": [
-    {
-      "rank": 1,
-      "code": "688041",
-      "name": "海光信息",
-      "score": 1.237
-    },
-    {
-      "rank": 2,
-      "code": "688256",
-      "name": "寒武纪",
-      "score": 1.139
-    },
-    {
-      "rank": 3,
-      "code": "688008",
-      "name": "澜起科技",
-      "score": 0.52
-    },
-    {
-      "rank": 4,
-      "code": "603019",
-      "name": "中科曙光",
-      "score": 0.495
-    },
-    {
-      "rank": 5,
-      "code": "300308",
-      "name": "中际旭创",
-      "score": 0.337
-    },
-    {
-      "rank": 6,
-      "code": "688981",
-      "name": "中芯国际",
-      "score": 0.264
-    },
-    {
-      "rank": 7,
-      "code": "002261",
-      "name": "拓维信息",
-      "score": 0.246
-    },
-    {
-      "rank": 8,
-      "code": "688047",
-      "name": "龙芯中科",
-      "score": 0.01
-    },
-    {
-      "rank": 9,
-      "code": "002837",
-      "name": "英维克",
-      "score": 0.006
-    },
-    {
-      "rank": 10,
-      "code": "002156",
-      "name": "通富微电",
-      "score": -0.054
-    }
+    {"rank": 1, "code": "688256", "name": "寒武纪", "score": 1.218},
+    {"rank": 2, "code": "688041", "name": "海光信息", "score": 1.191},
+    {"rank": 3, "code": "688008", "name": "澜起科技", "score": 0.762},
+    {"rank": 4, "code": "688981", "name": "中芯国际", "score": 0.592},
+    {"rank": 5, "code": "300308", "name": "中际旭创", "score": 0.262},
+    {"rank": 6, "code": "002156", "name": "通富微电", "score": 0.197},
+    {"rank": 7, "code": "688347", "name": "华虹公司", "score": 0.114},
+    {"rank": 8, "code": "688047", "name": "龙芯中科", "score": -0.132},
+    {"rank": 9, "code": "603019", "name": "中科曙光", "score": -0.167},
+    {"rank": 10, "code": "000938", "name": "紫光股份", "score": -0.200}
   ],
-  "title": "🚨 [2026-07-03] 趋势提醒"
+  "market_context": {
+    "ke_chuang_50_weekly_chg": -7.7,
+    "ke_chuang_50_close": 1975.60,
+    "cambricon_peak": {"date": "2026-06-30", "price": 1595.55, "note": "科创板史上首个万亿市值"},
+    "smic_rally": {"from": 112.0, "to": 154.48, "pct": 38.0, "period": "2026-06-12 to 2026-07-01"}
+  },
+  "title": "🚨 [2026-07-06] 趋势提醒 — 3持仓跌破EMA8·中芯新进Top5"
 }
