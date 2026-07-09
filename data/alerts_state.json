@@ -1,10 +1,10 @@
 {
-  "date": "2026-07-08",
+  "date": "2026-07-09",
   "top5": [
     {
       "code": "688041",
       "name": "海光信息",
-      "score": 1.3281,
+      "score": 1.2036,
       "signal": "no_data",
       "close": null,
       "ema8": null
@@ -12,23 +12,7 @@
     {
       "code": "688256",
       "name": "寒武纪",
-      "score": 1.2411,
-      "signal": "no_data",
-      "close": null,
-      "ema8": null
-    },
-    {
-      "code": "688012",
-      "name": "中微公司",
-      "score": 0.6981,
-      "signal": "no_data",
-      "close": null,
-      "ema8": null
-    },
-    {
-      "code": "688008",
-      "name": "澜起科技",
-      "score": 0.5626,
+      "score": 1.1107,
       "signal": "no_data",
       "close": null,
       "ema8": null
@@ -36,36 +20,15 @@
     {
       "code": "603019",
       "name": "中科曙光",
-      "score": 0.4728,
-      "signal": "no_data",
-      "close": null,
-      "ema8": null
-    }
-  ],
-  "candidates": [
-    {
-      "code": "300604",
-      "name": "长川科技",
-      "rank": 6,
-      "score": 0.4198,
+      "score": 0.648,
       "signal": "no_data",
       "close": null,
       "ema8": null
     },
     {
-      "code": "002028",
-      "name": "思源电气",
-      "rank": 7,
-      "score": 0.4159,
-      "signal": "no_data",
-      "close": null,
-      "ema8": null
-    },
-    {
-      "code": "688981",
-      "name": "中芯国际",
-      "rank": 8,
-      "score": 0.3227,
+      "code": "688008",
+      "name": "澜起科技",
+      "score": 0.4667,
       "signal": "no_data",
       "close": null,
       "ema8": null
@@ -73,8 +36,18 @@
     {
       "code": "300308",
       "name": "中际旭创",
-      "rank": 9,
-      "score": 0.309,
+      "score": 0.3303,
+      "signal": "no_data",
+      "close": null,
+      "ema8": null
+    }
+  ],
+  "candidates": [
+    {
+      "code": "688981",
+      "name": "中芯国际",
+      "rank": 6,
+      "score": 0.2374,
       "signal": "no_data",
       "close": null,
       "ema8": null
@@ -82,8 +55,35 @@
     {
       "code": "002261",
       "name": "拓维信息",
+      "rank": 7,
+      "score": 0.1509,
+      "signal": "no_data",
+      "close": null,
+      "ema8": null
+    },
+    {
+      "code": "688047",
+      "name": "龙芯中科",
+      "rank": 8,
+      "score": 0.1185,
+      "signal": "no_data",
+      "close": null,
+      "ema8": null
+    },
+    {
+      "code": "002837",
+      "name": "英维克",
+      "rank": 9,
+      "score": 0.0588,
+      "signal": "no_data",
+      "close": null,
+      "ema8": null
+    },
+    {
+      "code": "002156",
+      "name": "通富微电",
       "rank": 10,
-      "score": 0.2566,
+      "score": -0.0556,
       "signal": "no_data",
       "close": null,
       "ema8": null
@@ -95,17 +95,18 @@
   "portfolio_changes": {
     "new_entries": [
       {
-        "code": "688012",
-        "name": "中微公司"
+        "code": "300308",
+        "name": "中际旭创"
       }
     ],
     "exits": [
       {
-        "code": "300308",
-        "name": "300308"
+        "code": "688012",
+        "name": "中微公司",
+        "note": "not in 17-stock universe"
       }
     ]
   },
   "api_blocked": true,
-  "title": "🚨 [2026-07-08] 趋势提醒"
+  "title": "🚨 [2026-07-09] 趋势提醒 | 持仓变动"
 }
