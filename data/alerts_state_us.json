@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-07-08T08:41:33+08:00",
+  "last_run": "2026-07-09T08:32:00+08:00",
   "run_date": "2026-07-08",
   "market": "US",
   "top5": [
@@ -7,223 +7,170 @@
       "code": "MU",
       "name": "Micron",
       "rank": 1,
-      "score": 1.5471,
-      "signal": "sell-warning",
-      "ema": {
-        "close": 912.77,
-        "ema8": 1060.24,
-        "ema21": 819.26,
-        "date": "2026-07-07"
-      }
-    },
-    {
-      "code": "NVDA",
-      "name": "Nvidia",
-      "rank": 2,
-      "score": 1.2956,
-      "signal": "sell-warning",
-      "ema": {
-        "close": 196.25,
-        "ema8": 197.28,
-        "ema21": 190.53,
-        "date": "2026-07-07"
-      }
+      "score": 2.3664,
+      "signal": "sell-warning(stale-2026-07-07)",
+      "close": 912.77,
+      "ema8": 1060.24,
+      "ema21": 819.26,
+      "ema_date": "2026-07-07"
     },
     {
       "code": "SNDK",
       "name": "SanDisk",
+      "rank": 2,
+      "score": 1.8525,
+      "signal": "sell-warning(stale-2026-07-07)",
+      "close": 1616.0,
+      "ema8": 1871.55,
+      "ema21": 1268.27,
+      "ema_date": "2026-07-07"
+    },
+    {
+      "code": "NVDA",
+      "name": "Nvidia",
       "rank": 3,
-      "score": 1.142,
-      "signal": "sell-warning",
-      "ema": {
-        "close": 1616.0,
-        "ema8": 1871.55,
-        "ema21": 1268.27,
-        "date": "2026-07-07"
-      }
-    },
-    {
-      "code": "TSM",
-      "name": "TSMC",
-      "rank": 4,
-      "score": 1.0223,
-      "signal": "buy-fresh",
-      "ema": {
-        "close": 434.17,
-        "ema8": 433.45,
-        "ema21": 372.91,
-        "date": "2026-07-07"
-      }
-    },
-    {
-      "code": "ASML",
-      "name": "ASML",
-      "rank": 5,
-      "score": 0.9292,
-      "signal": "sell-warning",
-      "ema": {
-        "close": 1645.69,
-        "ema8": 1726.54,
-        "ema21": 1480.23,
-        "date": "2026-07-07"
-      }
-    }
-  ],
-  "candidates": [
-    {
-      "code": "META",
-      "name": "Meta",
-      "rank": 6,
-      "score": 0.9217,
-      "signal": "buy-fresh",
-      "ema": {
-        "close": 615.4,
-        "ema8": 594.51,
-        "ema21": 545.03,
-        "date": "2026-07-07"
-      }
+      "score": 1.5992,
+      "signal": "sell-warning(stale-2026-07-07)",
+      "close": 196.25,
+      "ema8": 197.28,
+      "ema21": 190.53,
+      "ema_date": "2026-07-07"
     },
     {
       "code": "AVGO",
       "name": "Broadcom",
+      "rank": 4,
+      "score": 1.3164,
+      "signal": "sell-warning(stale-2026-07-07)",
+      "close": 373.9,
+      "ema8": 379.43,
+      "ema21": 357.21,
+      "ema_date": "2026-07-07"
+    },
+    {
+      "code": "TSM",
+      "name": "TSMC",
+      "rank": 5,
+      "score": 1.255,
+      "signal": "buy-fresh(stale-2026-07-07)",
+      "close": 434.17,
+      "ema8": 433.45,
+      "ema21": 372.91,
+      "ema_date": "2026-07-07"
+    }
+  ],
+  "candidates": [
+    {
+      "code": "APP",
+      "name": "AppLovin",
+      "rank": 6,
+      "score": 1.2043,
+      "is_etf": false,
+      "signal": "no-ema",
+      "close": 543.79,
+      "ema8": null,
+      "ema21": null,
+      "ema_date": "2026-07-07"
+    },
+    {
+      "code": "META",
+      "name": "Meta Platforms",
       "rank": 7,
-      "score": 0.8303,
-      "signal": "sell-warning",
-      "ema": {
-        "close": 373.9,
-        "ema8": 379.43,
-        "ema21": 357.21,
-        "date": "2026-07-07"
-      }
+      "score": 1.1441,
+      "is_etf": false,
+      "signal": "buy-fresh(stale-2026-07-07)",
+      "close": 615.4,
+      "ema8": 594.51,
+      "ema21": 545.03,
+      "ema_date": "2026-07-07"
     },
     {
       "code": "GOOGL",
       "name": "Alphabet",
       "rank": 8,
-      "score": 0.7556,
-      "signal": "hold",
-      "ema": {
-        "close": 366.0,
-        "ema8": 353.54,
-        "ema21": 315.79,
-        "date": "2026-07-07"
-      }
-    },
-    {
-      "code": "AMD",
-      "name": "AMD",
-      "rank": 9,
-      "score": 0.688,
-      "signal": "no-ema",
-      "ema": {
-        "close": 513.0,
-        "ema8": null,
-        "ema21": null,
-        "date": "2026-07-07",
-        "note": "EMA未初始化 (首次入池)"
-      }
-    },
-    {
-      "code": "APP",
-      "name": "AppLovin",
-      "rank": 10,
-      "score": 0.6612,
-      "signal": "no-ema",
-      "ema": {
-        "close": 543.79,
-        "ema8": null,
-        "ema21": null,
-        "date": "2026-07-07",
-        "note": "EMA未初始化 (首次入池)"
-      }
-    }
-  ],
-  "signals": {
-    "MU": "sell-warning",
-    "NVDA": "sell-warning",
-    "TSM": "buy-fresh",
-    "SNDK": "sell-warning",
-    "ASML": "sell-warning",
-    "META": "buy-fresh",
-    "AVGO": "sell-warning",
-    "GOOGL": "hold",
-    "AMD": "no-ema",
-    "APP": "no-ema"
-  },
-  "ema_snapshot": {
-    "MU": {
-      "close": 912.77,
-      "ema8": 1060.24,
-      "ema21": 819.26,
-      "date": "2026-07-07"
-    },
-    "NVDA": {
-      "close": 196.25,
-      "ema8": 197.28,
-      "ema21": 190.53,
-      "date": "2026-07-07"
-    },
-    "TSM": {
-      "close": 434.17,
-      "ema8": 433.45,
-      "ema21": 372.91,
-      "date": "2026-07-07"
-    },
-    "SNDK": {
-      "close": 1616.0,
-      "ema8": 1871.55,
-      "ema21": 1268.27,
-      "date": "2026-07-07"
-    },
-    "ASML": {
-      "close": 1645.69,
-      "ema8": 1726.54,
-      "ema21": 1480.23,
-      "date": "2026-07-07"
-    },
-    "META": {
-      "close": 615.4,
-      "ema8": 594.51,
-      "ema21": 545.03,
-      "date": "2026-07-07"
-    },
-    "AVGO": {
-      "close": 373.9,
-      "ema8": 379.43,
-      "ema21": 357.21,
-      "date": "2026-07-07"
-    },
-    "GOOGL": {
+      "score": 1.1049,
+      "is_etf": false,
+      "signal": "hold(stale-2026-07-07)",
       "close": 366.0,
       "ema8": 353.54,
       "ema21": 315.79,
-      "date": "2026-07-07"
+      "ema_date": "2026-07-07"
     },
-    "AMD": {
-      "close": 513.0,
+    {
+      "code": "COPX",
+      "name": "Global X Copper Miners ETF",
+      "rank": 9,
+      "score": 0.3364,
+      "is_etf": true,
+      "signal": "no-prev-data",
+      "close": null,
       "ema8": null,
-      "ema21": null,
-      "date": "2026-07-07",
-      "note": "EMA未初始化 (首次入池)"
+      "ema21": null
     },
-    "APP": {
-      "close": 543.79,
+    {
+      "code": "XME",
+      "name": "SPDR Metals & Mining",
+      "rank": 10,
+      "score": 0.31,
+      "is_etf": true,
+      "signal": "no-prev-data",
+      "close": null,
       "ema8": null,
-      "ema21": null,
-      "date": "2026-07-07",
-      "note": "EMA未初始化 (首次入池)"
+      "ema21": null
     }
+  ],
+  "signals": {
+    "MU": "sell-warning(stale-2026-07-07)",
+    "SNDK": "sell-warning(stale-2026-07-07)",
+    "NVDA": "sell-warning(stale-2026-07-07)",
+    "AVGO": "sell-warning(stale-2026-07-07)",
+    "TSM": "buy-fresh(stale-2026-07-07)",
+    "APP": "no-ema(stale-2026-07-07)",
+    "META": "buy-fresh(stale-2026-07-07)",
+    "GOOGL": "hold(stale-2026-07-07)",
+    "COPX": "no-prev-data",
+    "XME": "no-prev-data"
   },
-  "market_context": {
-    "sp500_close": 7537.43,
-    "sp500_chg_pct": 0.7,
-    "nasdaq_close": 26121.16,
-    "nasdaq_chg_pct": 1.1,
-    "event": "Samsung Q2 preliminary profit ¥89.4T (~$58B) beat estimates +19x YoY, but profit-taking triggered 7%+ selloff in South Korean KOSPI; memory and chip stocks globally under pressure",
-    "note": "S&P500/Nasdaq ended UP on Jul-7 (broad market recovered intraday), but chip sector remained pressured"
-  },
-  "kline_status": "partial: stooq.com and finance.yahoo.com blocked by egress proxy (403); Jul-7 closes from WebSearch (tradingkey/247wallst/TheStreet/Motley Fool); EMA updated incrementally from Jun-30 baseline via Jul-1 estimated closes (+Jul-7 closes); Jul-2 close skipped (data unavailable); AMD/APP are new entrants without EMA history",
-  "sources": "WebSearch: tradingkey.com, 247wallst.com, thestreet.com, finance.yahoo.com, motleyfool.com (Jul-7 2026 market data)",
-  "scoring_note": "ETF excluded from Top5; 5-factor model (strategic 40% + growth 20% + profit 20% + liquidity 12% + cap 8%); ETF uses 3-factor (strategic 40% + liquidity 12% + cap 8%) normalized to 60%",
-  "rank_changes": "ASML 升入Top5 (取代AVGO); AMD/APP 入候选池 (取代CEG/MSFT); AVGO 降至候选池第7"
+  "market_index": {},
+  "kline_status": "stale(2026-07-07): stooq.com blocked by egress proxy (HTTP 403). K-line signals are carried from previous run. Fundamentals fully recomputed.",
+  "sources": "EMA from 2026-07-07 Stooq weekly K-line (previous run); fundamentals from companies_us.json",
+  "score_method": "5-factor: strategic 40%, growth 20%, profitability 20%, liquidity 12%, mktcap 8%",
+  "all_scores": {
+    "MU": 2.3664,
+    "SNDK": 1.8525,
+    "NVDA": 1.5992,
+    "AVGO": 1.3164,
+    "TSM": 1.255,
+    "APP": 1.2043,
+    "META": 1.1441,
+    "GOOGL": 1.1049,
+    "CEG": 1.1015,
+    "AMD": 1.0745,
+    "ASML": 1.0684,
+    "KLAC": 0.9675,
+    "LITE": 0.9618,
+    "MSFT": 0.9591,
+    "AMAT": 0.9224,
+    "CRWV": 0.8732,
+    "INTC": 0.8563,
+    "COHR": 0.8168,
+    "MRVL": 0.7809,
+    "VRT": 0.7697,
+    "AAPL": 0.768,
+    "SNPS": 0.7606,
+    "AMZN": 0.7313,
+    "ONTO": 0.7131,
+    "RKLB": 0.6976,
+    "QCOM": 0.6884,
+    "ETN": 0.6302,
+    "GEV": 0.6292,
+    "FN": 0.5004,
+    "TSLA": 0.4897,
+    "CCJ": 0.4428,
+    "COPX": 0.3364,
+    "XME": 0.31,
+    "XLU": 0.1542,
+    "EWY": 0.1296,
+    "SMH": 0.1266
+  }
 }
