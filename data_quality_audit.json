@@ -8,33 +8,33 @@
       "issues": [],
       "domain_counts": {
         "stcn.com": 4,
-        "stock.stockstar.com": 25,
-        "finance.sina.com.cn": 21,
-        "news.qq.com": 13,
-        "static.cninfo.com.cn": 9,
+        "stock.stockstar.com": 26,
+        "finance.sina.com.cn": 22,
+        "news.qq.com": 14,
+        "static.cninfo.com.cn": 10,
         "file.finance.qq.com": 1,
         "pdf.dfcfw.com": 6,
         "yicai.com": 2,
         "caifuhao.eastmoney.com": 2,
+        "m.jiemian.com": 3,
         "nbd.com.cn": 1,
         "star.sse.com.cn": 1,
+        "money.finance.sina.com.cn": 3,
         "dataclouds.cninfo.com.cn": 3,
         "finance.sina.cn": 1,
+        "stockmc.xueqiu.com": 5,
         "vip.stock.finance.sina.com.cn": 2,
         "cj.sina.com.cn": 2,
         "wallstreetcn.com": 4,
         "jjckb.cn": 1,
         "big5.sse.com.cn": 1,
         "file.finance.sina.com.cn": 2,
-        "stockmc.xueqiu.com": 4,
         "finance.eastmoney.com": 4,
         "163.com": 1,
-        "m.jiemian.com": 2,
         "paper.cnstock.com": 1,
         "cnenergynews.cn": 1,
         "shidaotec.com": 1,
         "disc.static.szse.cn": 1,
-        "money.finance.sina.com.cn": 2,
         "sdyanbao.com": 1,
         "wap.stockstar.com": 2,
         "stock.finance.sina.com.cn": 1,
@@ -48,7 +48,7 @@
       "market": "US",
       "path": "data/companies_us.json",
       "companies": 66,
-      "quarter_rows": 308,
+      "quarter_rows": 316,
       "issues": [
         {
           "severity": "warn",
@@ -102,7 +102,7 @@
         }
       ],
       "domain_counts": {
-        "sec.gov": 245,
+        "sec.gov": 251,
         "nvidianews.nvidia.com": 6,
         "investors.broadcom.com": 6,
         "ir.amd.com": 5,
@@ -115,9 +115,9 @@
         "investors.ontoinnovation.com": 1,
         "news.synopsys.com": 1,
         "investors.micron.com": 2,
-        "micron.gcs-web.com": 4,
+        "micron.gcs-web.com": 3,
+        "globenewswire.com": 6,
         "investor.sandisk.com": 1,
-        "globenewswire.com": 4,
         "investor.lumentum.com": 4,
         "microsoft.com": 6,
         "s206.q4cdn.com": 5,
@@ -155,7 +155,7 @@
         "investors.nrg.com": 1,
         "ir.kindermorgan.com": 1,
         "williams.com": 1,
-        "investor.oracle.com": 1,
+        "investor.oracle.com": 2,
         "iren.gcs-web.com": 2,
         "investor.servicenow.com": 1,
         "investor.salesforce.com": 1,
@@ -169,56 +169,28 @@
       "market": "A-share",
       "path": "data/alerts_state.json",
       "exists": true,
-      "status": "",
-      "source": "",
+      "status": "ok (28/28)",
+      "source": "Tencent ifzq.gtimg.cn (live)",
       "failed": [],
-      "issues": [
-        {
-          "severity": "warn",
-          "type": "kline_not_ok",
-          "market": "A-share",
-          "message": "K-line status is not ok in the saved scan state: . Re-run the scan with network access before relying on fresh trend signals."
-        },
-        {
-          "severity": "warn",
-          "type": "unknown_kline_source",
-          "market": "A-share",
-          "message": "Unexpected K-line data source: "
-        }
-      ]
+      "issues": []
     },
     {
       "market": "US",
       "path": "data/alerts_state_us.json",
       "exists": true,
-      "status": "partial: stooq/yahoo blocked(网络策略); EMA由2026-06-05底仓基础+6/11收盘价(WebSearch)更新推算",
-      "source": "",
+      "status": "ok (66/66)",
+      "source": "Tencent ifzq.gtimg.cn (live)",
       "failed": [],
-      "issues": [
-        {
-          "severity": "warn",
-          "type": "kline_not_ok",
-          "market": "US",
-          "message": "K-line status is not ok in the saved scan state: partial: stooq/yahoo blocked(网络策略); EMA由2026-06-05底仓基础+6/11收盘价(WebSearch)更新推算. Re-run the scan with network access before relying on fresh trend signals."
-        },
-        {
-          "severity": "warn",
-          "type": "unknown_kline_source",
-          "market": "US",
-          "message": "Unexpected K-line data source: "
-        }
-      ]
+      "issues": []
     }
   ],
   "issue_counts": {
     "by_severity": {
-      "warn": 10
+      "warn": 6
     },
     "by_type": {
       "quality_metrics_stale": 1,
-      "no_quarters": 5,
-      "kline_not_ok": 2,
-      "unknown_kline_source": 2
+      "no_quarters": 5
     }
   },
   "issues": [
@@ -271,30 +243,6 @@
       "code": "EWY",
       "q": "",
       "message": "No quarterly financial data. This is OK for ETF/watch-only names, but it cannot be used in financial ranking."
-    },
-    {
-      "severity": "warn",
-      "type": "kline_not_ok",
-      "market": "A-share",
-      "message": "K-line status is not ok in the saved scan state: . Re-run the scan with network access before relying on fresh trend signals."
-    },
-    {
-      "severity": "warn",
-      "type": "unknown_kline_source",
-      "market": "A-share",
-      "message": "Unexpected K-line data source: "
-    },
-    {
-      "severity": "warn",
-      "type": "kline_not_ok",
-      "market": "US",
-      "message": "K-line status is not ok in the saved scan state: partial: stooq/yahoo blocked(网络策略); EMA由2026-06-05底仓基础+6/11收盘价(WebSearch)更新推算. Re-run the scan with network access before relying on fresh trend signals."
-    },
-    {
-      "severity": "warn",
-      "type": "unknown_kline_source",
-      "market": "US",
-      "message": "Unexpected K-line data source: "
     }
   ]
 }

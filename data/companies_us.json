@@ -15,7 +15,7 @@
       "etf": "ETF & 主题表达工具",
       "other": "其他相关"
     },
-    "market_cap_updated": "市值 May 11 2026 实时数据 (companiesmarketcap.com / Yahoo). 单位: 亿美元.",
+    "market_cap_updated": "总市值更新于 2026-07-12 · 来源: 腾讯行情 f45 (A股亿元 / 美股亿美元) · scripts/update_market_caps.py",
     "quarters": [],
     "quality_metrics_policy": "OCF/CapEx/FCF/cash/debt are sourced from SEC Companyfacts when available. FCF = latest-full-fiscal-year OCF - same-fiscal-year capex (period recorded in *_period). Balance-sheet items use the latest period end; debt older than 15 months vs cash is dropped. Non-USD facts are converted at the spot rate on the run date (fx_mode=spot_at_run) — historical-period flows therefore carry FX drift. Missing values mean no acceptable SEC Companyfacts fact was found and must not be inferred."
   },
@@ -27,7 +27,7 @@
     "strategic": 10,
     "ai_execution_score": 10,
     "ai_execution_note": "前沿模型训练/推理基础设施核心卖方, CUDA生态和Blackwell/Rubin路线确定性最高.",
-    "market_cap_billion": 53900,
+    "market_cap_billion": 51096.6,
     "avg_turnover_pct": 1.2,
     "quarters": [
       {
@@ -129,7 +129,8 @@
       "cash_end": "2026-04-26",
       "long_term_debt_end": "2026-04-26",
       "debt_billion": 8.47
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "AVGO": {
     "name": "Broadcom",
@@ -139,7 +140,7 @@
     "strategic": 9,
     "ai_execution_score": 8,
     "ai_execution_note": "AI ASIC和网络执行强, 但依赖少数hyperscaler客户资本开支节奏.",
-    "market_cap_billion": 20320,
+    "market_cap_billion": 19028.9,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -241,7 +242,8 @@
       "cash_end": "2026-05-03",
       "long_term_debt_end": "2026-05-03",
       "debt_billion": 64.907
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "AMD": {
     "name": "AMD",
@@ -249,7 +251,7 @@
     "catLabel": "GPU/CPU",
     "intro": "AI GPU 第二选择 (MI300/MI350), x86 CPU 抢英特尔份额. AI 业务高速增长但绝对体量距英伟达甚远.",
     "strategic": 8,
-    "market_cap_billion": 7577,
+    "market_cap_billion": 9097.0,
     "avg_turnover_pct": 4,
     "quarters": [
       {
@@ -343,7 +345,8 @@
       "capex_period": "2024-12-29 → 2025-12-27",
       "fcf_margin_basis": "FY rev 2024-12-29 → 2025-12-27 (SEC)",
       "cash_end": "2026-03-28"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "INTC": {
     "name": "Intel",
@@ -351,7 +354,7 @@
     "catLabel": "CPU/Foundry",
     "intro": "美国政府持 9.9% 股权 (CHIPS Act 拨款转股权), Intel 18A (1.8nm) Fab 52 亚利桑那量产 — 美国先进制程国家战略资产。CPU 老牌 + Foundry 国家级。",
     "strategic": 9,
-    "market_cap_billion": 6387,
+    "market_cap_billion": 5520.6,
     "avg_turnover_pct": 3.5,
     "quarters": [
       {
@@ -453,7 +456,8 @@
       "short_term_debt_billion": 0.0,
       "short_term_debt_tag": "CommercialPaper",
       "debt_billion": 46.585
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "QCOM": {
     "name": "Qualcomm",
@@ -461,7 +465,7 @@
     "catLabel": "移动 SoC",
     "intro": "手机 SoC + 调制解调器龙头, 进军 PC AI 芯片 (Snapdragon X). 边缘 AI 重要参与者.",
     "strategic": 6,
-    "market_cap_billion": 2483,
+    "market_cap_billion": 1993.7,
     "avg_turnover_pct": 1.8,
     "quarters": [
       {
@@ -554,7 +558,8 @@
       "cash_end": "2026-03-29",
       "long_term_debt_end": "2026-03-29",
       "debt_billion": 14.772
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "MRVL": {
     "name": "Marvell",
@@ -562,35 +567,35 @@
     "catLabel": "数据中心芯片",
     "intro": "AI 定制 ASIC + 高速光电芯片 + 网络存储. AWS Trainium 合作伙伴, AI 业务高增速.",
     "strategic": 7,
-    "market_cap_billion": 1472,
+    "market_cap_billion": 2116.5,
     "avg_turnover_pct": 3.8,
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": 19,
+        "rev": 18.2,
+        "gm": 50.48,
+        "nm": 11.02,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/0001835632-26-000011-index.html",
+        "note": "SEC Companyfacts CY2025Q1: derived from SEC annual value minus other official period values to obtain CY2025Q1; revenue $1.817B, gross profit $0.917B, net income $0.200B"
+      },
+      {
+        "q": "2025Q2",
+        "rev": 19.0,
         "gm": 50.25,
         "nm": 9.39,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000019/0001835632-26-000019-index.html",
-        "note": "SEC Companyfacts CY2025Q1: revenue $1.895B, gross profit $0.952B, net income $0.178B"
+        "note": "SEC Companyfacts CY2025Q2: revenue $1.895B, gross profit $0.952B, net income $0.178B"
       },
       {
-        "q": "2025Q2",
+        "q": "2025Q3",
         "rev": 20.1,
         "gm": 50.38,
         "nm": 9.71,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000189/0001835632-25-000189-index.html",
-        "note": "SEC Companyfacts CY2025Q2: revenue $2.006B, gross profit $1.011B, net income $0.195B"
-      },
-      {
-        "q": "2025Q3",
-        "rev": 20.7,
-        "gm": 51.57,
-        "nm": 91.65,
-        "src": "A",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000197/0001835632-25-000197-index.html",
-        "note": "SEC Companyfacts CY2025Q3: revenue $2.075B, gross profit $1.070B, net income $1.901B"
+        "note": "SEC Companyfacts CY2025Q3: revenue $2.006B, gross profit $1.011B, net income $0.195B"
       },
       {
         "q": "2025Q4",
@@ -598,17 +603,17 @@
         "gm": 51.57,
         "nm": 91.65,
         "src": "A",
-        "note": "SEC Companyfacts CY2025Q4: revenue $2.075B, gross profit $1.070B, net income $1.901B",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000197/0001835632-25-000197-index.html"
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000197/0001835632-25-000197-index.html",
+        "note": "SEC Companyfacts CY2025Q4: revenue $2.075B, gross profit $1.070B, net income $1.901B"
       },
       {
         "q": "2026Q1",
         "rev": 22.2,
-        "gm": 51.7,
+        "gm": 51.74,
         "nm": 17.85,
         "src": "A",
-        "source_url": "https://investor.marvell.com/news-events/press-releases/detail/1011/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2026-financial-results",
-        "note": "MRVL Q4 FY2026 ended Jan 31 2026 (reported Mar 5 2026): revenue $2.219B, GAAP gross profit $1.147B (51.7%), GAAP net income $0.396B"
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/0001835632-26-000011-index.html",
+        "note": "SEC Companyfacts CY2026Q1: derived from SEC annual value minus other official period values to obtain CY2026Q1; revenue $2.219B, gross profit $1.148B, net income $0.396B"
       },
       {
         "q": "2026Q2",
@@ -617,7 +622,7 @@
         "nm": 1.43,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000019/0001835632-26-000019-index.html",
-        "note": "MRVL Q1 FY2027 ended May 3 2026 (reported May 27 2026): revenue $2.418B, GAAP gross profit $1.261B (52.1%), GAAP net income $0.035B"
+        "note": "SEC Companyfacts CY2026Q2: revenue $2.418B, gross profit $1.261B, net income $0.035B"
       }
     ],
     "q2_outlook": {
@@ -666,7 +671,8 @@
       "short_term_debt_billion": 0.0,
       "short_term_debt_tag": "ShortTermBorrowings",
       "debt_billion": 4.961
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "APP": {
     "name": "AppLovin",
@@ -676,7 +682,7 @@
     "strategic": 6,
     "ai_execution_score": 7,
     "ai_execution_note": "应用层AI变现清晰, 但不是基础模型/算力平台, 长期护城河仍需验证.",
-    "market_cap_billion": 1530,
+    "market_cap_billion": 1703.1,
     "avg_turnover_pct": 4.5,
     "quarters": [
       {
@@ -769,7 +775,8 @@
       "cash_end": "2026-03-31",
       "long_term_debt_end": "2025-12-31",
       "debt_billion": 3.513
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "TSM": {
     "name": "TSMC",
@@ -779,7 +786,7 @@
     "strategic": 10,
     "ai_execution_score": 8,
     "ai_execution_note": "AI芯片制造关键瓶颈, 执行确定性高; 但不是模型或应用变现主体.",
-    "market_cap_billion": 21040,
+    "market_cap_billion": 22515.0,
     "avg_turnover_pct": 1,
     "quarters": [
       {
@@ -865,7 +872,8 @@
       "capex_period": "2024-01-01 → 2024-12-31",
       "fcf_margin_basis": "FY rev 2024-01-01 → 2024-12-31 (SEC)",
       "cash_end": "2024-12-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "ASML": {
     "name": "ASML",
@@ -873,7 +881,7 @@
     "catLabel": "光刻机",
     "intro": "EUV 光刻机全球独家供应商, 7nm 以下制程必备. AI 芯片军备竞赛上游卡脖子环节.",
     "strategic": 10,
-    "market_cap_billion": 5972,
+    "market_cap_billion": 6927.2,
     "avg_turnover_pct": 1.2,
     "quarters": [
       {
@@ -959,7 +967,8 @@
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2025-12-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "AMAT": {
     "name": "Applied Materials",
@@ -967,30 +976,30 @@
     "catLabel": "半导体设备",
     "intro": "全球最大半导体设备公司, 沉积/刻蚀/CMP 等核心工艺. 受益于 AI 驱动 capex 周期.",
     "strategic": 8,
-    "market_cap_billion": 3550,
+    "market_cap_billion": 4783.6,
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": 71,
+        "rev": 71.7,
+        "gm": 48.79,
+        "nm": 16.54,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026009694/0001628280-26-009694-index.html",
+        "note": "SEC Companyfacts CY2025Q1: revenue $7.166B, gross profit $3.496B, net income $1.185B"
+      },
+      {
+        "q": "2025Q2",
+        "rev": 71.0,
         "gm": 49.08,
         "nm": 30.1,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026037227/0001628280-26-037227-index.html",
-        "note": "SEC Companyfacts CY2025Q1: revenue $7.100B, gross profit $3.485B, net income $2.137B"
-      },
-      {
-        "q": "2025Q2",
-        "rev": 73,
-        "gm": 48.78,
-        "nm": 24.36,
-        "src": "A",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/6951/000000695125000037/0000006951-25-000037-index.html",
-        "note": "SEC Companyfacts CY2025Q2: revenue $7.302B, gross profit $3.562B, net income $1.779B"
+        "note": "SEC Companyfacts CY2025Q2: revenue $7.100B, gross profit $3.485B, net income $2.137B"
       },
       {
         "q": "2025Q3",
-        "rev": 73,
+        "rev": 73.0,
         "gm": 48.78,
         "nm": 24.36,
         "src": "A",
@@ -999,21 +1008,30 @@
       },
       {
         "q": "2025Q4",
+        "rev": 68.0,
+        "gm": 48.01,
+        "nm": 27.9,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/0001628280-25-056742-index.html",
+        "note": "SEC Companyfacts CY2025Q4: derived from SEC annual value minus other official period values to obtain CY2025Q4; revenue $6.800B, gross profit $3.265B, net income $1.897B"
+      },
+      {
+        "q": "2026Q1",
         "rev": 70.1,
         "gm": 48.99,
         "nm": 28.89,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026009694/0001628280-26-009694-index.html",
-        "note": "SEC Companyfacts CY2025Q4: revenue $7.012B, gross profit $3.435B, net income $2.026B"
+        "note": "SEC Companyfacts CY2026Q1: revenue $7.012B, gross profit $3.435B, net income $2.026B"
       },
       {
-        "q": "2026Q1",
+        "q": "2026Q2",
         "rev": 79.1,
         "gm": 49.9,
         "nm": 35.47,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026037227/0001628280-26-037227-index.html",
-        "note": "SEC Companyfacts CY2026Q1: revenue $7.910B, gross profit $3.947B, net income $2.806B"
+        "note": "SEC Companyfacts CY2026Q2: revenue $7.910B, gross profit $3.947B, net income $2.806B"
       }
     ],
     "q2_outlook": {
@@ -1053,7 +1071,8 @@
       "capex_period": "2024-10-28 → 2025-10-26",
       "fcf_margin_basis": "FY rev 2024-10-28 → 2025-10-26 (SEC)",
       "cash_end": "2026-04-26"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "KLAC": {
     "name": "KLA Corp",
@@ -1063,7 +1082,7 @@
     "strategic": 8,
     "ai_execution_score": 7,
     "ai_execution_note": "先进制程量测/检测关键设备商, 受益AI芯片制造; 但不是模型/平台/算力主导方.",
-    "market_cap_billion": 2465,
+    "market_cap_billion": 3024.3,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -1156,7 +1175,8 @@
       "cash_end": "2026-03-31",
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 5.887
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "ONTO": {
     "name": "Onto Innovation",
@@ -1164,7 +1184,7 @@
     "catLabel": "先进封装量测",
     "intro": "晶圆/掩膜版/HBM 封装的量测设备, 受益先进封装 (CoWoS) 产能扩张.",
     "strategic": 7,
-    "market_cap_billion": 141,
+    "market_cap_billion": 159.9,
     "avg_turnover_pct": 4,
     "quarters": [
       {
@@ -1258,7 +1278,8 @@
       "capex_period": "2024-12-29 → 2026-01-03",
       "fcf_margin_basis": "FY rev 2024-12-29 → 2026-01-03 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "SNPS": {
     "name": "Synopsys",
@@ -1266,26 +1287,26 @@
     "catLabel": "EDA 软件",
     "intro": "芯片设计 EDA 双寡头之一 (与 Cadence). 所有 AI 芯片设计都用其工具, 抗周期能力强.",
     "strategic": 7,
-    "market_cap_billion": 751,
+    "market_cap_billion": 853.0,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": 16,
-        "gm": 80.16,
-        "nm": 21.53,
+        "rev": 14.6,
+        "gm": 81.45,
+        "nm": 20.44,
         "src": "A",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000018/0000883241-26-000018-index.html",
-        "note": "SEC Companyfacts CY2025Q1: revenue $1.604B, gross profit $1.286B, net income $0.345B"
+        "source_url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000014/0000883241-26-000014-index.html",
+        "note": "SEC Companyfacts CY2025Q1: revenue $1.455B, gross profit $1.185B, net income $0.297B"
       },
       {
         "q": "2025Q2",
-        "rev": 17.4,
-        "gm": 78.13,
-        "nm": 13.94,
+        "rev": 16.0,
+        "gm": 80.16,
+        "nm": 21.51,
         "src": "A",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/883241/000088324125000024/0000883241-25-000024-index.html",
-        "note": "SEC Companyfacts CY2025Q2: revenue $1.740B, gross profit $1.359B, net income $0.243B"
+        "source_url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000018/0000883241-26-000018-index.html",
+        "note": "SEC Companyfacts CY2025Q2: revenue $1.604B, gross profit $1.286B, net income $0.345B"
       },
       {
         "q": "2025Q3",
@@ -1298,30 +1319,30 @@
       },
       {
         "q": "2025Q4",
-        "rev": 24.1,
-        "gm": 73.54,
-        "nm": 2.7,
+        "rev": 22.5,
+        "gm": 70.97,
+        "nm": 19.89,
         "src": "A",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000014/0000883241-26-000014-index.html",
-        "note": "SEC Companyfacts CY2025Q4: revenue $2.409B, gross profit $1.771B, net income $0.065B"
+        "source_url": "https://www.sec.gov/Archives/edgar/data/883241/000088324125000028/0000883241-25-000028-index.html",
+        "note": "SEC Companyfacts CY2025Q4: derived from SEC annual value minus other official period values to obtain CY2025Q4; revenue $2.255B, gross profit $1.600B, net income $0.448B"
       },
       {
         "q": "2026Q1",
-        "rev": 22.8,
-        "gm": 72.33,
-        "nm": 0.75,
+        "rev": 24.1,
+        "gm": 73.54,
+        "nm": 2.69,
         "src": "A",
-        "note": "SEC Companyfacts CY2026Q1: revenue $2.276B, gross profit $1.646B, net income $0.017B",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000018/0000883241-26-000018-index.html"
+        "source_url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000014/0000883241-26-000014-index.html",
+        "note": "SEC Companyfacts CY2026Q1: revenue $2.409B, gross profit $1.771B, net income $0.065B"
       },
       {
         "q": "2026Q2",
         "rev": 22.8,
         "gm": 72.33,
-        "nm": 0.75,
+        "nm": 0.74,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000018/0000883241-26-000018-index.html",
-        "note": "SNPS Q2 FY2026 ended Apr 30 2026 (reported May 27 2026): revenue $2.276B, GAAP gross profit $1.646B (72.3%), GAAP net income $0.017B"
+        "note": "SEC Companyfacts CY2026Q2: revenue $2.276B, gross profit $1.646B, net income $0.017B"
       }
     ],
     "q2_outlook": {
@@ -1368,7 +1389,8 @@
       "cash_end": "2026-04-30",
       "long_term_debt_end": "2026-04-30",
       "debt_billion": 10.036
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "MU": {
     "name": "Micron",
@@ -1378,7 +1400,7 @@
     "strategic": 9,
     "ai_execution_score": 8,
     "ai_execution_note": "HBM/DRAM是AI服务器核心瓶颈, 但存储周期和capex/FCF波动仍需明显折扣.",
-    "market_cap_billion": 8900,
+    "market_cap_billion": 11060.1,
     "avg_turnover_pct": 4.5,
     "quarters": [
       {
@@ -1487,7 +1509,8 @@
       "cash_end": "2026-05-28",
       "long_term_debt_end": "2025-11-27",
       "debt_billion": 8.844
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "SNDK": {
     "name": "Sandisk",
@@ -1497,7 +1520,7 @@
     "strategic": 7,
     "ai_execution_score": 6,
     "ai_execution_note": "NAND受AI存储需求带动, 但相比HBM更周期、更商品化, AI战略确定性较低.",
-    "market_cap_billion": 2285,
+    "market_cap_billion": 2837.3,
     "avg_turnover_pct": 5.5,
     "quarters": [
       {
@@ -1507,7 +1530,7 @@
         "nm": -114.04,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026029401/0001628280-26-029401-index.html",
-        "note": "SEC Companyfacts CY2025Q1: revenue $1.695B, gross profit $0.382B, net income $-1.933B"
+        "note": "SEC Companyfacts CY2025Q1: revenue $1.695B, gross profit $0.382B, net income $-1.933B [标签按财季结束日归属日历季重标: 原 2025Q1]"
       },
       {
         "q": "2025Q2",
@@ -1516,38 +1539,38 @@
         "nm": -1.21,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/2023554/000202355425000034/0002023554-25-000034-index.html",
-        "note": "SEC Companyfacts CY2025Q2: derived from SEC annual value minus other official period values to obtain CY2025Q2; revenue $1.901B, gross profit $0.498B, net income $-0.023B"
+        "note": "SEC Companyfacts CY2025Q2: derived from SEC annual value minus other official period values to obtain CY2025Q2; revenue $1.901B, gross profit $0.498B, net income $-0.023B [标签按财季结束日归属日历季重标: 原 2025Q2]"
       },
       {
-        "q": "2025Q3",
+        "q": "2025Q4",
         "rev": 23.1,
         "gm": 29.77,
         "nm": 4.85,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828025050698/0001628280-25-050698-index.html",
-        "note": "SEC Companyfacts CY2025Q3: revenue $2.308B, gross profit $0.687B, net income $0.112B"
+        "note": "SEC Companyfacts CY2025Q3: revenue $2.308B, gross profit $0.687B, net income $0.112B [标签按财季结束日归属日历季重标: 原 2025Q3]"
       },
       {
-        "q": "2025Q4",
+        "q": "2026Q1",
         "rev": 30.2,
         "gm": 50.94,
         "nm": 26.55,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026004407/0001628280-26-004407-index.html",
-        "note": "SEC Companyfacts CY2025Q4: revenue $3.025B, gross profit $1.541B, net income $0.803B"
+        "note": "SEC Companyfacts CY2025Q4: revenue $3.025B, gross profit $1.541B, net income $0.803B [标签按财季结束日归属日历季重标: 原 2025Q4]"
       },
       {
-        "q": "2026Q1",
+        "q": "2026Q2",
         "rev": 59.5,
         "gm": 78.35,
         "nm": 60.76,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026029401/0001628280-26-029401-index.html",
-        "note": "SEC Companyfacts CY2026Q1: revenue $5.950B, gross profit $4.662B, net income $3.615B"
+        "note": "SEC Companyfacts CY2026Q1: revenue $5.950B, gross profit $4.662B, net income $3.615B [标签按财季结束日归属日历季重标: 原 2026Q1]"
       }
     ],
     "q2_outlook": {
-      "q": "2026Q2",
+      "q": "2026Q3",
       "rev_estimate": 80,
       "yoy_pct": null,
       "gm_estimate": null,
@@ -1556,7 +1579,8 @@
       "source": "Sandisk official fiscal Q3 2026 results",
       "data_type": "F",
       "confidence": "high",
-      "source_url": "https://investor.sandisk.com/news-releases/news-release-details/sandisk-reports-fiscal-third-quarter-2026-financial-results"
+      "source_url": "https://investor.sandisk.com/news-releases/news-release-details/sandisk-reports-fiscal-third-quarter-2026-financial-results",
+      "note_label": "FQ4 FY2026 (期末约 2026-07-03), 按结束日归属 2026Q3"
     },
     "quality_metrics": {
       "source": "SEC Companyfacts",
@@ -1590,7 +1614,8 @@
       "cash_end": "2026-04-03",
       "long_term_debt_end": "2026-04-03",
       "debt_billion": 0.0
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "COHR": {
     "name": "Coherent",
@@ -1600,7 +1625,7 @@
     "strategic": 8,
     "ai_execution_score": 7,
     "ai_execution_note": "光模块/激光器受益AI数据中心互联, 但盈利和FCF质量仍弱于网络平台龙头.",
-    "market_cap_billion": 618,
+    "market_cap_billion": 634.8,
     "avg_turnover_pct": 4,
     "quarters": [
       {
@@ -1693,7 +1718,8 @@
       "cash_end": "2026-03-31",
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 3.194
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "LITE": {
     "name": "Lumentum",
@@ -1703,7 +1729,7 @@
     "strategic": 7,
     "ai_execution_score": 7,
     "ai_execution_note": "800G/1.6T光模块弹性高, 但订单和利润率周期波动较大.",
-    "market_cap_billion": 703,
+    "market_cap_billion": 624.0,
     "avg_turnover_pct": 4.5,
     "quarters": [
       {
@@ -1797,7 +1823,8 @@
       "capex_period": "2024-06-30 → 2025-06-28",
       "fcf_margin_basis": "FY rev 2024-06-30 → 2025-06-28 (SEC)",
       "cash_end": "2026-03-28"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "FN": {
     "name": "Fabrinet",
@@ -1807,7 +1834,7 @@
     "strategic": 7,
     "ai_execution_score": 7,
     "ai_execution_note": "光器件代工受益AI网络扩张, 但代工属性使议价权和利润质量弱于品牌/芯片平台.",
-    "market_cap_billion": 253,
+    "market_cap_billion": 168.8,
     "avg_turnover_pct": 3,
     "quarters": [
       {
@@ -1893,7 +1920,8 @@
       "capex_period": "2024-06-29 → 2025-06-27",
       "fcf_margin_basis": "FY rev 2024-06-29 → 2025-06-27 (SEC)",
       "cash_end": "2026-03-27"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "MSFT": {
     "name": "Microsoft",
@@ -1903,7 +1931,7 @@
     "strategic": 9,
     "ai_execution_score": 9,
     "ai_execution_note": "OpenAI/Azure/Copilot形成模型、云和企业分发闭环, 变现路径最清楚.",
-    "market_cap_billion": 30510,
+    "market_cap_billion": 28606.9,
     "avg_turnover_pct": 0.5,
     "quarters": [
       {
@@ -1996,7 +2024,8 @@
       "cash_end": "2026-03-31",
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 40.262
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "GOOGL": {
     "name": "Alphabet",
@@ -2006,7 +2035,7 @@
     "strategic": 9,
     "ai_execution_score": 8,
     "ai_execution_note": "Gemini/TPU/GCP一体化强, 但AI搜索对传统搜索广告和FCF的再分配仍需折扣.",
-    "market_cap_billion": 47330,
+    "market_cap_billion": 43585.2,
     "avg_turnover_pct": 0.8,
     "quarters": [
       {
@@ -2107,7 +2136,8 @@
       "short_term_debt_billion": 0.0,
       "short_term_debt_tag": "CommercialPaper",
       "debt_billion": 49.085
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "AMZN": {
     "name": "Amazon",
@@ -2117,7 +2147,7 @@
     "strategic": 8,
     "ai_execution_score": 8,
     "ai_execution_note": "AWS/Anthropic/自研芯片具备云端AI变现通道, 但模型品牌和企业应用整合弱于MSFT.",
-    "market_cap_billion": 29300,
+    "market_cap_billion": 26391.5,
     "avg_turnover_pct": 0.7,
     "quarters": [
       {
@@ -2220,7 +2250,8 @@
       "short_term_debt_billion": 0.152,
       "short_term_debt_tag": "ShortTermBorrowings",
       "debt_billion": 122.784
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "META": {
     "name": "Meta Platforms",
@@ -2230,7 +2261,7 @@
     "strategic": 9,
     "ai_execution_score": 6,
     "ai_execution_note": "广告基本盘强, 但前沿模型竞争位置和AI增量变现可见度弱于MSFT/GOOGL; capex ROI风险较高.",
-    "market_cap_billion": 15300,
+    "market_cap_billion": 16987.4,
     "avg_turnover_pct": 0.7,
     "quarters": [
       {
@@ -2323,7 +2354,8 @@
       "cash_end": "2026-03-31",
       "long_term_debt_end": "2025-12-31",
       "debt_billion": 58.744
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "AAPL": {
     "name": "Apple",
@@ -2333,7 +2365,7 @@
     "strategic": 8,
     "ai_execution_score": 6,
     "ai_execution_note": "端侧分发极强, 但大模型产品节奏和AI服务变现明显落后第一梯队.",
-    "market_cap_billion": 42910,
+    "market_cap_billion": 46312.2,
     "avg_turnover_pct": 0.6,
     "quarters": [
       {
@@ -2428,7 +2460,8 @@
       "short_term_debt_billion": 1.997,
       "short_term_debt_tag": "CommercialPaper",
       "debt_billion": 84.697
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "TSLA": {
     "name": "Tesla",
@@ -2436,7 +2469,7 @@
     "catLabel": "电车/AI",
     "intro": "Dojo 自研训练芯片 + FSD 自动驾驶 + Optimus 机器人. AI 训练算力大户.",
     "strategic": 6,
-    "market_cap_billion": 16520,
+    "market_cap_billion": 15314.3,
     "avg_turnover_pct": 3.5,
     "quarters": [
       {
@@ -2535,7 +2568,8 @@
       "cash_end": "2026-03-31",
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 7.645
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "CRWV": {
     "name": "CoreWeave",
@@ -2543,7 +2577,7 @@
     "catLabel": "AI 云",
     "intro": "GPU 云服务 (Nvidia 战略客户), AI 训练专用云. 2025 年 IPO, 短期波动大但 AI 算力出租纯标的.",
     "strategic": 7,
-    "market_cap_billion": 427,
+    "market_cap_billion": 484.9,
     "avg_turnover_pct": 8,
     "quarters": [
       {
@@ -2636,7 +2670,8 @@
       "cash_end": "2026-03-31",
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 24.859
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "CEG": {
     "name": "Constellation Energy",
@@ -2644,7 +2679,7 @@
     "catLabel": "核电",
     "intro": "美国最大核电运营商, 与微软签订 20 年 PPA 协议给 AI 数据中心供电. AI 用电核心标的.",
     "strategic": 9,
-    "market_cap_billion": 1073,
+    "market_cap_billion": 897.7,
     "avg_turnover_pct": 2,
     "quarters": [
       {
@@ -2743,7 +2778,8 @@
       "cash_end": "2026-03-31",
       "long_term_debt_end": "2025-12-31",
       "debt_billion": 7.403
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "VRT": {
     "name": "Vertiv",
@@ -2751,7 +2787,7 @@
     "catLabel": "数据中心基础设施",
     "intro": "数据中心电力/液冷/UPS 全栈方案商, AI 数据中心扩张核心受益. 液冷渗透率提升直接利好.",
     "strategic": 8,
-    "market_cap_billion": 1129,
+    "market_cap_billion": 1224.8,
     "avg_turnover_pct": 3.5,
     "quarters": [
       {
@@ -2850,7 +2886,8 @@
       "cash_end": "2026-03-31",
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 2.922
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "ETN": {
     "name": "Eaton",
@@ -2858,7 +2895,7 @@
     "catLabel": "电力管理",
     "intro": "工业电力管理龙头, 数据中心配电/UPS 系统. 全球电网升级 + AI 用电增长双重受益.",
     "strategic": 8,
-    "market_cap_billion": 1681,
+    "market_cap_billion": 1581.5,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -2959,7 +2996,8 @@
       "short_term_debt_billion": 2.51,
       "short_term_debt_tag": "ShortTermBorrowings",
       "debt_billion": 21.129
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "GEV": {
     "name": "GE Vernova",
@@ -2967,7 +3005,7 @@
     "catLabel": "电力设备",
     "intro": "GE 拆分的电力业务 (天然气轮机/风电/电网), AI 用电需求驱动燃气发电复兴. 2024 年单独上市.",
     "strategic": 7,
-    "market_cap_billion": 2903,
+    "market_cap_billion": 2933.3,
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
@@ -3059,7 +3097,8 @@
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "CCJ": {
     "name": "Cameco",
@@ -3067,7 +3106,7 @@
     "catLabel": "铀矿",
     "intro": "全球最大铀矿商, 核电复兴的最直接受益. AI 数据中心驱动核电需求 → 铀价中枢上移.",
     "strategic": 6,
-    "market_cap_billion": 508,
+    "market_cap_billion": 418.1,
     "avg_turnover_pct": 3,
     "quarters": [
       {
@@ -3159,7 +3198,8 @@
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2025-12-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "SMH": {
     "name": "VanEck Semiconductor ETF",
@@ -3219,7 +3259,7 @@
     "ai_execution_score": 7,
     "ai_execution_note": "CPU IP护城河强, 但AI增量更多依赖授权渗透和终端/服务器设计周期, 不是直接算力卖方.",
     "intro": "全球 CPU IP 设计垄断 (手机/AI/服务器), Grace CPU + AI 边缘端基础设施核心.",
-    "market_cap_billion": 1500,
+    "market_cap_billion": 3454.1,
     "avg_turnover_pct": 2,
     "quarters": [
       {
@@ -3311,7 +3351,8 @@
       "capex_period": "2025-04-01 → 2026-03-31",
       "fcf_margin_basis": "FY rev 2025-04-01 → 2026-03-31 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "LRCX": {
     "name": "Lam Research",
@@ -3319,7 +3360,7 @@
     "catLabel": "刻蚀设备",
     "strategic": 8,
     "intro": "刻蚀/沉积设备龙头 (与 AMAT 并列), HBM/NAND 制造关键工序.",
-    "market_cap_billion": 1100,
+    "market_cap_billion": 4381.1,
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
@@ -3412,7 +3453,8 @@
       "cash_end": "2026-03-29",
       "long_term_debt_end": "2025-06-29",
       "debt_billion": 4.469
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "CDNS": {
     "name": "Cadence Design",
@@ -3420,7 +3462,7 @@
     "catLabel": "EDA 软件",
     "strategic": 8,
     "intro": "EDA 双寡头之一 (与 SNPS 并列), AI 芯片设计必备工具.",
-    "market_cap_billion": 800,
+    "market_cap_billion": 1059.6,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -3512,7 +3554,8 @@
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "ASE": {
     "name": "ASE Technology",
@@ -3520,7 +3563,7 @@
     "catLabel": "封测",
     "strategic": 8,
     "intro": "全球最大 OSAT (外包封测), CoWoS/SoIC 先进封装产能扩张主力.",
-    "market_cap_billion": 250,
+    "market_cap_billion": 935.9,
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
@@ -3612,7 +3655,8 @@
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2025-12-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "AMKR": {
     "name": "Amkor Technology",
@@ -3620,7 +3664,7 @@
     "catLabel": "封测",
     "strategic": 7,
     "intro": "美国本土最大封测 (ASE 二号位), AI 芯片 2.5D/3D 封装合作伙伴.",
-    "market_cap_billion": 80,
+    "market_cap_billion": 174.7,
     "avg_turnover_pct": 3.5,
     "quarters": [
       {
@@ -3706,7 +3750,8 @@
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "TER": {
     "name": "Teradyne",
@@ -3714,7 +3759,7 @@
     "catLabel": "测试设备",
     "strategic": 7,
     "intro": "半导体测试设备龙头, HBM/SoC 量产测试受益, 与 Advantest 双寡头.",
-    "market_cap_billion": 250,
+    "market_cap_billion": 562.9,
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
@@ -3800,7 +3845,8 @@
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-29"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "ANET": {
     "name": "Arista Networks",
@@ -3810,7 +3856,7 @@
     "ai_execution_score": 8,
     "ai_execution_note": "AI以太网核心平台, 客户质量强; 但增长加速和估值需要和NVDA/AVGO区分.",
     "intro": "AI 数据中心以太网交换核心标的, Meta/Microsoft 等超大客户主供, AI 网络绝对龙头.",
-    "market_cap_billion": 1400,
+    "market_cap_billion": 2354.1,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -3896,7 +3942,8 @@
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "CRDO": {
     "name": "Credo Technology",
@@ -3906,7 +3953,7 @@
     "ai_execution_score": 7,
     "ai_execution_note": "高速互联弹性强, 但仍处于小规模高波动阶段, FCF和客户集中度需要折扣.",
     "intro": "高速 SerDes/AEC 主动电缆, AI 数据中心高速互联弹性最大标的.",
-    "market_cap_billion": 150,
+    "market_cap_billion": 480.7,
     "avg_turnover_pct": 6,
     "quarters": [
       {
@@ -4001,7 +4048,8 @@
       "capex_period": "2025-05-04 → 2026-05-02",
       "fcf_margin_basis": "FY rev 2025-05-04 → 2026-05-02 (SEC)",
       "cash_end": "2026-05-02"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "ALAB": {
     "name": "Astera Labs",
@@ -4011,7 +4059,7 @@
     "ai_execution_score": 8,
     "ai_execution_note": "PCIe/CXL/Retimer切中AI服务器内部互联瓶颈, 但规模小、估值和客户集中度风险高.",
     "intro": "PCIe/CXL/Retimer 数据中心互联芯片, AI 服务器内部连接基础设施.",
-    "market_cap_billion": 250,
+    "market_cap_billion": 707.9,
     "avg_turnover_pct": 5,
     "quarters": [
       {
@@ -4097,7 +4145,8 @@
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "CIEN": {
     "name": "Ciena",
@@ -4107,26 +4156,26 @@
     "ai_execution_score": 6,
     "ai_execution_note": "长距光网络受益AI流量, 但AI纯度和利润质量弱于数据中心内部互联标的.",
     "intro": "光网络传输设备 (DCI 数据中心互联), AI 长距骨干网络受益.",
-    "market_cap_billion": 150,
+    "market_cap_billion": 652.2,
     "avg_turnover_pct": 3,
     "quarters": [
       {
         "q": "2025Q1",
+        "rev": 10.7,
+        "gm": 44.0,
+        "nm": 4.16,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/936395/000162828026015152/0001628280-26-015152-index.html",
+        "note": "SEC Companyfacts CY2025Q1: revenue $1.072B, gross profit $0.472B, net income $0.045B"
+      },
+      {
+        "q": "2025Q2",
         "rev": 11.3,
         "gm": 40.22,
         "nm": 0.8,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/936395/000162828026040767/0001628280-26-040767-index.html",
-        "note": "SEC Companyfacts CY2025Q1: revenue $1.126B, gross profit $0.453B, net income $0.009B"
-      },
-      {
-        "q": "2025Q2",
-        "rev": 12.2,
-        "gm": 41.26,
-        "nm": 4.13,
-        "src": "A",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/936395/000093639525000041/0000936395-25-000041-index.html",
-        "note": "SEC Companyfacts CY2025Q2: revenue $1.219B, gross profit $0.503B, net income $0.050B"
+        "note": "SEC Companyfacts CY2025Q2: revenue $1.126B, gross profit $0.453B, net income $0.009B"
       },
       {
         "q": "2025Q3",
@@ -4139,21 +4188,30 @@
       },
       {
         "q": "2025Q4",
+        "rev": 13.5,
+        "gm": 42.69,
+        "nm": 1.44,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/936395/000162828025056698/0001628280-25-056698-index.html",
+        "note": "SEC Companyfacts CY2025Q4: derived from SEC annual value minus other official period values to obtain CY2025Q4; revenue $1.352B, gross profit $0.577B, net income $0.019B"
+      },
+      {
+        "q": "2026Q1",
         "rev": 14.3,
         "gm": 43.83,
         "nm": 10.53,
         "src": "A",
-        "note": "SEC Companyfacts CY2025Q4: revenue $1.427B, gross profit $0.626B, net income $0.150B",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/936395/000162828026015152/0001628280-26-015152-index.html"
+        "source_url": "https://www.sec.gov/Archives/edgar/data/936395/000162828026015152/0001628280-26-015152-index.html",
+        "note": "SEC Companyfacts CY2026Q1: revenue $1.427B, gross profit $0.626B, net income $0.150B"
       },
       {
-        "q": "2026Q1",
+        "q": "2026Q2",
         "rev": 15.7,
         "gm": 44.03,
         "nm": 13.89,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/936395/000162828026040767/0001628280-26-040767-index.html",
-        "note": "SEC Companyfacts CY2026Q1: revenue $1.571B, gross profit $0.692B, net income $0.218B"
+        "note": "SEC Companyfacts CY2026Q2: revenue $1.571B, gross profit $0.692B, net income $0.218B"
       }
     ],
     "q2_outlook": {
@@ -4201,7 +4259,8 @@
       "capex_period": "2024-11-03 → 2025-11-01",
       "fcf_margin_basis": "FY rev 2024-11-03 → 2025-11-01 (SEC)",
       "cash_end": "2026-05-02"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "CSCO": {
     "name": "Cisco Systems",
@@ -4211,17 +4270,17 @@
     "ai_execution_score": 6,
     "ai_execution_note": "传统网络龙头, AI数据中心追赶中; 规模和现金流强, 但AI弹性有限.",
     "intro": "传统网络龙头, AI 数据中心追赶中 (Silicon One ASIC), 体量大但弹性低.",
-    "market_cap_billion": 2800,
+    "market_cap_billion": 4781.4,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": 141.5,
-        "gm": 65.57,
-        "nm": 17.61,
+        "rev": 139.9,
+        "gm": 65.12,
+        "nm": 17.35,
         "src": "A",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000078/0000858877-26-000078-index.html",
-        "note": "SEC Companyfacts CY2025Q1: revenue $14.149B, gross profit $9.278B, net income $2.491B"
+        "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000021/0000858877-26-000021-index.html",
+        "note": "SEC Companyfacts CY2025Q1: revenue $13.991B, gross profit $9.111B, net income $2.428B"
       },
       {
         "q": "2025Q2",
@@ -4229,35 +4288,44 @@
         "gm": 65.57,
         "nm": 17.61,
         "src": "A",
-        "note": "SEC Companyfacts CY2025Q2: revenue $14.149B, gross profit $9.278B, net income $2.491B",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000078/0000858877-26-000078-index.html"
+        "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000078/0000858877-26-000078-index.html",
+        "note": "SEC Companyfacts CY2025Q2: revenue $14.149B, gross profit $9.278B, net income $2.491B"
       },
       {
         "q": "2025Q3",
+        "rev": 146.7,
+        "gm": 63.25,
+        "nm": 17.38,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/0000858877-25-000111-index.html",
+        "note": "SEC Companyfacts CY2025Q3: derived from SEC annual value minus other official period values to obtain CY2025Q3; revenue $14.673B, gross profit $9.280B, net income $2.550B"
+      },
+      {
+        "q": "2025Q4",
         "rev": 148.8,
         "gm": 65.48,
         "nm": 19.22,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000171/0000858877-25-000171-index.html",
-        "note": "SEC Companyfacts CY2025Q3: revenue $14.883B, gross profit $9.745B, net income $2.860B"
+        "note": "SEC Companyfacts CY2025Q4: revenue $14.883B, gross profit $9.745B, net income $2.860B"
       },
       {
-        "q": "2025Q4",
+        "q": "2026Q1",
         "rev": 153.5,
         "gm": 64.97,
         "nm": 20.69,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000021/0000858877-26-000021-index.html",
-        "note": "SEC Companyfacts CY2025Q4: revenue $15.349B, gross profit $9.972B, net income $3.175B"
+        "note": "SEC Companyfacts CY2026Q1: revenue $15.349B, gross profit $9.972B, net income $3.175B"
       },
       {
-        "q": "2026Q1",
+        "q": "2026Q2",
         "rev": 158.4,
         "gm": 63.63,
         "nm": 21.29,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000078/0000858877-26-000078-index.html",
-        "note": "SEC Companyfacts CY2026Q1: revenue $15.841B, gross profit $10.080B, net income $3.373B"
+        "note": "SEC Companyfacts CY2026Q2: revenue $15.841B, gross profit $10.080B, net income $3.373B"
       }
     ],
     "q2_outlook": {
@@ -4304,7 +4372,8 @@
       "cash_end": "2026-04-25",
       "long_term_debt_end": "2026-04-25",
       "debt_billion": 22.869
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "MPWR": {
     "name": "Monolithic Power",
@@ -4314,7 +4383,7 @@
     "ai_execution_score": 7,
     "ai_execution_note": "AI服务器电源管理关键供应商, 但更偏配套芯片, 不是网络/算力平台主导方.",
     "intro": "AI 服务器电源管理芯片 (DrMOS/VRM), NVDA H100/B200 供应链关键.",
-    "market_cap_billion": 450,
+    "market_cap_billion": 664.6,
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
@@ -4400,7 +4469,8 @@
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "GLW": {
     "name": "Corning",
@@ -4410,7 +4480,7 @@
     "ai_execution_score": 7,
     "ai_execution_note": "光纤连接和玻璃材料受益AI网络扩容, 但收入结构更分散, AI弹性需要折扣.",
     "intro": "光纤连接 + Gorilla 玻璃, Nvidia 战略合作 (北卡州扩 10x 光通信产能).",
-    "market_cap_billion": 600,
+    "market_cap_billion": 1642.9,
     "avg_turnover_pct": 2,
     "quarters": [
       {
@@ -4504,7 +4574,8 @@
       "cash_tag": "CashAndCashEquivalentsAtCarryingValue",
       "cash_unit": "USD",
       "note": "2013 年的 LongTermDebt 残留值已删除 (陈旧不可用); net_cash 因无可靠当期债务数据而留空"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "PWR": {
     "name": "Quanta Services",
@@ -4512,7 +4583,7 @@
     "catLabel": "电力 EPC",
     "strategic": 8,
     "intro": "美国最大电力 EPC 工程商, 数据中心并网/输电线建设主力承包.",
-    "market_cap_billion": 600,
+    "market_cap_billion": 988.2,
     "avg_turnover_pct": 2,
     "quarters": [
       {
@@ -4604,7 +4675,8 @@
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "EME": {
     "name": "EMCOR Group",
@@ -4612,7 +4684,7 @@
     "catLabel": "机电工程",
     "strategic": 7,
     "intro": "数据中心机电安装工程龙头, AI Capex 建设直接受益.",
-    "market_cap_billion": 250,
+    "market_cap_billion": 347.4,
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
@@ -4704,7 +4776,8 @@
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "FIX": {
     "name": "Comfort Systems",
@@ -4712,7 +4785,7 @@
     "catLabel": "暖通工程",
     "strategic": 7,
     "intro": "暖通冷却施工龙头 (HVAC), 数据中心液冷/精密温控 EPC.",
-    "market_cap_billion": 250,
+    "market_cap_billion": 618.2,
     "avg_turnover_pct": 3,
     "quarters": [
       {
@@ -4811,7 +4884,8 @@
       "cash_end": "2026-03-31",
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 0.039
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "MOD": {
     "name": "Modine Manufacturing",
@@ -4819,7 +4893,7 @@
     "catLabel": "热管理",
     "strategic": 7,
     "intro": "热管理/冷却系统, 数据中心液冷渗透核心受益.",
-    "market_cap_billion": 80,
+    "market_cap_billion": 129.9,
     "avg_turnover_pct": 3.5,
     "quarters": [
       {
@@ -4911,7 +4985,8 @@
       "capex_period": "2025-04-01 → 2026-03-31",
       "fcf_margin_basis": "FY rev 2025-04-01 → 2026-03-31 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "TT": {
     "name": "Trane Technologies",
@@ -4919,7 +4994,7 @@
     "catLabel": "暖通设备",
     "strategic": 7,
     "intro": "全球暖通空调龙头, 数据中心冷却系统集成.",
-    "market_cap_billion": 1100,
+    "market_cap_billion": 1060.4,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -5018,7 +5093,8 @@
       "cash_end": "2025-12-31",
       "long_term_debt_end": "2025-12-31",
       "debt_billion": 4.615
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "JCI": {
     "name": "Johnson Controls",
@@ -5026,7 +5102,7 @@
     "catLabel": "楼宇/暖通",
     "strategic": 6,
     "intro": "楼宇自动化 + 暖通, 数据中心 BMS / HVAC 集成.",
-    "market_cap_billion": 700,
+    "market_cap_billion": 871.3,
     "avg_turnover_pct": 2,
     "quarters": [
       {
@@ -5125,7 +5201,8 @@
       "cash_end": "2026-03-31",
       "long_term_debt_end": "2025-09-30",
       "debt_billion": 9.195
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "HUBB": {
     "name": "Hubbell",
@@ -5133,7 +5210,7 @@
     "catLabel": "电气连接",
     "strategic": 7,
     "intro": "电气连接设备, 数据中心配电/开关柜/连接器配套.",
-    "market_cap_billion": 250,
+    "market_cap_billion": 259.4,
     "avg_turnover_pct": 2,
     "quarters": [
       {
@@ -5232,7 +5309,8 @@
       "cash_end": "2026-03-31",
       "long_term_debt_end": "2025-09-30",
       "debt_billion": 1.444
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "POWL": {
     "name": "Powell Industries",
@@ -5240,7 +5318,7 @@
     "catLabel": "开关柜",
     "strategic": 7,
     "intro": "中高压开关柜专家, 数据中心 + LNG 配电关键设备.",
-    "market_cap_billion": 50,
+    "market_cap_billion": 84.6,
     "avg_turnover_pct": 4.5,
     "quarters": [
       {
@@ -5332,7 +5410,8 @@
       "capex_period": "2024-10-01 → 2025-09-30",
       "fcf_margin_basis": "FY rev 2024-10-01 → 2025-09-30 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "VST": {
     "name": "Vistra",
@@ -5340,7 +5419,7 @@
     "catLabel": "独立电力",
     "strategic": 8,
     "intro": "美国最大独立电力运营商, 核 + 燃气 + 可再生组合, AI 用电直供数据中心.",
-    "market_cap_billion": 800,
+    "market_cap_billion": 535.6,
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
@@ -5441,7 +5520,8 @@
       "short_term_debt_billion": 0.0,
       "short_term_debt_tag": "ShortTermBorrowings",
       "debt_billion": 19.163
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "NRG": {
     "name": "NRG Energy",
@@ -5449,7 +5529,7 @@
     "catLabel": "零售电力",
     "strategic": 7,
     "intro": "美国零售电力 + 燃气发电, 与超大数据中心客户长协合作.",
-    "market_cap_billion": 250,
+    "market_cap_billion": 296.3,
     "avg_turnover_pct": 2,
     "quarters": [
       {
@@ -5548,7 +5628,8 @@
       "cash_end": "2026-03-31",
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 23.181
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "KMI": {
     "name": "Kinder Morgan",
@@ -5556,7 +5637,7 @@
     "catLabel": "天然气管道",
     "strategic": 6,
     "intro": "美国最大天然气管道, 数据中心燃气发电上游受益.",
-    "market_cap_billion": 850,
+    "market_cap_billion": 714.6,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -5648,7 +5729,8 @@
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "WMB": {
     "name": "Williams Companies",
@@ -5656,7 +5738,7 @@
     "catLabel": "天然气管道",
     "strategic": 6,
     "intro": "天然气运输管道, 与 KMI 共同受益数据中心燃气发电增长.",
-    "market_cap_billion": 800,
+    "market_cap_billion": 917.5,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -5748,7 +5830,8 @@
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "ORCL": {
     "name": "Oracle",
@@ -5758,7 +5841,7 @@
     "ai_execution_score": 7,
     "ai_execution_note": "OCI受益AI训练需求, 但平台生态和模型主导权弱于三大云.",
     "intro": "OCI 云服务 + 数据库 + AI 训练 (与 Meta/OpenAI 大单), AI 云第四极.",
-    "market_cap_billion": 2200,
+    "market_cap_billion": 4051.1,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -5809,11 +5892,11 @@
       {
         "q": "2026Q2",
         "rev": 192,
-        "gm": 55.0,
+        "gm": null,
         "nm": 21.88,
         "src": "A",
         "source_url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/default.aspx",
-        "note": "Oracle FY2026 Q4 ended May 31 2026: revenue $19.2B, GAAP net income $4.2B; gm estimated from prior quarter trend (55.8%→55.0%) pending 10-K confirmation"
+        "note": "Oracle FY2026 Q4 ended May 31 2026: revenue $19.2B, GAAP net income $4.2B (官方公告); GM 置空 — 原值非官方披露口径已移除; Oracle 未披露单一毛利指标且 SEC XBRL 无可派生 tag, 待 10-K 成本明细人工核算后补回"
       }
     ],
     "q2_outlook": {
@@ -5853,7 +5936,8 @@
       "capex_period": "2025-06-01 → 2026-05-31",
       "fcf_margin_basis": "FY rev 2025-06-01 → 2026-05-31 (SEC)",
       "cash_end": "2026-05-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "IREN": {
     "name": "IREN",
@@ -5861,7 +5945,7 @@
     "catLabel": "GPU 云",
     "strategic": 7,
     "intro": "矿转 AI 数据中心运营商 (类 CoreWeave), 已与 NVDA 签 5GW 部署协议.",
-    "market_cap_billion": 130,
+    "market_cap_billion": 147.0,
     "avg_turnover_pct": 8,
     "quarters": [
       {
@@ -5953,7 +6037,8 @@
       "capex_period": "2024-07-01 → 2025-06-30",
       "fcf_margin_basis": "FY rev 2024-07-01 → 2025-06-30 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "PLTR": {
     "name": "Palantir",
@@ -5963,7 +6048,7 @@
     "ai_execution_score": 8,
     "ai_execution_note": "AIP商业化和政府/企业落地强, 但不应按hyperscaler或前沿基础模型公司估值.",
     "intro": "AIP (AI 平台) 政企双线 (DoD/Foundry), AI 商业化最快变现案例.",
-    "market_cap_billion": 4500,
+    "market_cap_billion": 3039.6,
     "avg_turnover_pct": 4,
     "quarters": [
       {
@@ -6063,7 +6148,8 @@
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "NOW": {
     "name": "ServiceNow",
@@ -6071,7 +6157,7 @@
     "catLabel": "AI 工作流",
     "strategic": 7,
     "intro": "企业 AI 工作流平台 (Now Assist), 大企业 AI 部署核心承接者.",
-    "market_cap_billion": 2200,
+    "market_cap_billion": 1110.8,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -6165,7 +6251,8 @@
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "CRM": {
     "name": "Salesforce",
@@ -6173,35 +6260,35 @@
     "catLabel": "AI CRM",
     "strategic": 6,
     "intro": "CRM 巨头 + Agentforce AI 代理, 应用层 AI 变现.",
-    "market_cap_billion": 2500,
+    "market_cap_billion": 1337.6,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
         "q": "2025Q1",
+        "rev": 99.9,
+        "gm": 77.81,
+        "nm": 17.09,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/0001108524-26-000060-index.html",
+        "note": "SEC Companyfacts CY2025Q1: derived from SEC annual value minus other official period values to obtain CY2025Q1; revenue $9.993B, gross profit $7.776B, net income $1.708B"
+      },
+      {
+        "q": "2025Q2",
         "rev": 98.3,
         "gm": 76.96,
         "nm": 15.68,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000127/0001108524-26-000127-index.html",
-        "note": "SEC Companyfacts CY2025Q1: revenue $9.829B, gross profit $7.564B, net income $1.541B"
+        "note": "SEC Companyfacts CY2025Q2: revenue $9.829B, gross profit $7.564B, net income $1.541B"
       },
       {
-        "q": "2025Q2",
+        "q": "2025Q3",
         "rev": 102.4,
         "gm": 78.1,
         "nm": 18.43,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000088/0001108524-25-000088-index.html",
-        "note": "SEC Companyfacts CY2025Q2: revenue $10.236B, gross profit $7.994B, net income $1.887B"
-      },
-      {
-        "q": "2025Q3",
-        "rev": 102.6,
-        "gm": 78.02,
-        "nm": 20.33,
-        "src": "A",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000238/0001108524-25-000238-index.html",
-        "note": "SEC Companyfacts CY2025Q3: revenue $10.259B, gross profit $8.004B, net income $2.086B"
+        "note": "SEC Companyfacts CY2025Q3: revenue $10.236B, gross profit $7.994B, net income $1.887B"
       },
       {
         "q": "2025Q4",
@@ -6214,12 +6301,21 @@
       },
       {
         "q": "2026Q1",
+        "rev": 112.0,
+        "gm": 77.61,
+        "nm": 17.35,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/0001108524-26-000060-index.html",
+        "note": "SEC Companyfacts CY2026Q1: derived from SEC annual value minus other official period values to obtain CY2026Q1; revenue $11.201B, gross profit $8.693B, net income $1.943B"
+      },
+      {
+        "q": "2026Q2",
         "rev": 111.3,
         "gm": 76.92,
         "nm": 18.93,
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000127/0001108524-26-000127-index.html",
-        "note": "SEC Companyfacts CY2026Q1: revenue $11.133B, gross profit $8.563B, net income $2.107B"
+        "note": "SEC Companyfacts CY2026Q2: revenue $11.133B, gross profit $8.563B, net income $2.107B"
       }
     ],
     "q2_outlook": {
@@ -6266,7 +6362,8 @@
       "cash_end": "2026-04-30",
       "long_term_debt_end": "2026-04-30",
       "debt_billion": 39.28
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   },
   "RKLB": {
     "name": "Rocket Lab",
@@ -6274,7 +6371,7 @@
     "catLabel": "航天运载",
     "intro": "全球最活跃商业小型运载火箭公司, Electron火箭领先. 空间系统(卫星制造)高增速, Neutron中型火箭在研. AI驱动国防/商业卫星需求受益, 2026Q1营收创历史新高$2亿.",
     "strategic": 7,
-    "market_cap_billion": 722,
+    "market_cap_billion": 469.1,
     "avg_turnover_pct": 6,
     "quarters": [
       {
@@ -6363,6 +6460,7 @@
       "cash_end": "2026-03-31",
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 0.037
-    }
+    },
+    "market_cap_asof": "2026-07-12"
   }
 }

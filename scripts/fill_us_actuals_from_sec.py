@@ -256,6 +256,100 @@ def should_fill(row: dict) -> bool:
     return any(row.get(k) is None for k in ("rev", "gm", "nm")) or row.get("src") == "NA"
 
 
+def next_quarter_label(q: str | None) -> str | None:
+    m = _Q_RE.fullmatch(q or "")
+    if not m:
+        return None
+    year, qi = int(m.group(1)), int(m.group(2))
+    return f"{year + 1}Q1" if qi == 4 else f"{year}Q{qi + 1}"
+
+
+def build_quarter_update(symbol, cik, q, revenue_entries, gross_entries,
+                         cost_entries, operating_entries, net_entries):
+    """按仓库口径 (period end 落在该日历季) 从 SEC facts 构建一行季度财务。找不到返回 None。"""
+    frame = frame_for_quarter(q)
+    if not frame:
+        print(f"  ⚠ {symbol}: 季度标签 {q!r} 不合法, 无法映射 — 请检查数据")
+        return None
+    revenue = get_metric(revenue_entries, frame, q)
+    if not revenue:
+        return None
+    rev_value_raw, revenue_entry, rev_derived = revenue
+    # 其余指标优先取与 revenue 完全同期的值, 避免同一行混拼两个财季
+    ref = None if rev_derived else revenue_entry
+    gross = get_metric(gross_entries, frame, q, ref_entry=ref)
+    cost = get_metric(cost_entries, frame, q, ref_entry=ref)
+    operating = get_metric(operating_entries, frame, q, ref_entry=ref)
+    net = get_metric(net_entries, frame, q, ref_entry=ref)
+    if not net or (not gross and not cost and not operating):
+        return None
+    unit = revenue_entry.get("_unit", "USD")
+    try:
+        rev_value, fx_note = convert_to_usd(rev_value_raw, unit, q)
+    except ValueError as exc:
+        print(f"  ⚠ {symbol} {q}: {exc} — 补充 FX_TO_USD 表后重跑")
+        return None
+    if rev_value == 0:
+        return None
+    profitability_metric = None
+    cost_derived = False
+    if gross:
+        gross_value_raw, gross_entry, gross_derived = gross
+        gross_value, _ = convert_to_usd(gross_value_raw, gross_entry.get("_unit", unit), q)
+        gross_note = f"gross profit ${gross_value/1_000_000_000:.3f}B"
+    else:
+        gross_derived = False
+        if cost:
+            cost_value_raw, cost_entry, cost_derived = cost
+            cost_value, _ = convert_to_usd(cost_value_raw, cost_entry.get("_unit", unit), q)
+            gross_value = rev_value - cost_value
+            gross_note = (
+                f"gross profit ${gross_value/1_000_000_000:.3f}B "
+                f"(revenue minus {cost_entry.get('_fact')} ${cost_value/1_000_000_000:.3f}B)"
+            )
+        else:
+            operating_value_raw, operating_entry, operating_derived = operating
+            operating_value, _ = convert_to_usd(operating_value_raw, operating_entry.get("_unit", unit), q)
+            gross_value = None
+            gross_note = "gross profit not available in standard SEC Companyfacts tags"
+            # 第二个 tag 是税前利润, 不能标成 operating income
+            metric_label = ("GAAP operating income"
+                            if operating_entry.get("_fact") == "OperatingIncomeLoss"
+                            else "GAAP pretax income (operating income tag unavailable)")
+            profitability_metric = {
+                "metric": metric_label,
+                "value": to_100m_usd(operating_value),
+                "unit": "亿$",
+                "margin_pct": pct(operating_value, rev_value),
+                "derived": operating_derived,
+                "basis": f"SEC Companyfacts {frame} {operating_entry.get('_fact')}",
+            }
+    net_value_raw, net_entry, net_derived = net
+    net_value, _ = convert_to_usd(net_value_raw, net_entry.get("_unit", unit), q)
+    # 只有实际用到的指标是派生值时才标注派生 (gross 可用时 operating 的派生与本行无关)
+    operating_used_derived = (not gross and not cost and operating and operating[2])
+    used_derived = rev_derived or (gross and gross_derived) or (not gross and cost and cost_derived) \
+        or operating_used_derived or net_derived
+    derived_text = ""
+    if used_derived:
+        derived_text = f" derived from SEC annual value minus other official period values to obtain {frame};"
+    update = {
+        "rev": to_100m_usd(rev_value),
+        "gm": pct(gross_value, rev_value) if gross_value is not None else None,
+        "nm": pct(net_value, rev_value),
+        "src": "A",
+        "source_url": filing_url(cik, revenue_entry.get("accn")),
+        "note": (
+            f"SEC Companyfacts {frame}:{derived_text}{fx_note} revenue ${rev_value/1_000_000_000:.3f}B, "
+            f"{gross_note}, "
+            f"net income ${net_value/1_000_000_000:.3f}B"
+        ),
+    }
+    if profitability_metric:
+        update["profitability_metric"] = profitability_metric
+    return update
+
+
 def value_by_exact_period(entries: list[dict], start: str | None, end: str | None) -> tuple[float, dict] | None:
     """与参照条目 (通常是 revenue) 完全同一 start/end 期间的值。"""
     if not start or not end:
@@ -296,7 +390,12 @@ def get_metric(entries: list[dict], frame: str, q: str, ref_entry: dict | None =
     direct = value_by_frame(entries, frame)
     if direct:
         value, entry = direct
-        return value, entry, False
+        # frame 按期间中点归属; 财年错位公司的 frame 结果可能是相邻财季 (曾造成 MRVL/CSCO 等
+        # 同一财季写进两个标签的重影)。只接受结束日真的落在该标签日历季窗口内的 frame 结果。
+        window = window_for_quarter(q)
+        end = parse_date(entry.get("end"))
+        if window and end and window[0] <= end <= window[1]:
+            return value, entry, False
     for unit in ("USD", "EUR"):
         subset = _entries_of_unit(entries, unit)
         if not subset:
@@ -326,9 +425,7 @@ def main() -> int:
         if not quarters or api_ticker not in ticker_map:
             continue
 
-        if all(not should_fill(row) for row in quarters):
-            continue
-
+        # 注意: 不能因既有行都已填就跳过 —— 还要检查 SEC 是否披露了新财季 (追加逻辑)
         cik = ticker_map[api_ticker]
         try:
             facts = fetch_json(f"https://data.sec.gov/api/xbrl/companyfacts/CIK{cik:010d}.json")
@@ -346,91 +443,36 @@ def main() -> int:
             skipped.append((symbol, "missing_required_sec_facts"))
             continue
 
+        # 1) 填补既有行 (src=NA / 缺值)
         for row in quarters:
             q = row.get("q")
             if not should_fill(row):
                 continue
-            frame = frame_for_quarter(q)
-            if not frame:
-                print(f"  ⚠ {symbol}: 季度标签 {q!r} 不合法, 无法映射 — 请检查数据")
-                continue
-            revenue = get_metric(revenue_entries, frame, q)
-            if not revenue:
-                continue
-            rev_value_raw, revenue_entry, rev_derived = revenue
-            # 其余指标优先取与 revenue 完全同期的值, 避免同一行混拼两个财季
-            ref = None if rev_derived else revenue_entry
-            gross = get_metric(gross_entries, frame, q, ref_entry=ref)
-            cost = get_metric(cost_entries, frame, q, ref_entry=ref)
-            operating = get_metric(operating_entries, frame, q, ref_entry=ref)
-            net = get_metric(net_entries, frame, q, ref_entry=ref)
-            if not net or (not gross and not cost and not operating):
-                continue
-            unit = revenue_entry.get("_unit", "USD")
-            try:
-                rev_value, fx_note = convert_to_usd(rev_value_raw, unit, q)
-            except ValueError as exc:
-                print(f"  ⚠ {symbol} {q}: {exc} — 补充 FX_TO_USD 表后重跑")
-                continue
-            if rev_value == 0:
-                continue
-            profitability_metric = None
-            cost_derived = False
-            if gross:
-                gross_value_raw, gross_entry, gross_derived = gross
-                gross_value, _ = convert_to_usd(gross_value_raw, gross_entry.get("_unit", unit), q)
-                gross_note = f"gross profit ${gross_value/1_000_000_000:.3f}B"
-            else:
-                gross_derived = False
-                if cost:
-                    cost_value_raw, cost_entry, cost_derived = cost
-                    cost_value, _ = convert_to_usd(cost_value_raw, cost_entry.get("_unit", unit), q)
-                    gross_value = rev_value - cost_value
-                    gross_note = (
-                        f"gross profit ${gross_value/1_000_000_000:.3f}B "
-                        f"(revenue minus {cost_entry.get('_fact')} ${cost_value/1_000_000_000:.3f}B)"
-                    )
-                else:
-                    operating_value_raw, operating_entry, operating_derived = operating
-                    operating_value, _ = convert_to_usd(operating_value_raw, operating_entry.get("_unit", unit), q)
-                    gross_value = None
-                    gross_note = "gross profit not available in standard SEC Companyfacts tags"
-                    # 第二个 tag 是税前利润, 不能标成 operating income
-                    metric_label = ("GAAP operating income"
-                                    if operating_entry.get("_fact") == "OperatingIncomeLoss"
-                                    else "GAAP pretax income (operating income tag unavailable)")
-                    profitability_metric = {
-                        "metric": metric_label,
-                        "value": to_100m_usd(operating_value),
-                        "unit": "亿$",
-                        "margin_pct": pct(operating_value, rev_value),
-                        "derived": operating_derived,
-                        "basis": f"SEC Companyfacts {frame} {operating_entry.get('_fact')}",
-                    }
-            net_value_raw, net_entry, net_derived = net
-            net_value, _ = convert_to_usd(net_value_raw, net_entry.get("_unit", unit), q)
-            # 只有实际用到的指标是派生值时才标注派生 (gross 可用时 operating 的派生与本行无关)
-            operating_used_derived = (not gross and not cost and operating and operating[2])
-            used_derived = rev_derived or (gross and gross_derived) or (not gross and cost and cost_derived) \
-                or operating_used_derived or net_derived
-            derived_text = ""
-            if used_derived:
-                derived_text = f" derived from SEC annual value minus other official period values to obtain {frame};"
-            update = {
-                "rev": to_100m_usd(rev_value),
-                "gm": pct(gross_value, rev_value) if gross_value is not None else None,
-                "nm": pct(net_value, rev_value),
-                "src": "A",
-                "source_url": filing_url(cik, revenue_entry.get("accn")),
-                "note": (
-                    f"SEC Companyfacts {frame}:{derived_text}{fx_note} revenue ${rev_value/1_000_000_000:.3f}B, "
-                    f"{gross_note}, "
-                    f"net income ${net_value/1_000_000_000:.3f}B"
-                ),
-            }
-            if profitability_metric:
-                update["profitability_metric"] = profitability_metric
-            row.update(update)
+            update = build_quarter_update(symbol, cik, q, revenue_entries, gross_entries,
+                                          cost_entries, operating_entries, net_entries)
+            if update:
+                row.update(update)
+                changed += 1
+
+        # 2) 追加 SEC 已披露但本地还没有的新财季 (最多前进 3 季)
+        for _ in range(3):
+            last_row = quarters[-1]
+            nq = next_quarter_label(last_row.get("q"))
+            if not nq:
+                break
+            update = build_quarter_update(symbol, cik, nq, revenue_entries, gross_entries,
+                                          cost_entries, operating_entries, net_entries)
+            if not update:
+                break
+            # 防重复守卫: 财季结束日贴日历季边界的公司 (如 SNDK 4/3 结束),
+            # frame 口径的旧行和结束日口径的新行可能是同一个财季 — rev/gm/nm 全等则视为重复
+            if (update.get("rev") == last_row.get("rev")
+                    and update.get("gm") == last_row.get("gm")
+                    and update.get("nm") == last_row.get("nm")):
+                print(f"  ⚠ {symbol}: {nq} 与上一行数值完全相同, 疑似同一财季的口径重影, 跳过追加")
+                break
+            quarters.append({"q": nq, **update})
+            print(f"  + {symbol}: 追加新财季 {nq} (rev {update['rev']} 亿$, GM {update['gm']}%)")
             changed += 1
 
     DATA_PATH.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
