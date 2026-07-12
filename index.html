@@ -1625,6 +1625,7 @@ function switchTab(name){
   document.querySelectorAll(".tab-content").forEach(c => c.classList.toggle("active", c.id === "tab-"+name));
   updateLiveForActiveTab();
   if (name === "tradeus" && typeof initTradeUSTab === "function") initTradeUSTab();
+  if (name === "trade" && typeof renderStrategyDrift === "function") renderStrategyDrift("a");
 }
 document.querySelectorAll(".tab").forEach(t => {
   t.onclick = () => switchTab(t.dataset.tab);
@@ -1948,7 +1949,12 @@ function renderAccount(){
   // Positions table
   const ptb = document.getElementById("positions");
   ptb.innerHTML = "";
-  const entries = Object.entries(acct.positions);
+  // 按市值降序展示 (原来是买入先后的插入顺序)
+  const entries = Object.entries(acct.positions).sort((a, b) => {
+    const pa = (lastQuotes[a[0]]?.price || a[1].avgCost) * a[1].qty;
+    const pb = (lastQuotes[b[0]]?.price || b[1].avgCost) * b[1].qty;
+    return pb - pa;
+  });
   if (entries.length === 0) {
     ptb.innerHTML = `<tr><td colspan="8" class="empty">尚无持仓 · 在左侧下单或回到关注列表点击"买入"</td></tr>`;
   } else {
@@ -4205,7 +4211,12 @@ function renderAccountUS(){
 
   const ptb = document.getElementById("positionsUS");
   ptb.innerHTML = "";
-  const entries = Object.entries(acctUS.positions);
+  // 按市值降序展示
+  const entries = Object.entries(acctUS.positions).sort((a, b) => {
+    const pa = (usPrice(a[0]) || a[1].avgCost) * a[1].qty;
+    const pb = (usPrice(b[0]) || b[1].avgCost) * b[1].qty;
+    return pb - pa;
+  });
   if (entries.length === 0) {
     ptb.innerHTML = `<tr><td colspan="8" class="empty">尚无持仓 · 点上方"按策略一键建仓"或手动下单</td></tr>`;
   } else {
@@ -4426,6 +4437,46 @@ async function initTradeUSTab(){
   populateStockSelUS();
   renderAccountUS();
   snapshotPnLUS();
+  renderStrategyDrift("us");
+}
+
+// 打开模拟盘时自动检查持仓与策略状态的偏离, 给出调仓提示 (只提示, 不自动下单;
+// 每日收盘后的 CI 扫描有触发时也会推送微信/邮件说明原因)
+async function renderStrategyDrift(market){
+  const isUS = market === "us";
+  const info = document.getElementById(isUS ? "strategyBuildInfoUS" : "strategyBuildInfo");
+  const account = isUS ? acctUS : acct;
+  if (!info || info.innerHTML.trim()) return;  // 已有建仓结果时不覆盖
+  if (!Object.keys(account.positions).length) return;
+  info.textContent = "⏳ 检查持仓与策略状态...";
+  try {
+    const results = isUS
+      ? (watchScanStateUS.results || await scanWatchlistBuySignalsUS())
+      : (watchScanState.results || await scanWatchlistBuySignals());
+    const ladder = isUS ? await getMacroLadderStateUS() : await getMacroLadderState();
+    const priceOf = code => isUS ? usPrice(code) : (lastQuotes[code] && lastQuotes[code].price);
+    const broken = (results || [])
+      .filter(r => account.positions[r.stock.code] && r.signal && r.bars
+        && Number.isFinite(r.signal.ema21) && r.bars[r.bars.length - 1].close < r.signal.ema21)
+      .map(r => r.stock.name || r.stock.code);
+    let mv = 0;
+    Object.entries(account.positions).forEach(([c, p]) => { mv += (priceOf(c) || p.avgCost) * p.qty; });
+    const cashRatio = account.cash / Math.max(account.cash + mv, 1) * 100;
+    const msgs = [];
+    if (broken.length) msgs.push(`⚠ 持仓 <b>${broken.join(" / ")}</b> 本周收盘已低于周线 EMA21（核心趋势破坏）— 建议点"一键建仓"换仓`);
+    if (ladder) {
+      if (ladder.drawdownPct <= -20) {
+        msgs.push(`🔴 指数距 52 周高点 ${ladder.drawdownPct.toFixed(1)}% (≤-20%) — 核心舱应减半，点"一键建仓"执行`);
+      } else if (ladder.close < ladder.e21 && cashRatio < 15) {
+        msgs.push(`🟠 指数跌破周线 EMA21 但现金仅 ${cashRatio.toFixed(0)}% — 卫星舱应转现金，点"一键建仓"执行`);
+      } else if (ladder.close > ladder.e21 && ladder.close > ladder.e8 && cashRatio > 25) {
+        msgs.push(`🟢 指数已站上周线 EMA8/EMA21 而现金还有 ${cashRatio.toFixed(0)}% — 可点"一键建仓"买回卫星舱`);
+      }
+    }
+    info.innerHTML = msgs.length
+      ? msgs.map(m => `<div>${m}</div>`).join("")
+      : `<div style="color:var(--muted)">✅ 持仓与策略状态一致，无需调仓（现金占比 ${cashRatio.toFixed(0)}%）</div>`;
+  } catch(e){ info.textContent = ""; }
 }
 document.getElementById("btnStrategyBuildUS").onclick = strategyBuildPositionUS;
 document.getElementById("btnBuyUS").onclick = () => tradeUS("buy");

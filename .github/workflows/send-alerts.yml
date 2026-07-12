@@ -27,4 +27,5 @@ jobs:
           SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}
           GMAIL_PASS: ${{ secrets.GMAIL }}
           GMAIL_USER: hana.b.luo@gmail.com
+          FORCE_SEND: "1"  # 手动/push 触发时总是发送完整报告 (每日 cron 的"无触发不打扰"只对 scan-signals 生效)
         run: python .github/scripts/send_alerts_from_state.py

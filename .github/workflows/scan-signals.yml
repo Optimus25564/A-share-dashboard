@@ -1,12 +1,14 @@
 name: Scan Signals
 
-# 周五两次: A股收盘后 (15:30 北京 = 07:30 UTC) 和美股收盘后 (16:30-17:30 ET ≈ 21:30 UTC)
-# 用真实腾讯 K 线跑 scan_signals.py, 取代人工估算价的旧例程。
+# 每个交易日两次: A股收盘后 (15:30 北京 = 07:30 UTC) 和美股收盘后 (16:30-17:30 ET ≈ 21:30 UTC)。
+# 每次扫描都会与上一次状态对比 (scan_signals.compute_changes):
+#   有触发 (个股信号变化 / 宏观门控开关 / 仓位建议变化 / Top5 变化) → 推送并写明触发原因;
+#   无触发 → sender 静默跳过, 不打扰。
 # 注意: GITHUB_TOKEN 的 push 不会触发 on:push workflow, 所以本 workflow 在提交状态后直接推送通知。
 on:
   schedule:
-    - cron: '30 7 * * 5'
-    - cron: '30 21 * * 5'
+    - cron: '30 7 * * 1-5'
+    - cron: '30 21 * * 1-5'
   workflow_dispatch:
 
 concurrency:
@@ -37,12 +39,12 @@ jobs:
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
-            git commit -m "alerts: 周线信号扫描 $(date -u +%F)"
+            git commit -m "alerts: 每日信号扫描 $(date -u +%F)"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Send notifications (WeChat + Email)
+      - name: Send notifications (WeChat + Email, 仅有触发时)
         if: steps.commit.outputs.changed == 'true'
         env:
           SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}

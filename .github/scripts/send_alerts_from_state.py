@@ -20,6 +20,8 @@ from datetime import datetime
 SERVERCHAN_KEY = os.environ.get("SERVERCHAN_KEY", "").strip()
 GMAIL_USER = os.environ.get("GMAIL_USER", "").strip()
 GMAIL_PASS = os.environ.get("GMAIL_PASS", "").replace(" ", "")
+# 每日扫描只在有触发时推送; 手动/push 触发的 workflow 设 FORCE_SEND=1 强制发送完整报告
+FORCE_SEND = os.environ.get("FORCE_SEND", "") == "1"
 
 STATES = [
     ("A 股", "data/alerts_state.json", "上证"),
@@ -102,6 +104,13 @@ def section_for(market_label, state, index_label):
     actionable = any(buckets[k] for k in list(BUY_LABEL) + list(SELL_LABEL))
 
     lines = [f"\n## 🏛 {market_label}"]
+
+    # 本次触发 (每日扫描与上一次状态的差异, 由 scan_signals.compute_changes 生成)
+    changes = state.get("changes") or []
+    if changes:
+        lines.append("\n### 🔔 本次触发（为什么现在提醒你）")
+        for ch in changes:
+            lines.append(f"- {ch}")
     # 大盘 (旧版状态里 market 可能是字符串, 只认 dict)
     mkt = state.get("market")
     if not isinstance(mkt, dict):
@@ -186,8 +195,11 @@ def section_for(market_label, state, index_label):
 run_date = datetime.now().strftime("%Y-%m-%d")
 sections = []
 any_action = False
+any_changes = False
 for label, path, idx_label in STATES:
     state = load_state(path)
+    if state and state.get("changes"):
+        any_changes = True
     section, actionable = section_for(label, state, idx_label)
     if section:
         sections.append(section)
@@ -198,7 +210,12 @@ if not sections:
     print("No state files found — skipping")
     sys.exit(0)
 
-title = f"🚨 {run_date} 趋势提醒" if any_action else f"✅ {run_date} 持仓平稳"
+# 每日扫描的静默规则: 与上一次状态相比没有任何触发 → 不打扰
+if not any_changes and not FORCE_SEND:
+    print("无新触发 (signals/门控/仓位建议/Top5 均与上次一致) — 跳过推送")
+    sys.exit(0)
+
+title = f"🚨 {run_date} 触发调仓提醒" if any_action else f"✅ {run_date} 状态更新"
 body = "## 📊 当前状态 (" + run_date + ")\n" + "\n".join(sections) + "\n\n[查看详情](https://optimus25564.github.io/A-share-dashboard/)"
 
 print(f"Title: {title}")

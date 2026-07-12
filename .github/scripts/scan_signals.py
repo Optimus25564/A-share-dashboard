@@ -449,28 +449,104 @@ def scan_market(market, watchlist, index_sym, companies):
     return state
 
 
+def _norm_sig(v):
+    return (v.get("signal") or v.get("action")) if isinstance(v, dict) else v
+
+
+def compute_changes(old, new):
+    """与上一次扫描状态对比, 生成人类可读的触发原因列表。
+
+    每日扫描 + 只在有变化时推送: 推送正文的「本次触发」段就来自这里。
+    """
+    if not old or not isinstance(old, dict):
+        return ["首次基线扫描 (无历史状态可对比)"]
+    changes = []
+    old_sig = {c: _norm_sig(s) for c, s in (old.get("signals") or {}).items()}
+    new_sig = {c: _norm_sig(s) for c, s in (new.get("signals") or {}).items()}
+    name_map = {}
+    for src in (new.get("prices") or {}, old.get("prices") or {}):
+        for c, p in src.items():
+            if isinstance(p, dict) and p.get("name"):
+                name_map.setdefault(c, p["name"])
+
+    def actionable(s):
+        return isinstance(s, str) and (s.startswith("buy") or s.startswith("sell"))
+
+    for c in sorted(set(old_sig) | set(new_sig)):
+        o, n = old_sig.get(c), new_sig.get(c)
+        if o == n:
+            continue
+        if actionable(o) or actionable(n):
+            changes.append(f"{name_map.get(c, c)} ({c}): {o or '—'} → {n or '—'}")
+
+    om = old.get("market") if isinstance(old.get("market"), dict) else {}
+    nm = new.get("market") if isinstance(new.get("market"), dict) else {}
+    if om and nm:
+        if om.get("buy_gate_active") != nm.get("buy_gate_active"):
+            changes.append(
+                "宏观门控生效: " + (nm.get("buy_gate_reason") or "大盘走弱")
+                if nm.get("buy_gate_active")
+                else "宏观门控解除 — 可按排名买回卫星舱"
+            )
+        if om.get("bullish") is not None and nm.get("bullish") is not None and om.get("bullish") != nm.get("bullish"):
+            changes.append("大盘" + ("站上" if nm.get("bullish") else "跌破") + "周线 EMA8")
+        if nm.get("position_advice") and om.get("position_advice") != nm.get("position_advice"):
+            changes.append("仓位建议变化: " + nm["position_advice"])
+        odd, ndd = om.get("drawdown_from_52w_high_pct"), nm.get("drawdown_from_52w_high_pct")
+        if isinstance(odd, (int, float)) and isinstance(ndd, (int, float)):
+            for th, tag in [(-10, "回调区 (-10%)"), (-20, "熊市级回撤 (-20%)")]:
+                if odd > th >= ndd:
+                    changes.append(f"指数距 52 周高点跌破 {tag}: {ndd:+.1f}%")
+                elif odd <= th < ndd:
+                    changes.append(f"指数距 52 周高点收复 {tag}: {ndd:+.1f}%")
+
+    ot5 = [t.get("code") for t in old.get("top5") or []]
+    nt5 = [t.get("code") for t in new.get("top5") or []]
+    if ot5 and nt5 and set(ot5) != set(nt5):
+        added = [name_map.get(c, c) for c in nt5 if c not in ot5]
+        removed = [name_map.get(c, c) for c in ot5 if c not in nt5]
+        changes.append("量化 Top5 变化: 入 " + "/".join(added) + " · 出 " + "/".join(removed))
+    return changes
+
+
+def load_old_state(path):
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+
 def main():
     # A 股
     with open(os.path.join(DATA_DIR, "companies.json"), encoding="utf-8") as f:
         companies_a = json.load(f)
     watch_a = derive_watchlist(companies_a)
+    path_a = os.path.join(DATA_DIR, "alerts_state.json")
+    old_a = load_old_state(path_a)
     state_a = scan_market("a", watch_a, "sh000001", companies_a)
-    with open(os.path.join(DATA_DIR, "alerts_state.json"), "w", encoding="utf-8") as f:
+    state_a["changes"] = compute_changes(old_a, state_a)
+    with open(path_a, "w", encoding="utf-8") as f:
         json.dump(state_a, f, ensure_ascii=False, indent=2)
     print(f"\n写入 alerts_state.json — top5: {[t['name'] for t in state_a['top5']]}")
     actionable_a = [(c, s) for c, s in state_a["signals"].items() if s.startswith(("buy", "sell"))]
     print(f"  actionable: {actionable_a or '无'}")
+    print(f"  本次触发: {state_a['changes'] or '无变化'}")
 
     # 美股
     with open(os.path.join(DATA_DIR, "companies_us.json"), encoding="utf-8") as f:
         companies_us = json.load(f)
     watch_us = derive_watchlist(companies_us)
+    path_us = os.path.join(DATA_DIR, "alerts_state_us.json")
+    old_us = load_old_state(path_us)
     state_us = scan_market("us", watch_us, sym_us("QQQ"), companies_us)
-    with open(os.path.join(DATA_DIR, "alerts_state_us.json"), "w", encoding="utf-8") as f:
+    state_us["changes"] = compute_changes(old_us, state_us)
+    with open(path_us, "w", encoding="utf-8") as f:
         json.dump(state_us, f, ensure_ascii=False, indent=2)
     print(f"\n写入 alerts_state_us.json — top5: {[t['name'] for t in state_us['top5']]}")
     actionable_us = [(c, s) for c, s in state_us["signals"].items() if s.startswith(("buy", "sell"))]
     print(f"  actionable: {actionable_us or '无'}")
+    print(f"  本次触发: {state_us['changes'] or '无变化'}")
 
 
 if __name__ == "__main__":
