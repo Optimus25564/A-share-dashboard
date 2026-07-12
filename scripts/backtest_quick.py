@@ -8,6 +8,16 @@ replacement rule:
 
   hold current quant Top 5 -> if weekly close < weekly EMA8, replace from the
   next-ranked eligible names -> rebalance only when a replacement is needed.
+  If fewer than 5 eligible names exist (market-wide drawdown), broken holdings
+  are SOLD TO CASH instead of being held — this is the regime the rule is
+  supposed to protect against; re-enter when a full Top 5 is available again.
+
+Caveats (do not treat the output as strategy alpha evidence):
+  - Ranking uses TODAY's fundamentals for the whole period (look-ahead bias).
+  - The watchlist itself is today's curated AI-winner pool (survivorship bias).
+  - Costs are approximated at FEE_RATE per side on traded value; A-share
+    limit-down illiquidity is not modeled.
+Compare against the printed buy-and-hold index benchmark, not against zero.
 """
 import argparse
 import csv
@@ -22,15 +32,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 
+US_TICKER_ALIAS = {
+    "ASE": "ASX",  # ASE Technology 的真实 NYSE ADR ticker
+}
 US_EXCHANGE = {
     "TSM": "N", "ONTO": "N", "FN": "N", "VRT": "N", "ETN": "N",
     "GEV": "N", "CCJ": "N", "COHR": "N", "ANET": "N", "CIEN": "N",
     "GLW": "N", "PWR": "N", "EME": "N", "FIX": "N", "MOD": "N",
     "TT": "N", "JCI": "N", "HUBB": "N", "VST": "N", "NRG": "N",
     "KMI": "N", "WMB": "N", "ORCL": "N", "NOW": "N", "CRM": "N",
-    "ASE": "N",
+    "ASX": "N",
     "EWY": "P",
 }
+
+FEE_RATE = 0.002  # 每边 20bp — 佣金/印花税/滑点的粗略合计近似
 
 
 def load_json(path):
@@ -43,7 +58,8 @@ def pfx_a(code):
 
 
 def sym_us(ticker):
-    return f"us{ticker}.{US_EXCHANGE.get(ticker, 'OQ')}"
+    api_ticker = US_TICKER_ALIAS.get(ticker, ticker)
+    return f"us{api_ticker}.{US_EXCHANGE.get(api_ticker, 'OQ')}"
 
 
 def fetch_weekly_bars(symbol, market, count):
@@ -105,7 +121,7 @@ def compute_quant_weights(companies, codes):
             continue
         if not all(q.get("rev") is not None and q.get("gm") is not None and q.get("nm") is not None for q in qs):
             continue
-        rev_base = qs[0]["rev"]
+        rev_base = qs[-5]["rev"]  # 4 季前同期 (quarters 可能多于 5 季, 不能用 qs[0])
         rev_yoy = (qs[-1]["rev"] / rev_base - 1) * 100 if rev_base > 0 else 0
         t = c.get("avg_turnover_pct") or 3
         valid.append({
@@ -158,21 +174,23 @@ def compute_quant_weights(companies, codes):
 def prep_bars(raw_bars):
     closes = [b["close"] for b in raw_bars]
     e8 = ema(closes, 8)
+    e21 = ema(closes, 21)
     out = {}
     for i, b in enumerate(raw_bars):
         item = dict(b)
         item["ema8"] = e8[i]
+        item["ema21"] = e21[i]
         out[b["date"]] = item
     return out
 
 
-def active_top5(ranked, bars_by_code, dt):
+def active_top5(ranked, bars_by_code, dt, line="ema8"):
     active = []
     for r in ranked:
         b = bars_by_code.get(r["code"], {}).get(dt)
         if not b:
             continue
-        if b["close"] < b["ema8"]:
+        if b["close"] < b[line]:
             continue
         active.append(r)
         if len(active) == 5:
@@ -185,8 +203,8 @@ def target_weights(holdings):
     return {h["code"]: h["weight"] / total for h in holdings}
 
 
-def portfolio_value(shares, bars_by_code, dt):
-    total = 0
+def portfolio_value(shares, bars_by_code, dt, cash=0.0):
+    total = cash
     for code, qty in shares.items():
         b = bars_by_code.get(code, {}).get(dt)
         if not b:
@@ -195,13 +213,27 @@ def portfolio_value(shares, bars_by_code, dt):
     return total
 
 
-def rebalance(value, holdings, bars_by_code, dt):
+def rebalance(value, holdings, bars_by_code, dt, prev_shares=None, fee_rate=FEE_RATE):
+    """按目标权重换仓, 对买卖差额收取 fee_rate 成本。返回 (shares, cost)。"""
     weights = target_weights(holdings)
+    prev_shares = prev_shares or {}
+    prev_value = {}
+    for code, qty in prev_shares.items():
+        b = bars_by_code.get(code, {}).get(dt)
+        if b:
+            prev_value[code] = qty * b["close"]
+    # 先按税前 value 算 turnover, 成本从总值里扣, 再按税后值定股数 (一阶近似足够)
+    turnover = 0.0
+    for code in set(weights) | set(prev_value):
+        target_v = value * weights.get(code, 0)
+        turnover += abs(target_v - prev_value.get(code, 0.0))
+    cost = turnover * fee_rate
+    net = max(value - cost, 0)
     shares = {}
     for code, weight in weights.items():
         price = bars_by_code[code][dt]["close"]
-        shares[code] = value * weight / price
-    return shares
+        shares[code] = net * weight / price
+    return shares, cost
 
 
 def max_drawdown(equity):
@@ -257,59 +289,111 @@ def run_backtest(args):
     if not dates:
         raise RuntimeError("no dates in requested backtest window")
 
+    line = f"ema{args.exit_ema}"
+    print(f"Exit line: weekly close < {line.upper()}")
+
     first_dt = None
     current = None
     for dt in dates:
-        current = active_top5(ranked, bars_by_code, dt)
+        current = active_top5(ranked, bars_by_code, dt, line)
         if len(current) == 5:
             first_dt = dt
             break
     if not first_dt:
         raise RuntimeError("could not form an initial active Top 5")
 
-    shares = rebalance(args.cash, current, bars_by_code, first_dt)
-    equity = [(first_dt, args.cash)]
+    shares, cost = rebalance(args.cash, current, bars_by_code, first_dt)
+    cash = 0.0
+    total_costs = cost
+    equity = [(first_dt, args.cash - cost)]
     trades = [{
         "date": first_dt,
         "action": "initial",
         "holdings": [h["code"] for h in current],
         "sold": [],
         "bought": [h["code"] for h in current],
-        "value": args.cash,
+        "value": args.cash - cost,
     }]
 
     for dt in dates[dates.index(first_dt) + 1:]:
-        value = portfolio_value(shares, bars_by_code, dt)
+        value = portfolio_value(shares, bars_by_code, dt, cash)
         if value is None:
             continue
         held = set(shares)
         broken = {
             code for code in held
-            if bars_by_code[code][dt]["close"] < bars_by_code[code][dt]["ema8"]
+            if bars_by_code[code][dt]["close"] < bars_by_code[code][dt][line]
         }
-        if broken:
-            next_holdings = active_top5(ranked, bars_by_code, dt)
+        if broken or cash > 0:
+            next_holdings = active_top5(ranked, bars_by_code, dt, line)
             if len(next_holdings) == 5:
+                # 能凑齐 5 只: 全额 (含现金) 换到新 Top 5
                 next_codes = {h["code"] for h in next_holdings}
-                shares = rebalance(value, next_holdings, bars_by_code, dt)
+                if broken or next_codes != held:
+                    shares, cost = rebalance(value, next_holdings, bars_by_code, dt, prev_shares=shares)
+                    total_costs += cost
+                    cash = 0.0
+                    trades.append({
+                        "date": dt,
+                        "action": "rebalance",
+                        "holdings": [h["code"] for h in next_holdings],
+                        "sold": sorted(held - next_codes),
+                        "bought": sorted(next_codes - held),
+                        "value": value - cost,
+                    })
+            elif broken:
+                # 凑不齐 5 只 (全市场回撤): 卖出破位持仓转现金, 而不是满仓扛跌
+                sold_value = 0.0
+                for code in broken:
+                    b = bars_by_code[code].get(dt)
+                    if not b:
+                        continue
+                    sold_value += shares.pop(code) * b["close"]
+                cost = sold_value * FEE_RATE
+                total_costs += cost
+                cash += sold_value - cost
                 trades.append({
                     "date": dt,
-                    "action": "rebalance",
-                    "holdings": [h["code"] for h in next_holdings],
-                    "sold": sorted(held - next_codes),
-                    "bought": sorted(next_codes - held),
-                    "value": value,
+                    "action": "derisk",
+                    "holdings": sorted(shares),
+                    "sold": sorted(broken),
+                    "bought": [],
+                    "value": portfolio_value(shares, bars_by_code, dt, cash) or (value - cost),
                 })
-        equity.append((dt, value))
+        value = portfolio_value(shares, bars_by_code, dt, cash)
+        if value is not None:
+            equity.append((dt, value))
 
     total_return = equity[-1][1] / equity[0][1] - 1
+
+    # 同期指数买入持有基准 (策略数字必须和它比, 而不是和 0 比)
+    benchmark = None
+    index_sym = "sh000001" if args.market == "a" else "usQQQ.OQ"
+    try:
+        idx_bars = fetch_weekly_bars(index_sym, args.market, args.count)
+        idx_window = [b for b in idx_bars if equity[0][0] <= b["date"] <= equity[-1][0]]
+        if len(idx_window) >= 2:
+            bench_equity = [(b["date"], args.cash * b["close"] / idx_window[0]["close"]) for b in idx_window]
+            benchmark = {
+                "sym": index_sym,
+                "total": bench_equity[-1][1] / bench_equity[0][1] - 1,
+                "annualized": annualized_return(bench_equity),
+                "maxdd": max_drawdown(bench_equity),
+            }
+    except Exception as exc:
+        print(f"benchmark fetch failed: {exc}", file=sys.stderr)
+
     print("\n=== Result ===")
     print(f"Period: {equity[0][0]} -> {equity[-1][0]} ({len(equity)} weekly points)")
     print(f"Final value: {equity[-1][1]:,.0f}")
     print(f"Total return: {total_return:+.2%}")
     print(f"Annualized: {annualized_return(equity):+.2%}")
     print(f"Max drawdown: {max_drawdown(equity):.2%}")
-    print(f"Rebalances: {max(0, len(trades) - 1)}")
+    print(f"Rebalances: {max(0, len(trades) - 1)}  |  Total costs paid: {total_costs:,.0f} ({total_costs / args.cash:.2%} of initial)")
+    if benchmark:
+        print(f"Benchmark {benchmark['sym']} buy&hold: total {benchmark['total']:+.2%} / "
+              f"annualized {benchmark['annualized']:+.2%} / maxDD {benchmark['maxdd']:.2%}")
+        print(f"Strategy vs benchmark total: {total_return - benchmark['total']:+.2%}")
     if args.equity_csv:
         out_path = Path(args.equity_csv)
         with open(out_path, "w", encoding="utf-8", newline="") as f:
@@ -329,7 +413,7 @@ def run_backtest(args):
 
     print("\n=== Trades ===")
     for t in trades[: args.max_trades]:
-        label = "INITIAL" if t["action"] == "initial" else "REBAL"
+        label = {"initial": "INITIAL", "rebalance": "REBAL", "derisk": "DERISK→CASH"}.get(t["action"], t["action"])
         print(f"{t['date']} {label} value={t['value']:,.0f}")
         if t["sold"]:
             print("  sell:", " / ".join(f"{c} {names.get(c, c)}" for c in t["sold"]))
@@ -339,7 +423,9 @@ def run_backtest(args):
     if len(trades) > args.max_trades:
         print(f"... {len(trades) - args.max_trades} more trades omitted")
 
-    print("\nNote: quick backtest uses current factor ranking for the whole history; this has look-ahead bias.")
+    print("\nNote: ranking uses TODAY's fundamentals for the whole history (look-ahead bias), and the")
+    print("watchlist is today's curated pool (survivorship bias). Both push returns UP — compare with the")
+    print("benchmark line above and treat the exit-rule behavior, not the absolute return, as the finding.")
 
 
 def main():
@@ -350,6 +436,8 @@ def main():
     parser.add_argument("--pool-size", type=int, default=15, help="ranked candidates to fetch")
     parser.add_argument("--count", type=int, default=320, help="weekly bars to request per symbol")
     parser.add_argument("--max-trades", type=int, default=80, help="max trade rows to print")
+    parser.add_argument("--exit-ema", choices=["8", "21"], default="8",
+                        help="weekly exit line: 8 = sensitive/high churn, 21 = slow core-trend line")
     parser.add_argument("--equity-csv", help="optional CSV path for weekly equity curve")
     args = parser.parse_args()
     run_backtest(args)

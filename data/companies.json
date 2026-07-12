@@ -101,7 +101,9 @@
         "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-24/1225166780.PDF"
       }
     ],
-    "strategic": 5,
+    "strategic": 7,
+    "ai_execution_score": 7,
+    "ai_execution_note": "SK 海力士 HBM 中国核心分销受益，HBM 涨价和 HBM3E/HBM4 高端型号出货驱动 2026Q1 业绩爆发；但分销毛利低、供应商集中和存储周期风险仍高。",
     "market_cap_billion": 1120,
     "avg_turnover_pct": 9.5
   },
@@ -667,12 +669,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": 468.56,
-        "gm": 4.9,
-        "nm": 0.99,
-        "src": "A",
-        "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ000977",
-        "note": "东方财富/财经摘要口径: 2026Q1营收354.70亿同比-24.30%、归母6.05亿同比+30.74%，反推2025Q1；毛利率暂用2025年综合毛利率约4.9%作近似，待公告单季营业成本替换。"
+        "rev": null,
+        "gm": null,
+        "nm": null,
+        "src": "NA",
+        "source_url": "",
+        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
       },
       {
         "q": "2025Q2",
@@ -826,12 +828,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": 60.93,
-        "gm": 12.35,
-        "nm": 1.66,
-        "src": "A",
-        "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ002156",
-        "note": "东方财富/财经摘要口径: 2026Q1营收74.82亿同比+22.8%、归母3.29亿同比+224.55%、毛利率13.32%同比+0.97pct，反推2025Q1。"
+        "rev": null,
+        "gm": null,
+        "nm": null,
+        "src": "NA",
+        "source_url": "",
+        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
       },
       {
         "q": "2025Q2",
@@ -1308,12 +1310,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": 32.27,
-        "gm": 30.31,
-        "nm": 13.84,
-        "src": "A",
-        "source_url": "https://finance.eastmoney.com/a/202604253718989616.html",
-        "note": "东方财富摘要口径: 2026Q1营收45.69亿同比+41.6%、归母5.50亿同比+23.17%、毛利率28.95%同比-1.36pct，反推2025Q1。"
+        "rev": null,
+        "gm": null,
+        "nm": null,
+        "src": "NA",
+        "source_url": "",
+        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
       },
       {
         "q": "2025Q2",
@@ -1421,12 +1423,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": 12.16,
-        "gm": 35.45,
-        "nm": 5.67,
-        "src": "A",
-        "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ002335",
-        "note": "东方财富/腾讯财经摘要口径: 2026Q1营收14.30亿同比+17.57%、归母0.78亿同比+13.15%、毛利率27.85%同比-7.6pct，反推2025Q1。"
+        "rev": null,
+        "gm": null,
+        "nm": null,
+        "src": "NA",
+        "source_url": "",
+        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
       },
       {
         "q": "2025Q2",
@@ -1478,12 +1480,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": 9.43,
-        "gm": 28.55,
-        "nm": 11.81,
-        "src": "A",
-        "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ002518",
-        "note": "东方财富/腾讯财经摘要口径: 2026Q1营收12.40亿同比+31.47%、归母1.39亿同比+24.84%、毛利率29.71%同比+1.16pct，反推2025Q1。"
+        "rev": null,
+        "gm": null,
+        "nm": null,
+        "src": "NA",
+        "source_url": "",
+        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
       },
       {
         "q": "2025Q2",

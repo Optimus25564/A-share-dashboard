@@ -1,6 +1,6 @@
 # Data Quality Audit
 
-审计时间：2026-06-06
+审计时间：2026-06-06（2026-07-12 增补，见文末「2026-07-12 修复记录」）
 
 结论：已按最新标准清洗。没有合规来源的财务数字已从 `rev/gm/nm` 模型字段移除，不能再影响量化排名、Top 5 或候选池。
 
@@ -162,3 +162,16 @@ python3 scripts/audit_data_quality.py
 ```bash
 python3 scripts/apply_financial_source_policy.py
 ```
+
+## 2026-07-12 修复记录
+
+本轮全面 review 后修复（详见 git 提交与 MODEL_FACTOR_SCORES.md 重新生成结果）：
+
+- **quality_metrics 陈旧数据根修**：`fill_us_cash_flow_from_sec.py` 此前在 10-K 多个对比财年中选中最旧一年（NVDA 存的是 FY2024、MSFT/AAPL/GOOGL/META/AMZN 是 FY2023、部分债务残留到 2012-2014 年）。现改为按 period end 选取 + 财年 duration 校验 + 债务/现金 15 个月时效守卫 + CapEx 与 OCF 同财年配对。已全量重跑：61 家非 ETF 公司 52 家 FY2025、8 家 FY2026、TSM 停在 FY2024（SEC 20-F 滞后，warn 提示）。GLW 手工录入值加 `manual_override` 保护。
+- **模型修正（index.html / build_latest_quant_factors.mjs / build_model_factor_scores.mjs 三处同步）**：A股改为与美股一致的 6 因子（移除盘中价格动量）；durabilityRaw 净现金/市值 10 倍单位错误修复；增长加速度在 5 季数据下退回 QoQ 口径（消除"有 guidance 反而扣分"）；ai_execution 缺失回落中性 5 分；美股不再惩罚低换手；负 OCF 的 capex 压力从 0.2 改为 1.2；hyperscalerFundingStress 阈值 0.45→0.25（当前值 0.37，修复前恒为 0）。
+- **审计规则增强**：NA 行必须置空、F 不得留在已过去 120 天以上的季度、quality_metrics 时效与 FCF 算术校验、二手来源黑名单大幅扩充；`apply_financial_source_policy.py` 的 quarters/outlook key 分离 + 审计过期防护。本轮按新规则清洗了 5 条"东方财富摘要反推"的 A 股 2025Q1 行（000977/002156/002028/002335/002518），这 5 家暂退出量化池直到补上合规来源。
+- **告警链路修复**：sender 对旧 schema 崩溃已修、buy-fresh 不再被丢弃、workflow paths 补上美股 state、新增 `scan-signals.yml` 每周五 cron 用真实 K 线扫描并直接推送；`run_us_alerts*.py`（估算价快照）退役至 scripts/deprecated/。
+- **宏观层新增**：scan_signals.py 输出指数距 52 周高点回撤、观察列表空头宽度，并在大盘跌破周线 EMA21 或宽度 ≥60% 时把买点硬性降级为 buy-gated（仅观察）。
+- **凭证**：run_monitor.py 中硬编码的 Gmail 应用密码与 ServerChan key 已移除改环境变量。⚠️ 旧凭证仍在 git 历史中，必须尽快吊销轮换。
+- **YoY 统一修复**：run_monitor.py（此前用 Q4/Q1 的 3 季增速冒充 YoY 且忽略最新季）、scan_signals.py 与 backtest_quick.py（qs[0] 在 6 季数据下虚增 NVDA YoY 107.7%→真实 85.2%）。
+- **回测修正**：凑不齐 5 只时卖出破位持仓转现金（此前在全市场回撤时满仓扛跌）、每边 20bp 成本、同期指数基准对照、幸存者偏差警示。

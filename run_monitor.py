@@ -1,10 +1,12 @@
-import json, math, statistics, urllib.request, urllib.parse, smtplib
+import json, math, os, statistics, urllib.request, urllib.parse, smtplib
 from email.mime.text import MIMEText
 from email.utils import formataddr
 from datetime import datetime, timezone, timedelta
+from pathlib import Path
 
 # ─── Load data ────────────────────────────────────────────────
-with open('/home/user/A-share-dashboard/data/companies.json') as f:
+BASE = Path(__file__).resolve().parent
+with open(BASE / 'data' / 'companies.json') as f:
     companies = json.load(f)
 
 CODES_17 = ['688256','688041','002261','300308','002837','603019',
@@ -33,13 +35,14 @@ records = {}
 for code in CODES_17:
     c = companies.get(code, {})
     qs = c.get('quarters', [])
-    q0_rev = qs[0].get('rev') if qs else None
-    q3_rev = qs[3].get('rev') if len(qs) > 3 else None
+    # 真 YoY: 最新季 vs 4 季前同期 (quarters 升序, ≥5 季才可比)
+    yoy_base = qs[-5].get('rev') if len(qs) >= 5 else None
+    yoy_last = qs[-1].get('rev') if len(qs) >= 5 else None
     nm_raw = get_latest_val(qs, 'nm')
     records[code] = {
         'name': c.get('name', '?'),
         'strategic': c.get('strategic', 5),
-        'yoy': safe_yoy(q3_rev, q0_rev),
+        'yoy': safe_yoy(yoy_last, yoy_base),
         'gm': get_latest_val(qs, 'gm'),
         'nm_clipped': max(-30, min(60, nm_raw)) if nm_raw is not None else None,
         'turnover': c.get('avg_turnover_pct', 5),
@@ -51,7 +54,7 @@ z_strat = zscore_list([(c, records[c]['strategic']) for c in CODES_17])
 z_yoy   = zscore_list([(c, records[c]['yoy']) for c in CODES_17])
 z_gm    = zscore_list([(c, records[c]['gm']) for c in CODES_17])
 z_nm    = zscore_list([(c, records[c]['nm_clipped']) for c in CODES_17])
-z_liq   = zscore_list([(c, -abs(math.log(records[c]['turnover']/5))) for c in CODES_17])
+z_liq   = zscore_list([(c, -abs(math.log(max(records[c]['turnover'], 0.01)/5))) for c in CODES_17])
 z_mcap  = zscore_list([(c, math.log(records[c]['mcap'])) for c in CODES_17])
 
 scores = {}
@@ -109,8 +112,11 @@ def fetch_weekly(sym):
 bj_now = datetime.now(timezone(timedelta(hours=8)))
 today_str = bj_now.strftime('%Y-%m-%d')
 weekday = bj_now.weekday()
-is_friday = (weekday == 4)
-print(f"\n今日: {today_str} 周{weekday+1} 是否周五={is_friday}")
+# 周线 bar 收盘确认: 周五 15:15 后, 或周末 (周内跌破只算 warning, 避免拿未完成的周线确认卖出)
+minute_of_day = bj_now.hour * 60 + bj_now.minute
+week_bar_closed = (weekday == 4 and minute_of_day >= 15 * 60 + 15) or weekday in (5, 6)
+is_friday = week_bar_closed
+print(f"\n今日: {today_str} 周{weekday+1} 周线已收盘={week_bar_closed}")
 
 all_codes = watch10 + ['sh000001']
 klines = {}
@@ -191,6 +197,7 @@ for i, code in enumerate(top5):
     else:
         hold_lines.append(f"- {nm(code)} hold ({'+' if pct>=0 else ''}{pct:.1f}% vs EMA8 {e8v:.2f})")
 
+index_bearish = 'sell' in idx_sig
 for i, code in enumerate(cand5):
     s = signals.get(code, {})
     sig = s.get('signal', 'no-data')
@@ -198,9 +205,14 @@ for i, code in enumerate(cand5):
     e8v = s.get('ema8', 0)
     pct = s.get('pct_vs_e8', 0)
     if sig == 'buy-fresh':
-        buy_lines.append(f"- **{nm(code)}** (候选#{i+6}): 回踩 EMA8 ({e8v:.2f}) 后收 {cl:.2f} → 多头排列上行")
+        if index_bearish:
+            # 宏观门控: 大盘跌破 EMA8 时买点只报观察, 不作为建仓信号
+            buy_lines.append(f"- 🟡 {nm(code)} (候选#{i+6}): 回踩 EMA8 ({e8v:.2f}) 后收 {cl:.2f} — 大盘走弱, 仅观察不建仓")
+        else:
+            buy_lines.append(f"- **{nm(code)}** (候选#{i+6}): 回踩 EMA8 ({e8v:.2f}) 后收 {cl:.2f} → 多头排列上行")
 
-has_signal = bool(sell_lines or buy_lines)
+# 大盘走弱时买点不触发 🚨 (只有卖出/破位才算 actionable)
+has_signal = bool(sell_lines or (buy_lines and not index_bearish))
 title = f"🚨 [{today_str}] 趋势提醒" if has_signal else f"✅ [{today_str}] 持仓平稳"
 
 top5_names = ' / '.join(nm(c) for c in top5)
@@ -234,33 +246,64 @@ print(title)
 print("\n=== BODY ===")
 print(body)
 
-# ─── Send WeChat ──────────────────────────────────────────────
-print("\n--- 微信推送 ---")
+# ─── Dedup: 只在信号发生变化时推送 ─────────────────────────────
+STATE_PATH = BASE / 'data' / 'alerts_state.json'
+prev_sig_map = {}
 try:
-    payload = urllib.parse.urlencode({'title': title[:32], 'desp': body}).encode()
-    req = urllib.request.Request(
-        'https://sctapi.ftqq.com/SCT345060TxO0bj5dA2PkldizWVKhIowJn.send',
-        data=payload, method='POST')
-    with urllib.request.urlopen(req, timeout=15) as r:
-        b = json.loads(r.read())
-        pushid = b.get('data', {}).get('pushid', '?') if isinstance(b.get('data'), dict) else '?'
-        print(f"微信: code={b.get('code')} pushid={pushid}")
-except Exception as e:
-    print(f"微信失败: {e}")
+    with open(STATE_PATH, encoding='utf-8') as f:
+        prev = json.load(f)
+    for row in prev.get('top5', []) + prev.get('candidates', []):
+        v = row.get('signal')
+        prev_sig_map[row.get('code')] = v.get('signal') if isinstance(v, dict) else v
+    pidx = prev.get('index_sh000001', {}).get('signal')
+    prev_sig_map['sh000001'] = pidx.get('signal') if isinstance(pidx, dict) else pidx
+except Exception:
+    pass  # 无历史状态 → 全部视为新信号
+
+cur_sig_map = {c: signals.get(c, {}).get('signal') for c in top5 + cand5 + ['sh000001']}
+changed = {c: s for c, s in cur_sig_map.items() if prev_sig_map.get(c) != s}
+should_push = has_signal and (not prev_sig_map or bool(changed))
+if not should_push:
+    print("\n信号与上次推送一致或无 actionable 信号, 跳过推送 (状态照常归档)")
+
+# ─── Send WeChat ──────────────────────────────────────────────
+# 凭证一律从环境变量读取, 不得写进代码/仓库
+SERVERCHAN_KEY = os.environ.get('SERVERCHAN_KEY', '')
+GMAIL_USER = os.environ.get('ALERT_GMAIL_USER', '')
+GMAIL_APP_PASSWORD = os.environ.get('ALERT_GMAIL_APP_PASSWORD', '')
+
+if should_push and SERVERCHAN_KEY:
+    print("\n--- 微信推送 ---")
+    try:
+        payload = urllib.parse.urlencode({'title': title[:32], 'desp': body}).encode()
+        req = urllib.request.Request(
+            f'https://sctapi.ftqq.com/{SERVERCHAN_KEY}.send',
+            data=payload, method='POST')
+        with urllib.request.urlopen(req, timeout=15) as r:
+            b = json.loads(r.read())
+            pushid = b.get('data', {}).get('pushid', '?') if isinstance(b.get('data'), dict) else '?'
+            print(f"微信: code={b.get('code')} pushid={pushid}")
+    except Exception as e:
+        print(f"微信失败: {e}")
+elif should_push:
+    print("\n微信跳过: 未设置 SERVERCHAN_KEY 环境变量")
 
 # ─── Send Email ───────────────────────────────────────────────
-print("--- 邮件推送 ---")
-try:
-    msg = MIMEText(body, 'plain', 'utf-8')
-    msg['Subject'] = title
-    msg['From'] = formataddr(('A-share Dashboard', 'hana.b.luo@gmail.com'))
-    msg['To'] = 'hana.b.luo@gmail.com'
-    with smtplib.SMTP_SSL('smtp.gmail.com', 465, timeout=15) as smtp:
-        smtp.login('hana.b.luo@gmail.com', 'nxxdpyguaoqqsthp')
-        smtp.send_message(msg)
-    print('邮件: ok')
-except Exception as e:
-    print(f'邮件失败: {e}')
+if should_push and GMAIL_USER and GMAIL_APP_PASSWORD:
+    print("--- 邮件推送 ---")
+    try:
+        msg = MIMEText(body, 'plain', 'utf-8')
+        msg['Subject'] = title
+        msg['From'] = formataddr(('A-share Dashboard', GMAIL_USER))
+        msg['To'] = GMAIL_USER
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465, timeout=15) as smtp:
+            smtp.login(GMAIL_USER, GMAIL_APP_PASSWORD)
+            smtp.send_message(msg)
+        print('邮件: ok')
+    except Exception as e:
+        print(f'邮件失败: {e}')
+elif should_push:
+    print("邮件跳过: 未设置 ALERT_GMAIL_USER / ALERT_GMAIL_APP_PASSWORD 环境变量")
 
 # ─── Archive state ─────────────────────────────────────────────
 state = {
@@ -276,6 +319,6 @@ state = {
     'has_signal': has_signal,
     'ranked_top10': [{c: nm(c)} for c in ranked[:10]],
 }
-with open('/home/user/A-share-dashboard/data/alerts_state.json', 'w', encoding='utf-8') as f:
+with open(STATE_PATH, 'w', encoding='utf-8') as f:
     json.dump(state, f, ensure_ascii=False, indent=2)
 print("状态已写入 data/alerts_state.json")

@@ -460,7 +460,7 @@
 
     <div class="main">
       <div class="card">
-        <h3>核心关注列表 · 实时行情<span class="right" id="watchSummary">--</span></h3>
+        <h3>核心关注列表 · 6因子排序<span class="right" id="watchSummary">--</span></h3>
         <div style="overflow:auto;max-height:620px">
           <table>
             <thead>
@@ -480,9 +480,10 @@
         <div class="pf-wrap"><canvas id="pfChart"></canvas></div>
         <div class="pf-legend" id="pfLegend"></div>
         <div style="margin-top:14px;padding-top:12px;border-top:1px dashed var(--border);font-size:12px;color:var(--muted);line-height:1.7">
-          <b style="color:var(--gold)">策略：</b>5 因子长期质量模型选 Top 10；前 5 核心仓合计 80%，后 5 卫星仓合计 20%。<br>
-          <b style="color:var(--gold)">控仓：</b>EMA8 跌破只做观察/减仓；EMA21 跌破才视为核心趋势破坏。<br>
-          <b style="color:var(--gold)">换仓：</b>不因短期排名波动换仓，只有基本面变坏或 EMA21 破坏才顺位替换。
+          <b style="color:var(--gold)">策略：</b>6 因子长期质量模型选 Top 10；前 5 核心仓合计 80%，后 5 卫星仓合计 20%。<br>
+          <b style="color:var(--gold)">控仓：</b>个股周线 EMA8 跌破只观察/减仓；EMA21 跌破才视为核心趋势破坏。<br>
+          <b style="color:var(--gold)">换仓：</b>不因短期排名波动换仓，只有基本面变坏或 EMA21 破坏才顺位替换。<br>
+          <b style="color:var(--gold)">宏观阶梯：</b>大盘跌破周线 EMA8 → 停止新买入；跌破周线 EMA21 或观察列表 ≥60% 破位 → <b>卫星舱 20% 转现金，核心舱不动</b>；指数距 52 周高点 -20% → 核心舱减半。指数收复周线 EMA21 后按排名买回卫星舱——宏观回落时调整的是仓位水平，不是持仓名单。
         </div>
         <div id="pfWatchPool" style="margin-top:12px;padding-top:10px;border-top:1px dashed var(--border);font-size:11px;color:var(--muted)"></div>
       </div>
@@ -542,7 +543,7 @@
 
     <div class="main">
       <div class="card">
-        <h3>美股观察清单 · 按 5 因子量化模型排序<span class="right" id="usSummary">--</span></h3>
+        <h3>美股观察清单 · 按 6 因子量化模型排序<span class="right" id="usSummary">--</span></h3>
         <div style="overflow:auto;max-height:680px">
           <table>
             <thead>
@@ -567,16 +568,17 @@
         <div class="pf-wrap"><canvas id="pfChartUS"></canvas></div>
         <div class="pf-legend" id="pfLegendUS"></div>
         <div style="margin-top:14px;padding-top:12px;border-top:1px dashed var(--border);font-size:12px;color:var(--muted);line-height:1.7">
-          <b style="color:var(--gold)">策略：</b>5 因子长期质量模型选 Top 10；前 5 核心仓合计 80%，后 5 卫星仓合计 20%。<br>
-          <b style="color:var(--gold)">控仓：</b>EMA8 跌破只做观察/减仓；EMA21 跌破才视为核心趋势破坏。<br>
-          <b style="color:var(--gold)">换仓：</b>不因短期排名波动换仓，只有基本面变坏或 EMA21 破坏才顺位替换。
+          <b style="color:var(--gold)">策略：</b>6 因子长期质量模型选 Top 10；前 5 核心仓合计 80%，后 5 卫星仓合计 20%。<br>
+          <b style="color:var(--gold)">控仓：</b>个股周线 EMA8 跌破只观察/减仓；EMA21 跌破才视为核心趋势破坏。<br>
+          <b style="color:var(--gold)">换仓：</b>不因短期排名波动换仓，只有基本面变坏或 EMA21 破坏才顺位替换。<br>
+          <b style="color:var(--gold)">宏观阶梯：</b>大盘跌破周线 EMA8 → 停止新买入；跌破周线 EMA21 或观察列表 ≥60% 破位 → <b>卫星舱 20% 转现金，核心舱不动</b>；指数距 52 周高点 -20% → 核心舱减半。指数收复周线 EMA21 后按排名买回卫星舱——宏观回落时调整的是仓位水平，不是持仓名单。
         </div>
         <div id="pfWatchPoolUS" style="margin-top:12px;padding-top:10px;border-top:1px dashed var(--border);font-size:11px;color:var(--muted)"></div>
       </div>
     </div>
 
     <div style="margin-top:14px;padding:10px 14px;background:rgba(245,179,1,.05);border-left:3px solid var(--gold);border-radius:4px;font-size:11px;color:var(--muted);line-height:1.7">
-      📌 5 因子长期质量模型 = 主题护城河 22% / 增长动能 20% / 盈利质量 20% / 规模现金流 18% / 周期资金风险 20%。增长动能用收入同比增速 + 同比加速度；没有 forecast 不扣分；ETF 不参与量化排名。
+      📌 6 因子长期质量模型 = 主题护城河 12% / AI执行与战略动量 10% / 增长动能 20% / 盈利质量 20% / 规模现金流 18% / 周期资金风险 20%。增长动能用收入同比增速 + 同比加速度；没有 forecast 不扣分；ETF 不参与量化排名。
     </div>
   </div>
 
@@ -991,9 +993,10 @@ function colorClass(n){
   return n > 0 ? "up" : "down";
 }
 
-// ============ 长期质量权重模型 (5 因子) ============
-// Composite Score = 主题护城河 22% + 增长动能 20% + 盈利质量 20% + 规模现金流 18% + 周期/资金风险 20%
-// 数据源: companies.json 的 quarters/strategic/market_cap_billion/avg_turnover_pct
+// ============ 长期质量权重模型 (A股 6 因子) ============
+// Composite Score = 主题护城河 12% + AI执行 10% + 增长动能 20% + 盈利质量 20% + 规模现金流 18% + 周期/资金风险 20%
+// 盘中价格动量因子已移除: 长期质量模型里混入当日涨跌会让 Top10/核心卫星边界随日内噪声翻转, 制造换仓冲动
+// 数据源: companies.json 的 quarters/strategic/ai_execution_score/market_cap_billion/avg_turnover_pct
 // 输出: { code: { weight, score, factors: {...} } }
 let _quantWeights = null;
 function getForwardRevenueEstimate(c){
@@ -1015,7 +1018,23 @@ function growthMomentumRaw(c){
   if (qs.length < 5) return { raw: 0, label: "历史不足" };
   const yoySeq = revenueYoYSeries(qs);
   const latestYoY = yoySeq[yoySeq.length - 1];
-  const histAccel = yoySeq.length >= 2 ? latestYoY - yoySeq[yoySeq.length - 2] : null;
+  // 历史加速度: ≥6 季用 YoY 差分; 恰好 5 季 (YoY 序列只有 1 点) 退回 QoQ 均值差
+  // (最近两段 QoQ 均值 - 早期两段 QoQ 均值)。否则动量因子在 5 季数据下恒为 0/仅剩前瞻项,
+  // 会出现"有 guidance 且减速的公司反而比无 guidance 的更吃亏"的反向激励。
+  let histAccel = null;
+  if (yoySeq.length >= 2) {
+    histAccel = latestYoY - yoySeq[yoySeq.length - 2];
+  } else if (qs.length >= 5) {
+    const qoq = [];
+    for (let i = 1; i < qs.length; i++) {
+      if (qs[i-1].rev > 0) qoq.push((qs[i].rev / qs[i-1].rev - 1) * 100);
+    }
+    if (qoq.length >= 4) {
+      const recent = (qoq[qoq.length-1] + qoq[qoq.length-2]) / 2;
+      const early = (qoq[0] + qoq[1]) / 2;
+      histAccel = recent - early;
+    }
+  }
   const fwd = getForwardRevenueEstimate(c);
   let fwdYoY = null;
   let fwdAccel = null;
@@ -1026,9 +1045,10 @@ function growthMomentumRaw(c){
       fwdAccel = fwdYoY - latestYoY;
     }
   }
+  const histAccelLabel = yoySeq.length >= 2 ? "同比加速" : "环比加速(5季退回口径)";
   const parts = [`收入同比 ${latestYoY.toFixed(1)}%`];
-  if (Number.isFinite(histAccel)) parts.push(`同比加速 ${histAccel.toFixed(1)}ppt`);
-  else parts.push("同比加速 历史不足");
+  if (Number.isFinite(histAccel)) parts.push(`${histAccelLabel} ${histAccel.toFixed(1)}ppt`);
+  else parts.push("加速度 历史不足");
   if (Number.isFinite(fwdYoY) && Number.isFinite(fwdAccel)) parts.push(`指引同比 ${fwdYoY.toFixed(1)}% / 指引加速 ${fwdAccel.toFixed(1)}ppt`);
   else parts.push("无forecast不扣分");
 
@@ -1059,7 +1079,7 @@ function categoryCycleRisk(code, c){
   const catRisk = {
     memory:1.00, packaging:0.55, foundry:0.45, network:0.40,
     core_chip:0.25, power:0.25, dc_infra:0.20, hyperscaler:0.10,
-    base:0.45, infra:0.40, hw:0.35, core:0.25
+    app:0.35, base:0.45, infra:0.40, hw:0.35, core:0.25
   };
   return catRisk[cat] || 0.20;
 }
@@ -1074,19 +1094,44 @@ function capexStressFromMetrics(qm){
   if (!qm) return 0;
   const ocf = qm.operating_cash_flow_billion;
   const capex = qm.capex_billion;
-  if (!Number.isFinite(ocf) || !Number.isFinite(capex) || ocf <= 0) return 0.2;
+  if (!Number.isFinite(ocf) || !Number.isFinite(capex)) return 0.2;
+  // 经营现金流为负本身就是资金压力的极端形态, 不能给比健康公司还低的 0.2
+  if (ocf <= 0) return Number.isFinite(capex) && capex > 0 ? 1.2 : 0.6;
   const ratio = capex / ocf;
   const fcfMargin = Number.isFinite(qm.fcf_margin_pct) ? qm.fcf_margin_pct : 0;
   const stressFloor = fcfMargin >= 15 ? 0.80 : 0.50;
   return clamp(ratio - stressFloor, 0, 1.5);
 }
+function valuationExpectationRisk(c){
+  if (!c) return 0;
+  const qs = (c.quarters || []).filter(q => Number.isFinite(q.rev));
+  const ttmRev = qs.slice(-4).reduce((s, q) => s + q.rev, 0);
+  const mc = c.market_cap_billion || 0;
+  const qm = c.quality_metrics || {};
+  const fcf = Number.isFinite(qm.free_cash_flow_billion) ? qm.free_cash_flow_billion : null;
+  const priceToSales = ttmRev > 0 ? mc / ttmRev : null; // both in 亿$ scale
+  const priceToFcf = fcf > 0 ? (mc / 10) / fcf : null; // market cap converted to $B
+  const psRisk = Number.isFinite(priceToSales) ? clamp((priceToSales - 20) / 50, 0, 1.5) : 0;
+  const fcfRisk = Number.isFinite(priceToFcf) ? clamp((priceToFcf - 60) / 180, 0, 1.2) : 0;
+  const raw = Math.max(psRisk, fcfRisk);
+  if (c.cat === "app") return raw;
+  if (c.cat === "core_chip") return raw * (Number.isFinite(fcf) && fcf < 2 ? 0.70 : 0.25);
+  if (c.cat === "hyperscaler") return raw * 0.25;
+  return raw * 0.15;
+}
 function computeHyperscalerFundingStress(dataset){
   if (!dataset) return 0;
   const names = ["MSFT","GOOGL","AMZN","META","ORCL","AAPL","CRWV"];
-  const vals = names.map(code => capexStressFromMetrics(dataset[code] && dataset[code].quality_metrics)).filter(Number.isFinite);
+  const vals = names
+    .filter(code => dataset[code] && dataset[code].quality_metrics)  // 缺数据的不计入均值 (不稀释)
+    .map(code => capexStressFromMetrics(dataset[code].quality_metrics))
+    .filter(Number.isFinite);
   if (!vals.length) return 0;
   const avg = vals.reduce((a,b)=>a+b,0) / vals.length;
-  return clamp((avg - 0.45) / 0.55, 0, 1.5);
+  // 阈值 0.25 (原 0.45): 原阈值下 2026 年 capex 高峰期 (MSFT/META capex/OCF ≈0.5-0.6,
+  // ORCL/CRWV 现金流为负) 算出来仍是 0, 传导通道形同虚设。校准: FY2023 低压期 avg≈0.18 → 0,
+  // 当前高压期 avg≈0.45 → ~0.37。
+  return clamp((avg - 0.25) / 0.55, 0, 1.5);
 }
 function durabilityRaw(c){
   const qm = c.quality_metrics || {};
@@ -1095,14 +1140,23 @@ function durabilityRaw(c){
   const recentRev = ((c.quarters || []).slice(-4).reduce((s, q) => s + (Number.isFinite(q.rev) ? q.rev : 0), 0)) / 10;
   const fcfMargin = recentRev > 0 ? (fcf / recentRev * 100) : (Number.isFinite(qm.fcf_margin_pct) ? qm.fcf_margin_pct : 0);
   const netCash = Number.isFinite(qm.net_cash_billion) ? qm.net_cash_billion : 0;
-  const netCashToMC = netCash / Math.max(mc, 1);
+  // 单位: net_cash 是 $B, market_cap_billion 实际是亿$ → 先除 10 换成 $B, 否则比值被低估 10 倍
+  // (CRWV 净负债 -$20B / 市值 $42.7B 应触到 -0.4 惩罚上限, 旧算法只有 -0.047)
+  const mcBillion = mc / 10;
+  const netCashToMC = netCash / Math.max(mcBillion, 0.1);
   return Math.log(mc) + 0.08 * clamp(fcfMargin, -25, 35) + 0.18 * Math.log1p(Math.max(fcf, 0)) + 0.6 * clamp(netCashToMC, -0.4, 0.4);
 }
-function turnoverRiskScore(t){
-  if (!Number.isFinite(t) || t <= 0) return -0.3;
-  if (t < 1) return -Math.log(1 / t);
+function turnoverRiskScore(t, market){
+  if (!Number.isFinite(t) || t <= 0) return market === "us" ? 0 : -0.3;
+  // 美股换手率常年 <1% (MSFT ~0.5%) 是市值巨大而非流动性差, 低换手惩罚只适用于 A 股
+  if (t < 1 && market !== "us") return -Math.log(1 / t);
   if (t > 10) return -Math.log(t / 10);
   return 0;
+}
+function aiExecutionScore(c){
+  // 缺失时回落到中性 5 分。不能回落到 strategic —— 否则没有 AI 执行评分的公司
+  // 等于把主题分双倍计入, 与有评分的公司不可比。
+  return Number.isFinite(c && c.ai_execution_score) ? c.ai_execution_score : 5;
 }
 function computeQuantWeights(){
   if (!companiesData) return null;  // 数据没加载时 fallback 到硬编码 r.w
@@ -1123,14 +1177,15 @@ function computeQuantWeights(){
     // NM clip 防极端亏损 (如龙芯 -84%) 拉爆 z-score 方差
     const nmClipped = Math.max(-30, Math.min(60, nmLatest));
     const t = c.avg_turnover_pct || 3;
-    const turnoverScore = turnoverRiskScore(t);
+    const turnoverScore = turnoverRiskScore(t, "a");
     const gmPrev = qs.length >= 2 ? qs[qs.length-2].gm : gmLatest;
     const nmPrev = qs.length >= 2 ? qs[qs.length-2].nm : nmLatest;
     const marginTrend = (gmLatest - gmPrev) * 0.6 + (nmLatest - nmPrev) * 0.4;
     const momentum = growthMomentumRaw(c);
     const extremeGrowthPenalty = Math.max(0, (revYoY - 80) / 120);
     const marginExpansionPenalty = Math.max(0, marginTrend / 8);
-    const cyclePenalty = categoryCycleRisk(code, c) + extremeGrowthPenalty * categoryCycleRisk(code, c) + marginExpansionPenalty * 0.35;
+    const valuationRisk = valuationExpectationRisk(c);
+    const cyclePenalty = categoryCycleRisk(code, c) + extremeGrowthPenalty * categoryCycleRisk(code, c) + marginExpansionPenalty * 0.35 + valuationRisk * 0.45;
     return {
       code,
       logMC: Math.log(c.market_cap_billion || 100),
@@ -1144,7 +1199,10 @@ function computeQuantWeights(){
       momentumLabel: momentum.label,
       durability: durabilityRaw(c),
       cyclePenalty,
-      strategic: (c.strategic || 5) / 10
+      valuationRisk,
+      strategic: (c.strategic || 5) / 10,
+      aiExecution: aiExecutionScore(c) / 10,
+      aiExecutionNote: c.ai_execution_note || ""
     };
   });
 
@@ -1153,7 +1211,7 @@ function computeQuantWeights(){
     const mean = values.reduce((a,b)=>a+b,0) / values.length;
     const variance = values.reduce((a,b)=>a+(b-mean)*(b-mean),0) / values.length;
     const std = Math.sqrt(variance) || 1;
-    return values.map(v => (v - mean) / std);
+    return values.map(v => clamp((v - mean) / std, -2, 2));
   }
   const zMC = zscore(raw.map(r => r.logMC));
   const zGrow = zscore(raw.map(r => r.revYoY));
@@ -1167,11 +1225,11 @@ function computeQuantWeights(){
   // 盈利能力合成因子: GM (行业竞争力) 占 0.6 + NM (运营效率) 占 0.4
   const zProfit = raw.map((_, i) => 0.6 * zGM[i] + 0.4 * zNM[i]);
 
-  // 5 因子权重: 主题 22 / 增长动能 20 / 盈利质量 20 / 规模现金流 18 / 周期资金风险 20
-  const W = { strategic: 0.22, growth: 0.20, profit: 0.20, durability: 0.18, risk: 0.20 };
+  // 6 因子权重 (与美股一致): 主题 12 / AI执行 10 / 增长动能 20 / 盈利质量 20 / 规模现金流 18 / 周期资金风险 20
+  const W = { strategic: 0.12, aiExecution: 0.10, growth: 0.20, profit: 0.20, durability: 0.18, risk: 0.20 };
 
   const composites = raw.map((r, i) => {
-    return W.growth * (0.65 * zGrow[i] + 0.35 * zMOM[i]) + W.profit * zProfit[i] + W.durability * zDUR[i] + W.risk * zRISK[i] + W.strategic * r.strategic * 2;
+    return W.growth * (0.65 * zGrow[i] + 0.35 * zMOM[i]) + W.profit * zProfit[i] + W.durability * zDUR[i] + W.risk * zRISK[i] + W.strategic * r.strategic * 2 + W.aiExecution * r.aiExecution * 2;
   });
 
   // 平移到全部 ≥ 0.5 (避免负权重 + 给最弱的一只也保留至少 0.5%)
@@ -1202,8 +1260,9 @@ function computeQuantWeights(){
         growth: { val: r.momentumLabel, z: (0.65 * zGrow[i] + 0.35 * zMOM[i]).toFixed(2), contrib: (W.growth * (0.65 * zGrow[i] + 0.35 * zMOM[i])).toFixed(2) },
         profit: { val: `GM ${r.gm.toFixed(1)}% / NM ${r.nm.toFixed(1)}%`, z: zProfit[i].toFixed(2), contrib: (W.profit * zProfit[i]).toFixed(2) },
         durability: { val: `市值 ${Math.exp(r.logMC).toFixed(0)}亿`, z: zDUR[i].toFixed(2), contrib: (W.durability * zDUR[i]).toFixed(2) },
-        risk: { val: `周期惩罚 ${r.cyclePenalty.toFixed(2)} / 换手 ${r.turnoverRaw.toFixed(1)}%`, z: zRISK[i].toFixed(2), contrib: (W.risk * zRISK[i]).toFixed(2) },
-        strategic: { val: (r.strategic*10).toFixed(0) + "/10", contrib: (W.strategic * r.strategic * 2).toFixed(2) }
+        risk: { val: `周期惩罚 ${r.cyclePenalty.toFixed(2)} / 估值预期 ${r.valuationRisk.toFixed(2)} / 换手 ${r.turnoverRaw.toFixed(1)}%`, z: zRISK[i].toFixed(2), contrib: (W.risk * zRISK[i]).toFixed(2) },
+        strategic: { val: (r.strategic*10).toFixed(0) + "/10", contrib: (W.strategic * r.strategic * 2).toFixed(2) },
+        aiExecution: { val: (r.aiExecution*10).toFixed(0) + "/10", note: r.aiExecutionNote, contrib: (W.aiExecution * r.aiExecution * 2).toFixed(2) }
       }
     };
   });
@@ -1236,8 +1295,10 @@ function renderWatchlist(){
     if (q.changePct > 0) upCount++;
     else if (q.changePct < 0) downCount++;
     const cls = colorClass(q.changePct);
+    const intradaySurge = Number.isFinite(q.changePct) && q.changePct >= 8;
     const sig = getStockSignals(r.code);
     const sigIcons = [
+      intradaySurge ? `<span class="sig-icon" data-tip="${escapeAttr(`今日异动: 涨幅 ${q.changePct.toFixed(2)}%，排名可能滞后于基本面模型；先看K线和成交确认。`)}">🔥</span>` : "",
       sig.warn ? `<span class="sig-icon" data-tip="${escapeAttr(sig.warn.title)}">⚠️</span>` : "",
       sig.bull ? `<span class="sig-icon" data-tip="${escapeAttr(sig.bull.title)}">🎯</span>` : "",
       sig.hot ?  `<span class="sig-icon" data-tip="${escapeAttr(sig.hot.title)}">✨</span>` : "",
@@ -1255,7 +1316,7 @@ function renderWatchlist(){
       roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:rgba(245,179,1,.15);color:var(--gold);font-weight:600;font-size:12px">#${rankIdx} 卫星 ${normPct}%</span>`;
     } else {
       // 观察池 — 灰色
-      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;color:var(--muted);font-size:11px">#${rankIdx} 观察</span>`;
+      roleHtml = `<span style="display:inline-block;padding:2px 8px;border-radius:4px;color:var(--muted);font-size:11px">#${rankIdx} 观察${intradaySurge ? " · 🔥今日异动" : ""}</span>`;
     }
     const rawPct = qw ? qw.weight.toFixed(1) : '?';
     const normPctForTooltip = qw && rankIdx <= 5 && coreSum > 0
@@ -1268,6 +1329,7 @@ function renderWatchlist(){
       `原始权重 (17 只里占比): ${rawPct}%\n` +
       `─── 因子分解 ───\n` +
       `战略: ${qw.factors.strategic.val} (贡献 ${qw.factors.strategic.contrib})\n` +
+      `AI执行: ${qw.factors.aiExecution.val} (贡献 ${qw.factors.aiExecution.contrib})${qw.factors.aiExecution.note ? " · " + qw.factors.aiExecution.note : ""}\n` +
       `增长动能: ${qw.factors.growth.val} (z=${qw.factors.growth.z}, 贡献 ${qw.factors.growth.contrib})\n` +
       `盈利: ${qw.factors.profit.val} (z=${qw.factors.profit.z}, 贡献 ${qw.factors.profit.contrib})\n` +
       `规模现金流: ${qw.factors.durability.val} (z=${qw.factors.durability.z}, 贡献 ${qw.factors.durability.contrib})\n` +
@@ -2727,8 +2789,9 @@ async function renderSignals(bars, currentPeriod){
     weekBars = klCache[cacheKey] || await fetchKLine(klState.code, "week", FETCH_COUNT.week);
     if (weekBars.length) klCache[cacheKey] = weekBars;
   }
-  const indexBullish = await getIndexBullish();
+  // 大盘加分项必须与个股同市场: 美股用 QQQ, A股用上证 (此前美股个股也误用了上证)
   const market = /[A-Za-z]/.test(klState.code) ? "us" : "a";
+  const indexBullish = market === "us" ? await getIndexBullishUS() : await getIndexBullish();
   const result = evalWeeklyEMA(weekBars, indexBullish, market);
   if (!result) {
     list.innerHTML = `<div style="color:var(--muted);font-size:12px">周线数据不足 (需 ≥22 周)</div>`;
@@ -3162,6 +3225,7 @@ async function refresh(force){
 
     if (activeTab !== "us") setLive(true, inMarket ? "盘中实时" : "盘后");
     renderWatchlist();
+    renderPortfolioPie();
     renderAccount();
     onStockChange();
     snapshotPnL();
@@ -3182,7 +3246,7 @@ let usQuotes = {};
 let _quantWeightsUS = null;
 let _quantWeightsUSStatus = "";
 
-// 美股 5 因子长期质量模型 (与 A股 同公式)
+// 美股 6 因子长期质量模型 (与 A股 同公式)
 function computeQuantWeightsUS(){
   if (!companiesUS) return null;
   const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
@@ -3218,7 +3282,8 @@ function computeQuantWeightsUS(){
     const marginExpansionPenalty = Math.max(0, marginTrend / 8);
     const capexStress = capexStressFromMetrics(c.quality_metrics);
     const downstreamStress = downstreamCapexExposure(code, c) * hyperscalerFundingStress;
-    const cyclePenalty = baseCycleRisk + extremeGrowthPenalty * baseCycleRisk + marginExpansionPenalty * 0.35 + downstreamStress * 0.45 + capexStress * baseCycleRisk * 0.25;
+    const valuationRisk = valuationExpectationRisk(c);
+    const cyclePenalty = baseCycleRisk + extremeGrowthPenalty * baseCycleRisk + marginExpansionPenalty * 0.35 + downstreamStress * 0.45 + capexStress * baseCycleRisk * 0.25 + valuationRisk * 0.45;
     return {
       code,
       logMC: Math.log(c.market_cap_billion || 100),
@@ -3226,14 +3291,17 @@ function computeQuantWeightsUS(){
       gm: gmLatest,
       nm: nmLatest,
       nmClipped,
-      turnoverScore: turnoverRiskScore(t),
+      turnoverScore: turnoverRiskScore(t, "us"),
       turnoverRaw: t,
       momentum: momentum.raw,
       momentumLabel: momentum.label,
       durability: durabilityRaw(c),
       cyclePenalty,
+      valuationRisk,
       qualityMetrics: c.quality_metrics || null,
-      strategic: (c.strategic || 5) / 10
+      strategic: (c.strategic || 5) / 10,
+      aiExecution: aiExecutionScore(c) / 10,
+      aiExecutionNote: c.ai_execution_note || ""
     };
   });
 
@@ -3241,7 +3309,7 @@ function computeQuantWeightsUS(){
     const mean = values.reduce((a,b)=>a+b,0) / values.length;
     const variance = values.reduce((a,b)=>a+(b-mean)*(b-mean),0) / values.length;
     const std = Math.sqrt(variance) || 1;
-    return values.map(v => (v - mean) / std);
+    return values.map(v => clamp((v - mean) / std, -2, 2));
   }
   const zMC = zscore(raw.map(r => r.logMC));
   const zGrow = zscore(raw.map(r => r.revYoY));
@@ -3253,9 +3321,9 @@ function computeQuantWeightsUS(){
   const zProfit = raw.map((_, i) => 0.6 * zGM[i] + 0.4 * zNM[i]);
   const zRISK = zscore(raw.map(r => -r.cyclePenalty + 0.10 * r.turnoverScore));
 
-  const W = { strategic: 0.22, growth: 0.20, profit: 0.20, durability: 0.18, risk: 0.20 };
+  const W = { strategic: 0.12, aiExecution: 0.10, growth: 0.20, profit: 0.20, durability: 0.18, risk: 0.20 };
   const composites = raw.map((r, i) =>
-    W.growth * (0.65 * zGrow[i] + 0.35 * zMOM[i]) + W.profit * zProfit[i] + W.durability * zDUR[i] + W.risk * zRISK[i] + W.strategic * r.strategic * 2
+    W.growth * (0.65 * zGrow[i] + 0.35 * zMOM[i]) + W.profit * zProfit[i] + W.durability * zDUR[i] + W.risk * zRISK[i] + W.strategic * r.strategic * 2 + W.aiExecution * r.aiExecution * 2
   );
   const minComp = Math.min(...composites);
   const shifted = composites.map(c => c - minComp + 0.5);
@@ -3273,8 +3341,9 @@ function computeQuantWeightsUS(){
         growth: { val: r.momentumLabel, contrib: (W.growth * (0.65 * zGrow[i] + 0.35 * zMOM[i])).toFixed(2) },
         profit: { val: `GM ${r.gm.toFixed(1)}% / NM ${r.nm.toFixed(1)}%`, contrib: (W.profit * zProfit[i]).toFixed(2) },
         durability: { val: `市值 ${Math.exp(r.logMC).toFixed(0)}亿$ / FCF ${Number.isFinite(r.qualityMetrics?.free_cash_flow_billion) ? r.qualityMetrics.free_cash_flow_billion.toFixed(1) + "B" : "无SEC"}`, contrib: (W.durability * zDUR[i]).toFixed(2) },
-        risk: { val: `周期惩罚 ${r.cyclePenalty.toFixed(2)} / 下游资金压力 ${hyperscalerFundingStress.toFixed(2)}`, contrib: (W.risk * zRISK[i]).toFixed(2) },
-        strategic: { val: (r.strategic*10).toFixed(0) + "/10", contrib: (W.strategic * r.strategic * 2).toFixed(2) }
+        risk: { val: `周期惩罚 ${r.cyclePenalty.toFixed(2)} / 估值预期 ${r.valuationRisk.toFixed(2)} / 下游资金压力 ${hyperscalerFundingStress.toFixed(2)}`, contrib: (W.risk * zRISK[i]).toFixed(2) },
+        strategic: { val: (r.strategic*10).toFixed(0) + "/10", contrib: (W.strategic * r.strategic * 2).toFixed(2) },
+        aiExecution: { val: (r.aiExecution*10).toFixed(0) + "/10", note: r.aiExecutionNote, contrib: (W.aiExecution * r.aiExecution * 2).toFixed(2) }
       }
     };
   });
@@ -3416,6 +3485,7 @@ function renderUSWatchlist(){
     const tooltip = qw ? escapeAttr(
       `排名 #${quantRank} · 量化分 ${qw.score.toFixed(3)} · 原始权重 ${qw.weight.toFixed(1)}%\n` +
       `战略: ${qw.factors.strategic.val} (贡献 ${qw.factors.strategic.contrib})\n` +
+      `AI执行: ${qw.factors.aiExecution.val} (贡献 ${qw.factors.aiExecution.contrib})${qw.factors.aiExecution.note ? " · " + qw.factors.aiExecution.note : ""}\n` +
       `增长动能: ${qw.factors.growth.val} (贡献 ${qw.factors.growth.contrib})\n` +
       `盈利: ${qw.factors.profit.val} (贡献 ${qw.factors.profit.contrib})\n` +
       `规模现金流: ${qw.factors.durability.val} (贡献 ${qw.factors.durability.contrib})\n` +
@@ -3704,6 +3774,15 @@ function renderBuyAlertBannerUS(results){
   const sellConfHtml = mkRowUS("🟠 EMA8 转弱 · 减仓观察", sellsConfirmed, "#f5b301", "rgba(245,179,1,.10)", "rgba(245,179,1,.35)");
   const sellWarnHtml = mkRowUS("⚠ 盘中跌破 EMA8/21 · 等周收盘", sellsWarning, "#f5b301");
   const sellHtml    = exitHtml + sellConfHtml + sellWarnHtml;
+  const strongTrends = holds
+    .filter(r => r.signal.action === "hold-trend" && Number.isFinite(r.signal.aboveE8Pct) && r.signal.aboveE8Pct >= 8)
+    .sort((a,b) => b.signal.aboveE8Pct - a.signal.aboveE8Pct)
+    .slice(0, 12);
+  const strongTrendHtml = strongTrends.length ? `
+    <div style="margin-bottom:8px;background:rgba(126,226,163,.08);padding:6px 10px;border-radius:6px;border:1px solid rgba(126,226,163,.28)">
+      <span style="font-size:13px;font-weight:700;color:#7ee2a3;margin-right:8px">🚀 强趋势延续 · 不是买点，等回踩 (${strongTrends.length})：</span>
+      ${strongTrends.map(b => `<span class="us-alert-card" data-code="${b.stock.code}" title="${escapeAttr(b.signal.detail)}" style="${tagStyle};background:rgba(255,255,255,.04);color:#7ee2a3;border:1px solid #7ee2a366">${b.stock.code} <span style="font-size:11px;color:var(--muted)">+${b.signal.aboveE8Pct.toFixed(1)}%</span></span>`).join("")}
+    </div>` : "";
   const emptyHtml = (buys.length === 0 && sells.length === 0) ? `
     <div style="background:rgba(46,204,113,.06);border:1px solid rgba(46,204,113,.2);padding:12px;border-radius:6px">
       <div style="color:#7ee2a3;font-size:13px;font-weight:600;margin-bottom:4px">✓ 当前无买卖信号</div>
@@ -3717,7 +3796,7 @@ function renderBuyAlertBannerUS(results){
       <div style="font-size:13px;color:var(--muted)">📡 美股周线 EMA8/EMA21 趋势扫描 · ${ok} 只已评估${failHtml} · ${idxLabel} · 更新于 ${ts}</div>
       <button id="rescanUSBtn" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:4px;font-size:11px;cursor:pointer">🔄 重新扫描</button>
     </div>
-    ${strongBuyHtml}${weakBuyHtml}${sellHtml}${emptyHtml}`;
+    ${strongBuyHtml}${weakBuyHtml}${strongTrendHtml}${sellHtml}${emptyHtml}`;
 
   banner.querySelectorAll(".us-alert-card").forEach(card => {
     card.onclick = () => openKLine(card.dataset.code);

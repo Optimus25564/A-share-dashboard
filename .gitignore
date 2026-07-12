@@ -16,3 +16,6 @@ notes-private*
 
 # Logs
 *.log
+
+# build artifacts
+node_modules

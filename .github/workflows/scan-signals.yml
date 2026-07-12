@@ -1,0 +1,51 @@
+name: Scan Signals
+
+# 周五两次: A股收盘后 (15:30 北京 = 07:30 UTC) 和美股收盘后 (16:30-17:30 ET ≈ 21:30 UTC)
+# 用真实腾讯 K 线跑 scan_signals.py, 取代人工估算价的旧例程。
+# 注意: GITHUB_TOKEN 的 push 不会触发 on:push workflow, 所以本 workflow 在提交状态后直接推送通知。
+on:
+  schedule:
+    - cron: '30 7 * * 5'
+    - cron: '30 21 * * 5'
+  workflow_dispatch:
+
+concurrency:
+  group: scan-signals
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Scan weekly signals (real K-lines)
+        run: python .github/scripts/scan_signals.py
+
+      - name: Commit state archives
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/alerts_state.json data/alerts_state_us.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "alerts: 周线信号扫描 $(date -u +%F)"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Send notifications (WeChat + Email)
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}
+          GMAIL_PASS: ${{ secrets.GMAIL }}
+          GMAIL_USER: hana.b.luo@gmail.com
+        run: python .github/scripts/send_alerts_from_state.py

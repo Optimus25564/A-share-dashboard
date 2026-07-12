@@ -29,12 +29,18 @@ STATES = [
 BUY_LABEL = {
     "buy-deep": "🎯 深回踩 EMA21 黄金坑",
     "buy":      "🔴 标准回踩 EMA8",
+    "buy-fresh": "🔴 回踩 EMA8 转强",  # run_monitor / 旧版扫描产生的买点别名
     "buy-near": "🟡 距 EMA8 ≤3% 接近回踩",
 }
 SELL_LABEL = {
     "sell-confirmed": "🟢 周线已确认破位 — 清仓",
     "sell-warning":   "⚠ 本周盘中跌破 EMA8 — 等周收盘确认",
 }
+# 宏观门控后的买点: 展示但不算 actionable, 不触发 🚨
+GATED_LABEL = {
+    "buy-gated": "🟡 买点出现但大盘走弱 — 仅观察不建仓",
+}
+KNOWN_NON_ACTION = {"hold", "hold-trend", "no-data", None}
 
 
 def load_state(path):
@@ -59,8 +65,8 @@ def section_for(market_label, state, index_label):
         if isinstance(pdata, dict) and pdata.get("name"):
             name_map[code] = pdata["name"]
 
-    # Normalize: A-share signals are dicts {"signal": "sell-warning", "close_est": ...}
-    # US signals are plain strings. Build a synthetic prices overlay from signal dicts.
+    # Normalize (合并两版兼容逻辑): 旧版 A 股 signals 是 dict {"signal": ..., "close_est": ...},
+    # 新版 scan_signals.py 是纯字符串。dict 信号里的估算价用作 prices 兜底显示。
     sig_prices = {}
     normalized_signals = {}
     for code, sig in signals.items():
@@ -70,7 +76,7 @@ def section_for(market_label, state, index_label):
                 "ema8":  sig.get("ema8_est",  "--"),
                 "vs_ema8_pct": sig.get("vs_ema8_pct"),
             }
-            normalized_signals[code] = sig.get("signal", "hold")
+            normalized_signals[code] = sig.get("signal") or sig.get("action") or "hold"
         else:
             normalized_signals[code] = sig if isinstance(sig, str) else "hold"
     # Merge sig_prices with prices (prices wins for existing keys)
@@ -79,22 +85,24 @@ def section_for(market_label, state, index_label):
             prices[code] = pdata
 
     # Also absorb US ema_notes if present
-    for code, en in state.get("ema_notes", {}).items():
+    for code, en in (state.get("ema_notes") or {}).items():
         if code not in prices:
             prices[code] = {
                 "close": en.get("close"),
                 "ema8":  en.get("ema8_est", "--"),
             }
 
-    buckets = {k: [] for k in list(BUY_LABEL) + list(SELL_LABEL)}
+    buckets = {k: [] for k in list(BUY_LABEL) + list(SELL_LABEL) + list(GATED_LABEL)}
     for code, sig in normalized_signals.items():
         if sig in buckets:
             buckets[sig].append(code)
+        elif sig not in KNOWN_NON_ACTION:
+            print(f"  ⚠ 未识别的信号被忽略: {code} -> {sig!r}", file=sys.stderr)
 
-    actionable = any(buckets[k] for k in buckets)
+    actionable = any(buckets[k] for k in list(BUY_LABEL) + list(SELL_LABEL))
 
     lines = [f"\n## 🏛 {market_label}"]
-    # 大盘
+    # 大盘 (旧版状态里 market 可能是字符串, 只认 dict)
     mkt = state.get("market")
     if not isinstance(mkt, dict):
         mkt = {}
@@ -108,6 +116,20 @@ def section_for(market_label, state, index_label):
             lines.append(f"- {index_label}: close={mkt.get('close','--')} EMA8={mkt.get('ema8','--')} 距 EMA8 {pct:+.1f}% {tag}")
         else:
             lines.append(f"- {index_label}: close={mkt.get('close','--')} EMA8={mkt.get('ema8','--')} 距 EMA8 {pct:+.1f}% ✗ 跌破")
+        # 宏观层: 距 52 周高点回撤 + 观察列表空头宽度 (由 scan_signals.py 写入)
+        dd = mkt.get("drawdown_from_52w_high_pct")
+        if isinstance(dd, (int, float)):
+            dd_tag = "🔴 熊市级回撤" if dd <= -20 else ("⚠ 回调区" if dd <= -10 else "")
+            lines.append(f"- {index_label} 距 52 周高点: {dd:+.1f}% {dd_tag}".rstrip())
+        breadth = mkt.get("breadth_bearish_pct")
+        if isinstance(breadth, (int, float)):
+            b_tag = "🔴 全面走弱" if breadth >= 60 else ("⚠ 局部走弱" if breadth >= 40 else "")
+            lines.append(f"- 观察列表空头宽度: {breadth:.0f}% 处于 sell 信号 {b_tag}".rstrip())
+        if mkt.get("buy_gate_active"):
+            lines.append(f"- 🚧 宏观门控生效: {mkt.get('buy_gate_reason', '大盘走弱')} — 本期买点全部降级为观察")
+        # 宏观仓位阶梯建议 (由 scan_signals.py 按 大盘EMA8/EMA21/52周回撤/宽度 生成)
+        if mkt.get("position_advice"):
+            lines.append(f"- **仓位建议**: {mkt['position_advice']}")
 
     # Top 5
     if top5:
@@ -132,7 +154,7 @@ def section_for(market_label, state, index_label):
                 lines.append(base)
 
     # Buy groups
-    for k in ["buy-deep", "buy", "buy-near"]:
+    for k in ["buy-deep", "buy", "buy-fresh", "buy-near"]:
         codes = buckets[k]
         if codes:
             lines.append(f"\n### {BUY_LABEL[k]}")
@@ -142,6 +164,18 @@ def section_for(market_label, state, index_label):
                 close = p.get("close", "--"); pct = p.get("vs_ema8_pct")
                 pct_str = f" 距 EMA8 {pct:+.1f}%" if isinstance(pct, (int, float)) else ""
                 lines.append(f"- **{nm}** ({code}) close={close}{pct_str}")
+
+    # Gated buys (宏观门控 — 只展示, 不算 actionable)
+    for k, label in GATED_LABEL.items():
+        codes = buckets.get(k) or []
+        if codes:
+            lines.append(f"\n### {label}")
+            for code in codes:
+                nm = name_map.get(code, code)
+                p = prices.get(code, {})
+                close = p.get("close", "--"); pct = p.get("vs_ema8_pct")
+                pct_str = f" 距 EMA8 {pct:+.1f}%" if isinstance(pct, (int, float)) else ""
+                lines.append(f"- {nm} ({code}) close={close}{pct_str}")
 
     if not actionable:
         lines.append("\n✓ 当前无买卖信号（所有持仓 hold / 趋势中）")

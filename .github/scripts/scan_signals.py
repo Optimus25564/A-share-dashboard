@@ -106,15 +106,34 @@ def ema(values, n):
 
 
 def is_last_weekly_bar_closed(market="a"):
-    """Whether the current week's weekly bar should be treated as final."""
-    now_cn = datetime.now(timezone(timedelta(hours=8)))
-    dow = now_cn.weekday()  # Mon=0 ... Sun=6
-    minute = now_cn.hour * 60 + now_cn.minute
-    if market == "a" and dow == 4 and minute >= 15 * 60:
+    """Whether the current week's weekly bar should be treated as final.
+
+    A股按北京时间判断; 美股必须按美东时间判断 (北京周六凌晨美股周五盘仍在交易)。
+    """
+    if market == "a":
+        now = datetime.now(timezone(timedelta(hours=8)))
+        dow = now.weekday()  # Mon=0 ... Sun=6
+        minute = now.hour * 60 + now.minute
+        if dow == 4 and minute >= 15 * 60:
+            return True
+        if dow in (5, 6):
+            return True
+        if dow == 0 and now.hour < 9:
+            return True
+        return False
+    # us: 周线 bar 收盘 = 周五 16:00 ET 之后, 到下周一 09:30 ET 开盘前
+    try:
+        from zoneinfo import ZoneInfo
+        now = datetime.now(ZoneInfo("America/New_York"))
+    except Exception:
+        now = datetime.now(timezone(timedelta(hours=-5)))  # 保守回退 (EST)
+    dow = now.weekday()
+    minute = now.hour * 60 + now.minute
+    if dow == 4 and minute >= 16 * 60:
         return True
     if dow in (5, 6):
         return True
-    if dow == 0 and now_cn.hour < 9:
+    if dow == 0 and minute < 9 * 60 + 30:
         return True
     return False
 
@@ -226,7 +245,7 @@ def eval_weekly_ema(bars, index_bullish=None, market="a"):
 # 5-factor quant model (mirrors computeQuantWeights in index.html)
 # ============================================================
 def compute_quant(companies, watch_codes):
-    """5 因子量化模型. quarters 严格要求 5 季 (Q1 同期 → Q1) → q[-1]/q[0]-1 = 真 YoY."""
+    """5 因子量化模型. quarters ≥5 季时用 q[-1]/q[-5]-1 = 真 YoY (最新季 vs 4 季前同期)."""
     IDEAL_T = 5
     valid = []
     for code in watch_codes:
@@ -240,8 +259,8 @@ def compute_quant(companies, watch_codes):
             continue
         if not all(q.get("rev") is not None and q.get("gm") is not None and q.get("nm") is not None for q in qs):
             continue
-        rev_latest = qs[-1]["rev"]      # 2026Q1
-        rev_base = qs[0]["rev"]          # 2025Q1 (同期)
+        rev_latest = qs[-1]["rev"]       # 最新季
+        rev_base = qs[-5]["rev"]         # 4 季前同期 (quarters 可能多于 5 季, 不能用 qs[0])
         rev_yoy = (rev_latest / rev_base - 1) * 100 if rev_base > 0 else 0  # 真 YoY
         rev_yoy = max(-50, min(300, rev_yoy))
         gm = qs[-1]["gm"]
@@ -291,17 +310,23 @@ def scan_market(market, watchlist, index_sym, companies):
     label = "A 股" if market == "a" else "美股"
     print(f"\n=== 扫描 {label} ({len(watchlist)} 只) ===")
 
-    # 1) Index (大盘) — 周线 EMA8
+    # 1) Index (大盘) — 周线 EMA8/EMA21 + 距 52 周高点回撤
     index_bars = fetch_kline(index_sym, "week", 60, market=market)
-    index_close = index_ema8 = index_diff_pct = None
+    index_close = index_ema8 = index_ema21 = index_diff_pct = index_drawdown = None
     index_bullish = None
-    if len(index_bars) >= 9:
-        i_e8 = ema([b["close"] for b in index_bars], 8)
+    if len(index_bars) >= 22:
+        closes = [b["close"] for b in index_bars]
+        i_e8 = ema(closes, 8)
+        i_e21 = ema(closes, 21)
         index_close = index_bars[-1]["close"]
         index_ema8 = i_e8[-1]
+        index_ema21 = i_e21[-1]
         index_diff_pct = (index_close - index_ema8) / index_ema8 * 100
         index_bullish = index_close > index_ema8
-        print(f"  大盘 {index_sym}: close={index_close:.2f} EMA8={index_ema8:.2f} diff={index_diff_pct:+.2f}% bullish={index_bullish}")
+        high_52w = max(b["high"] for b in index_bars[-52:])
+        index_drawdown = (index_close - high_52w) / high_52w * 100 if high_52w > 0 else None
+        print(f"  大盘 {index_sym}: close={index_close:.2f} EMA8={index_ema8:.2f} EMA21={index_ema21:.2f} "
+              f"diff={index_diff_pct:+.2f}% 距52周高点={index_drawdown:+.2f}% bullish={index_bullish}")
     else:
         print(f"  ⚠ 大盘 {index_sym} K 线获取失败")
 
@@ -354,6 +379,38 @@ def scan_market(market, watchlist, index_sym, companies):
 
     print(f"  完成 {len(signals)}/{len(watchlist)}, 失败 {fail or 'none'}")
 
+    # 2b) 宏观层: 空头宽度 + 买点门控
+    # 宽度 = 成功扫描的个股里 sell-* 信号占比 (个股周线信号已算好, 这里只是计数)
+    breadth_bearish = None
+    if signals:
+        n_bear = sum(1 for s in signals.values() if s.startswith("sell"))
+        breadth_bearish = n_bear / len(signals) * 100
+    # 门控条件: 大盘跌破周线 EMA21 (核心趋势级别) 或 观察列表 ≥60% 处于 sell 信号
+    gate_reasons = []
+    if index_close is not None and index_ema21 is not None and index_close < index_ema21:
+        gate_reasons.append(f"大盘跌破周线 EMA21 ({index_close:.2f} < {index_ema21:.2f})")
+    if breadth_bearish is not None and breadth_bearish >= 60:
+        gate_reasons.append(f"观察列表 {breadth_bearish:.0f}% 处于 sell 信号")
+    buy_gate_active = bool(gate_reasons)
+    if buy_gate_active:
+        gated = [c for c, s in signals.items() if s.startswith("buy")]
+        for c in gated:
+            signals[c] = "buy-gated"
+            if c in prices:
+                prices[c]["gated"] = True
+        print(f"  🚧 宏观门控生效 ({'; '.join(gate_reasons)}), 降级买点: {gated or '无'}")
+
+    # 宏观仓位阶梯 (与页面策略说明一致): 宏观回落时调整仓位水平, 不动持仓名单
+    position_advice = None
+    if index_drawdown is not None and index_drawdown <= -20:
+        position_advice = (f"🔴 指数距 52 周高点 {index_drawdown:+.1f}% (≤-20%) — "
+                           "核心舱减半, 卫星舱保持现金")
+    elif buy_gate_active:
+        position_advice = ("🟠 " + "; ".join(gate_reasons)
+                           + " — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱")
+    elif index_bullish is False:
+        position_advice = "🟡 大盘跌破周线 EMA8 — 停止新买入, 持仓不动"
+
     # 3) Quant Top 5
     quant = compute_quant(companies, [w[0] for w in watchlist])
     name_map = {w[0]: w[1] for w in watchlist}
@@ -375,14 +432,20 @@ def scan_market(market, watchlist, index_sym, companies):
             "code": index_sym,
             "close": round(index_close, 2) if index_close else None,
             "ema8": round(index_ema8, 2) if index_ema8 else None,
+            "ema21": round(index_ema21, 2) if index_ema21 else None,
             "vs_ema8_pct": round(index_diff_pct, 2) if index_diff_pct is not None else None,
             "bullish": index_bullish,
+            "drawdown_from_52w_high_pct": round(index_drawdown, 2) if index_drawdown is not None else None,
+            "breadth_bearish_pct": round(breadth_bearish, 1) if breadth_bearish is not None else None,
+            "buy_gate_active": buy_gate_active,
+            "buy_gate_reason": "; ".join(gate_reasons) if gate_reasons else None,
+            "position_advice": position_advice,
         },
         "kline_status": f"ok ({len(signals)}/{len(watchlist)})" + (f" — failed: {','.join(fail)}" if fail else ""),
         "data_source": "Tencent ifzq.gtimg.cn (live)",
     }
-    if index_bullish is not None:
-        signals[index_sym] = "hold" if index_bullish else "sell-confirmed"
+    # 注意: 指数不再作为裸信号混入 signals (避免被 sender 当成个股渲染 & 每次重复报警);
+    # 大盘状态统一放在 state["market"]。
     return state
 
 

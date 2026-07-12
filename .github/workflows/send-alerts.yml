@@ -1,25 +1,30 @@
-  name: Send Alerts                                                                                                                                                                                                  
-                                                                                
-  on:                                                                                                                                                                                                                
-    push:                                                                       
-      branches: [main]                                                                                                                                                                                               
-      paths:                                                                    
-        - 'data/alerts_state.json'                                                                                                                                                                                   
-    workflow_dispatch:                                                          
+name: Send Alerts
 
-  jobs:                                       
-    send:                                 
-      runs-on: ubuntu-latest             
-      steps:                                                                                                                                                                                                         
-        - uses: actions/checkout@v4
-                                                                                                                                                                                                                     
-        - uses: actions/setup-python@v5                                         
-          with:             
-            python-version: '3.11'                                                                                                                                                                                   
-                                              
-        - name: Send notifications (WeChat + Email)                                                                                                                                                                  
-          env:                                                                  
-            SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}                                                                                                                                                            
-            GMAIL_PASS: ${{ secrets.GMAIL }}  
-            GMAIL_USER: hana.b.luo@gmail.com                                                                                                                                                                         
-          run: python .github/scripts/send_alerts_from_state.py    
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/alerts_state.json'
+      - 'data/alerts_state_us.json'
+  workflow_dispatch:
+
+concurrency:
+  group: send-alerts
+  cancel-in-progress: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Send notifications (WeChat + Email)
+        env:
+          SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}
+          GMAIL_PASS: ${{ secrets.GMAIL }}
+          GMAIL_USER: hana.b.luo@gmail.com
+        run: python .github/scripts/send_alerts_from_state.py

@@ -8,6 +8,7 @@ existing sourced rows, and it only uses official SEC data.
 from __future__ import annotations
 
 import json
+import re
 import time
 import urllib.request
 from datetime import date
@@ -17,23 +18,28 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "companies_us.json"
 USER_AGENT = "rmb-invest data audit contact@example.com"
-ALLOWED_FORMS = {"10-Q", "10-K", "20-F", "6-K"}
+# 含 amended filings: 更正/重述值应以最新 filed 为准
+ALLOWED_FORMS = {"10-Q", "10-Q/A", "10-K", "10-K/A", "20-F", "20-F/A", "6-K", "6-K/A"}
 
-QUARTER_TO_FRAME = {
-    "2025Q1": "CY2025Q1",
-    "2025Q2": "CY2025Q2",
-    "2025Q3": "CY2025Q3",
-    "2025Q4": "CY2025Q4",
-    "2026Q1": "CY2026Q1",
-}
+_Q_RE = re.compile(r"^(\d{4})Q([1-4])$")
 
-QUARTER_END_RANGES = {
-    "2025Q1": (date(2025, 1, 1), date(2025, 3, 31)),
-    "2025Q2": (date(2025, 4, 1), date(2025, 6, 30)),
-    "2025Q3": (date(2025, 7, 1), date(2025, 9, 30)),
-    "2025Q4": (date(2025, 10, 1), date(2025, 12, 31)),
-    "2026Q1": (date(2026, 1, 1), date(2026, 3, 31)),
-}
+
+def frame_for_quarter(q: str | None) -> str | None:
+    """'2026Q2' → 'CY2026Q2'; 不再用硬编码表, 任何合法标签都能映射。"""
+    if not q or not _Q_RE.fullmatch(q):
+        return None
+    return f"CY{q}"
+
+
+def window_for_quarter(q: str | None) -> tuple[date, date] | None:
+    """季度标签 → 该日历季度的 (起, 止) 日期窗口 (用于按 period end 匹配财季)。"""
+    m = _Q_RE.fullmatch(q or "")
+    if not m:
+        return None
+    year, qi = int(m.group(1)), int(m.group(2))
+    starts = {1: (1, 1), 2: (4, 1), 3: (7, 1), 4: (10, 1)}
+    ends = {1: (3, 31), 2: (6, 30), 3: (9, 30), 4: (12, 31)}
+    return date(year, *starts[qi]), date(year, *ends[qi])
 
 # Quarterly average EUR/USD rates. Used only for SEC facts reported in EUR,
 # and always disclosed in the row note.
@@ -117,7 +123,7 @@ def parse_date(value: str | None) -> date | None:
 
 
 def entry_by_period_end(entries: list[dict], q: str) -> dict | None:
-    window = QUARTER_END_RANGES.get(q)
+    window = window_for_quarter(q)
     if not window:
         return None
     start_window, end_window = window
@@ -170,12 +176,14 @@ def annual_value_by_calendar_year(entries: list[dict], year: int) -> tuple[float
 
 
 def derived_annual_minus_other_quarters(entries: list[dict], target_frame: str) -> tuple[float, dict] | None:
-    if target_frame not in {"CY2025Q1", "CY2025Q2", "CY2025Q3", "CY2025Q4"}:
+    m = re.fullmatch(r"CY(\d{4})Q[1-4]", target_frame or "")
+    if not m:
         return None
-    annual = annual_value_by_calendar_year(entries, 2025)
+    year = int(m.group(1))
+    annual = annual_value_by_calendar_year(entries, year)
     parts = [
         value_by_frame(entries, frame)
-        for frame in ("CY2025Q1", "CY2025Q2", "CY2025Q3", "CY2025Q4")
+        for frame in (f"CY{year}Q1", f"CY{year}Q2", f"CY{year}Q3", f"CY{year}Q4")
         if frame != target_frame
     ]
     if not annual or any(part is None for part in parts):
@@ -186,7 +194,7 @@ def derived_annual_minus_other_quarters(entries: list[dict], target_frame: str) 
 
 
 def derived_fiscal_year_final_quarter(entries: list[dict], q: str) -> tuple[float, dict] | None:
-    window = QUARTER_END_RANGES.get(q)
+    window = window_for_quarter(q)
     if not window:
         return None
     start_window, end_window = window
@@ -248,23 +256,59 @@ def should_fill(row: dict) -> bool:
     return any(row.get(k) is None for k in ("rev", "gm", "nm")) or row.get("src") == "NA"
 
 
-def get_metric(entries: list[dict], frame: str, q: str) -> tuple[float, dict, bool] | None:
-    direct = value_by_frame(entries, frame)
-    if direct:
-        value, entry = direct
-        return value, entry, False
+def value_by_exact_period(entries: list[dict], start: str | None, end: str | None) -> tuple[float, dict] | None:
+    """与参照条目 (通常是 revenue) 完全同一 start/end 期间的值。"""
+    if not start or not end:
+        return None
+    candidates = [
+        e for e in entries
+        if e.get("val") is not None and e.get("form") in ALLOWED_FORMS
+        and e.get("start") == start and e.get("end") == end
+    ]
+    if not candidates:
+        return None
+    entry = sorted(candidates, key=lambda e: e.get("filed", ""))[-1]
+    return float(entry["val"]), entry
+
+
+def _entries_of_unit(entries: list[dict], unit: str) -> list[dict]:
+    return [e for e in entries if e.get("_unit") == unit]
+
+
+def get_metric(entries: list[dict], frame: str, q: str, ref_entry: dict | None = None) -> tuple[float, dict, bool] | None:
+    """查找顺序 (修复财年错位公司 off-by-one):
+
+    1. 与 revenue 完全同期 (保证同一行内各指标不跨财季混拼)
+    2. period end 落在该日历季窗口 —— 这是本仓库的季度归属口径,
+       对 NVDA/AVGO 等财年错位公司是唯一正确的口径
+    3. SEC frame (frame 按期间中点归属, 财年错位公司会差一个季度, 只作兜底)
+    4. 年度值减其它季度派生 / 财年末季 = 财年减 YTD 派生 (按同币种分组, 避免 EUR/USD 混减)
+    """
+    if ref_entry is not None:
+        exact = value_by_exact_period(entries, ref_entry.get("start"), ref_entry.get("end"))
+        if exact:
+            value, entry = exact
+            return value, entry, False
     period_match = value_by_period_end(entries, q)
     if period_match:
         value, entry = period_match
         return value, entry, False
-    derived = derived_annual_minus_other_quarters(entries, frame)
-    if derived:
-        value, entry = derived
-        return value, entry, True
-    fiscal_final_quarter = derived_fiscal_year_final_quarter(entries, q)
-    if fiscal_final_quarter:
-        value, entry = fiscal_final_quarter
-        return value, entry, True
+    direct = value_by_frame(entries, frame)
+    if direct:
+        value, entry = direct
+        return value, entry, False
+    for unit in ("USD", "EUR"):
+        subset = _entries_of_unit(entries, unit)
+        if not subset:
+            continue
+        derived = derived_annual_minus_other_quarters(subset, frame)
+        if derived:
+            value, entry = derived
+            return value, entry, True
+        fiscal_final_quarter = derived_fiscal_year_final_quarter(subset, q)
+        if fiscal_final_quarter:
+            value, entry = fiscal_final_quarter
+            return value, entry, True
     return None
 
 
@@ -278,13 +322,14 @@ def main() -> int:
         if symbol.startswith("_") or not isinstance(company, dict):
             continue
         quarters = company.get("quarters") or []
-        if not quarters or symbol not in ticker_map:
+        api_ticker = "ASX" if symbol == "ASE" else symbol  # ASE 的真实 ADR ticker
+        if not quarters or api_ticker not in ticker_map:
             continue
 
         if all(not should_fill(row) for row in quarters):
             continue
 
-        cik = ticker_map[symbol]
+        cik = ticker_map[api_ticker]
         try:
             facts = fetch_json(f"https://data.sec.gov/api/xbrl/companyfacts/CIK{cik:010d}.json")
         except Exception as exc:
@@ -303,19 +348,30 @@ def main() -> int:
 
         for row in quarters:
             q = row.get("q")
-            frame = QUARTER_TO_FRAME.get(q)
-            if not frame or not should_fill(row):
+            if not should_fill(row):
+                continue
+            frame = frame_for_quarter(q)
+            if not frame:
+                print(f"  ⚠ {symbol}: 季度标签 {q!r} 不合法, 无法映射 — 请检查数据")
                 continue
             revenue = get_metric(revenue_entries, frame, q)
-            gross = get_metric(gross_entries, frame, q)
-            cost = get_metric(cost_entries, frame, q)
-            operating = get_metric(operating_entries, frame, q)
-            net = get_metric(net_entries, frame, q)
-            if not revenue or not net or (not gross and not cost and not operating):
+            if not revenue:
                 continue
             rev_value_raw, revenue_entry, rev_derived = revenue
+            # 其余指标优先取与 revenue 完全同期的值, 避免同一行混拼两个财季
+            ref = None if rev_derived else revenue_entry
+            gross = get_metric(gross_entries, frame, q, ref_entry=ref)
+            cost = get_metric(cost_entries, frame, q, ref_entry=ref)
+            operating = get_metric(operating_entries, frame, q, ref_entry=ref)
+            net = get_metric(net_entries, frame, q, ref_entry=ref)
+            if not net or (not gross and not cost and not operating):
+                continue
             unit = revenue_entry.get("_unit", "USD")
-            rev_value, fx_note = convert_to_usd(rev_value_raw, unit, q)
+            try:
+                rev_value, fx_note = convert_to_usd(rev_value_raw, unit, q)
+            except ValueError as exc:
+                print(f"  ⚠ {symbol} {q}: {exc} — 补充 FX_TO_USD 表后重跑")
+                continue
             if rev_value == 0:
                 continue
             profitability_metric = None
@@ -339,8 +395,12 @@ def main() -> int:
                     operating_value, _ = convert_to_usd(operating_value_raw, operating_entry.get("_unit", unit), q)
                     gross_value = None
                     gross_note = "gross profit not available in standard SEC Companyfacts tags"
+                    # 第二个 tag 是税前利润, 不能标成 operating income
+                    metric_label = ("GAAP operating income"
+                                    if operating_entry.get("_fact") == "OperatingIncomeLoss"
+                                    else "GAAP pretax income (operating income tag unavailable)")
                     profitability_metric = {
-                        "metric": "GAAP operating income",
+                        "metric": metric_label,
                         "value": to_100m_usd(operating_value),
                         "unit": "亿$",
                         "margin_pct": pct(operating_value, rev_value),
@@ -349,8 +409,12 @@ def main() -> int:
                     }
             net_value_raw, net_entry, net_derived = net
             net_value, _ = convert_to_usd(net_value_raw, net_entry.get("_unit", unit), q)
+            # 只有实际用到的指标是派生值时才标注派生 (gross 可用时 operating 的派生与本行无关)
+            operating_used_derived = (not gross and not cost and operating and operating[2])
+            used_derived = rev_derived or (gross and gross_derived) or (not gross and cost and cost_derived) \
+                or operating_used_derived or net_derived
             derived_text = ""
-            if rev_derived or (gross and gross_derived) or (cost and cost_derived) or (operating and operating[2]) or net_derived:
+            if used_derived:
                 derived_text = f" derived from SEC annual value minus other official period values to obtain {frame};"
             update = {
                 "rev": to_100m_usd(rev_value),

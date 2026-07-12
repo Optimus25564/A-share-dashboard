@@ -5,78 +5,7 @@
       "path": "data/companies.json",
       "companies": 28,
       "quarter_rows": 140,
-      "issues": [
-        {
-          "severity": "error",
-          "type": "estimated_financial_value",
-          "market": "A-share",
-          "code": "000977",
-          "q": "2025Q1",
-          "src": "A",
-          "rev": 468.56,
-          "gm": 4.9,
-          "nm": 0.99,
-          "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ000977",
-          "note": "东方财富/财经摘要口径: 2026Q1营收354.70亿同比-24.30%、归母6.05亿同比+30.74%，反推2025Q1；毛利率暂用2025年综合毛利率约4.9%作近似，待公告单季营业成本替换。",
-          "message": "Financial value appears to be estimated/inferred in note."
-        },
-        {
-          "severity": "error",
-          "type": "estimated_financial_value",
-          "market": "A-share",
-          "code": "002156",
-          "q": "2025Q1",
-          "src": "A",
-          "rev": 60.93,
-          "gm": 12.35,
-          "nm": 1.66,
-          "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ002156",
-          "note": "东方财富/财经摘要口径: 2026Q1营收74.82亿同比+22.8%、归母3.29亿同比+224.55%、毛利率13.32%同比+0.97pct，反推2025Q1。",
-          "message": "Financial value appears to be estimated/inferred in note."
-        },
-        {
-          "severity": "error",
-          "type": "estimated_financial_value",
-          "market": "A-share",
-          "code": "002028",
-          "q": "2025Q1",
-          "src": "A",
-          "rev": 32.27,
-          "gm": 30.31,
-          "nm": 13.84,
-          "source_url": "https://finance.eastmoney.com/a/202604253718989616.html",
-          "note": "东方财富摘要口径: 2026Q1营收45.69亿同比+41.6%、归母5.50亿同比+23.17%、毛利率28.95%同比-1.36pct，反推2025Q1。",
-          "message": "Financial value appears to be estimated/inferred in note."
-        },
-        {
-          "severity": "error",
-          "type": "estimated_financial_value",
-          "market": "A-share",
-          "code": "002335",
-          "q": "2025Q1",
-          "src": "A",
-          "rev": 12.16,
-          "gm": 35.45,
-          "nm": 5.67,
-          "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ002335",
-          "note": "东方财富/腾讯财经摘要口径: 2026Q1营收14.30亿同比+17.57%、归母0.78亿同比+13.15%、毛利率27.85%同比-7.6pct，反推2025Q1。",
-          "message": "Financial value appears to be estimated/inferred in note."
-        },
-        {
-          "severity": "error",
-          "type": "estimated_financial_value",
-          "market": "A-share",
-          "code": "002518",
-          "q": "2025Q1",
-          "src": "A",
-          "rev": 9.43,
-          "gm": 28.55,
-          "nm": 11.81,
-          "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ002518",
-          "note": "东方财富/腾讯财经摘要口径: 2026Q1营收12.40亿同比+31.47%、归母1.39亿同比+24.84%、毛利率29.71%同比+1.16pct，反推2025Q1。",
-          "message": "Financial value appears to be estimated/inferred in note."
-        }
-      ],
+      "issues": [],
       "domain_counts": {
         "stcn.com": 4,
         "stock.stockstar.com": 25,
@@ -98,10 +27,9 @@
         "big5.sse.com.cn": 1,
         "file.finance.sina.com.cn": 2,
         "stockmc.xueqiu.com": 4,
-        "finance.eastmoney.com": 5,
+        "finance.eastmoney.com": 4,
         "163.com": 1,
         "m.jiemian.com": 2,
-        "emweb.securities.eastmoney.com": 7,
         "paper.cnstock.com": 1,
         "cnenergynews.cn": 1,
         "shidaotec.com": 1,
@@ -110,6 +38,7 @@
         "sdyanbao.com": 1,
         "wap.stockstar.com": 2,
         "stock.finance.sina.com.cn": 1,
+        "emweb.securities.eastmoney.com": 3,
         "reportify.cn": 1,
         "cls.cn": 1,
         "view.inews.qq.com": 1
@@ -121,6 +50,16 @@
       "companies": 66,
       "quarter_rows": 308,
       "issues": [
+        {
+          "severity": "warn",
+          "type": "quality_metrics_stale",
+          "market": "US",
+          "code": "TSM",
+          "q": "quality_metrics",
+          "src": "",
+          "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001046179.json",
+          "message": "quality_metrics cash flow fiscal year ends 2024-12-31 — stale; re-run fill_us_cash_flow_from_sec.py."
+        },
         {
           "severity": "warn",
           "type": "no_quarters",
@@ -252,7 +191,7 @@
       "market": "US",
       "path": "data/alerts_state_us.json",
       "exists": true,
-      "status": "partial: stooq/yahoo API sandbox限制(403/allowlist), 价格来源WebSearch公开数据; EMA基于近8周估算收盘价计算, 信号仅供参考 — 建议核实实盘K线",
+      "status": "partial: stooq/yahoo blocked(网络策略); EMA由2026-06-05底仓基础+6/11收盘价(WebSearch)更新推算",
       "source": "",
       "failed": [],
       "issues": [
@@ -260,7 +199,7 @@
           "severity": "warn",
           "type": "kline_not_ok",
           "market": "US",
-          "message": "K-line status is not ok in the saved scan state: partial: stooq/yahoo API sandbox限制(403/allowlist), 价格来源WebSearch公开数据; EMA基于近8周估算收盘价计算, 信号仅供参考 — 建议核实实盘K线. Re-run the scan with network access before relying on fresh trend signals."
+          "message": "K-line status is not ok in the saved scan state: partial: stooq/yahoo blocked(网络策略); EMA由2026-06-05底仓基础+6/11收盘价(WebSearch)更新推算. Re-run the scan with network access before relying on fresh trend signals."
         },
         {
           "severity": "warn",
@@ -273,11 +212,10 @@
   ],
   "issue_counts": {
     "by_severity": {
-      "error": 5,
-      "warn": 9
+      "warn": 10
     },
     "by_type": {
-      "estimated_financial_value": 5,
+      "quality_metrics_stale": 1,
       "no_quarters": 5,
       "kline_not_ok": 2,
       "unknown_kline_source": 2
@@ -285,74 +223,14 @@
   },
   "issues": [
     {
-      "severity": "error",
-      "type": "estimated_financial_value",
-      "market": "A-share",
-      "code": "000977",
-      "q": "2025Q1",
-      "src": "A",
-      "rev": 468.56,
-      "gm": 4.9,
-      "nm": 0.99,
-      "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ000977",
-      "note": "东方财富/财经摘要口径: 2026Q1营收354.70亿同比-24.30%、归母6.05亿同比+30.74%，反推2025Q1；毛利率暂用2025年综合毛利率约4.9%作近似，待公告单季营业成本替换。",
-      "message": "Financial value appears to be estimated/inferred in note."
-    },
-    {
-      "severity": "error",
-      "type": "estimated_financial_value",
-      "market": "A-share",
-      "code": "002156",
-      "q": "2025Q1",
-      "src": "A",
-      "rev": 60.93,
-      "gm": 12.35,
-      "nm": 1.66,
-      "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ002156",
-      "note": "东方财富/财经摘要口径: 2026Q1营收74.82亿同比+22.8%、归母3.29亿同比+224.55%、毛利率13.32%同比+0.97pct，反推2025Q1。",
-      "message": "Financial value appears to be estimated/inferred in note."
-    },
-    {
-      "severity": "error",
-      "type": "estimated_financial_value",
-      "market": "A-share",
-      "code": "002028",
-      "q": "2025Q1",
-      "src": "A",
-      "rev": 32.27,
-      "gm": 30.31,
-      "nm": 13.84,
-      "source_url": "https://finance.eastmoney.com/a/202604253718989616.html",
-      "note": "东方财富摘要口径: 2026Q1营收45.69亿同比+41.6%、归母5.50亿同比+23.17%、毛利率28.95%同比-1.36pct，反推2025Q1。",
-      "message": "Financial value appears to be estimated/inferred in note."
-    },
-    {
-      "severity": "error",
-      "type": "estimated_financial_value",
-      "market": "A-share",
-      "code": "002335",
-      "q": "2025Q1",
-      "src": "A",
-      "rev": 12.16,
-      "gm": 35.45,
-      "nm": 5.67,
-      "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ002335",
-      "note": "东方财富/腾讯财经摘要口径: 2026Q1营收14.30亿同比+17.57%、归母0.78亿同比+13.15%、毛利率27.85%同比-7.6pct，反推2025Q1。",
-      "message": "Financial value appears to be estimated/inferred in note."
-    },
-    {
-      "severity": "error",
-      "type": "estimated_financial_value",
-      "market": "A-share",
-      "code": "002518",
-      "q": "2025Q1",
-      "src": "A",
-      "rev": 9.43,
-      "gm": 28.55,
-      "nm": 11.81,
-      "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ002518",
-      "note": "东方财富/腾讯财经摘要口径: 2026Q1营收12.40亿同比+31.47%、归母1.39亿同比+24.84%、毛利率29.71%同比+1.16pct，反推2025Q1。",
-      "message": "Financial value appears to be estimated/inferred in note."
+      "severity": "warn",
+      "type": "quality_metrics_stale",
+      "market": "US",
+      "code": "TSM",
+      "q": "quality_metrics",
+      "src": "",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001046179.json",
+      "message": "quality_metrics cash flow fiscal year ends 2024-12-31 — stale; re-run fill_us_cash_flow_from_sec.py."
     },
     {
       "severity": "warn",
@@ -410,7 +288,7 @@
       "severity": "warn",
       "type": "kline_not_ok",
       "market": "US",
-      "message": "K-line status is not ok in the saved scan state: partial: stooq/yahoo API sandbox限制(403/allowlist), 价格来源WebSearch公开数据; EMA基于近8周估算收盘价计算, 信号仅供参考 — 建议核实实盘K线. Re-run the scan with network access before relying on fresh trend signals."
+      "message": "K-line status is not ok in the saved scan state: partial: stooq/yahoo blocked(网络策略); EMA由2026-06-05底仓基础+6/11收盘价(WebSearch)更新推算. Re-run the scan with network access before relying on fresh trend signals."
     },
     {
       "severity": "warn",

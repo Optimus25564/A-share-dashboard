@@ -11,12 +11,18 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 AUDIT_PATH = ROOT / "data_quality_audit.json"
 
-ISSUE_TYPES_TO_REMOVE = {
+# quarters 行与 q2_outlook 的 issue 分开建 key —— 同一公司可能同时有
+# quarters "2026Q2" 行和 q2_outlook.q == "2026Q2", 混用一个 key 会互相误伤
+QUARTER_ISSUE_TYPES = {
     "missing_source_url",
     "disallowed_source_domain",
     "forecast_missing_source",
     "forecast_unclear_basis",
     "estimated_financial_value",
+    "forecast_in_past_quarter",
+    "na_row_has_values",
+}
+OUTLOOK_ISSUE_TYPES = {
     "outlook_missing_source_url",
     "outlook_disallowed_source_domain",
     "outlook_estimated_value",
@@ -37,13 +43,24 @@ def write_json(path, data):
 
 
 def main():
+    # 审计结果必须比数据文件新, 否则会按过期结论误删已修好的行
+    audit_mtime = AUDIT_PATH.stat().st_mtime
+    for market, path in FILES.items():
+        if path.stat().st_mtime > audit_mtime:
+            raise SystemExit(
+                f"{path.name} 比 data_quality_audit.json 新 — "
+                "先运行 python3 scripts/audit_data_quality.py 刷新审计结果再执行本脚本。"
+            )
+
     audit = load_json(AUDIT_PATH)
-    targets = {}
+    targets_quarters = {}
+    targets_outlook = {}
     for issue in audit.get("issues", []):
-        if issue.get("type") not in ISSUE_TYPES_TO_REMOVE:
-            continue
         key = (issue.get("market"), issue.get("code"), issue.get("q"))
-        targets[key] = issue
+        if issue.get("type") in QUARTER_ISSUE_TYPES:
+            targets_quarters[key] = issue
+        elif issue.get("type") in OUTLOOK_ISSUE_TYPES:
+            targets_outlook[key] = issue
 
     changed = 0
     for market, path in FILES.items():
@@ -53,7 +70,7 @@ def main():
                 continue
             for row in company.get("quarters") or []:
                 key = (market, code, row.get("q"))
-                issue = targets.get(key)
+                issue = targets_quarters.get(key)
                 if not issue:
                     continue
 
@@ -72,7 +89,7 @@ def main():
 
             outlook = company.get("q2_outlook")
             key = (market, code, outlook.get("q")) if isinstance(outlook, dict) else None
-            issue = targets.get(key)
+            issue = targets_outlook.get(key)
             if isinstance(outlook, dict) and issue:
                 profitability = outlook.get("profitability_guidance")
                 had_values = (
