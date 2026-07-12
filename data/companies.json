@@ -682,12 +682,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 468.58,
+        "gm": 3.45,
+        "nm": 0.99,
+        "src": "A",
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-30/1225257759.PDF",
+        "note": "取自公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表'上年同期'列: 营业收入 46,858,373,514.91 元, 营业成本 45,242,789,837.68 元 → GM 3.45%, 归母净利 462,663,827.52 元 → NM 0.99%"
       },
       {
         "q": "2025Q2",
@@ -716,10 +716,11 @@
       {
         "q": "2026Q1",
         "rev": 354.7,
-        "gm": 6.6,
-        "nm": 1.7,
+        "gm": 6.64,
+        "nm": 1.71,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/jjxw/2026-04-30/doc-inhwftwe7503364.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-30/1225257759.PDF",
+        "note": "公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表本期数: 营业收入 35,470,325,836.04 元, GM 6.64%, 归母净利率 1.71% (原二手来源数值 (354.7, 6.6, 1.7) 已用官方口径替换并核验一致)"
       }
     ],
     "strategic": 6,
@@ -844,12 +845,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 60.92,
+        "gm": 13.2,
+        "nm": 1.66,
+        "src": "A",
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-30/1225261883.PDF",
+        "note": "取自公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表'上年同期'列: 营业收入 6,092,434,550.56 元, 营业成本 5,288,439,776.37 元 → GM 13.2%, 归母净利 101,389,231.19 元 → NM 1.66%"
       },
       {
         "q": "2025Q2",
@@ -877,11 +878,12 @@
       },
       {
         "q": "2026Q1",
-        "rev": 74.8,
-        "gm": 13.3,
+        "rev": 74.82,
+        "gm": 13.32,
         "nm": 4.4,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/jjxw/2026-04-30/doc-inhwftwe7504836.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-30/1225261883.PDF",
+        "note": "公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表本期数: 营业收入 7,481,674,677.05 元, GM 13.32%, 归母净利率 4.4% (原二手来源数值 (74.8, 13.3, 4.4) 已用官方口径替换并核验一致)"
       }
     ],
     "strategic": 8,
@@ -1335,12 +1337,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 32.27,
+        "gm": 30.31,
+        "nm": 13.84,
+        "src": "A",
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-25/1225177123.PDF",
+        "note": "取自公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表'上年同期'列: 营业收入 3,226,557,969.19 元, 营业成本 2,248,557,111.44 元 → GM 30.31%, 归母净利 446,499,519.83 元 → NM 13.84%"
       },
       {
         "q": "2025Q2",
@@ -1374,8 +1376,8 @@
         "gm": 28.95,
         "nm": 12.04,
         "src": "A",
-        "source_url": "https://finance.eastmoney.com/a/202604253718989616.html",
-        "note": "营收+41.6% YoY; GM下滑1.36pct系储能/EPC低毛利占比提升"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-25/1225177123.PDF",
+        "note": "公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表本期数: 营业收入 4,568,663,867.62 元, GM 28.95%, 归母净利率 12.04% (原二手来源数值 (45.69, 28.95, 12.04) 已用官方口径替换并核验一致)"
       }
     ],
     "strategic": 8,
@@ -1450,12 +1452,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 12.16,
+        "gm": 30.14,
+        "nm": 5.67,
+        "src": "A",
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-27/1225194945.PDF",
+        "note": "取自公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表'上年同期'列: 营业收入 1,216,323,160.43 元, 营业成本 849,673,033.71 元 → GM 30.14%, 归母净利 68,944,329.58 元 → NM 5.67%"
       },
       {
         "q": "2025Q2",
@@ -1490,8 +1492,8 @@
         "gm": 27.85,
         "nm": 5.45,
         "src": "A",
-        "source_url": "https://news.qq.com/rain/a/20260428A01SV800",
-        "note": "营收+17.57% YoY; 归母+13.15% YoY"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-27/1225194945.PDF",
+        "note": "公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表本期数: 营业收入 1,430,062,407.61 元, GM 27.85%, 归母净利率 5.45% (原二手来源数值 (14.3, 27.85, 5.45) 已用官方口径替换并核验一致)"
       }
     ],
     "strategic": 7,
@@ -1508,12 +1510,12 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": null,
-        "gm": null,
-        "nm": null,
-        "src": "NA",
-        "source_url": "",
-        "note": "未找到符合规范的真实公告/guidance/consensus 来源；原财务数值已移除，不参与模型。原因：estimated_financial_value"
+        "rev": 9.43,
+        "gm": 29.37,
+        "nm": 11.77,
+        "src": "A",
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-27/1225189523.PDF",
+        "note": "取自公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表'上年同期'列: 营业收入 943,431,003.63 元, 营业成本 666,342,676.04 元 → GM 29.37%, 归母净利 111,053,036.94 元 → NM 11.77%"
       },
       {
         "q": "2025Q2",
@@ -1546,10 +1548,10 @@
         "q": "2026Q1",
         "rev": 12.4,
         "gm": 29.71,
-        "nm": 11.21,
+        "nm": 11.18,
         "src": "A",
-        "source_url": "https://news.qq.com/rain/a/20260428A01SUM00",
-        "note": "营收+31.47% YoY; 归母+24.84% YoY; GM 同比+1.16pct"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-27/1225189523.PDF",
+        "note": "公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表本期数: 营业收入 1,240,294,080.12 元, GM 29.71%, 归母净利率 11.18% (原二手来源数值 (12.4, 29.71, 11.21) 已用官方口径替换并核验一致)"
       }
     ],
     "strategic": 6,

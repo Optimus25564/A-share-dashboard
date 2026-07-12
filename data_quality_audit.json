@@ -9,9 +9,9 @@
       "domain_counts": {
         "stcn.com": 4,
         "stock.stockstar.com": 26,
-        "finance.sina.com.cn": 22,
-        "news.qq.com": 14,
-        "static.cninfo.com.cn": 10,
+        "finance.sina.com.cn": 20,
+        "news.qq.com": 12,
+        "static.cninfo.com.cn": 20,
         "file.finance.qq.com": 1,
         "pdf.dfcfw.com": 6,
         "yicai.com": 2,
@@ -29,7 +29,7 @@
         "jjckb.cn": 1,
         "big5.sse.com.cn": 1,
         "file.finance.sina.com.cn": 2,
-        "finance.eastmoney.com": 4,
+        "finance.eastmoney.com": 3,
         "163.com": 1,
         "paper.cnstock.com": 1,
         "cnenergynews.cn": 1,
@@ -50,16 +50,6 @@
       "companies": 66,
       "quarter_rows": 316,
       "issues": [
-        {
-          "severity": "warn",
-          "type": "quality_metrics_stale",
-          "market": "US",
-          "code": "TSM",
-          "q": "quality_metrics",
-          "src": "",
-          "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001046179.json",
-          "message": "quality_metrics cash flow fiscal year ends 2024-12-31 — stale; re-run fill_us_cash_flow_from_sec.py."
-        },
         {
           "severity": "warn",
           "type": "no_quarters",
@@ -186,24 +176,13 @@
   ],
   "issue_counts": {
     "by_severity": {
-      "warn": 6
+      "warn": 5
     },
     "by_type": {
-      "quality_metrics_stale": 1,
       "no_quarters": 5
     }
   },
   "issues": [
-    {
-      "severity": "warn",
-      "type": "quality_metrics_stale",
-      "market": "US",
-      "code": "TSM",
-      "q": "quality_metrics",
-      "src": "",
-      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001046179.json",
-      "message": "quality_metrics cash flow fiscal year ends 2024-12-31 — stale; re-run fill_us_cash_flow_from_sec.py."
-    },
     {
       "severity": "warn",
       "type": "no_quarters",
