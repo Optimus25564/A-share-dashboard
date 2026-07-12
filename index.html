@@ -2046,8 +2046,9 @@ document.getElementById("resetBtn").onclick = () => {
   acct = defaultAccount();
   saveAccount(acct);
   renderAccount();
+  renderPnLCurve();
   onStockChange();
-  toast("账户已重置", "success");
+  toast("账户已重置 · 本金 300 万", "success");
 };
 
 // ============ Info Panel: news + notes integrated timeline ============
