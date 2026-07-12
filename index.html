@@ -651,6 +651,17 @@
       </div>
     </div>
 
+    <div class="card" style="margin-bottom:14px">
+      <h3>策略建仓<span class="right">6 因子 Top10 · 核心 80% / 卫星 20% · 含宏观阶梯</span></h3>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <button class="btn btn-buy" id="btnStrategyBuild" style="flex:0 0 auto">🎯 按策略一键建仓</button>
+        <span style="font-size:12px;color:var(--muted)">
+          按量化 Top 10 分配：核心舱 80%（前 5）/ 卫星舱 20%（#6-10）。宏观阶梯自动生效：大盘跌破周线 EMA21 或宽度 ≥60% → 卫星舱留现金；距 52 周高点 -20% → 核心舱减半。EMA21 破坏的个股自动排除。已有持仓会先清空（有确认）。
+        </span>
+      </div>
+      <div id="strategyBuildInfo" style="margin-top:10px;font-size:12px;color:var(--muted);line-height:1.7"></div>
+    </div>
+
     <div class="trade-grid">
       <!-- Trade form -->
       <div class="card">
@@ -1656,6 +1667,137 @@ function pushHistory(side, code, name, price, qty, amount){
 }
 document.getElementById("btnBuy").onclick = () => trade("buy");
 document.getElementById("btnSell").onclick = () => trade("sell");
+
+// ============ 策略一键建仓: 6因子 Top10 + 宏观阶梯 ============
+async function getMacroLadderState(){
+  try {
+    const bars = await fetchKLineRaw("sh000001", "week", 60);
+    if (!bars || bars.length < 22) return null;
+    const closes = bars.map(b => b.close);
+    const e8 = ind_EMA(closes, 8), e21 = ind_EMA(closes, 21);
+    const close = closes[closes.length - 1];
+    const high52 = Math.max(...bars.slice(-52).map(b => b.high));
+    return { close, e8: e8[e8.length-1], e21: e21[e21.length-1], drawdownPct: (close - high52) / high52 * 100 };
+  } catch(e){ return null; }
+}
+
+async function strategyBuildPosition(){
+  const btn = document.getElementById("btnStrategyBuild");
+  const info = document.getElementById("strategyBuildInfo");
+  btn.disabled = true;
+  info.textContent = "⏳ 准备数据: 基本面 + 行情 + 周线趋势 + 大盘阶梯...";
+  try {
+    if (!companiesData) await loadCompanies();
+    computeQuantWeights();
+    if (!_quantWeights) { info.textContent = "❌ 基本面数据未就绪，请刷新页面重试"; return; }
+    if (!Object.keys(lastQuotes).length) {
+      const q = await fetchQuotes();
+      if (q && Object.keys(q).length) lastQuotes = q;  // 休市时为最近收盘价
+    }
+    if (!watchScanState.results) await scanWatchlistBuySignals();
+    const excluded = getSellExcludedCodes(watchScanState.results);  // 仅 EMA21 级破坏
+    const results = watchScanState.results || [];
+    const bearCnt = results.filter(r => r.signal.action.startsWith("sell") || r.signal.action === "exit-confirmed").length;
+    const breadthPct = results.length ? bearCnt / results.length * 100 : null;
+    const ladder = await getMacroLadderState();
+
+    // 宏观阶梯 (与 Top10 卡片策略说明一致)
+    let corePct = 0.80, satPct = 0.20;
+    let reason = "大盘多头 — 核心 80% + 卫星 20% 全部建仓";
+    if (ladder && ladder.drawdownPct <= -20) {
+      corePct = 0.40; satPct = 0;
+      reason = `指数距 52 周高点 ${ladder.drawdownPct.toFixed(1)}% (≤-20%) — 核心舱减半 (40%)，其余现金`;
+    } else if ((ladder && ladder.close < ladder.e21) || (breadthPct !== null && breadthPct >= 60)) {
+      satPct = 0;
+      reason = (ladder && ladder.close < ladder.e21
+        ? `上证 ${ladder.close.toFixed(0)} 跌破周线 EMA21 (${ladder.e21.toFixed(0)})`
+        : `观察列表 ${breadthPct.toFixed(0)}% 处于 sell 信号`)
+        + " — 核心舱 80% 建仓，卫星舱 20% 留现金，指数收复 EMA21 后再买回";
+    } else if (ladder && ladder.close < ladder.e8) {
+      satPct = 0;
+      reason = "上证跌破周线 EMA8 (未破 EMA21) — 保守起见仅建核心舱 80%，卫星舱留现金等企稳";
+    }
+
+    // Top10: 按 score 排序, 排除 EMA21 破坏个股, 顺位补足
+    const rankedAll = WATCH
+      .map(s => ({ code: s.code, name: s.name, w: _quantWeights[s.code]?.weight ?? 0, score: _quantWeights[s.code]?.score }))
+      .filter(s => Number.isFinite(s.score))
+      .sort((a, b) => b.score - a.score)
+      .filter(s => !excluded.has(s.code));
+    const core = rankedAll.slice(0, 5);
+    const satellite = satPct > 0 ? rankedAll.slice(5, 10) : [];
+    if (core.length < 5) { info.textContent = "❌ 可建仓标的不足 5 只（EMA21 破坏排除过多），暂不建仓"; return; }
+
+    if (Object.keys(acct.positions).length) {
+      if (!confirm("已有模拟持仓，将先按现价全部卖出，再按策略重建。继续？")) { info.textContent = "已取消"; return; }
+      for (const [code, p] of Object.entries({ ...acct.positions })) {
+        const price = lastQuotes[code]?.price || p.avgCost;
+        acct.cash += price * p.qty;
+        pushHistory("sell", code, p.name, price, p.qty, price * p.qty);
+        delete acct.positions[code];
+      }
+    }
+
+    const total = acct.cash;
+    const lines = [];
+    const skipped = [];
+    let spent = 0;
+    const buyBasket = (basket, pct, label) => {
+      const wSum = basket.reduce((s, x) => s + x.w, 0) || 1;
+      const basketBudget = total * pct;
+      const plan = [];
+      basket.forEach(x => {
+        const price = lastQuotes[x.code]?.price;
+        if (!price) { skipped.push(`${x.name}(无行情)`); return; }
+        plan.push({ ...x, price, target: basketBudget * x.w / wSum, qty: 0 });
+      });
+      let basketSpent = 0;
+      plan.forEach(x => {
+        x.qty = Math.floor(x.target / x.price / 100) * 100;
+        basketSpent += x.qty * x.price;
+      });
+      // 贪心补手: 高价股 (如千元股) 整手向下取整会磨掉大量目标仓位,
+      // 在本篮子预算内 (容忍 2% 超出) 给缺口最大的持仓逐手补齐
+      while (true) {
+        let best = null;
+        for (const x of plan) {
+          const lot = x.price * 100;
+          const short = x.target - x.qty * x.price;
+          if (basketSpent + lot > basketBudget * 1.02) continue;
+          if (short <= lot / 2) continue;  // 加一手后要比不加更接近目标
+          if (!best || short > best.short) best = { x, short, lot };
+        }
+        if (!best) break;
+        best.x.qty += 100;
+        basketSpent += best.lot;
+      }
+      plan.forEach(x => {
+        if (x.qty <= 0) { skipped.push(`${x.name}(预算不足 1 手)`); return; }
+        const amount = x.qty * x.price;
+        acct.cash -= amount;
+        spent += amount;
+        acct.positions[x.code] = { qty: x.qty, avgCost: x.price, name: x.name };
+        pushHistory("buy", x.code, x.name, x.price, x.qty, amount);
+        lines.push(`${label} <b>${x.name}</b> (${x.code}): ${x.qty.toLocaleString()} 股 @ ${x.price.toFixed(2)} = ${fmtMoney(amount)}（实际 ${(amount / total * 100).toFixed(1)}% / 目标 ${(x.target / total * 100).toFixed(1)}%）`);
+      });
+    };
+    buyBasket(core, corePct, "核心");
+    if (satellite.length) buyBasket(satellite, satPct, "卫星");
+
+    saveAccount(acct);
+    renderAccount();
+    onStockChange();
+    info.innerHTML = `<div style="color:var(--gold)">🎯 ${reason}</div>` +
+      lines.map(l => `<div>· ${l}</div>`).join("") +
+      `<div style="margin-top:6px">合计买入 ${fmtMoney(spent)} · 保留现金 ${fmtMoney(acct.cash)}（${(acct.cash / total * 100).toFixed(1)}%）` +
+      (excluded.size ? `<br>已排除 EMA21 破坏个股: ${[...excluded].join(" / ")}` : "") +
+      (skipped.length ? `<br>跳过: ${skipped.join("，")}` : "") + `</div>`;
+    toast("策略建仓完成", "success");
+  } finally {
+    btn.disabled = false;
+  }
+}
+document.getElementById("btnStrategyBuild").onclick = strategyBuildPosition;
 
 // ============ Render account ============
 function renderAccount(){
