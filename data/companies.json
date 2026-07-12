@@ -10,42 +10,46 @@
         "q": "2025Q1",
         "rev": 66.74,
         "gm": 36.7,
-        "nm": 23.71,
+        "nm": 23.72,
         "src": "A",
-        "source_url": "https://www.stcn.com/article/detail/3756750.html",
-        "note": "2025Q1: 营收 66.74亿/归母 15.82亿(+56.83% YoY); NM=15.82/66.74=23.71%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-21/1223155474.PDF",
+        "note": "巨潮官方《2025年一季度报告》合并利润表, 2025年一季报本期数: 营业收入 66.74 亿元, GM 36.7%, NM 23.72%"
       },
       {
         "q": "2025Q2",
-        "rev": 81.2,
-        "gm": 41.5,
-        "nm": 31.5,
+        "rev": 81.15,
+        "gm": 41.49,
+        "nm": 29.73,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2025082800006408.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-27/1224585964.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 81.15 亿元, GM 41.49%, NM 29.73%；原二手源数值 (rev 81.2, gm 41.5, nm 31.5) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q3",
-        "rev": 102.2,
-        "gm": 42.8,
-        "nm": 30.7,
+        "rev": 102.16,
+        "gm": 42.79,
+        "nm": 30.71,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/roll/2025-11-08/doc-infwrwzc3955884.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-31/1224773075.PDF",
+        "note": "巨潮官方《2025年三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 102.16 亿元, GM 42.79%, NM 30.71%"
       },
       {
         "q": "2025Q4",
-        "rev": 132.4,
-        "gm": 44.5,
-        "nm": 27.7,
+        "rev": 132.35,
+        "gm": 44.48,
+        "nm": 27.69,
         "src": "A",
-        "source_url": "https://news.qq.com/rain/a/20260401A0439J00"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-31/1225056459.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 132.35 亿元, GM 44.48%, NM 27.69%"
       },
       {
         "q": "2026Q1",
-        "rev": 195,
-        "gm": 46.1,
-        "nm": 32.4,
+        "rev": 194.96,
+        "gm": 46.06,
+        "nm": 29.41,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2026041800008790.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225111941.PDF",
+        "note": "巨潮官方《2026年一季度报告》合并利润表, 2026年一季报本期数: 营业收入 194.96 亿元, GM 46.06%, NM 29.41%；原二手源数值 (rev 195, gm 46.1, nm 32.4) 与官方合并利润表口径不一致, 已替换"
       }
     ],
     "strategic": 7,
@@ -66,40 +70,44 @@
         "gm": 1.98,
         "nm": 0.21,
         "src": "A",
-        "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-24/1225166780.PDF",
-        "note": "2026Q1 official quarterly report comparative column: 2025Q1 revenue 7,905,805,649.29 yuan; cost 7,748,933,442.80 yuan; attributable net profit 16,728,480.28 yuan."
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-26/1223308766.PDF",
+        "note": "巨潮官方《2025年一季度报告》合并利润表, 2025年一季报本期数: 营业收入 79.06 亿元, GM 1.98%, NM 0.21%"
       },
       {
         "q": "2025Q2",
-        "rev": 92.2,
-        "gm": 3.2,
-        "nm": 1.5,
+        "rev": 92.17,
+        "gm": 3.22,
+        "nm": 1.53,
         "src": "A",
-        "source_url": "https://file.finance.qq.com/finance/hs/pdf/2025/08/27/1224577570.PDF"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-27/1224577570.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 92.17 亿元, GM 3.22%, NM 1.53%"
       },
       {
         "q": "2025Q3",
-        "rev": 92.8,
-        "gm": 4,
-        "nm": 2.2,
+        "rev": 92.76,
+        "gm": 4.03,
+        "nm": 2.17,
         "src": "A",
-        "source_url": "https://static.cninfo.com.cn/finalpage/2025-10-23/1224725744.PDF"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-23/1224725744.PDF",
+        "note": "巨潮官方《2025年三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 92.76 亿元, GM 4.03%, NM 2.17%"
       },
       {
         "q": "2025Q4",
-        "rev": 88.5,
-        "gm": 6.5,
-        "nm": 2.1,
+        "rev": 88.51,
+        "gm": 6.48,
+        "nm": 2.09,
         "src": "A",
-        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-07/1225081955.PDF"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-24/1225166771.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 88.51 亿元, GM 6.48%, NM 2.09%"
       },
       {
         "q": "2026Q1",
-        "rev": 237.6,
-        "gm": 9.1,
-        "nm": 5.6,
+        "rev": 237.65,
+        "gm": 9.12,
+        "nm": 5.59,
         "src": "A",
-        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-24/1225166780.PDF"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-24/1225166780.PDF",
+        "note": "巨潮官方《2026年一季度报告》合并利润表, 2026年一季报本期数: 营业收入 237.65 亿元, GM 9.12%, NM 5.59%"
       }
     ],
     "strategic": 7,
@@ -122,40 +130,44 @@
         "gm": 6.73,
         "nm": 3.26,
         "src": "A",
-        "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202411141640884986_1.pdf",
-        "note": "2025Q1: 营收 1604.15亿/归母 52.31亿(+24.99% YoY); GM 6.73%; NM 3.26%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-30/1223421539.PDF",
+        "note": "巨潮官方《富士康工业互联网股份有限公司2025年第一季度报告》合并利润表, 2025年一季报本期数: 营业收入 1604.15 亿元, GM 6.73%, NM 3.26%"
       },
       {
         "q": "2025Q2",
-        "rev": 2003.4,
+        "rev": 2003.45,
         "gm": 6.5,
-        "nm": 3.4,
+        "nm": 3.44,
         "src": "A",
-        "source_url": "https://www.yicai.com/news/103081547.html"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-11/1224442889.PDF",
+        "note": "巨潮官方《富士康工业互联网股份有限公司2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 2003.45 亿元, GM 6.5%, NM 3.44%"
       },
       {
         "q": "2025Q3",
-        "rev": 2431.7,
-        "gm": 6.8,
-        "nm": 4.3,
+        "rev": 2431.72,
+        "gm": 7.0,
+        "nm": 4.27,
         "src": "A",
-        "source_url": "https://news.qq.com/rain/a/20251031A019AM00"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-30/1224761584.PDF",
+        "note": "巨潮官方《富士康工业互联网股份有限公司2025年第三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 2431.72 亿元, GM 7.0%, NM 4.27%"
       },
       {
         "q": "2025Q4",
-        "rev": 2989.6,
-        "gm": 7.6,
-        "nm": 4.3,
+        "rev": 2989.56,
+        "gm": 7.41,
+        "nm": 4.28,
         "src": "A",
-        "source_url": "https://caifuhao.eastmoney.com/news/20260312060337452185690"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-11/1225004420.PDF",
+        "note": "巨潮官方《富士康工业互联网股份有限公司2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 2989.56 亿元, GM 7.41%, NM 4.28%"
       },
       {
         "q": "2026Q1",
-        "rev": 2510.8,
-        "gm": 7.4,
-        "nm": 4.2,
+        "rev": 2510.78,
+        "gm": 7.35,
+        "nm": 4.22,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2026043000019123.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-29/1225231598.PDF",
+        "note": "巨潮官方《富士康工业互联网股份有限公司2026年第一季度报告》合并利润表, 2026年一季报本期数: 营业收入 2510.78 亿元, GM 7.35%, NM 4.22%"
       }
     ],
     "strategic": 4,
@@ -174,44 +186,46 @@
         "q": "2025Q1",
         "rev": 25.86,
         "gm": 26.07,
-        "nm": 7.19,
+        "nm": 7.21,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2025050100003644.shtml",
-        "note": "2025Q1: 营收 25.86亿/归母 1.86亿(+30.79% YoY); NM=1.86/25.86=7.19%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-30/1223421953.PDF",
+        "note": "巨潮官方《中科曙光2025年第一季度报告》合并利润表, 2025年一季报本期数: 营业收入 25.86 亿元, GM 26.07%, NM 7.21%"
       },
       {
         "q": "2025Q2",
         "rev": 32.64,
-        "gm": 27.1,
-        "nm": 16.6,
+        "gm": 27.11,
+        "nm": 16.61,
         "src": "A",
-        "source_url": "https://static.cninfo.com.cn/finalpage/2025-08-29/1224607447.PDF",
-        "note": "差减法: H1 rev=58.50亿/GM=26.65%(半年报2025-08-29) - Q1 rev=25.86亿/GM=26.07%(一季报) → Q2 GP=8.85亿/GM=27.1%; H1 NI=7.29亿-Q1 NI=1.86亿→Q2 NI=5.43亿/NM=16.6%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-29/1224607447.PDF",
+        "note": "巨潮官方《中科曙光2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 32.64 亿元, GM 27.11%, NM 16.61%"
       },
       {
         "q": "2025Q3",
         "rev": 29.7,
-        "gm": 20.1,
-        "nm": 7.98,
+        "gm": 20.13,
+        "nm": 7.99,
         "src": "A",
-        "source_url": "https://m.jiemian.com/article/13569893.html",
-        "note": "差减法: 9M rev=88.20亿/GM=24.45%(三季报) - H1 rev=58.50亿/GM=26.65%(半年报) → Q3 GP=5.97亿/GM=20.1%; 9M NI=9.66亿-H1 NI=7.29亿→Q3 NI=2.37亿/NM=7.98%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-31/1224771865.PDF",
+        "note": "巨潮官方《中科曙光2025年第三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 29.7 亿元, GM 20.13%, NM 7.99%"
       },
       {
         "q": "2025Q4",
-        "rev": 61.4,
-        "gm": 39.4,
+        "rev": 61.43,
+        "gm": 39.38,
         "nm": 19.7,
         "src": "A",
-        "source_url": "https://www.nbd.com.cn/articles/2026-02-24/4267351.html"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-15/1225104539.PDF",
+        "note": "巨潮官方《中科曙光2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 61.43 亿元, GM 39.38%, NM 19.7%"
       },
       {
         "q": "2026Q1",
-        "rev": 32,
-        "gm": 26.6,
-        "nm": 7.1,
+        "rev": 31.99,
+        "gm": 26.56,
+        "nm": 7.12,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2026042600002959.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-25/1225181297.PDF",
+        "note": "巨潮官方《中科曙光2026年第一季度报告》合并利润表, 2026年一季报本期数: 营业收入 31.99 亿元, GM 26.56%, NM 7.12%"
       }
     ],
     "strategic": 8,
@@ -229,44 +243,47 @@
       {
         "q": "2025Q1",
         "rev": 12.22,
-        "gm": 64.5,
-        "nm": 42.96,
+        "gm": 60.45,
+        "nm": 42.98,
         "src": "A",
-        "source_url": "http://stcn.com/article/detail/1689533.html",
-        "note": "2025Q1: 营收 12.22亿/归母 5.25亿(+135% YoY); NM=42.96%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-24/1223233181.PDF",
+        "note": "巨潮官方《澜起科技2025年第一季度报告》合并利润表, 2025年一季报本期数: 营业收入 12.22 亿元, GM 60.45%, NM 42.98%；原二手源数值 (rev 12.22, gm 64.5, nm 42.96) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q2",
-        "rev": 14.1,
-        "gm": 60.4,
-        "nm": 44.9,
+        "rev": 14.11,
+        "gm": 60.43,
+        "nm": 44.91,
         "src": "A",
-        "source_url": "https://news.qq.com/rain/a/20250831A01ICR00",
-        "note": "Q2 GM差减法: Q1 GM=60.45%(rev=12.22亿,一季报) + H1 GM=60.44%(rev=26.33亿,半年报) → Q2 GP=8.527/14.11=60.43%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-30/1224627769.PDF",
+        "note": "巨潮官方《澜起科技2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 14.11 亿元, GM 60.43%, NM 44.91%"
       },
       {
         "q": "2025Q3",
-        "rev": 14.2,
-        "gm": 63.4,
-        "nm": 33.2,
+        "rev": 14.24,
+        "gm": 63.34,
+        "nm": 33.23,
         "src": "A",
-        "source_url": "http://star.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-10-31/688008_20251031_ATNV.pdf"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-31/1224775589.PDF",
+        "note": "巨潮官方《澜起科技2025年第三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 14.24 亿元, GM 63.34%, NM 33.23%"
       },
       {
         "q": "2025Q4",
-        "rev": 14,
-        "gm": 64.5,
-        "nm": 43.2,
+        "rev": 13.99,
+        "gm": 64.46,
+        "nm": 43.13,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2026040100005379.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-31/1225057736.PDF",
+        "note": "巨潮官方《澜起科技2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 13.99 亿元, GM 64.46%, NM 43.13%"
       },
       {
         "q": "2026Q1",
-        "rev": 14.6,
-        "gm": 69.8,
-        "nm": 56.8,
+        "rev": 14.61,
+        "gm": 69.79,
+        "nm": 58.01,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2026042900024218.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-28/1225206629.PDF",
+        "note": "巨潮官方《澜起科技2026年第一季度报告》合并利润表, 2026年一季报本期数: 营业收入 14.61 亿元, GM 69.79%, NM 58.01%"
       }
     ],
     "strategic": 8,
@@ -287,41 +304,44 @@
         "gm": 61.19,
         "nm": 21.08,
         "src": "A",
-        "source_url": "https://news.qq.com/rain/a/20250423A017FM00",
-        "note": "2025Q1: 营收 24亿/归母 5.06亿(+75% YoY); NM=NI/Rev=5.06/24=21.08%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-22/1223185859.PDF",
+        "note": "巨潮官方《海光信息技术股份有限公司2025年第一季度报告》合并利润表, 2025年一季报本期数: 营业收入 24.0 亿元, GM 61.19%, NM 21.08%"
       },
       {
         "q": "2025Q2",
-        "rev": 30.6,
-        "gm": 59.3,
+        "rev": 30.64,
+        "gm": 59.33,
         "nm": 22.7,
         "src": "A",
-        "source_url": "https://news.qq.com/rain/a/20250807A01CGL00"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-06/1224401320.PDF",
+        "note": "巨潮官方《海光信息技术股份有限公司2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 30.64 亿元, GM 59.33%, NM 22.7%"
       },
       {
         "q": "2025Q3",
-        "rev": 40.3,
-        "gm": 60,
-        "nm": 18.9,
+        "rev": 40.26,
+        "gm": 60.03,
+        "nm": 18.88,
         "src": "A",
-        "source_url": "https://www.yicai.com/news/102866868.html"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-16/1224713921.PDF",
+        "note": "巨潮官方《海光信息技术股份有限公司2025年第三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 40.26 亿元, GM 60.03%, NM 18.88%"
       },
       {
         "q": "2025Q4",
         "rev": 48.87,
-        "gm": 53.5,
-        "nm": 11.95,
+        "gm": 53.42,
+        "nm": 11.94,
         "src": "A",
-        "source_url": "http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=688041&id=12066610",
-        "note": "差减法: FY2025 GM=57.83%(年报2026-04-08) rev=143.77亿/NI=25.45亿 - 9M(Q1~Q3) rev=94.9亿/GP=57.01亿/NI=19.61亿 → Q4 GP=26.13亿/GM=53.5%; rev=48.87亿/NI=5.84亿/NM=11.95%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-08/1225083088.PDF",
+        "note": "巨潮官方《海光信息技术股份有限公司2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 48.87 亿元, GM 53.42%, NM 11.94%"
       },
       {
         "q": "2026Q1",
-        "rev": 40.3,
+        "rev": 40.34,
         "gm": 55.6,
-        "nm": 17,
+        "nm": 17.03,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/jjxw/2026-04-07/doc-inhtsrra2187898.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-08/1225083112.PDF",
+        "note": "巨潮官方《海光信息技术股份有限公司2026年第一季度报告》合并利润表, 2026年一季报本期数: 营业收入 40.34 亿元, GM 55.6%, NM 17.03%"
       }
     ],
     "strategic": 10,
@@ -342,42 +362,44 @@
         "gm": 38.0,
         "nm": -121.07,
         "src": "A",
-        "source_url": "https://dataclouds.cninfo.com.cn/shgonggao/hsomarket/2026/20260428/8d881f598b6d4aff9924b01a3ba04654.PDF",
-        "note": "2026Q1 official quarterly report comparative column: 2025Q1 revenue 124,955,396.95 yuan; cost 77,476,551.05 yuan; attributable net profit -151,280,445.14 yuan."
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-29/1223391246.PDF",
+        "note": "巨潮官方《龙芯中科2025年第一季度报告》合并利润表, 2025年一季报本期数: 营业收入 1.25 亿元, GM 38.0%, NM -121.07%"
       },
       {
         "q": "2025Q2",
         "rev": 1.19,
-        "gm": 47.1,
-        "nm": -120.2,
+        "gm": 47.13,
+        "nm": -120.77,
         "src": "A",
-        "source_url": "https://news.qq.com/rain/a/20250829A01EOD00",
-        "note": "差减法: H1 rev=2.44亿/GM=42.44%/NI=-2.94亿(中报) - Q1 rev=1.25亿/GM=38.0%/NI=-1.51亿(一季报) → Q2 rev=1.19亿(中报直接披露验证)/NI=-1.43亿/NM=-120.2%; Q2 GP=(2.44×0.4244-1.25×0.38)/1.19=47.1%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-28/1224596786.PDF",
+        "note": "巨潮官方《龙芯中科2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 1.19 亿元, GM 47.13%, NM -120.77%"
       },
       {
         "q": "2025Q3",
-        "rev": 1.1,
-        "gm": 42.4,
-        "nm": -92.5,
+        "rev": 1.07,
+        "gm": 42.2,
+        "nm": -92.69,
         "src": "A",
-        "source_url": "https://finance.sina.cn/2025-11-09/detail-infwvitk9978935.d.html"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-29/1224755127.PDF",
+        "note": "巨潮官方《龙芯中科2025年第三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 1.07 亿元, GM 42.2%, NM -92.69%"
       },
       {
         "q": "2025Q4",
-        "rev": 2.84,
-        "gm": 52.3,
-        "nm": -21.5,
+        "rev": 2.85,
+        "gm": 52.83,
+        "nm": -21.55,
         "src": "A",
-        "source_url": "https://stockmc.xueqiu.com/202604/688047_20260429_EN5Q.pdf",
-        "note": "差减法: FY rev=6.35亿/GM=47.06%/NI=-4.55亿(年报) - 9M rev=3.51亿/NI=-3.94亿(三季报) → Q4 rev=2.84亿/NI=-0.61亿/NM=-21.5%; Q4 GP=FY GP(2.988)-[H1 GP(1.036)+Q3 GP(0.466)]=1.486/2.84=52.3%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-29/1225234886.PDF",
+        "note": "巨潮官方《龙芯中科2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 2.85 亿元, GM 52.83%, NM -21.55%"
       },
       {
         "q": "2026Q1",
-        "rev": 1.4,
-        "gm": 34.9,
-        "nm": -84.4,
+        "rev": 1.35,
+        "gm": 34.87,
+        "nm": -84.48,
         "src": "A",
-        "source_url": "http://dataclouds.cninfo.com.cn/shgonggao/hsomarket/2026/20260428/8d881f598b6d4aff9924b01a3ba04654.PDF"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-29/1225234957.PDF",
+        "note": "巨潮官方《龙芯中科2026年第一季度报告》合并利润表, 2026年一季报本期数: 营业收入 1.35 亿元, GM 34.87%, NM -84.48%；原二手源数值 (rev 1.4, gm 34.9, nm -84.4) 与官方合并利润表口径不一致, 已替换"
       }
     ],
     "strategic": 7,
@@ -396,42 +418,46 @@
         "q": "2025Q1",
         "rev": 11.11,
         "gm": 55.99,
-        "nm": 31.96,
+        "nm": 31.98,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2025042000000504.shtml",
-        "note": "2025Q1: 营收+4230% YoY, 归母 3.55亿"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-19/1223155692.PDF",
+        "note": "巨潮官方《2025年第一季度报告》合并利润表, 2025年一季报本期数: 营业收入 11.11 亿元, GM 55.99%, NM 31.98%"
       },
       {
         "q": "2025Q2",
-        "rev": 17.7,
-        "gm": 55.9,
-        "nm": 38.6,
+        "rev": 17.69,
+        "gm": 55.88,
+        "nm": 38.58,
         "src": "A",
-        "source_url": "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=688256"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-27/1224586025.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 17.69 亿元, GM 55.88%, NM 38.58%"
       },
       {
         "q": "2025Q3",
-        "rev": 17.3,
-        "gm": 54.2,
-        "nm": 32.8,
+        "rev": 17.27,
+        "gm": 54.24,
+        "nm": 32.81,
         "src": "A",
-        "source_url": "https://cj.sina.com.cn/articles/view/1850649324/6e4eaaec020021wtu"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-18/1224719401.PDF",
+        "note": "巨潮官方《2025年第三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 17.27 亿元, GM 54.24%, NM 32.81%"
       },
       {
         "q": "2025Q4",
         "rev": 18.9,
-        "gm": 54.8,
-        "nm": 24.1,
+        "gm": 54.81,
+        "nm": 24.05,
         "src": "A",
-        "source_url": "https://wallstreetcn.com/articles/3766363"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-13/1225007336.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 18.9 亿元, GM 54.81%, NM 24.05%"
       },
       {
         "q": "2026Q1",
-        "rev": 28.9,
-        "gm": 54.3,
-        "nm": 35.1,
+        "rev": 28.85,
+        "gm": 54.33,
+        "nm": 35.12,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/tech/roll/2026-05-01/doc-inhwktzf6603604.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-30/1225264337.PDF",
+        "note": "巨潮官方《2026年第一季度报告》合并利润表, 2026年一季报本期数: 营业收入 28.85 亿元, GM 54.33%, NM 35.12%"
       }
     ],
     "strategic": 10,
@@ -452,40 +478,44 @@
         "gm": 17.75,
         "nm": 0.58,
         "src": "A",
-        "source_url": "http://www.jjckb.cn/20250514/e616871f9057425896f058998987d093/c.html",
-        "note": "2025Q1: 营收 39.13亿/归母 0.23亿(-89.73% YoY); GM 17.75%; NM=0.23/39.13=0.58%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-05-09/1223494524.PDF",
+        "note": "巨潮官方《2025年第一季度报告》合并利润表, 2025年一季报本期数: 营业收入 39.13 亿元, GM 17.75%, NM 0.58%"
       },
       {
         "q": "2025Q2",
-        "rev": 41.1,
+        "rev": 41.05,
         "gm": 17.4,
-        "nm": 1.3,
+        "nm": 1.26,
         "src": "A",
-        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-29/1224609533.PDF"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-29/1224609533.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 41.05 亿元, GM 17.4%, NM 1.26%"
       },
       {
         "q": "2025Q3",
-        "rev": 45.7,
-        "gm": 21.3,
-        "nm": 3.9,
+        "rev": 45.66,
+        "gm": 21.28,
+        "nm": 3.88,
         "src": "A",
-        "source_url": "http://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-11-07/688347_20251107_2NMV.pdf"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-11-07/1224790453.PDF",
+        "note": "巨潮官方《2025年第三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 45.66 亿元, GM 21.28%, NM 3.88%"
       },
       {
         "q": "2025Q4",
-        "rev": 47.1,
+        "rev": 47.08,
         "gm": 18.2,
-        "nm": 2.7,
+        "nm": 2.66,
         "src": "A",
-        "source_url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-3/2026-03-27/12025390.PDF"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-05-15/1225307974.PDF",
+        "note": "巨潮官方《2025年年度报告(修订版)》合并利润表, 2025年报−三季报累计: 营业收入 47.08 亿元, GM 18.2%, NM 2.66%"
       },
       {
         "q": "2026Q1",
-        "rev": 46.3,
-        "gm": 17.6,
-        "nm": 3.0,
+        "rev": 46.25,
+        "gm": 17.63,
+        "nm": 3.02,
         "src": "A",
-        "source_url": "https://stockmc.xueqiu.com/202604/688347_20260430_DFWW.pdf"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-05-15/1225306129.PDF",
+        "note": "巨潮官方《2026年第一季度报告》合并利润表, 2026年一季报本期数: 营业收入 46.25 亿元, GM 17.63%, NM 3.02%"
       }
     ],
     "strategic": 8,
@@ -503,43 +533,47 @@
       {
         "q": "2025Q1",
         "rev": 163.01,
-        "gm": 22.5,
+        "gm": 23.1,
         "nm": 8.32,
         "src": "A",
-        "source_url": "https://finance.eastmoney.com/a/202602103646748960.html",
-        "note": "2025Q1: 营收 163.01亿/归母 13.56亿(+166.5% YoY); GM 22.5%; NM 8.32%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-05-09/1223496514.PDF",
+        "note": "巨潮官方《中芯国际2025年第一季度报告》合并利润表, 2025年一季报本期数: 营业收入 163.01 亿元, GM 23.1%, NM 8.32%"
       },
       {
         "q": "2025Q2",
-        "rev": 160.5,
+        "rev": 160.47,
         "gm": 20.7,
-        "nm": 5.9,
+        "nm": 5.89,
         "src": "A",
-        "source_url": "https://stockmc.xueqiu.com/202508/688981_20250829_2XK0.pdf"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-29/1224608545.PDF",
+        "note": "巨潮官方《中芯国际2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 160.47 亿元, GM 20.7%, NM 5.89%"
       },
       {
         "q": "2025Q3",
-        "rev": 171.6,
-        "gm": 25.5,
-        "nm": 8.8,
+        "rev": 171.62,
+        "gm": 25.49,
+        "nm": 8.84,
         "src": "A",
-        "source_url": "https://static.cninfo.com.cn/finalpage/2025-11-14/1224804086.PDF"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-11-14/1224804086.PDF",
+        "note": "巨潮官方《中芯国际2025年第三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 171.62 亿元, GM 25.49%, NM 8.84%"
       },
       {
         "q": "2025Q4",
-        "rev": 178.1,
-        "gm": 17.4,
-        "nm": 6.9,
+        "rev": 178.13,
+        "gm": 17.38,
+        "nm": 6.86,
         "src": "A",
-        "source_url": "https://stockmc.xueqiu.com/202602/688981_20260211_WHRD.pdf"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-27/1225037057.PDF",
+        "note": "巨潮官方《中芯国际2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 178.13 亿元, GM 17.38%, NM 6.86%"
       },
       {
         "q": "2026Q1",
-        "rev": 176.2,
+        "rev": 176.17,
         "gm": 21.48,
-        "nm": 7.7,
+        "nm": 7.73,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/jjxw/2026-05-15/doc-inhxycck8172655.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-05-15/1225307101.PDF",
+        "note": "巨潮官方《中芯国际2026年第一季度报告》合并利润表, 2026年一季报本期数: 营业收入 176.17 亿元, GM 21.48%, NM 7.73%"
       }
     ],
     "strategic": 10,
@@ -562,7 +596,8 @@
       "market_cap_billion": "估算总市值 (亿元), 来源: 收盘价×总股本",
       "avg_turnover_pct": "近 60 日平均换手率 (%)"
     },
-    "market_cap_updated": "总市值更新于 2026-07-12 · 来源: 腾讯行情 f45 (A股亿元 / 美股亿美元) · scripts/update_market_caps.py"
+    "market_cap_updated": "总市值更新于 2026-07-12 · 来源: 腾讯行情 f45 (A股亿元 / 美股亿美元) · scripts/update_market_caps.py",
+    "source_policy_note": "2026-07 起全部季度财务统一来源: 巨潮资讯官方定期报告 PDF 合并利润表, 单季 = 累计报告差减 (Q2=半年报-一季报, Q3=三季报-半年报, Q4=年报-三季报); GM/NM 为合并利润表口径 (非公司叙述/产品线口径)"
   },
   "002261": {
     "name": "拓维信息",
@@ -577,41 +612,44 @@
         "gm": 13.86,
         "nm": 10.49,
         "src": "A",
-        "source_url": "https://www.163.com/dy/article/JU25OEKG051984TV.html",
-        "note": "2025Q1: 营收 6.23亿/归母 0.65亿; NM=0.6535/6.23=10.49%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-25/1223269760.PDF",
+        "note": "巨潮官方《2025年一季度报告》合并利润表, 2025年一季报本期数: 营业收入 6.23 亿元, GM 13.86%, NM 10.49%"
       },
       {
         "q": "2025Q2",
-        "rev": 6.8,
-        "gm": 18.3,
-        "nm": 2,
+        "rev": 6.83,
+        "gm": 18.32,
+        "nm": 1.97,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2025082700008463.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-26/1224565473.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 6.83 亿元, GM 18.32%, NM 1.97%"
       },
       {
         "q": "2025Q3",
-        "rev": 7.7,
-        "gm": 17.6,
-        "nm": 4.4,
+        "rev": 7.72,
+        "gm": 20.05,
+        "nm": 3.37,
         "src": "A",
-        "source_url": "https://news.qq.com/rain/a/20251025A01AW800"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-24/1224729598.PDF",
+        "note": "巨潮官方《2025年三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 7.72 亿元, GM 20.05%, NM 3.37%；原二手源数值 (rev 7.7, gm 17.6, nm 4.4) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q4",
-        "rev": 10.9,
-        "gm": 13.9,
-        "nm": -3.8,
+        "rev": 10.93,
+        "gm": 13.86,
+        "nm": -3.76,
         "src": "A",
-        "source_url": "https://finance.eastmoney.com/a/202604283721854580.html",
-        "note": "Q4 GM差减法: FY2025 GM=16.33%(rev=31.71亿,年报) - 9M GM=17.63%(rev=20.78亿,三季报) → Q4 GP=1.515/10.93=13.86%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-28/1225218107.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 10.93 亿元, GM 13.86%, NM -3.76%"
       },
       {
         "q": "2026Q1",
-        "rev": 5.9,
-        "gm": 17.2,
-        "nm": 10.4,
+        "rev": 5.94,
+        "gm": 17.21,
+        "nm": 10.35,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2026042900027382.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-28/1225218116.PDF",
+        "note": "巨潮官方《2026年一季度报告》合并利润表, 2026年一季报本期数: 营业收入 5.94 亿元, GM 17.21%, NM 10.35%"
       }
     ],
     "strategic": 9,
@@ -632,40 +670,44 @@
         "gm": 26.45,
         "nm": 5.15,
         "src": "A",
-        "source_url": "https://m.jiemian.com/article/12651539.html",
-        "note": "2025Q1: 营收 9.33亿/归母 0.48亿(-22.53% YoY); NM=0.4801/9.33=5.15%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-22/1223190833.PDF",
+        "note": "巨潮官方《2025年一季度报告》合并利润表, 2025年一季报本期数: 营业收入 9.33 亿元, GM 26.45%, NM 5.15%"
       },
       {
         "q": "2025Q2",
-        "rev": 16.4,
-        "gm": 26,
-        "nm": 10.2,
+        "rev": 16.41,
+        "gm": 25.97,
+        "nm": 10.22,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2025082000005148.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-19/1224505163.pdf",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 16.41 亿元, GM 25.97%, NM 10.22%"
       },
       {
         "q": "2025Q3",
-        "rev": 14.5,
+        "rev": 14.53,
         "gm": 29.4,
-        "nm": 12.6,
+        "nm": 12.63,
         "src": "A",
-        "source_url": "https://news.qq.com/rain/a/20251015A014X500"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-14/1224708054.PDF",
+        "note": "巨潮官方《2025年三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 14.53 亿元, GM 29.4%, NM 12.63%"
       },
       {
         "q": "2025Q4",
-        "rev": 20.4,
-        "gm": 28.9,
-        "nm": 6,
+        "rev": 20.42,
+        "gm": 28.93,
+        "nm": 6.02,
         "src": "A",
-        "source_url": "https://www.stcn.com/article/detail/3767752.html"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225131813.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 20.42 亿元, GM 28.93%, NM 6.02%"
       },
       {
         "q": "2026Q1",
-        "rev": 11.8,
-        "gm": 24.3,
-        "nm": 0.7,
+        "rev": 11.75,
+        "gm": 24.29,
+        "nm": 0.74,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2026042200011660.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225131821.PDF",
+        "note": "巨潮官方《2026年一季度报告》合并利润表, 2026年一季报本期数: 营业收入 11.75 亿元, GM 24.29%, NM 0.74%"
       }
     ],
     "strategic": 7,
@@ -686,32 +728,35 @@
         "gm": 3.45,
         "nm": 0.99,
         "src": "A",
-        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-30/1225257759.PDF",
-        "note": "取自公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表'上年同期'列: 营业收入 46,858,373,514.91 元, 营业成本 45,242,789,837.68 元 → GM 3.45%, 归母净利 462,663,827.52 元 → NM 0.99%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-30/1223410100.PDF",
+        "note": "巨潮官方《2025年一季度报告》合并利润表, 2025年一季报本期数: 营业收入 468.58 亿元, GM 3.45%, NM 0.99%"
       },
       {
         "q": "2025Q2",
-        "rev": 333.3,
-        "gm": 6.1,
-        "nm": 1,
+        "rev": 333.34,
+        "gm": 6.09,
+        "nm": 1.01,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2025082800005905.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-27/1224584510.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 333.34 亿元, GM 6.09%, NM 1.01%"
       },
       {
         "q": "2025Q3",
-        "rev": 404.8,
-        "gm": 5.6,
-        "nm": 1.7,
+        "rev": 404.77,
+        "gm": 5.62,
+        "nm": 1.69,
         "src": "A",
-        "source_url": "https://news.qq.com/rain/a/20251031A01MEA00"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-31/1224777770.PDF",
+        "note": "巨潮官方《2025年三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 404.77 亿元, GM 5.62%, NM 1.69%"
       },
       {
         "q": "2025Q4",
-        "rev": 441.1,
-        "gm": 4.8,
-        "nm": 2.1,
+        "rev": 441.13,
+        "gm": 4.82,
+        "nm": 2.11,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2026041200000901.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-11/1225096638.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 441.13 亿元, GM 4.82%, NM 2.11%"
       },
       {
         "q": "2026Q1",
@@ -720,7 +765,7 @@
         "nm": 1.71,
         "src": "A",
         "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-30/1225257759.PDF",
-        "note": "公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表本期数: 营业收入 35,470,325,836.04 元, GM 6.64%, 归母净利率 1.71% (原二手来源数值 (354.7, 6.6, 1.7) 已用官方口径替换并核验一致)"
+        "note": "巨潮官方《2026年一季度报告》合并利润表, 2026年一季报本期数: 营业收入 354.7 亿元, GM 6.64%, NM 1.71%"
       }
     ],
     "strategic": 6,
@@ -741,40 +786,44 @@
         "gm": 3.73,
         "nm": 0.68,
         "src": "A",
-        "source_url": "http://stock.stockstar.com/RB2025042700001308.shtml",
-        "note": "2025Q1: 营收 317.78亿/归母 2.17亿(-7.51% YoY); NM=2.17/317.78=0.68%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-26/1223314106.PDF",
+        "note": "巨潮官方《2025年一季度报告》合并利润表, 2025年一季报本期数: 营业收入 317.78 亿元, GM 3.73%, NM 0.68%"
       },
       {
         "q": "2025Q2",
-        "rev": 398.1,
+        "rev": 398.07,
         "gm": 3.3,
-        "nm": 0.5,
+        "nm": 0.53,
         "src": "A",
-        "source_url": "https://caifuhao.eastmoney.com/news/20250918164626550333340"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-28/1224595113.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 398.07 亿元, GM 3.3%, NM 0.53%"
       },
       {
         "q": "2025Q3",
         "rev": 307.8,
-        "gm": 3.7,
-        "nm": 0.8,
+        "gm": 3.69,
+        "nm": 0.79,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2025110100007084.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-31/1224776837.PDF",
+        "note": "巨潮官方《2025年三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 307.8 亿元, GM 3.69%, NM 0.79%"
       },
       {
         "q": "2025Q4",
-        "rev": 413.9,
-        "gm": 3,
-        "nm": -0.4,
+        "rev": 413.86,
+        "gm": 3.02,
+        "nm": -0.36,
         "src": "A",
-        "source_url": "http://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=000034"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-06-13/1225367858.PDF",
+        "note": "巨潮官方《2025年年度报告（更正后）》合并利润表, 2025年报−三季报累计: 营业收入 413.86 亿元, GM 3.02%, NM -0.36%"
       },
       {
         "q": "2026Q1",
-        "rev": 405.6,
-        "gm": 3.4,
-        "nm": 0.6,
+        "rev": 405.57,
+        "gm": 3.37,
+        "nm": 0.58,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/SS2026042900039497.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-28/1225199835.PDF",
+        "note": "巨潮官方《2026年一季度报告》合并利润表, 2026年一季报本期数: 营业收入 405.57 亿元, GM 3.37%, NM 0.58%"
       }
     ],
     "strategic": 7,
@@ -795,40 +844,44 @@
         "gm": 15.67,
         "nm": 1.68,
         "src": "A",
-        "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202505011665622181_1.pdf",
-        "note": "2025Q1: 营收 207.90亿/归母 3.49亿(-15.75%); NM=3.49/207.9=1.68%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-29/1223369461.PDF",
+        "note": "巨潮官方《2025年一季度报告》合并利润表, 2025年一季报本期数: 营业收入 207.9 亿元, GM 15.67%, NM 1.68%"
       },
       {
         "q": "2025Q2",
-        "rev": 266.4,
+        "rev": 266.35,
         "gm": 14.9,
-        "nm": 3.4,
+        "nm": 2.6,
         "src": "A",
-        "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202509231749111136_1.pdf"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-30/1224619063.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 266.35 亿元, GM 14.9%, NM 2.6%"
       },
       {
         "q": "2025Q3",
-        "rev": 299,
-        "gm": 11.3,
-        "nm": 1.2,
+        "rev": 298.97,
+        "gm": 11.32,
+        "nm": 1.21,
         "src": "A",
-        "source_url": "http://stock.stockstar.com/RB2025110100009680.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-31/1224776091.PDF",
+        "note": "巨潮官方《2025年三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 298.97 亿元, GM 11.32%, NM 1.21%"
       },
       {
         "q": "2025Q4",
-        "rev": 194.3,
-        "gm": 18.1,
-        "nm": 1.5,
+        "rev": 194.26,
+        "gm": 18.05,
+        "nm": 1.45,
         "src": "A",
-        "source_url": "https://paper.cnstock.com/html/2026-04/15/content_2199750.htm"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-15/1225101866.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表 (PDF数字含空格, 人工读取): FY2025 营收 96,748,339,344.03 元, 营业成本 82,631,846,618.39 元, 归母净利 1,685,521,754.82 元; 2025Q4 = 年报 − 前三季单季合计；原二手源数值 (194.3, 18.1, 1.5) 已替换"
       },
       {
         "q": "2026Q1",
-        "rev": 279.9,
-        "gm": 12.9,
-        "nm": 2.8,
+        "rev": 279.85,
+        "gm": 12.88,
+        "nm": 2.82,
         "src": "A",
-        "source_url": "https://www.stcn.com/article/detail/3844726.html"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-29/1225231846.PDF",
+        "note": "巨潮官方《2026年一季度报告》合并利润表, 2026年一季报本期数: 营业收入 279.85 亿元, GM 12.88%, NM 2.82%"
       }
     ],
     "strategic": 7,
@@ -849,32 +902,35 @@
         "gm": 13.2,
         "nm": 1.66,
         "src": "A",
-        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-30/1225261883.PDF",
-        "note": "取自公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表'上年同期'列: 营业收入 6,092,434,550.56 元, 营业成本 5,288,439,776.37 元 → GM 13.2%, 归母净利 101,389,231.19 元 → NM 1.66%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-30/1223404628.PDF",
+        "note": "巨潮官方《2025年一季度报告》合并利润表, 2025年一季报本期数: 营业收入 60.92 亿元, GM 13.2%, NM 1.66%"
       },
       {
         "q": "2025Q2",
-        "rev": 69.5,
-        "gm": 16.1,
-        "nm": 4.5,
+        "rev": 69.46,
+        "gm": 16.12,
+        "nm": 4.47,
         "src": "A",
-        "source_url": "https://www.cnenergynews.cn/jinrong/2025/09/18/detail_20250918234910.html"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-29/1224607849.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 69.46 亿元, GM 16.12%, NM 4.47%"
       },
       {
         "q": "2025Q3",
-        "rev": 70.8,
-        "gm": 16.2,
-        "nm": 7.2,
+        "rev": 70.78,
+        "gm": 16.18,
+        "nm": 6.34,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2025102900009270.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-28/1224744935.PDF",
+        "note": "巨潮官方《2025年三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 70.78 亿元, GM 16.18%, NM 6.34%"
       },
       {
         "q": "2025Q4",
-        "rev": 78.1,
-        "gm": 12.8,
-        "nm": 4.6,
+        "rev": 78.05,
+        "gm": 12.86,
+        "nm": 4.59,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2026041800008724.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225112762.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 78.05 亿元, GM 12.86%, NM 4.59%"
       },
       {
         "q": "2026Q1",
@@ -883,7 +939,7 @@
         "nm": 4.4,
         "src": "A",
         "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-30/1225261883.PDF",
-        "note": "公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表本期数: 营业收入 7,481,674,677.05 元, GM 13.32%, 归母净利率 4.4% (原二手来源数值 (74.8, 13.3, 4.4) 已用官方口径替换并核验一致)"
+        "note": "巨潮官方《2026年一季度报告》合并利润表, 2026年一季报本期数: 营业收入 74.82 亿元, GM 13.32%, NM 4.4%"
       }
     ],
     "strategic": 8,
@@ -900,44 +956,48 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": 13.5,
-        "gm": 36.0,
-        "nm": 17.0,
+        "rev": 21.18,
+        "gm": 28.5,
+        "nm": 12.29,
         "src": "A",
-        "source_url": "https://www.shidaotec.com/fina-analysis/2025-03-31/002409.html",
-        "note": "2025Q1: 营收增速 +30.88%, NM 增速 +5.85%; 营收/GM/NM 由 H1 拆估"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-30/1223413689.PDF",
+        "note": "巨潮官方《2025年一季度报告》合并利润表, 2025年一季报本期数: 营业收入 21.18 亿元, GM 28.5%, NM 12.29%；原二手源数值 (rev 13.5, gm 36.0, nm 17.0) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q2",
-        "rev": 21.8,
-        "gm": 35.1,
-        "nm": 12.1,
+        "rev": 21.75,
+        "gm": 35.06,
+        "nm": 12.07,
         "src": "A",
-        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-28/1224588180.PDF"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-28/1224588180.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 21.75 亿元, GM 35.06%, NM 12.07%"
       },
       {
         "q": "2025Q3",
-        "rev": 21.7,
-        "gm": 32.8,
-        "nm": 12.6,
+        "rev": 21.74,
+        "gm": 32.78,
+        "nm": 12.57,
         "src": "A",
-        "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2025-10-31/153d1571-bdff-44f1-bc33-5338a54806ce.PDF"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-31/1224774053.PDF",
+        "note": "巨潮官方《2025年三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 21.74 亿元, GM 32.78%, NM 12.57%"
       },
       {
         "q": "2025Q4",
-        "rev": 21.4,
-        "gm": 27.4,
-        "nm": 9.5,
+        "rev": 21.45,
+        "gm": 27.38,
+        "nm": 9.52,
         "src": "A",
-        "source_url": "http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002409"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-28/1225216877.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 21.45 亿元, GM 27.38%, NM 9.52%"
       },
       {
         "q": "2026Q1",
-        "rev": 19.7,
-        "gm": 31.3,
-        "nm": 13.5,
+        "rev": 19.73,
+        "gm": 31.25,
+        "nm": 13.52,
         "src": "A",
-        "source_url": "https://news.qq.com/rain/a/20260429A02A0N00"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-28/1225216885.PDF",
+        "note": "巨潮官方《2026年一季度报告》合并利润表, 2026年一季报本期数: 营业收入 19.73 亿元, GM 31.25%, NM 13.52%"
       }
     ],
     "strategic": 7,
@@ -954,44 +1014,48 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": 91.71,
-        "gm": 14.55,
-        "nm": 2.17,
+        "rev": 93.35,
+        "gm": 12.63,
+        "nm": 2.18,
         "src": "A",
-        "source_url": "https://www.sdyanbao.com/detail/745541",
-        "note": "2025Q1: 营收 91.71亿(-1.76%)/归母 2.0亿(+42.74%); GM 14.55%; NM 2.17%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-29/1223363992.PDF",
+        "note": "巨潮官方《江苏长电科技股份有限公司2025年第一季度报告》合并利润表, 2025年一季报本期数: 营业收入 93.35 亿元, GM 12.63%, NM 2.18%；原二手源数值 (rev 91.71, gm 14.55, nm 2.17) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q2",
         "rev": 92.7,
-        "gm": 12.7,
+        "gm": 14.31,
         "nm": 2.88,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/stock/aiassist/yjbg/2025-08-28/doc-infnpuac8155743.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-21/1224525817.PDF",
+        "note": "巨潮官方《江苏长电科技股份有限公司2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 92.7 亿元, GM 14.31%, NM 2.88%；原二手源数值 (rev 92.7, gm 12.7, nm 2.88) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q3",
-        "rev": 100.6,
+        "rev": 100.64,
         "gm": 14.25,
         "nm": 4.8,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2025102500005372.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-24/1224728416.PDF",
+        "note": "巨潮官方《江苏长电科技股份有限公司2025年第三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 100.64 亿元, GM 14.25%, NM 4.8%"
       },
       {
         "q": "2025Q4",
-        "rev": 102.0,
-        "gm": 13.8,
-        "nm": 6.0,
+        "rev": 102.02,
+        "gm": 15.28,
+        "nm": 5.99,
         "src": "A",
-        "source_url": "https://stockmc.xueqiu.com/202604/600584_20260410_UBW0.pdf"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-10/1225091498.PDF",
+        "note": "巨潮官方《江苏长电科技股份有限公司2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 102.02 亿元, GM 15.28%, NM 5.99%"
       },
       {
         "q": "2026Q1",
-        "rev": 91.7,
+        "rev": 91.71,
         "gm": 14.55,
-        "nm": 3.16,
+        "nm": 3.17,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/jjxw/2026-04-29/doc-inhwckrq6871876.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-29/1225224901.PDF",
+        "note": "巨潮官方《江苏长电科技股份有限公司2026年第一季度报告》合并利润表, 2026年一季报本期数: 营业收入 91.71 亿元, GM 14.55%, NM 3.17%"
       }
     ],
     "strategic": 8,
@@ -1010,18 +1074,19 @@
         "q": "2025Q1",
         "rev": 40.38,
         "gm": 32.75,
-        "nm": 18.87,
+        "nm": 18.88,
         "src": "A",
-        "source_url": "https://wallstreetcn.com/articles/3770620",
-        "note": "2025Q1: 营收 40.38亿/归母 7.62亿(+48.11% YoY); GM 32.75%; NM=7.62/40.38=18.87%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-25/1223267176.PDF",
+        "note": "巨潮官方《2025年一季度报告》合并利润表, 2025年一季报本期数: 营业收入 40.38 亿元, GM 32.75%, NM 18.88%"
       },
       {
         "q": "2025Q2",
         "rev": 44.56,
-        "gm": 35.2,
-        "nm": 20.6,
+        "gm": 37.31,
+        "nm": 20.65,
         "src": "A",
-        "source_url": "https://wap.stockstar.com/detail/RB2025082300006515"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-22/1224535064.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 44.56 亿元, GM 37.31%, NM 20.65%；原二手源数值 (rev 44.56, gm 35.2, nm 20.6) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q3",
@@ -1029,23 +1094,26 @@
         "gm": 35.84,
         "nm": 20.62,
         "src": "A",
-        "source_url": "https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/search/rptid/816312994376/index.phtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-29/1224755010.PDF",
+        "note": "巨潮官方《2025年三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 50.19 亿元, GM 35.84%, NM 20.62%"
       },
       {
         "q": "2025Q4",
         "rev": 54.33,
-        "gm": 36.5,
-        "nm": 20.32,
+        "gm": 35.66,
+        "nm": 20.33,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/stock/aigc/stockfs/2026-03-24/doc-inhsavwy0494234.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-25/1225027832.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 54.33 亿元, GM 35.66%, NM 20.33%"
       },
       {
         "q": "2026Q1",
         "rev": 62.14,
         "gm": 35.63,
-        "nm": 19.98,
+        "nm": 19.99,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/stock/relnews/cn/2026-04-22/doc-inhvkqha6082058.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-23/1225147393.PDF",
+        "note": "巨潮官方《2026年一季度报告》合并利润表, 2026年一季报本期数: 营业收入 62.14 亿元, GM 35.63%, NM 19.99%"
       }
     ],
     "strategic": 8,
@@ -1063,47 +1131,47 @@
       {
         "q": "2025Q1",
         "rev": 43.12,
-        "gm": 35.22,
-        "nm": 21.36,
+        "gm": 33.37,
+        "nm": 21.35,
         "src": "A",
-        "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ300476",
-        "note": "东方财富/财经摘要 + 已有H1差减线索: Q1营收43.12亿、归母9.21亿；毛利率缺单季营业成本，暂用2025年AI服务器PCB毛利率35.22%近似，待公告单季成本替换。"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-22/1223193364.PDF",
+        "note": "巨潮官方《2025年一季度报告》合并利润表, 2025年一季报本期数: 营业收入 43.12 亿元, GM 33.37%, NM 21.35%；原二手源数值 (rev 43.12, gm 35.22, nm 21.36) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q2",
         "rev": 47.19,
-        "gm": 36.22,
-        "nm": 25.89,
+        "gm": 38.83,
+        "nm": 25.91,
         "src": "A",
-        "source_url": "https://wap.stockstar.com/detail/RB2025090600006117",
-        "note": "H1 90.31亿/归母21.43亿; Q1 43.12亿/9.21亿; Q2=H1-Q1"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-27/1224583516.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 47.19 亿元, GM 38.83%, NM 25.91%；原二手源数值 (rev 47.19, gm 36.22, nm 25.89) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q3",
         "rev": 50.86,
-        "gm": 35.85,
+        "gm": 35.19,
         "nm": 21.66,
         "src": "A",
-        "source_url": "https://wallstreetcn.com/articles/3757994",
-        "note": "9M 141.17亿/归母32.45亿; Q3 单季 50.86亿/11.02亿 (公司三季报)"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-28/1224747048.PDF",
+        "note": "巨潮官方《2025年三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 50.86 亿元, GM 35.19%, NM 21.66%"
       },
       {
         "q": "2025Q4",
         "rev": 51.75,
-        "gm": 35.0,
+        "gm": 33.51,
         "nm": 20.62,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/roll/2026-03-12/doc-inhqtyyi4632124.shtml",
-        "note": "FY 192.92亿/归母43.12亿/扣非43.04亿 (+273.52% YoY); Q4=FY-9M=51.75亿/10.67亿"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-13/1225007455.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 51.75 亿元, GM 33.51%, NM 20.62%"
       },
       {
         "q": "2026Q1",
         "rev": 55.19,
-        "gm": 34.5,
+        "gm": 34.46,
         "nm": 23.34,
         "src": "A",
-        "source_url": "https://cj.sina.com.cn/articles/view/7935425109/1d8fcfa5502001f7mw",
-        "note": "营收 55.19亿/归母 12.88亿/扣非 12.57亿 (差 2.4% 主营驱动); NM=23.34% 与 FY 2025 NM 22.4% 一致, 非一次性"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-29/1225238227.PDF",
+        "note": "巨潮官方《2026年一季度报告》合并利润表, 2026年一季报本期数: 营业收入 55.19 亿元, GM 34.46%, NM 23.34%"
       }
     ],
     "strategic": 7,
@@ -1122,43 +1190,46 @@
         "q": "2025Q1",
         "rev": 82.06,
         "gm": 43.02,
-        "nm": 19.11,
+        "nm": 19.26,
         "src": "A",
-        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-29/1224615664.PDF",
-        "note": "半年报差减口径: H1营收161.42亿、Q2 79.36亿 => Q1 82.06亿；H1归母32.08亿、Q2 16.40亿 => Q1 15.68亿；Q1毛利率43.02%来自已有差减备注。"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-26/1223309242.PDF",
+        "note": "巨潮官方《2025年一季度报告》合并利润表, 2025年一季报本期数: 营业收入 82.06 亿元, GM 43.02%, NM 19.26%"
       },
       {
         "q": "2025Q2",
-        "rev": 79.4,
-        "gm": 41.3,
-        "nm": 20.7,
+        "rev": 79.36,
+        "gm": 41.29,
+        "nm": 20.51,
         "src": "A",
         "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-29/1224615664.PDF",
-        "note": "差减法: H1 rev=161.42亿/Q1 rev=82.06亿(一季报) → Q2=79.36亿; H1 GM=42.17%/Q1 GM=43.02% → Q2 GP=32.77/79.36=41.3%; H1 NI=32.08亿/Q1 NI=15.68亿 → Q2 NI=16.40亿/79.36=20.7%"
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 79.36 亿元, GM 41.29%, NM 20.51%"
       },
       {
         "q": "2025Q3",
         "rev": 111.6,
-        "gm": 40.3,
-        "nm": 17.2,
+        "gm": 40.31,
+        "nm": 17.23,
         "src": "A",
-        "source_url": "https://wallstreetcn.com/articles/3758308"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-31/1224774311.PDF",
+        "note": "巨潮官方《2025年三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 111.6 亿元, GM 40.31%, NM 17.23%"
       },
       {
         "q": "2025Q4",
-        "rev": 120.53,
+        "rev": 120.52,
         "gm": 37.15,
-        "nm": 3.56,
+        "nm": 3.25,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/stock/aigc/stockfs/2026-04-17/doc-inhuvres2044700.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225122918.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 120.52 亿元, GM 37.15%, NM 3.25%"
       },
       {
         "q": "2026Q1",
         "rev": 103.23,
-        "gm": 40.8,
+        "gm": 40.77,
         "nm": 15.84,
         "src": "A",
-        "source_url": "https://finance.eastmoney.com/a/202605013727341211.html"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-30/1225259650.PDF",
+        "note": "巨潮官方《2026年一季度报告》合并利润表, 2026年一季报本期数: 营业收入 103.23 亿元, GM 40.77%, NM 15.84%"
       }
     ],
     "strategic": 9,
@@ -1175,44 +1246,48 @@
     "quarters": [
       {
         "q": "2025Q1",
-        "rev": 21.01,
-        "gm": 41.5,
-        "nm": 14.2,
+        "rev": 21.73,
+        "gm": 41.54,
+        "nm": 14.41,
         "src": "A",
-        "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202504251662192766_1.pdf",
-        "note": "2025Q1: 营收 21.01亿/归母 3.1亿(+25.7% YoY); GM 41.5%; NM 14.2%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-25/1223281418.PDF",
+        "note": "巨潮官方《2025年第一季度报告》合并利润表, 2025年一季报本期数: 营业收入 21.73 亿元, GM 41.54%, NM 14.41%；原二手源数值 (rev 21.01, gm 41.5, nm 14.2) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q2",
         "rev": 27.87,
         "gm": 38.54,
-        "nm": 14.1,
+        "nm": 14.09,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/stock/aiassist/yjbg/2025-08-28/doc-infnpuac8155743.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-29/1224606011.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 27.87 亿元, GM 38.54%, NM 14.09%"
       },
       {
         "q": "2025Q3",
-        "rev": 31.09,
-        "gm": 39.6,
-        "nm": 16.21,
+        "rev": 31.02,
+        "gm": 37.89,
+        "nm": 16.29,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/stock/aiassist/yjbg/2025-10-29/doc-infvqfei7936000.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-30/1224763575.PDF",
+        "note": "巨潮官方《2025年第三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 31.02 亿元, GM 37.89%, NM 16.29%；原二手源数值 (rev 31.09, gm 39.6, nm 16.21) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q4",
-        "rev": 43.2,
-        "gm": 39.1,
-        "nm": 20.8,
+        "rev": 43.22,
+        "gm": 39.29,
+        "nm": 20.83,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/roll/2026-04-01/doc-inhszihk2481807.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-31/1225062431.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 43.22 亿元, GM 39.29%, NM 20.83%"
       },
       {
         "q": "2026Q1",
         "rev": 29.15,
-        "gm": 40.5,
-        "nm": 31.9,
+        "gm": 39.89,
+        "nm": 31.92,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/jjxw/2026-04-28/doc-inhvzfsh8542848.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-28/1225215453.PDF",
+        "note": "巨潮官方《2026年第一季度报告》合并利润表, 2026年一季报本期数: 营业收入 29.15 亿元, GM 39.89%, NM 31.92%"
       }
     ],
     "strategic": 9,
@@ -1233,40 +1308,44 @@
         "gm": 46.37,
         "nm": 25.58,
         "src": "A",
-        "source_url": "https://news.qq.com/rain/a/20250430A01H4X00",
-        "note": "2025Q1: 营收 9.12亿/归母 2.33亿(+15.47% YoY); GM 46.37%; NM 25.58%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-29/1223387665.PDF",
+        "note": "巨潮官方《2025年第一季度报告》合并利润表, 2025年一季报本期数: 营业收入 9.12 亿元, GM 46.37%, NM 25.58%"
       },
       {
         "q": "2025Q2",
-        "rev": 12.65,
-        "gm": 45.8,
-        "nm": 24.7,
+        "rev": 10.37,
+        "gm": 45.82,
+        "nm": 26.23,
         "src": "A",
-        "source_url": "https://reportify.cn/reports/1158827575217360896"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-29/1224611390.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 10.37 亿元, GM 45.82%, NM 26.23%；原二手源数值 (rev 12.65, gm 45.8, nm 24.7) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q3",
-        "rev": 10.17,
+        "rev": 12.44,
         "gm": 40.97,
-        "nm": 22.4,
+        "nm": 22.99,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2025110100007786.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-31/1224774938.PDF",
+        "note": "巨潮官方《2025年第三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 12.44 亿元, GM 40.97%, NM 22.99%；原二手源数值 (rev 10.17, gm 40.97, nm 22.4) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q4",
         "rev": 14.54,
-        "gm": 42.7,
-        "nm": 24.0,
+        "gm": 36.82,
+        "nm": 20.1,
         "src": "A",
-        "source_url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-4/2026-04-23/12154282.PDF"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-23/1225156951.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 14.54 亿元, GM 36.82%, NM 20.1%；原二手源数值 (rev 14.54, gm 42.7, nm 24.0) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2026Q1",
         "rev": 12.01,
         "gm": 42.31,
-        "nm": 20.57,
+        "nm": 20.58,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/jjxw/2026-04-23/doc-inhvmvzh5090742.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-23/1225157053.PDF",
+        "note": "巨潮官方《2026年第一季度报告》合并利润表, 2026年一季报本期数: 营业收入 12.01 亿元, GM 42.31%, NM 20.58%"
       }
     ],
     "strategic": 7,
@@ -1285,42 +1364,46 @@
         "q": "2025Q1",
         "rev": 8.15,
         "gm": 52.75,
-        "nm": 13.42,
+        "nm": 13.62,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2025043000009341.shtml",
-        "note": "2025Q1: 营收 8.15亿(+45.74% YoY); GM 52.75%; NM 13.42%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-29/1223380540.PDF",
+        "note": "巨潮官方《2025年一季度报告》合并利润表, 2025年一季报本期数: 营业收入 8.15 亿元, GM 52.75%, NM 13.62%"
       },
       {
         "q": "2025Q2",
-        "rev": 11.45,
-        "gm": 55.5,
-        "nm": 24.3,
+        "rev": 13.52,
+        "gm": 56.24,
+        "nm": 23.38,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/roll/2025-06-26/doc-infcmkha4557715.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-07-22/1224237926.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 13.52 亿元, GM 56.24%, NM 23.38%；原二手源数值 (rev 11.45, gm 55.5, nm 24.3) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q3",
-        "rev": 15.0,
+        "rev": 16.12,
         "gm": 53.88,
-        "nm": 28.0,
+        "nm": 27.19,
         "src": "A",
-        "source_url": "https://www.cls.cn/detail/2152396"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-30/1224766501.PDF",
+        "note": "巨潮官方《2025年三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 16.12 亿元, GM 53.88%, NM 27.19%；原二手源数值 (rev 15.0, gm 53.88, nm 28.0) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q4",
-        "rev": 18.32,
-        "gm": 36.29,
-        "nm": 10.11,
+        "rev": 15.13,
+        "gm": 56.49,
+        "nm": 30.81,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/roll/2026-04-27/doc-inhvyeeu8966270.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-25/1225193261.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 15.13 亿元, GM 56.49%, NM 30.81%；原二手源数值 (rev 18.32, gm 36.29, nm 10.11) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2026Q1",
         "rev": 13.78,
         "gm": 56.81,
-        "nm": 26.05,
+        "nm": 25.57,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2026042600003756.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-25/1225193270.PDF",
+        "note": "巨潮官方《2026年一季度报告》合并利润表, 2026年一季报本期数: 营业收入 13.78 亿元, GM 56.81%, NM 25.57%"
       }
     ],
     "strategic": 7,
@@ -1341,34 +1424,35 @@
         "gm": 30.31,
         "nm": 13.84,
         "src": "A",
-        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-25/1225177123.PDF",
-        "note": "取自公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表'上年同期'列: 营业收入 3,226,557,969.19 元, 营业成本 2,248,557,111.44 元 → GM 30.31%, 归母净利 446,499,519.83 元 → NM 13.84%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-26/1223332309.PDF",
+        "note": "巨潮官方《2025年一季度报告》合并利润表, 2025年一季报本期数: 营业收入 32.27 亿元, GM 30.31%, NM 13.84%"
       },
       {
         "q": "2025Q2",
         "rev": 52.7,
-        "gm": 32.6,
-        "nm": 16.0,
+        "gm": 32.61,
+        "nm": 16.06,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2025101900001302.shtml",
-        "note": "差减法: 9M rev=138.27亿/GM=32.32% - Q3 rev=53.3亿/GM=33.25%(三季报单季) → H1 rev=84.97亿/GP=26.99亿; H1-Q1(32.27亿/GM=30.31%) → Q2 rev=52.7亿/GP=17.2亿/GM=32.6%; H1 NI=12.92亿-Q1 NI=4.47亿→Q2 NI=8.45亿/NM=16.0%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-16/1224498689.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 52.7 亿元, GM 32.61%, NM 16.06%"
       },
       {
         "q": "2025Q3",
         "rev": 53.3,
-        "gm": 33.3,
-        "nm": 16.9,
+        "gm": 33.25,
+        "nm": 16.86,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/roll/2025-10-19/doc-infumwnh4608188.shtml"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-18/1224719649.PDF",
+        "note": "巨潮官方《2025年三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 53.3 亿元, GM 33.25%, NM 16.86%"
       },
       {
         "q": "2025Q4",
-        "rev": 77.13,
-        "gm": 32.5,
+        "rev": 77.12,
+        "gm": 28.0,
         "nm": 12.43,
         "src": "A",
-        "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202604191821323096_1.pdf",
-        "note": "FY 215.4亿/归母31.5亿; Q4=FY-9M=77.13亿/9.59亿"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表 (PDF数字含空格, 人工读取): FY2025 营收 21,539,031,405.33 元, 营业成本 14,910,437,575.96 元, 归母净利 3,150,142,665.04 元; 2025Q4 = 年报 − 前三季单季合计；原二手源数值 (77.13, 32.5, 12.43) 已替换"
       },
       {
         "q": "2026Q1",
@@ -1377,7 +1461,7 @@
         "nm": 12.04,
         "src": "A",
         "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-25/1225177123.PDF",
-        "note": "公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表本期数: 营业收入 4,568,663,867.62 元, GM 28.95%, 归母净利率 12.04% (原二手来源数值 (45.69, 28.95, 12.04) 已用官方口径替换并核验一致)"
+        "note": "巨潮官方《2026年一季度报告》合并利润表, 2026年一季报本期数: 营业收入 45.69 亿元, GM 28.95%, NM 12.04%"
       }
     ],
     "strategic": 8,
@@ -1395,47 +1479,47 @@
       {
         "q": "2025Q1",
         "rev": 13.43,
-        "gm": 24.9,
-        "nm": 7.97,
+        "gm": 27.49,
+        "nm": 7.99,
         "src": "A",
-        "source_url": "http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=688676&id=10947539",
-        "note": "2025Q1: 营收13.43亿/归母1.07亿(+13.32% YoY); GM=24.9%; NM=1.07/13.43=7.97%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-24/1223242784.PDF",
+        "note": "巨潮官方《2025年第一季度报告》合并利润表, 2025年一季报本期数: 营业收入 13.43 亿元, GM 27.49%, NM 7.99%；原二手源数值 (rev 13.43, gm 24.9, nm 7.97) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q2",
-        "rev": 18.11,
-        "gm": 26.6,
-        "nm": 8.73,
+        "rev": 18.12,
+        "gm": 24.68,
+        "nm": 8.71,
         "src": "A",
-        "source_url": "http://dataclouds.cninfo.com.cn/shgonggao/2025/2025-08-29/a9d9415e840011f0beb4fa163e957f7a.pdf",
-        "note": "差减法: H1 rev=31.54/Q1 rev=13.43(一季报) → Q2=18.11亿; H1 GM=25.87%/Q1 GM=24.9% → Q2 GP=4.815/18.11=26.6%; H1 NI=2.65/Q1 NI=1.07 → Q2 NI=1.58亿, NM=8.73%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-29/1224612319.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 18.12 亿元, GM 24.68%, NM 8.71%；原二手源数值 (rev 18.11, gm 26.6, nm 8.73) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q3",
         "rev": 20.4,
         "gm": 26.39,
-        "nm": 10.76,
+        "nm": 10.82,
         "src": "A",
-        "source_url": "https://stock.stockstar.com/RB2026042500020445.shtml",
-        "note": "公司三季报披露单季 GM/NM 实测值"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-28/1224741951.PDF",
+        "note": "巨潮官方《2025年第三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 20.4 亿元, GM 26.39%, NM 10.82%"
       },
       {
         "q": "2025Q4",
-        "rev": 21.06,
-        "gm": 26.0,
-        "nm": 8.26,
+        "rev": 21.01,
+        "gm": 25.3,
+        "nm": 8.28,
         "src": "A",
-        "source_url": "https://view.inews.qq.com/a/20260425A01YP900",
-        "note": "FY 73亿/归母6.6亿; Q4=FY-9M=21.06亿/1.74亿"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-21/1225021733.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 21.01 亿元, GM 25.3%, NM 8.28%"
       },
       {
         "q": "2026Q1",
         "rev": 15.23,
         "gm": 25.74,
-        "nm": 7.35,
+        "nm": 7.38,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/jjxw/2026-04-24/doc-inhvqfhe4435411.shtml",
-        "note": "营收+13.41% YoY; 归母+4.83% YoY"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-24/1225163072.PDF",
+        "note": "巨潮官方《2026年第一季度报告》合并利润表, 2026年一季报本期数: 营业收入 15.23 亿元, GM 25.74%, NM 7.38%"
       }
     ],
     "strategic": 7,
@@ -1456,35 +1540,35 @@
         "gm": 30.14,
         "nm": 5.67,
         "src": "A",
-        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-27/1225194945.PDF",
-        "note": "取自公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表'上年同期'列: 营业收入 1,216,323,160.43 元, 营业成本 849,673,033.71 元 → GM 30.14%, 归母净利 68,944,329.58 元 → NM 5.67%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-26/1223324476.PDF",
+        "note": "巨潮官方《2025年一季度报告》合并利润表, 2025年一季报本期数: 营业收入 12.16 亿元, GM 30.14%, NM 5.67%"
       },
       {
         "q": "2025Q2",
-        "rev": 25.13,
-        "gm": 24.5,
-        "nm": 6.54,
+        "rev": 25.16,
+        "gm": 22.54,
+        "nm": 6.94,
         "src": "A",
-        "source_url": "https://pdf.dfcfw.com/pdf/H3_AP202504291664460281_1.pdf",
-        "note": "H1 37.33亿/归母2.44亿; Q1 估12.2亿; Q2=H1-Q1=25.13亿; GM 由数据中心29.35%/智慧电能36.39%/新能源17.51%加权"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-30/1224622984.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 25.16 亿元, GM 22.54%, NM 6.94%；原二手源数值 (rev 25.13, gm 24.5, nm 6.54) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q3",
-        "rev": 16.6,
-        "gm": 25.0,
-        "nm": -0.36,
+        "rev": 19.73,
+        "gm": 25.25,
+        "nm": 5.12,
         "src": "A",
-        "source_url": "https://news.qq.com/rain/a/20251101A012RB00",
-        "note": "9M 53.93亿/归母2.38亿(-46.53% YoY); Q3=9M-H1=16.6亿/-0.06亿单季亏损"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-31/1224773529.PDF",
+        "note": "巨潮官方《2025年三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 19.73 亿元, GM 25.25%, NM 5.12%；原二手源数值 (rev 16.6, gm 25.0, nm -0.36) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2025Q4",
-        "rev": 27.67,
-        "gm": 28.0,
-        "nm": 6.5,
+        "rev": 24.55,
+        "gm": 23.29,
+        "nm": 2.99,
         "src": "A",
-        "source_url": "https://finance.sina.com.cn/stock/bxjj/2026-04-26/doc-inhvvkkh9956084.shtml",
-        "note": "FY 81.6亿/归母4.18亿; Q4=FY-9M=27.67亿/1.80亿大幅回升"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-27/1225194937.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 24.55 亿元, GM 23.29%, NM 2.99%；原二手源数值 (rev 27.67, gm 28.0, nm 6.5) 与官方合并利润表口径不一致, 已替换"
       },
       {
         "q": "2026Q1",
@@ -1493,7 +1577,7 @@
         "nm": 5.45,
         "src": "A",
         "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-27/1225194945.PDF",
-        "note": "公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表本期数: 营业收入 1,430,062,407.61 元, GM 27.85%, 归母净利率 5.45% (原二手来源数值 (14.3, 27.85, 5.45) 已用官方口径替换并核验一致)"
+        "note": "巨潮官方《2026年一季度报告》合并利润表, 2026年一季报本期数: 营业收入 14.3 亿元, GM 27.85%, NM 5.45%"
       }
     ],
     "strategic": 7,
@@ -1514,35 +1598,35 @@
         "gm": 29.37,
         "nm": 11.77,
         "src": "A",
-        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-27/1225189523.PDF",
-        "note": "取自公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表'上年同期'列: 营业收入 943,431,003.63 元, 营业成本 666,342,676.04 元 → GM 29.37%, 归母净利 111,053,036.94 元 → NM 11.77%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-04-25/1223277046.PDF",
+        "note": "巨潮官方《2025年一季度报告》合并利润表, 2025年一季报本期数: 营业收入 9.43 亿元, GM 29.37%, NM 11.77%"
       },
       {
         "q": "2025Q2",
-        "rev": 12.2,
-        "gm": 28.99,
-        "nm": 11.8,
+        "rev": 12.19,
+        "gm": 28.7,
+        "nm": 11.83,
         "src": "A",
-        "source_url": "https://m.jiemian.com/article/13271574.html",
-        "note": "Q1 9.43亿/归母1.11亿; H1 21.63亿/归母2.55亿; Q2=H1-Q1=12.2亿/1.44亿; GM=H1 28.99%"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-08-28/1224588635.PDF",
+        "note": "巨潮官方《2025年半年度报告》合并利润表, 2025半年报累计−一季报: 营业收入 12.19 亿元, GM 28.7%, NM 11.83%"
       },
       {
         "q": "2025Q3",
         "rev": 14.46,
-        "gm": 28.57,
-        "nm": 13.21,
+        "gm": 27.93,
+        "nm": 13.17,
         "src": "A",
-        "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ002518",
-        "note": "东方财富/证券之星摘要口径: 2025前三季度营收36.09亿、归母4.46亿、毛利率28.57%；H1营收21.63亿、归母2.55亿，差减得Q3营收14.46亿、归母1.91亿；毛利率暂用9M累计口径。"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2025-10-27/1224734908.PDF",
+        "note": "巨潮官方《2025年三季度报告》合并利润表, 2025三季报累计−半年报累计: 营业收入 14.46 亿元, GM 27.93%, NM 13.17%"
       },
       {
         "q": "2025Q4",
-        "rev": 16.61,
-        "gm": 28.98,
+        "rev": 16.62,
+        "gm": 29.89,
         "nm": 9.93,
         "src": "A",
-        "source_url": "https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/Index?type=web&code=SZ002518",
-        "note": "东方财富/东吴证券摘要口径: 2025全年营收52.70亿、归母6.11亿、毛利率28.98%；前三季度营收36.09亿、归母4.46亿，差减得Q4；毛利率暂用全年累计口径。"
+        "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-27/1225189515.PDF",
+        "note": "巨潮官方《2025年年度报告》合并利润表, 2025年报−三季报累计: 营业收入 16.62 亿元, GM 29.89%, NM 9.93%"
       },
       {
         "q": "2026Q1",
@@ -1551,7 +1635,7 @@
         "nm": 11.18,
         "src": "A",
         "source_url": "http://static.cninfo.com.cn/finalpage/2026-04-27/1225189523.PDF",
-        "note": "公司 2026 年一季度报告 (巨潮资讯官方 PDF) 合并利润表本期数: 营业收入 1,240,294,080.12 元, GM 29.71%, 归母净利率 11.18% (原二手来源数值 (12.4, 29.71, 11.21) 已用官方口径替换并核验一致)"
+        "note": "巨潮官方《2026年一季度报告》合并利润表, 2026年一季报本期数: 营业收入 12.4 亿元, GM 29.71%, NM 11.18%"
       }
     ],
     "strategic": 6,
