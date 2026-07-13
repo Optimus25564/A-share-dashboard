@@ -84,9 +84,9 @@
  "snapshots": [
   {
    "date": "2026-07-13",
-   "total": 3000000,
-   "cash": 3000000,
-   "mv": 0
+   "total": 2941350.0,
+   "cash": 622984.0,
+   "mv": 2318366.0
   }
  ],
  "decisions": [
@@ -116,6 +116,6 @@
  "strategy_state": {
   "tier": 1,
   "seeded": true,
-  "last_check": "2026-07-13 23:28"
+  "last_check": "2026-07-13 23:30"
  }
 }
