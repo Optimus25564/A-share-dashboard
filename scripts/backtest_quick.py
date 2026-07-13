@@ -112,7 +112,7 @@ def derive_watchlist(companies):
     ]
 
 
-def compute_quant_weights(companies, codes):
+def compute_quant_weights(companies, codes, subjective_weight=0.22):
     valid = []
     for code in codes:
         c = companies.get(code) or {}
@@ -143,7 +143,10 @@ def compute_quant_weights(companies, codes):
     z_nm = zscore([r["nmClipped"] for r in valid])
     z_to = zscore([r["turnoverScore"] for r in valid])
     z_profit = [0.6 * z_gm[i] + 0.4 * z_nm[i] for i in range(len(valid))]
-    w = {"mc": 0.08, "growth": 0.20, "profit": 0.20, "turnover": 0.12, "strategic": 0.40}
+    # 主观权重可参数化 (A/B 对照用): 客观因子按固定比例分摊剩余权重
+    s = subjective_weight
+    obj = 1.0 - s
+    w = {"mc": obj * 0.133, "growth": obj * 0.334, "profit": obj * 0.333, "turnover": obj * 0.20, "strategic": s}
 
     composites = []
     for i, r in enumerate(valid):
@@ -258,8 +261,9 @@ def run_backtest(args):
     companies = load_json(DATA_DIR / ("companies.json" if args.market == "a" else "companies_us.json"))
     names = {code: c.get("name", code) for code, c in companies.items() if isinstance(c, dict)}
     watch = derive_watchlist(companies)
-    ranked = compute_quant_weights(companies, watch)
+    ranked = compute_quant_weights(companies, watch, subjective_weight=args.subjective_weight)
     pool = ranked[:args.pool_size]
+    print(f"Subjective (strategic) weight: {args.subjective_weight:.0%}")
 
     print(f"Market: {'A 股' if args.market == 'a' else '美股'}")
     print(f"Pool size: {len(pool)} from current quant ranking")
@@ -436,6 +440,8 @@ def main():
     parser.add_argument("--pool-size", type=int, default=15, help="ranked candidates to fetch")
     parser.add_argument("--count", type=int, default=320, help="weekly bars to request per symbol")
     parser.add_argument("--max-trades", type=int, default=80, help="max trade rows to print")
+    parser.add_argument("--subjective-weight", type=float, default=0.22,
+                        help="主观 (strategic) 因子权重, 0 = 纯客观因子 (A/B 对照)")
     parser.add_argument("--exit-ema", choices=["8", "21"], default="8",
                         help="weekly exit line: 8 = sensitive/high churn, 21 = slow core-trend line")
     parser.add_argument("--equity-csv", help="optional CSV path for weekly equity curve")
