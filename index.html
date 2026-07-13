@@ -417,8 +417,8 @@
     <div class="tab active" data-tab="watch">📊 A股·关注</div>
     <div class="tab" data-tab="us">🇺🇸 美股·算力/能源</div>
     <div class="tab" data-tab="global">🌐 全网动态</div>
-    <div class="tab" data-tab="trade">💹 模拟交易</div>
-    <div class="tab" data-tab="tradeus">💹 美股模拟</div>
+    <div class="tab" data-tab="trade">🤖 A股策略盘</div>
+    <div class="tab" data-tab="tradeus">🤖 美股策略盘</div>
     <div class="tab" data-tab="strategy">🧭 策略 / 催化剂</div>
   </div>
 
@@ -621,137 +621,75 @@
     </div>
   </div>
 
-  <!-- ===================== TAB 2: TRADING ===================== -->
+  <!-- ===================== TAB 2: A股自动策略盘 (只读) ===================== -->
   <div class="tab-content" id="tab-trade">
+    <div style="font-size:12px;color:var(--muted);margin-bottom:12px;padding:10px 12px;background:var(--panel-2);border-radius:8px;line-height:1.8">
+      🤖 <b style="color:var(--text)">A股自动策略盘</b> · 账本由 CI 每日管理，本页只读。
+      规则：6 因子 Top10（核心 80% 前5 / 卫星 20% #6-10）；个股周线收盘破 EMA21 或掉出 Top10 才换仓（周线收盘确认）；
+      宏观阶梯：大盘破周线 EMA21 或宽度 ≥60% → 卫星舱转现金，距 52 周高点 -20% → 核心舱减半（当日执行）。
+      每次调仓自动推送微信 + 邮件并写明原因。
+    </div>
 
     <div class="acct-grid">
       <div class="acct cash">
-        <div class="label">可用资金</div>
-        <div class="val" id="acctCash">--</div>
-        <div class="hint">现金余额 · CNY</div>
+        <div class="label">现金</div>
+        <div class="val" id="autoCash_a">--</div>
+        <div class="hint" id="autoCashPct_a">初始 ¥3,000,000</div>
       </div>
       <div class="acct mv">
         <div class="label">持仓市值</div>
-        <div class="val" id="acctMV">--</div>
-        <div class="hint" id="acctMVHint">实时估算</div>
+        <div class="val" id="autoMV_a">--</div>
+        <div class="hint">按最新行情估算</div>
       </div>
       <div class="acct tot">
         <div class="label">总资产</div>
-        <div class="val" id="acctTotal">--</div>
-        <div class="hint" id="acctTotalHint">现金 + 持仓</div>
+        <div class="val" id="autoTotal_a">--</div>
+        <div class="hint">现金 + 持仓</div>
       </div>
       <div class="acct pnl">
-        <div class="label">浮动盈亏</div>
-        <div class="val" id="acctPnL">--</div>
-        <div class="hint" id="acctPnLPct">--</div>
+        <div class="label">累计盈亏</div>
+        <div class="val" id="autoPnL_a">--</div>
+        <div class="hint" id="autoPnLPct_a">--</div>
       </div>
       <div class="acct cnt">
-        <div class="label">持仓数量 / 已交易</div>
-        <div class="val" id="acctCnt">--</div>
-        <div class="hint" id="acctTrades">--</div>
+        <div class="label">宏观档位</div>
+        <div class="val" style="font-size:15px" id="autoTier_a">--</div>
+        <div class="hint" id="autoCheck_a">--</div>
       </div>
-    </div>
-
-    <div class="card" style="margin-bottom:14px">
-      <h3>策略建仓<span class="right">6 因子 Top10 · 核心 80% / 卫星 20% · 含宏观阶梯</span></h3>
-      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-        <button class="btn btn-buy" id="btnStrategyBuild" style="flex:0 0 auto">🎯 按策略一键建仓</button>
-        <span style="font-size:12px;color:var(--muted)">
-          按量化 Top 10 分配：核心舱 80%（前 5）/ 卫星舱 20%（#6-10）。宏观阶梯自动生效：大盘跌破周线 EMA21 或宽度 ≥60% → 卫星舱留现金；距 52 周高点 -20% → 核心舱减半。EMA21 破坏的个股自动排除。已有持仓会先清空（有确认）。
-        </span>
-      </div>
-      <div id="strategyBuildInfo" style="margin-top:10px;font-size:12px;color:var(--muted);line-height:1.7"></div>
-    </div>
-
-    <div class="card" style="margin-bottom:14px">
-      <h3>🤖 自动策略盘 · CI 每日管理<span class="right" id="autoPfSummary">--</span></h3>
-      <div style="font-size:11px;color:var(--muted);margin-bottom:8px">
-        每个交易日收盘后自动检查：个股周线收盘破 EMA21 / 掉出 Top10 / 宏观阶梯变档才换仓（周线收盘确认，-20% 熊市保护当日执行），每次调仓微信+邮件推送原因。下方手动盘不受影响。
-      </div>
-      <div id="autoPfBody" style="font-size:12px;line-height:1.8;color:var(--muted)">加载中...</div>
     </div>
 
     <div class="trade-grid">
-      <!-- Trade form -->
       <div class="card">
-        <h3>下单<span class="right">A股 100股最小单位 · 不模拟手续费</span></h3>
-
-        <div class="form-row">
-          <label>选择标的</label>
-          <select id="tradeStock"></select>
-        </div>
-
-        <div class="quote-box">
-          <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:8px">
-            <div>
-              <div class="big" id="qPrice">--</div>
-              <div style="font-size:12px;margin-top:2px"><span id="qChange">--</span> · <span id="qChangePct">--</span></div>
-            </div>
-            <div style="text-align:right;font-size:11px;color:var(--muted)">
-              <div>开 <span id="qOpen">--</span> · 昨 <span id="qPrev">--</span></div>
-              <div>高 <span id="qHigh">--</span> · 低 <span id="qLow">--</span></div>
-            </div>
-          </div>
-          <div class="qrow"><span class="k">已持仓</span><span id="qHold">--</span></div>
-          <div class="qrow"><span class="k">成本/盈亏</span><span id="qCost">--</span></div>
-        </div>
-
-        <div class="form-row">
-          <label>价格（默认市价 = 现价）</label>
-          <input type="number" id="tradePrice" step="0.01" placeholder="自动填入现价">
-        </div>
-
-        <div class="form-row">
-          <label>数量（股，100整数倍）</label>
-          <input type="number" id="tradeQty" step="100" min="100" placeholder="例如 1000">
-          <div class="qty-quick">
-            <button data-pct="0.25">25%仓</button>
-            <button data-pct="0.5">50%仓</button>
-            <button data-pct="1">满仓</button>
-            <button data-all="1">全部持仓</button>
-          </div>
-        </div>
-
-        <div style="font-size:12px;color:var(--muted);margin:8px 0;padding:8px;background:var(--panel-2);border-radius:6px">
-          预计金额：<b style="color:var(--text)" id="tradeAmount">--</b>
-        </div>
-
-        <div class="btn-group">
-          <button class="btn btn-buy" id="btnBuy">买入</button>
-          <button class="btn btn-sell" id="btnSell">卖出</button>
-        </div>
-      </div>
-
-      <!-- Positions -->
-      <div class="card">
-        <h3>当前持仓<span class="right" id="posSummary">--</span></h3>
-        <div style="overflow:auto;max-height:380px">
+        <h3>当前持仓<span class="right" id="autoPosSummary_a">--</span></h3>
+        <div style="overflow:auto;max-height:420px">
           <table>
             <thead>
               <tr>
                 <th>代码</th><th>名称</th>
                 <th class="num-cell">持仓</th><th class="num-cell">成本</th>
                 <th class="num-cell">现价</th><th class="num-cell">市值</th>
-                <th class="num-cell">盈亏</th><th>操作</th>
+                <th class="num-cell">盈亏</th>
               </tr>
             </thead>
-            <tbody id="positions"></tbody>
+            <tbody id="autoPositions_a"></tbody>
           </table>
         </div>
+      </div>
+
+      <div class="card">
+        <h3>决策日志<span class="right">为什么调仓 / 为什么不动</span></h3>
+        <div id="autoDecisions_a" style="overflow:auto;max-height:420px;font-size:12px;line-height:1.8;color:var(--muted)">--</div>
       </div>
     </div>
 
     <div class="card" style="margin-bottom:18px">
-      <h3>净值曲线<span class="right" id="pnlCurveSummary">--</span></h3>
-      <div style="position:relative;height:240px"><canvas id="pnlCurve"></canvas></div>
-      <div style="font-size:11px;color:var(--muted);margin-top:8px">每日首次刷新自动记录一次总资产快照（现金 + 持仓市值）；最多保留 365 天。</div>
+      <h3>净值曲线<span class="right" id="autoCurveSummary_a">--</span></h3>
+      <div style="position:relative;height:240px"><canvas id="autoCurve_a"></canvas></div>
+      <div style="font-size:11px;color:var(--muted);margin-top:8px">CI 每个交易日收盘后自动记录快照。</div>
     </div>
 
     <div class="card">
-      <h3>交易流水<span class="right">
-        <button class="trade-action" id="exportBtn" style="font-size:12px;padding:4px 10px;margin-right:6px">导出 CSV</button>
-        <button class="btn-warn trade-action" id="resetBtn" style="font-size:12px;padding:4px 10px">重置账户</button>
-      </span></h3>
+      <h3>交易流水<span class="right" id="autoHistCount_a">--</span></h3>
       <div style="overflow:auto;max-height:300px">
         <table class="history-table">
           <thead>
@@ -761,118 +699,81 @@
               <th class="num-cell">金额</th><th class="num-cell">交易后现金</th>
             </tr>
           </thead>
-          <tbody id="history"></tbody>
+          <tbody id="autoHistory_a"></tbody>
         </table>
       </div>
     </div>
   </div>
 
-  <!-- ===================== TAB: 美股模拟交易 (USD, 独立账户) ===================== -->
+  <!-- ===================== TAB: 美股自动策略盘 (只读) ===================== -->
   <div class="tab-content" id="tab-tradeus">
+    <div style="font-size:12px;color:var(--muted);margin-bottom:12px;padding:10px 12px;background:var(--panel-2);border-radius:8px;line-height:1.8">
+      🤖 <b style="color:var(--text)">美股自动策略盘</b> · 账本由 CI 每日管理，本页只读。
+      规则：6 因子 Top10（核心 80% 前5 / 卫星 20% #6-10）；个股周线收盘破 EMA21 或掉出 Top10 才换仓（周线收盘确认）；
+      宏观阶梯：大盘破周线 EMA21 或宽度 ≥60% → 卫星舱转现金，距 52 周高点 -20% → 核心舱减半（当日执行）。
+      每次调仓自动推送微信 + 邮件并写明原因。
+    </div>
+
     <div class="acct-grid">
       <div class="acct cash">
-        <div class="label">可用资金</div>
-        <div class="val" id="acctCashUS">--</div>
-        <div class="hint">现金余额 · USD</div>
+        <div class="label">现金</div>
+        <div class="val" id="autoCash_us">--</div>
+        <div class="hint" id="autoCashPct_us">初始 $300,000</div>
       </div>
       <div class="acct mv">
         <div class="label">持仓市值</div>
-        <div class="val" id="acctMVUS">--</div>
-        <div class="hint">腾讯行情 · 约15-20分钟延迟</div>
+        <div class="val" id="autoMV_us">--</div>
+        <div class="hint">按最新行情估算</div>
       </div>
       <div class="acct tot">
         <div class="label">总资产</div>
-        <div class="val" id="acctTotalUS">--</div>
+        <div class="val" id="autoTotal_us">--</div>
         <div class="hint">现金 + 持仓</div>
       </div>
       <div class="acct pnl">
-        <div class="label">浮动盈亏</div>
-        <div class="val" id="acctPnLUS">--</div>
-        <div class="hint" id="acctPnLPctUS">--</div>
+        <div class="label">累计盈亏</div>
+        <div class="val" id="autoPnL_us">--</div>
+        <div class="hint" id="autoPnLPct_us">--</div>
       </div>
       <div class="acct cnt">
-        <div class="label">持仓数量 / 已交易</div>
-        <div class="val" id="acctCntUS">--</div>
-        <div class="hint" id="acctTradesUS">--</div>
+        <div class="label">宏观档位</div>
+        <div class="val" style="font-size:15px" id="autoTier_us">--</div>
+        <div class="hint" id="autoCheck_us">--</div>
       </div>
-    </div>
-
-    <div class="card" style="margin-bottom:14px">
-      <h3>策略建仓<span class="right">6 因子 Top10 · 核心 80% / 卫星 20% · QQQ 宏观阶梯</span></h3>
-      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-        <button class="btn btn-buy" id="btnStrategyBuildUS" style="flex:0 0 auto">🎯 按策略一键建仓</button>
-        <span style="font-size:12px;color:var(--muted)">
-          按美股量化 Top 10 分配：核心舱 80%（前 5）/ 卫星舱 20%（#6-10），1 股粒度。宏观阶梯：QQQ 跌破周线 EMA21 或宽度 ≥60% → 卫星舱留现金；距 52 周高点 -20% → 核心舱减半。EMA21 破坏个股自动排除。已有持仓会先清空（有确认）。
-        </span>
-      </div>
-      <div id="strategyBuildInfoUS" style="margin-top:10px;font-size:12px;color:var(--muted);line-height:1.7"></div>
-    </div>
-
-    <div class="card" style="margin-bottom:14px">
-      <h3>🤖 自动策略盘 · CI 每日管理<span class="right" id="autoPfSummaryUS">--</span></h3>
-      <div style="font-size:11px;color:var(--muted);margin-bottom:8px">
-        每个交易日收盘后自动检查：个股周线收盘破 EMA21 / 掉出 Top10 / 宏观阶梯变档才换仓（周线收盘确认，-20% 熊市保护当日执行），每次调仓微信+邮件推送原因。下方手动盘不受影响。
-      </div>
-      <div id="autoPfBodyUS" style="font-size:12px;line-height:1.8;color:var(--muted)">加载中...</div>
     </div>
 
     <div class="trade-grid">
       <div class="card">
-        <h3>下单<span class="right">美股 1 股最小单位 · 不模拟手续费</span></h3>
-        <div class="form-row">
-          <label>选择标的</label>
-          <select id="tradeStockUS"></select>
-        </div>
-        <div class="quote-box">
-          <div class="qrow"><span class="k">现价 (延迟)</span><span class="big" id="qPriceUS">--</span></div>
-          <div class="qrow"><span class="k">已持仓</span><span id="qHoldUS">--</span></div>
-        </div>
-        <div class="form-row">
-          <label>价格（默认 = 最近价）</label>
-          <input type="number" id="tradePriceUS" step="0.01" placeholder="自动填入现价">
-        </div>
-        <div class="form-row">
-          <label>数量（股）</label>
-          <input type="number" id="tradeQtyUS" step="1" min="1" placeholder="例如 10">
-        </div>
-        <div style="font-size:12px;color:var(--muted);margin:8px 0;padding:8px;background:var(--panel-2);border-radius:6px">
-          预计金额：<b style="color:var(--text)" id="tradeAmountUS">--</b>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-buy" id="btnBuyUS">买入</button>
-          <button class="btn btn-sell" id="btnSellUS">卖出</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>当前持仓<span class="right" id="posSummaryUS">--</span></h3>
-        <div style="overflow:auto;max-height:380px">
+        <h3>当前持仓<span class="right" id="autoPosSummary_us">--</span></h3>
+        <div style="overflow:auto;max-height:420px">
           <table>
             <thead>
               <tr>
                 <th>代码</th><th>名称</th>
                 <th class="num-cell">持仓</th><th class="num-cell">成本</th>
                 <th class="num-cell">现价</th><th class="num-cell">市值</th>
-                <th class="num-cell">盈亏</th><th>操作</th>
+                <th class="num-cell">盈亏</th>
               </tr>
             </thead>
-            <tbody id="positionsUS"></tbody>
+            <tbody id="autoPositions_us"></tbody>
           </table>
         </div>
+      </div>
+
+      <div class="card">
+        <h3>决策日志<span class="right">为什么调仓 / 为什么不动</span></h3>
+        <div id="autoDecisions_us" style="overflow:auto;max-height:420px;font-size:12px;line-height:1.8;color:var(--muted)">--</div>
       </div>
     </div>
 
     <div class="card" style="margin-bottom:18px">
-      <h3>净值曲线<span class="right" id="pnlCurveSummaryUS">--</span></h3>
-      <div style="position:relative;height:240px"><canvas id="pnlCurveUS"></canvas></div>
-      <div style="font-size:11px;color:var(--muted);margin-top:8px">每次打开本页自动按美东日期记录一次总资产快照；最多保留 365 天。</div>
+      <h3>净值曲线<span class="right" id="autoCurveSummary_us">--</span></h3>
+      <div style="position:relative;height:240px"><canvas id="autoCurve_us"></canvas></div>
+      <div style="font-size:11px;color:var(--muted);margin-top:8px">CI 每个交易日收盘后自动记录快照。</div>
     </div>
 
     <div class="card">
-      <h3>交易流水<span class="right">
-        <button class="trade-action" id="exportBtnUS" style="font-size:12px;padding:4px 10px;margin-right:6px">导出 CSV</button>
-        <button class="btn-warn trade-action" id="resetBtnUS" style="font-size:12px;padding:4px 10px">重置账户</button>
-      </span></h3>
+      <h3>交易流水<span class="right" id="autoHistCount_us">--</span></h3>
       <div style="overflow:auto;max-height:300px">
         <table class="history-table">
           <thead>
@@ -882,7 +783,7 @@
               <th class="num-cell">金额</th><th class="num-cell">交易后现金</th>
             </tr>
           </thead>
-          <tbody id="historyUS"></tbody>
+          <tbody id="autoHistory_us"></tbody>
         </table>
       </div>
     </div>
@@ -1487,7 +1388,7 @@ function renderWatchlist(){
       <td>
         <button class="trade-action" data-info="${r.code}" style="margin-right:4px">📋</button>
         <button class="trade-action" data-kl="${r.code}" style="margin-right:4px">K线</button>
-        <button class="trade-action" data-buy="${r.code}">买入</button>
+        <button class="trade-action" data-buy="${r.code}">策略盘</button>
       </td>
     `;
     tb.appendChild(tr);
@@ -1502,9 +1403,7 @@ function renderWatchlist(){
   // Bind buy / K线 / info buttons
   tb.querySelectorAll("[data-buy]").forEach(b => {
     b.onclick = () => {
-      switchTab("trade");
-      document.getElementById("tradeStock").value = b.dataset.buy;
-      onStockChange();
+      switchTab("trade");  // 手动下单已移除, 跳转到自动策略盘视图
     };
   });
   tb.querySelectorAll("[data-kl]").forEach(b => {
@@ -1640,438 +1539,20 @@ function switchTab(name){
   document.querySelectorAll(".tab").forEach(t => t.classList.toggle("active", t.dataset.tab === name));
   document.querySelectorAll(".tab-content").forEach(c => c.classList.toggle("active", c.id === "tab-"+name));
   updateLiveForActiveTab();
-  if (name === "tradeus" && typeof initTradeUSTab === "function") initTradeUSTab();
-  if (name === "trade" && typeof renderStrategyDrift === "function") { renderStrategyDrift("a"); renderAutoPortfolio("a"); }
+  if (name === "trade") initAutoTab("a");
+  if (name === "tradeus") initAutoTab("us");
 }
 document.querySelectorAll(".tab").forEach(t => {
   t.onclick = () => switchTab(t.dataset.tab);
 });
 
-// ============ Trading: account state ============
-const STORAGE_KEY = "rmb_invest_sim_v1";
-const INITIAL_CASH = 3_000_000;
-
-function loadAccount(){
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return defaultAccount();
-    const a = JSON.parse(raw);
-    if (!a.snapshots) a.snapshots = []; // migrate
-    if (!a.initialCash) a.initialCash = 1_000_000; // 旧账户按建立时的 100 万口径算盈亏; 重置后才用新本金
-    return a;
-  } catch(e) { return defaultAccount(); }
-}
-function defaultAccount(){
-  return { cash: INITIAL_CASH, initialCash: INITIAL_CASH, positions: {}, history: [], snapshots: [] };
-}
-function saveAccount(a){ localStorage.setItem(STORAGE_KEY, JSON.stringify(a)); }
-let acct = loadAccount();
-
-// ============ Populate stock select ============
-const stockSel = document.getElementById("tradeStock");
-function populateStockSel(){
-  stockSel.innerHTML = "";
-  WATCH.forEach(r => {
-    const opt = document.createElement("option");
-    opt.value = r.code;
-    opt.textContent = `${r.code} · ${r.name}`;
-    stockSel.appendChild(opt);
-  });
-}
-
-// ============ Trading UI ============
-function onStockChange(){
-  const code = stockSel.value;
-  const q = lastQuotes[code] || {};
-  document.getElementById("qPrice").textContent = q.price ? fmtNum(q.price) : "--";
-  const cls = colorClass(q.changePct);
-  document.getElementById("qPrice").className = "big " + cls;
-  document.getElementById("qChange").textContent = q.change ? (q.change>=0?"+":"") + q.change.toFixed(2) : "--";
-  document.getElementById("qChange").className = cls;
-  document.getElementById("qChangePct").textContent = fmtPct(q.changePct);
-  document.getElementById("qChangePct").className = cls;
-  document.getElementById("qOpen").textContent = fmtNum(q.open);
-  document.getElementById("qPrev").textContent = fmtNum(q.prevClose);
-  document.getElementById("qHigh").textContent = fmtNum(q.high);
-  document.getElementById("qLow").textContent = fmtNum(q.low);
-
-  // Holdings
-  const pos = acct.positions[code];
-  if (pos && pos.qty > 0) {
-    const pnl = (q.price - pos.avgCost) * pos.qty;
-    const pnlPct = (q.price - pos.avgCost) / pos.avgCost * 100;
-    const cls2 = colorClass(pnl);
-    document.getElementById("qHold").textContent = `${pos.qty.toLocaleString()} 股`;
-    document.getElementById("qCost").innerHTML = `成本 ${fmtNum(pos.avgCost)} · <span class="${cls2}">${pnl>=0?"+":""}${pnl.toFixed(0)} (${pnlPct>=0?"+":""}${pnlPct.toFixed(2)}%)</span>`;
-  } else {
-    document.getElementById("qHold").textContent = "无";
-    document.getElementById("qCost").textContent = "--";
-  }
-
-  // Auto-fill price
-  if (q.price) document.getElementById("tradePrice").value = q.price.toFixed(2);
-  updateTradeAmount();
-}
-stockSel.onchange = onStockChange;
-
-function updateTradeAmount(){
-  const p = parseFloat(document.getElementById("tradePrice").value) || 0;
-  const q = parseInt(document.getElementById("tradeQty").value) || 0;
-  document.getElementById("tradeAmount").textContent = (p && q) ? fmtMoney(p*q) : "--";
-}
-document.getElementById("tradePrice").oninput = updateTradeAmount;
-document.getElementById("tradeQty").oninput = updateTradeAmount;
-
-// Quick qty buttons
-document.querySelectorAll(".qty-quick button").forEach(btn => {
-  btn.onclick = () => {
-    const code = stockSel.value;
-    const price = parseFloat(document.getElementById("tradePrice").value) || 0;
-    if (!price) return toast("请先等待行情加载", "error");
-    if (btn.dataset.all) {
-      const pos = acct.positions[code];
-      document.getElementById("tradeQty").value = pos ? pos.qty : 0;
-    } else {
-      const pct = parseFloat(btn.dataset.pct);
-      const budget = acct.cash * pct;
-      const lots = Math.floor(budget / price / 100);
-      document.getElementById("tradeQty").value = lots * 100;
-    }
-    updateTradeAmount();
-  };
-});
-
-// Toast
+// Toast (公共提示, 笔记等模块使用)
 function toast(msg, type="info"){
   const t = document.getElementById("toast");
   t.textContent = msg;
   t.className = "toast show " + type;
   setTimeout(() => t.classList.remove("show"), 2400);
 }
-
-// ============ Buy / Sell logic ============
-function trade(side){
-  const code = stockSel.value;
-  const stock = WATCH.find(w => w.code === code);
-  const price = parseFloat(document.getElementById("tradePrice").value);
-  const qty = parseInt(document.getElementById("tradeQty").value);
-
-  if (!price || price <= 0) return toast("价格无效", "error");
-  if (!qty || qty <= 0) return toast("数量无效", "error");
-  if (qty % 100 !== 0) return toast("A股需要 100 股的整数倍", "error");
-
-  const amount = price * qty;
-
-  if (side === "buy") {
-    if (amount > acct.cash) return toast(`资金不足，需 ${fmtMoney(amount)}，可用 ${fmtMoney(acct.cash)}`, "error");
-    acct.cash -= amount;
-    const p = acct.positions[code];
-    if (p && p.qty > 0) {
-      const newQty = p.qty + qty;
-      p.avgCost = (p.avgCost * p.qty + price * qty) / newQty;
-      p.qty = newQty;
-    } else {
-      acct.positions[code] = { qty, avgCost: price, name: stock.name };
-    }
-    pushHistory("buy", code, stock.name, price, qty, amount);
-    toast(`买入 ${stock.name} ${qty} 股 @ ${price.toFixed(2)}`, "success");
-  } else {
-    const p = acct.positions[code];
-    if (!p || p.qty < qty) return toast(`持仓不足，当前 ${p?p.qty:0} 股`, "error");
-    acct.cash += amount;
-    p.qty -= qty;
-    if (p.qty === 0) delete acct.positions[code];
-    pushHistory("sell", code, stock.name, price, qty, amount);
-    toast(`卖出 ${stock.name} ${qty} 股 @ ${price.toFixed(2)}`, "success");
-  }
-
-  saveAccount(acct);
-  document.getElementById("tradeQty").value = "";
-  updateTradeAmount();
-  renderAccount();
-  onStockChange();
-}
-function pushHistory(side, code, name, price, qty, amount){
-  acct.history.unshift({
-    ts: new Date().toLocaleString("zh-CN", {hour12:false}),
-    side, code, name, price, qty, amount, cashAfter: acct.cash
-  });
-  if (acct.history.length > 200) acct.history.length = 200;
-}
-document.getElementById("btnBuy").onclick = () => trade("buy");
-document.getElementById("btnSell").onclick = () => trade("sell");
-
-// ============ 策略一键建仓: 6因子 Top10 + 宏观阶梯 ============
-async function getMacroLadderState(){
-  try {
-    const bars = await fetchKLineRaw("sh000001", "week", 60);
-    if (!bars || bars.length < 22) return null;
-    const closes = bars.map(b => b.close);
-    const e8 = ind_EMA(closes, 8), e21 = ind_EMA(closes, 21);
-    const close = closes[closes.length - 1];
-    const high52 = Math.max(...bars.slice(-52).map(b => b.high));
-    return { close, e8: e8[e8.length-1], e21: e21[e21.length-1], drawdownPct: (close - high52) / high52 * 100 };
-  } catch(e){ return null; }
-}
-
-async function strategyBuildPosition(){
-  const btn = document.getElementById("btnStrategyBuild");
-  const info = document.getElementById("strategyBuildInfo");
-  btn.disabled = true;
-  info.textContent = "⏳ 准备数据: 基本面 + 行情 + 周线趋势 + 大盘阶梯...";
-  try {
-    if (!companiesData) await loadCompanies();
-    computeQuantWeights();
-    if (!_quantWeights) { info.textContent = "❌ 基本面数据未就绪，请刷新页面重试"; return; }
-    if (!Object.keys(lastQuotes).length) {
-      const q = await fetchQuotes();
-      if (q && Object.keys(q).length) lastQuotes = q;  // 休市时为最近收盘价
-    }
-    if (!watchScanState.results) await scanWatchlistBuySignals();
-    const results = watchScanState.results || [];
-    // 建仓排除口径: 本周收盘仍低于周线 EMA21 (比持仓退出的 exit-confirmed 宽松 —
-    // 上周破位但本周已收回的不排除, 避免下周又要买回来的无谓换仓)
-    const excluded = new Set(results.filter(r => {
-      const last = r.bars && r.bars[r.bars.length - 1];
-      return r.signal && Number.isFinite(r.signal.ema21) && last && last.close < r.signal.ema21;
-    }).map(r => r.stock.code));
-    const bearCnt = results.filter(r => r.signal.action.startsWith("sell") || r.signal.action === "exit-confirmed").length;
-    const breadthPct = results.length ? bearCnt / results.length * 100 : null;
-    const ladder = await getMacroLadderState();
-
-    // 宏观阶梯 (与 Top10 卡片策略说明一致)
-    let corePct = 0.80, satPct = 0.20;
-    let reason = "大盘多头 — 核心 80% + 卫星 20% 全部建仓";
-    if (ladder && ladder.drawdownPct <= -20) {
-      corePct = 0.40; satPct = 0;
-      reason = `指数距 52 周高点 ${ladder.drawdownPct.toFixed(1)}% (≤-20%) — 核心舱减半 (40%)，其余现金`;
-    } else if ((ladder && ladder.close < ladder.e21) || (breadthPct !== null && breadthPct >= 60)) {
-      satPct = 0;
-      reason = (ladder && ladder.close < ladder.e21
-        ? `上证 ${ladder.close.toFixed(0)} 跌破周线 EMA21 (${ladder.e21.toFixed(0)})`
-        : `观察列表 ${breadthPct.toFixed(0)}% 处于 sell 信号`)
-        + " — 核心舱 80% 建仓，卫星舱 20% 留现金，指数收复 EMA21 后再买回";
-    } else if (ladder && ladder.close < ladder.e8) {
-      satPct = 0;
-      reason = "上证跌破周线 EMA8 (未破 EMA21) — 保守起见仅建核心舱 80%，卫星舱留现金等企稳";
-    }
-
-    // Top10: 按 score 排序, 排除 EMA21 破坏个股, 顺位补足
-    const rankedAll = WATCH
-      .map(s => ({ code: s.code, name: s.name, w: _quantWeights[s.code]?.weight ?? 0, score: _quantWeights[s.code]?.score }))
-      .filter(s => Number.isFinite(s.score))
-      .sort((a, b) => b.score - a.score)
-      .filter(s => !excluded.has(s.code));
-    const core = rankedAll.slice(0, 5);
-    const satellite = satPct > 0 ? rankedAll.slice(5, 10) : [];
-    if (core.length < 5) { info.textContent = "❌ 可建仓标的不足 5 只（EMA21 破坏排除过多），暂不建仓"; return; }
-
-    if (Object.keys(acct.positions).length) {
-      if (!confirm("已有模拟持仓，将先按现价全部卖出，再按策略重建。继续？")) { info.textContent = "已取消"; return; }
-      for (const [code, p] of Object.entries({ ...acct.positions })) {
-        const price = lastQuotes[code]?.price || p.avgCost;
-        acct.cash += price * p.qty;
-        pushHistory("sell", code, p.name, price, p.qty, price * p.qty);
-        delete acct.positions[code];
-      }
-    }
-
-    const total = acct.cash;
-    const lines = [];
-    const skipped = [];
-    let spent = 0;
-    const buyBasket = (basket, pct, label) => {
-      const wSum = basket.reduce((s, x) => s + x.w, 0) || 1;
-      const basketBudget = total * pct;
-      const plan = [];
-      basket.forEach(x => {
-        const price = lastQuotes[x.code]?.price;
-        if (!price) { skipped.push(`${x.name}(无行情)`); return; }
-        plan.push({ ...x, price, target: basketBudget * x.w / wSum, qty: 0 });
-      });
-      let basketSpent = 0;
-      plan.forEach(x => {
-        x.qty = Math.floor(x.target / x.price / 100) * 100;
-        basketSpent += x.qty * x.price;
-      });
-      // 贪心补手: 高价股 (如千元股) 整手向下取整会磨掉大量目标仓位,
-      // 在本篮子预算内 (容忍 2% 超出) 给缺口最大的持仓逐手补齐
-      while (true) {
-        let best = null;
-        for (const x of plan) {
-          const lot = x.price * 100;
-          const short = x.target - x.qty * x.price;
-          if (basketSpent + lot > basketBudget) continue;
-          if (short <= lot / 2) continue;  // 加一手后要比不加更接近目标
-          if (!best || short > best.short) best = { x, short, lot };
-        }
-        if (!best) break;
-        best.x.qty += 100;
-        basketSpent += best.lot;
-      }
-      plan.forEach(x => {
-        if (x.qty <= 0) { skipped.push(`${x.name}(预算不足 1 手)`); return; }
-        const amount = x.qty * x.price;
-        acct.cash -= amount;
-        spent += amount;
-        acct.positions[x.code] = { qty: x.qty, avgCost: x.price, name: x.name };
-        pushHistory("buy", x.code, x.name, x.price, x.qty, amount);
-        lines.push(`${label} <b>${x.name}</b> (${x.code}): ${x.qty.toLocaleString()} 股 @ ${x.price.toFixed(2)} = ${fmtMoney(amount)}（实际 ${(amount / total * 100).toFixed(1)}% / 目标 ${(x.target / total * 100).toFixed(1)}%）`);
-      });
-    };
-    buyBasket(core, corePct, "核心");
-    if (satellite.length) buyBasket(satellite, satPct, "卫星");
-
-    saveAccount(acct);
-    renderAccount();
-    onStockChange();
-    info.innerHTML = `<div style="color:var(--gold)">🎯 ${reason}</div>` +
-      lines.map(l => `<div>· ${l}</div>`).join("") +
-      `<div style="margin-top:6px">合计买入 ${fmtMoney(spent)} · 保留现金 ${fmtMoney(acct.cash)}（${(acct.cash / total * 100).toFixed(1)}%）` +
-      (excluded.size ? `<br>已排除 EMA21 破坏个股: ${[...excluded].join(" / ")}` : "") +
-      (skipped.length ? `<br>跳过: ${skipped.join("，")}` : "") + `</div>`;
-    toast("策略建仓完成", "success");
-  } finally {
-    btn.disabled = false;
-  }
-}
-document.getElementById("btnStrategyBuild").onclick = strategyBuildPosition;
-
-// ============ Render account ============
-function renderAccount(){
-  // Totals
-  let mv = 0, totalCost = 0;
-  Object.entries(acct.positions).forEach(([code,p]) => {
-    const q = lastQuotes[code];
-    const price = q && q.price ? q.price : p.avgCost;
-    mv += price * p.qty;
-    totalCost += p.avgCost * p.qty;
-  });
-  const total = acct.cash + mv;
-  const baseCash = acct.initialCash || INITIAL_CASH;
-  const pnl = total - baseCash;
-  const pnlPct = pnl / baseCash * 100;
-
-  document.getElementById("acctCash").textContent = fmtMoney(acct.cash);
-  document.getElementById("acctMV").textContent = fmtMoney(mv);
-  document.getElementById("acctTotal").textContent = fmtMoney(total);
-  const pnlEl = document.getElementById("acctPnL");
-  pnlEl.textContent = (pnl>=0?"+":"") + fmtMoney(pnl).replace("¥","¥");
-  pnlEl.className = "val " + (pnl>=0 ? "up" : "down");
-  document.getElementById("acctPnLPct").textContent = (pnlPct>=0?"+":"") + pnlPct.toFixed(2) + "% · 初始 " + fmtMoney(baseCash);
-  document.getElementById("acctCnt").textContent = Object.keys(acct.positions).length;
-  document.getElementById("acctTrades").textContent = `共 ${acct.history.length} 笔`;
-
-  // Positions table
-  const ptb = document.getElementById("positions");
-  ptb.innerHTML = "";
-  // 按市值降序展示 (原来是买入先后的插入顺序)
-  const entries = Object.entries(acct.positions).sort((a, b) => {
-    const pa = (lastQuotes[a[0]]?.price || a[1].avgCost) * a[1].qty;
-    const pb = (lastQuotes[b[0]]?.price || b[1].avgCost) * b[1].qty;
-    return pb - pa;
-  });
-  if (entries.length === 0) {
-    ptb.innerHTML = `<tr><td colspan="8" class="empty">尚无持仓 · 在左侧下单或回到关注列表点击"买入"</td></tr>`;
-  } else {
-    entries.forEach(([code, p]) => {
-      const q = lastQuotes[code] || {};
-      const price = q.price || p.avgCost;
-      const m = price * p.qty;
-      const c = p.avgCost * p.qty;
-      const pnl = m - c;
-      const pnlPct = (price - p.avgCost) / p.avgCost * 100;
-      const cls = colorClass(pnl);
-      const tr = document.createElement("tr");
-      tr.innerHTML = `
-        <td class="code">${code}</td>
-        <td class="name">${p.name}</td>
-        <td class="num-cell">${p.qty.toLocaleString()}</td>
-        <td class="num-cell">${fmtNum(p.avgCost)}</td>
-        <td class="num-cell ${colorClass(q.changePct)}">${fmtNum(price)}</td>
-        <td class="num-cell">${fmtMoney(m)}</td>
-        <td class="num-cell ${cls}">${pnl>=0?"+":""}${pnl.toFixed(0)}<br><span style="font-size:10px">${pnlPct>=0?"+":""}${pnlPct.toFixed(2)}%</span></td>
-        <td>
-          <button class="trade-action" data-info2="${code}" style="margin-right:4px">📋</button>
-          <button class="trade-action" data-kl2="${code}" style="margin-right:4px">K线</button>
-          <button class="trade-action" data-quick="${code}">交易</button>
-        </td>`;
-      ptb.appendChild(tr);
-    });
-    ptb.querySelectorAll("[data-quick]").forEach(b => {
-      b.onclick = () => { stockSel.value = b.dataset.quick; onStockChange(); };
-    });
-    ptb.querySelectorAll("[data-kl2]").forEach(b => {
-      b.onclick = () => openKLine(b.dataset.kl2);
-    });
-    ptb.querySelectorAll("[data-info2]").forEach(b => {
-      b.onclick = () => openInfo(b.dataset.info2);
-    });
-  }
-  document.getElementById("posSummary").textContent = `${entries.length} 只 · 市值 ${fmtMoney(mv)}`;
-
-  // History
-  const htb = document.getElementById("history");
-  htb.innerHTML = "";
-  if (acct.history.length === 0) {
-    htb.innerHTML = `<tr><td colspan="8" class="empty">暂无交易记录</td></tr>`;
-  } else {
-    acct.history.forEach(h => {
-      const tr = document.createElement("tr");
-      tr.innerHTML = `
-        <td class="ts">${h.ts}</td>
-        <td class="${h.side==='buy'?'badge-buy':'badge-sell'}">${h.side==='buy'?'买入':'卖出'}</td>
-        <td class="code">${h.code}</td>
-        <td>${h.name}</td>
-        <td class="num-cell">${fmtNum(h.price)}</td>
-        <td class="num-cell">${h.qty.toLocaleString()}</td>
-        <td class="num-cell">${fmtMoney(h.amount)}</td>
-        <td class="num-cell">${fmtMoney(h.cashAfter)}</td>`;
-      htb.appendChild(tr);
-    });
-  }
-}
-
-// CSV export
-document.getElementById("exportBtn").onclick = () => {
-  if (acct.history.length === 0) return toast("暂无交易记录可导出","error");
-  const headers = ["时间","方向","代码","名称","价格","数量","金额","交易后现金"];
-  const lines = [headers.join(",")];
-  acct.history.slice().reverse().forEach(h => {
-    const row = [
-      `"${h.ts}"`,
-      h.side === "buy" ? "买入" : "卖出",
-      h.code,
-      `"${h.name}"`,
-      h.price.toFixed(2),
-      h.qty,
-      h.amount.toFixed(2),
-      h.cashAfter.toFixed(2)
-    ];
-    lines.push(row.join(","));
-  });
-  // Add BOM so Excel reads UTF-8 Chinese correctly
-  const csv = "﻿" + lines.join("\n");
-  const blob = new Blob([csv], {type:"text/csv;charset=utf-8"});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  const stamp = new Date().toISOString().slice(0,10).replace(/-/g,"");
-  a.href = url; a.download = `trades_${stamp}.csv`;
-  a.click();
-  URL.revokeObjectURL(url);
-  toast(`已导出 ${acct.history.length} 笔交易`,"success");
-};
-
-// Reset
-document.getElementById("resetBtn").onclick = () => {
-  if (!confirm("确定清空所有持仓和交易流水，重置为初始 300 万本金？")) return;
-  acct = defaultAccount();
-  saveAccount(acct);
-  renderAccount();
-  renderPnLCurve();
-  onStockChange();
-  toast("账户已重置 · 本金 300 万", "success");
-};
 
 // ============ Info Panel: news + notes integrated timeline ============
 const NOTES_KEY = "rmb_invest_notes_v1";
@@ -3314,65 +2795,6 @@ document.querySelectorAll("#klineModal .kl-controls [data-r]").forEach(btn => {
   };
 });
 
-// ============ PnL snapshot + curve ============
-let pnlChart = null;
-function snapshotPnL(){
-  // Take one snapshot per Beijing-day
-  const bj = getBeijingNow();
-  const dateStr = bj.toISOString().slice(0,10);
-  let mv = 0;
-  Object.entries(acct.positions).forEach(([code,p]) => {
-    const q = lastQuotes[code];
-    const price = q && q.price ? q.price : p.avgCost;
-    mv += price * p.qty;
-  });
-  const total = acct.cash + mv;
-  const last = acct.snapshots[acct.snapshots.length-1];
-  if (last && last.date === dateStr) {
-    last.total = total; last.cash = acct.cash; last.mv = mv;
-  } else {
-    acct.snapshots.push({date: dateStr, total, cash: acct.cash, mv});
-    if (acct.snapshots.length > 365) acct.snapshots.shift();
-  }
-  saveAccount(acct);
-  renderPnLCurve();
-}
-function renderPnLCurve(){
-  const ctx = document.getElementById("pnlCurve");
-  if (!ctx) return;
-  const snaps = acct.snapshots;
-  const baseCash = acct.initialCash || INITIAL_CASH;
-  const labels = snaps.map(s => s.date.slice(5));
-  const totals = snaps.map(s => s.total);
-  const baseline = snaps.map(() => baseCash);
-  if (snaps.length === 0) {
-    document.getElementById("pnlCurveSummary").textContent = "尚无快照，下一次盘中刷新自动记录";
-  } else {
-    const cur = snaps[snaps.length-1].total;
-    const ret = (cur - baseCash) / baseCash * 100;
-    document.getElementById("pnlCurveSummary").textContent = `${snaps.length} 日 · 累计 ${ret>=0?"+":""}${ret.toFixed(2)}%`;
-  }
-  if (pnlChart) pnlChart.destroy();
-  pnlChart = new Chart(ctx, {
-    type:"line",
-    data:{
-      labels,
-      datasets:[
-        {label:"总资产",data:totals,borderColor:"#f5b301",backgroundColor:"rgba(245,179,1,.12)",fill:true,tension:.25,pointRadius:2,borderWidth:2},
-        {label:"初始本金",data:baseline,borderColor:"#4ea8ff",borderDash:[4,4],fill:false,pointRadius:0,borderWidth:1}
-      ]
-    },
-    options:{
-      responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{labels:{color:"#8aa0c0",font:{size:11}}}},
-      scales:{
-        x:{ticks:{color:"#8aa0c0",font:{size:10}},grid:{color:"#1f2a44"}},
-        y:{ticks:{color:"#8aa0c0",font:{size:10},callback:v=>"¥"+(v/10000).toFixed(0)+"万"},grid:{color:"#1f2a44"}}
-      }
-    }
-  });
-}
-
 // ============ Refresh loop ============
 // Beijing time: convert any local Date to UTC+8 calendar time
 function getBeijingNow(){
@@ -3514,9 +2936,7 @@ async function refresh(force){
     if (activeTab !== "us") setLive(true, inMarket ? "盘中实时" : "盘后");
     renderWatchlist();
     renderPortfolioPie();
-    renderAccount();
-    onStockChange();
-    snapshotPnL();
+    if (activeTab === "trade" && autoBooks.a) renderAutoView("a");
   } catch(e) {
     if (activeTab !== "us") setLive(false, "请求失败");
   }
@@ -4113,460 +3533,123 @@ async function runWatchScanUS(force=false){
 const usRefreshBtn = document.getElementById("usRefreshBtn");
 if (usRefreshBtn) usRefreshBtn.onclick = () => refreshUSQuotes();
 
-// ============ 美股模拟交易 (独立账户 · USD · 1 股粒度) ============
-const STORAGE_KEY_US = "rmb_invest_sim_us_v1";
-const INITIAL_CASH_US = 300_000;
-function fmtMoneyUS(n){ return "$" + Number(n).toLocaleString("en-US", { maximumFractionDigits: 0 }); }
-function loadAccountUS(){
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY_US);
-    if (!raw) return defaultAccountUS();
-    const a = JSON.parse(raw);
-    if (!a.snapshots) a.snapshots = [];
-    if (!a.initialCash) a.initialCash = INITIAL_CASH_US;
-    return a;
-  } catch(e){ return defaultAccountUS(); }
-}
-function defaultAccountUS(){ return { cash: INITIAL_CASH_US, initialCash: INITIAL_CASH_US, positions: {}, history: [], snapshots: [] }; }
-function saveAccountUS(a){ localStorage.setItem(STORAGE_KEY_US, JSON.stringify(a)); }
-let acctUS = loadAccountUS();
+// ============ 自动策略盘 (只读) · 账本由 CI manage_portfolio.py 独家管理 ============
+const autoBooks = { a: null, us: null };
+const autoCharts = {};
+const AUTO_TIER_TEXT = { 0: "🟢 正常 (核心80%+卫星20%)", 1: "🟠 门控 (卫星舱现金)", 2: "🔴 熊市保护 (核心减半)" };
 
-function usPrice(code){
-  const q = usQuotes[code];
-  return q && Number.isFinite(q.close) && q.close > 0 ? q.close : null;
+async function loadAutoBook(mk){
+  try {
+    const r = await fetch(`data/portfolio_${mk}.json?_=${Date.now()}`);
+    if (r.ok) autoBooks[mk] = await r.json();
+  } catch(e) {}
+  return autoBooks[mk];
 }
-function populateStockSelUS(){
-  const sel = document.getElementById("tradeStockUS");
-  if (!sel || !companiesUS || sel.options.length) return;
-  Object.keys(companiesUS).filter(k => !k.startsWith("_")).forEach(code => {
-    const opt = document.createElement("option");
-    opt.value = code;
-    opt.textContent = `${code} · ${companiesUS[code].name || code}`;
-    sel.appendChild(opt);
-  });
-  sel.onchange = onStockChangeUS;
-  onStockChangeUS();
+function autoPrice(mk, code, fallback){
+  if (mk === "us") { const q = usQuotes[code]; return (q && q.close) || fallback; }
+  const q = lastQuotes[code]; return (q && q.price) || fallback;
 }
-function onStockChangeUS(){
-  const sel = document.getElementById("tradeStockUS");
-  if (!sel || !sel.value) return;
-  const code = sel.value;
-  const p = usPrice(code);
-  document.getElementById("qPriceUS").textContent = p ? p.toFixed(2) : "--";
-  const pos = acctUS.positions[code];
-  document.getElementById("qHoldUS").textContent = pos && pos.qty > 0
-    ? `${pos.qty.toLocaleString()} 股 · 成本 ${pos.avgCost.toFixed(2)}` : "无";
-  if (p) document.getElementById("tradePriceUS").value = p.toFixed(2);
-  updateTradeAmountUS();
-}
-function updateTradeAmountUS(){
-  const p = parseFloat(document.getElementById("tradePriceUS").value) || 0;
-  const q = parseInt(document.getElementById("tradeQtyUS").value) || 0;
-  document.getElementById("tradeAmountUS").textContent = (p && q) ? fmtMoneyUS(p * q) : "--";
-}
-function tradeUS(side, codeArg, qtyArg, priceArg){
-  const code = codeArg || document.getElementById("tradeStockUS").value;
-  const name = (companiesUS && companiesUS[code] && companiesUS[code].name) || code;
-  const price = priceArg !== undefined ? priceArg : parseFloat(document.getElementById("tradePriceUS").value);
-  const qty = qtyArg !== undefined ? qtyArg : parseInt(document.getElementById("tradeQtyUS").value);
-  if (!price || price <= 0) return toast("价格无效", "error");
-  if (!qty || qty <= 0) return toast("数量无效", "error");
-  const amount = price * qty;
-  if (side === "buy") {
-    if (amount > acctUS.cash) return toast(`资金不足，需 ${fmtMoneyUS(amount)}，可用 ${fmtMoneyUS(acctUS.cash)}`, "error");
-    acctUS.cash -= amount;
-    const p0 = acctUS.positions[code];
-    if (p0 && p0.qty > 0) {
-      const nq = p0.qty + qty;
-      p0.avgCost = (p0.avgCost * p0.qty + price * qty) / nq;
-      p0.qty = nq;
-    } else {
-      acctUS.positions[code] = { qty, avgCost: price, name };
-    }
-    pushHistoryUS("buy", code, name, price, qty, amount);
-    toast(`买入 ${name} ${qty} 股 @ ${price.toFixed(2)}`, "success");
-  } else {
-    const p0 = acctUS.positions[code];
-    if (!p0 || p0.qty < qty) return toast(`持仓不足，当前 ${p0 ? p0.qty : 0} 股`, "error");
-    acctUS.cash += amount;
-    p0.qty -= qty;
-    if (p0.qty === 0) delete acctUS.positions[code];
-    pushHistoryUS("sell", code, name, price, qty, amount);
-    toast(`卖出 ${name} ${qty} 股 @ ${price.toFixed(2)}`, "success");
-  }
-  saveAccountUS(acctUS);
-  const qel = document.getElementById("tradeQtyUS");
-  if (qel) qel.value = "";
-  updateTradeAmountUS();
-  renderAccountUS();
-  onStockChangeUS();
-}
-function pushHistoryUS(side, code, name, price, qty, amount){
-  acctUS.history.unshift({
-    ts: new Date().toLocaleString("zh-CN", { hour12: false }),
-    side, code, name, price, qty, amount, cashAfter: acctUS.cash
-  });
-  if (acctUS.history.length > 200) acctUS.history.length = 200;
-}
-function renderAccountUS(){
+function fmtCur(mk, n){ return (mk === "us" ? "$" : "¥") + Math.round(n).toLocaleString(); }
+
+function renderAutoView(mk){
+  const el = id => document.getElementById(`${id}_${mk}`);
+  if (!el("autoTotal")) return;
+  const b = autoBooks[mk];
+  if (!b) { el("autoDecisions").textContent = "账本尚未生成（等待首次 CI 运行）"; return; }
   let mv = 0;
-  Object.entries(acctUS.positions).forEach(([code, p]) => { mv += (usPrice(code) || p.avgCost) * p.qty; });
-  const total = acctUS.cash + mv;
-  const baseCash = acctUS.initialCash || INITIAL_CASH_US;
-  const pnl = total - baseCash;
-  const pnlPct = pnl / baseCash * 100;
-  document.getElementById("acctCashUS").textContent = fmtMoneyUS(acctUS.cash);
-  document.getElementById("acctMVUS").textContent = fmtMoneyUS(mv);
-  document.getElementById("acctTotalUS").textContent = fmtMoneyUS(total);
-  const pnlEl = document.getElementById("acctPnLUS");
-  pnlEl.textContent = (pnl >= 0 ? "+" : "") + fmtMoneyUS(pnl);
+  const rows = Object.entries(b.positions || {}).map(([c, p]) => {
+    const price = autoPrice(mk, c, p.avgCost);
+    mv += price * p.qty;
+    return { c, p, price };
+  }).sort((x, y) => y.price * y.p.qty - x.price * x.p.qty);
+  const total = b.cash + mv;
+  const base = b.initialCash || 1;
+  const pnl = total - base, pnlPct = pnl / base * 100;
+
+  el("autoCash").textContent = fmtCur(mk, b.cash);
+  el("autoCashPct").textContent = `占比 ${(b.cash / Math.max(total, 1) * 100).toFixed(1)}% · 初始 ${fmtCur(mk, base)}`;
+  el("autoMV").textContent = fmtCur(mk, mv);
+  el("autoTotal").textContent = fmtCur(mk, total);
+  const pnlEl = el("autoPnL");
+  pnlEl.textContent = (pnl >= 0 ? "+" : "-") + fmtCur(mk, Math.abs(pnl));
   pnlEl.className = "val " + (pnl >= 0 ? "up" : "down");
-  document.getElementById("acctPnLPctUS").textContent = (pnlPct >= 0 ? "+" : "") + pnlPct.toFixed(2) + "% · 初始 " + fmtMoneyUS(baseCash);
-  document.getElementById("acctCntUS").textContent = Object.keys(acctUS.positions).length;
-  document.getElementById("acctTradesUS").textContent = `共 ${acctUS.history.length} 笔`;
+  el("autoPnLPct").textContent = (pnlPct >= 0 ? "+" : "") + pnlPct.toFixed(2) + "%";
+  const ss = b.strategy_state || {};
+  el("autoTier").textContent = AUTO_TIER_TEXT[ss.tier] || "--";
+  el("autoCheck").textContent = "最近检查 " + (ss.last_check || "--");
 
-  const ptb = document.getElementById("positionsUS");
-  ptb.innerHTML = "";
-  // 按市值降序展示
-  const entries = Object.entries(acctUS.positions).sort((a, b) => {
-    const pa = (usPrice(a[0]) || a[1].avgCost) * a[1].qty;
-    const pb = (usPrice(b[0]) || b[1].avgCost) * b[1].qty;
-    return pb - pa;
+  // 持仓表
+  const ptb = el("autoPositions");
+  ptb.innerHTML = rows.length ? "" : `<tr><td colspan="7" class="empty">暂无持仓 (全现金)</td></tr>`;
+  rows.forEach(({ c, p, price }) => {
+    const m = price * p.qty, cost = p.avgCost * p.qty;
+    const g = m - cost, gp = (price - p.avgCost) / p.avgCost * 100;
+    const cls = colorClass(g);
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td class="code">${c}</td><td>${p.name || c}</td>
+      <td class="num-cell">${p.qty.toLocaleString()}</td><td class="num-cell">${p.avgCost.toFixed(2)}</td>
+      <td class="num-cell">${price.toFixed(2)}</td><td class="num-cell">${fmtCur(mk, m)}</td>
+      <td class="num-cell ${cls}">${g >= 0 ? "+" : ""}${Math.round(g).toLocaleString()} (${gp >= 0 ? "+" : ""}${gp.toFixed(1)}%)</td>`;
+    ptb.appendChild(tr);
   });
-  if (entries.length === 0) {
-    ptb.innerHTML = `<tr><td colspan="8" class="empty">尚无持仓 · 点上方"按策略一键建仓"或手动下单</td></tr>`;
-  } else {
-    entries.forEach(([code, p]) => {
-      const price = usPrice(code) || p.avgCost;
-      const m = price * p.qty, cst = p.avgCost * p.qty;
-      const pnl2 = m - cst, pct2 = (price - p.avgCost) / p.avgCost * 100;
-      const cls = colorClass(pnl2);
-      const tr = document.createElement("tr");
-      tr.innerHTML = `<td class="code">${code}</td><td>${p.name}</td>
-        <td class="num-cell">${p.qty.toLocaleString()}</td><td class="num-cell">${p.avgCost.toFixed(2)}</td>
-        <td class="num-cell">${price.toFixed(2)}</td><td class="num-cell">${fmtMoneyUS(m)}</td>
-        <td class="num-cell ${cls}">${pnl2 >= 0 ? "+" : ""}${pnl2.toFixed(0)} (${pct2 >= 0 ? "+" : ""}${pct2.toFixed(1)}%)</td>
-        <td><button class="trade-action" onclick="tradeUS('sell','${code}',${p.qty},${price})">全卖</button></td>`;
-      ptb.appendChild(tr);
+  el("autoPosSummary").textContent = rows.length ? `${rows.length} 只 · 市值 ${fmtCur(mk, mv)}` : "--";
+
+  // 决策日志
+  const dEl = el("autoDecisions");
+  const decisions = b.decisions || [];
+  dEl.innerHTML = decisions.length ? decisions.slice(0, 20).map(d =>
+    `<div style="margin-bottom:10px;padding-bottom:8px;border-bottom:1px dashed var(--border)">
+      <b style="color:var(--gold)">${d.date}</b> · ${d.tier}
+      ${(d.reasons || []).map(x => `<div>· ${x}</div>`).join("")}
+      ${(d.trades || []).map(x => `<div style="color:var(--text)">→ ${x}</div>`).join("")}
+      <div style="font-size:11px">调仓后现金 ${d.cash_pct}%</div>
+    </div>`).join("") : "尚无决策记录";
+
+  // 净值曲线
+  const ctx = el("autoCurve");
+  if (ctx && b.snapshots && b.snapshots.length) {
+    const snaps = b.snapshots;
+    el("autoCurveSummary").textContent = `${snaps.length} 日 · 累计 ${pnlPct >= 0 ? "+" : ""}${pnlPct.toFixed(2)}%`;
+    if (autoCharts[mk]) autoCharts[mk].destroy();
+    autoCharts[mk] = new Chart(ctx, {
+      type: "line",
+      data: { labels: snaps.map(x => x.date.slice(5)), datasets: [
+        { label: "总资产", data: snaps.map(x => x.total), borderColor: mk === "us" ? "#4ea8ff" : "#f5b301",
+          backgroundColor: mk === "us" ? "rgba(78,168,255,.12)" : "rgba(245,179,1,.12)", fill: true, tension: .25, pointRadius: 2, borderWidth: 2 },
+        { label: "初始本金", data: snaps.map(() => base), borderColor: "#8aa0c0", borderDash: [4, 4], fill: false, pointRadius: 0, borderWidth: 1 }
+      ]},
+      options: { responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { labels: { color: "#8aa0c0", font: { size: 11 } } } },
+        scales: { x: { ticks: { color: "#8aa0c0", font: { size: 10 } }, grid: { color: "#1f2a44" } },
+                  y: { ticks: { color: "#8aa0c0", font: { size: 10 },
+                        callback: v => mk === "us" ? "$" + (v / 1000).toFixed(0) + "k" : "¥" + (v / 10000).toFixed(0) + "万" },
+                       grid: { color: "#1f2a44" } } } }
     });
   }
-  document.getElementById("posSummaryUS").textContent = entries.length ? `${entries.length} 只 · 市值 ${fmtMoneyUS(mv)}` : "--";
 
-  const htb = document.getElementById("historyUS");
-  if (htb) {
-    htb.innerHTML = acctUS.history.length ? "" : `<tr><td colspan="8" class="empty">暂无交易</td></tr>`;
-    acctUS.history.slice(0, 100).forEach(h => {
-      const tr = document.createElement("tr");
-      tr.innerHTML = `<td>${h.ts}</td><td class="${h.side === 'buy' ? 'up' : 'down'}">${h.side === 'buy' ? '买入' : '卖出'}</td>
-        <td class="code">${h.code}</td><td>${h.name}</td>
-        <td class="num-cell">${h.price.toFixed(2)}</td><td class="num-cell">${h.qty.toLocaleString()}</td>
-        <td class="num-cell">${fmtMoneyUS(h.amount)}</td><td class="num-cell">${fmtMoneyUS(h.cashAfter)}</td>`;
-      htb.appendChild(tr);
-    });
-  }
-}
-
-// 快照 + 净值曲线 (每美东日一次)
-let pnlChartUS = null;
-function snapshotPnLUS(){
-  const dateStr = formatTimeZoneNow("America/New_York").slice(0, 10);
-  let mv = 0;
-  Object.entries(acctUS.positions).forEach(([code, p]) => { mv += (usPrice(code) || p.avgCost) * p.qty; });
-  const total = acctUS.cash + mv;
-  const last = acctUS.snapshots[acctUS.snapshots.length - 1];
-  if (last && last.date === dateStr) {
-    last.total = total; last.cash = acctUS.cash; last.mv = mv;
-  } else {
-    acctUS.snapshots.push({ date: dateStr, total, cash: acctUS.cash, mv });
-    if (acctUS.snapshots.length > 365) acctUS.snapshots.shift();
-  }
-  saveAccountUS(acctUS);
-  renderPnLCurveUS();
-}
-function renderPnLCurveUS(){
-  const ctx = document.getElementById("pnlCurveUS");
-  if (!ctx) return;
-  const snaps = acctUS.snapshots;
-  const baseCash = acctUS.initialCash || INITIAL_CASH_US;
-  const summaryEl = document.getElementById("pnlCurveSummaryUS");
-  if (snaps.length === 0) {
-    summaryEl.textContent = "尚无快照，打开本页自动记录";
-  } else {
-    const cur = snaps[snaps.length - 1].total;
-    const ret = (cur - baseCash) / baseCash * 100;
-    summaryEl.textContent = `${snaps.length} 日 · 累计 ${ret >= 0 ? "+" : ""}${ret.toFixed(2)}%`;
-  }
-  if (pnlChartUS) pnlChartUS.destroy();
-  pnlChartUS = new Chart(ctx, {
-    type: "line",
-    data: {
-      labels: snaps.map(s => s.date.slice(5)),
-      datasets: [
-        { label: "总资产", data: snaps.map(s => s.total), borderColor: "#4ea8ff", backgroundColor: "rgba(78,168,255,.12)", fill: true, tension: .25, pointRadius: 2, borderWidth: 2 },
-        { label: "初始本金", data: snaps.map(() => baseCash), borderColor: "#f5b301", borderDash: [4, 4], fill: false, pointRadius: 0, borderWidth: 1 }
-      ]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { labels: { color: "#8aa0c0", font: { size: 11 } } } },
-      scales: {
-        x: { ticks: { color: "#8aa0c0", font: { size: 10 } }, grid: { color: "#1f2a44" } },
-        y: { ticks: { color: "#8aa0c0", font: { size: 10 }, callback: v => "$" + (v / 1000).toFixed(0) + "k" }, grid: { color: "#1f2a44" } }
-      }
-    }
+  // 交易流水
+  const htb = el("autoHistory");
+  const hist = b.history || [];
+  el("autoHistCount").textContent = `共 ${hist.length} 笔`;
+  htb.innerHTML = hist.length ? "" : `<tr><td colspan="8" class="empty">暂无交易</td></tr>`;
+  hist.slice(0, 100).forEach(h => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${h.ts}</td><td class="${h.side === 'buy' ? 'up' : 'down'}">${h.side === 'buy' ? '买入' : '卖出'}</td>
+      <td class="code">${h.code}</td><td>${h.name}</td>
+      <td class="num-cell">${h.price.toFixed(2)}</td><td class="num-cell">${h.qty.toLocaleString()}</td>
+      <td class="num-cell">${fmtCur(mk, h.amount)}</td><td class="num-cell">${fmtCur(mk, h.cashAfter)}</td>`;
+    htb.appendChild(tr);
   });
 }
 
-// QQQ 宏观阶梯: 周线 EMA8/EMA21 + 距 52 周高点回撤
-async function getMacroLadderStateUS(){
-  try {
-    const bars = await fetchUSKLine("QQQ", "week", 60);
-    if (!bars || bars.length < 22) return null;
-    const closes = bars.map(b => b.close);
-    const e8 = ind_EMA(closes, 8), e21 = ind_EMA(closes, 21);
-    const close = closes[closes.length - 1];
-    const high52 = Math.max(...bars.slice(-52).map(b => b.high));
-    return { close, e8: e8[e8.length - 1], e21: e21[e21.length - 1], drawdownPct: (close - high52) / high52 * 100 };
-  } catch(e){ return null; }
-}
-
-async function strategyBuildPositionUS(){
-  const btn = document.getElementById("btnStrategyBuildUS");
-  const info = document.getElementById("strategyBuildInfoUS");
-  btn.disabled = true;
-  info.textContent = "⏳ 准备数据: 基本面 + 行情 + 周线趋势 + QQQ 阶梯...";
-  try {
+async function initAutoTab(mk){
+  if (mk === "us") {
     if (!companiesUS) await loadCompaniesUS();
-    computeQuantWeightsUS();
-    if (!_quantWeightsUS || !Object.keys(_quantWeightsUS).length) {
-      info.textContent = "❌ 美股基本面数据未就绪: " + (_quantWeightsUSStatus || "请刷新页面重试");
-      return;
-    }
     if (!Object.keys(usQuotes).length) await refreshUSQuotes();
-    if (!watchScanStateUS.results) await scanWatchlistBuySignalsUS();
-    const results = watchScanStateUS.results || [];
-    // 建仓排除口径: 本周收盘仍低于周线 EMA21 (上周破位但已收回的不排除)
-    const excluded = new Set(results.filter(r => {
-      const last = r.bars && r.bars[r.bars.length - 1];
-      return r.signal && Number.isFinite(r.signal.ema21) && last && last.close < r.signal.ema21;
-    }).map(r => r.stock.code));
-    const bearCnt = results.filter(r => r.signal.action.startsWith("sell") || r.signal.action === "exit-confirmed").length;
-    const breadthPct = results.length ? bearCnt / results.length * 100 : null;
-    const ladder = await getMacroLadderStateUS();
-
-    let corePct = 0.80, satPct = 0.20;
-    let reason = "QQQ 多头 — 核心 80% + 卫星 20% 全部建仓";
-    if (ladder && ladder.drawdownPct <= -20) {
-      corePct = 0.40; satPct = 0;
-      reason = `QQQ 距 52 周高点 ${ladder.drawdownPct.toFixed(1)}% (≤-20%) — 核心舱减半 (40%)，其余现金`;
-    } else if ((ladder && ladder.close < ladder.e21) || (breadthPct !== null && breadthPct >= 60)) {
-      satPct = 0;
-      reason = (ladder && ladder.close < ladder.e21
-        ? `QQQ ${ladder.close.toFixed(0)} 跌破周线 EMA21 (${ladder.e21.toFixed(0)})`
-        : `观察列表 ${breadthPct.toFixed(0)}% 处于 sell 信号`)
-        + " — 核心舱 80% 建仓，卫星舱 20% 留现金，QQQ 收复 EMA21 后再买回";
-    } else if (ladder && ladder.close < ladder.e8) {
-      satPct = 0;
-      reason = "QQQ 跌破周线 EMA8 (未破 EMA21) — 保守起见仅建核心舱 80%，卫星舱留现金等企稳";
-    }
-
-    const rankedAll = Object.keys(companiesUS).filter(k => !k.startsWith("_"))
-      .map(code => ({ code, name: companiesUS[code].name || code, w: _quantWeightsUS[code]?.weight ?? 0, score: _quantWeightsUS[code]?.score }))
-      .filter(s => Number.isFinite(s.score))
-      .sort((a, b) => b.score - a.score)
-      .filter(s => !excluded.has(s.code));
-    const core = rankedAll.slice(0, 5);
-    const satellite = satPct > 0 ? rankedAll.slice(5, 10) : [];
-    if (core.length < 5) { info.textContent = "❌ 可建仓标的不足 5 只（EMA21 破坏排除过多），暂不建仓"; return; }
-
-    if (Object.keys(acctUS.positions).length) {
-      if (!confirm("已有美股模拟持仓，将先按现价全部卖出，再按策略重建。继续？")) { info.textContent = "已取消"; return; }
-      for (const [code, p] of Object.entries({ ...acctUS.positions })) {
-        const price = usPrice(code) || p.avgCost;
-        acctUS.cash += price * p.qty;
-        pushHistoryUS("sell", code, p.name, price, p.qty, price * p.qty);
-        delete acctUS.positions[code];
-      }
-    }
-
-    const total = acctUS.cash;
-    const lines = [], skipped = [];
-    let spent = 0;
-    const buyBasket = (basket, pct, label) => {
-      const wSum = basket.reduce((s, x) => s + x.w, 0) || 1;
-      const basketBudget = total * pct;
-      const plan = [];
-      basket.forEach(x => {
-        const price = usPrice(x.code);
-        if (!price) { skipped.push(`${x.name}(无行情)`); return; }
-        plan.push({ ...x, price, target: basketBudget * x.w / wSum, qty: 0 });
-      });
-      let basketSpent = 0;
-      plan.forEach(x => {
-        x.qty = Math.floor(x.target / x.price);
-        basketSpent += x.qty * x.price;
-      });
-      // 美股 1 股粒度: 篮子预算内 (容忍 2%) 给缺口最大者逐股补足
-      while (true) {
-        let best = null;
-        for (const x of plan) {
-          const short = x.target - x.qty * x.price;
-          if (basketSpent + x.price > basketBudget) continue;
-          if (short <= x.price / 2) continue;
-          if (!best || short > best.short) best = { x, short };
-        }
-        if (!best) break;
-        best.x.qty += 1;
-        basketSpent += best.x.price;
-      }
-      plan.forEach(x => {
-        if (x.qty <= 0) { skipped.push(`${x.name}(预算不足 1 股)`); return; }
-        const amount = x.qty * x.price;
-        acctUS.cash -= amount;
-        spent += amount;
-        acctUS.positions[x.code] = { qty: x.qty, avgCost: x.price, name: x.name };
-        pushHistoryUS("buy", x.code, x.name, x.price, x.qty, amount);
-        lines.push(`${label} <b>${x.name}</b> (${x.code}): ${x.qty.toLocaleString()} 股 @ ${x.price.toFixed(2)} = ${fmtMoneyUS(amount)}（实际 ${(amount / total * 100).toFixed(1)}% / 目标 ${(x.target / total * 100).toFixed(1)}%）`);
-      });
-    };
-    buyBasket(core, corePct, "核心");
-    if (satellite.length) buyBasket(satellite, satPct, "卫星");
-
-    saveAccountUS(acctUS);
-    renderAccountUS();
-    snapshotPnLUS();
-    onStockChangeUS();
-    info.innerHTML = `<div style="color:var(--gold)">🎯 ${reason}</div>` +
-      lines.map(l => `<div>· ${l}</div>`).join("") +
-      `<div style="margin-top:6px">合计买入 ${fmtMoneyUS(spent)} · 保留现金 ${fmtMoneyUS(acctUS.cash)}（${(acctUS.cash / total * 100).toFixed(1)}%）` +
-      (excluded.size ? `<br>已排除 EMA21 破坏个股: ${[...excluded].join(" / ")}` : "") +
-      (skipped.length ? `<br>跳过: ${skipped.join("，")}` : "") + `</div>`;
-    toast("美股策略建仓完成", "success");
-  } finally {
-    btn.disabled = false;
   }
+  await loadAutoBook(mk);
+  renderAutoView(mk);
 }
-
-async function initTradeUSTab(){
-  if (!companiesUS) await loadCompaniesUS();
-  if (!Object.keys(usQuotes).length) await refreshUSQuotes();
-  populateStockSelUS();
-  renderAccountUS();
-  snapshotPnLUS();
-  renderStrategyDrift("us");
-  renderAutoPortfolio("us");
-}
-
-// 自动策略盘展示 (账本由 CI 的 manage_portfolio.py 独家管理, 页面只读)
-async function renderAutoPortfolio(market){
-  const isUS = market === "us";
-  const el = document.getElementById(isUS ? "autoPfBodyUS" : "autoPfBody");
-  const sm = document.getElementById(isUS ? "autoPfSummaryUS" : "autoPfSummary");
-  if (!el) return;
-  try {
-    const r = await fetch(`data/portfolio_${isUS ? "us" : "a"}.json?_=${Date.now()}`);
-    if (!r.ok) throw new Error("no book");
-    const b = await r.json();
-    const cur = b.currency || (isUS ? "$" : "¥");
-    const quotes = isUS ? usQuotes : lastQuotes;
-    let mv = 0;
-    const rows = Object.entries(b.positions || {}).map(([c, p]) => {
-      const q = quotes[c];
-      const live = isUS ? (q && q.close) : (q && q.price);
-      const price = live || p.avgCost;
-      mv += price * p.qty;
-      return { c, p, price };
-    }).sort((x, y) => y.price * y.p.qty - x.price * x.p.qty);
-    const total = b.cash + mv;
-    const pnl = (total - b.initialCash) / b.initialCash * 100;
-    if (sm) sm.textContent = `${cur}${Math.round(total).toLocaleString()} · ${pnl >= 0 ? "+" : ""}${pnl.toFixed(2)}% · 现金 ${(b.cash / Math.max(total, 1) * 100).toFixed(1)}%`;
-    const d = (b.decisions || [])[0];
-    el.innerHTML =
-      (rows.length ? rows.map(({c, p, price}) => {
-        const ret = (price - p.avgCost) / p.avgCost * 100;
-        return `<div>· <b>${p.name || c}</b> (${c}): ${p.qty.toLocaleString()} 股 · 成本 ${p.avgCost.toFixed(2)} → 现价 ${price.toFixed(2)} <span class="${ret >= 0 ? "up" : "down"}">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}%</span></div>`;
-      }).join("") : `<div>暂无持仓</div>`) +
-      `<div style="margin-top:4px">现金 ${cur}${Math.round(b.cash).toLocaleString()}</div>` +
-      (d ? `<div style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--border)">` +
-        `<b style="color:var(--gold)">最近决策 · ${d.date} · ${d.tier}</b>` +
-        (d.reasons || []).map(x => `<div>· ${x}</div>`).join("") +
-        (d.trades || []).map(x => `<div style="color:var(--text)">→ ${x}</div>`).join("") +
-        `</div>` : "");
-  } catch(e) {
-    el.textContent = "自动盘账本尚未生成（等待首次 CI 运行）";
-    if (sm) sm.textContent = "--";
-  }
-}
-
-// 打开模拟盘时自动检查持仓与策略状态的偏离, 给出调仓提示 (只提示, 不自动下单;
-// 每日收盘后的 CI 扫描有触发时也会推送微信/邮件说明原因)
-async function renderStrategyDrift(market){
-  const isUS = market === "us";
-  const info = document.getElementById(isUS ? "strategyBuildInfoUS" : "strategyBuildInfo");
-  const account = isUS ? acctUS : acct;
-  if (!info || info.innerHTML.trim()) return;  // 已有建仓结果时不覆盖
-  if (!Object.keys(account.positions).length) return;
-  info.textContent = "⏳ 检查持仓与策略状态...";
-  try {
-    const results = isUS
-      ? (watchScanStateUS.results || await scanWatchlistBuySignalsUS())
-      : (watchScanState.results || await scanWatchlistBuySignals());
-    const ladder = isUS ? await getMacroLadderStateUS() : await getMacroLadderState();
-    const priceOf = code => isUS ? usPrice(code) : (lastQuotes[code] && lastQuotes[code].price);
-    const broken = (results || [])
-      .filter(r => account.positions[r.stock.code] && r.signal && r.bars
-        && Number.isFinite(r.signal.ema21) && r.bars[r.bars.length - 1].close < r.signal.ema21)
-      .map(r => r.stock.name || r.stock.code);
-    let mv = 0;
-    Object.entries(account.positions).forEach(([c, p]) => { mv += (priceOf(c) || p.avgCost) * p.qty; });
-    const cashRatio = account.cash / Math.max(account.cash + mv, 1) * 100;
-    const msgs = [];
-    if (broken.length) msgs.push(`⚠ 持仓 <b>${broken.join(" / ")}</b> 本周收盘已低于周线 EMA21（核心趋势破坏）— 建议点"一键建仓"换仓`);
-    if (ladder) {
-      if (ladder.drawdownPct <= -20) {
-        msgs.push(`🔴 指数距 52 周高点 ${ladder.drawdownPct.toFixed(1)}% (≤-20%) — 核心舱应减半，点"一键建仓"执行`);
-      } else if (ladder.close < ladder.e21 && cashRatio < 15) {
-        msgs.push(`🟠 指数跌破周线 EMA21 但现金仅 ${cashRatio.toFixed(0)}% — 卫星舱应转现金，点"一键建仓"执行`);
-      } else if (ladder.close > ladder.e21 && ladder.close > ladder.e8 && cashRatio > 25) {
-        msgs.push(`🟢 指数已站上周线 EMA8/EMA21 而现金还有 ${cashRatio.toFixed(0)}% — 可点"一键建仓"买回卫星舱`);
-      }
-    }
-    info.innerHTML = msgs.length
-      ? msgs.map(m => `<div>${m}</div>`).join("")
-      : `<div style="color:var(--muted)">✅ 持仓与策略状态一致，无需调仓（现金占比 ${cashRatio.toFixed(0)}%）</div>`;
-  } catch(e){ info.textContent = ""; }
-}
-document.getElementById("btnStrategyBuildUS").onclick = strategyBuildPositionUS;
-document.getElementById("btnBuyUS").onclick = () => tradeUS("buy");
-document.getElementById("btnSellUS").onclick = () => tradeUS("sell");
-document.getElementById("tradePriceUS").oninput = updateTradeAmountUS;
-document.getElementById("tradeQtyUS").oninput = updateTradeAmountUS;
-document.getElementById("exportBtnUS").onclick = () => {
-  if (acctUS.history.length === 0) return toast("暂无交易记录可导出", "error");
-  const headers = ["时间","方向","代码","名称","价格","数量","金额","交易后现金"];
-  const rows = [headers.join(",")];
-  acctUS.history.slice().reverse().forEach(h => {
-    rows.push([`"${h.ts}"`, h.side === "buy" ? "买入" : "卖出", h.code, `"${h.name}"`,
-      h.price.toFixed(2), h.qty, h.amount.toFixed(2), h.cashAfter.toFixed(2)].join(","));
-  });
-  const csv = "﻿" + rows.join("\n");
-  const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = `trades_us_${new Date().toISOString().slice(0,10).replace(/-/g,"")}.csv`;
-  a.click();
-  URL.revokeObjectURL(url);
-  toast(`已导出 ${acctUS.history.length} 笔交易`, "success");
-};
-document.getElementById("resetBtnUS").onclick = () => {
-  if (!confirm("确定清空美股模拟持仓和交易流水，重置为初始 $300,000？")) return;
-  acctUS = defaultAccountUS();
-  saveAccountUS(acctUS);
-  renderAccountUS();
-  renderPnLCurveUS();
-  toast("美股账户已重置", "success");
-};
 
 // 切换到美股 tab 时触发加载 (避免页面初始化就拉一堆数据)
 document.querySelectorAll(".tab").forEach(t => {
@@ -4577,13 +3660,12 @@ document.querySelectorAll(".tab").forEach(t => {
   }
 });
 
-// Init
-renderAccount();
-renderPnLCurve();
+// Init: 预加载自动盘账本
+loadAutoBook("a");
+loadAutoBook("us");
 
 // 启动顺序: loadCompanies 必须先完成 (它会派生 WATCH), 再启动行情/扫描/选择器
 loadCompanies().then(() => {
-  populateStockSel();
   renderWatchlist();        // 触发 computeQuantWeights → KPI / 权重列
   renderPortfolioPie();     // Top 10 组合配比饼图
   if (publicNews) { renderWatchlist(); renderGlobalFeed(); }  // news 先到则补渲染
