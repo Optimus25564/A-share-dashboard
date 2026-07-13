@@ -1,0 +1,56 @@
+name: Refresh Fundamentals
+
+# 每周六自动刷新基本面数据 (财报季模型输入不再依赖手动跑脚本):
+#   1) 美股: SEC Companyfacts 追加新披露的财季 (fill_us_actuals_from_sec.py 含追加+防重影)
+#   2) 美股: 最新完整财年现金流/债务 (fill_us_cash_flow_from_sec.py 含时效守卫)
+#   3) 双市场: 市值
+#   4) 审计 (0 error 才提交) + 重算 6 因子评分
+# A股季报由巨潮官方 PDF 管线处理 (财报季手动/会话内运行, 见 DATA_QUALITY_AUDIT.md)。
+on:
+  schedule:
+    - cron: '0 2 * * 6'
+  workflow_dispatch:
+
+concurrency:
+  group: refresh-fundamentals
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Append newly disclosed US quarters from SEC
+        run: python scripts/fill_us_actuals_from_sec.py
+
+      - name: Refresh US cash-flow quality metrics from SEC
+        run: python scripts/fill_us_cash_flow_from_sec.py
+
+      - name: Update market caps
+        run: python scripts/update_market_caps.py
+
+      - name: Audit data quality (block commit on error)
+        run: python scripts/audit_data_quality.py
+
+      - name: Recompute quant scores
+        run: node scripts/build_model_factor_scores.mjs
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/companies.json data/companies_us.json data/model_scores.json \
+                  data_quality_audit.json MODEL_FACTOR_SCORES.md
+          if git diff --cached --quiet; then
+            echo "无数据变化"
+          else
+            git commit -m "fundamentals: 周度自动刷新 $(date -u +%F) (SEC财季追加/现金流/市值)"
+            git push
+          fi

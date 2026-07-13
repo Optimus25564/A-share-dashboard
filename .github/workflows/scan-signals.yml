@@ -30,6 +30,9 @@ jobs:
       - name: Scan weekly signals (real K-lines)
         run: python .github/scripts/scan_signals.py
 
+      - name: Update market caps (daily, feeds durability/valuation factors)
+        run: python scripts/update_market_caps.py || echo "市值更新失败, 沿用旧值"
+
       - name: Recompute quant scores (6-factor model)
         run: node scripts/build_model_factor_scores.mjs
 
@@ -43,7 +46,8 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/alerts_state.json data/alerts_state_us.json \
                   data/portfolio_a.json data/portfolio_us.json \
-                  data/model_scores.json MODEL_FACTOR_SCORES.md
+                  data/model_scores.json MODEL_FACTOR_SCORES.md \
+                  data/companies.json data/companies_us.json
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
