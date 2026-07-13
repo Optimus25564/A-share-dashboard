@@ -100,6 +100,12 @@ def run_market(mk):
         px, e21 = price_of(prices, code), p.get("ema21")
         return px is not None and (not isinstance(e21, (int, float)) or px >= e21)
 
+    # 合格池有效排名: 先剔除 EMA21 下方的, 再按模型排名排队。
+    # 排名缓冲和"收复回归"都基于有效排名 —— 高排名股票收复 EMA21 后会把
+    # 第 10 名的有效排名挤成 11, 从而触发换仓把它接回来。
+    eligible = [r["code"] for r in ranked if entry_ok(r["code"])]
+    eff_rank = {c: i + 1 for i, c in enumerate(eligible)}
+
     # ---- 触发检测 ----
     reasons, force_daily = [], False
     if not ss.get("seeded"):
@@ -119,10 +125,15 @@ def run_market(mk):
     if broken:
         reasons.append("持仓周线收盘跌破 EMA21 (核心趋势破坏): "
                        + " / ".join(f"{(pos[c].get('name') or c)}({c})" for c in broken))
-    dropped = [c for c in pos if rank_of.get(c, 999) > RANK_EXIT]
+    dropped = [c for c in pos if eff_rank.get(c, 999) > RANK_EXIT]
     if dropped:
-        reasons.append("持仓掉出量化 Top10 (排名缓冲触发): "
-                       + " / ".join(f"{(pos[c].get('name') or c)}(现排名 {rank_of.get(c, '未入模')})" for c in dropped))
+        incoming = [c for c in eligible[:RANK_EXIT] if c not in pos]
+        msg = ("持仓掉出合格排名 Top10 (排名缓冲触发): "
+               + " / ".join(f"{(pos[c].get('name') or c)}(有效排名 {eff_rank.get(c, '已出合格池')})" for c in dropped))
+        if incoming:
+            msg += " ← 顶替者: " + " / ".join(
+                f"{name_of.get(c, c)}(模型#{rank_of.get(c, '?')}, 收复EMA21回到合格池)" for c in incoming)
+        reasons.append(msg)
 
     # ---- 快照 (每日, 不论是否交易) ----
     def equity():
@@ -144,7 +155,6 @@ def run_market(mk):
         # ---- 全量重定向到目标组合 (与一键建仓同语义) ----
         core_pct = 0.40 if tier == 2 else 0.80
         sat_pct = 0.20 if tier == 0 else 0.0
-        eligible = [r["code"] for r in ranked if entry_ok(r["code"])]
         core = eligible[:TOP_CORE]
         satellite = eligible[TOP_CORE:TOP_ALL] if sat_pct > 0 else []
         if len(core) < TOP_CORE:
@@ -243,7 +253,13 @@ def run_market(mk):
             events += [f"  {t}" for t in decision["trades"]]
             events.append(f"  调仓后: 持仓 {len(pos)} 只 / 现金 {decision['cash_pct']}% / 总资产 {cfg['cur']}{total2:,.0f}")
     elif reasons and not bar_closed:
-        events.append(f"🤖 {cfg['label']}模拟盘: 检测到触发但周线未收盘, 等待周五收盘确认 — " + "；".join(reasons))
+        # 周中预警去重: 同样的待确认触发只推一次, 变化了才再推
+        sig = "|".join(sorted(reasons))
+        if ss.get("pending_sig") != sig:
+            events.append(f"🤖 {cfg['label']}模拟盘: 检测到触发但周线未收盘, 等待周五收盘确认 — " + "；".join(reasons))
+            ss["pending_sig"] = sig
+    if bar_closed or not reasons:
+        ss.pop("pending_sig", None)
 
     ss["tier"] = tier
     ss["last_check"] = now_str()
