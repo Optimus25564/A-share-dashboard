@@ -1,15 +1,15 @@
 {
- "cash": 91.59999999996035,
+ "cash": 58335.75999999996,
  "initialCash": 300000,
  "currency": "$",
  "positions": {
   "NVDA": {
-   "qty": 262,
+   "qty": 259,
    "avgCost": 210.96,
    "name": "Nvidia"
   },
   "AVGO": {
-   "qty": 120,
+   "qty": 118,
    "avgCost": 399.97,
    "name": "Broadcom"
   },
@@ -19,42 +19,107 @@
    "name": "Meta Platforms"
   },
   "AAPL": {
-   "qty": 146,
+   "qty": 138,
    "avgCost": 315.32,
    "name": "Apple"
   },
-  "GOOGL": {
-   "qty": 124,
-   "avgCost": 357.18,
-   "name": "Alphabet"
-  },
-  "TSM": {
-   "qty": 30,
-   "avgCost": 434.11,
-   "name": "TSMC"
-  },
   "MU": {
-   "qty": 13,
-   "avgCost": 979.3,
+   "qty": 49,
+   "avgCost": 948.2224489795918,
    "name": "Micron"
-  },
-  "ANET": {
-   "qty": 61,
-   "avgCost": 186.96,
-   "name": "Arista Networks"
-  },
-  "APP": {
-   "qty": 23,
-   "avgCost": 506.98,
-   "name": "AppLovin"
-  },
-  "ARM": {
-   "qty": 35,
-   "avgCost": 323.39,
-   "name": "Arm Holdings"
   }
  },
  "history": [
+  {
+   "ts": "2026-07-14 06:31",
+   "side": "sell",
+   "code": "AAPL",
+   "name": "Apple",
+   "price": 317.31,
+   "qty": 8,
+   "amount": 2538.48,
+   "cashAfter": 58335.76
+  },
+  {
+   "ts": "2026-07-14 06:31",
+   "side": "buy",
+   "code": "MU",
+   "name": "Micron",
+   "price": 937.0,
+   "qty": 36,
+   "amount": 33732.0,
+   "cashAfter": 58335.76
+  },
+  {
+   "ts": "2026-07-14 06:31",
+   "side": "sell",
+   "code": "AVGO",
+   "name": "Broadcom",
+   "price": 384.05,
+   "qty": 2,
+   "amount": 768.1,
+   "cashAfter": 58335.76
+  },
+  {
+   "ts": "2026-07-14 06:31",
+   "side": "sell",
+   "code": "NVDA",
+   "name": "Nvidia",
+   "price": 203.53,
+   "qty": 3,
+   "amount": 610.59,
+   "cashAfter": 58335.76
+  },
+  {
+   "ts": "2026-07-14 06:31",
+   "side": "sell",
+   "code": "ARM",
+   "name": "Arm Holdings",
+   "price": 298.99,
+   "qty": 35,
+   "amount": 10464.65,
+   "cashAfter": 58335.76
+  },
+  {
+   "ts": "2026-07-14 06:31",
+   "side": "sell",
+   "code": "APP",
+   "name": "AppLovin",
+   "price": 442.85,
+   "qty": 23,
+   "amount": 10185.55,
+   "cashAfter": 58335.76
+  },
+  {
+   "ts": "2026-07-14 06:31",
+   "side": "sell",
+   "code": "ANET",
+   "name": "Arista Networks",
+   "price": 181.15,
+   "qty": 61,
+   "amount": 11050.15,
+   "cashAfter": 58335.76
+  },
+  {
+   "ts": "2026-07-14 06:31",
+   "side": "sell",
+   "code": "TSM",
+   "name": "TSMC",
+   "price": 421.58,
+   "qty": 30,
+   "amount": 12647.4,
+   "cashAfter": 58335.76
+  },
+  {
+   "ts": "2026-07-14 06:31",
+   "side": "sell",
+   "code": "GOOGL",
+   "name": "Alphabet",
+   "price": 352.51,
+   "qty": 124,
+   "amount": 43711.24,
+   "cashAfter": 58335.76
+  },
   {
    "ts": "2026-07-13 23:28",
    "side": "buy",
@@ -165,12 +230,40 @@
   },
   {
    "date": "2026-07-14",
-   "total": 300000.0,
+   "total": 291384.08,
    "cash": 91.6,
-   "mv": 299908.4
+   "mv": 291292.48
   }
  ],
  "decisions": [
+  {
+   "date": "2026-07-14",
+   "tier": "宏观门控 (核心80%, 卫星舱现金)",
+   "reasons": [
+    "宏观阶梯变档: 正常 (核心80% + 卫星20%) → 宏观门控 (核心80%, 卫星舱现金)",
+    "🚨 个股深破保护 (收盘低于周线 EMA21 超 8%, 爆雷级下跌不等周五): AppLovin(APP, 距EMA21 -9.9%)",
+    "持仓掉出合格排名 Top10 (排名缓冲触发): AppLovin(有效排名 已出合格池) ← 顶替者: Sandisk(模型#11, 收复EMA21回到合格池)"
+   ],
+   "trades": [
+    "卖出 Alphabet 124 股 @ 352.51",
+    "卖出 TSMC 30 股 @ 421.58",
+    "卖出 Arista Networks 61 股 @ 181.15",
+    "卖出 AppLovin 23 股 @ 442.85",
+    "卖出 Arm Holdings 35 股 @ 298.99",
+    "卖出 Nvidia 3 股 @ 203.53",
+    "卖出 Broadcom 2 股 @ 384.05",
+    "买入 Micron 36 股 @ 937.00",
+    "卖出 Apple 8 股 @ 317.31"
+   ],
+   "holdings": [
+    "Nvidia 1名",
+    "Broadcom 2名",
+    "Meta Platforms 3名",
+    "Apple 7名",
+    "Micron 4名"
+   ],
+   "cash_pct": 20.0
+  },
   {
    "date": "2026-07-13",
    "tier": "正常 (核心80% + 卫星20%)",
@@ -205,9 +298,9 @@
   }
  ],
  "strategy_state": {
-  "tier": 0,
+  "tier": 1,
   "seeded": true,
-  "last_check": "2026-07-14 01:09",
+  "last_check": "2026-07-14 06:31",
   "pending_sig": "持仓掉出合格排名 Top10 (排名缓冲触发): Arista Networks(有效排名 11) ← 顶替者: Sandisk(模型#11, 收复EMA21回到合格池)"
  }
 }
