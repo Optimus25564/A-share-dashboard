@@ -1,36 +1,36 @@
 {
-  "last_run": "2026-07-12T16:18:42+08:00",
-  "run_date": "2026-07-12",
+  "last_run": "2026-07-13T18:40:35+08:00",
+  "run_date": "2026-07-13",
   "top5": [
     {
       "code": "MU",
       "name": "Micron",
       "rank": 1,
-      "score": 2.266
+      "score": 2.261
     },
     {
       "code": "SNDK",
       "name": "Sandisk",
       "rank": 2,
-      "score": 1.83
+      "score": 1.821
     },
     {
       "code": "NVDA",
       "name": "Nvidia",
       "rank": 3,
-      "score": 1.28
-    },
-    {
-      "code": "PLTR",
-      "name": "Palantir",
-      "rank": 4,
-      "score": 1.226
+      "score": 1.275
     },
     {
       "code": "CRDO",
       "name": "Credo Technology",
+      "rank": 4,
+      "score": 1.223
+    },
+    {
+      "code": "PLTR",
+      "name": "Palantir",
       "rank": 5,
-      "score": 1.191
+      "score": 1.193
     }
   ],
   "candidates": [
@@ -38,31 +38,31 @@
       "code": "ALAB",
       "name": "Astera Labs",
       "rank": 6,
-      "score": 1.093
+      "score": 1.122
     },
     {
       "code": "APP",
       "name": "AppLovin",
       "rank": 7,
-      "score": 1.058
+      "score": 1.046
     },
     {
       "code": "AVGO",
       "name": "Broadcom",
       "rank": 8,
-      "score": 1.008
+      "score": 0.999
     },
     {
       "code": "TSM",
       "name": "TSMC",
       "rank": 9,
-      "score": 0.945
+      "score": 0.944
     },
     {
-      "code": "META",
-      "name": "Meta Platforms",
+      "code": "ARM",
+      "name": "Arm Holdings",
       "rank": 10,
-      "score": 0.819
+      "score": 0.826
     }
   ],
   "signals": {
@@ -943,5 +943,6 @@
     "position_advice": null
   },
   "kline_status": "ok (66/66)",
-  "data_source": "Tencent ifzq.gtimg.cn (live)"
+  "data_source": "Tencent ifzq.gtimg.cn (live)",
+  "changes": []
 }
