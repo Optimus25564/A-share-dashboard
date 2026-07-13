@@ -10,6 +10,17 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 const clamp = (n, lo, hi) => Math.max(lo, Math.min(hi, n));
 
+function subjectiveEffective(score, updatedStr){
+  // 主观评分新鲜度衰减: ≤180天 全额, 180-365天 半衰向中性5, >365天/无日期 按陈旧处理
+  const s = Number.isFinite(score) ? score : 5;
+  if (!updatedStr) return 5 + (s - 5) * 0.5;
+  const days = (Date.now() - new Date(updatedStr).getTime()) / 86400000;
+  if (days <= 180) return s;
+  if (days <= 365) return 5 + (s - 5) * 0.5;
+  return 5;
+}
+
+
 function aiExecutionScore(c) {
   return Number.isFinite(c && c.ai_execution_score) ? c.ai_execution_score : 5;
 }
@@ -193,7 +204,7 @@ function computeDataset(dataset, market) {
     const qm = c.quality_metrics || {};
     return {
       code, name: c.name || code,
-      strategic: (c.strategic || 5) / 10,
+      strategic: subjectiveEffective(c.strategic, c.strategic_updated) / 10,
       aiExecution: aiExecutionScore(c) / 10,
       logMC: Math.log(c.market_cap_billion || 100),
       marketCap: c.market_cap_billion || null,
@@ -217,7 +228,7 @@ function computeDataset(dataset, market) {
   const zDUR = zscore(raw.map(r => r.durability));
   const zRISK = zscore(raw.map(r => -r.cyclePenalty + 0.10 * r.turnoverScore));
   const zProfit = raw.map((_, i) => 0.6 * zGM[i] + 0.4 * zNM[i]);
-  const W = { strategic: 0.12, aiExecution: 0.10, growth: 0.20, profit: 0.20, durability: 0.18, risk: 0.20 };
+  const W = { strategic: 0.10, aiExecution: 0.00, growth: 0.26, profit: 0.26, durability: 0.18, risk: 0.20 };  // 主观仅主题10%且带新鲜度衰减; AI执行退役为参考字段 (2026-07-14 A/B回测后调整)
   const rows = raw.map((r, i) => ({
     ...r,
     contribStrategic: W.strategic * r.strategic * 2,
@@ -258,13 +269,12 @@ const md = `# 最新量化模型因子得分
 生成时间：${new Date().toLocaleString("zh-CN", { timeZone: "Asia/Hong_Kong" })} HKT
 生成方式：\`node scripts/build_model_factor_scores.mjs\`（与 index.html 模型逻辑同步；改模型请同步三处并重新生成本文件）
 
-## 公式（6 因子，A股/美股一致）
+## 公式（A股/美股一致）
 
-总分 = 主题护城河 12% + AI执行 10% + 增长动能 20% + 盈利质量 20% + 规模现金流 18% + 周期资金风险 20%
+总分 = 主题护城河 10%（带新鲜度衰减）+ 增长动能 26% + 盈利质量 26% + 规模现金流 18% + 周期资金风险 20%（AI执行评分已退役为参考字段, 2026-07-14 A/B 回测后调整）
 
 \`\`\`text
-主题护城河 = 0.12 × (strategic / 10) × 2
-AI执行     = 0.10 × (ai_execution_score / 10) × 2   ；缺失时取中性 5 分（不回落 strategic，避免主题分双计）
+主题护城河 = 0.10 × (有效strategic / 10) × 2；有效分 = 原分按 strategic_updated 衰减 (≤180天全额, 180-365天半衰向5, 更旧→5)
 增长动能   = 0.20 × (0.65 × z(收入YoY) + 0.35 × z(增长加速度))
 盈利质量   = 0.20 × (0.60 × z(最新毛利率) + 0.40 × z(最新净利率，clip -30%~60%))
 规模现金流 = 0.18 × z(durabilityRaw)

@@ -207,6 +207,7 @@
  "strategy_state": {
   "tier": 0,
   "seeded": true,
-  "last_check": "2026-07-14 00:36"
+  "last_check": "2026-07-14 01:09",
+  "pending_sig": "持仓掉出合格排名 Top10 (排名缓冲触发): Arista Networks(有效排名 11) ← 顶替者: Sandisk(模型#11, 收复EMA21回到合格池)"
  }
 }

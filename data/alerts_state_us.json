@@ -945,7 +945,8 @@
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
  "changes": [
-  "🤖 美股模拟盘: 检测到触发但周线未收盘, 等待周五收盘确认 — 持仓掉出量化 Top10 (排名缓冲触发): AppLovin(现排名 11) / Arm Holdings(现排名 12)"
+  "🤖 美股模拟盘: 检测到触发但周线未收盘, 等待周五收盘确认 — 持仓掉出量化 Top10 (排名缓冲触发): AppLovin(现排名 11) / Arm Holdings(现排名 12)",
+  "🤖 美股模拟盘: 检测到触发但周线未收盘, 等待周五收盘确认 — 持仓掉出合格排名 Top10 (排名缓冲触发): Arista Networks(有效排名 11) ← 顶替者: Sandisk(模型#11, 收复EMA21回到合格池)"
  ],
  "portfolio_summary": {
   "total": 300000.0,

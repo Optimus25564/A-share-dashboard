@@ -55,7 +55,8 @@
     "strategic": 7,
     "market_cap_billion": 12200.4,
     "avg_turnover_pct": 3,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "300475": {
     "name": "香农芯创",
@@ -115,7 +116,8 @@
     "ai_execution_note": "SK 海力士 HBM 中国核心分销受益，HBM 涨价和 HBM3E/HBM4 高端型号出货驱动 2026Q1 业绩爆发；但分销毛利低、供应商集中和存储周期风险仍高。",
     "market_cap_billion": 1272.5,
     "avg_turnover_pct": 9.5,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "601138": {
     "name": "工业富联",
@@ -173,7 +175,8 @@
     "strategic": 4,
     "market_cap_billion": 13150.7,
     "avg_turnover_pct": 1.5,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "603019": {
     "name": "中科曙光",
@@ -231,7 +234,8 @@
     "strategic": 8,
     "market_cap_billion": 1572.8,
     "avg_turnover_pct": 3.8,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "688008": {
     "name": "澜起科技",
@@ -289,7 +293,8 @@
     "strategic": 8,
     "market_cap_billion": 3271.8,
     "avg_turnover_pct": 5.5,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "688041": {
     "name": "海光信息",
@@ -347,7 +352,8 @@
     "strategic": 10,
     "market_cap_billion": 8204.9,
     "avg_turnover_pct": 5.2,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "688047": {
     "name": "龙芯中科",
@@ -405,7 +411,8 @@
     "strategic": 7,
     "market_cap_billion": 589.9,
     "avg_turnover_pct": 6.5,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "688256": {
     "name": "寒武纪",
@@ -463,7 +470,8 @@
     "strategic": 10,
     "market_cap_billion": 8796.1,
     "avg_turnover_pct": 4.5,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "688347": {
     "name": "华虹公司",
@@ -521,7 +529,8 @@
     "strategic": 8,
     "market_cap_billion": 6427.3,
     "avg_turnover_pct": 3,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "688981": {
     "name": "中芯国际",
@@ -579,7 +588,8 @@
     "strategic": 10,
     "market_cap_billion": 13955.8,
     "avg_turnover_pct": 1.8,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "_meta": {
     "updated": "2026-07-05",
@@ -597,7 +607,8 @@
       "avg_turnover_pct": "近 60 日平均换手率 (%)"
     },
     "market_cap_updated": "总市值更新于 2026-07-12 · 来源: 腾讯行情 f45 (A股亿元 / 美股亿美元) · scripts/update_market_caps.py",
-    "source_policy_note": "2026-07 起全部季度财务统一来源: 巨潮资讯官方定期报告 PDF 合并利润表, 单季 = 累计报告差减 (Q2=半年报-一季报, Q3=三季报-半年报, Q4=年报-三季报); GM/NM 为合并利润表口径 (非公司叙述/产品线口径)"
+    "source_policy_note": "2026-07 起全部季度财务统一来源: 巨潮资讯官方定期报告 PDF 合并利润表, 单季 = 累计报告差减 (Q2=半年报-一季报, Q3=三季报-半年报, Q4=年报-三季报); GM/NM 为合并利润表口径 (非公司叙述/产品线口径)",
+    "subjective_score_policy": "strategic 评分必须带 strategic_updated 日期与依据; 模型按新鲜度衰减: ≤180天全额, 180-365天半衰向中性5, 更旧→5。复核评分时必须同时更新日期和理由。ai_execution_score 已退役为参考字段, 不进模型。"
   },
   "002261": {
     "name": "拓维信息",
@@ -655,7 +666,8 @@
     "strategic": 9,
     "market_cap_billion": 404.2,
     "avg_turnover_pct": 8,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "002837": {
     "name": "英维克",
@@ -713,7 +725,8 @@
     "strategic": 7,
     "market_cap_billion": 937.2,
     "avg_turnover_pct": 3.5,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "000977": {
     "name": "浪潮信息",
@@ -771,7 +784,8 @@
     "strategic": 6,
     "market_cap_billion": 1314.6,
     "avg_turnover_pct": 4.5,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "000034": {
     "name": "神州数码",
@@ -829,7 +843,8 @@
     "strategic": 7,
     "market_cap_billion": 301.2,
     "avg_turnover_pct": 5.5,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "000938": {
     "name": "紫光股份",
@@ -887,7 +902,8 @@
     "strategic": 7,
     "market_cap_billion": 1098.6,
     "avg_turnover_pct": 3.2,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "002156": {
     "name": "通富微电",
@@ -945,7 +961,8 @@
     "strategic": 8,
     "market_cap_billion": 1076.7,
     "avg_turnover_pct": 4.8,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "002409": {
     "name": "雅克科技",
@@ -1003,7 +1020,8 @@
     "strategic": 7,
     "market_cap_billion": 986.0,
     "avg_turnover_pct": 6,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "600584": {
     "name": "长电科技",
@@ -1061,7 +1079,8 @@
     "strategic": 8,
     "market_cap_billion": 1809.3,
     "avg_turnover_pct": 7.5,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "002463": {
     "name": "沪电股份",
@@ -1119,7 +1138,8 @@
     "strategic": 8,
     "market_cap_billion": 2490.9,
     "avg_turnover_pct": 4.5,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "300476": {
     "name": "胜宏科技",
@@ -1177,7 +1197,8 @@
     "strategic": 7,
     "market_cap_billion": 2673.2,
     "avg_turnover_pct": 6,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "002371": {
     "name": "北方华创",
@@ -1235,7 +1256,8 @@
     "strategic": 9,
     "market_cap_billion": 5812.8,
     "avg_turnover_pct": 1.5,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "688012": {
     "name": "中微公司",
@@ -1293,7 +1315,8 @@
     "strategic": 9,
     "market_cap_billion": 4161.9,
     "avg_turnover_pct": 2.5,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "688120": {
     "name": "华海清科",
@@ -1351,7 +1374,8 @@
     "strategic": 7,
     "market_cap_billion": 1605.9,
     "avg_turnover_pct": 3,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "300604": {
     "name": "长川科技",
@@ -1409,7 +1433,8 @@
     "strategic": 7,
     "market_cap_billion": 2235.1,
     "avg_turnover_pct": 5,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "002028": {
     "name": "思源电气",
@@ -1467,7 +1492,8 @@
     "strategic": 8,
     "market_cap_billion": 1187.4,
     "avg_turnover_pct": 3,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "688676": {
     "name": "金盘科技",
@@ -1525,7 +1551,8 @@
     "strategic": 7,
     "market_cap_billion": 357.8,
     "avg_turnover_pct": 5,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "002335": {
     "name": "科华数据",
@@ -1583,7 +1610,8 @@
     "strategic": 7,
     "market_cap_billion": 272.3,
     "avg_turnover_pct": 5,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   },
   "002518": {
     "name": "科士达",
@@ -1641,6 +1669,7 @@
     "strategic": 6,
     "market_cap_billion": 238.7,
     "avg_turnover_pct": 6,
-    "market_cap_asof": "2026-07-12"
+    "market_cap_asof": "2026-07-12",
+    "strategic_updated": "2026-06-07"
   }
 }

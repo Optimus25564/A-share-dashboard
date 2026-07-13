@@ -7,6 +7,16 @@ const outDir = path.resolve(".");
 const outputPath = path.join(outDir, "latest_quant_factors.xlsx");
 const asOf = new Date();
 
+function subjectiveEffective(score, updatedStr){
+  // 主观评分新鲜度衰减: ≤180天 全额, 180-365天 半衰向中性5, >365天/无日期 按陈旧处理
+  const s = Number.isFinite(score) ? score : 5;
+  if (!updatedStr) return 5 + (s - 5) * 0.5;
+  const days = (Date.now() - new Date(updatedStr).getTime()) / 86400000;
+  if (days <= 180) return s;
+  if (days <= 365) return 5 + (s - 5) * 0.5;
+  return 5;
+}
+
 function clamp(n, lo, hi) {
   return Math.max(lo, Math.min(hi, n));
 }
@@ -227,7 +237,7 @@ function computeDataset(dataset, market) {
       code,
       name: c.name || code,
       cat: c.cat || "",
-      strategic: c.strategic || 5,
+      strategic: subjectiveEffective(c.strategic, c.strategic_updated),
       aiExecution: aiExecutionScore(c),
       aiExecutionNote: c.ai_execution_note || "",
       marketCap: c.market_cap_billion || null,
@@ -276,7 +286,7 @@ function computeDataset(dataset, market) {
   const zDUR = zscore(raw.map(r => r.durability));
   const zRISK = zscore(raw.map(r => -r.cyclePenalty + 0.10 * r.turnoverScore));
   const zProfit = raw.map((_, i) => 0.6 * zGM[i] + 0.4 * zNM[i]);
-  const W = { strategic: 0.12, aiExecution: 0.10, growth: 0.20, profit: 0.20, durability: 0.18, risk: 0.20 };
+  const W = { strategic: 0.10, aiExecution: 0.00, growth: 0.26, profit: 0.26, durability: 0.18, risk: 0.20 };  // 主观仅主题10%且带新鲜度衰减; AI执行退役为参考字段 (2026-07-14 A/B回测后调整)
   const rows = raw.map((r, i) => {
     const growthComposite = 0.65 * zGrow[i] + 0.35 * zMOM[i];
     const contribGrowth = W.growth * growthComposite;
@@ -420,7 +430,7 @@ const workbook = Workbook.create();
 const summaryRows = [
   ["最新量化因子总览", "", "", "", "", "", "", ""],
   ["生成时间", asOf.toLocaleString("zh-CN", { timeZone: "Asia/Hong_Kong" }), "", "", "", "", "", ""],
-  ["模型", "6因子: 主题护城河12% + AI执行与战略动量10% + 增长动能20% + 盈利质量20% + 规模现金流18% + 周期/资金风险20%", "", "", "", "", "", ""],
+  ["模型", "主题护城河10%(带衰减) + 增长动能26% + 盈利质量26% + 规模现金流18% + 周期/资金风险20% (AI执行已退役)", "", "", "", "", "", ""],
   ["Top10仓位规则", "Top5核心仓合计80%; #6-#10卫星仓合计20%; 每个篮子内部按原始权重归一", "", "", "", "", "", ""],
   ["", "", "", "", "", "", "", ""],
   ["Market", "Rank", "Code", "Name", "Score", "Raw Weight %", "Sleeve", "Portfolio Weight %"],

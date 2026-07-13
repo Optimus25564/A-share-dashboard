@@ -579,7 +579,7 @@
     </div>
 
     <div style="margin-top:14px;padding:10px 14px;background:rgba(245,179,1,.05);border-left:3px solid var(--gold);border-radius:4px;font-size:11px;color:var(--muted);line-height:1.7">
-      📌 6 因子长期质量模型 = 主题护城河 12% / AI执行与战略动量 10% / 增长动能 20% / 盈利质量 20% / 规模现金流 18% / 周期资金风险 20%。增长动能用收入同比增速 + 同比加速度；没有 forecast 不扣分；ETF 不参与量化排名。
+      📌 5+1 因子长期质量模型 = 主题护城河 10%（评分带日期，超 180 天未复核自动向中性衰减）/ 增长动能 26% / 盈利质量 26% / 规模现金流 18% / 周期资金风险 20%。增长动能用收入同比增速 + 同比加速度；没有 forecast 不扣分；ETF 不参与量化排名。
     </div>
   </div>
 
@@ -1036,7 +1036,7 @@ function colorClass(n){
 }
 
 // ============ 长期质量权重模型 (A股 6 因子) ============
-// Composite Score = 主题护城河 12% + AI执行 10% + 增长动能 20% + 盈利质量 20% + 规模现金流 18% + 周期/资金风险 20%
+// Composite Score = 主题护城河 10% (带新鲜度衰减) + 增长动能 26% + 盈利质量 26% + 规模现金流 18% + 周期/资金风险 20%
 // 盘中价格动量因子已移除: 长期质量模型里混入当日涨跌会让 Top10/核心卫星边界随日内噪声翻转, 制造换仓冲动
 // 数据源: companies.json 的 quarters/strategic/ai_execution_score/market_cap_billion/avg_turnover_pct
 // 输出: { code: { weight, score, factors: {...} } }
@@ -1195,6 +1195,15 @@ function turnoverRiskScore(t, market){
   if (t > 10) return -Math.log(t / 10);
   return 0;
 }
+function subjectiveEffective(score, updatedStr){
+  // 主观评分新鲜度衰减: ≤180天 全额, 180-365天 半衰向中性5, >365天/无日期 按陈旧处理
+  const s = Number.isFinite(score) ? score : 5;
+  if (!updatedStr) return 5 + (s - 5) * 0.5;
+  const days = (Date.now() - new Date(updatedStr).getTime()) / 86400000;
+  if (days <= 180) return s;
+  if (days <= 365) return 5 + (s - 5) * 0.5;
+  return 5;
+}
 function aiExecutionScore(c){
   // 缺失时回落到中性 5 分。不能回落到 strategic —— 否则没有 AI 执行评分的公司
   // 等于把主题分双倍计入, 与有评分的公司不可比。
@@ -1242,7 +1251,7 @@ function computeQuantWeights(){
       durability: durabilityRaw(c),
       cyclePenalty,
       valuationRisk,
-      strategic: (c.strategic || 5) / 10,
+      strategic: subjectiveEffective(c.strategic, c.strategic_updated) / 10,
       aiExecution: aiExecutionScore(c) / 10,
       aiExecutionNote: c.ai_execution_note || ""
     };
@@ -1267,8 +1276,8 @@ function computeQuantWeights(){
   // 盈利能力合成因子: GM (行业竞争力) 占 0.6 + NM (运营效率) 占 0.4
   const zProfit = raw.map((_, i) => 0.6 * zGM[i] + 0.4 * zNM[i]);
 
-  // 6 因子权重 (与美股一致): 主题 12 / AI执行 10 / 增长动能 20 / 盈利质量 20 / 规模现金流 18 / 周期资金风险 20
-  const W = { strategic: 0.12, aiExecution: 0.10, growth: 0.20, profit: 0.20, durability: 0.18, risk: 0.20 };
+  // 权重 (与美股一致): 主题 10 (衰减) / 增长动能 26 / 盈利质量 26 / 规模现金流 18 / 周期资金风险 20
+  const W = { strategic: 0.10, aiExecution: 0.00, growth: 0.26, profit: 0.26, durability: 0.18, risk: 0.20 };  // 主观仅主题10%且带新鲜度衰减; AI执行退役为参考字段 (2026-07-14 A/B回测后调整)
 
   const composites = raw.map((r, i) => {
     return W.growth * (0.65 * zGrow[i] + 0.35 * zMOM[i]) + W.profit * zProfit[i] + W.durability * zDUR[i] + W.risk * zRISK[i] + W.strategic * r.strategic * 2 + W.aiExecution * r.aiExecution * 2;
@@ -1371,7 +1380,6 @@ function renderWatchlist(){
       `原始权重 (17 只里占比): ${rawPct}%\n` +
       `─── 因子分解 ───\n` +
       `战略: ${qw.factors.strategic.val} (贡献 ${qw.factors.strategic.contrib})\n` +
-      `AI执行: ${qw.factors.aiExecution.val} (贡献 ${qw.factors.aiExecution.contrib})${qw.factors.aiExecution.note ? " · " + qw.factors.aiExecution.note : ""}\n` +
       `增长动能: ${qw.factors.growth.val} (z=${qw.factors.growth.z}, 贡献 ${qw.factors.growth.contrib})\n` +
       `盈利: ${qw.factors.profit.val} (z=${qw.factors.profit.z}, 贡献 ${qw.factors.profit.contrib})\n` +
       `规模现金流: ${qw.factors.durability.val} (z=${qw.factors.durability.z}, 贡献 ${qw.factors.durability.contrib})\n` +
@@ -3007,7 +3015,7 @@ function computeQuantWeightsUS(){
       cyclePenalty,
       valuationRisk,
       qualityMetrics: c.quality_metrics || null,
-      strategic: (c.strategic || 5) / 10,
+      strategic: subjectiveEffective(c.strategic, c.strategic_updated) / 10,
       aiExecution: aiExecutionScore(c) / 10,
       aiExecutionNote: c.ai_execution_note || ""
     };
@@ -3029,7 +3037,7 @@ function computeQuantWeightsUS(){
   const zProfit = raw.map((_, i) => 0.6 * zGM[i] + 0.4 * zNM[i]);
   const zRISK = zscore(raw.map(r => -r.cyclePenalty + 0.10 * r.turnoverScore));
 
-  const W = { strategic: 0.12, aiExecution: 0.10, growth: 0.20, profit: 0.20, durability: 0.18, risk: 0.20 };
+  const W = { strategic: 0.10, aiExecution: 0.00, growth: 0.26, profit: 0.26, durability: 0.18, risk: 0.20 };  // 主观仅主题10%且带新鲜度衰减; AI执行退役为参考字段 (2026-07-14 A/B回测后调整)
   const composites = raw.map((r, i) =>
     W.growth * (0.65 * zGrow[i] + 0.35 * zMOM[i]) + W.profit * zProfit[i] + W.durability * zDUR[i] + W.risk * zRISK[i] + W.strategic * r.strategic * 2 + W.aiExecution * r.aiExecution * 2
   );
@@ -3193,7 +3201,6 @@ function renderUSWatchlist(){
     const tooltip = qw ? escapeAttr(
       `排名 #${quantRank} · 量化分 ${qw.score.toFixed(3)} · 原始权重 ${qw.weight.toFixed(1)}%\n` +
       `战略: ${qw.factors.strategic.val} (贡献 ${qw.factors.strategic.contrib})\n` +
-      `AI执行: ${qw.factors.aiExecution.val} (贡献 ${qw.factors.aiExecution.contrib})${qw.factors.aiExecution.note ? " · " + qw.factors.aiExecution.note : ""}\n` +
       `增长动能: ${qw.factors.growth.val} (贡献 ${qw.factors.growth.contrib})\n` +
       `盈利: ${qw.factors.profit.val} (贡献 ${qw.factors.profit.contrib})\n` +
       `规模现金流: ${qw.factors.durability.val} (贡献 ${qw.factors.durability.contrib})\n` +
