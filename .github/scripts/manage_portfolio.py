@@ -32,6 +32,7 @@ CONFIG = {
                initial=300_000, lot=1, cur="$", label="美股"),
 }
 TOP_CORE, TOP_ALL, RANK_EXIT = 5, 10, 10  # 核心5 / 组合10 / 掉出10名才换
+DEEP_BREAK = 0.92  # 个股深破保护: 收盘 < EMA21×0.92 (深破8%) 不等周五, 次日运行即卖 (对称于指数-20%规则)
 
 
 def load(path, default=None):
@@ -116,12 +117,17 @@ def run_market(mk):
                        + (f" [距52周高点 {mkt.get('drawdown_from_52w_high_pct')}%]" if tier == 2 else ""))
         if tier == 2:
             force_daily = True  # 熊市保护当日执行
-    broken = []
+    broken, deep_broken = [], []
     for code in list(pos):
         p = prices.get(code) or {}
         px, e21 = price_of(prices, code), p.get("ema21")
         if px is not None and isinstance(e21, (int, float)) and px < e21:
-            broken.append(code)
+            (deep_broken if px < e21 * DEEP_BREAK else broken).append(code)
+    if deep_broken:
+        reasons.append("🚨 个股深破保护 (收盘低于周线 EMA21 超 8%, 爆雷级下跌不等周五): "
+                       + " / ".join(f"{(pos[c].get('name') or c)}({c}, 距EMA21 "
+                                    f"{(price_of(prices, c) / (prices.get(c) or {}).get('ema21', 1) - 1) * 100:+.1f}%)" for c in deep_broken))
+        force_daily = True
     if broken:
         reasons.append("持仓周线收盘跌破 EMA21 (核心趋势破坏): "
                        + " / ".join(f"{(pos[c].get('name') or c)}({c})" for c in broken))

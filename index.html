@@ -626,7 +626,7 @@
     <div style="font-size:12px;color:var(--muted);margin-bottom:12px;padding:10px 12px;background:var(--panel-2);border-radius:8px;line-height:1.8">
       🤖 <b style="color:var(--text)">A股自动策略盘</b> · 账本由 CI 每日管理，本页只读。
       规则：6 因子 Top10（核心 80% 前5 / 卫星 20% #6-10）；个股周线收盘破 EMA21 或掉出合格排名 Top10 才换仓（高排名股票收复 EMA21 会自动顶替回来；周线收盘确认）；
-      宏观阶梯：大盘破周线 EMA21 或宽度 ≥60% → 卫星舱转现金，距 52 周高点 -20% → 核心舱减半（当日执行）。
+      宏观阶梯：大盘破周线 EMA21 或宽度 ≥60% → 卫星舱转现金，距 52 周高点 -20% → 核心舱减半（当日执行）。个股深破保护：收盘低于 EMA21 超 8%（爆雷级）不等周五、次日即卖。
       每次调仓自动推送微信 + 邮件并写明原因。
     </div>
 
@@ -710,7 +710,7 @@
     <div style="font-size:12px;color:var(--muted);margin-bottom:12px;padding:10px 12px;background:var(--panel-2);border-radius:8px;line-height:1.8">
       🤖 <b style="color:var(--text)">美股自动策略盘</b> · 账本由 CI 每日管理，本页只读。
       规则：6 因子 Top10（核心 80% 前5 / 卫星 20% #6-10）；个股周线收盘破 EMA21 或掉出合格排名 Top10 才换仓（高排名股票收复 EMA21 会自动顶替回来；周线收盘确认）；
-      宏观阶梯：大盘破周线 EMA21 或宽度 ≥60% → 卫星舱转现金，距 52 周高点 -20% → 核心舱减半（当日执行）。
+      宏观阶梯：大盘破周线 EMA21 或宽度 ≥60% → 卫星舱转现金，距 52 周高点 -20% → 核心舱减半（当日执行）。个股深破保护：收盘低于 EMA21 超 8%（爆雷级）不等周五、次日即卖。
       每次调仓自动推送微信 + 邮件并写明原因。
     </div>
 
