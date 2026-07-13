@@ -140,6 +140,13 @@ def section_for(market_label, state, index_label):
         if mkt.get("position_advice"):
             lines.append(f"- **仓位建议**: {mkt['position_advice']}")
 
+    # 自动策略盘摘要 (manage_portfolio.py 每日写入; 调仓明细在上方 🔔 触发段)
+    ps = state.get("portfolio_summary")
+    if isinstance(ps, dict) and ps.get("total") is not None:
+        cur = ps.get("currency", "")
+        lines.append(f"- 🤖 自动策略盘: 总资产 {cur}{ps['total']:,.0f} ({ps.get('pnl_pct', 0):+.2f}%) · "
+                     f"持仓 {ps.get('positions', 0)} 只 · 现金 {ps.get('cash_pct', 0)}% · {ps.get('tier', '')}")
+
     # Top 5
     if top5:
         lines.append("- Top 5: " + " / ".join(t.get("name", t["code"]) for t in top5))

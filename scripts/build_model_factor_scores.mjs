@@ -311,6 +311,15 @@ ${tableFor(us.rows)}
 `;
 
 await fs.writeFile(path.join(ROOT, "MODEL_FACTOR_SCORES.md"), md);
-console.log(`MODEL_FACTOR_SCORES.md regenerated: A=${a.rows.length} US=${us.rows.length} hyperscalerStress=${fmt(us.hyperscalerFundingStress, 3)}`);
+
+// 机器可读评分 — CI 自动调仓 (manage_portfolio.py) 的唯一排名来源
+const scoresJson = {
+  note: "由 scripts/build_model_factor_scores.mjs 生成, 与 MODEL_FACTOR_SCORES.md 同源",
+  a: a.rows.map(r => ({ rank: r.rank, code: r.code, name: r.name, score: Number(r.score.toFixed(4)), weight: r.weight })),
+  us: us.rows.map(r => ({ rank: r.rank, code: r.code, name: r.name, score: Number(r.score.toFixed(4)), weight: r.weight })),
+  hyperscaler_funding_stress: Number(us.hyperscalerFundingStress.toFixed(4)),
+};
+await fs.writeFile(path.join(ROOT, "data/model_scores.json"), JSON.stringify(scoresJson, null, 1) + "\n");
+console.log(`MODEL_FACTOR_SCORES.md + data/model_scores.json regenerated: A=${a.rows.length} US=${us.rows.length} hyperscalerStress=${fmt(us.hyperscalerFundingStress, 3)}`);
 console.log("US Top5:", us.rows.slice(0, 5).map(r => `${r.code} ${fmt(r.score)}`).join(" / "));
 console.log("A Top5:", a.rows.slice(0, 5).map(r => `${r.code} ${fmt(r.score)}`).join(" / "));

@@ -663,6 +663,14 @@
       <div id="strategyBuildInfo" style="margin-top:10px;font-size:12px;color:var(--muted);line-height:1.7"></div>
     </div>
 
+    <div class="card" style="margin-bottom:14px">
+      <h3>🤖 自动策略盘 · CI 每日管理<span class="right" id="autoPfSummary">--</span></h3>
+      <div style="font-size:11px;color:var(--muted);margin-bottom:8px">
+        每个交易日收盘后自动检查：个股周线收盘破 EMA21 / 掉出 Top10 / 宏观阶梯变档才换仓（周线收盘确认，-20% 熊市保护当日执行），每次调仓微信+邮件推送原因。下方手动盘不受影响。
+      </div>
+      <div id="autoPfBody" style="font-size:12px;line-height:1.8;color:var(--muted)">加载中...</div>
+    </div>
+
     <div class="trade-grid">
       <!-- Trade form -->
       <div class="card">
@@ -798,6 +806,14 @@
         </span>
       </div>
       <div id="strategyBuildInfoUS" style="margin-top:10px;font-size:12px;color:var(--muted);line-height:1.7"></div>
+    </div>
+
+    <div class="card" style="margin-bottom:14px">
+      <h3>🤖 自动策略盘 · CI 每日管理<span class="right" id="autoPfSummaryUS">--</span></h3>
+      <div style="font-size:11px;color:var(--muted);margin-bottom:8px">
+        每个交易日收盘后自动检查：个股周线收盘破 EMA21 / 掉出 Top10 / 宏观阶梯变档才换仓（周线收盘确认，-20% 熊市保护当日执行），每次调仓微信+邮件推送原因。下方手动盘不受影响。
+      </div>
+      <div id="autoPfBodyUS" style="font-size:12px;line-height:1.8;color:var(--muted)">加载中...</div>
     </div>
 
     <div class="trade-grid">
@@ -1625,7 +1641,7 @@ function switchTab(name){
   document.querySelectorAll(".tab-content").forEach(c => c.classList.toggle("active", c.id === "tab-"+name));
   updateLiveForActiveTab();
   if (name === "tradeus" && typeof initTradeUSTab === "function") initTradeUSTab();
-  if (name === "trade" && typeof renderStrategyDrift === "function") renderStrategyDrift("a");
+  if (name === "trade" && typeof renderStrategyDrift === "function") { renderStrategyDrift("a"); renderAutoPortfolio("a"); }
 }
 document.querySelectorAll(".tab").forEach(t => {
   t.onclick = () => switchTab(t.dataset.tab);
@@ -4438,6 +4454,48 @@ async function initTradeUSTab(){
   renderAccountUS();
   snapshotPnLUS();
   renderStrategyDrift("us");
+  renderAutoPortfolio("us");
+}
+
+// 自动策略盘展示 (账本由 CI 的 manage_portfolio.py 独家管理, 页面只读)
+async function renderAutoPortfolio(market){
+  const isUS = market === "us";
+  const el = document.getElementById(isUS ? "autoPfBodyUS" : "autoPfBody");
+  const sm = document.getElementById(isUS ? "autoPfSummaryUS" : "autoPfSummary");
+  if (!el) return;
+  try {
+    const r = await fetch(`data/portfolio_${isUS ? "us" : "a"}.json?_=${Date.now()}`);
+    if (!r.ok) throw new Error("no book");
+    const b = await r.json();
+    const cur = b.currency || (isUS ? "$" : "¥");
+    const quotes = isUS ? usQuotes : lastQuotes;
+    let mv = 0;
+    const rows = Object.entries(b.positions || {}).map(([c, p]) => {
+      const q = quotes[c];
+      const live = isUS ? (q && q.close) : (q && q.price);
+      const price = live || p.avgCost;
+      mv += price * p.qty;
+      return { c, p, price };
+    }).sort((x, y) => y.price * y.p.qty - x.price * x.p.qty);
+    const total = b.cash + mv;
+    const pnl = (total - b.initialCash) / b.initialCash * 100;
+    if (sm) sm.textContent = `${cur}${Math.round(total).toLocaleString()} · ${pnl >= 0 ? "+" : ""}${pnl.toFixed(2)}% · 现金 ${(b.cash / Math.max(total, 1) * 100).toFixed(1)}%`;
+    const d = (b.decisions || [])[0];
+    el.innerHTML =
+      (rows.length ? rows.map(({c, p, price}) => {
+        const ret = (price - p.avgCost) / p.avgCost * 100;
+        return `<div>· <b>${p.name || c}</b> (${c}): ${p.qty.toLocaleString()} 股 · 成本 ${p.avgCost.toFixed(2)} → 现价 ${price.toFixed(2)} <span class="${ret >= 0 ? "up" : "down"}">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}%</span></div>`;
+      }).join("") : `<div>暂无持仓</div>`) +
+      `<div style="margin-top:4px">现金 ${cur}${Math.round(b.cash).toLocaleString()}</div>` +
+      (d ? `<div style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--border)">` +
+        `<b style="color:var(--gold)">最近决策 · ${d.date} · ${d.tier}</b>` +
+        (d.reasons || []).map(x => `<div>· ${x}</div>`).join("") +
+        (d.trades || []).map(x => `<div style="color:var(--text)">→ ${x}</div>`).join("") +
+        `</div>` : "");
+  } catch(e) {
+    el.textContent = "自动盘账本尚未生成（等待首次 CI 运行）";
+    if (sm) sm.textContent = "--";
+  }
 }
 
 // 打开模拟盘时自动检查持仓与策略状态的偏离, 给出调仓提示 (只提示, 不自动下单;

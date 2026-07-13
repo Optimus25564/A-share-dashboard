@@ -1,0 +1,206 @@
+{
+ "cash": 91.59999999996035,
+ "initialCash": 300000,
+ "currency": "$",
+ "positions": {
+  "NVDA": {
+   "qty": 262,
+   "avgCost": 210.96,
+   "name": "Nvidia"
+  },
+  "AVGO": {
+   "qty": 120,
+   "avgCost": 399.97,
+   "name": "Broadcom"
+  },
+  "META": {
+   "qty": 69,
+   "avgCost": 669.21,
+   "name": "Meta Platforms"
+  },
+  "AAPL": {
+   "qty": 146,
+   "avgCost": 315.32,
+   "name": "Apple"
+  },
+  "GOOGL": {
+   "qty": 124,
+   "avgCost": 357.18,
+   "name": "Alphabet"
+  },
+  "TSM": {
+   "qty": 30,
+   "avgCost": 434.11,
+   "name": "TSMC"
+  },
+  "MU": {
+   "qty": 13,
+   "avgCost": 979.3,
+   "name": "Micron"
+  },
+  "ANET": {
+   "qty": 61,
+   "avgCost": 186.96,
+   "name": "Arista Networks"
+  },
+  "APP": {
+   "qty": 23,
+   "avgCost": 506.98,
+   "name": "AppLovin"
+  },
+  "ARM": {
+   "qty": 35,
+   "avgCost": 323.39,
+   "name": "Arm Holdings"
+  }
+ },
+ "history": [
+  {
+   "ts": "2026-07-13 23:28",
+   "side": "buy",
+   "code": "ARM",
+   "name": "Arm Holdings",
+   "price": 323.39,
+   "qty": 35,
+   "amount": 11318.65,
+   "cashAfter": 91.6
+  },
+  {
+   "ts": "2026-07-13 23:28",
+   "side": "buy",
+   "code": "APP",
+   "name": "AppLovin",
+   "price": 506.98,
+   "qty": 23,
+   "amount": 11660.54,
+   "cashAfter": 91.6
+  },
+  {
+   "ts": "2026-07-13 23:28",
+   "side": "buy",
+   "code": "ANET",
+   "name": "Arista Networks",
+   "price": 186.96,
+   "qty": 61,
+   "amount": 11404.56,
+   "cashAfter": 91.6
+  },
+  {
+   "ts": "2026-07-13 23:28",
+   "side": "buy",
+   "code": "MU",
+   "name": "Micron",
+   "price": 979.3,
+   "qty": 13,
+   "amount": 12730.9,
+   "cashAfter": 91.6
+  },
+  {
+   "ts": "2026-07-13 23:28",
+   "side": "buy",
+   "code": "TSM",
+   "name": "TSMC",
+   "price": 434.11,
+   "qty": 30,
+   "amount": 13023.3,
+   "cashAfter": 91.6
+  },
+  {
+   "ts": "2026-07-13 23:28",
+   "side": "buy",
+   "code": "GOOGL",
+   "name": "Alphabet",
+   "price": 357.18,
+   "qty": 124,
+   "amount": 44290.32,
+   "cashAfter": 91.6
+  },
+  {
+   "ts": "2026-07-13 23:28",
+   "side": "buy",
+   "code": "AAPL",
+   "name": "Apple",
+   "price": 315.32,
+   "qty": 146,
+   "amount": 46036.72,
+   "cashAfter": 91.6
+  },
+  {
+   "ts": "2026-07-13 23:28",
+   "side": "buy",
+   "code": "META",
+   "name": "Meta Platforms",
+   "price": 669.21,
+   "qty": 69,
+   "amount": 46175.49,
+   "cashAfter": 91.6
+  },
+  {
+   "ts": "2026-07-13 23:28",
+   "side": "buy",
+   "code": "AVGO",
+   "name": "Broadcom",
+   "price": 399.97,
+   "qty": 120,
+   "amount": 47996.4,
+   "cashAfter": 91.6
+  },
+  {
+   "ts": "2026-07-13 23:28",
+   "side": "buy",
+   "code": "NVDA",
+   "name": "Nvidia",
+   "price": 210.96,
+   "qty": 262,
+   "amount": 55271.52,
+   "cashAfter": 91.6
+  }
+ ],
+ "snapshots": [
+  {
+   "date": "2026-07-13",
+   "total": 300000,
+   "cash": 300000,
+   "mv": 0
+  }
+ ],
+ "decisions": [
+  {
+   "date": "2026-07-13",
+   "tier": "正常 (核心80% + 卫星20%)",
+   "reasons": [
+    "初始建仓 (账本为空, 按最近周线收盘价、当前排名与宏观档位建立组合)"
+   ],
+   "trades": [
+    "买入 Nvidia 262 股 @ 210.96",
+    "买入 Broadcom 120 股 @ 399.97",
+    "买入 Meta Platforms 69 股 @ 669.21",
+    "买入 Apple 146 股 @ 315.32",
+    "买入 Alphabet 124 股 @ 357.18",
+    "买入 TSMC 30 股 @ 434.11",
+    "买入 Micron 13 股 @ 979.30",
+    "买入 Arista Networks 61 股 @ 186.96",
+    "买入 AppLovin 23 股 @ 506.98",
+    "买入 Arm Holdings 35 股 @ 323.39"
+   ],
+   "holdings": [
+    "Nvidia 1名",
+    "Broadcom 2名",
+    "Meta Platforms 4名",
+    "Apple 5名",
+    "Alphabet 7名",
+    "TSMC 8名",
+    "Micron 9名",
+    "Arista Networks 10名",
+    "AppLovin 11名",
+    "Arm Holdings 12名"
+   ],
+   "cash_pct": 0.0
+  }
+ ],
+ "strategy_state": {
+  "tier": 0,
+  "seeded": true,
+  "last_check": "2026-07-13 23:28"
+ }
+}
