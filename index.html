@@ -2579,7 +2579,7 @@ async function renderSignals(bars, currentPeriod){
   } else if (result.action === "exit-confirmed") {
     header = `<div style="background:rgba(255,90,106,.22);color:#ff8a95;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:700">🔴 EMA21 核心趋势破坏 · 考虑换出</div>`;
   } else if (result.action === "sell-confirmed") {
-    header = `<div style="background:rgba(245,179,1,.14);color:#f5b301;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:700">🟠 EMA8 转弱 · 减仓观察</div>`;
+    header = `<div style="background:rgba(245,179,1,.14);color:#f5b301;padding:10px 12px;border-radius:6px;margin-bottom:10px;font-weight:700">🟠 EMA8 转弱 · 预警观察（自动盘不动，周五收盘破 EMA21 才换仓）</div>`;
   } else if (result.action === "sell-warning") {
     header = `<div style="background:rgba(245,179,1,.14);color:#f5b301;padding:10px 12px;border-radius:6px;margin-bottom:10px">⚠ 盘中跌破趋势线 — 周线收盘前不自动换仓</div>`;
   } else if (result.action === "hold-trend") {
@@ -2712,7 +2712,7 @@ function renderBuyAlertBanner(results){
   const nearHtml    = mkRow("🟡 距 EMA8 ≤3% · 接近回踩", nearBuys, "#f5b301");
   const buyHtml     = deepHtml + stdHtml + nearHtml;
   const exitHtml = mkRow("🔴 EMA21 核心趋势破坏 · 考虑换出", exits, "#ff8a95", "rgba(255,90,106,.12)", "rgba(255,90,106,.5)");
-  const sellConfHtml = mkRow("🟠 EMA8 转弱 · 减仓观察", sellsConfirmed, "#f5b301", "rgba(245,179,1,.10)", "rgba(245,179,1,.35)");
+  const sellConfHtml = mkRow("🟠 EMA8 转弱 · 预警观察（自动盘不动，周五收盘破 EMA21 才换仓）", sellsConfirmed, "#f5b301", "rgba(245,179,1,.10)", "rgba(245,179,1,.35)");
   const sellWarnHtml = mkRow("⚠ 盘中跌破 EMA8/21 · 等周收盘", sellsWarning, "#f5b301");
   const sellHtml    = exitHtml + sellConfHtml + sellWarnHtml;
 
@@ -3479,7 +3479,7 @@ function renderBuyAlertBannerUS(results){
   const strongBuyHtml = deepHtml + stdHtml;
   const weakBuyHtml   = nearHtml;
   const exitHtml = mkRowUS("🔴 EMA21 核心趋势破坏 · 考虑换出", exits, "#ff8a95", "rgba(255,90,106,.12)", "rgba(255,90,106,.5)");
-  const sellConfHtml = mkRowUS("🟠 EMA8 转弱 · 减仓观察", sellsConfirmed, "#f5b301", "rgba(245,179,1,.10)", "rgba(245,179,1,.35)");
+  const sellConfHtml = mkRowUS("🟠 EMA8 转弱 · 预警观察（自动盘不动，周五收盘破 EMA21 才换仓）", sellsConfirmed, "#f5b301", "rgba(245,179,1,.10)", "rgba(245,179,1,.35)");
   const sellWarnHtml = mkRowUS("⚠ 盘中跌破 EMA8/21 · 等周收盘", sellsWarning, "#f5b301");
   const sellHtml    = exitHtml + sellConfHtml + sellWarnHtml;
   const strongTrends = holds
