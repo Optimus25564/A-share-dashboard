@@ -1,5 +1,5 @@
 {
- "last_run": "2026-07-14T17:26:49+08:00",
+ "last_run": "2026-07-14T18:32:00+08:00",
  "run_date": "2026-07-14",
  "top5": [
   {
@@ -66,22 +66,22 @@
   }
  ],
  "signals": {
-  "300308": "buy-gated",
+  "300308": "buy-fresh-gated",
   "300475": "sell-warning",
   "601138": "sell-confirmed",
-  "603019": "buy-gated",
-  "688008": "buy-gated",
-  "688041": "buy-gated",
+  "603019": "buy-fresh-gated",
+  "688008": "buy-fresh-gated",
+  "688041": "buy-fresh-gated",
   "688047": "sell-warning",
-  "688256": "buy-gated",
+  "688256": "buy-fresh-gated",
   "688347": "hold-trend",
-  "688981": "hold-trend",
+  "688981": "hold",
   "002261": "sell-warning",
   "002837": "sell-confirmed",
   "000977": "hold-trend",
   "000034": "sell-warning",
   "000938": "hold-trend",
-  "002156": "hold-trend",
+  "002156": "hold",
   "002409": "hold-trend",
   "600584": "hold-trend",
   "002463": "buy-gated",
@@ -482,5 +482,81 @@
    ],
    "cash_pct": 20.8
   }
+ },
+ "top5_17stock": [
+  {
+   "code": "688041",
+   "name": "海光信息",
+   "rank": 1,
+   "score": 1.216
+  },
+  {
+   "code": "688256",
+   "name": "寒武纪",
+   "rank": 2,
+   "score": 1.137
+  },
+  {
+   "code": "688008",
+   "name": "澜起科技",
+   "rank": 3,
+   "score": 0.534
+  },
+  {
+   "code": "603019",
+   "name": "中科曙光",
+   "rank": 4,
+   "score": 0.424
+  },
+  {
+   "code": "688981",
+   "name": "中芯国际",
+   "rank": 5,
+   "score": 0.275
+  }
+ ],
+ "candidates_17stock": [
+  {
+   "code": "300308",
+   "name": "中际旭创",
+   "rank": 6,
+   "score": 0.273
+  },
+  {
+   "code": "002261",
+   "name": "拓维信息",
+   "rank": 7,
+   "score": 0.242
+  },
+  {
+   "code": "002837",
+   "name": "英维克",
+   "rank": 8,
+   "score": -0.013
+  },
+  {
+   "code": "002156",
+   "name": "通富微电",
+   "rank": 9,
+   "score": -0.035
+  },
+  {
+   "code": "688047",
+   "name": "龙芯中科",
+   "rank": 10,
+   "score": -0.043
+  }
+ ],
+ "run_note_17stock": {
+  "universe": "17只指定股票",
+  "factor_model": "战略40%+增速20%+盈利20%+流动性12%+市值8%",
+  "data_source": "alerts_state.json价格数据(17:26BJ), API被代理阻断",
+  "sell_alerts": [
+   "002261拓维-sell-warning",
+   "002837英维克-sell-confirmed",
+   "688047龙芯-sell-warning"
+  ],
+  "market": "上证跌破EMA8(3967.13<4026.52)且EMA21(4031.72), 买入门控激活",
+  "top5_vs_prev": "海光#1/寒武纪#2/澜起#3/中科曙光#4/中芯#5 (17股宇宙)"
  }
 }
