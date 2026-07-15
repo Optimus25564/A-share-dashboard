@@ -303,6 +303,22 @@
       "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262015350-nvidia-nvda-stock-forecast-july-2026-kyber-denial-goldman-tradingkey",
       "source": "TradingKey",
       "content": "NVIDIA shares gained over 1% after the company denied reports that its Kyber NVL144 rack-scale AI platform (the next-generation successor to Vera Rubin designed to link multiple GPUs) would be delayed until 2028. Goldman Sachs simultaneously reaffirmed its Buy rating, describing the current 21.7x forward P/E as compelling given AI infrastructure demand."
+    },
+    {
+      "date": "2026-07-14",
+      "type": "policy",
+      "title": "Nvidia Cuts Approved Asian AI Chip Buyers by 50%+ as U.S. Export Controls Tighten; New Compliance White-List Introduced",
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-tightens-asian-customer-approvals-105148051.html",
+      "source": "Yahoo Finance",
+      "content": "NVIDIA reduced by more than half authorized customers in Asia permitted to buy AI chips, strengthening compliance with tighter US export controls on Blackwell-series chips to China."
+    },
+    {
+      "date": "2026-07-14",
+      "type": "policy",
+      "title": "Small Amount of NVIDIA H200 AI Chips Shipped to China With U.S. Government License Approval — Commerce Dept Confirms",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-14/small-amount-of-nvidia-ai-chips-shipped-to-china-with-us-license",
+      "source": "Bloomberg",
+      "content": "A limited number of H200 chips received US export license approval for Chinese customers; Commerce Under-Secretary Kessler described the shipments as \"trivial\" in quantity."
     }
   ],
   "AVGO": [
@@ -739,6 +755,14 @@
       "url": "https://www.amd.com/en/newsroom/press-releases/2026-4-28-amd-announces-advancing-ai-2026-.html",
       "source": "AMD Newsroom",
       "content": "AMD's flagship AI event at San Francisco Moscone Center July 22-23, livestreamed globally. CEO Lisa Su to showcase next-gen Instinct MI450 accelerators and EPYC Venice (Zen 6) CPUs. Event marks AMD's largest AI product reveal since the original Advancing AI 2023. AMD Q2 2026 earnings (1.2B revenue guided) expected July 28 after close."
+    },
+    {
+      "date": "2026-07-08",
+      "type": "announcement",
+      "title": "AMD Sets Q2 FY2026 Earnings Date for August 4 After-Market Close; Q2 Revenue Guided ~$11.2B (+46% YoY), Non-GAAP Gross Margin ~56%",
+      "url": "https://www.amd.com/en/newsroom/press-releases/2026-7-8-amd-to-report-fiscal-second-quarter-2026-financial.html",
+      "source": "AMD Newsroom",
+      "content": "AMD will report fiscal Q2 2026 results on August 4, 2026 at 5 PM ET. Company previously guided Q2 revenue to ~$11.2B ±$300M at ~56% non-GAAP gross margin."
     }
   ],
   "INTC": [
@@ -1781,6 +1805,22 @@
       "url": "https://finance.yahoo.com/quote/TSM/",
       "source": "Bank of America / UBS / Yahoo Finance",
       "content": "Bank of America raised its price target on TSMC to $590 from $490 (Buy), and UBS lifted its target to T$3,400 from T$3,000 (Buy), citing TSMC's pricing power, capacity expansion, and 2026 revenue growth guidance raised to over 30%. TSM ADR was up 5.26% on June 29."
+    },
+    {
+      "date": "2026-07-14",
+      "type": "announcement",
+      "title": "TSMC Posts Record Q2 2026 Revenue of $39.62 Billion (+36% YoY); AI Chip Surge Drives Third Consecutive Record Quarter",
+      "url": "https://www.foreignpolicyjournal.com/2026/07/14/tsmc-nyse-tsm-posts-record-q2-revenue-of-39-62-billion-as-ai-chip-surge-drives-36-annual-growth/",
+      "source": "Foreign Policy Journal",
+      "content": "TSMC Q2 2026 revenue NT$1.27T / US$39.62B, +36% YoY; within guidance of $39.0–40.2B; June revenue alone +68% YoY; full earnings conference call July 16 with margin and H2 guidance details."
+    },
+    {
+      "date": "2026-07-16",
+      "type": "announcement",
+      "title": "TSMC Q2 2026 Earnings Conference Call July 16; Analysts Watch for H2 2026 Guidance and CoWoS Capacity Signals",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/tsmc-q2-earnings-preview-why-190000466.html",
+      "source": "Yahoo Finance",
+      "content": "Q2 full results and management guidance released July 16 at 14:00 Taiwan time / 2:00 AM ET; key watch points: CoWoS advanced packaging capacity, N3/N2 utilization, and full-year revenue visibility above 30% growth in USD."
     }
   ],
   "ASML": [
@@ -2007,6 +2047,22 @@
       "url": "https://www.gurufocus.com/news/8928507/asml-holding-nv-asml-stock-down-78-but-still-overvalued-gf-score-92100",
       "source": "GuruFocus",
       "content": "The Dutch government officially joined the US-led Pax Silica semiconductor alliance on June 23, 2026, heightening the risk of stricter multilateral export controls on ASML's EUV and DUV tools. ASML shares fell 7.8% on June 23 amid ongoing concerns sparked by US allegations that an EUV machine may have been transferred to China."
+    },
+    {
+      "date": "2026-07-14",
+      "type": "announcement",
+      "title": "ASML Q2 2026 Earnings Due July 15; Analysts Forecast $10.28B Revenue (+17.8% YoY), EPS $7.98; Options Pricing 8.36% Post-Earnings Swing",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/asml-q2-earnings-loom-buy-153000600.html",
+      "source": "Yahoo Finance",
+      "content": "ASML reports Q2 2026 before US market open on July 15; guided Q2 net sales €8.4–9.0B at 51–52% gross margin; raised 2026 full-year guidance to €36–40B; stock up 65% YTD."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "announcement",
+      "title": "ASML Raised 2026 Sales Guidance to €36B–40B; EUV and High-NA Demand Strong; Stock Up 65% Year-to-Date",
+      "url": "https://cryptobriefing.com/tsmc-asml-earnings-tech-selloff/",
+      "source": "CryptoBriefing",
+      "content": "ASML raised 2026 sales guidance to €36B–40B; high-NA EUV system orders the key Q2 signal; both TSMC and ASML earnings this week seen as barometer for entire semiconductor demand cycle."
     }
   ],
   "AMAT": [
@@ -2169,6 +2225,22 @@
       "url": "https://www.cnbc.com/2026/06/29/samsung-sk-hynix-reported-1point3-reported-trillion-spending-plans.html",
       "source": "CNBC",
       "content": "South Korea announced 800 trillion KRW (18B+) national semiconductor plan with Samsung and SK Hynix building four new advanced fabs targeting double DRAM capacity in 5 years. AMAT surged ~10% to record high; Citi upgraded global WFE market forecast to 45B for 2026, 00B for 2027, 50B for 2028 bull case."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "research",
+      "title": "Citi Raises Applied Materials Price Target to $710 from $550; Bull-Case WFE Spending $145B in 2026, $200B in 2027, $250B in 2028",
+      "url": "https://www.investing.com/news/stock-market-news/citi-lifts-pts-on-amat-lrcx--klac-amid-booming-wfe-demand-4747120",
+      "source": "Investing.com",
+      "content": "Citi raised AMAT PT to $710, first-ever 2028 WFE forecast of $250B; AI agentic demand driving HBM and advanced DRAM investment well beyond prior forecasts."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "research",
+      "title": "Stifel Raises Price Targets on AMAT, KLA, Lam Research; Prolonged Semiconductor Equipment Demand Cycle Driven by AI",
+      "url": "https://seekingalpha.com/news/4612922-applied-materials-lam-kla-take-advantage-of-prolonged-demand-cycle-stifel",
+      "source": "Seeking Alpha",
+      "content": "Stifel's 5-star analyst Brian Chin raised PTs on all three semi equipment leaders; maintains Buy; notes agentic AI pushing memory demand higher and extending the WFE upcycle."
     }
   ],
   "KLAC": [
@@ -2291,6 +2363,22 @@
       "url": "https://ir.kla.com/news-events/",
       "source": "TradingKey / Cantor Fitzgerald",
       "content": "KLA Corp shares rose 7.11% on June 29, 2026, driven by Cantor Fitzgerald raising its post-split price target to $325 from $250 (Overweight), citing AI-related chip spending momentum. Management also raised its 2026 revenue outlook for advanced packaging process control products to approximately $1 billion."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "research",
+      "title": "Citi Raises KLA Corporation Price Target to $290 from $206; Q2 2026 Earnings Scheduled July 23",
+      "url": "https://www.investing.com/news/stock-market-news/citi-lifts-pts-on-amat-lrcx--klac-amid-booming-wfe-demand-4747120",
+      "source": "Investing.com",
+      "content": "Citi raises KLAC PT to $290; bull-case WFE scenario of $145B in 2026 supports strong process-control demand; KLAC Q2 earnings call July 23."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "research",
+      "title": "Stifel Raises KLA Price Target; AI-Driven HBM and Advanced Logic Demand Supports Prolonged Equipment Upcycle",
+      "url": "https://seekingalpha.com/news/4612922-applied-materials-lam-kla-take-advantage-of-prolonged-demand-cycle-stifel",
+      "source": "Seeking Alpha",
+      "content": "Stifel keeps Buy on KLAC; notes KLA's process-control position uniquely benefits from yield management demand as customers push into N2 and DRAM EUV nodes."
     }
   ],
   "ONTO": [
@@ -2761,6 +2849,22 @@
       "url": "https://finance.yahoo.com/quote/MU/news/",
       "source": "Yahoo Finance / Cantor Fitzgerald",
       "content": "Cantor Fitzgerald raised its price target on Micron from $1,500 to $2,000 on June 29, 2026, maintaining Overweight following Micron's blowout Q3 FY2026 earnings (revenue $41.5B, EPS $25.11 far above estimates), citing continued AI-driven HBM and data center memory demand."
+    },
+    {
+      "date": "2026-07-13",
+      "type": "news",
+      "title": "Micron, SanDisk Fall 6% as SK Hynix Q2 Weak Earnings Outlook Rattles Global Memory Sector",
+      "url": "https://247wallst.com/investing/2026/07/13/micron-sandisk-western-digital-fall-6-as-sk-hynixs-weak-outlook-rattles-memory-stocks/",
+      "source": "24/7 Wall St.",
+      "content": "Memory stocks sold off sharply after SK Hynix guided softer Q2 margins due to HBM yield ramp costs; Micron -6%, SanDisk -10%, Western Digital -7% intraday."
+    },
+    {
+      "date": "2026-07-14",
+      "type": "news",
+      "title": "SK Hynix Nasdaq ADR Soars 19% on Leveraged ETF Launches; Micron Rises 4.24% in Broad Memory Rally",
+      "url": "https://247wallst.com/investing/2026/07/14/sk-hynix-adr-soars-19-as-leveraged-etfs-launch-lifting-micron-sandisk-western-digital/",
+      "source": "24/7 Wall St.",
+      "content": "GraniteShares and ProShares launched 2x leveraged SK Hynix ADR ETFs the day after Hynix listed on Nasdaq; buying drove HXSL +19%, lifting Micron +4.24% and SanDisk significantly."
     }
   ],
   "SNDK": [
@@ -2923,6 +3027,22 @@
       "url": "https://finance.yahoo.com/quote/SNDK/",
       "source": "Yahoo Finance / Reuters",
       "content": "SK Hynix officially announced its Nasdaq ADR listing scheduled for July 10, 2026, aiming to raise up to $29.4B, adding competitive pressure on SanDisk as another major NAND/DRAM player gains US capital markets access amid the AI memory demand cycle."
+    },
+    {
+      "date": "2026-07-13",
+      "type": "news",
+      "title": "SanDisk Slumps 10% Alongside Memory Peers as SK Hynix Weak Q2 Outlook Dampens Sector Sentiment",
+      "url": "https://247wallst.com/investing/2026/07/13/micron-sandisk-western-digital-fall-6-as-sk-hynixs-weak-outlook-rattles-memory-stocks/",
+      "source": "24/7 Wall St.",
+      "content": "SanDisk (SNDK) fell ~10% July 13 in sympathy with SK Hynix's weaker-than-expected Q2 margin guidance, despite its own bullish Q3 results (revenue $5.9B, +251% YoY, EPS $23.41)."
+    },
+    {
+      "date": "2026-07-14",
+      "type": "news",
+      "title": "SanDisk Rebounds on SK Hynix Nasdaq ADR Launch; Memory Supercycle Thesis Reinforced Despite Near-Term Volatility",
+      "url": "https://247wallst.com/investing/2026/07/14/sk-hynix-adr-soars-19-as-leveraged-etfs-launch-lifting-micron-sandisk-western-digital/",
+      "source": "24/7 Wall St.",
+      "content": "Memory stocks rallied July 14 as SK Hynix ADR (HXSL) and its leveraged ETFs launched on Nasdaq; Motley Fool noted Micron and SanDisk up 200%+ in 3 months prior; history suggests continued upside."
     }
   ],
   "COHR": [
@@ -3069,6 +3189,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/coherent-cohr-down-6-1-211417202.html",
       "source": "Yahoo Finance",
       "content": "Coherent was added to Russell Growth benchmarks effective July 1 as part of the FTSE Russell annual reconstitution, but shares fell 6.1% as the broader AI optics sector reset after a period of extended AI infrastructure exuberance. The entire optical networking group came under selling pressure including Ciena, Lumentum, and Applied Optoelectronics."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "industry",
+      "title": "Coherent, Lumentum, Fabrinet Positioned for Multi-Year AI Demand as NVIDIA Blackwell Ramps; Silicon Photonics Seen as Key Differentiator",
+      "url": "https://www.ainvest.com/news/lighting-fiber-lumentum-coherent-fabrinet-capitalizing-optical-transceiver-boom-2507/",
+      "source": "AInvest",
+      "content": "Coherent betting on silicon photonics (SiPh) as cost-effective alternative to EML-heavy transceiver designs; NVDA Blackwell ramp in 2026 expected to drive V-shaped datacom recovery across optics sector."
     }
   ],
   "LITE": [
@@ -3207,6 +3335,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/lumentum-stock-skyrockets-700-still-144400354.html",
       "source": "Yahoo Finance",
       "content": "Multiple analysts raised Lumentum's price target to $1,200, citing the company's $400M+ AI data center optics backlog and multi-hundred-million dollar supply agreements. LITE shares have gained approximately 700% over the past year, far outpacing sector peers, driven by transceiver and laser demand from hyperscaler AI data center buildouts."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "industry",
+      "title": "Lumentum Surges 166% YTD in 2026; $400M+ AI Optics Backlog and NVIDIA Blackwell Ramp Drive Optical Transceiver Supercycle",
+      "url": "https://www.aol.com/articles/optics-stock-dominated-2026-applied-190755968.html",
+      "source": "AOL Finance",
+      "content": "Lumentum leads optical peers in YTD 2026 performance at +166%; $400M+ Optical Circuit Switch backlog secures revenue visibility; NVIDIA Blackwell platform ramp driving V-shaped datacom recovery."
     }
   ],
   "FN": [
@@ -3515,6 +3651,14 @@
       "url": "https://www.foxbusiness.com/economy/microsoft-eyes-another-wave-layoffs-hit-5000-workers-next-week",
       "source": "Fox Business",
       "content": "Microsoft is planning another round of job cuts affecting up to 5,000 employees, targeting sales, consulting, and Xbox divisions following prior 2026 headcount reductions. The cuts come as Microsoft simultaneously expands its AI implementation unit, reflecting a broad workforce restructuring toward AI-centric roles."
+    },
+    {
+      "date": "2026-07-08",
+      "type": "news",
+      "title": "Microsoft On Track to Spend $190 Billion on AI Capital Expenditures in FY2026; Azure Revenue Grew 39% in Q2 FY2026",
+      "url": "https://theoptionsinsider.com/news/most-active-options/hotoptions-report-for-mid-day-july-13-2026-nvda-tsla-aapl-amzn-meta-msft-spcx-mu-intc-orcl-amd-pltr-sofi-iren-nflx-asts-wbd-sls-mrvl-googl/",
+      "source": "The Options Insider",
+      "content": "Microsoft remains the leading large-cap AI beneficiary; $190B FY2026 capex spend signals unprecedented infrastructure investment; Azure +39% in Q2 FY2026, Q4 FY2026 earnings expected late July."
     }
   ],
   "GOOGL": [
@@ -3797,6 +3941,14 @@
       "url": "https://www.barchart.com/story/news/3117520/dear-google-stock-fans-mark-your-calendars-for-july-22",
       "source": "Barchart",
       "content": "Alphabet scheduled Q2 2026 earnings release for July 22, 2026; the company's market capitalization surpassed $4 trillion driven by accelerating Google Cloud AI revenue and 5% dividend hike. Q2 capex is expected around $36 billion as the company ramps its AI infrastructure buildout."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "announcement",
+      "title": "Alphabet Q2 2026 Earnings Confirmed for July 22 After-Market; AI Investments Expected to Show Search, Cloud, and Gemini Growth",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/dear-google-stock-fans-mark-151501022.html",
+      "source": "Yahoo Finance",
+      "content": "Alphabet Q2 2026 results on July 22 after market; Wall Street watching whether massive AI investments are translating to stronger growth across Search, Cloud, and Gemini ecosystem."
     }
   ],
   "AMZN": [
@@ -4281,6 +4433,22 @@
       "url": "https://247wallst.com/investing/2026/07/01/meta-platforms-jumps-9-on-potential-plans-to-sell-ai-cloud-computing-business/",
       "source": "24/7 Wall St.",
       "content": "Meta reportedly plans Meta Compute — a cloud infrastructure service selling GPU compute, hosted Llama models, and AI agent tools — to compete directly with AWS, Azure, and Google Cloud. Meta aims to undercut rivals by 20-30% using proprietary MTIA chips. Stock surged 9%+ on July 1. Meta's 2026 CapEx guidance raised to 25-145B."
+    },
+    {
+      "date": "2026-07-09",
+      "type": "announcement",
+      "title": "Vistra Signs 20-Year Nuclear Power PPA With Meta for ~2,600MW Across Three PJM-Region Plants",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/vistra-vs-constellation-ai-power-113004485.html",
+      "source": "Yahoo Finance",
+      "content": "Vistra signed a 20-year power purchase agreement providing Meta with approximately 2,600 megawatts of nuclear power across three PJM-region plants, securing clean AI data center power long-term."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "announcement",
+      "title": "Meta Q2 2026 Earnings Scheduled for July 29 After-Market; Analysts Forecast Diluted EPS $7.09 on AI Advertising Strength",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/know-ahead-meta-platforms-earnings-130933203.html",
+      "source": "Yahoo Finance",
+      "content": "Meta Platforms Q2 2026 earnings on July 29 after market; consensus EPS estimate $7.09, slightly below $7.14 year-ago quarter; Agentforce and AI ad optimization in focus."
     }
   ],
   "AAPL": [
@@ -4483,6 +4651,30 @@
       "url": "https://9to5mac.com/2026/07/02/apple-sets-q3-2026-earnings-release-for-july-30/",
       "source": "9to5Mac",
       "content": "Apple confirmed Q3 FY2026 (fiscal quarter ending Jun 28) earnings release for July 30 after close, followed by conference call at 2pm PT. Analyst consensus: revenue ~11B, EPS ~.89. This will be CEO Tim Cook's final earnings call before John Ternus assumes the CEO role September 1, 2026."
+    },
+    {
+      "date": "2026-07-08",
+      "type": "announcement",
+      "title": "Tim Cook Signs Largest U.S. Manufacturing Deal in Apple History as Final Move Before Handing CEO Role to John Ternus on Sept 1, 2026",
+      "url": "https://247wallst.com/investing/2026/07/08/tim-cooks-final-move-as-apple-ceo-the-biggest-american-manufacturing-deal-in-company-history/",
+      "source": "24/7 Wall St.",
+      "content": "Tim Cook finalizes a landmark American manufacturing deal before transitioning to Executive Chairman; John Ternus, 25-year Apple veteran, becomes CEO September 1 with foldable iPhone and AI glasses on the roadmap."
+    },
+    {
+      "date": "2026-07-13",
+      "type": "news",
+      "title": "Apple Only Magnificent 7 Stock Near All-Time Highs at $317 as It Avoided AI Arms Race; +15% Since June 25",
+      "url": "https://247wallst.com/investing/2026/07/13/apple-sat-out-the-ai-arms-race-its-the-only-magnificent-7-stock-near-all-time-highs/",
+      "source": "24/7 Wall St.",
+      "content": "AAPL has climbed 15% since June 25, adding $600B in market value to reach $317.18, near its 52-week high of $323.45, outperforming all Magnificent 7 peers on a stability premium."
+    },
+    {
+      "date": "2026-07-14",
+      "type": "research",
+      "title": "Citi Raises Apple Price Target to $365; AAPL Tests Record Highs as AI Strategy Gains Traction; Q3 FY2026 Earnings July 30",
+      "url": "https://www.fxleaders.com/news/2026/07/14/aapl-stock-tests-record-highs-as-apple-ai-strategy-and-citis-365-target-fuel-breakout/",
+      "source": "FX Leaders",
+      "content": "Citi upgraded Apple PT to $365, citing premium brand positioning and ability to raise prices to offset rising costs; Q3 FY2026 earnings call July 30 will be Tim Cook's last as CEO."
     }
   ],
   "TSLA": [
@@ -4717,6 +4909,14 @@
       "url": "https://stockstotrade.com/news/tesla-inc-tsla-news-2026_07_06/",
       "source": "StocksToTrade",
       "content": "Tesla launched its robotaxi ride-hailing service in Miami with unsupervised Full Self-Driving capability, marking a major commercial milestone following earlier deployments in Austin and San Francisco. The Miami expansion extends Tesla's autonomous vehicle monetization strategy to a fourth major metropolitan market and was a key driver of the stock's post-Q2 delivery rally."
+    },
+    {
+      "date": "2026-07-08",
+      "type": "announcement",
+      "title": "Tesla Q2 2026 Earnings Set for July 22 After-Market; Wall Street Focused on Automotive Gross Margin, Cybercab Timeline, and $25B Capex",
+      "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262021897-tesla-tsla-stock-forecast-july-2026-q2-earnings-margins-cybercab-tradingkey",
+      "source": "TradingKey",
+      "content": "Q2 earnings July 22 after close; 480K deliveries already reported, so focus shifts to Q2 gross margin trajectory, Cybercab commercial launch timeline, and whether $25B capex is compressing free cash flow."
     }
   ],
   "CRWV": [
@@ -5057,6 +5257,14 @@
       "url": "https://www.investing.com/news/company-news/constellation-energy-stock-hits-52week-low-at-24027-usd-93CH-4770740",
       "source": "Investing.com",
       "content": "Constellation Energy shares fell to a 52-week low at $240.27 amid declining power price forecasts and regulatory uncertainty around nuclear power purchase agreements. Citi maintained a Neutral rating on the stock while analysts debated the long-term value of Constellation's nuclear clean power contracts with hyperscalers."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "industry",
+      "title": "CEG, VST, NRG Surge as PJM Accelerates Data Center Reliability Auction; AI Power Demand Forcing Faster Grid Expansion",
+      "url": "https://seekingalpha.com/news/4595417-utility-shares-surge-on-pjms-plans-to-speed-up-data-center-timeline",
+      "source": "Seeking Alpha",
+      "content": "PJM, the largest US electric grid, moved up a planned backstop reliability auction to address surging data center demand; Constellation, Vistra, and NRG all rallied on faster AI power infrastructure timeline."
     }
   ],
   "VRT": [
@@ -5211,6 +5419,14 @@
       "url": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/2026/vertiv-increases-manufacturing-capacity-with-new-facility-in-malaysia-to-support-growing-demand-for-ai-and-digital-infrastructure-across-asia/",
       "source": "Vertiv IR",
       "content": "Vertiv opened a 236,000 sq ft facility in Senai, Johor, Malaysia, expanding regional manufacturing capacity for high-density thermal and power solutions. The plant will serve Southeast Asia, North Asia, Australia, and NZ AI data center buildout. Q2 2026 results expected July 29."
+    },
+    {
+      "date": "2026-07-13",
+      "type": "industry",
+      "title": "Vertiv Among Top AI Power Infrastructure Plays; Goldman Sachs: Data Center Power Demand to Rise 165% by 2030",
+      "url": "https://www.foreignpolicyjournal.com/2026/07/13/vertiv-nyse-vrt-and-ge-vernova-nyse-gev-positioned-to-beat-the-market-as-power-demand-surges-toward-2030/",
+      "source": "Foreign Policy Journal",
+      "content": "Goldman Sachs projects 165% data center power demand growth by 2030; Vertiv Q1 2026 revenue +30% YoY; positioned as essential infrastructure for cooling and power distribution inside AI hyperscale facilities."
     }
   ],
   "ETN": [
@@ -5301,6 +5517,22 @@
       "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
       "source": "Eaton / Dana / PR Newswire",
       "content": "Definitive agreement to separate Eaton's Mobility Group and merge with Dana in an RMT transaction valuing combined entity at $10B+ enterprise value. $250M run-rate synergies expected. Closes Q1 2027. Post-deal Eaton focused on Electrical and Aerospace. Stock rose ~4.8%."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "industry",
+      "title": "Eaton Q2 2026 Earnings Scheduled July 29; Data Center Power and Cooling Segment Drives AI Infrastructure Investment Thesis",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/5-stocks-solving-ai-power-152000530.html",
+      "source": "Yahoo Finance",
+      "content": "Eaton Q2 2026 earnings on July 29; Boyd Thermal acquisition signals deeper commitment to data center cooling; AI power management and electrical distribution remain core long-term growth drivers."
+    },
+    {
+      "date": "2026-07-13",
+      "type": "industry",
+      "title": "Eaton and GE Vernova Top AI Power Infrastructure Picks as Data Center Electricity Demand Reaches Unprecedented Levels",
+      "url": "https://www.foreignpolicyjournal.com/2026/07/13/vertiv-nyse-vrt-and-ge-vernova-nyse-gev-positioned-to-beat-the-market-as-power-demand-surges-toward-2030/",
+      "source": "Foreign Policy Journal",
+      "content": "Goldman Sachs and analysts cite Eaton (ETN) as key AI infrastructure enabler alongside GEV and VRT; power distribution, switchgear, and UPS systems critical for hyperscale data center build-out."
     }
   ],
   "GEV": [
@@ -5503,6 +5735,22 @@
       "url": "https://www.gevernova.com/news/press-releases/ge-vernova-announce-second-quarter-2026-financial-results-july-22",
       "source": "GE Vernova",
       "content": "GE Vernova scheduled Q2 2026 financial results release for July 22, 2026 before market open, with CEO Scott Strazik and CFO Ken Parks hosting a webcast at 7:30 AM ET. Analysts expect strong results driven by gas turbine orders and grid electrification backlog growth."
+    },
+    {
+      "date": "2026-07-14",
+      "type": "announcement",
+      "title": "GE Vernova Q2 2026 Earnings on July 22; Q1 Orders $18.3B, Backlog $163B; FY2026 Revenue Guidance Raised to $44.5–45.5B",
+      "url": "https://247wallst.com/investing/2026/07/14/heres-why-ge-vernova-is-a-no-brainer-buy-before-july-22-earnings/",
+      "source": "24/7 Wall St.",
+      "content": "GEV Q2 2026 earnings before market open July 22; Q1 backlog climbed to $163B; management raised FY2026 guidance to $44.5–45.5B revenue and $6.5–7.5B FCF; 2028 target $56B revenue at 20% EBITDA margin."
+    },
+    {
+      "date": "2026-07-13",
+      "type": "industry",
+      "title": "GE Vernova and Vertiv Among Top AI Power Plays; Goldman Sachs Projects Data Center Power Demand to Rise 165% by 2030",
+      "url": "https://www.foreignpolicyjournal.com/2026/07/13/vertiv-nyse-vrt-and-ge-vernova-nyse-gev-positioned-to-beat-the-market-as-power-demand-surges-toward-2030/",
+      "source": "Foreign Policy Journal",
+      "content": "Goldman Sachs projects global data center power demand +165% from 2023 levels by 2030; GEV uniquely positioned selling into every layer of AI power stack simultaneously — generation, transmission, and data center equipment."
     }
   ],
   "CCJ": [
@@ -6003,6 +6251,14 @@
       "url": "https://www.tradingkey.com/analysis/stocks/more/261995477-samsung-skhynix-adr-sndk-koixia-dram-mu-hbm-tradingkey",
       "source": "TradingKey",
       "content": "SK Hynix, which holds ~58% global HBM (High Bandwidth Memory) market share, is set to debut on Nasdaq via American Depositary Receipts (ADRs) on July 10, 2026. The move is designed to capitalize on surging AI-driven HBM demand and broaden SK Hynix's US investor base. EWY holds SK Hynix as its top position at approximately 23-30% of assets."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "news",
+      "title": "SK Hynix Nasdaq ADR Debuts +14% on July 10; EWY South Korea ETF Gains as Samsung and SK Hynix Drive Korea AI Semiconductor Wave",
+      "url": "https://247wallst.com/investing/2026/07/14/sk-hynix-adr-soars-19-as-leveraged-etfs-launch-lifting-micron-sandisk-western-digital/",
+      "source": "24/7 Wall St.",
+      "content": "SK Hynix listed on Nasdaq as ADR on July 10, +14% on first day; GraniteShares and ProShares launched 2x leveraged ETFs July 14; Korea ETF EWY up 122.9% YTD as Samsung/Hynix dominate HBM supply."
     }
   ],
   "RKLB": [
@@ -6221,6 +6477,14 @@
       "url": "https://www.prnewswire.com/news-releases/rocket-lab-to-acquire-iridium-in-historic-deal-creating-a-fully-vertically-integrated-space-powerhouse-primed-for-growth-302813075.html",
       "source": "PR Newswire",
       "content": "Rocket Lab announced a definitive agreement to acquire Iridium Communications for $54 per share in a cash-and-stock transaction valuing Iridium at approximately $8 billion enterprise value. Iridium operates a 66-satellite L-band constellation serving 2.55 million subscribers with $871M in 2025 revenue. The deal merges Rocket Lab's satellite manufacturing and launch capabilities with Iridium's global network and 500+ partner ecosystem, creating a fully vertically integrated space company. Closing expected mid-2027 pending regulatory approvals."
+    },
+    {
+      "date": "2026-07-07",
+      "type": "announcement",
+      "title": "Rocket Lab Delivers Mission Success for U.S. Space Force VICTUS HAZE II — Satellite Tracking in Record Time",
+      "url": "https://rocketlabcorp.com/updates/",
+      "source": "Rocket Lab Newsroom",
+      "content": "Rocket Lab completed a historic launch and on-orbit satellite tracking mission for the Space Force in record time on July 7, 2026; fourth successful mission for the Space Force; first since RKLB joined Nasdaq-100."
     }
   ],
   "HUBB": [
@@ -6287,6 +6551,14 @@
       "url": "https://hubbell.gcs-web.com/news-releases",
       "source": "Hubbell",
       "content": "Hubbell Incorporated completed its $3 billion acquisition of NSI Industries on June 9, 2026, significantly expanding its electrical wire management and connector product lines. Q2 2026 earnings are expected on July 28 with Q1 showing $1.52 billion in revenue, up 11.1% year over year."
+    },
+    {
+      "date": "2026-07-13",
+      "type": "announcement",
+      "title": "Hubbell to Announce Q2 2026 Financial Results on July 28 Before Market Open; NSI Industries Integration Ongoing",
+      "url": "https://www.globenewswire.com/news-release/2026/07/13/3326459/0/en/Hubbell-to-Announce-Second-Quarter-2026-Results-on-July-28-2026.html",
+      "source": "GlobeNewswire",
+      "content": "Hubbell will release Q2 2026 results July 28 before market open; conference call at 10:00 AM ET; NSI Industries acquisition ($3B) integration ongoing; AI data center electrical infrastructure a key growth driver."
     }
   ],
   "POWL": [
@@ -6507,6 +6779,14 @@
       "url": "https://simplywall.st/stocks/us/tech/nyse-anet/arista-networks/news/arista-networks-anet-is-up-104-after-boosting-2026-outlook-a",
       "source": "Simply Wall St",
       "content": "Arista Networks boosted its full-year 2026 revenue guidance and unveiled new 1.6T AI networking platforms targeting hyperscaler AI cluster deployments, driving a 10.4% single-day stock gain. Multiple Wall Street analysts simultaneously raised price targets to $200, with the stock also added to larger Russell indexes."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "announcement",
+      "title": "Arista Networks Q2 2026 Earnings Scheduled for August 4; Company Leads AI Ethernet Switching Market for Hyperscalers",
+      "url": "https://siliconanalysts.com/earnings",
+      "source": "Silicon Analysts",
+      "content": "Arista Networks Q2 2026 earnings on August 4; company's AI-networking Ethernet platforms and EOS software widely deployed by hyperscalers; following strong Q1 guidance raise and 1.6T platform unveil."
     }
   ],
   "ARM": [
@@ -6693,6 +6973,14 @@
       "url": "https://www.marketbeat.com/stocks/NASDAQ/ARM/news/",
       "source": "MarketBeat",
       "content": "Multiple major banks raised ARM Holdings price targets in early July: UBS raised its target from $260 to $470, TD Cowen raised from $265 to $475, and Bank of America Securities also raised its target significantly, citing ARM's growing role in agentic AI server and data center CPU architectures where ARM-based designs are gaining share from x86."
+    },
+    {
+      "date": "2026-07-13",
+      "type": "news",
+      "title": "ARM Holdings Falls 7.55% in Broad Chip Sector Selloff; Fiscal Q1 FY2027 Earnings Scheduled for July 29",
+      "url": "https://www.tikr.com/blog/arm-holdings-reports-earnings-july-29-heres-what-investors-should-watch",
+      "source": "TIKR",
+      "content": "ARM stock closed at $299 on July 13, -7.55% in broad semiconductor sector weakness; fiscal Q4 FY2026 was record revenue $1.49B (+20% YoY) and EPS $0.60; Q1 FY2027 results due July 29."
     }
   ],
   "LRCX": [
@@ -6887,6 +7175,14 @@
       "url": "https://www.gurufocus.com/news/8948281/lam-research-corp-lrcx-shares-fall-69-gf-value-says-still-overvalued",
       "source": "GuruFocus",
       "content": "Lam Research shares fell 6.9% on July 7 as chip equipment stocks broadly sold off amid investor concerns about stretched valuations; Lam had previously fallen 8.94% on July 1 in the same sector rotation. Upcoming earnings are expected to show continued strength in NAND and logic etch equipment demand."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "research",
+      "title": "Citi Raises Lam Research Price Target to $450 from $315; Q2 2026 Earnings Scheduled July 29; WFE Bull Case $145B in 2026",
+      "url": "https://www.investing.com/news/stock-market-news/citi-lifts-pts-on-amat-lrcx--klac-amid-booming-wfe-demand-4747120",
+      "source": "Investing.com",
+      "content": "Citi raises LRCX PT to $450; etch and deposition tools critical for HBM stacking and GAA transistor production; Q2 2026 earnings on July 29."
     }
   ],
   "CDNS": [
@@ -6993,6 +7289,22 @@
       "url": "https://www.businesswire.com/news/home/20260608582061/en/Cadence-Announces-Collaboration-with-Intel-Foundry-to-Accelerate-Intel-14A-Process-Optimization-for-HPC-and-Mobile-Designs",
       "source": "BusinessWire / Cadence",
       "content": "Cadence announced multi-year Design Technology Co-Optimization (DTCO) agreement with Intel Foundry for the Intel 14A process node, combining Cadence's agentic AI-driven EDA with Intel's process innovation for HPC and mobile designs."
+    },
+    {
+      "date": "2026-07-14",
+      "type": "announcement",
+      "title": "Cadence Design Systems Reports Record $8B Order Backlog; Raises FY2026 Revenue Guidance to $6.2B; Q2 2026 Earnings July 27",
+      "url": "https://www.fool.com/coverage/better-buy/2026/07/14/cadence-design-systems-vs-synopsys-which-technology-stock-is-a-better-buy-in-2026/",
+      "source": "Motley Fool",
+      "content": "Cadence raised FY2026 revenue guidance to $6.2B; record $8B order backlog; stock up 33.6% in 90 days to $373; Q2 2026 earnings on July 27 expected to confirm EDA leadership amid AI chip design boom."
+    },
+    {
+      "date": "2026-07-08",
+      "type": "announcement",
+      "title": "Cadence Expands NVIDIA Partnership Across Chip Design, AI Systems, and Hyperscale AI Factory Design",
+      "url": "https://www.stocktitan.net/overview/CDNS/",
+      "source": "StockTitan",
+      "content": "Cadence broadened its multi-year NVIDIA partnership to cover chip design, AI system optimization, and hyperscale AI data center layout; deepens EDA tools integration with NVIDIA AI silicon roadmap."
     }
   ],
   "ORCL": [
@@ -7471,6 +7783,14 @@
       "url": "https://www.manilatimes.net/2026/06/29/tmt-newswire/globenewswire/iren-added-to-russell-1000-index/2374758",
       "source": "GlobeNewswire",
       "content": "IREN Limited was added to the Russell 1000 Index effective after market close on June 26, 2026, following the FTSE Russell annual reconstitution. The inclusion validates IREN's transition from Bitcoin mining to AI infrastructure (GPU cloud and data center services). IREN shares gained 3.6% in premarket trading."
+    },
+    {
+      "date": "2026-07-02",
+      "type": "announcement",
+      "title": "IREN Appoints Kambiz Aghili as Chief Product Officer and Michael Nudelman as Chief Development Officer for AI Compute Expansion",
+      "url": "https://www.quiverquant.com/news/Iris+Energy+Stock+(IREN)+Opinions+on+AI+Compute+Financing+and+NVIDIA+Partnerships",
+      "source": "QuiverQuant",
+      "content": "Iris Energy strengthened executive team with CPO and CDO appointments on July 2 to lead AI Cloud product strategy and infrastructure development as company scales to 480MW by end of 2026."
     }
   ],
   "VST": [
@@ -7577,6 +7897,14 @@
       "url": "https://simplywall.st/stocks/us/utilities/nyse-vst/vistra/news/what-vistra-vsts-record-pjm-heat-dome-means-for-shareholders",
       "source": "Simply Wall St",
       "content": "Vistra experienced record electricity demand in its PJM grid footprint during a July 2026 heat dome event, with its nuclear fleet running at full capacity and power prices spiking. The demand surge significantly boosts Vistra's Q2/Q3 2026 earnings outlook and highlights the value of its baseload nuclear generation in extreme weather events."
+    },
+    {
+      "date": "2026-07-09",
+      "type": "announcement",
+      "title": "Vistra Signs 20-Year Nuclear Power Purchase Agreement With Meta for ~2,600MW Across Three PJM-Region Plants",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/vistra-vs-constellation-ai-power-113004485.html",
+      "source": "Yahoo Finance",
+      "content": "Vistra secured a landmark 20-year PPA with Meta Platforms for approximately 2,600MW of nuclear power capacity across three PJM-region plants, a cornerstone long-term AI data center power deal."
     }
   ],
   "MPWR": [
@@ -7667,6 +7995,14 @@
       "url": "https://simplywall.st/stocks/us/semiconductors/nasdaq-mpwr/monolithic-power-systems/news/does-monolithic-power-systems-mpwr-shift-into-russell-large",
       "source": "Simply Wall St",
       "content": "Monolithic Power Systems was upgraded to Russell Large-Cap Indexes in the annual FTSE Russell reconstitution, reflecting institutional recognition of its substantial market cap growth driven by AI data center power management IC demand. The stock also gained 4.5% on July 6 as chip stocks rebounded on AI power demand themes."
+    },
+    {
+      "date": "2026-07-13",
+      "type": "news",
+      "title": "Monolithic Power Systems Shares Fall 4.5% to $1,291; Q2 2026 Dividend of $2.00/Share Paid July 15; Q2 Results Expected July 30",
+      "url": "https://www.gurufocus.com/news/8948397/hubbell-inc-hubb-shares-fall-34-gf-value-says-still-overvalued",
+      "source": "GuruFocus",
+      "content": "MPWR fell 4.5% in broader tech selloff to $1,291.38; second quarter dividend of $2.00/share paid July 15 to shareholders of record June 30; Q2 earnings call July 30."
     }
   ],
   "GLW": [
@@ -7813,6 +8149,14 @@
       "url": "https://www.gurufocus.com/news/8941395/corning-glw-faces-significant-decline-in-stock-price",
       "source": "GuruFocus",
       "content": "Corning Inc shares plunged 13.3% intraday on July 1 following a rapid AI-driven parabolic run that had pushed the trailing P/E ratio to levels considered significantly stretched. The sharp decline followed the FTSE Russell annual reconstitution boost (Corning +14% the prior week) and reflected broad institutional profit-taking."
+    },
+    {
+      "date": "2026-07-09",
+      "type": "news",
+      "title": "Corning Shares Rise 6%, Snapping Six-Session Losing Streak That Erased ~28%; Amazon and NVIDIA Optical Fiber Deals Cited",
+      "url": "https://seekingalpha.com/news/4612742-corning-shares-jump-6-percent-snapping-six-day-losing-streak",
+      "source": "Seeking Alpha",
+      "content": "Corning recovered +6% on July 9 after six consecutive down sessions erased ~28% of market value; multi-billion dollar optical fiber agreements with Amazon and NVIDIA support long-term AI demand thesis."
     }
   ],
   "CRDO": [
@@ -7943,6 +8287,14 @@
       "url": "https://stockstotrade.com/news/credo-technology-group-holding-ltd-crdo-news-2026_07_06/",
       "source": "StocksToTrade",
       "content": "Evercore ISI initiated coverage on Credo Technology with an Outperform rating on July 6; multiple additional analysts simultaneously raised price targets, citing accelerating AI data center connectivity demand for Credo's Active Electrical Cable (AEC) and high-speed SerDes products for hyperscaler AI clusters."
+    },
+    {
+      "date": "2026-07-08",
+      "type": "industry",
+      "title": "Credo Technology and Astera Labs to Benefit From Anthropic $100B AWS Compute Deal; Both AI Connectivity Chipmakers See Accelerating Demand",
+      "url": "https://seekingalpha.com/article/4892386-credo-astera-labs-to-gain-from-100b-amazon-anthropic-deal",
+      "source": "Seeking Alpha",
+      "content": "Credo (CRDO) and Astera Labs (ALAB) benefit from Amazon's $100B Anthropic investment driving massive hyperscale AI build; CRDO Q1 revenue +157% YoY positions it as key AI connectivity winner."
     }
   ],
   "ALAB": [
@@ -8341,6 +8693,14 @@
       "url": "https://stockanalysis.com/stocks/csco/dividend/",
       "source": "Cisco Systems / StockAnalysis",
       "content": "Cisco Systems declared a quarterly cash dividend of $0.42 per share, ex-dividend date July 6, 2026, payable July 22 to shareholders of record as of July 8. Dividend yield approximately 1.1% annualized at current price."
+    },
+    {
+      "date": "2026-07-09",
+      "type": "news",
+      "title": "Cisco Eyes SentinelOne Acquisition to Strengthen AI-Focused Cybersecurity Portfolio; SentinelOne Holds FedRAMP High Authorization",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/cisco-csco-eyes-sentinelone-italy-061043025.html",
+      "source": "Yahoo Finance",
+      "content": "Cisco reported as a leading acquisition candidate for SentinelOne; deal would bolster Cisco's security revenue, which was flat in recent quarters, with AI-native cybersecurity capabilities."
     }
   ],
   "PWR": [
@@ -8465,6 +8825,14 @@
       "url": "https://www.stocktitan.net/news/EME/emcor-group-inc-declares-regular-quarterly-ovao2kkugcw0.html",
       "source": "StockTitan",
       "content": "EMCOR Group declared a quarterly cash dividend of $0.40 per share payable July 31, 2026, and raised full-year 2026 revenue guidance to $18.5–19.25 billion, citing record electrical construction backlog driven by AI data center, grid modernization, and semiconductor fab infrastructure projects."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "announcement",
+      "title": "EMCOR Q1 2026 Electrical Revenue Hits Record $1.45B (+33% YoY); Network & Communications Revenue +50% on AI Data Center Hyperscaler Investment",
+      "url": "https://ca.finance.yahoo.com/news/why-emcors-electrical-construction-gaining-140500413.html",
+      "source": "Yahoo Finance",
+      "content": "EMCOR's network and communications segment surged ~50% as hyperscalers and enterprises accelerated AI infrastructure buildout; remaining performance obligations hit record $15.62B; Q2 earnings expected late July."
     }
   ],
   "FIX": [
@@ -8523,6 +8891,14 @@
       "url": "https://investors.comfortsystemsusa.com/news-releases/news-release-details/comfort-systems-announces-leadership-transitions-and",
       "source": "Comfort Systems USA IR / TipRanks",
       "content": "Comfort Systems USA named Craig Sasser (Regional VP, Atlantic Region) as COO effective July 1 with a $600,000 base salary, alongside Briston Blair's appointment as Chief Strategy & Innovation Officer, aimed at scaling AI data center HVAC infrastructure capabilities."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "announcement",
+      "title": "Comfort Systems USA Q2 2026 Earnings Coming Late July; Backlog Near $12B as AI Data Center HVAC and Modular Construction Demand Accelerates",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/comfort-systems-riding-ai-infrastructure-131300598.html",
+      "source": "Yahoo Finance",
+      "content": "Comfort Systems riding AI infrastructure wave; Q1 2026 CapEx jumped 564% to $147M to expand modular construction capabilities; backlog nearly doubled to $12B; Q2 earnings expected late July."
     }
   ],
   "MOD": [
@@ -8671,6 +9047,14 @@
       "url": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-Declares-Quarterly-Dividend/default.aspx",
       "source": "Trane Technologies IR",
       "content": "Trane declared $1.05/share quarterly dividend (payable June 30). Named Donny Simmons as COO effective July 1. Completed Stellar Energy Americas (data center cooling) and LiquidStack (liquid-to-chip cooling) acquisitions. FY2026 guidance: ~9.5% revenue growth, adjusted EPS $14.75-14.95 on $10.7B record backlog."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "announcement",
+      "title": "Trane Technologies Q2 2026 Earnings Conference Call Scheduled for July 30; Data Center HVAC Demand Remains Primary Growth Driver",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/trane-technologies-schedules-second-quarter-103000647.html",
+      "source": "Yahoo Finance",
+      "content": "Trane Technologies schedules Q2 2026 earnings call for July 30 at 10 AM ET; AI data center HVAC and precision cooling demand is primary near-term revenue driver alongside commercial building efficiency."
     }
   ],
   "JCI": [
@@ -8745,6 +9129,14 @@
       "url": "https://www.gurufocus.com/news/8901035/johnson-controls-international-jci-declares-quarterly-dividend-and-raises-guidance",
       "source": "GuruFocus / UBS",
       "content": "Johnson Controls traded ex-dividend June 15 ($0.40/share, payable July 10). Following June 1 investor day, JCI raised long-term organic growth target to high-single digits. UBS raised PT to $180 (Buy); shares rose 6% on June 2. FY2026 guidance: ~6% organic sales growth, adjusted EPS ~$4.85."
+    },
+    {
+      "date": "2026-07-13",
+      "type": "announcement",
+      "title": "Johnson Controls Schedules Q3 FY2026 Earnings Conference Call for July 29; Q2 FY2026 Beat EPS $1.19 vs $1.12 Estimate",
+      "url": "https://www.stocktitan.net/news/JCI/johnson-controls-announces-third-quarter-2026-earnings-conference-nlg7afja8oot.html",
+      "source": "StockTitan / GlobeNewswire",
+      "content": "Johnson Controls Q3 FY2026 earnings call on July 29 at 8:30 AM ET; last reported Q2 EPS $1.19 (beat $1.12 estimate by 6.25%); company serves AI data center HVAC and building automation markets."
     }
   ],
   "NRG": [
@@ -8835,6 +9227,14 @@
       "url": "https://www.aol.com/articles/nrg-energy-report-second-quarter-110100000.html",
       "source": "NRG Energy",
       "content": "NRG Energy announced Q2 2026 earnings call for August 4, 2026; separately, the company is close to completing a new 415-MW natural gas plant in Texas backed by the Texas Energy Fund, adding dispatchable generation capacity to its portfolio as power demand surges from AI data centers and extreme weather events."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "industry",
+      "title": "NRG Energy Surges After PJM Accelerates Data Center Reliability Auction; AI Power Demand Forcing Faster U.S. Grid Upgrades",
+      "url": "https://seekingalpha.com/news/4595417-utility-shares-surge-on-pjms-plans-to-speed-up-data-center-timeline",
+      "source": "Seeking Alpha",
+      "content": "NRG rallied alongside CEG and VST after PJM moved up its reliability auction; NRG has both retail and generation exposure; benefits from elevated power prices driven by AI data center electricity demand."
     }
   ],
   "KMI": [
@@ -9139,6 +9539,14 @@
       "url": "https://ir.amkor.com/news-releases/news-release-details/tsmc-and-amkor-technology-announce-long-term-partnership",
       "source": "Amkor Technology Investor Relations / BusinessWire",
       "content": "TSMC and Amkor Technology entered into a 10-year partnership to expand advanced semiconductor packaging and testing capabilities in Arizona. Amkor's Peoria, Arizona campus will serve as TSMC's key domestic packaging partner. TSMC plans to establish its first advanced packaging facility in Arizona by 2029 with CoWoS and 3D-IC capacity; Amkor secured an additional 67 acres adjacent to its 104-acre development site."
+    },
+    {
+      "date": "2026-07-13",
+      "type": "announcement",
+      "title": "Amkor Technology Q2 2026 Financial Results Scheduled for July 27 After Market; Conference Call at 5 PM ET",
+      "url": "https://ir.amkor.com/news-releases/news-release-details/amkor-technology-second-quarter-2026-earnings",
+      "source": "Amkor IR",
+      "content": "Amkor Technology Q2 2026 earnings on July 27 after market close; company benefiting from TSMC advanced packaging partnership expansion in Arizona."
     }
   ],
   "TER": [
@@ -9269,6 +9677,14 @@
       "url": "https://investors.teradyne.com/news-events/press-releases/detail/443/teradyne-introduces-integrated-test-solution-for-ai-and-data-center-devices-in-collaboration-with-tokyo-electron",
       "source": "Teradyne Investor Relations / BusinessWire",
       "content": "Teradyne and Tokyo Electron launched a commercially available integrated known-good-device (KGD) test cell solution at SWTest 2026 (June 8-10), combining Teradyne's UltraFLEXplus test platform with TEL's Prexa SDP singulated device prober for AI and data center device screening within 2.5D and 3D advanced packaging flows."
+    },
+    {
+      "date": "2026-07-05",
+      "type": "news",
+      "title": "Teradyne Shares Drop 13.6% to $369 in Broad Semiconductor Sector Selloff; Q2 2026 Earnings Scheduled July 29",
+      "url": "https://www.marketbeat.com/stocks/NASDAQ/TER/news/",
+      "source": "MarketBeat",
+      "content": "TER fell from $427.34 to $369.09 on July 5 in a semiconductor-sector selloff; Q1 2026 revenue +87% YoY with AI now comprising 70% of revenues; Q2 earnings scheduled July 29."
     }
   ],
   "NOW": [
@@ -9545,6 +9961,14 @@
       "url": "https://www.salesforce.com/news/press-releases/2026/07/07/1-billion-ai-transformation-investment-switzerland/",
       "source": "Salesforce Newsroom",
       "content": "Salesforce announced a $1 billion investment commitment in Switzerland to accelerate Agentic AI transformation, including expanded Swiss data center capacity and creation of 6,000 new AI-focused jobs. The announcement comes alongside Guggenheim's Buy upgrade and reflects Salesforce's accelerating international Agentforce expansion strategy."
+    },
+    {
+      "date": "2026-07-13",
+      "type": "announcement",
+      "title": "Salesforce Agentforce ARR Hits $1.2B (+205% YoY); Combined Agentforce + Data 360 ARR Reaches $3.4B; Stock Down 37% YTD Despite Explosive AI Growth",
+      "url": "https://247wallst.com/investing/2026/07/13/forget-palantir-as-it-bounces-back-and-get-in-salesforce-before-wall-street-wakes-up-to-real-value/",
+      "source": "24/7 Wall St.",
+      "content": "Salesforce Agentforce ARR reached $1.2B (+205% YoY); combined with Data 360, AI ARR totals $3.4B (+200%); despite strong fundamentals, CRM down 37% YTD; analysts see significant value gap vs. peers."
     }
   ]
 }
