@@ -28,7 +28,7 @@
     "strategic": 10,
     "ai_execution_score": 10,
     "ai_execution_note": "前沿模型训练/推理基础设施核心卖方, CUDA生态和Blackwell/Rubin路线确定性最高.",
-    "market_cap_billion": 51300.1,
+    "market_cap_billion": 51469.6,
     "avg_turnover_pct": 1.2,
     "quarters": [
       {
@@ -142,7 +142,7 @@
     "strategic": 9,
     "ai_execution_score": 8,
     "ai_execution_note": "AI ASIC和网络执行强, 但依赖少数hyperscaler客户资本开支节奏.",
-    "market_cap_billion": 18512.2,
+    "market_cap_billion": 18758.2,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -254,7 +254,7 @@
     "catLabel": "GPU/CPU",
     "intro": "AI GPU 第二选择 (MI300/MI350), x86 CPU 抢英特尔份额. AI 业务高速增长但绝对体量距英伟达甚远.",
     "strategic": 8,
-    "market_cap_billion": 8937.8,
+    "market_cap_billion": 8628.2,
     "avg_turnover_pct": 4,
     "quarters": [
       {
@@ -358,7 +358,7 @@
     "catLabel": "CPU/Foundry",
     "intro": "美国政府持 9.9% 股权 (CHIPS Act 拨款转股权), Intel 18A (1.8nm) Fab 52 亚利桑那量产 — 美国先进制程国家战略资产。CPU 老牌 + Foundry 国家级。",
     "strategic": 9,
-    "market_cap_billion": 5416.0,
+    "market_cap_billion": 5176.3,
     "avg_turnover_pct": 3.5,
     "quarters": [
       {
@@ -470,7 +470,7 @@
     "catLabel": "移动 SoC",
     "intro": "手机 SoC + 调制解调器龙头, 进军 PC AI 芯片 (Snapdragon X). 边缘 AI 重要参与者.",
     "strategic": 6,
-    "market_cap_billion": 1877.2,
+    "market_cap_billion": 1875.9,
     "avg_turnover_pct": 1.8,
     "quarters": [
       {
@@ -573,7 +573,7 @@
     "catLabel": "数据中心芯片",
     "intro": "AI 定制 ASIC + 高速光电芯片 + 网络存储. AWS Trainium 合作伙伴, AI 业务高增速.",
     "strategic": 7,
-    "market_cap_billion": 1996.5,
+    "market_cap_billion": 1851.3,
     "avg_turnover_pct": 3.8,
     "quarters": [
       {
@@ -689,7 +689,7 @@
     "strategic": 6,
     "ai_execution_score": 7,
     "ai_execution_note": "应用层AI变现清晰, 但不是基础模型/算力平台, 长期护城河仍需验证.",
-    "market_cap_billion": 1508.3,
+    "market_cap_billion": 1520.9,
     "avg_turnover_pct": 4.5,
     "quarters": [
       {
@@ -794,7 +794,7 @@
     "strategic": 10,
     "ai_execution_score": 8,
     "ai_execution_note": "AI芯片制造关键瓶颈, 执行确定性高; 但不是模型或应用变现主体.",
-    "market_cap_billion": 21803.4,
+    "market_cap_billion": 21756.2,
     "avg_turnover_pct": 1,
     "quarters": [
       {
@@ -893,7 +893,7 @@
     "catLabel": "光刻机",
     "intro": "EUV 光刻机全球独家供应商, 7nm 以下制程必备. AI 芯片军备竞赛上游卡脖子环节.",
     "strategic": 10,
-    "market_cap_billion": 6843.6,
+    "market_cap_billion": 6996.4,
     "avg_turnover_pct": 1.2,
     "quarters": [
       {
@@ -989,7 +989,7 @@
     "catLabel": "半导体设备",
     "intro": "全球最大半导体设备公司, 沉积/刻蚀/CMP 等核心工艺. 受益于 AI 驱动 capex 周期.",
     "strategic": 8,
-    "market_cap_billion": 4729.6,
+    "market_cap_billion": 4600.4,
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
@@ -1096,7 +1096,7 @@
     "strategic": 8,
     "ai_execution_score": 7,
     "ai_execution_note": "先进制程量测/检测关键设备商, 受益AI芯片制造; 但不是模型/平台/算力主导方.",
-    "market_cap_billion": 3009.3,
+    "market_cap_billion": 2932.6,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -1199,7 +1199,7 @@
     "catLabel": "先进封装量测",
     "intro": "晶圆/掩膜版/HBM 封装的量测设备, 受益先进封装 (CoWoS) 产能扩张.",
     "strategic": 7,
-    "market_cap_billion": 158.8,
+    "market_cap_billion": 151.6,
     "avg_turnover_pct": 4,
     "quarters": [
       {
@@ -1303,7 +1303,7 @@
     "catLabel": "EDA 软件",
     "intro": "芯片设计 EDA 双寡头之一 (与 Cadence). 所有 AI 芯片设计都用其工具, 抗周期能力强.",
     "strategic": 7,
-    "market_cap_billion": 815.5,
+    "market_cap_billion": 814.3,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -1417,7 +1417,7 @@
     "strategic": 9,
     "ai_execution_score": 8,
     "ai_execution_note": "HBM/DRAM是AI服务器核心瓶颈, 但存储周期和capex/FCF波动仍需明显折扣.",
-    "market_cap_billion": 11103.3,
+    "market_cap_billion": 10212.9,
     "avg_turnover_pct": 4.5,
     "quarters": [
       {
@@ -1538,7 +1538,7 @@
     "strategic": 7,
     "ai_execution_score": 6,
     "ai_execution_note": "NAND受AI存储需求带动, 但相比HBM更周期、更商品化, AI战略确定性较低.",
-    "market_cap_billion": 2603.2,
+    "market_cap_billion": 2391.6,
     "avg_turnover_pct": 5.5,
     "quarters": [
       {
@@ -1644,7 +1644,7 @@
     "strategic": 8,
     "ai_execution_score": 7,
     "ai_execution_note": "光模块/激光器受益AI数据中心互联, 但盈利和FCF质量仍弱于网络平台龙头.",
-    "market_cap_billion": 608.0,
+    "market_cap_billion": 585.7,
     "avg_turnover_pct": 4,
     "quarters": [
       {
@@ -1749,7 +1749,7 @@
     "strategic": 7,
     "ai_execution_score": 7,
     "ai_execution_note": "800G/1.6T光模块弹性高, 但订单和利润率周期波动较大.",
-    "market_cap_billion": 633.9,
+    "market_cap_billion": 585.1,
     "avg_turnover_pct": 4.5,
     "quarters": [
       {
@@ -1855,7 +1855,7 @@
     "strategic": 7,
     "ai_execution_score": 7,
     "ai_execution_note": "光器件代工受益AI网络扩张, 但代工属性使议价权和利润质量弱于品牌/芯片平台.",
-    "market_cap_billion": 173.0,
+    "market_cap_billion": 174.4,
     "avg_turnover_pct": 3,
     "quarters": [
       {
@@ -1953,7 +1953,7 @@
     "strategic": 9,
     "ai_execution_score": 9,
     "ai_execution_note": "OpenAI/Azure/Copilot形成模型、云和企业分发闭环, 变现路径最清楚.",
-    "market_cap_billion": 28594.3,
+    "market_cap_billion": 29389.1,
     "avg_turnover_pct": 0.5,
     "quarters": [
       {
@@ -2058,7 +2058,7 @@
     "strategic": 9,
     "ai_execution_score": 8,
     "ai_execution_note": "Gemini/TPU/GCP一体化强, 但AI搜索对传统搜索广告和FCF的再分配仍需折扣.",
-    "market_cap_billion": 43869.5,
+    "market_cap_billion": 45261.8,
     "avg_turnover_pct": 0.8,
     "quarters": [
       {
@@ -2171,7 +2171,7 @@
     "strategic": 8,
     "ai_execution_score": 8,
     "ai_execution_note": "AWS/Anthropic/自研芯片具备云端AI变现通道, 但模型品牌和企业应用整合弱于MSFT.",
-    "market_cap_billion": 26622.8,
+    "market_cap_billion": 27426.3,
     "avg_turnover_pct": 0.7,
     "quarters": [
       {
@@ -2286,7 +2286,7 @@
     "strategic": 9,
     "ai_execution_score": 6,
     "ai_execution_note": "广告基本盘强, 但前沿模型竞争位置和AI增量变现可见度弱于MSFT/GOOGL; capex ROI风险较高.",
-    "market_cap_billion": 16780.0,
+    "market_cap_billion": 17294.5,
     "avg_turnover_pct": 0.7,
     "quarters": [
       {
@@ -2391,7 +2391,7 @@
     "strategic": 8,
     "ai_execution_score": 6,
     "ai_execution_note": "端侧分发极强, 但大模型产品节奏和AI服务变现明显落后第一梯队.",
-    "market_cap_billion": 46244.6,
+    "market_cap_billion": 48101.1,
     "avg_turnover_pct": 0.6,
     "quarters": [
       {
@@ -2496,7 +2496,7 @@
     "catLabel": "电车/AI",
     "intro": "Dojo 自研训练芯片 + FSD 自动驾驶 + Optimus 机器人. AI 训练算力大户.",
     "strategic": 6,
-    "market_cap_billion": 14879.4,
+    "market_cap_billion": 14814.8,
     "avg_turnover_pct": 3.5,
     "quarters": [
       {
@@ -2605,7 +2605,7 @@
     "catLabel": "AI 云",
     "intro": "GPU 云服务 (Nvidia 战略客户), AI 训练专用云. 2025 年 IPO, 短期波动大但 AI 算力出租纯标的.",
     "strategic": 7,
-    "market_cap_billion": 436.1,
+    "market_cap_billion": 420.7,
     "avg_turnover_pct": 8,
     "quarters": [
       {
@@ -2708,7 +2708,7 @@
     "catLabel": "核电",
     "intro": "美国最大核电运营商, 与微软签订 20 年 PPA 协议给 AI 数据中心供电. AI 用电核心标的.",
     "strategic": 9,
-    "market_cap_billion": 915.7,
+    "market_cap_billion": 921.7,
     "avg_turnover_pct": 2,
     "quarters": [
       {
@@ -2817,7 +2817,7 @@
     "catLabel": "数据中心基础设施",
     "intro": "数据中心电力/液冷/UPS 全栈方案商, AI 数据中心扩张核心受益. 液冷渗透率提升直接利好.",
     "strategic": 8,
-    "market_cap_billion": 1166.1,
+    "market_cap_billion": 1169.9,
     "avg_turnover_pct": 3.5,
     "quarters": [
       {
@@ -2926,7 +2926,7 @@
     "catLabel": "电力管理",
     "intro": "工业电力管理龙头, 数据中心配电/UPS 系统. 全球电网升级 + AI 用电增长双重受益.",
     "strategic": 8,
-    "market_cap_billion": 1613.5,
+    "market_cap_billion": 1603.1,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -3037,7 +3037,7 @@
     "catLabel": "电力设备",
     "intro": "GE 拆分的电力业务 (天然气轮机/风电/电网), AI 用电需求驱动燃气发电复兴. 2024 年单独上市.",
     "strategic": 7,
-    "market_cap_billion": 2864.6,
+    "market_cap_billion": 2835.7,
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
@@ -3139,7 +3139,7 @@
     "catLabel": "铀矿",
     "intro": "全球最大铀矿商, 核电复兴的最直接受益. AI 数据中心驱动核电需求 → 铀价中枢上移.",
     "strategic": 6,
-    "market_cap_billion": 398.8,
+    "market_cap_billion": 396.2,
     "avg_turnover_pct": 3,
     "quarters": [
       {
@@ -3298,7 +3298,7 @@
     "ai_execution_score": 7,
     "ai_execution_note": "CPU IP护城河强, 但AI增量更多依赖授权渗透和终端/服务器设计周期, 不是直接算力卖方.",
     "intro": "全球 CPU IP 设计垄断 (手机/AI/服务器), Grace CPU + AI 边缘端基础设施核心.",
-    "market_cap_billion": 3003.1,
+    "market_cap_billion": 2958.7,
     "avg_turnover_pct": 2,
     "quarters": [
       {
@@ -3400,7 +3400,7 @@
     "catLabel": "刻蚀设备",
     "strategic": 8,
     "intro": "刻蚀/沉积设备龙头 (与 AMAT 并列), HBM/NAND 制造关键工序.",
-    "market_cap_billion": 4328.2,
+    "market_cap_billion": 4194.8,
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
@@ -3503,7 +3503,7 @@
     "catLabel": "EDA 软件",
     "strategic": 8,
     "intro": "EDA 双寡头之一 (与 SNPS 并列), AI 芯片设计必备工具.",
-    "market_cap_billion": 1039.3,
+    "market_cap_billion": 1024.7,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -3605,7 +3605,7 @@
     "catLabel": "封测",
     "strategic": 8,
     "intro": "全球最大 OSAT (外包封测), CoWoS/SoIC 先进封装产能扩张主力.",
-    "market_cap_billion": 885.5,
+    "market_cap_billion": 893.4,
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
@@ -3707,7 +3707,7 @@
     "catLabel": "封测",
     "strategic": 7,
     "intro": "美国本土最大封测 (ASE 二号位), AI 芯片 2.5D/3D 封装合作伙伴.",
-    "market_cap_billion": 174.0,
+    "market_cap_billion": 167.7,
     "avg_turnover_pct": 3.5,
     "quarters": [
       {
@@ -3803,7 +3803,7 @@
     "catLabel": "测试设备",
     "strategic": 7,
     "intro": "半导体测试设备龙头, HBM/SoC 量产测试受益, 与 Advantest 双寡头.",
-    "market_cap_billion": 553.0,
+    "market_cap_billion": 535.6,
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
@@ -3901,7 +3901,7 @@
     "ai_execution_score": 8,
     "ai_execution_note": "AI以太网核心平台, 客户质量强; 但增长加速和估值需要和NVDA/AVGO区分.",
     "intro": "AI 数据中心以太网交换核心标的, Meta/Microsoft 等超大客户主供, AI 网络绝对龙头.",
-    "market_cap_billion": 2298.9,
+    "market_cap_billion": 2164.8,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -3999,7 +3999,7 @@
     "ai_execution_score": 7,
     "ai_execution_note": "高速互联弹性强, 但仍处于小规模高波动阶段, FCF和客户集中度需要折扣.",
     "intro": "高速 SerDes/AEC 主动电缆, AI 数据中心高速互联弹性最大标的.",
-    "market_cap_billion": 440.4,
+    "market_cap_billion": 422.8,
     "avg_turnover_pct": 6,
     "quarters": [
       {
@@ -4106,7 +4106,7 @@
     "ai_execution_score": 8,
     "ai_execution_note": "PCIe/CXL/Retimer切中AI服务器内部互联瓶颈, 但规模小、估值和客户集中度风险高.",
     "intro": "PCIe/CXL/Retimer 数据中心互联芯片, AI 服务器内部连接基础设施.",
-    "market_cap_billion": 620.1,
+    "market_cap_billion": 601.0,
     "avg_turnover_pct": 5,
     "quarters": [
       {
@@ -4204,7 +4204,7 @@
     "ai_execution_score": 6,
     "ai_execution_note": "长距光网络受益AI流量, 但AI纯度和利润质量弱于数据中心内部互联标的.",
     "intro": "光网络传输设备 (DCI 数据中心互联), AI 长距骨干网络受益.",
-    "market_cap_billion": 632.6,
+    "market_cap_billion": 592.3,
     "avg_turnover_pct": 3,
     "quarters": [
       {
@@ -4319,7 +4319,7 @@
     "ai_execution_score": 6,
     "ai_execution_note": "传统网络龙头, AI数据中心追赶中; 规模和现金流强, 但AI弹性有限.",
     "intro": "传统网络龙头, AI 数据中心追赶中 (Silicon One ASIC), 体量大但弹性低.",
-    "market_cap_billion": 4615.0,
+    "market_cap_billion": 4405.3,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -4433,7 +4433,7 @@
     "ai_execution_score": 7,
     "ai_execution_note": "AI服务器电源管理关键供应商, 但更偏配套芯片, 不是网络/算力平台主导方.",
     "intro": "AI 服务器电源管理芯片 (DrMOS/VRM), NVDA H100/B200 供应链关键.",
-    "market_cap_billion": 676.2,
+    "market_cap_billion": 664.6,
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
@@ -4531,7 +4531,7 @@
     "ai_execution_score": 7,
     "ai_execution_note": "光纤连接和玻璃材料受益AI网络扩容, 但收入结构更分散, AI弹性需要折扣.",
     "intro": "光纤连接 + Gorilla 玻璃, Nvidia 战略合作 (北卡州扩 10x 光通信产能).",
-    "market_cap_billion": 1614.9,
+    "market_cap_billion": 1501.0,
     "avg_turnover_pct": 2,
     "quarters": [
       {
@@ -4635,7 +4635,7 @@
     "catLabel": "电力 EPC",
     "strategic": 8,
     "intro": "美国最大电力 EPC 工程商, 数据中心并网/输电线建设主力承包.",
-    "market_cap_billion": 991.8,
+    "market_cap_billion": 973.7,
     "avg_turnover_pct": 2,
     "quarters": [
       {
@@ -4737,7 +4737,7 @@
     "catLabel": "机电工程",
     "strategic": 7,
     "intro": "数据中心机电安装工程龙头, AI Capex 建设直接受益.",
-    "market_cap_billion": 344.3,
+    "market_cap_billion": 342.1,
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
@@ -4839,7 +4839,7 @@
     "catLabel": "暖通工程",
     "strategic": 7,
     "intro": "暖通冷却施工龙头 (HVAC), 数据中心液冷/精密温控 EPC.",
-    "market_cap_billion": 624.9,
+    "market_cap_billion": 611.4,
     "avg_turnover_pct": 3,
     "quarters": [
       {
@@ -4948,7 +4948,7 @@
     "catLabel": "热管理",
     "strategic": 7,
     "intro": "热管理/冷却系统, 数据中心液冷渗透核心受益.",
-    "market_cap_billion": 121.9,
+    "market_cap_billion": 123.2,
     "avg_turnover_pct": 3.5,
     "quarters": [
       {
@@ -5050,7 +5050,7 @@
     "catLabel": "暖通设备",
     "strategic": 7,
     "intro": "全球暖通空调龙头, 数据中心冷却系统集成.",
-    "market_cap_billion": 1068.9,
+    "market_cap_billion": 1061.5,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -5159,7 +5159,7 @@
     "catLabel": "楼宇/暖通",
     "strategic": 6,
     "intro": "楼宇自动化 + 暖通, 数据中心 BMS / HVAC 集成.",
-    "market_cap_billion": 886.1,
+    "market_cap_billion": 871.0,
     "avg_turnover_pct": 2,
     "quarters": [
       {
@@ -5268,7 +5268,7 @@
     "catLabel": "电气连接",
     "strategic": 7,
     "intro": "电气连接设备, 数据中心配电/开关柜/连接器配套.",
-    "market_cap_billion": 255.7,
+    "market_cap_billion": 253.6,
     "avg_turnover_pct": 2,
     "quarters": [
       {
@@ -5377,7 +5377,7 @@
     "catLabel": "开关柜",
     "strategic": 7,
     "intro": "中高压开关柜专家, 数据中心 + LNG 配电关键设备.",
-    "market_cap_billion": 85.3,
+    "market_cap_billion": 90.0,
     "avg_turnover_pct": 4.5,
     "quarters": [
       {
@@ -5479,7 +5479,7 @@
     "catLabel": "独立电力",
     "strategic": 8,
     "intro": "美国最大独立电力运营商, 核 + 燃气 + 可再生组合, AI 用电直供数据中心.",
-    "market_cap_billion": 534.2,
+    "market_cap_billion": 540.3,
     "avg_turnover_pct": 2.5,
     "quarters": [
       {
@@ -5590,7 +5590,7 @@
     "catLabel": "零售电力",
     "strategic": 7,
     "intro": "美国零售电力 + 燃气发电, 与超大数据中心客户长协合作.",
-    "market_cap_billion": 291.9,
+    "market_cap_billion": 291.0,
     "avg_turnover_pct": 2,
     "quarters": [
       {
@@ -5699,7 +5699,7 @@
     "catLabel": "天然气管道",
     "strategic": 6,
     "intro": "美国最大天然气管道, 数据中心燃气发电上游受益.",
-    "market_cap_billion": 724.0,
+    "market_cap_billion": 716.4,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -5801,7 +5801,7 @@
     "catLabel": "天然气管道",
     "strategic": 6,
     "intro": "天然气运输管道, 与 KMI 共同受益数据中心燃气发电增长.",
-    "market_cap_billion": 929.2,
+    "market_cap_billion": 909.7,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -5905,7 +5905,7 @@
     "ai_execution_score": 7,
     "ai_execution_note": "OCI受益AI训练需求, 但平台生态和模型主导权弱于三大云.",
     "intro": "OCI 云服务 + 数据库 + AI 训练 (与 Meta/OpenAI 大单), AI 云第四极.",
-    "market_cap_billion": 3685.3,
+    "market_cap_billion": 3816.3,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -6010,7 +6010,7 @@
     "catLabel": "GPU 云",
     "strategic": 7,
     "intro": "矿转 AI 数据中心运营商 (类 CoreWeave), 已与 NVDA 签 5GW 部署协议.",
-    "market_cap_billion": 137.9,
+    "market_cap_billion": 136.8,
     "avg_turnover_pct": 8,
     "quarters": [
       {
@@ -6114,7 +6114,7 @@
     "ai_execution_score": 8,
     "ai_execution_note": "AIP商业化和政府/企业落地强, 但不应按hyperscaler或前沿基础模型公司估值.",
     "intro": "AIP (AI 平台) 政企双线 (DoD/Foundry), AI 商业化最快变现案例.",
-    "market_cap_billion": 3205.7,
+    "market_cap_billion": 3206.6,
     "avg_turnover_pct": 4,
     "quarters": [
       {
@@ -6224,7 +6224,7 @@
     "catLabel": "AI 工作流",
     "strategic": 7,
     "intro": "企业 AI 工作流平台 (Now Assist), 大企业 AI 部署核心承接者.",
-    "market_cap_billion": 1081.3,
+    "market_cap_billion": 1080.1,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -6328,7 +6328,7 @@
     "catLabel": "AI CRM",
     "strategic": 6,
     "intro": "CRM 巨头 + Agentforce AI 代理, 应用层 AI 变现.",
-    "market_cap_billion": 1372.3,
+    "market_cap_billion": 1367.7,
     "avg_turnover_pct": 1.5,
     "quarters": [
       {
@@ -6440,7 +6440,7 @@
     "catLabel": "航天运载",
     "intro": "全球最活跃商业小型运载火箭公司, Electron火箭领先. 空间系统(卫星制造)高增速, Neutron中型火箭在研. AI驱动国防/商业卫星需求受益, 2026Q1营收创历史新高$2亿.",
     "strategic": 7,
-    "market_cap_billion": 456.2,
+    "market_cap_billion": 441.1,
     "avg_turnover_pct": 6,
     "quarters": [
       {
