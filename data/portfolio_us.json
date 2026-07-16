@@ -245,6 +245,12 @@
    "total": 296413.41,
    "cash": 58335.76,
    "mv": 238077.65
+  },
+  {
+   "date": "2026-07-17",
+   "total": 289887.4,
+   "cash": 58335.76,
+   "mv": 231551.64
   }
  ],
  "decisions": [
@@ -312,6 +318,7 @@
  "strategy_state": {
   "tier": 1,
   "seeded": true,
-  "last_check": "2026-07-16 17:36"
+  "last_check": "2026-07-17 06:31",
+  "pending_sig": "持仓周线收盘跌破 EMA21 (核心趋势破坏): Broadcom(AVGO)|持仓掉出合格排名 Top10 (排名缓冲触发): Broadcom(有效排名 已出合格池) ← 顶替者: Alphabet(模型#8, 收复EMA21回到合格池) / TSMC(模型#9, 收复EMA21回到合格池) / Sandisk(模型#11, 收复EMA21回到合格池) / Arm Holdings(模型#12, 收复EMA21回到合格池) / Arista Networks(模型#13, 收复EMA21回到合格池) / Astera Labs(模型#16, 收复EMA21回到合格池)"
  }
 }

@@ -1,77 +1,77 @@
 {
- "last_run": "2026-07-16T10:35:45.621136+00:00",
- "run_date": "2026-07-16",
+ "last_run": "2026-07-17T06:30:29+08:00",
+ "run_date": "2026-07-17",
  "top5": [
   {
    "code": "688256",
    "name": "寒武纪",
    "rank": 1,
-   "score": 1.396
-  },
-  {
-   "code": "688041",
-   "name": "海光信息",
-   "rank": 2,
-   "score": 1.0768
-  },
-  {
-   "code": "688008",
-   "name": "澜起科技",
-   "rank": 3,
-   "score": 0.595
+   "score": 1.733
   },
   {
    "code": "300308",
    "name": "中际旭创",
-   "rank": 4,
-   "score": 0.5176
+   "rank": 2,
+   "score": 1.409
   },
   {
-   "code": "688981",
-   "name": "中芯国际",
+   "code": "688041",
+   "name": "海光信息",
+   "rank": 3,
+   "score": 1.325
+  },
+  {
+   "code": "688008",
+   "name": "澜起科技",
+   "rank": 4,
+   "score": 1.212
+  },
+  {
+   "code": "300604",
+   "name": "长川科技",
    "rank": 5,
-   "score": 0.3362
+   "score": 1.064
   }
  ],
  "candidates": [
   {
-   "code": "603019",
-   "name": "中科曙光",
+   "code": "002463",
+   "name": "沪电股份",
    "rank": 6,
-   "score": 0.0204
+   "score": 0.891
   },
   {
    "code": "300475",
    "name": "香农芯创",
    "rank": 7,
-   "score": 0.0078
+   "score": 0.832
   },
   {
-   "code": "002261",
-   "name": "拓维信息",
+   "code": "688012",
+   "name": "中微公司",
    "rank": 8,
-   "score": 0.0024
+   "score": 0.8
   },
   {
-   "code": "002156",
-   "name": "通富微电",
+   "code": "300476",
+   "name": "胜宏科技",
    "rank": 9,
-   "score": -0.0053
+   "score": 0.697
   },
   {
-   "code": "688347",
-   "name": "华虹公司",
+   "code": "688120",
+   "name": "华海清科",
    "rank": 10,
-   "score": -0.0671
+   "score": 0.588
   }
  ],
  "signals": {
   "300308": "sell-confirmed",
   "300475": "sell-warning",
   "601138": "sell-confirmed",
-  "603019": "buy-deep",
+  "603019": "buy-gated",
   "688008": "sell-warning",
-  "688041": "buy",
+  "688041": "buy-gated",
   "688047": "sell-warning",
   "688256": "sell-warning",
   "688347": "hold-trend",
@@ -438,17 +438,11 @@
   "position_advice": "🟠 大盘跌破周线 EMA21 (3882.41 < 4024.02); 观察列表 64% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
  },
  "kline_status": "ok (28/28)",
- "data_source": "local_cache_api_blocked",
+ "data_source": "Tencent ifzq.gtimg.cn (live)",
  "changes": [
-  "通富微电 (002156): buy-gated → hold-trend",
-  "北方华创 (002371): buy-gated → sell-warning",
-  "雅克科技 (002409): hold-trend → sell-warning",
-  "中际旭创 (300308): buy-gated → sell-confirmed",
-  "长电科技 (600584): hold-trend → sell-warning",
-  "澜起科技 (688008): buy-gated → sell-warning",
-  "中微公司 (688012): hold-trend → sell-warning",
-  "寒武纪 (688256): buy-gated → sell-warning",
-  "仓位建议变化: 🟠 大盘跌破周线 EMA21 (3882.41 < 4024.02); 观察列表 64% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
+  "中科曙光 (603019): buy-deep → buy-gated",
+  "海光信息 (688041): buy → buy-gated",
+  "量化 Top5 变化: 入 长川科技 · 出 中芯国际"
  ],
  "portfolio_summary": {
   "total": 2863404.0,
