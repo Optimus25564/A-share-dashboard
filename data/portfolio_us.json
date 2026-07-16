@@ -312,7 +312,6 @@
  "strategy_state": {
   "tier": 1,
   "seeded": true,
-  "last_check": "2026-07-16 06:32",
-  "pending_sig": "宏观阶梯变档: 正常 (核心80% + 卫星20%) → 宏观门控 (核心80%, 卫星舱现金)"
+  "last_check": "2026-07-16 17:36"
  }
 }
