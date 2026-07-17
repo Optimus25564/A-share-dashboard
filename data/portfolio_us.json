@@ -1,35 +1,95 @@
 {
- "cash": 58335.75999999996,
+ "cash": 57377.13999999997,
  "initialCash": 300000,
  "currency": "$",
  "positions": {
   "NVDA": {
-   "qty": 259,
-   "avgCost": 210.96,
+   "qty": 260,
+   "avgCost": 210.92865384615382,
    "name": "Nvidia"
   },
-  "AVGO": {
-   "qty": 118,
-   "avgCost": 399.97,
-   "name": "Broadcom"
-  },
   "META": {
-   "qty": 69,
-   "avgCost": 669.21,
+   "qty": 70,
+   "avgCost": 668.8785714285715,
    "name": "Meta Platforms"
   },
   "AAPL": {
-   "qty": 138,
+   "qty": 131,
    "avgCost": 315.32,
    "name": "Apple"
   },
   "MU": {
-   "qty": 49,
-   "avgCost": 948.2224489795918,
+   "qty": 54,
+   "avgCost": 939.0305555555556,
    "name": "Micron"
+  },
+  "GOOGL": {
+   "qty": 121,
+   "avgCost": 346.77,
+   "name": "Alphabet"
   }
  },
  "history": [
+  {
+   "ts": "2026-07-18 06:25",
+   "side": "buy",
+   "code": "GOOGL",
+   "name": "Alphabet",
+   "price": 346.77,
+   "qty": 121,
+   "amount": 41959.17,
+   "cashAfter": 57377.14
+  },
+  {
+   "ts": "2026-07-18 06:25",
+   "side": "sell",
+   "code": "AAPL",
+   "name": "Apple",
+   "price": 333.74,
+   "qty": 7,
+   "amount": 2336.18,
+   "cashAfter": 57377.14
+  },
+  {
+   "ts": "2026-07-18 06:25",
+   "side": "buy",
+   "code": "MU",
+   "name": "Micron",
+   "price": 848.95,
+   "qty": 5,
+   "amount": 4244.75,
+   "cashAfter": 57377.14
+  },
+  {
+   "ts": "2026-07-18 06:25",
+   "side": "buy",
+   "code": "META",
+   "name": "Meta Platforms",
+   "price": 646.01,
+   "qty": 1,
+   "amount": 646.01,
+   "cashAfter": 57377.14
+  },
+  {
+   "ts": "2026-07-18 06:25",
+   "side": "buy",
+   "code": "NVDA",
+   "name": "Nvidia",
+   "price": 202.81,
+   "qty": 1,
+   "amount": 202.81,
+   "cashAfter": 57377.14
+  },
+  {
+   "ts": "2026-07-18 06:25",
+   "side": "sell",
+   "code": "AVGO",
+   "name": "Broadcom",
+   "price": 370.83,
+   "qty": 118,
+   "amount": 43757.94,
+   "cashAfter": 57377.14
+  },
   {
    "ts": "2026-07-14 06:31",
    "side": "sell",
@@ -251,9 +311,39 @@
    "total": 289887.4,
    "cash": 58335.76,
    "mv": 231551.64
+  },
+  {
+   "date": "2026-07-18",
+   "total": 286850.85,
+   "cash": 58335.76,
+   "mv": 228515.09
   }
  ],
  "decisions": [
+  {
+   "date": "2026-07-18",
+   "tier": "宏观门控 (核心80%, 卫星舱现金)",
+   "reasons": [
+    "持仓周线收盘跌破 EMA21 (核心趋势破坏): Broadcom(AVGO)",
+    "持仓掉出合格排名 Top10 (排名缓冲触发): Broadcom(有效排名 已出合格池) ← 顶替者: Alphabet(模型#8, 收复EMA21回到合格池) / TSMC(模型#9, 收复EMA21回到合格池) / Arm Holdings(模型#12, 收复EMA21回到合格池) / Arista Networks(模型#13, 收复EMA21回到合格池) / Astera Labs(模型#16, 收复EMA21回到合格池) / ASML(模型#17, 收复EMA21回到合格池)"
+   ],
+   "trades": [
+    "卖出 Broadcom 118 股 @ 370.83",
+    "买入 Nvidia 1 股 @ 202.81",
+    "买入 Meta Platforms 1 股 @ 646.01",
+    "买入 Micron 5 股 @ 848.95",
+    "卖出 Apple 7 股 @ 333.74",
+    "买入 Alphabet 121 股 @ 346.77"
+   ],
+   "holdings": [
+    "Nvidia 1名",
+    "Meta Platforms 3名",
+    "Apple 7名",
+    "Micron 4名",
+    "Alphabet 8名"
+   ],
+   "cash_pct": 20.0
+  },
   {
    "date": "2026-07-14",
    "tier": "宏观门控 (核心80%, 卫星舱现金)",
@@ -318,7 +408,6 @@
  "strategy_state": {
   "tier": 1,
   "seeded": true,
-  "last_check": "2026-07-17 17:28",
-  "pending_sig": "持仓周线收盘跌破 EMA21 (核心趋势破坏): Broadcom(AVGO)|持仓掉出合格排名 Top10 (排名缓冲触发): Broadcom(有效排名 已出合格池) ← 顶替者: Alphabet(模型#8, 收复EMA21回到合格池) / TSMC(模型#9, 收复EMA21回到合格池) / Sandisk(模型#11, 收复EMA21回到合格池) / Arm Holdings(模型#12, 收复EMA21回到合格池) / Arista Networks(模型#13, 收复EMA21回到合格池) / Astera Labs(模型#16, 收复EMA21回到合格池)"
+  "last_check": "2026-07-18 06:25"
  }
 }
