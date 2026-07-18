@@ -134,18 +134,33 @@
       "market": "US",
       "path": "data/alerts_state_us.json",
       "exists": true,
-      "status": "ok (66/66)",
-      "source": "Tencent ifzq.gtimg.cn (live)",
+      "status": "estimated: stooq.com blocked by egress policy (403). Signals estimated from daily 50-day SMA proxy via web research. Weekly EMA8 approximation: daily SMA20~40 range. High-confidence for >5% deviation from SMA50; medium for 2-5%.",
+      "source": "",
       "failed": [],
-      "issues": []
+      "issues": [
+        {
+          "severity": "warn",
+          "type": "kline_not_ok",
+          "market": "US",
+          "message": "K-line status is not ok in the saved scan state: estimated: stooq.com blocked by egress policy (403). Signals estimated from daily 50-day SMA proxy via web research. Weekly EMA8 approximation: daily SMA20~40 range. High-confidence for >5% deviation from SMA50; medium for 2-5%.. Re-run the scan with network access before relying on fresh trend signals."
+        },
+        {
+          "severity": "warn",
+          "type": "unknown_kline_source",
+          "market": "US",
+          "message": "Unexpected K-line data source: "
+        }
+      ]
     }
   ],
   "issue_counts": {
     "by_severity": {
-      "warn": 5
+      "warn": 7
     },
     "by_type": {
-      "no_quarters": 5
+      "no_quarters": 5,
+      "kline_not_ok": 1,
+      "unknown_kline_source": 1
     }
   },
   "issues": [
@@ -188,6 +203,18 @@
       "code": "EWY",
       "q": "",
       "message": "No quarterly financial data. This is OK for ETF/watch-only names, but it cannot be used in financial ranking."
+    },
+    {
+      "severity": "warn",
+      "type": "kline_not_ok",
+      "market": "US",
+      "message": "K-line status is not ok in the saved scan state: estimated: stooq.com blocked by egress policy (403). Signals estimated from daily 50-day SMA proxy via web research. Weekly EMA8 approximation: daily SMA20~40 range. High-confidence for >5% deviation from SMA50; medium for 2-5%.. Re-run the scan with network access before relying on fresh trend signals."
+    },
+    {
+      "severity": "warn",
+      "type": "unknown_kline_source",
+      "market": "US",
+      "message": "Unexpected K-line data source: "
     }
   ]
 }
