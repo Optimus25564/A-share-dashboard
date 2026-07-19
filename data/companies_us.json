@@ -841,6 +841,15 @@
         "src": "A",
         "source_url": "https://investor.tsmc.com/english/quarterly-results/2026/q1",
         "note": "Q1 2026 actual: revenue NT$1,134.10B / avg USD/TWD 31.59 = about US$35.90B, gross margin 66.2%, net profit margin 50.5%; TSMC official quarterly results"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 402.0,
+        "gm": 67.7,
+        "nm": 55.6,
+        "src": "A",
+        "source_url": "https://investor.tsmc.com/english/quarterly-results/2026/q2",
+        "note": "Q2 2026 actual: net revenue US$40.20B (NT$1,270.38B), gross margin 67.7%, net income NT$706.56B, net profit margin 55.6%; TSMC official quarterly results"
       }
     ],
     "q2_outlook": {
@@ -940,6 +949,15 @@
         "src": "A",
         "source_url": "https://www.asml.com/en/investors/financial-results/q1-2026",
         "note": "Q1 2026 actual: net sales EUR8.800B, gross profit EUR4.664B, net income EUR2.800B; converted to USD at EUR/USD avg 1.099"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 108.4,
+        "gm": 54.0,
+        "nm": 31.3,
+        "src": "A",
+        "source_url": "https://www.asml.com/en/news/press-releases/2026/q2-2026-financial-results",
+        "note": "Q2 2026 actual: net sales EUR9.326B, gross margin 54.0%, net income EUR2.9B (NM 31.3%); converted to USD at EUR/USD avg 1.1621 (Q2 2026 avg)"
       }
     ],
     "q2_outlook": {
