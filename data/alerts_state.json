@@ -1,68 +1,68 @@
 {
- "last_run": "2026-07-20T18:35:58.151931+08:00",
- "run_date": "2026-07-20",
+ "last_run": "2026-07-21T06:31:53+08:00",
+ "run_date": "2026-07-21",
  "top5": [
-  {
-   "code": "688041",
-   "name": "海光信息",
-   "rank": 1,
-   "score": 1.221
-  },
   {
    "code": "688256",
    "name": "寒武纪",
+   "rank": 1,
+   "score": 1.734
+  },
+  {
+   "code": "300308",
+   "name": "中际旭创",
    "rank": 2,
-   "score": 1.136
+   "score": 1.406
+  },
+  {
+   "code": "688041",
+   "name": "海光信息",
+   "rank": 3,
+   "score": 1.329
   },
   {
    "code": "688008",
    "name": "澜起科技",
-   "rank": 3,
-   "score": 0.522
-  },
-  {
-   "code": "603019",
-   "name": "中科曙光",
    "rank": 4,
-   "score": 0.427
+   "score": 1.211
   },
   {
-   "code": "688981",
-   "name": "中芯国际",
+   "code": "300604",
+   "name": "长川科技",
    "rank": 5,
-   "score": 0.277
+   "score": 1.063
   }
  ],
  "candidates": [
   {
-   "code": "300308",
-   "name": "中际旭创",
+   "code": "002463",
+   "name": "沪电股份",
    "rank": 6,
-   "score": 0.272
+   "score": 0.885
   },
   {
-   "code": "002261",
-   "name": "拓维信息",
+   "code": "300475",
+   "name": "香农芯创",
    "rank": 7,
-   "score": 0.246
+   "score": 0.82
   },
   {
-   "code": "002837",
-   "name": "英维克",
+   "code": "688012",
+   "name": "中微公司",
    "rank": 8,
-   "score": -0.017
+   "score": 0.802
   },
   {
-   "code": "002156",
-   "name": "通富微电",
+   "code": "300476",
+   "name": "胜宏科技",
    "rank": 9,
-   "score": -0.038
+   "score": 0.69
   },
   {
-   "code": "688047",
-   "name": "龙芯中科",
+   "code": "688120",
+   "name": "华海清科",
    "rank": 10,
-   "score": -0.042
+   "score": 0.586
   }
  ],
  "signals": {
@@ -166,7 +166,7 @@
    "close": 320.12,
    "close_date": "2026-07-20",
    "ema8": 316.95,
-   "ema21": 292.66,
+   "ema21": 292.65,
    "vs_ema8_pct": 1.0,
    "action": "buy",
    "strength": 3,
@@ -191,7 +191,7 @@
    "close": 1190.58,
    "close_date": "2026-07-17",
    "ema8": 1299.24,
-   "ema21": 1157.59,
+   "ema21": 1157.47,
    "vs_ema8_pct": -8.36,
    "current_close": 1209.0,
    "current_date": "2026-07-20",
@@ -336,7 +336,7 @@
    "close": 241.5,
    "close_date": "2026-07-17",
    "ema8": 301.42,
-   "ema21": 298.72,
+   "ema21": 298.75,
    "vs_ema8_pct": -19.88,
    "current_close": 224.11,
    "current_date": "2026-07-20",
@@ -349,7 +349,7 @@
    "close": 677.0,
    "close_date": "2026-07-17",
    "ema8": 711.58,
-   "ema21": 624.76,
+   "ema21": 624.75,
    "vs_ema8_pct": -4.86,
    "current_close": 676.91,
    "current_date": "2026-07-20",
@@ -397,7 +397,7 @@
    "close": 147.05,
    "close_date": "2026-07-17",
    "ema8": 169.12,
-   "ema21": 176.49,
+   "ema21": 176.47,
    "vs_ema8_pct": -13.05,
    "current_close": 151.5,
    "current_date": "2026-07-20",
@@ -458,15 +458,10 @@
   "buy_gate_reason": "大盘跌破周线 EMA21 (3796.28 < 3993.54); 观察列表 82% 处于 sell 信号",
   "position_advice": "🟠 大盘跌破周线 EMA21 (3796.28 < 3993.54); 观察列表 82% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
  },
- "kline_status": "cached (K线API被代理拦截，使用18:26缓存数据)",
- "data_source": "缓存 (web.ifzq.gtimg.cn 本次被代理403拦截)",
+ "kline_status": "ok (28/28)",
+ "data_source": "Tencent ifzq.gtimg.cn (live)",
  "changes": [
-  "排名更新: 新Top5=海光/寒武/澜起/中科曙光/中芯 (17只股票宇宙重算)",
-  "寒武纪: sell-confirmed (上周收盘1190.58 < EMA8 1299.24)",
-  "澜起科技: sell-confirmed (上周收盘183.60 < EMA8 235.34)",
-  "中科曙光: sell-confirmed (上周收盘87.89 < EMA8 93.00)",
-  "海光信息: 站上EMA8 (+1.0%) 但大盘门控开启",
-  "中芯国际: 站上EMA8 (+2.0%) 但大盘门控开启"
+  "量化 Top5 变化: 入 中际旭创/长川科技 · 出 中科曙光/中芯国际"
  ],
  "portfolio_summary": {
   "total": 2685930.0,
@@ -498,11 +493,5 @@
    ],
    "cash_pct": 20.8
   }
- },
- "push_status": {
-  "wechat": "blocked (sctapi.ftqq.com 403)",
-  "email": "blocked (smtp.gmail.com timeout)",
-  "claude_push": "ok (PushNotification tool)",
-  "run_time": "2026-07-20T18:35:58.151931+08:00"
  }
 }
