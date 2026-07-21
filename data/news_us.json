@@ -319,6 +319,30 @@
       "url": "https://www.bloomberg.com/news/articles/2026-07-14/small-amount-of-nvidia-ai-chips-shipped-to-china-with-us-license",
       "source": "Bloomberg",
       "content": "A limited number of H200 chips received US export license approval for Chinese customers; Commerce Under-Secretary Kessler described the shipments as \"trivial\" in quantity."
+    },
+    {
+      "date": "2026-07-17",
+      "type": "news",
+      "title": "Great News for Nvidia Stock Investors Despite Recent Share Price Pullback",
+      "url": "https://www.fool.com/investing/2026/07/17/great-news-for-nvidia-stock-investors/",
+      "source": "Motley Fool",
+      "content": "NVDA核心AI需求基本面持续强劲；近期回调被视为买入机会；7月29日将公布季度业绩，AI算力订单积压创历史新高"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "news",
+      "title": "Nvidia Stock NVDA Tests $200 Support as Chinese AI (Kimi K3) Competition Shakes Chip Rally",
+      "url": "https://www.fxleaders.com/news/2026/07/20/nvidia-stock-nvda-tests-200-support-as-chinese-ai-competition-shakes-the-chip-rally/",
+      "source": "FX Leaders",
+      "content": "中国Kimi K3模型及AI支出担忧施压；费城半导体指数SOXX本周下跌约10%进入技术熊市；NVDA收于$202.81，盘前回升至$203.54"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "news",
+      "title": "One Date Nvidia Investors Should Not Overlook in July: July 29 Quarterly Report",
+      "url": "https://www.fool.com/investing/2026/07/20/one-date-nvidia-investors-should-not-overlook-this/",
+      "source": "Motley Fool",
+      "content": "7月29日为NVDA关键日期，届时将公布Q2 FY2027季度业绩；尽管短期市场压力，AI算力需求基本面依然坚实"
     }
   ],
   "AVGO": [
@@ -1061,6 +1085,22 @@
       "url": "https://newsroom.intel.com/corporate/intel-to-report-second-quarter-2026-financial-results",
       "source": "Intel Newsroom",
       "content": "Intel announced it will report second-quarter 2026 financial results on Thursday, July 23, 2026, after market close, followed by an earnings conference call at 2:00 PM PDT. The stock has gained approximately 175% since March 31, 2026 driven by Q1 2026 outperformance, with analysts watching closely for 18A process node and foundry progress updates."
+    },
+    {
+      "date": "2026-07-20",
+      "type": "news",
+      "title": "ASML Confirms Intel Foundry Uses High-NA EUV Lithography in Mass Production; 18A Yield Hits 85%",
+      "url": "https://www.tipranks.com/news/intc-stock-prepares-for-liftoff-as-asml-confirms-intel-foundry-is-now-using-its-lithography-machines",
+      "source": "TipRanks",
+      "content": "Intel成为全球首家量产部署高数值孔径EUV设备的芯片制造商；Panther Lake处理器(18A工艺)良率升至85%（前季约65%）；为7月23日财报提供正面预期"
+    },
+    {
+      "date": "2026-07-21",
+      "type": "news",
+      "title": "Intel Q2 2026 Earnings Preview July 23: 18A at 85% Yield, Panther Lake Volume Up 6-7x, Stock Up 163% YTD",
+      "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262041092-intel-intc-q2-2026-earnings-preview-july-23-163-percent-ytd-tradingkey",
+      "source": "TradingKey",
+      "content": "共识预测Q2营收$14.4B，EPS $0.10；Panther Lake量产环比增6-7倍，但毛利率仍低于均值(18A尚在爬坡)；INTC股价年内涨163%；期权隐含±15%波动"
     }
   ],
   "QCOM": [
@@ -2063,6 +2103,14 @@
       "url": "https://cryptobriefing.com/tsmc-asml-earnings-tech-selloff/",
       "source": "CryptoBriefing",
       "content": "ASML raised 2026 sales guidance to €36B–40B; high-NA EUV system orders the key Q2 signal; both TSMC and ASML earnings this week seen as barometer for entire semiconductor demand cycle."
+    },
+    {
+      "date": "2026-07-15",
+      "type": "announcement",
+      "title": "ASML Q2 2026 Beats Guidance: Net Sales €9.3B, GM 54%; Raises Full-Year 2026 Forecast to €43-45B",
+      "url": "https://qz.com/asml-2026-guidance-raised-ai-chip-demand-q2-earnings-071526",
+      "source": "Quartz",
+      "content": "Q2净销售额€9.3B，超预期€8.8B；毛利率54%；全年指引从€36-40B大幅上调至€43-45B(毛利率54-56%)；AI需求、DRAM投资加速以及Intel高数值孔径EUV量产进展是主要驱动力"
     }
   ],
   "AMAT": [
@@ -3659,6 +3707,14 @@
       "url": "https://theoptionsinsider.com/news/most-active-options/hotoptions-report-for-mid-day-july-13-2026-nvda-tsla-aapl-amzn-meta-msft-spcx-mu-intc-orcl-amd-pltr-sofi-iren-nflx-asts-wbd-sls-mrvl-googl/",
       "source": "The Options Insider",
       "content": "Microsoft remains the leading large-cap AI beneficiary; $190B FY2026 capex spend signals unprecedented infrastructure investment; Azure +39% in Q2 FY2026, Q4 FY2026 earnings expected late July."
+    },
+    {
+      "date": "2026-07-21",
+      "type": "news",
+      "title": "Microsoft Q4 FY2026 Earnings Preview July 29: HSBC Projects $89.3B Revenue, Azure 39.6% Growth Eyed",
+      "url": "https://inews.zoombangla.com/microsoft-q4-2026-earnings-azure/",
+      "source": "ZoomBangla/HSBC",
+      "content": "HSBC预测Q4 FY2026营收$89.3B(+16.8% YoY)，EPS $4.21；Azure增速39.6%为核心看点；Copilot付费席位新增情况受关注；7月29日盘后公布"
     }
   ],
   "GOOGL": [
@@ -3949,6 +4005,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/dear-google-stock-fans-mark-151501022.html",
       "source": "Yahoo Finance",
       "content": "Alphabet Q2 2026 results on July 22 after market; Wall Street watching whether massive AI investments are translating to stronger growth across Search, Cloud, and Gemini ecosystem."
+    },
+    {
+      "date": "2026-07-20",
+      "type": "news",
+      "title": "Alphabet Q2 2026 Earnings Preview: Stock Climbs as Investors Balance AI Costs Against Growth, Reports July 22",
+      "url": "https://www.fxleaders.com/news/2026/07/20/alphabet-earnings-preview-google-googl-stock-climbs-as-investors-balance-ai-costs-against-growth/",
+      "source": "FX Leaders",
+      "content": "EPS预测$2.89；营收$116.8-120.2B；Google Cloud预期同比增约60-63%；$190B AI资本支出是主要关注焦点；EU Android监管及Gemini延迟为风险点"
     }
   ],
   "AMZN": [
@@ -4175,6 +4239,14 @@
       "url": "https://www.cnbc.com/2026/07/07/amazon-bond-sale-ai-debt.html",
       "source": "CNBC",
       "content": "Amazon raised at least $25 billion through a US bond sale to fund its massive AI infrastructure investments, including AWS data center expansion. The company told underwriters it does not plan to issue additional debt for the remainder of 2026, making this its largest single capital markets raise specifically designated for AI capex."
+    },
+    {
+      "date": "2026-07-20",
+      "type": "news",
+      "title": "Amazon 30% Upside Predicted Ahead of July 30 Q2 Earnings; AWS Q1 Revenue $37.59B at 37.7% Operating Margin",
+      "url": "https://247wallst.com/investing/2026/07/20/prediction-amazon-is-a-buy-before-july-30-with-30-upside/",
+      "source": "24/7 Wall St",
+      "content": "分析师预测Q2营收$196B，EPS $1.82；AWS Q1收入$37.59B(+28% YoY)，利润率37.7%；Bedrock AI服务处理token数超历年总和；$200B资本支出指引显示AI布局决心"
     }
   ],
   "META": [
@@ -4675,6 +4747,14 @@
       "url": "https://www.fxleaders.com/news/2026/07/14/aapl-stock-tests-record-highs-as-apple-ai-strategy-and-citis-365-target-fuel-breakout/",
       "source": "FX Leaders",
       "content": "Citi upgraded Apple PT to $365, citing premium brand positioning and ability to raise prices to offset rising costs; Q3 FY2026 earnings call July 30 will be Tim Cook's last as CEO."
+    },
+    {
+      "date": "2026-07-21",
+      "type": "news",
+      "title": "Apple Q3 FY2026 Earnings Preview July 30: Revenue Est $109-110B, EPS $1.89; Tim Cook Final Earnings Call as CEO",
+      "url": "https://macdailynews.com/2026/07/09/apple-schedules-q3-2026-earnings-conference-call-for-july-30th/",
+      "source": "MacDailyNews",
+      "content": "Apple Q3 FY2026财报7月30日发布；分析师共识预测营收$109-110B，EPS $1.89；为Tim Cook CEO任期最后一次财报电话会，John Ternus将接任CEO"
     }
   ],
   "TSLA": [
@@ -4917,6 +4997,14 @@
       "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262021897-tesla-tsla-stock-forecast-july-2026-q2-earnings-margins-cybercab-tradingkey",
       "source": "TradingKey",
       "content": "Q2 earnings July 22 after close; 480K deliveries already reported, so focus shifts to Q2 gross margin trajectory, Cybercab commercial launch timeline, and whether $25B capex is compressing free cash flow."
+    },
+    {
+      "date": "2026-07-21",
+      "type": "news",
+      "title": "Tesla Q2 2026 Earnings Preview: 480K Record Deliveries, $0.52 EPS Estimate, Options Price 7.6% Move for July 22",
+      "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262039494-tesla-tsla-q2-2026-earnings-preview-july-22-480k-deliveries-tradingkey",
+      "source": "TradingKey",
+      "content": "创纪录480K交付量，13.5 GWh储能；营收预测$26.07B(+16% YoY)，EPS $0.52(+30% YoY)；期权隐含7.6%波动幅度；市场焦点：汽车毛利率、Robotaxi进展和Optimus机器人更新"
     }
   ],
   "CRWV": [
@@ -5119,6 +5207,14 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60283328/coreweave-stock-is-climbing-after-meta-competition-selloff-whats-driving-the-action",
       "source": "Benzinga",
       "content": "CoreWeave shares initially dropped after Meta Platforms announced its internal 'Meta Compute' cloud service targeting AI compute customers. The stock partially recovered as analysts noted CoreWeave's differentiated positioning in GPU-optimized cloud for demanding AI training workloads, where it holds capacity commitments from OpenAI and other major AI labs."
+    },
+    {
+      "date": "2026-07-21",
+      "type": "news",
+      "title": "CoreWeave Shares Rise as Analyst Raises Spending Estimate and Dismisses Meta Cloud Competition Threat",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60560396/coreweave-stock-moves-higher-whats-happening-today",
+      "source": "Benzinga",
+      "content": "分析师反驳Meta自建云竞争威胁论，指出客户面临的核心问题是\"能否获得所需AI算力容量\"而非\"选哪家提供商\"；CRWV上涨1.80%至$74.53"
     }
   ],
   "CEG": [
@@ -5265,6 +5361,22 @@
       "url": "https://seekingalpha.com/news/4595417-utility-shares-surge-on-pjms-plans-to-speed-up-data-center-timeline",
       "source": "Seeking Alpha",
       "content": "PJM, the largest US electric grid, moved up a planned backstop reliability auction to address surging data center demand; Constellation, Vistra, and NRG all rallied on faster AI power infrastructure timeline."
+    },
+    {
+      "date": "2026-07-16",
+      "type": "announcement",
+      "title": "Constellation Energy Invests in Blue Energy, Backing U.S. Small Modular Reactor (SMR) Nuclear Developer",
+      "url": "https://www.stocktitan.net/news/CEG/blue-energy-receives-strategic-investment-from-constellation-to-nikruelet8x5.html",
+      "source": "StockTitan/PR Newswire",
+      "content": "CEG风险投资部门首次投资美国SMR核电开发商Blue Energy；Blue Energy今年已融资$3.8亿，并与GE Vernova合作多GW天然气转核电项目；计划2026年开始德克萨斯州首个项目前期工作"
+    },
+    {
+      "date": "2026-07-21",
+      "type": "news",
+      "title": "New York First State to Halt Large Data Center Construction; AI Power Crunch Validates CEG, VST Nuclear Strategy",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60488957/blackrock-ceo-larry-fink-warned-of-an-ai-power-crunch-new-york-just-halted-large-data-centers-ceg-vst-nee-in-focus",
+      "source": "Benzinga",
+      "content": "纽约州成为首个正式暂停大型数据中心建设的州；美国电网年增约35GW而AI数据中心需求达50GW；供需缺口迫使超大型云公司自建发电，验证CEG和VST核电长期购电协议的战略价值"
     }
   ],
   "VRT": [
@@ -5427,6 +5539,14 @@
       "url": "https://www.foreignpolicyjournal.com/2026/07/13/vertiv-nyse-vrt-and-ge-vernova-nyse-gev-positioned-to-beat-the-market-as-power-demand-surges-toward-2030/",
       "source": "Foreign Policy Journal",
       "content": "Goldman Sachs projects 165% data center power demand growth by 2030; Vertiv Q1 2026 revenue +30% YoY; positioned as essential infrastructure for cooling and power distribution inside AI hyperscale facilities."
+    },
+    {
+      "date": "2026-07-21",
+      "type": "announcement",
+      "title": "Vertiv Q2 2026 Earnings Set for July 29 Before Open: EPS Guided $1.40 (+47% YoY), Revenue $3.35B (+27% YoY)",
+      "url": "https://investors.vertiv.com/news/news-details/2026/Vertiv-Announces-Date-of-Second-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx",
+      "source": "Vertiv IR",
+      "content": "Q2财报7月29日开盘前发布；全年2026指引上调：EPS中值$6.35(+51% YoY)，营收$13.75B(+34%)，调整后经营利润率23.3%(+290bps vs 2025)"
     }
   ],
   "ETN": [
@@ -5751,6 +5871,14 @@
       "url": "https://www.foreignpolicyjournal.com/2026/07/13/vertiv-nyse-vrt-and-ge-vernova-nyse-gev-positioned-to-beat-the-market-as-power-demand-surges-toward-2030/",
       "source": "Foreign Policy Journal",
       "content": "Goldman Sachs projects global data center power demand +165% from 2023 levels by 2030; GEV uniquely positioned selling into every layer of AI power stack simultaneously — generation, transmission, and data center equipment."
+    },
+    {
+      "date": "2026-07-21",
+      "type": "news",
+      "title": "GE Vernova Q2 2026 Earnings Preview July 22: Polymarket 85.5% Odds Orders >$18B, EPS Est $3.17",
+      "url": "https://247wallst.com/investing/2026/07/14/heres-why-ge-vernova-no-brainer-buy-before-july-22-earnings/",
+      "source": "24/7 Wall St",
+      "content": "Q2财报7月22日开盘前发布；EPS预测$3.17，营收$10.77B；Polymarket预测市场65.5%概率订单超$200亿；全年收入指引$44.5-45.5B，自由现金流$6.5-7.5B"
     }
   ],
   "CCJ": [
@@ -6485,6 +6613,14 @@
       "url": "https://rocketlabcorp.com/updates/",
       "source": "Rocket Lab Newsroom",
       "content": "Rocket Lab completed a historic launch and on-orbit satellite tracking mission for the Space Force in record time on July 7, 2026; fourth successful mission for the Space Force; first since RKLB joined Nasdaq-100."
+    },
+    {
+      "date": "2026-07-10",
+      "type": "news",
+      "title": "Rocket Lab CEO Share Sale Rattles Investor Confidence After $8B Iridium Deal; RKLB Stock Down 12%+ from Highs",
+      "url": "https://www.foreignpolicyjournal.com/2026/07/10/rocket-lab-nasdaq-rklb-ceo-share-sale-and-8-billion-iridium-deal-rattle-investor-confidence/",
+      "source": "Foreign Policy Journal",
+      "content": "Iridium收购宣布后CEO Pete Beck减持股票引发市场担忧；$54/股现金+股票交易企业价值约$80亿，面临融资稀释风险；尽管创建垂直整合太空公司战略清晰，RKLB股价从高位回落逾12%"
     }
   ],
   "HUBB": [
@@ -7467,6 +7603,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/oracle-stock-suffers-worst-weekly-203300056.html",
       "source": "Yahoo Finance",
       "content": "Oracle's stock fell approximately 19% in the week ending June 27, 2026 — its steepest weekly decline in 25 years — following investor concerns over a planned $40 billion capital raise (including a $20 billion share sale) to fund AI infrastructure buildout. FY2026 capex surged ~162% to nearly $56 billion. Despite record Q4 results (revenue $19.2B, +21% YoY; RPO of $638B, +363% YoY reported June 10), markets punished the dilution risk and debt load."
+    },
+    {
+      "date": "2026-07-17",
+      "type": "news",
+      "title": "New Mexico Rejects Oracle Gas Pipeline Permit for 2.5GW Project Jupiter Data Center — Second Rejection",
+      "url": "https://seekingalpha.com/news/4614893-oracle-data-centers-gas-pipeline-permit-denied-by-new-mexico-report",
+      "source": "Seeking Alpha",
+      "content": "新墨西哥州再度否决Green Chile天然气管线申请(17英里，为Bloom燃料电池供气400M cu ft/天)；8月15日投产时间节点恐无法实现，将大幅增加成本；Oracle声称项目Jupiter仍按计划推进；ORCL、BE股价双双下跌"
     }
   ],
   "PLTR": [
@@ -7653,6 +7797,14 @@
       "url": "https://www.gurufocus.com/news/8943542/palantir-technologies-pltr-stock-rises-following-upgrade-and-nvidia-partnership",
       "source": "GuruFocus",
       "content": "DA Davidson upgraded PLTR to Buy on July 2 following the June 29 NVIDIA sovereign AI OS partnership and a new Army data-layer contract win. Palantir stock added ~2B in market cap on July 1 alone. Stock +3% on July 2 on the dual catalyst of upgrade and sovereign AI deal momentum."
+    },
+    {
+      "date": "2026-07-09",
+      "type": "news",
+      "title": "Palantir AI Partnerships Fuel Bullish Analyst Calls; PLTR-NVIDIA Sovereign AI Platform for Government Gains Traction",
+      "url": "https://www.fxleaders.com/news/2026/07/09/will-pltr-stock-break-above-134-as-palantirs-ai-partnerships-fuel-bullish-calls/",
+      "source": "FX Leaders",
+      "content": "DA Davidson Buy升级后PLTR股价持续走强；PLTR+NVIDIA主权AI平台支持政府机构在本地安全训练AI；AI编排层的差异化竞争优势获分析师认可"
     }
   ],
   "IREN": [
@@ -7905,6 +8057,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/vistra-vs-constellation-ai-power-113004485.html",
       "source": "Yahoo Finance",
       "content": "Vistra secured a landmark 20-year PPA with Meta Platforms for approximately 2,600MW of nuclear power capacity across three PJM-region plants, a cornerstone long-term AI data center power deal."
+    },
+    {
+      "date": "2026-07-17",
+      "type": "news",
+      "title": "Vistra Secures PJM Capacity Win and AWS Nuclear PPA; Wells Fargo, BofA, Scotiabank All Reiterate Buy",
+      "url": "https://www.tipranks.com/news/company-announcements/vistra-energy-announces-pjm-auction-results",
+      "source": "TipRanks/Vistra",
+      "content": "PJM容量竞价成功(7月12日)；与AWS签署约1,200MW核电长期购电协议(补充早前Meta 2,600MW PPA)；Wells Fargo(7月17日)、Scotiabank(PT上调至$298，7月16日)、BofA(7月15日)均维持买入；Q2财报8月7日"
     }
   ],
   "MPWR": [
@@ -8003,6 +8163,14 @@
       "url": "https://www.gurufocus.com/news/8948397/hubbell-inc-hubb-shares-fall-34-gf-value-says-still-overvalued",
       "source": "GuruFocus",
       "content": "MPWR fell 4.5% in broader tech selloff to $1,291.38; second quarter dividend of $2.00/share paid July 15 to shareholders of record June 30; Q2 earnings call July 30."
+    },
+    {
+      "date": "2026-07-14",
+      "type": "announcement",
+      "title": "Monolithic Power Systems to Report Q2 2026 Results on July 30 After Market Close",
+      "url": "https://www.globenewswire.com/news-release/2026/07/14/3327234/0/en/Monolithic-Power-Systems-to-Report-Second-Quarter-2026-Results-on-July-30-2026.html",
+      "source": "GlobeNewswire",
+      "content": "MPWR Q2 2026财报7月30日盘后发布，随后举办网络Q&A；AI数据中心电源管理需求持续强劲，但公司近月股价承压下跌约12.9%"
     }
   ],
   "GLW": [
@@ -9309,6 +9477,14 @@
       "url": "https://energynewsbeat.co/exploration-and-production/kinder-morgans-gulf-coast-express-expansion-about-to-come-on-line-and-it-will-impact-more-than-natural-gas-prices/",
       "source": "Energy News Beat",
       "content": "Kinder Morgan's Gulf Coast Express pipeline expansion (570 MMcf/d) entered service in mid-2026, helping lift Permian (Waha) natural gas cash prices from deeply negative levels to around -$0.37/MMBtu, alleviating Permian gas takeaway constraints and validating KMI's infrastructure expansion strategy."
+    },
+    {
+      "date": "2026-07-06",
+      "type": "news",
+      "title": "Kinder Morgan Awaiting FERC Certificates for SSE4 and Mississippi Crossing Projects; Stock Up 27.2% YTD",
+      "url": "https://247wallst.com/investing/2026/07/06/3-pipeline-stocks-paying-you-to-wait-in-july/",
+      "source": "24/7 Wall St",
+      "content": "KMI等待FERC批准SSE4和Mississippi Crossing天然气输管线证书，预计7月到位；股价年内涨27.2%；天然气管线公司受益于AI数据中心能源需求持续增长"
     }
   ],
   "WMB": [
@@ -9799,6 +9975,14 @@
       "url": "https://seekingalpha.com/news/4608941-servicenow-rises-as-guggenheim-upgrades-to-buy",
       "source": "Guggenheim / Seeking Alpha",
       "content": "Guggenheim analyst John DiFucci upgraded ServiceNow to Buy from Neutral with a $125 price target (7.5x EV/NTM recurring revenue). Analyst says AI disruption fears have driven SaaS valuations to levels implying perpetual decline. Expects subscription revenue growth to stabilize in 2026 and reaccelerate in 2027. NOW stock rose 5%+ on the upgrade."
+    },
+    {
+      "date": "2026-07-15",
+      "type": "news",
+      "title": "ServiceNow Q2 2026 Earnings Preview: Revenue Est $3.92B (+22% YoY), Reports After Close July 22",
+      "url": "https://247wallst.com/investing/2026/07/15/dont-miss-the-surprising-signal-to-buy-servicenow-before-july-22/",
+      "source": "24/7 Wall St",
+      "content": "Q2财报7月22日盘后发布；Zacks共识营收$3.92B(+22% YoY)，EPS $0.86(+4.88% YoY)；Now Assist、AI Control Tower和Autonomous Workforce是主要增长驱动力；Evercore和Bernstein维持跑赢大市评级"
     }
   ],
   "CRM": [
