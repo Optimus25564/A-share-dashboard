@@ -1,499 +1,129 @@
 {
- "last_run": "2026-07-22T18:00:36+08:00",
- "run_date": "2026-07-22",
- "top5": [
-  {
-   "code": "688256",
-   "name": "寒武纪",
-   "rank": 1,
-   "score": 1.733
+  "date": "2026-07-22",
+  "top5": [
+    "688256",
+    "688041",
+    "688008",
+    "300308",
+    "688981"
+  ],
+  "candidates": [
+    "603019",
+    "002261",
+    "300475",
+    "002156",
+    "688347"
+  ],
+  "scores": {
+    "688256": 1.396,
+    "688041": 1.077,
+    "688008": 0.598,
+    "300308": 0.512,
+    "688981": 0.335,
+    "603019": 0.024,
+    "002261": 0.002,
+    "300475": -0.004,
+    "002156": -0.005,
+    "688347": -0.058,
+    "002409": -0.281,
+    "002837": -0.341,
+    "000938": -0.378,
+    "000034": -0.433,
+    "688047": -0.46,
+    "000977": -0.729,
+    "601138": -1.256
   },
-  {
-   "code": "300308",
-   "name": "中际旭创",
-   "rank": 2,
-   "score": 1.406
+  "signals": {
+    "688256": {
+      "signal": "hold",
+      "close": 1310.0,
+      "ema8": 1301.63,
+      "ema21": 1166.65,
+      "pct": 0.64,
+      "date": "2026-07-22"
+    },
+    "688041": {
+      "signal": "hold",
+      "close": 331.6,
+      "ema8": 319.51,
+      "ema21": 293.69,
+      "pct": 3.79,
+      "date": "2026-07-22"
+    },
+    "688008": {
+      "signal": "sell-confirmed",
+      "close": 183.6,
+      "ema8": 235.34,
+      "ema21": 210.91,
+      "pct": -21.99,
+      "date": "2026-07-17"
+    },
+    "300308": {
+      "signal": "sell-confirmed",
+      "close": 979.46,
+      "ema8": 1092.48,
+      "ema21": 960.75,
+      "pct": -10.34,
+      "date": "2026-07-17"
+    },
+    "688981": {
+      "signal": "hold",
+      "close": 155.59,
+      "ema8": 143.7,
+      "ema21": 131.66,
+      "pct": 8.27,
+      "date": "2026-07-22"
+    },
+    "603019": {
+      "signal": "hold",
+      "close": 102.15,
+      "ema8": 95.03,
+      "ema21": 92.18,
+      "pct": 7.49,
+      "date": "2026-07-22"
+    },
+    "002261": {
+      "signal": "sell-confirmed",
+      "close": 27.38,
+      "ema8": 29.92,
+      "ema21": 31.44,
+      "pct": -8.5,
+      "date": "2026-07-17"
+    },
+    "300475": {
+      "signal": "sell-confirmed",
+      "close": 174.1,
+      "ema8": 223.53,
+      "ema21": 192.32,
+      "pct": -22.11,
+      "date": "2026-07-17"
+    },
+    "002156": {
+      "signal": "hold",
+      "close": 74.9,
+      "ema8": 67.86,
+      "ema21": 59.86,
+      "pct": 10.38,
+      "date": "2026-07-22"
+    },
+    "688347": {
+      "signal": "hold",
+      "close": 390.06,
+      "ema8": 305.26,
+      "ema21": 261.89,
+      "pct": 27.78,
+      "date": "2026-07-22"
+    }
   },
-  {
-   "code": "688041",
-   "name": "海光信息",
-   "rank": 3,
-   "score": 1.326
+  "market": {
+    "close": 3867.03,
+    "ema8": 3955.99,
+    "ema21": 3999.97,
+    "above_ema8": false,
+    "above_ema21": false,
+    "status": "大盘跌破EMA8和EMA21，整体弱势"
   },
-  {
-   "code": "688008",
-   "name": "澜起科技",
-   "rank": 4,
-   "score": 1.214
-  },
-  {
-   "code": "300604",
-   "name": "长川科技",
-   "rank": 5,
-   "score": 1.069
-  }
- ],
- "candidates": [
-  {
-   "code": "002463",
-   "name": "沪电股份",
-   "rank": 6,
-   "score": 0.883
-  },
-  {
-   "code": "300475",
-   "name": "香农芯创",
-   "rank": 7,
-   "score": 0.824
-  },
-  {
-   "code": "688012",
-   "name": "中微公司",
-   "rank": 8,
-   "score": 0.807
-  },
-  {
-   "code": "300476",
-   "name": "胜宏科技",
-   "rank": 9,
-   "score": 0.688
-  },
-  {
-   "code": "688120",
-   "name": "华海清科",
-   "rank": 10,
-   "score": 0.592
-  }
- ],
- "signals": {
-  "300308": "sell-confirmed",
-  "300475": "sell-confirmed",
-  "601138": "sell-confirmed",
-  "603019": "buy-gated",
-  "688008": "sell-confirmed",
-  "688041": "buy-gated",
-  "688047": "sell-confirmed",
-  "688256": "buy-gated",
-  "688347": "buy-gated",
-  "688981": "buy-gated",
-  "002261": "sell-confirmed",
-  "002837": "sell-confirmed",
-  "000977": "buy-gated",
-  "000034": "hold",
-  "000938": "hold-trend",
-  "002156": "buy-gated",
-  "002409": "sell-confirmed",
-  "600584": "buy-gated",
-  "002463": "sell-confirmed",
-  "300476": "sell-confirmed",
-  "002371": "buy-gated",
-  "688012": "buy-gated",
-  "688120": "buy-gated",
-  "300604": "buy-gated",
-  "002028": "sell-confirmed",
-  "688676": "sell-confirmed",
-  "002335": "sell-confirmed",
-  "002518": "sell-confirmed"
- },
- "prices": {
-  "300308": {
-   "name": "中际旭创",
-   "close": 979.46,
-   "close_date": "2026-07-17",
-   "ema8": 1092.48,
-   "ema21": 960.75,
-   "vs_ema8_pct": -10.34,
-   "current_close": 1060.8,
-   "current_date": "2026-07-22",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "上一周收盘 979.46 < EMA8(1092.48) — 趋势已破位"
-  },
-  "300475": {
-   "name": "香农芯创",
-   "close": 174.1,
-   "close_date": "2026-07-17",
-   "ema8": 223.53,
-   "ema21": 192.32,
-   "vs_ema8_pct": -22.11,
-   "current_close": 166.6,
-   "current_date": "2026-07-22",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "上一周收盘 174.10 < EMA8(223.53) — 趋势已破位"
-  },
-  "601138": {
-   "name": "工业富联",
-   "close": 57.59,
-   "close_date": "2026-07-17",
-   "ema8": 65.94,
-   "ema21": 63.8,
-   "vs_ema8_pct": -12.66,
-   "current_close": 60.71,
-   "current_date": "2026-07-22",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "上一周收盘 57.59 < EMA8(65.94) — 趋势已破位"
-  },
-  "603019": {
-   "name": "中科曙光",
-   "close": 102.15,
-   "close_date": "2026-07-22",
-   "ema8": 95.03,
-   "ema21": 92.18,
-   "vs_ema8_pct": 7.49,
-   "action": "buy-deep",
-   "strength": 3,
-   "detail": "⚡反转 · 深回踩 EMA21 (92.18) — 黄金坑",
-   "gated": true
-  },
-  "688008": {
-   "name": "澜起科技",
-   "close": 183.6,
-   "close_date": "2026-07-17",
-   "ema8": 235.34,
-   "ema21": 210.91,
-   "vs_ema8_pct": -21.99,
-   "current_close": 223.0,
-   "current_date": "2026-07-22",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "上一周收盘 183.60 < EMA8(235.34) — 趋势已破位"
-  },
-  "688041": {
-   "name": "海光信息",
-   "close": 331.6,
-   "close_date": "2026-07-22",
-   "ema8": 319.51,
-   "ema21": 293.69,
-   "vs_ema8_pct": 3.79,
-   "action": "buy",
-   "strength": 3,
-   "detail": "⚡反转 · 本周假破位后强势收回 EMA8 (319.51)，现价 331.60",
-   "gated": true
-  },
-  "688047": {
-   "name": "龙芯中科",
-   "close": 114.3,
-   "close_date": "2026-07-17",
-   "ema8": 138.34,
-   "ema21": 141.16,
-   "vs_ema8_pct": -17.38,
-   "current_close": 114.03,
-   "current_date": "2026-07-22",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "上一周收盘 114.30 < EMA8(138.34) — 趋势已破位"
-  },
-  "688256": {
-   "name": "寒武纪",
-   "close": 1310.0,
-   "close_date": "2026-07-22",
-   "ema8": 1301.63,
-   "ema21": 1166.65,
-   "vs_ema8_pct": 0.64,
-   "action": "buy-deep",
-   "strength": 3,
-   "detail": "⚡反转 · 深回踩 EMA21 (1166.65) — 黄金坑",
-   "gated": true
-  },
-  "688347": {
-   "name": "华虹公司",
-   "close": 390.06,
-   "close_date": "2026-07-22",
-   "ema8": 305.26,
-   "ema21": 231.56,
-   "vs_ema8_pct": 27.78,
-   "action": "buy",
-   "strength": 1,
-   "detail": "本周回踩 EMA8 (305.26)，现价 390.06",
-   "gated": true
-  },
-  "688981": {
-   "name": "中芯国际",
-   "close": 155.59,
-   "close_date": "2026-07-22",
-   "ema8": 143.7,
-   "ema21": 131.25,
-   "vs_ema8_pct": 8.27,
-   "action": "buy",
-   "strength": 3,
-   "detail": "⚡反转 · 本周假破位后强势收回 EMA8 (143.70)，现价 155.59",
-   "gated": true
-  },
-  "002261": {
-   "name": "拓维信息",
-   "close": 27.38,
-   "close_date": "2026-07-17",
-   "ema8": 29.92,
-   "ema21": 31.5,
-   "vs_ema8_pct": -8.5,
-   "current_close": 28.73,
-   "current_date": "2026-07-22",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "上一周收盘 27.38 < EMA8(29.92) — 趋势已破位"
-  },
-  "002837": {
-   "name": "英维克",
-   "close": 61.57,
-   "close_date": "2026-07-17",
-   "ema8": 71.11,
-   "ema21": 71.09,
-   "vs_ema8_pct": -13.42,
-   "current_close": 60.51,
-   "current_date": "2026-07-22",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "上一周收盘 61.57 < EMA8(71.11) — 趋势已破位"
-  },
-  "000977": {
-   "name": "浪潮信息",
-   "close": 90.47,
-   "close_date": "2026-07-22",
-   "ema8": 76.13,
-   "ema21": 70.18,
-   "vs_ema8_pct": 18.84,
-   "action": "buy",
-   "strength": 2,
-   "detail": "本周回踩 EMA8 (76.13)，现价 90.47",
-   "gated": true
-  },
-  "000034": {
-   "name": "神州数码",
-   "close": 27.41,
-   "close_date": "2026-07-22",
-   "ema8": 26.78,
-   "ema21": 26.81,
-   "vs_ema8_pct": 2.36,
-   "action": "hold",
-   "strength": 1,
-   "detail": "EMA8 (26.78) ≤ EMA21 (26.81) — 尚未多头排列"
-  },
-  "000938": {
-   "name": "紫光股份",
-   "close": 44.9,
-   "close_date": "2026-07-22",
-   "ema8": 34.47,
-   "ema21": 30.76,
-   "vs_ema8_pct": 30.27,
-   "action": "hold-trend",
-   "strength": 1,
-   "detail": "多头趋势延续，现价高于 EMA8 30.3% (> 3%)"
-  },
-  "002156": {
-   "name": "通富微电",
-   "close": 74.9,
-   "close_date": "2026-07-22",
-   "ema8": 67.86,
-   "ema21": 59.86,
-   "vs_ema8_pct": 10.38,
-   "action": "buy-deep",
-   "strength": 3,
-   "detail": "深回踩 EMA21 (59.86) — 黄金坑",
-   "gated": true
-  },
-  "002409": {
-   "name": "雅克科技",
-   "close": 145.0,
-   "close_date": "2026-07-17",
-   "ema8": 157.88,
-   "ema21": 129.26,
-   "vs_ema8_pct": -8.16,
-   "current_close": 149.86,
-   "current_date": "2026-07-22",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "上一周收盘 145.00 < EMA8(157.88) — 趋势已破位"
-  },
-  "600584": {
-   "name": "长电科技",
-   "close": 85.78,
-   "close_date": "2026-07-22",
-   "ema8": 84.68,
-   "ema21": 70.17,
-   "vs_ema8_pct": 1.3,
-   "action": "buy-deep",
-   "strength": 3,
-   "detail": "深回踩 EMA21 (70.17) — 黄金坑",
-   "gated": true
-  },
-  "002463": {
-   "name": "沪电股份",
-   "close": 127.8,
-   "close_date": "2026-07-17",
-   "ema8": 129.38,
-   "ema21": 112.8,
-   "vs_ema8_pct": -1.22,
-   "current_close": 114.23,
-   "current_date": "2026-07-22",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "上一周收盘 127.80 < EMA8(129.38) — 趋势已破位"
-  },
-  "300476": {
-   "name": "胜宏科技",
-   "close": 241.5,
-   "close_date": "2026-07-17",
-   "ema8": 301.42,
-   "ema21": 300.24,
-   "vs_ema8_pct": -19.88,
-   "current_close": 240.4,
-   "current_date": "2026-07-22",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "上一周收盘 241.50 < EMA8(301.42) — 趋势已破位"
-  },
-  "002371": {
-   "name": "北方华创",
-   "close": 764.0,
-   "close_date": "2026-07-22",
-   "ema8": 723.23,
-   "ema21": 632.67,
-   "vs_ema8_pct": 5.64,
-   "action": "buy",
-   "strength": 3,
-   "detail": "⚡反转 · 本周假破位后强势收回 EMA8 (723.23)，现价 764.00",
-   "gated": true
-  },
-  "688012": {
-   "name": "中微公司",
-   "close": 392.99,
-   "close_date": "2026-07-22",
-   "ema8": 367.21,
-   "ema21": 310.3,
-   "vs_ema8_pct": 7.02,
-   "action": "buy",
-   "strength": 3,
-   "detail": "⚡反转 · 本周假破位后强势收回 EMA8 (367.21)，现价 392.99",
-   "gated": true
-  },
-  "688120": {
-   "name": "华海清科",
-   "close": 273.0,
-   "close_date": "2026-07-22",
-   "ema8": 247.59,
-   "ema21": 200.4,
-   "vs_ema8_pct": 10.26,
-   "action": "buy",
-   "strength": 1,
-   "detail": "本周回踩 EMA8 (247.59)，现价 273.00",
-   "gated": true
-  },
-  "300604": {
-   "name": "长川科技",
-   "close": 309.05,
-   "close_date": "2026-07-22",
-   "ema8": 282.26,
-   "ema21": 225.2,
-   "vs_ema8_pct": 9.49,
-   "action": "buy",
-   "strength": 1,
-   "detail": "本周回踩 EMA8 (282.26)，现价 309.05",
-   "gated": true
-  },
-  "002028": {
-   "name": "思源电气",
-   "close": 147.05,
-   "close_date": "2026-07-17",
-   "ema8": 169.12,
-   "ema21": 176.72,
-   "vs_ema8_pct": -13.05,
-   "current_close": 154.27,
-   "current_date": "2026-07-22",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "上一周收盘 147.05 < EMA8(169.12) — 趋势已破位"
-  },
-  "688676": {
-   "name": "金盘科技",
-   "close": 62.61,
-   "close_date": "2026-07-17",
-   "ema8": 79.61,
-   "ema21": 81.74,
-   "vs_ema8_pct": -21.36,
-   "current_close": 63.26,
-   "current_date": "2026-07-22",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "上一周收盘 62.61 < EMA8(79.61) — 趋势已破位"
-  },
-  "002335": {
-   "name": "科华数据",
-   "close": 29.75,
-   "close_date": "2026-07-17",
-   "ema8": 37.2,
-   "ema21": 38.59,
-   "vs_ema8_pct": -20.04,
-   "current_close": 30.66,
-   "current_date": "2026-07-22",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "上一周收盘 29.75 < EMA8(37.20) — 趋势已破位"
-  },
-  "002518": {
-   "name": "科士达",
-   "close": 33.53,
-   "close_date": "2026-07-17",
-   "ema8": 45.02,
-   "ema21": 46.32,
-   "vs_ema8_pct": -25.52,
-   "current_close": 33.0,
-   "current_date": "2026-07-22",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "上一周收盘 33.53 < EMA8(45.02) — 趋势已破位"
-  }
- },
- "market": {
-  "code": "sh000001",
-  "close": 3867.03,
-  "ema8": 3955.99,
-  "ema21": 3999.97,
-  "vs_ema8_pct": -2.25,
-  "bullish": false,
-  "drawdown_from_52w_high_pct": -9.2,
-  "breadth_bearish_pct": 50.0,
-  "buy_gate_active": true,
-  "buy_gate_reason": "大盘跌破周线 EMA21 (3867.03 < 3999.97)",
-  "position_advice": "🟠 大盘跌破周线 EMA21 (3867.03 < 3999.97) — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
- },
- "kline_status": "ok (28/28)",
- "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "神州数码 (000034): sell-confirmed → hold",
-  "中际旭创 (300308): hold → sell-confirmed",
-  "仓位建议变化: 🟠 大盘跌破周线 EMA21 (3867.03 < 3999.97) — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
- ],
- "portfolio_summary": {
-  "total": 2816523.0,
-  "cash": 622984.0,
-  "cash_pct": 22.1,
-  "pnl_pct": -6.12,
-  "positions": 5,
-  "tier": "宏观门控 (核心80%, 卫星舱现金)",
-  "currency": "¥",
-  "last_decision": {
-   "date": "2026-07-13",
-   "tier": "宏观门控 (核心80%, 卫星舱现金)",
-   "reasons": [
-    "初始建仓 (账本为空, 按最近周线收盘价、当前排名与宏观档位建立组合)"
-   ],
-   "trades": [
-    "买入 寒武纪 400 股 @ 1400.00",
-    "买入 海光信息 1,500 股 @ 353.00",
-    "买入 中际旭创 400 股 @ 1093.98",
-    "买入 沪电股份 3,300 股 @ 129.44",
-    "买入 长川科技 1,200 股 @ 352.31"
-   ],
-   "holdings": [
-    "寒武纪 1名",
-    "海光信息 2名",
-    "中际旭创 3名",
-    "沪电股份 4名",
-    "长川科技 5名"
-   ],
-   "cash_pct": 20.8
-  }
- }
+  "title": "🚨 [2026-07-22] 趋势提醒",
+  "summary": "澜起科技(-22%)和中际旭创(-10%)已跌破EMA8周线，大盘持续弱势(低于EMA8/EMA21)。建议澜起减仓，中际旭创设止损。寒武纪/海光/中芯仍站稳EMA8。",
+  "data_source": "K线数据来自当日18:00更早一轮扫描(git历史)，因外部行情API被网络策略拦截"
 }
