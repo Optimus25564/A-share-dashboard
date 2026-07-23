@@ -1797,6 +1797,13 @@
     },
     {
       "date": "2026-07-08",
+      "type": "research",
+      "title": "高盛大幅上调华虹宏力（01347.HK）目标价至333港元（前174港元），维持买入评级：AI模型迭代与生成式AI崛起驱动AI芯片及数据中心电源管理芯片需求上升，华虹特色工艺明确受益",
+      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-07-08/doc-inihaicz1526266.shtml",
+      "source": "新浪财经"
+    },
+    {
+      "date": "2026-07-08",
       "type": "announcement",
       "title": "收到证监会注册批复：同意发行股份购买华力微97.4988%股权并募集配套资金不超75.56亿元，新增月产能3.8万片12寸晶圆，补齐28nm工艺短板",
       "url": "https://finance.sina.com.cn/stock/relnews/hk/2026-07-08/doc-inihceiu8041858.shtml",
@@ -2032,6 +2039,13 @@
     }
   ],
   "688981": [
+    {
+      "date": "2026-07-22",
+      "type": "announcement",
+      "title": "2021年科创板限制性股票激励计划：首次授予部分第四归属期及预留授予部分第三归属期符合归属条件；同步作废未满足业绩条件的部分限制性股票",
+      "url": "https://money.finance.sina.com.cn/corp/go.php/vCB_AllBulletin/stockid/688981.phtml",
+      "source": "上交所公告"
+    },
     {
       "date": "2026-07-16",
       "type": "industry",
