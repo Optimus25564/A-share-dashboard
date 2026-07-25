@@ -14,7 +14,7 @@
       "market": "US",
       "path": "data/companies_us.json",
       "companies": 66,
-      "quarter_rows": 316,
+      "quarter_rows": 325,
       "issues": [
         {
           "severity": "warn",
@@ -58,15 +58,15 @@
         }
       ],
       "domain_counts": {
-        "sec.gov": 251,
+        "sec.gov": 258,
         "nvidianews.nvidia.com": 6,
         "investors.broadcom.com": 6,
         "ir.amd.com": 5,
         "intc.com": 6,
         "s204.q4cdn.com": 1,
         "investors.applovin.com": 1,
-        "investor.tsmc.com": 5,
-        "asml.com": 6,
+        "investor.tsmc.com": 6,
+        "asml.com": 7,
         "ir.appliedmaterials.com": 1,
         "investors.ontoinnovation.com": 1,
         "news.synopsys.com": 1,
@@ -134,7 +134,7 @@
       "market": "US",
       "path": "data/alerts_state_us.json",
       "exists": true,
-      "status": "estimated: stooq.com blocked by egress policy (403). Signals estimated from daily 50-day SMA proxy via web research. Weekly EMA8 approximation: daily SMA20~40 range. High-confidence for >5% deviation from SMA50; medium for 2-5%.",
+      "status": "partial: stooq.com blocked by network policy; prices/EMA from 2026-07-24 close (prev run)",
       "source": "",
       "failed": [],
       "issues": [
@@ -142,7 +142,7 @@
           "severity": "warn",
           "type": "kline_not_ok",
           "market": "US",
-          "message": "K-line status is not ok in the saved scan state: estimated: stooq.com blocked by egress policy (403). Signals estimated from daily 50-day SMA proxy via web research. Weekly EMA8 approximation: daily SMA20~40 range. High-confidence for >5% deviation from SMA50; medium for 2-5%.. Re-run the scan with network access before relying on fresh trend signals."
+          "message": "K-line status is not ok in the saved scan state: partial: stooq.com blocked by network policy; prices/EMA from 2026-07-24 close (prev run). Re-run the scan with network access before relying on fresh trend signals."
         },
         {
           "severity": "warn",
@@ -208,7 +208,7 @@
       "severity": "warn",
       "type": "kline_not_ok",
       "market": "US",
-      "message": "K-line status is not ok in the saved scan state: estimated: stooq.com blocked by egress policy (403). Signals estimated from daily 50-day SMA proxy via web research. Weekly EMA8 approximation: daily SMA20~40 range. High-confidence for >5% deviation from SMA50; medium for 2-5%.. Re-run the scan with network access before relying on fresh trend signals."
+      "message": "K-line status is not ok in the saved scan state: partial: stooq.com blocked by network policy; prices/EMA from 2026-07-24 close (prev run). Re-run the scan with network access before relying on fresh trend signals."
     },
     {
       "severity": "warn",

@@ -15,7 +15,7 @@
       "etf": "ETF & 主题表达工具",
       "other": "其他相关"
     },
-    "market_cap_updated": "总市值更新于 2026-07-24 · 来源: 腾讯行情 f45 (A股亿元 / 美股亿美元) · scripts/update_market_caps.py",
+    "market_cap_updated": "总市值更新于 2026-07-25 · 来源: 腾讯行情 f45 (A股亿元 / 美股亿美元) · scripts/update_market_caps.py",
     "quarters": [],
     "quality_metrics_policy": "OCF/CapEx/FCF/cash/debt are sourced from SEC Companyfacts when available. FCF = latest-full-fiscal-year OCF - same-fiscal-year capex (period recorded in *_period). Balance-sheet items use the latest period end; debt older than 15 months vs cash is dropped. Non-USD facts are converted at the spot rate on the run date (fx_mode=spot_at_run) — historical-period flows therefore carry FX drift. Missing values mean no acceptable SEC Companyfacts fact was found and must not be inferred.",
     "subjective_score_policy": "strategic 评分必须带 strategic_updated 日期与依据; 模型按新鲜度衰减: ≤180天全额, 180-365天半衰向中性5, 更旧→5。复核评分时必须同时更新日期和理由。ai_execution_score 已退役为参考字段, 不进模型。"
@@ -131,7 +131,7 @@
       "long_term_debt_end": "2026-04-26",
       "debt_billion": 8.47
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "AVGO": {
@@ -245,7 +245,7 @@
       "long_term_debt_end": "2026-05-03",
       "debt_billion": 64.907
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "AMD": {
@@ -349,7 +349,7 @@
       "fcf_margin_basis": "FY rev 2024-12-29 → 2025-12-27 (SEC)",
       "cash_end": "2026-03-28"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "INTC": {
@@ -405,6 +405,15 @@
         "src": "A",
         "source_url": "https://www.intc.com/news-events/press-releases/detail/1767/intel-reports-first-quarter-2026-financial-results",
         "note": "Q1 2026 ended Mar 28 2026: revenue $13.6B, GAAP gross margin 39.4%, GAAP net loss $3.7B; loss includes restructuring and other adjustments"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 161.3,
+        "gm": 40.36,
+        "nm": -67.26,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000157/0000050863-26-000157-index.html",
+        "note": "SEC Companyfacts CY2026Q2: revenue $16.128B, gross profit $6.509B, net income $-10.848B"
       }
     ],
     "q2_outlook": {
@@ -439,13 +448,13 @@
       "capex_tag": "PaymentsToAcquirePropertyPlantAndEquipment",
       "free_cash_flow_billion": -4.949,
       "fcf_margin_pct": -9.36,
-      "cash_billion": 17.247,
-      "cash_filed": "2026-04-24",
+      "cash_billion": 12.874,
+      "cash_filed": "2026-07-24",
       "cash_tag": "CashAndCashEquivalentsAtCarryingValue",
       "long_term_debt_billion": 46.585,
       "long_term_debt_filed": "2026-01-23",
       "long_term_debt_tag": "LongTermDebt",
-      "net_cash_billion": -29.338,
+      "net_cash_billion": -33.711,
       "fx_source": "https://open.er-api.com/v6/latest/USD",
       "operating_cash_flow_unit": "USD",
       "capex_unit": "USD",
@@ -455,13 +464,13 @@
       "operating_cash_flow_period": "2024-12-29 → 2025-12-27",
       "capex_period": "2024-12-29 → 2025-12-27",
       "fcf_margin_basis": "FY rev 2024-12-29 → 2025-12-27 (SEC)",
-      "cash_end": "2026-03-28",
+      "cash_end": "2026-06-27",
       "long_term_debt_end": "2025-12-27",
       "short_term_debt_billion": 0.0,
       "short_term_debt_tag": "CommercialPaper",
       "debt_billion": 46.585
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "QCOM": {
@@ -564,7 +573,7 @@
       "long_term_debt_end": "2026-03-29",
       "debt_billion": 14.772
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "MRVL": {
@@ -678,7 +687,7 @@
       "short_term_debt_tag": "ShortTermBorrowings",
       "debt_billion": 4.961
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "APP": {
@@ -783,7 +792,7 @@
       "long_term_debt_end": "2025-12-31",
       "debt_billion": 3.513
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "TSM": {
@@ -893,7 +902,7 @@
       "fx_source": "flows 按 TSMC 官方口径隐含汇率 NT$31.11/US$ (FY2025 capex NT$1,272.41B = US$40.9B); 资产负债表按 4Q25 平均 31.01",
       "note": "FY2025 官方数据: OCF NT$2,274.98B (Q1 625.57 + Q2 497.07 + Q3 426.83 + Q4 725.51), CapEx NT$1,272.41B = US$40.9B, FCF NT$1,002.57B; 现金期末 NT$2,767.86B, 长期有息负债 NT$896.06B; SEC XBRL 20-F 年报滞后, 故按官方 6-K 手工录入"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "ASML": {
@@ -978,17 +987,17 @@
       "cik": "0000937966",
       "ticker_for_sec": "ASML",
       "fx_source": "https://open.er-api.com/v6/latest/USD",
-      "operating_cash_flow_billion": 14.476,
+      "operating_cash_flow_billion": 14.401,
       "operating_cash_flow_filed": "2026-02-25",
       "operating_cash_flow_tag": "NetCashProvidedByUsedInOperatingActivities",
       "operating_cash_flow_unit": "EUR",
-      "capex_billion": 1.8,
+      "capex_billion": 1.79,
       "capex_filed": "2026-02-25",
       "capex_tag": "PaymentsToAcquirePropertyPlantAndEquipment",
       "capex_unit": "EUR",
-      "free_cash_flow_billion": 12.676,
+      "free_cash_flow_billion": 12.611,
       "fcf_margin_pct": 33.93,
-      "cash_billion": 14.77,
+      "cash_billion": 14.694,
       "cash_filed": "2026-02-25",
       "cash_tag": "CashAndCashEquivalentsAtCarryingValue",
       "cash_unit": "EUR",
@@ -998,7 +1007,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2025-12-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "AMAT": {
@@ -1103,7 +1112,7 @@
       "fcf_margin_basis": "FY rev 2024-10-28 → 2025-10-26 (SEC)",
       "cash_end": "2026-04-26"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "KLAC": {
@@ -1208,7 +1217,7 @@
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 5.887
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "ONTO": {
@@ -1312,7 +1321,7 @@
       "fcf_margin_basis": "FY rev 2024-12-29 → 2026-01-03 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "SNPS": {
@@ -1424,7 +1433,7 @@
       "long_term_debt_end": "2026-04-30",
       "debt_billion": 10.036
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "MU": {
@@ -1545,7 +1554,7 @@
       "long_term_debt_end": "2025-11-27",
       "debt_billion": 8.844
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "SNDK": {
@@ -1651,7 +1660,7 @@
       "long_term_debt_end": "2026-04-03",
       "debt_billion": 0.0
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "COHR": {
@@ -1756,7 +1765,7 @@
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 3.194
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "LITE": {
@@ -1862,7 +1871,7 @@
       "fcf_margin_basis": "FY rev 2024-06-30 → 2025-06-28 (SEC)",
       "cash_end": "2026-03-28"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "FN": {
@@ -1960,7 +1969,7 @@
       "fcf_margin_basis": "FY rev 2024-06-29 → 2025-06-27 (SEC)",
       "cash_end": "2026-03-27"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "MSFT": {
@@ -2065,7 +2074,7 @@
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 40.262
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "GOOGL": {
@@ -2123,6 +2132,15 @@
         "src": "A",
         "note": "Q1 2026 ended Mar 31 2026: revenue $109.896B, cost of revenues $41.271B, GAAP net income $62.578B; net income includes large equity securities gains",
         "source_url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-release.pdf"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 1198.0,
+        "gm": 61.65,
+        "nm": 93.65,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/0001652044-26-000071-index.html",
+        "note": "SEC Companyfacts CY2026Q2: revenue $119.796B, gross profit $73.853B (revenue minus CostOfRevenue $45.943B), net income $112.193B"
       }
     ],
     "q2_outlook": {
@@ -2156,13 +2174,13 @@
       "capex_tag": "PaymentsToAcquirePropertyPlantAndEquipment",
       "free_cash_flow_billion": 73.266,
       "fcf_margin_pct": 18.19,
-      "cash_billion": 38.063,
-      "cash_filed": "2026-04-30",
+      "cash_billion": 55.911,
+      "cash_filed": "2026-07-23",
       "cash_tag": "CashAndCashEquivalentsAtCarryingValue",
       "long_term_debt_billion": 49.085,
       "long_term_debt_filed": "2026-02-05",
       "long_term_debt_tag": "LongTermDebt",
-      "net_cash_billion": -11.022,
+      "net_cash_billion": 6.826,
       "fx_source": "https://open.er-api.com/v6/latest/USD",
       "operating_cash_flow_unit": "USD",
       "capex_unit": "USD",
@@ -2172,13 +2190,13 @@
       "operating_cash_flow_period": "2025-01-01 → 2025-12-31",
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
-      "cash_end": "2026-03-31",
+      "cash_end": "2026-06-30",
       "long_term_debt_end": "2025-12-31",
       "short_term_debt_billion": 0.0,
       "short_term_debt_tag": "CommercialPaper",
       "debt_billion": 49.085
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "AMZN": {
@@ -2293,7 +2311,7 @@
       "short_term_debt_tag": "ShortTermBorrowings",
       "debt_billion": 122.784
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "META": {
@@ -2398,7 +2416,7 @@
       "long_term_debt_end": "2025-12-31",
       "debt_billion": 58.744
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "AAPL": {
@@ -2505,7 +2523,7 @@
       "short_term_debt_tag": "CommercialPaper",
       "debt_billion": 84.697
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "TSLA": {
@@ -2561,6 +2579,15 @@
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026026673/0001628280-26-026673-index.html",
         "note": "SEC Companyfacts CY2026Q1: revenue $22.387B, gross profit $4.720B, net income $0.477B"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 282.4,
+        "gm": 16.83,
+        "nm": 3.99,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/0001628280-26-049270-index.html",
+        "note": "SEC Companyfacts CY2026Q2: revenue $28.236B, gross profit $4.751B, net income $1.128B"
       }
     ],
     "q2_outlook": {
@@ -2594,13 +2621,13 @@
       "capex_tag": "PaymentsToAcquirePropertyPlantAndEquipment",
       "free_cash_flow_billion": 6.22,
       "fcf_margin_pct": 6.56,
-      "cash_billion": 16.603,
-      "cash_filed": "2026-04-23",
+      "cash_billion": 15.219,
+      "cash_filed": "2026-07-23",
       "cash_tag": "CashAndCashEquivalentsAtCarryingValue",
-      "long_term_debt_billion": 7.645,
-      "long_term_debt_filed": "2026-04-23",
+      "long_term_debt_billion": 7.721,
+      "long_term_debt_filed": "2026-07-23",
       "long_term_debt_tag": "LongTermDebt",
-      "net_cash_billion": 8.958,
+      "net_cash_billion": 7.498,
       "fx_source": "https://open.er-api.com/v6/latest/USD",
       "operating_cash_flow_unit": "USD",
       "capex_unit": "USD",
@@ -2610,11 +2637,11 @@
       "operating_cash_flow_period": "2025-01-01 → 2025-12-31",
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
-      "cash_end": "2026-03-31",
-      "long_term_debt_end": "2026-03-31",
-      "debt_billion": 7.645
+      "cash_end": "2026-06-30",
+      "long_term_debt_end": "2026-06-30",
+      "debt_billion": 7.721
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "CRWV": {
@@ -2717,7 +2744,7 @@
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 24.859
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "CEG": {
@@ -2826,7 +2853,7 @@
       "long_term_debt_end": "2025-12-31",
       "debt_billion": 7.403
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "VRT": {
@@ -2935,7 +2962,7 @@
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 2.922
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "ETN": {
@@ -3046,7 +3073,7 @@
       "short_term_debt_tag": "ShortTermBorrowings",
       "debt_billion": 21.129
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "GEV": {
@@ -3102,6 +3129,15 @@
         "src": "A",
         "note": "SEC Companyfacts CY2026Q1: revenue $9.339B, gross profit $1.781B, net income $4.745B",
         "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000064/0001996810-26-000064-index.html"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 111.0,
+        "gm": 21.25,
+        "nm": 5.84,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000148/0001996810-26-000148-index.html",
+        "note": "SEC Companyfacts CY2026Q2: revenue $11.104B, gross profit $2.360B, net income $0.649B"
       }
     ],
     "q2_outlook": {
@@ -3135,8 +3171,8 @@
       "capex_tag": "PaymentsToAcquireProductiveAssets",
       "free_cash_flow_billion": 3.71,
       "fcf_margin_pct": 9.75,
-      "cash_billion": 10.172,
-      "cash_filed": "2026-04-22",
+      "cash_billion": 13.12,
+      "cash_filed": "2026-07-22",
       "cash_tag": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
       "fx_source": "https://open.er-api.com/v6/latest/USD",
       "operating_cash_flow_unit": "USD",
@@ -3146,9 +3182,9 @@
       "operating_cash_flow_period": "2025-01-01 → 2025-12-31",
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
-      "cash_end": "2026-03-31"
+      "cash_end": "2026-06-30"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "CCJ": {
@@ -3230,17 +3266,17 @@
       "cik": "0001009001",
       "ticker_for_sec": "CCJ",
       "fx_source": "https://open.er-api.com/v6/latest/USD",
-      "operating_cash_flow_billion": 1.005,
+      "operating_cash_flow_billion": 1.0,
       "operating_cash_flow_filed": "2026-03-19",
       "operating_cash_flow_tag": "CashFlowsFromUsedInOperatingActivities",
       "operating_cash_flow_unit": "CAD",
-      "capex_billion": 0.238,
+      "capex_billion": 0.236,
       "capex_filed": "2026-03-19",
       "capex_tag": "PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
       "capex_unit": "CAD",
-      "free_cash_flow_billion": 0.767,
+      "free_cash_flow_billion": 0.763,
       "fcf_margin_pct": 30.89,
-      "cash_billion": 0.795,
+      "cash_billion": 0.791,
       "cash_filed": "2026-03-19",
       "cash_tag": "CashAndCashEquivalents",
       "cash_unit": "CAD",
@@ -3250,7 +3286,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2025-12-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "SMH": {
@@ -3409,7 +3445,7 @@
       "fcf_margin_basis": "FY rev 2025-04-01 → 2026-03-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "LRCX": {
@@ -3512,7 +3548,7 @@
       "long_term_debt_end": "2025-06-29",
       "debt_billion": 4.469
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "CDNS": {
@@ -3614,7 +3650,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "ASE": {
@@ -3696,17 +3732,17 @@
       "cik": "0001122411",
       "ticker_for_sec": "ASX",
       "fx_source": "https://open.er-api.com/v6/latest/USD",
-      "operating_cash_flow_billion": 4.395,
+      "operating_cash_flow_billion": 4.397,
       "operating_cash_flow_filed": "2026-04-01",
       "operating_cash_flow_tag": "CashFlowsFromUsedInOperatingActivities",
       "operating_cash_flow_unit": "TWD",
-      "capex_billion": 5.087,
+      "capex_billion": 5.089,
       "capex_filed": "2026-04-01",
       "capex_tag": "PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
       "capex_unit": "TWD",
       "free_cash_flow_billion": -0.692,
       "fcf_margin_pct": -3.47,
-      "cash_billion": 2.857,
+      "cash_billion": 2.858,
       "cash_filed": "2026-04-01",
       "cash_tag": "CashAndCashEquivalents",
       "cash_unit": "TWD",
@@ -3716,7 +3752,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2025-12-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "AMKR": {
@@ -3812,7 +3848,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "TER": {
@@ -3908,7 +3944,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-29"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "ANET": {
@@ -4006,7 +4042,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "CRDO": {
@@ -4113,7 +4149,7 @@
       "fcf_margin_basis": "FY rev 2025-05-04 → 2026-05-02 (SEC)",
       "cash_end": "2026-05-02"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "ALAB": {
@@ -4211,7 +4247,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "CIEN": {
@@ -4326,7 +4362,7 @@
       "fcf_margin_basis": "FY rev 2024-11-03 → 2025-11-01 (SEC)",
       "cash_end": "2026-05-02"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "CSCO": {
@@ -4440,7 +4476,7 @@
       "long_term_debt_end": "2026-04-25",
       "debt_billion": 22.869
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "MPWR": {
@@ -4538,7 +4574,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "GLW": {
@@ -4644,7 +4680,7 @@
       "cash_unit": "USD",
       "note": "2013 年的 LongTermDebt 残留值已删除 (陈旧不可用); net_cash 因无可靠当期债务数据而留空"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "PWR": {
@@ -4746,7 +4782,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "EME": {
@@ -4848,7 +4884,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "FIX": {
@@ -4904,6 +4940,15 @@
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/1035983/000110465926047689/0001104659-26-047689-index.html",
         "note": "SEC Companyfacts CY2026Q1: revenue $2.865B, gross profit $0.754B, net income $0.370B"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 32.7,
+        "gm": 25.85,
+        "nm": 13.52,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1035983/000110465926086258/0001104659-26-086258-index.html",
+        "note": "SEC Companyfacts CY2026Q2: revenue $3.266B, gross profit $0.844B, net income $0.442B"
       }
     ],
     "q2_outlook": {
@@ -4937,13 +4982,13 @@
       "capex_tag": "PaymentsToAcquirePropertyPlantAndEquipment",
       "free_cash_flow_billion": 1.031,
       "fcf_margin_pct": 11.33,
-      "cash_billion": 1.05,
-      "cash_filed": "2026-04-23",
+      "cash_billion": 1.855,
+      "cash_filed": "2026-07-23",
       "cash_tag": "CashAndCashEquivalentsAtCarryingValue",
-      "long_term_debt_billion": 0.039,
-      "long_term_debt_filed": "2026-04-23",
+      "long_term_debt_billion": 0.054,
+      "long_term_debt_filed": "2026-07-23",
       "long_term_debt_tag": "LongTermDebt",
-      "net_cash_billion": 1.011,
+      "net_cash_billion": 1.801,
       "fx_source": "https://open.er-api.com/v6/latest/USD",
       "operating_cash_flow_unit": "USD",
       "capex_unit": "USD",
@@ -4953,11 +4998,11 @@
       "operating_cash_flow_period": "2025-01-01 → 2025-12-31",
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
-      "cash_end": "2026-03-31",
-      "long_term_debt_end": "2026-03-31",
-      "debt_billion": 0.039
+      "cash_end": "2026-06-30",
+      "long_term_debt_end": "2026-06-30",
+      "debt_billion": 0.054
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "MOD": {
@@ -5059,7 +5104,7 @@
       "fcf_margin_basis": "FY rev 2025-04-01 → 2026-03-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "TT": {
@@ -5168,7 +5213,7 @@
       "long_term_debt_end": "2025-12-31",
       "debt_billion": 4.615
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "JCI": {
@@ -5277,7 +5322,7 @@
       "long_term_debt_end": "2025-09-30",
       "debt_billion": 9.195
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "HUBB": {
@@ -5386,7 +5431,7 @@
       "long_term_debt_end": "2025-09-30",
       "debt_billion": 1.444
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "POWL": {
@@ -5488,7 +5533,7 @@
       "fcf_margin_basis": "FY rev 2024-10-01 → 2025-09-30 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "VST": {
@@ -5599,7 +5644,7 @@
       "short_term_debt_tag": "ShortTermBorrowings",
       "debt_billion": 19.163
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "NRG": {
@@ -5708,7 +5753,7 @@
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 23.181
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "KMI": {
@@ -5764,6 +5809,15 @@
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/1506307/000150630726000035/0001506307-26-000035-index.html",
         "note": "SEC Companyfacts CY2026Q1: revenue $4.828B, gross profit $3.079B (revenue minus CostOfGoodsAndServiceExcludingDepreciationDepletionAndAmortization $1.749B), net income $1.001B"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 44.8,
+        "gm": 68.62,
+        "nm": 19.97,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1506307/000150630726000085/0001506307-26-000085-index.html",
+        "note": "SEC Companyfacts CY2026Q2: revenue $4.477B, gross profit $3.072B (revenue minus CostOfGoodsAndServiceExcludingDepreciationDepletionAndAmortization $1.405B), net income $0.894B"
       }
     ],
     "q2_outlook": {
@@ -5797,8 +5851,8 @@
       "capex_tag": "PaymentsToAcquirePropertyPlantAndEquipment",
       "free_cash_flow_billion": 2.891,
       "fcf_margin_pct": 19.02,
-      "cash_billion": 0.072,
-      "cash_filed": "2026-04-24",
+      "cash_billion": 0.089,
+      "cash_filed": "2026-07-24",
       "cash_tag": "CashAndCashEquivalentsAtCarryingValue",
       "fx_source": "https://open.er-api.com/v6/latest/USD",
       "operating_cash_flow_unit": "USD",
@@ -5808,9 +5862,9 @@
       "operating_cash_flow_period": "2025-01-01 → 2025-12-31",
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
-      "cash_end": "2026-03-31"
+      "cash_end": "2026-06-30"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "WMB": {
@@ -5912,7 +5966,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "ORCL": {
@@ -6019,7 +6073,7 @@
       "fcf_margin_basis": "FY rev 2025-06-01 → 2026-05-31 (SEC)",
       "cash_end": "2026-05-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "IREN": {
@@ -6121,7 +6175,7 @@
       "fcf_margin_basis": "FY rev 2024-07-01 → 2025-06-30 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "PLTR": {
@@ -6233,7 +6287,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "NOW": {
@@ -6289,6 +6343,15 @@
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/0001373715-26-000056-index.html",
         "note": "SEC Companyfacts CY2026Q1: revenue $3.770B, gross profit $2.830B, net income $0.469B"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 39.9,
+        "gm": 70.68,
+        "nm": 7.47,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/0001373715-26-000076-index.html",
+        "note": "SEC Companyfacts CY2026Q2: revenue $3.987B, gross profit $2.818B, net income $0.298B"
       }
     ],
     "q2_outlook": {
@@ -6324,8 +6387,8 @@
       "capex_tag": "PaymentsToAcquirePropertyPlantAndEquipment",
       "free_cash_flow_billion": 4.576,
       "fcf_margin_pct": 34.46,
-      "cash_billion": 2.702,
-      "cash_filed": "2026-04-23",
+      "cash_billion": 2.503,
+      "cash_filed": "2026-07-23",
       "cash_tag": "CashAndCashEquivalentsAtCarryingValue",
       "fx_source": "https://open.er-api.com/v6/latest/USD",
       "operating_cash_flow_unit": "USD",
@@ -6335,9 +6398,18 @@
       "operating_cash_flow_period": "2025-01-01 → 2025-12-31",
       "capex_period": "2025-01-01 → 2025-12-31",
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
-      "cash_end": "2026-03-31"
+      "cash_end": "2026-06-30",
+      "long_term_debt_billion": 5.435,
+      "long_term_debt_filed": "2026-07-23",
+      "long_term_debt_end": "2026-06-30",
+      "long_term_debt_tag": "LongTermDebt",
+      "long_term_debt_unit": "USD",
+      "short_term_debt_billion": 2.082,
+      "short_term_debt_tag": "ShortTermBorrowings",
+      "debt_billion": 7.517,
+      "net_cash_billion": -5.014
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "CRM": {
@@ -6449,7 +6521,7 @@
       "long_term_debt_end": "2026-04-30",
       "debt_billion": 39.28
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   },
   "RKLB": {
@@ -6548,7 +6620,7 @@
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 0.037
     },
-    "market_cap_asof": "2026-07-24",
+    "market_cap_asof": "2026-07-25",
     "strategic_updated": "2026-06-07"
   }
 }
