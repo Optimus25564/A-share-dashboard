@@ -423,6 +423,12 @@
    "total": 284864.3,
    "cash": 57290.0,
    "mv": 227574.3
+  },
+  {
+   "date": "2026-07-28",
+   "total": 281437.87,
+   "cash": 57290.0,
+   "mv": 224147.87
   }
  ],
  "decisions": [
@@ -539,6 +545,7 @@
  "strategy_state": {
   "tier": 1,
   "seeded": true,
-  "last_check": "2026-07-27 18:55"
+  "last_check": "2026-07-28 06:36",
+  "pending_sig": "持仓周线收盘跌破 EMA21 (核心趋势破坏): Nvidia(NVDA)|持仓掉出合格排名 Top10 (排名缓冲触发): Nvidia(有效排名 已出合格池) ← 顶替者: Arm Holdings(模型#12, 收复EMA21回到合格池) / Arista Networks(模型#13, 收复EMA21回到合格池) / ASML(模型#15, 收复EMA21回到合格池) / Astera Labs(模型#16, 收复EMA21回到合格池) / KLA Corp(模型#18, 收复EMA21回到合格池) / Credo Technology(模型#19, 收复EMA21回到合格池)"
  }
 }
