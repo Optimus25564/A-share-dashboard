@@ -435,6 +435,12 @@
    "total": 277102.22,
    "cash": 57290.0,
    "mv": 219812.22
+  },
+  {
+   "date": "2026-07-30",
+   "total": 268017.01,
+   "cash": 57290.0,
+   "mv": 210727.01
   }
  ],
  "decisions": [
@@ -551,7 +557,7 @@
  "strategy_state": {
   "tier": 1,
   "seeded": true,
-  "last_check": "2026-07-29 18:09",
-  "pending_sig": "持仓周线收盘跌破 EMA21 (核心趋势破坏): Nvidia(NVDA) / TSMC(TSM)|持仓掉出合格排名 Top10 (排名缓冲触发): Nvidia(有效排名 已出合格池) / TSMC(有效排名 已出合格池) ← 顶替者: Arista Networks(模型#13, 收复EMA21回到合格池) / Salesforce(模型#14, 收复EMA21回到合格池) / ServiceNow(模型#20, 收复EMA21回到合格池) / AMD(模型#22, 收复EMA21回到合格池) / Cisco Systems(模型#23, 收复EMA21回到合格池) / Applied Materials(模型#28, 收复EMA21回到合格池) / Johnson Controls(模型#44, 收复EMA21回到合格池)"
+  "last_check": "2026-07-30 06:31",
+  "pending_sig": "持仓周线收盘跌破 EMA21 (核心趋势破坏): Nvidia(NVDA) / Micron(MU) / Broadcom(AVGO) / TSMC(TSM)|持仓掉出合格排名 Top10 (排名缓冲触发): Nvidia(有效排名 已出合格池) / Micron(有效排名 已出合格池) / Broadcom(有效排名 已出合格池) / TSMC(有效排名 已出合格池) ← 顶替者: Arista Networks(模型#13, 收复EMA21回到合格池) / Salesforce(模型#14, 收复EMA21回到合格池) / ServiceNow(模型#18, 收复EMA21回到合格池) / Cisco Systems(模型#23, 收复EMA21回到合格池) / AMD(模型#24, 收复EMA21回到合格池) / Kinder Morgan(模型#29, 收复EMA21回到合格池) / Johnson Controls(模型#44, 收复EMA21回到合格池)"
  }
 }
