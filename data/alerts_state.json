@@ -1,5 +1,5 @@
 {
- "last_run": "2026-07-31T18:06:06+08:00",
+ "last_run": "2026-07-31T18:37:57.616292+08:00",
  "run_date": "2026-07-31",
  "top5": [
   {
@@ -522,5 +522,7 @@
    ],
    "cash_pct": 21.0
   }
- }
+ },
+ "run_note": "18:30 scheduled re-run; K-line API blocked by proxy; using 18:06 state data; WeChat+email blocked by network policy",
+ "push_status": "blocked (proxy policy denied both sctapi.ftqq.com and smtp.gmail.com); PushNotification used as fallback"
 }
