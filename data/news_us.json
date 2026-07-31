@@ -431,6 +431,14 @@
       "url": "https://www.cnbc.com/2026/07/29/chip-selloff-sk-hynix-samsung-softbank.html",
       "source": "CNBC / Bloomberg",
       "content": "Broad semiconductor selloff July 28: AMAT -7.82%, MU -8.4%, MRVL -7.4%, AMD -8.85%, NVDA down further. Philadelphia Semiconductor Index posted 4th consecutive decline (longest streak of 2026). Two catalysts: NVDA $750B circular financing controversy and reports of Chinese state-backed firm mass-producing DUV immersion lithography tools."
+    },
+    {
+      "date": "2026-07-29",
+      "type": "news",
+      "title": "Nvidia Q2 FY2027 Earnings Expected August 27 — Analysts Project EPS $0.94, Consensus Strong Buy at $302 Target",
+      "url": "https://www.barchart.com/story/news/33641989/nvidia-s-q2-2026-earnings-what-to-expect",
+      "source": "Barchart",
+      "content": "NVDA expected to report Q2 FY2027 earnings on August 27, 2026. Analyst consensus (61 analysts): EPS $0.94 (+44.6% YoY), Strong Buy rating, average price target $302.83. Stock trading near $206.75. Deutsche Bank raised PT to $220. AI chip demand remains strong; Blackwell Data Center revenue is primary growth driver."
     }
   ],
   "AVGO": [
@@ -689,6 +697,14 @@
       "url": "https://finance.yahoo.com/news/broadcom-inc-avgo-51-ytd-050027389.html",
       "source": "Yahoo Finance / Benzinga",
       "content": "Wall Street maintains strong buy consensus on AVGO with average price target of ~$525. Broadcom recently announced a $200B AI chip collaboration deal with Samsung. Shares up ~51% YTD. Q2 fiscal 2026 (reported June 4) showed revenue of $22.2B (+48% YoY) with AI semiconductor revenue of $10.8B (+143% YoY). Next earnings expected September 2026."
+    },
+    {
+      "date": "2026-07-28",
+      "type": "research",
+      "title": "Broadcom Preview: AI Revenue $10.8B in Q2, Q3 Earnings Due September; Consensus Strong Buy at $527 Target",
+      "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262054394-broadcom-avgo-price-forecast-july-28-2026-trendline-support-hyperscaler-tradingkey",
+      "source": "TradingKey",
+      "content": "AVGO analyst preview: Q2 FY2026 AI semiconductor revenue $10.8B (+143% YoY) driven by 6 custom AI accelerator customers including Google, Meta, OpenAI, and Anthropic. Full-year 2026 AI revenue guidance reiterated above $100B. Stock corrected 21% from June peak. Q3 FY2026 earnings expected early September 2026. Consensus Strong Buy, average target $527."
     }
   ],
   "AMD": [
@@ -1011,6 +1027,22 @@
       "url": "https://www.tradingkey.com/news/market-movers/262061625-market-movers-amd-20260729",
       "source": "TradingKey / AMD",
       "content": "AMD and Korea's Ministry of Science and ICT announced a partnership to advance a sovereign AI ecosystem on July 29. Despite the positive deal, AMD stock fell 3.03% as the broader chip sector continued declining. Stock traded $421-$459 during the session."
+    },
+    {
+      "date": "2026-07-27",
+      "type": "announcement",
+      "title": "AMD Launches Instinct MI400 Series GPUs on CDNA5/2nm with 432GB HBM4 at Advancing AI 2026 Event",
+      "url": "https://newsroom.amd.com/news/aai-2026-mi400-instinct-update/",
+      "source": "AMD Newsroom",
+      "content": "AMD unveiled the MI400 GPU series at Advancing AI 2026: MI455X (frontier AI/AI factories) and MI430X (sovereign AI/HPC) on CDNA5 architecture with 2nm process and 432GB HBM4 per GPU (50% more than MI350). Helios rack platform combines 72x MI455X with 1.4 PB/s total memory bandwidth. AMD also shipped Helios AI racks with EPYC 9006 CPUs."
+    },
+    {
+      "date": "2026-07-30",
+      "type": "news",
+      "title": "AMD Q2 FY2026 Earnings Preview: August 4 Report Expected to Show 47% Revenue Growth to $11.3B",
+      "url": "https://www.tipranks.com/news/amd-stock-price-forecast-amd-braces-for-a-12-28-move-as-q2-earnings-near",
+      "source": "TipRanks",
+      "content": "AMD will report Q2 FY2026 earnings August 4 after close. Consensus: revenue $11.30B (+47% YoY), EPS ~$1.55-$1.62 (+396% YoY). AMD own Q2 guidance was ~$11.2B revenue at 56% non-GAAP gross margin. Options pricing implies a 12.28% post-earnings move. 35 of 46 analysts rate Strong Buy. AMD reportedly achieved first-ever data-center revenue lead over Intel in Q2."
     }
   ],
   "INTC": [
@@ -1389,6 +1421,14 @@
       "url": "https://stockstotrade.com/news/intel-corporation-intc-news-2026_07_28/",
       "source": "StocksToTrade",
       "content": "Intel fell 6.02% on July 28, now down 28% in July despite 170%+ YTD gains. Investor concern centers on free cash flow sustainability against $20B capex commitments and rising AI chip competition. Rosenblatt maintained Sell with $65 target vs consensus Hold at ~$109. GAAP Q2 loss was $11.03B ($2.16/share)."
+    },
+    {
+      "date": "2026-07-29",
+      "type": "news",
+      "title": "Intel Stock Down ~28% in July as Post-Earnings Selloff Extends; 18A Profitable Yields Not Until Late 2026/2027",
+      "url": "https://phemex.com/blogs/intel-stock-crash-18a-delay-amd-data-center-surge",
+      "source": "Phemex",
+      "content": "INTC has fallen ~28% in July after the post-Q2 earnings selloff despite a record beat. Key concerns: Intel 18A foundry process not expected to reach profitable yields until late 2026 or early 2027; AMD claimed first-ever data-center revenue lead over Intel in Q2; foundry design wins from NVIDIA and AMD may take years to monetize."
     }
   ],
   "QCOM": [
@@ -1663,6 +1703,14 @@
       "url": "https://www.cnbc.com/2026/07/29/qualcomm-qcom-earnings-report-q3-2026-.html",
       "source": "CNBC / Qualcomm IR",
       "content": "QCOM Q3 FY2026 results in line with expectations. Q4 guidance lighter than expected: EPS $2.05-2.25, Revenue $9.7-10.5B — attributed to supply crunch for computer components, especially memory. CEO Cristiano Amon announced broad chip price increases starting September 1 to expand margins. Shares fell in extended trading."
+    },
+    {
+      "date": "2026-07-29",
+      "type": "news",
+      "title": "Qualcomm CEO Announces Broad Chip Price Hikes Starting September 1 to Combat Margin Pressure",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-29/qualcomm-profit-forecast-misses-estimates-in-sign-of-phone-woes",
+      "source": "Bloomberg",
+      "content": "Qualcomm CEO Cristiano Amon announced price increases across the entire chip portfolio effective September 1, primarily targeting smartphone chip customers, to restore margins under pressure from memory supply constraints and a decline in Apple-related revenue."
     }
   ],
   "MRVL": [
@@ -1913,6 +1961,14 @@
       "url": "https://ts2.tech/en/marvell-technology-nasdaqmrvl-rises-over-week-even-after-7-friday-drop/",
       "source": "TS2 Space / CNBC",
       "content": "MRVL shares fell 7.4% July 28 in broad semiconductor selloff. Investors watching Microsoft and Meta capex guidance updates as proxy for Marvell's AI networking demand. Hyperscaler customer concentration risk cited as key concern. Stock compounding a prior 3.81% drop on July 27."
+    },
+    {
+      "date": "2026-07-29",
+      "type": "announcement",
+      "title": "Marvell Technology Announces $250 Million India Investment to Expand Bangalore AI R&D Hub",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/1027/marvell-to-invest-250-million-in-india-expanding-bangalore-facility-to-drive-next-generation-ai-technology-development",
+      "source": "Marvell Investor Relations",
+      "content": "Marvell announced a $250M three-year investment in India, expanding its Bangalore facility, adding Hyderabad presence, and doubling its India engineering headcount. The expanded footprint targets advanced AI, cloud, and data infrastructure semiconductor design and development."
     }
   ],
   "APP": [
