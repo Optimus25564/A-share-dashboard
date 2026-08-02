@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-07-05",
+    "updated": "2026-08-02",
     "note": "AI CapEx 产业链 8 层框架. 财报数据自然季度 (2025Q2→2026Q1). 单位 rev=亿$.",
     "categories": {
       "core_chip": "L1 算力芯片 & 加速器",
@@ -526,6 +526,15 @@
         "src": "A",
         "note": "SEC Companyfacts CY2026Q1: revenue $10.599B, gross profit $5.699B (revenue minus CostOfRevenue $4.900B), net income $7.370B",
         "source_url": "https://www.sec.gov/Archives/edgar/data/804328/000080432826000061/0000804328-26-000061-index.html"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 99.5,
+        "gm": 52.0,
+        "nm": 20.1,
+        "src": "A",
+        "source_url": "https://s204.q4cdn.com/645488518/files/doc_financials/2026/q3/FY2026-3rd-Quarter-Earnings-Release.pdf",
+        "note": "Q3 FY2026 ended Jun 28 2026: revenue $9.95B, GAAP net income $2.0B; gm estimated ~52% (vs 53.77% Q1 2026, compressed by supply chain costs); handset chip rev down 20% YoY, automotive up 61%"
       }
     ],
     "q2_outlook": {
@@ -1170,6 +1179,15 @@
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000016/0000319201-26-000016-index.html",
         "note": "SEC Companyfacts CY2026Q1: revenue $3.415B, gross profit $2.087B (revenue minus CostOfRevenue $1.328B), net income $1.201B"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 36.6,
+        "gm": 61.5,
+        "nm": 37.2,
+        "src": "A",
+        "source_url": "https://ir.kla.com/news-events/press-releases/detail/518/kla-corporation-reports-fiscal-2026-fourth-quarter-and-full",
+        "note": "Q4 FY2026 ended Jun 30 2026: revenue $3.66B; non-GAAP gm 62.4%, GAAP est. ~61.5%; GAAP net income ~$1.362B (derived: FY2026 total $4.83B - prior 3 quarters $3.468B); record revenue +15% YoY"
       }
     ],
     "q2_outlook": {
@@ -2027,6 +2045,15 @@
         "src": "A",
         "source_url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/press-release-webcast",
         "note": "FY2026 Q3 ended Mar 31 2026: revenue $82.886B, gross margin $56.058B, GAAP net income $31.778B"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 900.1,
+        "gm": 67.2,
+        "nm": 39.7,
+        "src": "A",
+        "source_url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+        "note": "Q4 FY2026 ended Jun 30 2026: revenue $90.007B, GAAP gross profit $60.482B (67.2%), GAAP net income $35.766B"
       }
     ],
     "q2_outlook": {
@@ -2254,6 +2281,15 @@
         "src": "A",
         "source_url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-First-Quarter-Results/default.aspx",
         "note": "Q1 2026 ended Mar 31 2026: net sales $181.519B, cost of sales $87.463B, GAAP net income $30.255B; net income includes non-operating income"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 2006.0,
+        "gm": 52.3,
+        "nm": 31.2,
+        "src": "A",
+        "source_url": "https://www.businesswire.com/news/home/20260729379483/en/Amazon.com-Announces-Second-Quarter-Results",
+        "note": "Q2 2026 ended Jun 30 2026: net sales $200.6B, gm ~52.3% (cost of sales ~47.7%), GAAP net income $62.647B (includes $53.4B non-operating pre-tax Anthropic gain); operating income $27.5B (13.7% margin)"
       }
     ],
     "q2_outlook": {
@@ -2369,6 +2405,15 @@
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/meta-03312026xexhibit991.htm",
         "note": "Q1 2026 ended Mar 31 2026: revenue $56.311B, cost of revenue $10.218B, GAAP net income $26.773B; net income includes income tax benefit"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 608.0,
+        "gm": 80.5,
+        "nm": 26.1,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/0001326801/000162828026050596/meta-06302026xexhibit991.htm",
+        "note": "Q2 2026 ended Jun 30 2026: revenue $60.801B, GAAP net income $15.848B ($6.18/share); gm estimated ~80.5% (historical 81-82%, higher AI infra costs); legal charges $2.4B + severance $1.18B impacted operating margin (31%)"
       }
     ],
     "q2_outlook": {
@@ -2474,6 +2519,15 @@
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/0000320193-26-000013-index.html",
         "note": "SEC Companyfacts CY2026Q1: revenue $111.184B, gross profit $54.781B, net income $29.578B"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 1094.2,
+        "gm": 50.1,
+        "nm": 27.2,
+        "src": "A",
+        "source_url": "https://investor.apple.com/news/press-release-details/2026/Apple-Reports-Third-Quarter-Results/default.aspx",
+        "note": "Q3 FY2026 ended Jun 28 2026: revenue $109.42B, GAAP gross margin 50.1%, GAAP net income $29.79B"
       }
     ],
     "q2_outlook": {
@@ -2909,6 +2963,15 @@
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026026556/0001628280-26-026556-index.html",
         "note": "SEC Companyfacts CY2026Q1: revenue $2.650B, gross profit $1.000B (revenue minus CostOfGoodsAndServicesSold $1.650B), net income $0.390B"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 32.74,
+        "gm": 37.7,
+        "nm": 15.2,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/0001674101/000162828026050323/q22026exhibit991vrt07292026.htm",
+        "note": "Q2 2026 ended Jun 30 2026: net sales $3,274M (+24% YoY, 18% organic); GAAP gross profit $1,234.6M (37.7%, derived from H1 $2,234.6M - Q1 $1,000M); GAAP net income $497.8M"
       }
     ],
     "q2_outlook": {
@@ -3018,6 +3081,15 @@
         "src": "A",
         "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000013/0001551182-26-000013-index.html",
         "note": "SEC Companyfacts CY2026Q1: revenue $7.451B, gross profit $2.652B (revenue minus CostOfRevenue $4.799B), net income $0.868B"
+      },
+      {
+        "q": "2026Q2",
+        "rev": 85.0,
+        "gm": 37.1,
+        "nm": 9.7,
+        "src": "A",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/0001551182/000155118226000027/etn06302026exhibit99.htm",
+        "note": "Q2 2026 ended Jun 30 2026: revenue $8.5B (record, +21% YoY, 14% organic), GAAP gross margin 37.1%, GAAP net income $821M ($2.11/share)"
       }
     ],
     "q2_outlook": {
@@ -3240,6 +3312,15 @@
         "src": "A",
         "source_url": "https://www.cameco.com/invest/financial-information/quarterly-reports/2026/q1",
         "note": "Cameco Q1 2026 official quarterly report: revenue C$845M, gross profit C$302M, net earnings attributable to equity holders C$131M; converted to USD at CAD/USD 0.712 for display."
+      },
+      {
+        "q": "2026Q2",
+        "rev": 5.88,
+        "gm": 23.3,
+        "nm": 3.1,
+        "src": "A",
+        "source_url": "https://www.cameco.com/media/news/cameco-reports-2026-second-quarter-results",
+        "note": "Cameco Q2 2026 ended Jun 30 2026: revenue C$814M (~US$588M at 0.7225 CAD/USD), gross profit C$190M (23.3%); net earnings to equity holders C$25M; IFRS reporting; revenue/profit down YoY on lower uranium volumes"
       }
     ],
     "q2_outlook": {
