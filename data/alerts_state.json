@@ -1,18 +1,18 @@
 {
- "last_run": "2026-08-03T18:55:12+08:00",
- "run_date": "2026-08-03",
+ "last_run": "2026-08-04T06:34:30+08:00",
+ "run_date": "2026-08-04",
  "top5": [
   {
    "code": "688256",
    "name": "寒武纪",
    "rank": 1,
-   "score": 1.734
+   "score": 1.733
   },
   {
    "code": "300308",
    "name": "中际旭创",
    "rank": 2,
-   "score": 1.409
+   "score": 1.414
   },
   {
    "code": "688041",
@@ -24,13 +24,13 @@
    "code": "688008",
    "name": "澜起科技",
    "rank": 4,
-   "score": 1.221
+   "score": 1.219
   },
   {
    "code": "300604",
    "name": "长川科技",
    "rank": 5,
-   "score": 1.066
+   "score": 1.06
   }
  ],
  "candidates": [
@@ -38,31 +38,31 @@
    "code": "002463",
    "name": "沪电股份",
    "rank": 6,
-   "score": 0.883
+   "score": 0.885
   },
   {
    "code": "300475",
    "name": "香农芯创",
    "rank": 7,
-   "score": 0.82
+   "score": 0.816
   },
   {
    "code": "688012",
    "name": "中微公司",
    "rank": 8,
-   "score": 0.808
+   "score": 0.804
   },
   {
    "code": "300476",
    "name": "胜宏科技",
    "rank": 9,
-   "score": 0.684
+   "score": 0.687
   },
   {
    "code": "688120",
    "name": "华海清科",
    "rank": 10,
-   "score": 0.598
+   "score": 0.592
   }
  ],
  "signals": {
@@ -114,7 +114,7 @@
    "close": 145.79,
    "close_date": "2026-07-31",
    "ema8": 195.55,
-   "ema21": 182.81,
+   "ema21": 182.82,
    "vs_ema8_pct": -25.45,
    "current_close": 134.03,
    "current_date": "2026-08-03",
@@ -140,7 +140,7 @@
    "close": 83.46,
    "close_date": "2026-07-31",
    "ema8": 91.66,
-   "ema21": 90.33,
+   "ema21": 90.35,
    "vs_ema8_pct": -8.94,
    "current_close": 83.69,
    "current_date": "2026-08-03",
@@ -153,7 +153,7 @@
    "close": 204.9,
    "close_date": "2026-07-31",
    "ema8": 227.99,
-   "ema21": 209.01,
+   "ema21": 209.0,
    "vs_ema8_pct": -10.13,
    "current_close": 189.94,
    "current_date": "2026-08-03",
@@ -192,7 +192,7 @@
    "close": 1106.0,
    "close_date": "2026-07-31",
    "ema8": 1243.47,
-   "ema21": 1142.66,
+   "ema21": 1142.65,
    "vs_ema8_pct": -11.06,
    "current_close": 1028.0,
    "current_date": "2026-08-03",
@@ -205,7 +205,7 @@
    "close": 237.9,
    "close_date": "2026-07-31",
    "ema8": 279.89,
-   "ema21": 226.47,
+   "ema21": 226.48,
    "vs_ema8_pct": -15.0,
    "current_close": 219.5,
    "current_date": "2026-08-03",
@@ -231,7 +231,7 @@
    "close": 25.93,
    "close_date": "2026-07-31",
    "ema8": 28.51,
-   "ema21": 30.43,
+   "ema21": 30.42,
    "vs_ema8_pct": -9.04,
    "current_close": 26.21,
    "current_date": "2026-08-03",
@@ -257,7 +257,7 @@
    "close": 71.81,
    "close_date": "2026-07-31",
    "ema8": 74.28,
-   "ema21": 70.07,
+   "ema21": 70.06,
    "vs_ema8_pct": -3.32,
    "current_close": 71.66,
    "current_date": "2026-08-03",
@@ -270,7 +270,7 @@
    "close": 24.1,
    "close_date": "2026-07-31",
    "ema8": 26.05,
-   "ema21": 26.27,
+   "ema21": 26.26,
    "vs_ema8_pct": -7.5,
    "current_close": 23.88,
    "current_date": "2026-08-03",
@@ -283,7 +283,7 @@
    "close": 33.1,
    "close_date": "2026-08-03",
    "ema8": 33.77,
-   "ema21": 31.06,
+   "ema21": 31.05,
    "vs_ema8_pct": -1.99,
    "action": "sell-warning",
    "strength": 2,
@@ -307,7 +307,7 @@
    "close": 133.8,
    "close_date": "2026-07-31",
    "ema8": 151.85,
-   "ema21": 129.19,
+   "ema21": 129.18,
    "vs_ema8_pct": -11.89,
    "current_close": 120.91,
    "current_date": "2026-08-03",
@@ -333,7 +333,7 @@
    "close": 103.75,
    "close_date": "2026-07-31",
    "ema8": 120.72,
-   "ema21": 110.9,
+   "ema21": 110.91,
    "vs_ema8_pct": -14.05,
    "current_close": 101.61,
    "current_date": "2026-08-03",
@@ -346,7 +346,7 @@
    "close": 190.4,
    "close_date": "2026-07-31",
    "ema8": 264.4,
-   "ema21": 280.33,
+   "ema21": 280.35,
    "vs_ema8_pct": -27.99,
    "current_close": 189.3,
    "current_date": "2026-08-03",
@@ -359,7 +359,7 @@
    "close": 687.0,
    "close_date": "2026-07-31",
    "ema8": 713.97,
-   "ema21": 637.44,
+   "ema21": 637.39,
    "vs_ema8_pct": -3.78,
    "current_close": 641.3,
    "current_date": "2026-08-03",
@@ -396,7 +396,7 @@
    "close": 259.64,
    "close_date": "2026-07-31",
    "ema8": 276.27,
-   "ema21": 227.84,
+   "ema21": 227.83,
    "vs_ema8_pct": -6.02,
    "current_close": 227.42,
    "current_date": "2026-08-03",
@@ -409,7 +409,7 @@
    "close": 156.51,
    "close_date": "2026-07-31",
    "ema8": 165.21,
-   "ema21": 173.91,
+   "ema21": 173.9,
    "vs_ema8_pct": -5.26,
    "current_close": 157.11,
    "current_date": "2026-08-03",
@@ -422,7 +422,7 @@
    "close": 64.3,
    "close_date": "2026-07-31",
    "ema8": 74.24,
-   "ema21": 79.23,
+   "ema21": 79.22,
    "vs_ema8_pct": -13.39,
    "current_close": 65.78,
    "current_date": "2026-08-03",
@@ -472,40 +472,7 @@
  },
  "kline_status": "ok (28/28)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "神州数码 (000034): — → sell-confirmed",
-  "紫光股份 (000938): — → sell-warning",
-  "浪潮信息 (000977): — → sell-confirmed",
-  "思源电气 (002028): — → sell-confirmed",
-  "通富微电 (002156): sell-warning → sell-confirmed",
-  "拓维信息 (002261): sell-warning → sell-confirmed",
-  "科华数据 (002335): — → sell-confirmed",
-  "北方华创 (002371): — → sell-confirmed",
-  "雅克科技 (002409): — → sell-confirmed",
-  "沪电股份 (002463): — → sell-confirmed",
-  "科士达 (002518): — → sell-confirmed",
-  "英维克 (002837): sell-warning → sell-confirmed",
-  "中际旭创 (300308): sell-warning → sell-confirmed",
-  "香农芯创 (300475): — → sell-confirmed",
-  "胜宏科技 (300476): — → sell-confirmed",
-  "长川科技 (300604): — → sell-confirmed",
-  "长电科技 (600584): — → sell-confirmed",
-  "工业富联 (601138): — → sell-confirmed",
-  "中科曙光 (603019): sell-warning → sell-confirmed",
-  "澜起科技 (688008): sell-warning → sell-confirmed",
-  "中微公司 (688012): — → sell-confirmed",
-  "海光信息 (688041): sell-warning → sell-confirmed",
-  "龙芯中科 (688047): — → sell-confirmed",
-  "华海清科 (688120): — → sell-warning",
-  "寒武纪 (688256): sell-warning → sell-confirmed",
-  "华虹公司 (688347): sell-warning → sell-confirmed",
-  "金盘科技 (688676): — → sell-confirmed",
-  "中芯国际 (688981): sell-warning → sell-confirmed",
-  "宏观门控生效: 大盘跌破周线 EMA21 (3809.66 < 3964.93); 观察列表 100% 处于 sell 信号",
-  "仓位建议变化: 🟠 大盘跌破周线 EMA21 (3809.66 < 3964.93); 观察列表 100% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱",
-  "量化 Top5 变化: 入 中际旭创/长川科技 · 出 中芯国际/中科曙光",
-  "🤖 A股模拟盘: 检测到触发但周线未收盘, 等待周五收盘确认 — 持仓周线收盘跌破 EMA21 (核心趋势破坏): 长川科技(300604) / 中微公司(688012) / 华虹公司(688347)；持仓掉出合格排名 Top10 (排名缓冲触发): 长川科技(有效排名 已出合格池) / 中微公司(有效排名 已出合格池) / 华虹公司(有效排名 已出合格池) ← 顶替者: 紫光股份(模型#17, 收复EMA21回到合格池) / 浪潮信息(模型#25, 收复EMA21回到合格池)"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 2255868.0,
   "cash": 506963.0,
