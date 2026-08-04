@@ -1,24 +1,24 @@
 {
- "last_run": "2026-08-04T18:11:45+08:00",
- "run_date": "2026-08-04",
+ "last_run": "2026-08-05T06:37:05+08:00",
+ "run_date": "2026-08-05",
  "top5": [
   {
    "code": "688256",
    "name": "寒武纪",
    "rank": 1,
-   "score": 1.733
+   "score": 1.732
   },
   {
    "code": "300308",
    "name": "中际旭创",
    "rank": 2,
-   "score": 1.414
+   "score": 1.417
   },
   {
    "code": "688041",
    "name": "海光信息",
    "rank": 3,
-   "score": 1.326
+   "score": 1.325
   },
   {
    "code": "688008",
@@ -30,7 +30,7 @@
    "code": "300604",
    "name": "长川科技",
    "rank": 5,
-   "score": 1.06
+   "score": 1.062
   }
  ],
  "candidates": [
@@ -38,19 +38,19 @@
    "code": "002463",
    "name": "沪电股份",
    "rank": 6,
-   "score": 0.885
+   "score": 0.887
   },
   {
    "code": "300475",
    "name": "香农芯创",
    "rank": 7,
-   "score": 0.816
+   "score": 0.817
   },
   {
    "code": "688012",
    "name": "中微公司",
    "rank": 8,
-   "score": 0.804
+   "score": 0.802
   },
   {
    "code": "300476",
@@ -62,7 +62,7 @@
    "code": "688120",
    "name": "华海清科",
    "rank": 10,
-   "score": 0.592
+   "score": 0.589
   }
  ],
  "signals": {
@@ -473,10 +473,7 @@
  },
  "kline_status": "ok (28/28)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "紫光股份 (000938): sell-warning → buy-gated",
-  "仓位建议变化: 🟠 大盘跌破周线 EMA21 (3822.28 < 3966.07); 观察列表 96% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 2350777.0,
   "cash": 506963.0,
