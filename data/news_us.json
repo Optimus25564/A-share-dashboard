@@ -455,6 +455,14 @@
       "url": "https://www.fxleaders.com/news/2026/07/30/nvidia-nvda-announces-q2-conference-call-as-stock-stabilizes/",
       "source": "FX Leaders",
       "content": "Nvidia shares recovered 1.19% on Thursday after dropping 9.5% over the prior week, stabilizing following confirmation of the August 26 earnings call. The stock swung from $195 at the start of July to $212 mid-month before pulling back amid broader AI sector rotation."
+    },
+    {
+      "date": "2026-08-02",
+      "type": "announcement",
+      "title": "NVIDIA Confirms Q2 FY2027 Earnings Call for August 26; Analysts Project Blackwell Revenue Acceleration",
+      "url": "https://www.fool.com/investing/2026/08/02/prediction-nvidia-stock-will-skyrocket-on-aug-26/",
+      "source": "Motley Fool",
+      "content": "NVIDIA confirmed Q2 FY2027 earnings conference call for August 26 at 2 p.m. PT (Q2 ended July 26, 2026). Analysts broadly bullish; Wall Street consensus projects continued Blackwell datacenter demand. NVDA stock is up ~2% YTD vs S&P 500 +7%, but multiple buy-side forecasts target $200+ by end of August."
     }
   ],
   "AVGO": [
@@ -737,6 +745,14 @@
       "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-avgo-ai-chip-momentum-171843575.html",
       "source": "Yahoo Finance",
       "content": "Analyst community rates AVGO Strong Buy with 23 Buy recommendations vs. only 3 Holds; consensus price target stands at $513.29, implying ~32% upside. Broadcom's custom silicon for hyperscalers and its networking portfolio continue to attract institutional interest ahead of the September 3 earnings report."
+    },
+    {
+      "date": "2026-08-03",
+      "type": "research",
+      "title": "Goldman Sachs Removes Broadcom from U.S. Conviction List, Adds Microsoft; Buy Rating Maintained",
+      "url": "https://www.roic.ai/news/goldman-refreshes-us-conviction-list-adds-microsoft-delta-ups-removes-broadcom-jj-08-03-2026",
+      "source": "ROIC.ai / Goldman Sachs",
+      "content": "Goldman Sachs refreshed its U.S. Conviction List August update, removing Broadcom (AVGO) and J&J, adding Microsoft, Delta, and UPS as part of a 'stocks for broadening market' theme. Goldman maintained its Buy rating on AVGO. Shares declined on the removal news."
     }
   ],
   "AMD": [
@@ -1091,6 +1107,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/heres-expect-advanced-micro-devices-152825306.html",
       "source": "Yahoo Finance",
       "content": "Wedbush analyst Matt Bryson raised his AMD price target from $450 to $600 (Outperform) ahead of Q2 earnings, citing faster-than-expected growth in AMD's AI data center business through 2027. The upgrade follows AMD's Zen 6 EPYC Venice launch at Advancing AI on July 22-23, the first server CPU on TSMC's 2nm node."
+    },
+    {
+      "date": "2026-08-04",
+      "type": "announcement",
+      "title": "AMD Q2 2026 Earnings After Close Today — Analysts Expect $11.3B Revenue (+47%), Helios Rack Systems Update in Focus",
+      "url": "https://www.fool.com/investing/2026/08/03/amd-reports-tuesday-one-number-decides-whether-54/",
+      "source": "Motley Fool",
+      "content": "AMD reports Q2 FY2026 after market close August 4. Consensus: revenue $11.3B (+47% YoY), adjusted EPS $1.61. Q1 2026 data center revenue was $5.8B (+57% YoY). Key watch: MI350 GPU shipments and Helios rack-scale system status — Helios entered full production and first shipments expected Q3 2026."
     }
   ],
   "INTC": [
@@ -1493,6 +1517,14 @@
       "url": "https://www.techpowerup.com/338726/intel-begins-massive-layoffs-in-foundry-auto-unit-and-marketing",
       "source": "TechPowerUp",
       "content": "Intel initiated a new round of workforce reductions spanning its Foundry division (up to 20% cuts), automotive, and marketing organizations as part of CEO Lip-Bu Tan's plan to reduce the global headcount by ~15%. The cuts come even as the Data Center and AI segment posted 59% YoY revenue growth to $6.3B in Q2."
+    },
+    {
+      "date": "2026-08-03",
+      "type": "news",
+      "title": "Intel Stock Falls 2.49% on August 3 on Sector Weakness, Tariff Risks; 2026 Capex Raised to >$20B",
+      "url": "https://stockstotrade.com/news/intel-corporation-intc-news-2026_08_03/",
+      "source": "StocksToTrade",
+      "content": "INTC fell 2.49% August 3 amid broad semiconductor weakness and new U.S. tariffs on 60+ countries raising cost/supply chain uncertainty. Intel confirmed 2026 capex will exceed $20B (up from $18B), with 2027 expected even higher. Q2 2026 included $170M restructuring charges. Q2 beat expectations on factory yield improvements and 18A foundry progress."
     }
   ],
   "QCOM": [
@@ -2065,6 +2097,14 @@
       "url": "https://investor.marvell.com/news-events/press-releases/detail/1026/marvell-technology-inc-declares-quarterly-dividend-payment",
       "source": "Marvell Technology Investor Relations",
       "content": "Marvell Technology declared a quarterly cash dividend of $0.06 per share, payable July 30, 2026, to shareholders of record — in line with the prior quarter's payout."
+    },
+    {
+      "date": "2026-08-01",
+      "type": "announcement",
+      "title": "Marvell Technology Announces Investor Day for October 6, 2026; Targeting Agentic AI Memory Infrastructure Showcase",
+      "url": "https://investor.marvell.com/news-events/press-releases",
+      "source": "Marvell Technology IR",
+      "content": "Marvell announced Investor Day on October 6, 2026 where it will showcase advanced AI memory and storage infrastructure for agentic AI inference at FMS 2026. NVIDIA CEO Jensen Huang had endorsed Marvell as the 'next trillion-dollar company' following a $2B NVIDIA investment. MRVL stock at $187.56 (+2.32%) as of July 31, market cap $168B."
     }
   ],
   "APP": [
@@ -2235,6 +2275,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/heres-expect-applovin-next-earnings-103507798.html",
       "source": "Yahoo Finance",
       "content": "Analysts flagged the Axon e-commerce platform advertiser ramp as the key variable for Q2, noting Bank of America's earlier observation that pixel additions slowed in June (~750 vs ~950 in May). Full-year consensus stands at $15.93 EPS and $8.24 billion revenue, representing ~59% and ~42% growth respectively over 2025."
+    },
+    {
+      "date": "2026-08-04",
+      "type": "announcement",
+      "title": "AppLovin Q2 2026 Earnings Due August 5; Analysts Expect EPS $3.72 (+64.6%); AXON Global Self-Serve Launch in Focus",
+      "url": "https://investors.applovin.com/events-and-presentations/event-details/2026/AppLovin-to-Announce-Second-Quarter-2026-Results-2026-dVTCRtK50c/default.aspx",
+      "source": "AppLovin IR",
+      "content": "AppLovin reporting Q2 2026 results August 5 after close (webinar 2 PM PT). Analysts expect EPS $3.72 (+64.6% YoY), Q2 revenue guided $1.915-1.945B with 84-85% adj. EBITDA margin. June 2026 saw AXON self-serve global launch, shifting from referral-only to fully open platform. Stock down 34% YTD ahead of report."
     }
   ],
   "TSM": [
@@ -3419,6 +3467,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/262062323-market-movers-klac-20260729",
       "source": "TradingKey",
       "content": "Following KLA's Q4 FY2026 results, Wells Fargo reduced its price target to $245 from $305 and Stifel maintained a Buy rating but trimmed its target from $270 to $250. The stock closed down 10.46% on July 29 as post-earnings analyst revisions compounded selling pressure."
+    },
+    {
+      "date": "2026-08-03",
+      "type": "research",
+      "title": "KLA Corp Falls 4.86% on August 3, Down 28% From 30-Day High; BofA Sees Buy Opportunity Before WFE Supercycle",
+      "url": "https://stockstory.org/us/stocks/nasdaq/lrcx/news/why-up-down/lam-research-and-kla-corporation-stocks-trade-down-what-you-need-to-know",
+      "source": "StockStory",
+      "content": "KLAC fell to $892 (-4.86%) on August 3, down ~28% from recent highs. Broader semiconductor equipment selloff driven by memory-price-peak fears and cheaper Chinese AI models reducing hardware capex expectations. BofA analyst Vivek Arya rates KLAC, LRCX, and AMAT as buy opportunities before a multi-year WFE supercycle."
     }
   ],
   "ONTO": [
@@ -3501,6 +3557,14 @@
       "url": "https://www.gurufocus.com/news/8962765/onto-innovation-onto-to-release-q2-2026-financial-results-with-strong-growth-projections",
       "source": "GuruFocus / Onto Innovation IR",
       "content": "ONTO announced Q2 2026 financial results scheduled for August 6. Revenue guide $320-330M (midpoint $325M vs $291.9M Q1 2026 record). Dragonfly G5 system qualified at leading 2.5D logic and HBM customers; Atlas G6 selected by second logic customer for gate-all-around metrology. AI semiconductor inspection demand driving strong backlog."
+    },
+    {
+      "date": "2026-08-01",
+      "type": "announcement",
+      "title": "Onto Innovation Q2 2026 Earnings Due August 6; Guided Revenue $320-330M (+28% YoY), Non-GAAP EPS $1.65-1.73",
+      "url": "https://www.gurufocus.com/news/8962765/onto-innovation-onto-to-release-q2-2026-financial-results-with-strong-growth-projections",
+      "source": "GuruFocus",
+      "content": "Onto Innovation reporting Q2 2026 after market close August 6. Company guided revenue $320-330M (+28% YoY) with gross margin 56-56.5% and non-GAAP diluted EPS $1.65-1.73. Analysts expect EPS $1.68 / revenue $325.25M. Full-year revenue tracking to exceed $1.3B. Conference call at 4:30 PM ET."
     }
   ],
   "SNPS": [
@@ -4427,6 +4491,14 @@
       "url": "https://www.tradingkey.com/news/market-movers/262067929-market-movers-sndk-20260731",
       "source": "TradingKey",
       "content": "SanDisk fell 4.78% on July 31 after industry data showed a significant surplus in 256-layer NAND flash inventories, triggering a 12% drop in spot pricing that raises near-term gross margin risks; Q4 FY2026 earnings (revenue guided $7.75B-$8.25B, EPS ~$33) remain scheduled for August 5."
+    },
+    {
+      "date": "2026-08-04",
+      "type": "announcement",
+      "title": "SanDisk Q4 and FY2026 Earnings Due August 5; BiCS10 10th-Gen NAND Sampling Launched, Investor Day August 13",
+      "url": "https://www.businesswire.com/news/home/20260708521928/en/Sandisk-to-Report-Fiscal-Fourth-Quarter-and-Fiscal-Year-2026-Results-on-August-5-2026-Announces-Investor-Day-on-August-13-2026",
+      "source": "BusinessWire",
+      "content": "SanDisk reporting FY Q4 2026 results August 5 at 1:30 PM PT. Q4 guided revenue $7.75-8.25B and non-GAAP EPS $30-33. BiCS10 (10th-gen 3D NAND): 1Tb TLC with >29Gb/mm² density (+59%), 4.8Gb/s interface speed (+33% vs gen 8). Investor Day August 13. Stock has fallen 50% over the past month on NAND inventory concerns."
     }
   ],
   "COHR": [
@@ -5323,6 +5395,14 @@
       "url": "https://www.bloomberg.com/news/articles/2026-07-29/microsoft-reports-quarterly-cloud-revenue-that-beat-estimates",
       "source": "Bloomberg",
       "content": "Azure's 43% growth rate was its strongest since early 2022, and full-year Azure revenue surpassed $100 billion for the first time in company history. Microsoft's net income rose 31% to $35.8 billion, boosted in part by a $3.2 billion gain from its investment in AI lab Anthropic."
+    },
+    {
+      "date": "2026-08-03",
+      "type": "research",
+      "title": "Goldman Sachs Adds Microsoft to U.S. Conviction List Following Q4 FY2026 Azure Beat and 45% Q1 FY2027 Growth Guide",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/microsoft-joins-broadcom-exits-goldman-110015714.html",
+      "source": "Yahoo Finance / Goldman Sachs",
+      "content": "Goldman Sachs added Microsoft to its August U.S. Conviction List as part of 'stocks for a broadening market' theme. Follows MSFT Q4 FY2026 beat: Azure +43%, Q1 FY2027 guide 45% constant currency, FY2027 capex $255-260B (+35% YoY). EPS $4.74 beat $4.24 est; stock rose 8% after-hours on July 29."
     }
   ],
   "GOOGL": [
@@ -5733,6 +5813,14 @@
       "url": "https://seekingalpha.com/article/4927220-alphabet-stock-selloff-misses-bigger-story",
       "source": "Seeking Alpha",
       "content": "Analysts argue the market's negative reaction to Alphabet's elevated capex guidance overlooks Google Cloud's record 82% revenue growth to $24.8 billion and its $514 billion backlog expansion. The company's Cloud operating margin expansion to 35.6%, the $29.5 billion Wiz acquisition, and Waymo's path to financial contribution are highlighted as long-term catalysts."
+    },
+    {
+      "date": "2026-08-03",
+      "type": "news",
+      "title": "Alphabet Stock Rebounds 5.1% on August 3 — Morgan Stanley Reassures on AI Capex; Google Cloud Grew 82% YoY",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60885285/alphabet-stock-is-climbing-whats-going-on-today",
+      "source": "Benzinga",
+      "content": "GOOGL rose 5.1% to ~$374 on August 3, recovering from post-Q2 selloff (stock had traded below pre-earnings price all of prior week). Morgan Stanley reassured investors on capex sustainability. Google Cloud +82% YoY; Q2 EPS $9.11 beat estimates; still $53.3B positive FCF despite $195-205B capex guidance."
     }
   ],
   "AMZN": [
@@ -6457,6 +6545,22 @@
       "url": "https://www.sec.gov/Archives/edgar/data/0001326801/000162828026050596/meta-06302026xexhibit991.htm",
       "source": "SEC EDGAR",
       "content": "Meta's Q2 2026 8-K filing confirmed free cash flow dropped 91% to $784M from $8.55B a year earlier, as $31.08B in quarterly capital expenditures and lease payments compressed margins despite record top-line revenue growth."
+    },
+    {
+      "date": "2026-07-31",
+      "type": "announcement",
+      "title": "Meta Confirms Launch of Cloud Computing Business — Direct AI Monetization Beyond Advertising",
+      "url": "https://www.fool.com/investing/2026/07/31/everyone-just-missed-a-major-meta-announcement/",
+      "source": "Motley Fool",
+      "content": "Meta Platforms confirmed launch of a cloud computing business, creating a direct path to AI monetization outside core advertising. Announcement was made alongside Q2 earnings but received limited initial coverage. Analysts see this as material long-term upside for Meta's AI infrastructure investments."
+    },
+    {
+      "date": "2026-08-03",
+      "type": "news",
+      "title": "Meta Platforms Stock Rises 6.22% on August 3 as Investors Return to Mega-Cap Tech After Post-Earnings Dip",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60882892/meta-platforms-stock-is-gaining-monday-whats-going-on",
+      "source": "Benzinga",
+      "content": "META climbed 6.22% to $590 on August 3 as investors returned to mega-cap tech after last week's post-earnings selloff. Q3 guidance $61-64B. Raised capex floor to $130B (from $125B) while keeping ceiling at $145B. Analyst average 12-month target $761 (Strong Buy). Broader market rally driven by Iran truce catalyst."
     }
   ],
   "AAPL": [
@@ -6835,6 +6939,14 @@
       "url": "https://macdailynews.com/2026/07/31/analysts-split-on-apple-after-strong-q3-beat-overshadowed-by-soft-q4-guidance/",
       "source": "MacDailyNews",
       "content": "Following Apple's Q3 report, GF Securities downgraded AAPL to Hold citing valuation and demand risks from memory costs, JP Morgan cut its price target, while other analysts maintained Buy ratings, creating a notable divide over the September quarter supply outlook."
+    },
+    {
+      "date": "2026-08-01",
+      "type": "news",
+      "title": "Apple Stock Falls 10% in Four Days After Soft Q4 Guidance; Supply Constraints Throttle Strong iPhone Demand; Dividend Ex-Date Aug 10",
+      "url": "https://www.foreignpolicyjournal.com/2026/08/01/amazon-nasdaq-amzn-earnings-surge-reignites-ai-trade-lifting-nasdaq-futures-as-apple-nasdaq-aapl-slides-7/",
+      "source": "Foreign Policy Journal",
+      "content": "AAPL fell over 7% on August 1 and 10%+ over four trading days after Q3 FY2026 guidance signaled supply-side bottlenecks limiting fulfillment of 'incredibly strong demand' for iPhone, iPad, and Mac Pro. Despite record Q3 revenue $109.4B, services growth disappointed. Quarterly dividend $0.27/share, ex-date August 10, payable August 13."
     }
   ],
   "TSLA": [
@@ -7205,6 +7317,14 @@
       "url": "https://electrek.co/2026/07/22/tesla-tsla-q2-2026-financial-results/",
       "source": "Electrek",
       "content": "Tesla posted record Q2 revenue of $28.2B (+26% YoY) but non-GAAP EPS of $0.33 badly missed the ~$0.47-$0.50 consensus; operating income fell 57% to $398M as spending on AI, Optimus, and robotaxi surged, sending shares down ~14% the following session."
+    },
+    {
+      "date": "2026-08-03",
+      "type": "news",
+      "title": "Tesla Robotaxi Fully Autonomous in Austin, Dallas, Houston, Miami; FSD v15 Expected Late 2026/Early 2027",
+      "url": "https://www.fool.com/investing/2026/08/03/teslas-big-robotaxi-progress-is-hidden-in-plain-si/",
+      "source": "Motley Fool",
+      "content": "Tesla robotaxi operates fully unsupervised (no safety monitor) in Austin, Dallas, Houston, and Miami; Bay Area still uses safety monitors. Musk targets v15 software release late 2026/early 2027 before major Cybercab fleet scaling. Key investor watch: v15 timeline, Cybercab regulatory approvals, EU market entry, and ongoing safety record."
     }
   ],
   "CRWV": [
@@ -7535,6 +7655,22 @@
       "url": "https://www.businesswire.com/news/home/20260727724365/en/CoreWeave-Announces-Date-of-Second-Quarter-2026-Financial-Results-and-Conference-Call",
       "source": "BusinessWire",
       "content": "CoreWeave officially announced its Q2 2026 financial results will be reported on August 11, 2026, with a conference call at 5:00 PM ET; separately, an $8.5B loan facility was confirmed backing the company's aggressive AI cloud infrastructure expansion."
+    },
+    {
+      "date": "2026-07-30",
+      "type": "announcement",
+      "title": "CoreWeave Launches Federal Division via Leidos Partnership to Serve U.S. Defense and Intelligence AI Workloads",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/coreweave-just-scored-leidos-partnership-141239028.html",
+      "source": "Yahoo Finance",
+      "content": "CoreWeave announced CoreWeave Federal via a partnership with Leidos Holdings, providing secure AI cloud services to U.S. defense and intelligence agencies. Stock surged ~21% intraday on the announcement. Gartner named CoreWeave a Visionary in 2026 Magic Quadrant for Cloud AI Infrastructure. Truist upgraded to Buy citing specialized cloud edge advantage."
+    },
+    {
+      "date": "2026-08-03",
+      "type": "news",
+      "title": "CoreWeave Stock Surges 19.55% on August 3; Q2 2026 Earnings Scheduled August 11",
+      "url": "https://www.timothysykes.com/news/coreweave-inc-crwv-news-2026_08_03/",
+      "source": "Timothy Sykes",
+      "content": "CRWV continued rebound rally, up 19.55% on August 3 as Wall Street backed aggressive AI buildout. Q2 2026 results scheduled August 11 at 5:00 PM ET. Quarterly revenue ~$2.08B, gross margin ~69%, net margin ~-25% as company scales cloud infrastructure. Federal partnership with Leidos and Gartner Visionary recognition driving institutional interest."
     }
   ],
   "CEG": [
@@ -7761,6 +7897,14 @@
       "url": "https://www.tikr.com/blog/constellation-energy-stock-fell-41-a-june-ferc-filing-could-signal-a-recovery",
       "source": "TIKR.com",
       "content": "Analysis of Constellation Energy's 25-41% drawdown in 2026 highlights a June FERC waiver filed for the Crane Clean Energy Center nuclear restart as a potential recovery catalyst. The company's nuclear fleet and AI/data center power agreements remain key long-term drivers despite near-term regulatory and market headwinds."
+    },
+    {
+      "date": "2026-08-01",
+      "type": "announcement",
+      "title": "Constellation Energy Q2 2026 Earnings Due August 6 — EPS Expected $2.35 (+23% YoY); Analysts Flag 26% Undervaluation",
+      "url": "https://www.sahmcapital.com/news/content/constellation-energy-ceg-draws-earnings-focus-is-a-26-undervalued-view-still-convincing-2026-08-01",
+      "source": "Sahm Capital",
+      "content": "CEG reporting Q2 2026 on August 6. Analysts expect EPS $2.35 (+23% YoY). Q1 adj. operating EPS was $2.74 (beat). Nuclear fleet capacity factor 92.3%. FY2026 adj. operating EPS guidance $11-12/share affirmed. FERC waiver for Crane nuclear plant restart advancing. Stock down 25% in 2026, some analysts cite 26% undervaluation."
     }
   ],
   "VRT": [
@@ -9813,6 +9957,14 @@
       "url": "https://247wallst.com/investing/2026/07/31/rocket-labs-rally-isnt-random-3-catalysts-driving-the-stock-higher/",
       "source": "24/7 Wall St.",
       "content": "Analysis identifies three catalysts behind Rocket Lab's stock recovery: the record $266M Space Force missile defense contract (12 suborbital launches from Kodiak, Alaska), the new iQPS multi-launch deal, and expansion of its four-site launch network for responsive defense missions. Analyst maintains a Buy rating with a $124 price target."
+    },
+    {
+      "date": "2026-08-03",
+      "type": "announcement",
+      "title": "Rocket Lab Q2 2026 Earnings Set for August 10; Neutron Launch Vehicle Timeline the Primary Investor Focus",
+      "url": "https://www.foreignpolicyjournal.com/2026/08/03/rocket-lab-nasdaq-rklb-heads-into-august-10-earnings-with-neutron-timeline-as-the-key-metric-to-watch/",
+      "source": "Foreign Policy Journal",
+      "content": "Rocket Lab releasing Q2 2026 results after market close August 10 (conference call 2 p.m. PT). Stock down 13% YTD despite Q1 revenue $200.3M (+63.5% YoY) and narrowed EPS loss ($-0.07 vs $-0.12). $266M Missile Defense Contract with U.S. Space Force and iQPS multi-launch deal recent positives. Neutron heavy rocket timeline is primary investor metric."
     }
   ],
   "HUBB": [
@@ -10323,6 +10475,14 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/arista-networks-anet-earnings-expected-140023909.html",
       "source": "Yahoo Finance",
       "content": "Analysts expect Arista Networks to report Q2 EPS of $0.89 (+21.9% YoY) and revenue of ~$607M (+16.7% YoY). Key investor focus includes progress toward the $3.5B AI revenue target and campus networking tracking toward $1.25B."
+    },
+    {
+      "date": "2026-08-04",
+      "type": "announcement",
+      "title": "Arista Networks Q2 2026 Earnings After Close Today — Guided $2.80B Revenue, Non-GAAP EPS ~$0.88, Margin 46-47%",
+      "url": "https://www.morningstar.com/news/business-wire/20260707716090/arista-networks-to-announce-q2-2026-financial-results-on-tuesday-august-4-2026",
+      "source": "Morningstar / BusinessWire",
+      "content": "Arista Networks releasing Q2 2026 results after close August 4, 2026 (call at 4:30 PM ET). Management guided revenue ~$2.80B and non-GAAP EPS ~$0.88 with 46-47% operating margin. Consensus at $2.83B revenue / EPS $0.89. Options market pricing ±13.98% swing. AI switch demand and hyperscaler concentration risk are key watch items."
     }
   ],
   "ARM": [
@@ -10911,6 +11071,14 @@
       "url": "https://www.defenseworld.net/2026/07/31/lam-research-nasdaqlrcx-given-new-367-00-price-target-at-morgan-stanley.html",
       "source": "Morgan Stanley (via Defense World)",
       "content": "Morgan Stanley revised its price target for Lam Research from $404 to $367 while maintaining its Overweight rating, reflecting post-earnings valuation recalibration. The firm remains constructive on LRCX given strong AI-driven demand for HBM and advanced NAND manufacturing equipment."
+    },
+    {
+      "date": "2026-08-03",
+      "type": "research",
+      "title": "BofA Calls LRCX, AMAT, KLAC Pullback a Buy Entry; WFE Spending Seen Rising from $144B (2026) to $250B by 2028",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60619308/semiconductor-stocks-buy-selloff-bank-of-america-picks",
+      "source": "Benzinga / Bank of America",
+      "content": "BofA analyst Vivek Arya told clients the 20-28% pullback in LRCX, AMAT, and KLAC is an entry point, not a warning. LRCX fell ~20.4% over 30 days to ~$280 despite Q4 FY2026 record revenue $6.72B (+30% YoY) beating estimates. Arya projects wafer fab equipment spending rising $144B (2026) → $250B (2028), ~30%/yr CAGR."
     }
   ],
   "CDNS": [
@@ -11709,6 +11877,14 @@
       "url": "https://www.fool.com/investing/2026/07/31/prediction-palantir-stock-is-going-to-plunge-aug-4/",
       "source": "The Motley Fool",
       "content": "Contrarian analysis argues Palantir shares remain overvalued even at their depressed 2026 levels, with the stock likely to fall post-earnings due to continued multiple compression across enterprise SaaS. The piece notes PLTR has declined ~30% year-to-date heading into the August 3 report."
+    },
+    {
+      "date": "2026-08-03",
+      "type": "announcement",
+      "title": "Palantir Q2 2026 Earnings Beat: EPS $0.41 vs Est $0.33 (+24%), Revenue $1.935B (+93% YoY); Guidance Raised to $8.15-8.16B",
+      "url": "https://www.gurufocus.com/news/8999291/palantir-technologies-inc-pltr-q2-earnings-report-gaap-eps-of-041-exceeds-estimates-revenue-hits-1935-billiongf-score-81100-130-undervalued",
+      "source": "GuruFocus",
+      "content": "PLTR Q2 2026: GAAP EPS $0.41 beat estimate $0.33 (+24%). Revenue $1.935B (+93% YoY). Net income $1.07B vs $329M YoY. U.S. commercial revenue +149% YoY; 220 deals ≥$1M. Raised FY2026 guidance to $8.15-8.16B from $7.65-7.66B prior. Stock surged ~12% post-earnings."
     }
   ],
   "IREN": [
@@ -12873,6 +13049,14 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60740022/astera-labs-stock-is-falling-tuesday-whats-going-on",
       "source": "Benzinga",
       "content": "Astera Labs shares fell sharply Tuesday amid a broader AI semiconductor sector selloff, pushing the stock 19% below its 20-day moving average despite a 135% year-to-date gain. The pullback came as investors de-risked ahead of the August 4 Q2 2026 earnings call."
+    },
+    {
+      "date": "2026-08-04",
+      "type": "announcement",
+      "title": "Astera Labs Q2 2026 Earnings After Close Today — Guided $355-365M Revenue (+87% YoY), Non-GAAP EPS $0.68-0.70",
+      "url": "https://www.stocktitan.net/news/ALAB/astera-labs-announces-conference-call-to-review-second-quarter-2026-s2dnxh4zjsp3.html",
+      "source": "StockTitan",
+      "content": "Astera Labs reporting Q2 2026 results after close August 4 (call at 4:30 PM ET). Guided revenue $355-365M (+87% YoY), non-GAAP EPS $0.68-0.70, gross margin ~73% (down from 76.4% due to customer warrant agreement impact). Stock surged 26.76% in pre-earnings buying through July 30 on AI networking demand optimism."
     }
   ],
   "CIEN": [
@@ -14227,6 +14411,14 @@
       "url": "https://www.stocktitan.net/news/NRG/nrg-energy-to-report-second-quarter-2026-financial-results-on-august-ohggrp6q98c1.html",
       "source": "StockTitan / Zacks",
       "content": "NRG Energy will report Q2 2026 results on August 4 with analysts expecting EPS of $1.83 (+8.9% YoY) and revenue of ~$5.89 billion. However, consensus estimates have declined 21.7% in recent months, earning NRG a Zacks Rank #4 (Sell) ahead of the report."
+    },
+    {
+      "date": "2026-08-04",
+      "type": "announcement",
+      "title": "NRG Energy Q2 2026 Earnings Due Today August 4 — Analysts Expect EPS $1.83 (+8.9% YoY) Before Market Open",
+      "url": "https://investors.nrg.com/news-releases/news-release-details/nrg-energy-report-second-quarter-2026-financial-results-august-4",
+      "source": "NRG Investor Relations",
+      "content": "NRG Energy reporting Q2 2026 financial results August 4, 2026 at 9:00 AM EST pre-market. Analysts expect EPS $1.83 (+8.9% YoY from $1.68). NRG has beaten Street bottom-line estimates in 3 of last 4 quarters. Conference call follows the announcement. AI data center power demand is key tailwind for NRG energy portfolio."
     }
   ],
   "KMI": [
@@ -14479,6 +14671,14 @@
       "url": "https://finance.yahoo.com/energy/articles/expect-williams-companies-q2-2026-125837826.html",
       "source": "Yahoo Finance",
       "content": "Williams Companies is projected to report Q2 2026 EPS of $0.52 (+13% YoY) after the close on August 3, with a conference call on August 4 at 9:30 a.m. ET. Analysts note a positive Earnings ESP of 7.95%, pointing to growing optimism ahead of the print."
+    },
+    {
+      "date": "2026-08-03",
+      "type": "announcement",
+      "title": "Williams Companies Q2 2026 Earnings Beat: GAAP EPS $0.68 vs Est $0.51 (+33%); Net Income $827M",
+      "url": "https://www.gurufocus.com/news/8999293/did-williams-companies-inc-wmb-just-deliver-a-q2-earnings-surprise-eps-of-068-beats-estimates-amid-159-overvaluation-gf-score-79100",
+      "source": "GuruFocus",
+      "content": "Williams Companies (WMB) reported Q2 2026 results August 3: GAAP net income $827M, or $0.68/diluted share, significantly beating estimate of $0.51 (+33%). Natural gas infrastructure operator benefits from growing AI data center and LNG export demand for pipeline capacity."
     }
   ],
   "ASE": [
@@ -15159,6 +15359,14 @@
       "url": "https://finance.yahoo.com/news/servicenow-now-stock-pullback-may-221814128.html",
       "source": "Yahoo Finance / Benzinga",
       "content": "Following ServiceNow's Q2 2026 beat (revenue +24% to $3.987B, EPS beat, AI ACV exceeding $1B), Evercore ISI raised its PT to $160 (Outperform) and BMO Capital raised to $118 (Outperform). Full-year revenue guidance set at $15.735B-$15.775B. Stock had surged 6.9% on earnings day (July 22) before pulling back."
+    },
+    {
+      "date": "2026-07-27",
+      "type": "news",
+      "title": "ServiceNow Jumps 8%, Salesforce +7%, Workday +10% as Enterprise Software Rebounds on AI Rotation",
+      "url": "https://247wallst.com/investing/2026/07/27/salesforce-surges-7-servicenow-jumps-8-workday-jumps-10-as-software-rebounds-on-ai-rotation/",
+      "source": "24/7 Wall St.",
+      "content": "Enterprise software staged coordinated rebound on July 27 with NOW +8% to $107, CRM +7%, Workday +10%. ServiceNow Q2 2026 AI ACV surpassed $1B milestone; agentic AI deployments up 9x in 9 months; AI Control Tower at 500+ customers in 6 months. FY2026 subscription revenue guidance raised to $15.76-15.78B (+22.5% YoY)."
     }
   ],
   "CRM": [
@@ -15393,6 +15601,14 @@
       "url": "https://www.gurufocus.com/news/8988150/salesforce-inc-crm-shares-surge-38-what-gf-score-of-86-tells-investors",
       "source": "GuruFocus",
       "content": "Salesforce climbed 3.8% on July 29, supported by Agentforce reaching $1.2B in ARR (up 205% YoY) and the preceding week's $1.6B Veterans Affairs Agentforce/Missionforce contract award. The stock screens as deeply undervalued relative to DCF-based fair value estimates despite buybacks continuing."
+    },
+    {
+      "date": "2026-07-27",
+      "type": "news",
+      "title": "Salesforce Surges 7% in Software AI Rotation Rally; Agentforce ARR Crosses $1.2B (+205% YoY)",
+      "url": "https://247wallst.com/investing/2026/07/27/salesforce-surges-7-servicenow-jumps-8-workday-jumps-10-as-software-rebounds-on-ai-rotation/",
+      "source": "24/7 Wall St.",
+      "content": "Salesforce shares rose 7% to $176 on July 27 in broad software AI rotation. Q1 FY2027 EPS $3.88 beat estimates by 24%; Agentforce ARR crossed $1.2B (+205% YoY). Stock is down 33% YTD, now trading at 14x forward P/E — one of the cheapest in mega-cap SaaS. Strong enterprise deal pipeline with VA contract ($1.6B) and 220+ Agentforce enterprise deals."
     }
   ]
 }
