@@ -1,36 +1,36 @@
 {
- "last_run": "2026-08-05T06:38:00+08:00",
+ "last_run": "2026-08-05T18:08:31+08:00",
  "run_date": "2026-08-05",
  "top5": [
   {
    "code": "MU",
    "name": "Micron",
    "rank": 1,
-   "score": 2.267
+   "score": 2.269
   },
   {
    "code": "SNDK",
    "name": "Sandisk",
    "rank": 2,
-   "score": 1.817
+   "score": 1.82
   },
   {
    "code": "NVDA",
    "name": "Nvidia",
    "rank": 3,
-   "score": 1.285
+   "score": 1.284
   },
   {
    "code": "CRDO",
    "name": "Credo Technology",
    "rank": 4,
-   "score": 1.228
+   "score": 1.23
   },
   {
    "code": "PLTR",
    "name": "Palantir",
    "rank": 5,
-   "score": 1.204
+   "score": 1.215
   }
  ],
  "candidates": [
@@ -38,7 +38,7 @@
    "code": "ALAB",
    "name": "Astera Labs",
    "rank": 6,
-   "score": 1.119
+   "score": 1.123
   },
   {
    "code": "APP",
@@ -50,19 +50,19 @@
    "code": "AVGO",
    "name": "Broadcom",
    "rank": 8,
-   "score": 1.007
+   "score": 1.008
   },
   {
    "code": "TSM",
    "name": "TSMC",
    "rank": 9,
-   "score": 0.953
+   "score": 0.952
   },
   {
-   "code": "AMD",
-   "name": "AMD",
+   "code": "ARM",
+   "name": "Arm Holdings",
    "rank": 10,
-   "score": 0.82
+   "score": 0.823
   }
  ],
  "signals": {
@@ -936,35 +936,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "Astera Labs (ALAB): sell-confirmed → hold",
-  "Applied Materials (AMAT): sell-confirmed → hold",
-  "AMD (AMD): sell-confirmed → buy",
-  "Arista Networks (ANET): buy-gated → buy",
-  "ASE Technology (ASE): sell-confirmed → hold",
-  "Broadcom (AVGO): hold → buy-deep",
-  "Coherent (COHR): sell-confirmed → hold",
-  "Credo Technology (CRDO): sell-confirmed → hold",
-  "Cisco Systems (CSCO): buy-gated → buy",
-  "Eaton (ETN): buy-gated → buy",
-  "Comfort Systems (FIX): sell-confirmed → hold",
-  "Fabrinet (FN): sell-confirmed → hold",
-  "Hubbell (HUBB): sell-confirmed → hold",
-  "Johnson Controls (JCI): buy-gated → buy",
-  "Lumentum (LITE): sell-confirmed → hold",
-  "Marvell (MRVL): sell-confirmed → hold",
-  "NRG Energy (NRG): hold → sell-confirmed",
-  "Nvidia (NVDA): buy-gated → buy-deep",
-  "Onto Innovation (ONTO): sell-confirmed → hold",
-  "Oracle (ORCL): sell-confirmed → hold",
-  "Palantir (PLTR): sell-confirmed → hold",
-  "VanEck Semiconductor ETF (SMH): sell-confirmed → hold",
-  "TSMC (TSM): sell-confirmed → hold",
-  "Trane Technologies (TT): sell-confirmed → hold",
-  "SPDR Metals & Mining (XME): sell-confirmed → hold",
-  "宏观门控解除 — 可按排名买回卫星舱",
-  "🤖 美股模拟盘: 检测到触发但周线未收盘, 等待周五收盘确认 — 宏观阶梯变档: 宏观门控 (核心80%, 卫星舱现金) → 正常 (核心80% + 卫星20%)"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 287394.38,
   "cash": 57290.0,
