@@ -1,5 +1,5 @@
 {
- "last_run": "2026-08-06T06:37:07+08:00",
+ "last_run": "2026-08-06T18:10:57+08:00",
  "run_date": "2026-08-06",
  "top5": [
   {
@@ -12,25 +12,25 @@
    "code": "SNDK",
    "name": "Sandisk",
    "rank": 2,
-   "score": 1.82
+   "score": 1.818
   },
   {
    "code": "NVDA",
    "name": "Nvidia",
    "rank": 3,
-   "score": 1.284
+   "score": 1.286
   },
   {
    "code": "CRDO",
    "name": "Credo Technology",
    "rank": 4,
-   "score": 1.23
+   "score": 1.228
   },
   {
    "code": "PLTR",
    "name": "Palantir",
    "rank": 5,
-   "score": 1.215
+   "score": 1.214
   }
  ],
  "candidates": [
@@ -38,7 +38,7 @@
    "code": "ALAB",
    "name": "Astera Labs",
    "rank": 6,
-   "score": 1.123
+   "score": 1.118
   },
   {
    "code": "APP",
@@ -50,7 +50,7 @@
    "code": "AVGO",
    "name": "Broadcom",
    "rank": 8,
-   "score": 1.008
+   "score": 1.009
   },
   {
    "code": "TSM",
@@ -62,7 +62,7 @@
    "code": "ARM",
    "name": "Arm Holdings",
    "rank": 10,
-   "score": 0.823
+   "score": 0.822
   }
  ],
  "signals": {
@@ -962,28 +962,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "Astera Labs (ALAB): hold → sell-confirmed",
-  "Applied Materials (AMAT): hold → sell-confirmed",
-  "AMD (AMD): buy → sell-confirmed",
-  "Arista Networks (ANET): buy → buy-gated",
-  "ASE Technology (ASE): hold → sell-confirmed",
-  "Broadcom (AVGO): buy-deep → buy-gated",
-  "Global X Copper Miners ETF (COPX): hold → buy-gated",
-  "Cisco Systems (CSCO): buy → buy-gated",
-  "Eaton (ETN): buy → buy-gated",
-  "Comfort Systems (FIX): hold → sell-confirmed",
-  "Johnson Controls (JCI): buy → buy-gated",
-  "Marvell (MRVL): hold → sell-confirmed",
-  "Nvidia (NVDA): buy-deep → buy-gated",
-  "Onto Innovation (ONTO): hold → sell-confirmed",
-  "VanEck Semiconductor ETF (SMH): hold → sell-confirmed",
-  "TSMC (TSM): hold → sell-confirmed",
-  "Trane Technologies (TT): hold → buy-gated",
-  "宏观门控生效: 观察列表 61% 处于 sell 信号",
-  "仓位建议变化: 🟠 观察列表 61% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱",
-  "🤖 美股模拟盘: 检测到触发但周线未收盘, 等待周五收盘确认 — 宏观阶梯变档: 正常 (核心80% + 卫星20%) → 宏观门控 (核心80%, 卫星舱现金)"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 289167.23,
   "cash": 57290.0,
