@@ -1,6 +1,6 @@
 {
- "last_run": "2026-08-06T18:09:48+08:00",
- "run_date": "2026-08-06",
+ "last_run": "2026-08-07T09:04:07+08:00",
+ "run_date": "2026-08-07",
  "top5": [
   {
    "code": "688256",
@@ -12,25 +12,25 @@
    "code": "300308",
    "name": "中际旭创",
    "rank": 2,
-   "score": 1.408
+   "score": 1.407
   },
   {
    "code": "688041",
    "name": "海光信息",
    "rank": 3,
-   "score": 1.325
+   "score": 1.324
   },
   {
    "code": "688008",
    "name": "澜起科技",
    "rank": 4,
-   "score": 1.219
+   "score": 1.217
   },
   {
    "code": "300604",
    "name": "长川科技",
    "rank": 5,
-   "score": 1.065
+   "score": 1.066
   }
  ],
  "candidates": [
@@ -56,7 +56,7 @@
    "code": "300476",
    "name": "胜宏科技",
    "rank": 9,
-   "score": 0.694
+   "score": 0.697
   },
   {
    "code": "688120",
@@ -467,10 +467,7 @@
  },
  "kline_status": "ok (28/28)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "长川科技 (300604): sell-confirmed → buy-gated",
-  "仓位建议变化: 🟠 大盘跌破周线 EMA21 (3900.35 < 3973.17); 观察列表 82% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 2546458.0,
   "cash": 506963.0,
