@@ -1,35 +1,145 @@
 {
- "cash": 57289.99999999999,
+ "cash": 44971.57999999999,
  "initialCash": 300000,
  "currency": "$",
  "positions": {
   "NVDA": {
-   "qty": 254,
+   "qty": 238,
    "avgCost": 210.92865384615382,
    "name": "Nvidia"
   },
   "AAPL": {
-   "qty": 130,
+   "qty": 37,
    "avgCost": 315.32,
    "name": "Apple"
   },
   "MU": {
-   "qty": 49,
-   "avgCost": 939.0305555555556,
+   "qty": 52,
+   "avgCost": 935.4847542735042,
    "name": "Micron"
   },
   "AVGO": {
-   "qty": 118,
+   "qty": 107,
    "avgCost": 381.92,
    "name": "Broadcom"
   },
   "TSM": {
-   "qty": 103,
+   "qty": 29,
    "avgCost": 403.41,
    "name": "TSMC"
+  },
+  "MSFT": {
+   "qty": 88,
+   "avgCost": 499.99,
+   "name": "Microsoft"
+  },
+  "GOOGL": {
+   "qty": 34,
+   "avgCost": 354.3,
+   "name": "Alphabet"
+  },
+  "ARM": {
+   "qty": 39,
+   "avgCost": 282.57,
+   "name": "Arm Holdings"
+  },
+  "ANET": {
+   "qty": 59,
+   "avgCost": 188.67,
+   "name": "Arista Networks"
   }
  },
  "history": [
+  {
+   "ts": "2026-08-08 06:08",
+   "side": "buy",
+   "code": "ANET",
+   "name": "Arista Networks",
+   "price": 188.67,
+   "qty": 59,
+   "amount": 11131.53,
+   "cashAfter": 44971.58
+  },
+  {
+   "ts": "2026-08-08 06:08",
+   "side": "buy",
+   "code": "ARM",
+   "name": "Arm Holdings",
+   "price": 282.57,
+   "qty": 39,
+   "amount": 11020.23,
+   "cashAfter": 44971.58
+  },
+  {
+   "ts": "2026-08-08 06:08",
+   "side": "sell",
+   "code": "AAPL",
+   "name": "Apple",
+   "price": 313.33,
+   "qty": 93,
+   "amount": 29139.69,
+   "cashAfter": 44971.58
+  },
+  {
+   "ts": "2026-08-08 06:08",
+   "side": "sell",
+   "code": "TSM",
+   "name": "TSMC",
+   "price": 420.04,
+   "qty": 74,
+   "amount": 31082.96,
+   "cashAfter": 44971.58
+  },
+  {
+   "ts": "2026-08-08 06:08",
+   "side": "buy",
+   "code": "GOOGL",
+   "name": "Alphabet",
+   "price": 354.3,
+   "qty": 34,
+   "amount": 12046.2,
+   "cashAfter": 44971.58
+  },
+  {
+   "ts": "2026-08-08 06:08",
+   "side": "buy",
+   "code": "MSFT",
+   "name": "Microsoft",
+   "price": 499.99,
+   "qty": 88,
+   "amount": 43999.12,
+   "cashAfter": 44971.58
+  },
+  {
+   "ts": "2026-08-08 06:08",
+   "side": "buy",
+   "code": "MU",
+   "name": "Micron",
+   "price": 877.57,
+   "qty": 3,
+   "amount": 2632.71,
+   "cashAfter": 44971.58
+  },
+  {
+   "ts": "2026-08-08 06:08",
+   "side": "sell",
+   "code": "AVGO",
+   "name": "Broadcom",
+   "price": 427.76,
+   "qty": 11,
+   "amount": 4705.36,
+   "cashAfter": 44971.58
+  },
+  {
+   "ts": "2026-08-08 06:08",
+   "side": "sell",
+   "code": "NVDA",
+   "name": "Nvidia",
+   "price": 223.96,
+   "qty": 16,
+   "amount": 3583.36,
+   "cashAfter": 44971.58
+  },
   {
    "ts": "2026-07-25 06:36",
    "side": "buy",
@@ -483,9 +593,45 @@
    "total": 289420.65,
    "cash": 57290.0,
    "mv": 232130.65
+  },
+  {
+   "date": "2026-08-08",
+   "total": 291649.47,
+   "cash": 57290.0,
+   "mv": 234359.47
   }
  ],
  "decisions": [
+  {
+   "date": "2026-08-08",
+   "tier": "正常 (核心80% + 卫星20%)",
+   "reasons": [
+    "宏观阶梯变档: 宏观门控 (核心80%, 卫星舱现金) → 正常 (核心80% + 卫星20%)"
+   ],
+   "trades": [
+    "卖出 Nvidia 16 股 @ 223.96",
+    "卖出 Broadcom 11 股 @ 427.76",
+    "买入 Micron 3 股 @ 877.57",
+    "买入 Microsoft 88 股 @ 499.99",
+    "买入 Alphabet 34 股 @ 354.30",
+    "卖出 TSMC 74 股 @ 420.04",
+    "卖出 Apple 93 股 @ 313.33",
+    "买入 Arm Holdings 39 股 @ 282.57",
+    "买入 Arista Networks 59 股 @ 188.67"
+   ],
+   "holdings": [
+    "Nvidia 1名",
+    "Apple 9名",
+    "Micron 3名",
+    "Broadcom 2名",
+    "TSMC 8名",
+    "Microsoft 4名",
+    "Alphabet 7名",
+    "Arm Holdings 12名",
+    "Arista Networks 13名"
+   ],
+   "cash_pct": 15.4
+  },
   {
    "date": "2026-07-25",
    "tier": "宏观门控 (核心80%, 卫星舱现金)",
@@ -597,8 +743,8 @@
   }
  ],
  "strategy_state": {
-  "tier": 1,
+  "tier": 0,
   "seeded": true,
-  "last_check": "2026-08-07 16:36"
+  "last_check": "2026-08-08 06:08"
  }
 }
