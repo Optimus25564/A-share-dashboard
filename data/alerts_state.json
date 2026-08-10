@@ -1,18 +1,18 @@
 {
- "last_run": "2026-08-10T16:58:06+08:00",
- "run_date": "2026-08-10",
+ "last_run": "2026-08-11T06:08:24+08:00",
+ "run_date": "2026-08-11",
  "top5": [
   {
    "code": "688256",
    "name": "寒武纪",
    "rank": 1,
-   "score": 1.732
+   "score": 1.729
   },
   {
    "code": "300308",
    "name": "中际旭创",
    "rank": 2,
-   "score": 1.403
+   "score": 1.4
   },
   {
    "code": "688041",
@@ -24,13 +24,13 @@
    "code": "688008",
    "name": "澜起科技",
    "rank": 4,
-   "score": 1.217
+   "score": 1.215
   },
   {
    "code": "300604",
    "name": "长川科技",
    "rank": 5,
-   "score": 1.067
+   "score": 1.068
   }
  ],
  "candidates": [
@@ -38,7 +38,7 @@
    "code": "002463",
    "name": "沪电股份",
    "rank": 6,
-   "score": 0.889
+   "score": 0.888
   },
   {
    "code": "300475",
@@ -50,19 +50,19 @@
    "code": "688012",
    "name": "中微公司",
    "rank": 8,
-   "score": 0.805
+   "score": 0.81
   },
   {
    "code": "300476",
    "name": "胜宏科技",
    "rank": 9,
-   "score": 0.703
+   "score": 0.705
   },
   {
    "code": "688120",
    "name": "华海清科",
    "rank": 10,
-   "score": 0.592
+   "score": 0.594
   }
  ],
  "signals": {
@@ -101,7 +101,7 @@
    "close": 919.87,
    "close_date": "2026-08-07",
    "ema8": 1015.02,
-   "ema21": 943.31,
+   "ema21": 943.35,
    "vs_ema8_pct": -9.37,
    "current_close": 864.58,
    "current_date": "2026-08-10",
@@ -138,7 +138,7 @@
    "close": 88.77,
    "close_date": "2026-08-07",
    "ema8": 91.02,
-   "ema21": 90.4,
+   "ema21": 90.39,
    "vs_ema8_pct": -2.47,
    "current_close": 86.24,
    "current_date": "2026-08-10",
@@ -151,7 +151,7 @@
    "close": 215.52,
    "close_date": "2026-08-07",
    "ema8": 225.22,
-   "ema21": 210.92,
+   "ema21": 210.93,
    "vs_ema8_pct": -4.31,
    "current_close": 206.92,
    "current_date": "2026-08-10",
@@ -164,7 +164,7 @@
    "close": 295.75,
    "close_date": "2026-08-07",
    "ema8": 304.55,
-   "ema21": 291.12,
+   "ema21": 291.11,
    "vs_ema8_pct": -2.89,
    "current_close": 290.44,
    "current_date": "2026-08-10",
@@ -190,7 +190,7 @@
    "close": 1199.93,
    "close_date": "2026-08-07",
    "ema8": 1233.79,
-   "ema21": 1155.16,
+   "ema21": 1155.09,
    "vs_ema8_pct": -2.74,
    "current_close": 1124.0,
    "current_date": "2026-08-10",
@@ -242,7 +242,7 @@
    "close": 55.9,
    "close_date": "2026-08-07",
    "ema8": 61.97,
-   "ema21": 66.5,
+   "ema21": 66.51,
    "vs_ema8_pct": -9.8,
    "current_close": 55.24,
    "current_date": "2026-08-10",
@@ -328,7 +328,7 @@
    "close": 122.7,
    "close_date": "2026-08-10",
    "ema8": 122.05,
-   "ema21": 113.98,
+   "ema21": 114.0,
    "vs_ema8_pct": 0.53,
    "action": "hold",
    "strength": 1,
@@ -339,18 +339,18 @@
    "close": 286.0,
    "close_date": "2026-08-10",
    "ema8": 271.93,
-   "ema21": 288.38,
+   "ema21": 288.4,
    "vs_ema8_pct": 5.17,
    "action": "hold",
    "strength": 1,
-   "detail": "EMA8 (271.93) ≤ EMA21 (288.38) — 尚未多头排列"
+   "detail": "EMA8 (271.93) ≤ EMA21 (288.40) — 尚未多头排列"
   },
   "002371": {
    "name": "北方华创",
    "close": 760.0,
    "close_date": "2026-08-10",
    "ema8": 730.77,
-   "ema21": 657.69,
+   "ema21": 657.73,
    "vs_ema8_pct": 4.0,
    "action": "hold-trend",
    "strength": 1,
@@ -361,7 +361,7 @@
    "close": 389.99,
    "close_date": "2026-08-10",
    "ema8": 368.76,
-   "ema21": 324.5,
+   "ema21": 324.51,
    "vs_ema8_pct": 5.76,
    "action": "buy",
    "strength": 2,
@@ -373,7 +373,7 @@
    "close": 263.53,
    "close_date": "2026-08-10",
    "ema8": 253.47,
-   "ema21": 214.64,
+   "ema21": 214.66,
    "vs_ema8_pct": 3.97,
    "action": "hold-trend",
    "strength": 1,
@@ -420,7 +420,7 @@
    "close": 31.25,
    "close_date": "2026-08-07",
    "ema8": 33.39,
-   "ema21": 36.51,
+   "ema21": 36.5,
    "vs_ema8_pct": -6.4,
    "current_close": 31.28,
    "current_date": "2026-08-10",
@@ -446,24 +446,19 @@
   "code": "sh000001",
   "close": 3966.59,
   "ema8": 3933.43,
-  "ema21": 3975.85,
+  "ema21": 3975.8,
   "vs_ema8_pct": 0.84,
   "bullish": true,
   "drawdown_from_52w_high_pct": -6.86,
   "breadth_bearish_pct": 60.7,
   "buy_gate_active": true,
-  "buy_gate_reason": "大盘跌破周线 EMA21 (3966.59 < 3975.85); 观察列表 61% 处于 sell 信号",
-  "position_advice": "🟠 大盘跌破周线 EMA21 (3966.59 < 3975.85); 观察列表 61% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
+  "buy_gate_reason": "大盘跌破周线 EMA21 (3966.59 < 3975.80); 观察列表 61% 处于 sell 信号",
+  "position_advice": "🟠 大盘跌破周线 EMA21 (3966.59 < 3975.80); 观察列表 61% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
  },
  "kline_status": "ok (28/28)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
  "changes": [
-  "紫光股份 (000938): buy-gated → hold-trend",
-  "思源电气 (002028): sell-confirmed → hold",
-  "北方华创 (002371): buy-gated → hold-trend",
-  "雅克科技 (002409): sell-confirmed → hold",
-  "华海清科 (688120): buy-gated → hold-trend",
-  "仓位建议变化: 🟠 大盘跌破周线 EMA21 (3966.59 < 3975.85); 观察列表 61% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
+  "仓位建议变化: 🟠 大盘跌破周线 EMA21 (3966.59 < 3975.80); 观察列表 61% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
  ],
  "portfolio_summary": {
   "total": 2640892.0,
