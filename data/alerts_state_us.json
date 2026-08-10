@@ -1,36 +1,36 @@
 {
- "last_run": "2026-08-08T06:08:48+08:00",
- "run_date": "2026-08-08",
+ "last_run": "2026-08-10T16:59:01+08:00",
+ "run_date": "2026-08-10",
  "top5": [
   {
    "code": "MU",
    "name": "Micron",
    "rank": 1,
-   "score": 2.269
+   "score": 2.268
   },
   {
    "code": "SNDK",
    "name": "Sandisk",
    "rank": 2,
-   "score": 1.814
+   "score": 1.811
   },
   {
    "code": "NVDA",
    "name": "Nvidia",
    "rank": 3,
-   "score": 1.286
+   "score": 1.287
   },
   {
    "code": "CRDO",
    "name": "Credo Technology",
    "rank": 4,
-   "score": 1.23
+   "score": 1.232
   },
   {
    "code": "PLTR",
    "name": "Palantir",
    "rank": 5,
-   "score": 1.214
+   "score": 1.218
   }
  ],
  "candidates": [
@@ -38,7 +38,7 @@
    "code": "ALAB",
    "name": "Astera Labs",
    "rank": 6,
-   "score": 1.121
+   "score": 1.12
   },
   {
    "code": "APP",
@@ -50,7 +50,7 @@
    "code": "AVGO",
    "name": "Broadcom",
    "rank": 8,
-   "score": 1.009
+   "score": 1.01
   },
   {
    "code": "TSM",
@@ -62,7 +62,7 @@
    "code": "ARM",
    "name": "Arm Holdings",
    "rank": 10,
-   "score": 0.825
+   "score": 0.823
   }
  ],
  "signals": {
@@ -938,39 +938,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "Astera Labs (ALAB): sell-confirmed → hold",
-  "Arista Networks (ANET): buy-gated → buy",
-  "ASML (ASML): sell-confirmed → hold",
-  "Broadcom (AVGO): buy-gated → buy-deep",
-  "Cameco (CCJ): sell-confirmed → hold",
-  "Constellation Energy (CEG): sell-confirmed → hold",
-  "Global X Copper Miners ETF (COPX): hold → buy-deep",
-  "Cisco Systems (CSCO): buy-gated → buy",
-  "Eaton (ETN): buy-gated → buy",
-  "Johnson Controls (JCI): buy-gated → buy",
-  "Monolithic Power (MPWR): sell-warning → hold",
-  "Marvell (MRVL): sell-confirmed → hold",
-  "Nvidia (NVDA): buy-gated → buy-deep",
-  "Onto Innovation (ONTO): sell-confirmed → hold",
-  "Oracle (ORCL): sell-confirmed → hold",
-  "Rocket Lab (RKLB): sell-confirmed → hold",
-  "VanEck Semiconductor ETF (SMH): sell-confirmed → hold",
-  "Trane Technologies (TT): hold → buy-deep",
-  "宏观门控解除 — 可按排名买回卫星舱",
-  "🤖 美股模拟盘调仓 · 正常 (核心80% + 卫星20%)",
-  "  原因: 宏观阶梯变档: 宏观门控 (核心80%, 卫星舱现金) → 正常 (核心80% + 卫星20%)",
-  "  卖出 Nvidia 16 股 @ 223.96",
-  "  卖出 Broadcom 11 股 @ 427.76",
-  "  买入 Micron 3 股 @ 877.57",
-  "  买入 Microsoft 88 股 @ 499.99",
-  "  买入 Alphabet 34 股 @ 354.30",
-  "  卖出 TSMC 74 股 @ 420.04",
-  "  卖出 Apple 93 股 @ 313.33",
-  "  买入 Arm Holdings 39 股 @ 282.57",
-  "  买入 Arista Networks 59 股 @ 188.67",
-  "  调仓后: 持仓 9 只 / 现金 15.4% / 总资产 $291,649"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 291649.47,
   "cash": 44971.58,
