@@ -1,5 +1,5 @@
 {
- "last_run": "2026-08-11T06:09:25+08:00",
+ "last_run": "2026-08-11T16:31:44+08:00",
  "run_date": "2026-08-11",
  "top5": [
   {
@@ -12,25 +12,25 @@
    "code": "SNDK",
    "name": "Sandisk",
    "rank": 2,
-   "score": 1.811
+   "score": 1.813
   },
   {
    "code": "NVDA",
    "name": "Nvidia",
    "rank": 3,
-   "score": 1.287
+   "score": 1.285
   },
   {
    "code": "CRDO",
    "name": "Credo Technology",
    "rank": 4,
-   "score": 1.232
+   "score": 1.231
   },
   {
    "code": "PLTR",
    "name": "Palantir",
    "rank": 5,
-   "score": 1.218
+   "score": 1.219
   }
  ],
  "candidates": [
@@ -38,7 +38,7 @@
    "code": "ALAB",
    "name": "Astera Labs",
    "rank": 6,
-   "score": 1.12
+   "score": 1.118
   },
   {
    "code": "APP",
@@ -50,7 +50,7 @@
    "code": "AVGO",
    "name": "Broadcom",
    "rank": 8,
-   "score": 1.01
+   "score": 1.009
   },
   {
    "code": "TSM",
@@ -62,7 +62,7 @@
    "code": "ARM",
    "name": "Arm Holdings",
    "rank": 10,
-   "score": 0.823
+   "score": 0.821
   }
  ],
  "signals": {
@@ -211,7 +211,7 @@
    "close": 346.8,
    "close_date": "2026-08-07",
    "ema8": 426.64,
-   "ema21": 450.42,
+   "ema21": 450.45,
    "vs_ema8_pct": -18.71,
    "current_close": 339.0,
    "current_date": "2026-08-10",
@@ -270,7 +270,7 @@
    "close": 291.35,
    "close_date": "2026-08-10",
    "ema8": 290.51,
-   "ema21": 273.91,
+   "ema21": 273.92,
    "vs_ema8_pct": 0.29,
    "action": "hold",
    "strength": 1,
@@ -320,7 +320,7 @@
    "close": 325.15,
    "close_date": "2026-08-10",
    "ema8": 325.5,
-   "ema21": 314.76,
+   "ema21": 314.78,
    "vs_ema8_pct": -0.11,
    "action": "sell-warning",
    "strength": 2,
@@ -331,7 +331,7 @@
    "close": 813.51,
    "close_date": "2026-08-10",
    "ema8": 805.34,
-   "ema21": 775.03,
+   "ema21": 775.04,
    "vs_ema8_pct": 1.01,
    "action": "hold",
    "strength": 1,
@@ -342,11 +342,11 @@
    "close": 527.07,
    "close_date": "2026-08-10",
    "ema8": 520.08,
-   "ema21": 543.18,
+   "ema21": 543.27,
    "vs_ema8_pct": 1.34,
    "action": "hold",
    "strength": 1,
-   "detail": "EMA8 (520.08) ≤ EMA21 (543.18) — 尚未多头排列"
+   "detail": "EMA8 (520.08) ≤ EMA21 (543.27) — 尚未多头排列"
   },
   "MSFT": {
    "name": "Microsoft",
@@ -423,11 +423,11 @@
    "close": 88.19,
    "close_date": "2026-08-10",
    "ema8": 86.06,
-   "ema21": 91.75,
+   "ema21": 91.67,
    "vs_ema8_pct": 2.48,
    "action": "hold",
    "strength": 1,
-   "detail": "EMA8 (86.06) ≤ EMA21 (91.75) — 尚未多头排列"
+   "detail": "EMA8 (86.06) ≤ EMA21 (91.67) — 尚未多头排列"
   },
   "CEG": {
    "name": "Constellation Energy",
@@ -552,7 +552,7 @@
    "close": 282.57,
    "close_date": "2026-08-07",
    "ema8": 285.77,
-   "ema21": 262.06,
+   "ema21": 262.13,
    "vs_ema8_pct": -1.12,
    "current_close": 267.85,
    "current_date": "2026-08-10",
@@ -639,7 +639,7 @@
    "close": 239.94,
    "close_date": "2026-08-10",
    "ema8": 229.86,
-   "ema21": 207.41,
+   "ema21": 207.43,
    "vs_ema8_pct": 4.39,
    "action": "hold-trend",
    "strength": 1,
@@ -650,7 +650,7 @@
    "close": 317.23,
    "close_date": "2026-08-10",
    "ema8": 328.26,
-   "ema21": 291.85,
+   "ema21": 291.84,
    "vs_ema8_pct": -3.36,
    "action": "sell-warning",
    "strength": 2,
@@ -866,7 +866,7 @@
    "close": 41.23,
    "close_date": "2026-08-07",
    "ema8": 41.81,
-   "ema21": 44.39,
+   "ema21": 44.4,
    "vs_ema8_pct": -1.39,
    "current_close": 38.74,
    "current_date": "2026-08-10",
@@ -879,7 +879,7 @@
    "close": 175.23,
    "close_date": "2026-08-10",
    "ema8": 145.81,
-   "ema21": 142.12,
+   "ema21": 142.1,
    "vs_ema8_pct": 20.18,
    "action": "hold-trend",
    "strength": 1,
@@ -912,7 +912,7 @@
    "close": 80.04,
    "close_date": "2026-08-10",
    "ema8": 80.82,
-   "ema21": 84.75,
+   "ema21": 84.77,
    "vs_ema8_pct": -0.97,
    "action": "sell-warning",
    "strength": 2,
@@ -934,28 +934,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "Apple (AAPL): sell-confirmed → sell-warning",
-  "Astera Labs (ALAB): hold → sell-warning",
-  "Applied Materials (AMAT): sell-confirmed → sell-warning",
-  "Arista Networks (ANET): buy → hold-trend",
-  "Broadcom (AVGO): buy-deep → hold-trend",
-  "Coherent (COHR): hold → sell-warning",
-  "Global X Copper Miners ETF (COPX): buy-deep → hold-trend",
-  "Cisco Systems (CSCO): buy → hold-trend",
-  "EMCOR Group (EME): hold → buy-near",
-  "Eaton (ETN): buy → hold-trend",
-  "Hubbell (HUBB): hold → buy-near",
-  "Johnson Controls (JCI): buy → hold-trend",
-  "Monolithic Power (MPWR): hold → sell-warning",
-  "Marvell (MRVL): hold → sell-warning",
-  "Nvidia (NVDA): buy-deep → hold-trend",
-  "Quanta Services (PWR): hold → sell-warning",
-  "Rocket Lab (RKLB): hold → sell-warning",
-  "VanEck Semiconductor ETF (SMH): hold → sell-warning",
-  "Teradyne (TER): hold → sell-warning",
-  "Trane Technologies (TT): buy-deep → buy-near"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 288693.32,
   "cash": 44971.58,
