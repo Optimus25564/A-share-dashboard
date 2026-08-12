@@ -617,6 +617,12 @@
    "total": 288127.49,
    "cash": 44971.58,
    "mv": 243155.91
+  },
+  {
+   "date": "2026-08-13",
+   "total": 291874.66,
+   "cash": 44971.58,
+   "mv": 246903.08
   }
  ],
  "decisions": [
@@ -763,7 +769,7 @@
  "strategy_state": {
   "tier": 0,
   "seeded": true,
-  "last_check": "2026-08-12 16:49",
-  "pending_sig": "持仓周线收盘跌破 EMA21 (核心趋势破坏): Alphabet(GOOGL)|持仓掉出合格排名 Top10 (排名缓冲触发): Alphabet(有效排名 已出合格池) ← 顶替者: Palantir(模型#5, 收复EMA21回到合格池) / KLA Corp(模型#14, 收复EMA21回到合格池)"
+  "last_check": "2026-08-13 06:13",
+  "pending_sig": "持仓周线收盘跌破 EMA21 (核心趋势破坏): Alphabet(GOOGL)|持仓掉出合格排名 Top10 (排名缓冲触发): Alphabet(有效排名 已出合格池) ← 顶替者: Palantir(模型#5, 收复EMA21回到合格池) / Sandisk(模型#11, 收复EMA21回到合格池)"
  }
 }
