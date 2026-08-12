@@ -1,5 +1,5 @@
 {
- "last_run": "2026-08-12T06:20:36+08:00",
+ "last_run": "2026-08-12T16:49:32+08:00",
  "run_date": "2026-08-12",
  "top5": [
   {
@@ -18,13 +18,13 @@
    "code": "NVDA",
    "name": "Nvidia",
    "rank": 3,
-   "score": 1.285
+   "score": 1.286
   },
   {
    "code": "CRDO",
    "name": "Credo Technology",
    "rank": 4,
-   "score": 1.231
+   "score": 1.232
   },
   {
    "code": "PLTR",
@@ -38,19 +38,19 @@
    "code": "ALAB",
    "name": "Astera Labs",
    "rank": 6,
-   "score": 1.118
+   "score": 1.116
   },
   {
    "code": "APP",
    "name": "AppLovin",
    "rank": 7,
-   "score": 1.037
+   "score": 1.033
   },
   {
    "code": "AVGO",
    "name": "Broadcom",
    "rank": 8,
-   "score": 1.009
+   "score": 1.008
   },
   {
    "code": "TSM",
@@ -541,7 +541,7 @@
    "ema8": 171.37,
    "ema21": 165.3,
    "vs_ema8_pct": -3.08,
-   "current_close": 167.17,
+   "current_close": 167.24,
    "current_date": "2026-08-11",
    "action": "sell-confirmed",
    "strength": 3,
@@ -932,19 +932,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "ASE Technology (ASE): sell-confirmed → hold",
-  "Coherent (COHR): sell-warning → hold",
-  "Cisco Systems (CSCO): hold-trend → buy-near",
-  "Alphabet (GOOGL): hold → sell-warning",
-  "Hubbell (HUBB): buy-near → hold-trend",
-  "Lumentum (LITE): hold → buy",
-  "Monolithic Power (MPWR): sell-warning → buy",
-  "Quanta Services (PWR): sell-warning → hold",
-  "Teradyne (TER): sell-warning → buy",
-  "Trane Technologies (TT): buy-near → buy",
-  "🤖 美股模拟盘: 检测到触发但周线未收盘, 等待周五收盘确认 — 持仓周线收盘跌破 EMA21 (核心趋势破坏): Alphabet(GOOGL)；持仓掉出合格排名 Top10 (排名缓冲触发): Alphabet(有效排名 已出合格池) ← 顶替者: Palantir(模型#5, 收复EMA21回到合格池) / KLA Corp(模型#14, 收复EMA21回到合格池)"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 288127.49,
   "cash": 44971.58,

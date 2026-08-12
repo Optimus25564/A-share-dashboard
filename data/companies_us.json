@@ -15,7 +15,7 @@
       "etf": "ETF & 主题表达工具",
       "other": "其他相关"
     },
-    "market_cap_updated": "总市值更新于 2026-08-11 · 来源: 腾讯行情 f45 (A股亿元 / 美股亿美元) · scripts/update_market_caps.py",
+    "market_cap_updated": "总市值更新于 2026-08-12 · 来源: 腾讯行情 f45 (A股亿元 / 美股亿美元) · scripts/update_market_caps.py",
     "quarters": [],
     "quality_metrics_policy": "OCF/CapEx/FCF/cash/debt are sourced from SEC Companyfacts when available. FCF = latest-full-fiscal-year OCF - same-fiscal-year capex (period recorded in *_period). Balance-sheet items use the latest period end; debt older than 15 months vs cash is dropped. Non-USD facts are converted at the spot rate on the run date (fx_mode=spot_at_run) — historical-period flows therefore carry FX drift. Missing values mean no acceptable SEC Companyfacts fact was found and must not be inferred.",
     "subjective_score_policy": "strategic 评分必须带 strategic_updated 日期与依据; 模型按新鲜度衰减: ≤180天全额, 180-365天半衰向中性5, 更旧→5。复核评分时必须同时更新日期和理由。ai_execution_score 已退役为参考字段, 不进模型。"
@@ -131,7 +131,7 @@
       "long_term_debt_end": "2026-04-26",
       "debt_billion": 8.47
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "AVGO": {
@@ -245,7 +245,7 @@
       "long_term_debt_end": "2026-05-03",
       "debt_billion": 64.907
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "AMD": {
@@ -349,7 +349,7 @@
       "fcf_margin_basis": "FY rev 2024-12-29 → 2025-12-27 (SEC)",
       "cash_end": "2026-03-28"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "INTC": {
@@ -470,7 +470,7 @@
       "short_term_debt_tag": "CommercialPaper",
       "debt_billion": 46.585
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "QCOM": {
@@ -582,7 +582,7 @@
       "long_term_debt_end": "2026-03-29",
       "debt_billion": 14.772
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "MRVL": {
@@ -696,7 +696,7 @@
       "short_term_debt_tag": "ShortTermBorrowings",
       "debt_billion": 4.961
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "APP": {
@@ -801,7 +801,7 @@
       "long_term_debt_end": "2025-12-31",
       "debt_billion": 3.513
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "TSM": {
@@ -911,7 +911,7 @@
       "fx_source": "flows 按 TSMC 官方口径隐含汇率 NT$31.11/US$ (FY2025 capex NT$1,272.41B = US$40.9B); 资产负债表按 4Q25 平均 31.01",
       "note": "FY2025 官方数据: OCF NT$2,274.98B (Q1 625.57 + Q2 497.07 + Q3 426.83 + Q4 725.51), CapEx NT$1,272.41B = US$40.9B, FCF NT$1,002.57B; 现金期末 NT$2,767.86B, 长期有息负债 NT$896.06B; SEC XBRL 20-F 年报滞后, 故按官方 6-K 手工录入"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "ASML": {
@@ -1016,7 +1016,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2025-12-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "AMAT": {
@@ -1121,7 +1121,7 @@
       "fcf_margin_basis": "FY rev 2024-10-28 → 2025-10-26 (SEC)",
       "cash_end": "2026-04-26"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "KLAC": {
@@ -1235,7 +1235,7 @@
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 5.887
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "ONTO": {
@@ -1339,7 +1339,7 @@
       "fcf_margin_basis": "FY rev 2024-12-29 → 2026-01-03 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "SNPS": {
@@ -1451,7 +1451,7 @@
       "long_term_debt_end": "2026-04-30",
       "debt_billion": 10.036
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "MU": {
@@ -1572,7 +1572,7 @@
       "long_term_debt_end": "2025-11-27",
       "debt_billion": 8.844
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "SNDK": {
@@ -1678,7 +1678,7 @@
       "long_term_debt_end": "2026-04-03",
       "debt_billion": 0.0
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "COHR": {
@@ -1783,7 +1783,7 @@
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 3.194
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "LITE": {
@@ -1889,7 +1889,7 @@
       "fcf_margin_basis": "FY rev 2024-06-30 → 2025-06-28 (SEC)",
       "cash_end": "2026-03-28"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "FN": {
@@ -1987,7 +1987,7 @@
       "fcf_margin_basis": "FY rev 2024-06-29 → 2025-06-27 (SEC)",
       "cash_end": "2026-03-27"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "MSFT": {
@@ -2101,7 +2101,7 @@
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 40.262
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "GOOGL": {
@@ -2223,7 +2223,7 @@
       "short_term_debt_tag": "CommercialPaper",
       "debt_billion": 49.085
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "AMZN": {
@@ -2347,7 +2347,7 @@
       "short_term_debt_tag": "ShortTermBorrowings",
       "debt_billion": 122.784
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "META": {
@@ -2461,7 +2461,7 @@
       "long_term_debt_end": "2025-12-31",
       "debt_billion": 58.744
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "AAPL": {
@@ -2577,7 +2577,7 @@
       "short_term_debt_tag": "CommercialPaper",
       "debt_billion": 84.697
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "TSLA": {
@@ -2695,7 +2695,7 @@
       "long_term_debt_end": "2026-06-30",
       "debt_billion": 7.721
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "CRWV": {
@@ -2798,7 +2798,7 @@
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 24.859
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "CEG": {
@@ -2907,7 +2907,7 @@
       "long_term_debt_end": "2025-12-31",
       "debt_billion": 7.403
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "VRT": {
@@ -3025,7 +3025,7 @@
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 2.922
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "ETN": {
@@ -3145,7 +3145,7 @@
       "short_term_debt_tag": "ShortTermBorrowings",
       "debt_billion": 21.129
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "GEV": {
@@ -3256,7 +3256,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-06-30"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "CCJ": {
@@ -3367,7 +3367,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2025-12-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "SMH": {
@@ -3526,7 +3526,7 @@
       "fcf_margin_basis": "FY rev 2025-04-01 → 2026-03-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "LRCX": {
@@ -3629,7 +3629,7 @@
       "long_term_debt_end": "2025-06-29",
       "debt_billion": 4.469
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "CDNS": {
@@ -3731,7 +3731,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "ASE": {
@@ -3833,7 +3833,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2025-12-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "AMKR": {
@@ -3929,7 +3929,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "TER": {
@@ -4025,7 +4025,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-29"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "ANET": {
@@ -4123,7 +4123,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "CRDO": {
@@ -4230,7 +4230,7 @@
       "fcf_margin_basis": "FY rev 2025-05-04 → 2026-05-02 (SEC)",
       "cash_end": "2026-05-02"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "ALAB": {
@@ -4328,7 +4328,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "CIEN": {
@@ -4443,7 +4443,7 @@
       "fcf_margin_basis": "FY rev 2024-11-03 → 2025-11-01 (SEC)",
       "cash_end": "2026-05-02"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "CSCO": {
@@ -4557,7 +4557,7 @@
       "long_term_debt_end": "2026-04-25",
       "debt_billion": 22.869
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "MPWR": {
@@ -4655,7 +4655,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "GLW": {
@@ -4761,7 +4761,7 @@
       "cash_unit": "USD",
       "note": "2013 年的 LongTermDebt 残留值已删除 (陈旧不可用); net_cash 因无可靠当期债务数据而留空"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "PWR": {
@@ -4863,7 +4863,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "EME": {
@@ -4965,7 +4965,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "FIX": {
@@ -5083,7 +5083,7 @@
       "long_term_debt_end": "2026-06-30",
       "debt_billion": 0.054
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "MOD": {
@@ -5185,7 +5185,7 @@
       "fcf_margin_basis": "FY rev 2025-04-01 → 2026-03-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "TT": {
@@ -5294,7 +5294,7 @@
       "long_term_debt_end": "2025-12-31",
       "debt_billion": 4.615
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "JCI": {
@@ -5403,7 +5403,7 @@
       "long_term_debt_end": "2025-09-30",
       "debt_billion": 9.195
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "HUBB": {
@@ -5512,7 +5512,7 @@
       "long_term_debt_end": "2025-09-30",
       "debt_billion": 1.444
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "POWL": {
@@ -5614,7 +5614,7 @@
       "fcf_margin_basis": "FY rev 2024-10-01 → 2025-09-30 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "VST": {
@@ -5725,7 +5725,7 @@
       "short_term_debt_tag": "ShortTermBorrowings",
       "debt_billion": 19.163
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "NRG": {
@@ -5834,7 +5834,7 @@
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 23.181
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "KMI": {
@@ -5945,7 +5945,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-06-30"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "WMB": {
@@ -6047,7 +6047,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "ORCL": {
@@ -6154,7 +6154,7 @@
       "fcf_margin_basis": "FY rev 2025-06-01 → 2026-05-31 (SEC)",
       "cash_end": "2026-05-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "IREN": {
@@ -6256,7 +6256,7 @@
       "fcf_margin_basis": "FY rev 2024-07-01 → 2025-06-30 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "PLTR": {
@@ -6368,7 +6368,7 @@
       "fcf_margin_basis": "FY rev 2025-01-01 → 2025-12-31 (SEC)",
       "cash_end": "2026-03-31"
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "NOW": {
@@ -6490,7 +6490,7 @@
       "debt_billion": 7.517,
       "net_cash_billion": -5.014
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "CRM": {
@@ -6602,7 +6602,7 @@
       "long_term_debt_end": "2026-04-30",
       "debt_billion": 39.28
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   },
   "RKLB": {
@@ -6701,7 +6701,7 @@
       "long_term_debt_end": "2026-03-31",
       "debt_billion": 0.037
     },
-    "market_cap_asof": "2026-08-11",
+    "market_cap_asof": "2026-08-12",
     "strategic_updated": "2026-06-07"
   }
 }
