@@ -623,6 +623,12 @@
    "total": 291874.66,
    "cash": 44971.58,
    "mv": 246903.08
+  },
+  {
+   "date": "2026-08-14",
+   "total": 294852.32,
+   "cash": 44971.58,
+   "mv": 249880.74
   }
  ],
  "decisions": [
@@ -769,7 +775,7 @@
  "strategy_state": {
   "tier": 0,
   "seeded": true,
-  "last_check": "2026-08-13 16:52",
-  "pending_sig": "持仓周线收盘跌破 EMA21 (核心趋势破坏): Alphabet(GOOGL)|持仓掉出合格排名 Top10 (排名缓冲触发): Alphabet(有效排名 已出合格池) ← 顶替者: Palantir(模型#5, 收复EMA21回到合格池) / Sandisk(模型#11, 收复EMA21回到合格池)"
+  "last_check": "2026-08-14 06:13",
+  "pending_sig": "持仓掉出合格排名 Top10 (排名缓冲触发): Arista Networks(有效排名 11) ← 顶替者: Palantir(模型#5, 收复EMA21回到合格池) / Sandisk(模型#11, 收复EMA21回到合格池)"
  }
 }
