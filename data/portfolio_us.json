@@ -1,5 +1,5 @@
 {
- "cash": 44971.57999999999,
+ "cash": 936.1099999999901,
  "initialCash": 300000,
  "currency": "$",
  "positions": {
@@ -9,47 +9,152 @@
    "name": "Nvidia"
   },
   "AAPL": {
-   "qty": 37,
-   "avgCost": 315.32,
+   "qty": 38,
+   "avgCost": 315.0728947368421,
    "name": "Apple"
   },
   "MU": {
-   "qty": 52,
+   "qty": 47,
    "avgCost": 935.4847542735042,
    "name": "Micron"
   },
   "AVGO": {
-   "qty": 107,
-   "avgCost": 381.92,
+   "qty": 117,
+   "avgCost": 382.8661538461539,
    "name": "Broadcom"
   },
   "TSM": {
-   "qty": 29,
+   "qty": 28,
    "avgCost": 403.41,
    "name": "TSMC"
   },
   "MSFT": {
-   "qty": 88,
-   "avgCost": 499.99,
+   "qty": 89,
+   "avgCost": 499.9384269662922,
    "name": "Microsoft"
   },
   "GOOGL": {
-   "qty": 34,
-   "avgCost": 354.3,
+   "qty": 35,
+   "avgCost": 354.06,
    "name": "Alphabet"
   },
   "ARM": {
-   "qty": 39,
-   "avgCost": 282.57,
+   "qty": 40,
+   "avgCost": 282.49175,
    "name": "Arm Holdings"
   },
-  "ANET": {
-   "qty": 59,
-   "avgCost": 188.67,
-   "name": "Arista Networks"
+  "PLTR": {
+   "qty": 254,
+   "avgCost": 174.04,
+   "name": "Palantir"
+  },
+  "SNDK": {
+   "qty": 7,
+   "avgCost": 1641.11,
+   "name": "Sandisk"
   }
  },
  "history": [
+  {
+   "ts": "2026-08-15 05:52",
+   "side": "buy",
+   "code": "ARM",
+   "name": "Arm Holdings",
+   "price": 279.44,
+   "qty": 1,
+   "amount": 279.44,
+   "cashAfter": 936.11
+  },
+  {
+   "ts": "2026-08-15 05:52",
+   "side": "buy",
+   "code": "SNDK",
+   "name": "Sandisk",
+   "price": 1641.11,
+   "qty": 7,
+   "amount": 11487.77,
+   "cashAfter": 936.11
+  },
+  {
+   "ts": "2026-08-15 05:52",
+   "side": "buy",
+   "code": "AAPL",
+   "name": "Apple",
+   "price": 305.93,
+   "qty": 1,
+   "amount": 305.93,
+   "cashAfter": 936.11
+  },
+  {
+   "ts": "2026-08-15 05:52",
+   "side": "sell",
+   "code": "TSM",
+   "name": "TSMC",
+   "price": 426.35,
+   "qty": 1,
+   "amount": 426.35,
+   "cashAfter": 936.11
+  },
+  {
+   "ts": "2026-08-15 05:52",
+   "side": "buy",
+   "code": "GOOGL",
+   "name": "Alphabet",
+   "price": 345.9,
+   "qty": 1,
+   "amount": 345.9,
+   "cashAfter": 936.11
+  },
+  {
+   "ts": "2026-08-15 05:52",
+   "side": "buy",
+   "code": "PLTR",
+   "name": "Palantir",
+   "price": 174.04,
+   "qty": 254,
+   "amount": 44206.16,
+   "cashAfter": 936.11
+  },
+  {
+   "ts": "2026-08-15 05:52",
+   "side": "buy",
+   "code": "MSFT",
+   "name": "Microsoft",
+   "price": 495.4,
+   "qty": 1,
+   "amount": 495.4,
+   "cashAfter": 936.11
+  },
+  {
+   "ts": "2026-08-15 05:52",
+   "side": "sell",
+   "code": "MU",
+   "name": "Micron",
+   "price": 971.66,
+   "qty": 5,
+   "amount": 4858.3,
+   "cashAfter": 936.11
+  },
+  {
+   "ts": "2026-08-15 05:52",
+   "side": "buy",
+   "code": "AVGO",
+   "name": "Broadcom",
+   "price": 392.99,
+   "qty": 10,
+   "amount": 3929.9,
+   "cashAfter": 936.11
+  },
+  {
+   "ts": "2026-08-15 05:52",
+   "side": "sell",
+   "code": "ANET",
+   "name": "Arista Networks",
+   "price": 198.82,
+   "qty": 59,
+   "amount": 11730.38,
+   "cashAfter": 936.11
+  },
   {
    "ts": "2026-08-08 06:08",
    "side": "buy",
@@ -629,9 +734,47 @@
    "total": 294852.32,
    "cash": 44971.58,
    "mv": 249880.74
+  },
+  {
+   "date": "2026-08-15",
+   "total": 292803.81,
+   "cash": 44971.58,
+   "mv": 247832.23
   }
  ],
  "decisions": [
+  {
+   "date": "2026-08-15",
+   "tier": "正常 (核心80% + 卫星20%)",
+   "reasons": [
+    "持仓掉出合格排名 Top10 (排名缓冲触发): Arista Networks(有效排名 11) ← 顶替者: Palantir(模型#5, 收复EMA21回到合格池) / Sandisk(模型#11, 收复EMA21回到合格池)"
+   ],
+   "trades": [
+    "卖出 Arista Networks 59 股 @ 198.82",
+    "买入 Broadcom 10 股 @ 392.99",
+    "卖出 Micron 5 股 @ 971.66",
+    "买入 Microsoft 1 股 @ 495.40",
+    "买入 Palantir 254 股 @ 174.04",
+    "买入 Alphabet 1 股 @ 345.90",
+    "卖出 TSMC 1 股 @ 426.35",
+    "买入 Apple 1 股 @ 305.93",
+    "买入 Sandisk 7 股 @ 1641.11",
+    "买入 Arm Holdings 1 股 @ 279.44"
+   ],
+   "holdings": [
+    "Nvidia 1名",
+    "Apple 9名",
+    "Micron 3名",
+    "Broadcom 2名",
+    "TSMC 8名",
+    "Microsoft 4名",
+    "Alphabet 7名",
+    "Arm Holdings 12名",
+    "Palantir 5名",
+    "Sandisk 11名"
+   ],
+   "cash_pct": 0.3
+  },
   {
    "date": "2026-08-08",
    "tier": "正常 (核心80% + 卫星20%)",
@@ -775,7 +918,6 @@
  "strategy_state": {
   "tier": 0,
   "seeded": true,
-  "last_check": "2026-08-14 16:46",
-  "pending_sig": "持仓掉出合格排名 Top10 (排名缓冲触发): Arista Networks(有效排名 11) ← 顶替者: Palantir(模型#5, 收复EMA21回到合格池) / Sandisk(模型#11, 收复EMA21回到合格池)"
+  "last_check": "2026-08-15 05:52"
  }
 }
