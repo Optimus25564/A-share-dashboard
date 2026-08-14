@@ -1,18 +1,18 @@
 {
- "last_run": "2026-08-14T06:13:53+08:00",
+ "last_run": "2026-08-14T16:46:35+08:00",
  "run_date": "2026-08-14",
  "top5": [
   {
    "code": "MU",
    "name": "Micron",
    "rank": 1,
-   "score": 2.27
+   "score": 2.271
   },
   {
    "code": "SNDK",
    "name": "Sandisk",
    "rank": 2,
-   "score": 1.815
+   "score": 1.821
   },
   {
    "code": "NVDA",
@@ -30,7 +30,7 @@
    "code": "PLTR",
    "name": "Palantir",
    "rank": 5,
-   "score": 1.217
+   "score": 1.219
   }
  ],
  "candidates": [
@@ -44,7 +44,7 @@
    "code": "APP",
    "name": "AppLovin",
    "rank": 7,
-   "score": 1.029
+   "score": 1.031
   },
   {
    "code": "AVGO",
@@ -56,13 +56,13 @@
    "code": "TSM",
    "name": "TSMC",
    "rank": 9,
-   "score": 0.954
+   "score": 0.953
   },
   {
    "code": "ARM",
    "name": "Arm Holdings",
    "rank": 10,
-   "score": 0.821
+   "score": 0.822
   }
  ],
  "signals": {
@@ -914,20 +914,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "Applied Materials (AMAT): hold → sell-warning",
-  "Cisco Systems (CSCO): hold-trend → sell-warning",
-  "Hubbell (HUBB): hold-trend → buy-near",
-  "Intel (INTC): sell-confirmed → hold",
-  "Kinder Morgan (KMI): sell-confirmed → hold",
-  "Monolithic Power (MPWR): buy-deep → sell-warning",
-  "Rocket Lab (RKLB): hold → sell-warning",
-  "Sandisk (SNDK): sell-confirmed → hold",
-  "Trane Technologies (TT): buy-near → buy",
-  "Vertiv (VRT): hold → sell-confirmed",
-  "Williams Companies (WMB): hold → sell-confirmed",
-  "🤖 美股模拟盘: 检测到触发但周线未收盘, 等待周五收盘确认 — 持仓掉出合格排名 Top10 (排名缓冲触发): Arista Networks(有效排名 11) ← 顶替者: Palantir(模型#5, 收复EMA21回到合格池) / Sandisk(模型#11, 收复EMA21回到合格池)"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 294852.32,
   "cash": 44971.58,
