@@ -746,6 +746,12 @@
    "total": 292803.81,
    "cash": 936.11,
    "mv": 291867.7
+  },
+  {
+   "date": "2026-08-18",
+   "total": 293618.63,
+   "cash": 936.11,
+   "mv": 292682.52
   }
  ],
  "decisions": [
@@ -924,6 +930,7 @@
  "strategy_state": {
   "tier": 0,
   "seeded": true,
-  "last_check": "2026-08-17 16:08"
+  "last_check": "2026-08-18 05:52",
+  "pending_sig": "持仓周线收盘跌破 EMA21 (核心趋势破坏): Alphabet(GOOGL)|持仓掉出合格排名 Top10 (排名缓冲触发): Alphabet(有效排名 已出合格池) ← 顶替者: Arista Networks(模型#13, 收复EMA21回到合格池)"
  }
 }
