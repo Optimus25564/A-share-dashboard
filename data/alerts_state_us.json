@@ -1,36 +1,36 @@
 {
- "last_run": "2026-08-15T05:52:29+08:00",
- "run_date": "2026-08-15",
+ "last_run": "2026-08-17T16:08:45+08:00",
+ "run_date": "2026-08-17",
  "top5": [
   {
    "code": "MU",
    "name": "Micron",
    "rank": 1,
-   "score": 2.271
+   "score": 2.273
   },
   {
    "code": "SNDK",
    "name": "Sandisk",
    "rank": 2,
-   "score": 1.821
+   "score": 1.825
   },
   {
    "code": "NVDA",
    "name": "Nvidia",
    "rank": 3,
-   "score": 1.287
+   "score": 1.288
   },
   {
    "code": "CRDO",
    "name": "Credo Technology",
    "rank": 4,
-   "score": 1.234
+   "score": 1.232
   },
   {
    "code": "PLTR",
    "name": "Palantir",
    "rank": 5,
-   "score": 1.219
+   "score": 1.217
   }
  ],
  "candidates": [
@@ -50,7 +50,7 @@
    "code": "AVGO",
    "name": "Broadcom",
    "rank": 8,
-   "score": 1.008
+   "score": 1.005
   },
   {
    "code": "TSM",
@@ -920,37 +920,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "Apple (AAPL): sell-warning → sell-confirmed",
-  "Astera Labs (ALAB): sell-warning → sell-confirmed",
-  "Applied Materials (AMAT): sell-warning → sell-confirmed",
-  "AMD (AMD): sell-confirmed → buy",
-  "Amazon (AMZN): hold-trend → buy-near",
-  "Broadcom (AVGO): hold-trend → sell-confirmed",
-  "Cisco Systems (CSCO): sell-warning → sell-confirmed",
-  "Comfort Systems (FIX): sell-confirmed → hold",
-  "Alphabet (GOOGL): sell-warning → sell-confirmed",
-  "Intel (INTC): hold → sell-confirmed",
-  "Kinder Morgan (KMI): hold → buy-deep",
-  "Monolithic Power (MPWR): sell-warning → buy-deep",
-  "Rocket Lab (RKLB): sell-warning → sell-confirmed",
-  "Synopsys (SNPS): sell-confirmed → hold",
-  "Vertiv (VRT): sell-confirmed → hold",
-  "Williams Companies (WMB): sell-confirmed → hold",
-  "🤖 美股模拟盘调仓 · 正常 (核心80% + 卫星20%)",
-  "  原因: 持仓掉出合格排名 Top10 (排名缓冲触发): Arista Networks(有效排名 11) ← 顶替者: Palantir(模型#5, 收复EMA21回到合格池) / Sandisk(模型#11, 收复EMA21回到合格池)",
-  "  卖出 Arista Networks 59 股 @ 198.82",
-  "  买入 Broadcom 10 股 @ 392.99",
-  "  卖出 Micron 5 股 @ 971.66",
-  "  买入 Microsoft 1 股 @ 495.40",
-  "  买入 Palantir 254 股 @ 174.04",
-  "  买入 Alphabet 1 股 @ 345.90",
-  "  卖出 TSMC 1 股 @ 426.35",
-  "  买入 Apple 1 股 @ 305.93",
-  "  买入 Sandisk 7 股 @ 1641.11",
-  "  买入 Arm Holdings 1 股 @ 279.44",
-  "  调仓后: 持仓 10 只 / 现金 0.3% / 总资产 $292,804"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 292803.81,
   "cash": 936.11,
