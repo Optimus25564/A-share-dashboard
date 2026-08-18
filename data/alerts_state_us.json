@@ -1,18 +1,18 @@
 {
- "last_run": "2026-08-18T05:52:53+08:00",
+ "last_run": "2026-08-18T16:04:57+08:00",
  "run_date": "2026-08-18",
  "top5": [
   {
    "code": "MU",
    "name": "Micron",
    "rank": 1,
-   "score": 2.273
+   "score": 2.275
   },
   {
    "code": "SNDK",
    "name": "Sandisk",
    "rank": 2,
-   "score": 1.825
+   "score": 1.828
   },
   {
    "code": "NVDA",
@@ -24,7 +24,7 @@
    "code": "CRDO",
    "name": "Credo Technology",
    "rank": 4,
-   "score": 1.232
+   "score": 1.235
   },
   {
    "code": "PLTR",
@@ -38,13 +38,13 @@
    "code": "ALAB",
    "name": "Astera Labs",
    "rank": 6,
-   "score": 1.116
+   "score": 1.115
   },
   {
    "code": "APP",
    "name": "AppLovin",
    "rank": 7,
-   "score": 1.031
+   "score": 1.029
   },
   {
    "code": "AVGO",
@@ -56,13 +56,13 @@
    "code": "TSM",
    "name": "TSMC",
    "rank": 9,
-   "score": 0.953
+   "score": 0.954
   },
   {
-   "code": "ARM",
-   "name": "Arm Holdings",
+   "code": "AMD",
+   "name": "AMD",
    "rank": 10,
-   "score": 0.822
+   "score": 0.82
   }
  ],
  "signals": {
@@ -209,7 +209,7 @@
    "close": 315.44,
    "close_date": "2026-08-14",
    "ema8": 401.93,
-   "ema21": 435.92,
+   "ema21": 435.94,
    "vs_ema8_pct": -21.52,
    "current_close": 311.98,
    "current_date": "2026-08-17",
@@ -268,7 +268,7 @@
    "close": 351.16,
    "close_date": "2026-08-17",
    "ema8": 310.96,
-   "ema21": 284.27,
+   "ema21": 284.29,
    "vs_ema8_pct": 12.93,
    "action": "hold-trend",
    "strength": 1,
@@ -312,7 +312,7 @@
    "close": 351.22,
    "close_date": "2026-08-17",
    "ema8": 331.33,
-   "ema21": 318.15,
+   "ema21": 318.16,
    "vs_ema8_pct": 6.0,
    "action": "buy",
    "strength": 2,
@@ -323,7 +323,7 @@
    "close": 968.9,
    "close_date": "2026-08-17",
    "ema8": 861.15,
-   "ema21": 801.98,
+   "ema21": 801.97,
    "vs_ema8_pct": 12.51,
    "action": "hold-trend",
    "strength": 1,
@@ -334,11 +334,11 @@
    "close": 598.58,
    "close_date": "2026-08-17",
    "ema8": 544.98,
-   "ema21": 551.87,
+   "ema21": 551.86,
    "vs_ema8_pct": 9.83,
    "action": "hold",
    "strength": 1,
-   "detail": "EMA8 (544.98) ≤ EMA21 (551.87) — 尚未多头排列"
+   "detail": "EMA8 (544.98) ≤ EMA21 (551.86) — 尚未多头排列"
   },
   "MSFT": {
    "name": "Microsoft",
@@ -419,11 +419,11 @@
    "close": 106.0,
    "close_date": "2026-08-17",
    "ema8": 93.44,
-   "ema21": 94.39,
+   "ema21": 94.41,
    "vs_ema8_pct": 13.44,
    "action": "hold",
    "strength": 1,
-   "detail": "EMA8 (93.44) ≤ EMA21 (94.39) — 尚未多头排列"
+   "detail": "EMA8 (93.44) ≤ EMA21 (94.41) — 尚未多头排列"
   },
   "CEG": {
    "name": "Constellation Energy",
@@ -542,7 +542,7 @@
    "close": 279.44,
    "close_date": "2026-08-14",
    "ema8": 284.36,
-   "ema21": 263.93,
+   "ema21": 263.9,
    "vs_ema8_pct": -1.73,
    "current_close": 271.43,
    "current_date": "2026-08-17",
@@ -846,18 +846,18 @@
    "close": 44.9,
    "close_date": "2026-08-17",
    "ema8": 42.89,
-   "ema21": 44.89,
+   "ema21": 44.9,
    "vs_ema8_pct": 4.7,
    "action": "hold",
    "strength": 1,
-   "detail": "EMA8 (42.89) ≤ EMA21 (44.89) — 尚未多头排列"
+   "detail": "EMA8 (42.89) ≤ EMA21 (44.90) — 尚未多头排列"
   },
   "PLTR": {
    "name": "Palantir",
    "close": 172.55,
    "close_date": "2026-08-17",
    "ema8": 151.54,
-   "ema21": 144.77,
+   "ema21": 144.78,
    "vs_ema8_pct": 13.86,
    "action": "hold-trend",
    "strength": 1,
@@ -912,25 +912,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "Applied Materials (AMAT): sell-confirmed → hold",
-  "AMD (AMD): buy → hold",
-  "Amazon (AMZN): buy-near → buy",
-  "ASML (ASML): buy → hold-trend",
-  "Coherent (COHR): hold → buy",
-  "Corning (GLW): sell-confirmed → hold",
-  "Intel (INTC): sell-confirmed → hold",
-  "Kinder Morgan (KMI): buy-deep → buy-near",
-  "Lumentum (LITE): buy-deep → hold-trend",
-  "Monolithic Power (MPWR): buy-deep → buy-near",
-  "Onto Innovation (ONTO): buy → hold-trend",
-  "Rocket Lab (RKLB): sell-confirmed → hold",
-  "VanEck Semiconductor ETF (SMH): hold → buy-near",
-  "Synopsys (SNPS): hold → sell-warning",
-  "Teradyne (TER): buy → hold-trend",
-  "TSMC (TSM): hold → buy-near",
-  "🤖 美股模拟盘: 检测到触发但周线未收盘, 等待周五收盘确认 — 持仓周线收盘跌破 EMA21 (核心趋势破坏): Alphabet(GOOGL)；持仓掉出合格排名 Top10 (排名缓冲触发): Alphabet(有效排名 已出合格池) ← 顶替者: Arista Networks(模型#13, 收复EMA21回到合格池)"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 293618.63,
   "cash": 936.11,
