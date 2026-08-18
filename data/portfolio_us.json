@@ -752,6 +752,12 @@
    "total": 293618.63,
    "cash": 936.11,
    "mv": 292682.52
+  },
+  {
+   "date": "2026-08-19",
+   "total": 285263.06,
+   "cash": 936.11,
+   "mv": 284326.95
   }
  ],
  "decisions": [
@@ -928,9 +934,9 @@
   }
  ],
  "strategy_state": {
-  "tier": 0,
+  "tier": 1,
   "seeded": true,
-  "last_check": "2026-08-18 16:05",
-  "pending_sig": "持仓周线收盘跌破 EMA21 (核心趋势破坏): Alphabet(GOOGL)|持仓掉出合格排名 Top10 (排名缓冲触发): Alphabet(有效排名 已出合格池) ← 顶替者: Arista Networks(模型#13, 收复EMA21回到合格池)"
+  "last_check": "2026-08-19 05:50",
+  "pending_sig": "宏观阶梯变档: 正常 (核心80% + 卫星20%) → 宏观门控 (核心80%, 卫星舱现金)|持仓周线收盘跌破 EMA21 (核心趋势破坏): Broadcom(AVGO) / Alphabet(GOOGL) / Arm Holdings(ARM)|持仓掉出合格排名 Top10 (排名缓冲触发): Broadcom(有效排名 已出合格池) / Alphabet(有效排名 已出合格池) / Arm Holdings(有效排名 已出合格池) ← 顶替者: Arista Networks(模型#13, 收复EMA21回到合格池) / Salesforce(模型#15, 收复EMA21回到合格池) / ASML(模型#16, 收复EMA21回到合格池)"
  }
 }
