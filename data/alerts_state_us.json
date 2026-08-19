@@ -1,36 +1,36 @@
 {
- "last_run": "2026-08-19T05:50:23+08:00",
+ "last_run": "2026-08-19T16:05:01+08:00",
  "run_date": "2026-08-19",
  "top5": [
   {
    "code": "MU",
    "name": "Micron",
    "rank": 1,
-   "score": 2.275
+   "score": 2.272
   },
   {
    "code": "SNDK",
    "name": "Sandisk",
    "rank": 2,
-   "score": 1.828
+   "score": 1.826
   },
   {
    "code": "NVDA",
    "name": "Nvidia",
    "rank": 3,
-   "score": 1.288
+   "score": 1.287
   },
   {
    "code": "CRDO",
    "name": "Credo Technology",
    "rank": 4,
-   "score": 1.235
+   "score": 1.232
   },
   {
    "code": "PLTR",
    "name": "Palantir",
    "rank": 5,
-   "score": 1.217
+   "score": 1.218
   }
  ],
  "candidates": [
@@ -44,25 +44,25 @@
    "code": "APP",
    "name": "AppLovin",
    "rank": 7,
-   "score": 1.029
+   "score": 1.031
   },
   {
    "code": "AVGO",
    "name": "Broadcom",
    "rank": 8,
-   "score": 1.005
+   "score": 1.004
   },
   {
    "code": "TSM",
    "name": "TSMC",
    "rank": 9,
-   "score": 0.954
+   "score": 0.953
   },
   {
    "code": "AMD",
    "name": "AMD",
    "rank": 10,
-   "score": 0.82
+   "score": 0.819
   }
  ],
  "signals": {
@@ -928,38 +928,7 @@
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
  "changes": [
-  "Applied Materials (AMAT): hold → sell-confirmed",
-  "AMD (AMD): hold → sell-warning",
-  "Amazon (AMZN): buy → buy-gated",
-  "ASE Technology (ASE): hold-trend → sell-warning",
-  "ASML (ASML): hold-trend → buy-gated",
-  "Constellation Energy (CEG): hold → sell-warning",
-  "Ciena (CIEN): hold → sell-warning",
-  "Coherent (COHR): buy → sell-warning",
-  "EMCOR Group (EME): hold-trend → buy-gated",
-  "Eaton (ETN): hold-trend → buy-gated",
-  "iShares MSCI Korea (EWY): hold → sell-warning",
-  "Comfort Systems (FIX): hold-trend → sell-warning",
-  "Fabrinet (FN): hold → sell-warning",
-  "GE Vernova (GEV): hold → sell-warning",
-  "Corning (GLW): hold → sell-confirmed",
-  "Hubbell (HUBB): buy-near → sell-warning",
-  "Intel (INTC): hold → sell-confirmed",
-  "IREN (IREN): hold → sell-warning",
-  "Johnson Controls (JCI): hold-trend → buy-gated",
-  "Kinder Morgan (KMI): buy-near → buy-gated",
-  "Monolithic Power (MPWR): buy-near → sell-warning",
-  "Marvell (MRVL): hold → sell-warning",
-  "Nvidia (NVDA): hold-trend → buy-gated",
-  "Oracle (ORCL): hold → sell-warning",
-  "Rocket Lab (RKLB): hold → sell-confirmed",
-  "VanEck Semiconductor ETF (SMH): buy-near → sell-warning",
-  "TSMC (TSM): buy-near → sell-warning",
-  "Trane Technologies (TT): buy → sell-warning",
-  "Vertiv (VRT): hold → sell-warning",
-  "宏观门控生效: 观察列表 62% 处于 sell 信号",
-  "仓位建议变化: 🟠 观察列表 62% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱",
-  "🤖 美股模拟盘: 检测到触发但周线未收盘, 等待周五收盘确认 — 宏观阶梯变档: 正常 (核心80% + 卫星20%) → 宏观门控 (核心80%, 卫星舱现金)；持仓周线收盘跌破 EMA21 (核心趋势破坏): Broadcom(AVGO) / Alphabet(GOOGL) / Arm Holdings(ARM)；持仓掉出合格排名 Top10 (排名缓冲触发): Broadcom(有效排名 已出合格池) / Alphabet(有效排名 已出合格池) / Arm Holdings(有效排名 已出合格池) ← 顶替者: Arista Networks(模型#13, 收复EMA21回到合格池) / Salesforce(模型#15, 收复EMA21回到合格池) / ASML(模型#16, 收复EMA21回到合格池)"
+  "🤖 美股模拟盘: 检测到触发但周线未收盘, 等待周五收盘确认 — 持仓周线收盘跌破 EMA21 (核心趋势破坏): Broadcom(AVGO) / Alphabet(GOOGL) / Arm Holdings(ARM)；持仓掉出合格排名 Top10 (排名缓冲触发): Broadcom(有效排名 已出合格池) / Alphabet(有效排名 已出合格池) / Arm Holdings(有效排名 已出合格池) ← 顶替者: Arista Networks(模型#13, 收复EMA21回到合格池) / Salesforce(模型#15, 收复EMA21回到合格池) / ASML(模型#16, 收复EMA21回到合格池)"
  ],
  "portfolio_summary": {
   "total": 285263.06,
