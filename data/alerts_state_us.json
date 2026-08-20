@@ -1,5 +1,5 @@
 {
- "last_run": "2026-08-20T05:53:20+08:00",
+ "last_run": "2026-08-20T16:07:01+08:00",
  "run_date": "2026-08-20",
  "top5": [
   {
@@ -12,25 +12,25 @@
    "code": "SNDK",
    "name": "Sandisk",
    "rank": 2,
-   "score": 1.826
+   "score": 1.825
   },
   {
    "code": "NVDA",
    "name": "Nvidia",
    "rank": 3,
-   "score": 1.287
+   "score": 1.286
   },
   {
    "code": "CRDO",
    "name": "Credo Technology",
    "rank": 4,
-   "score": 1.232
+   "score": 1.231
   },
   {
    "code": "PLTR",
    "name": "Palantir",
    "rank": 5,
-   "score": 1.218
+   "score": 1.22
   }
  ],
  "candidates": [
@@ -38,31 +38,31 @@
    "code": "ALAB",
    "name": "Astera Labs",
    "rank": 6,
-   "score": 1.115
+   "score": 1.114
   },
   {
    "code": "APP",
    "name": "AppLovin",
    "rank": 7,
-   "score": 1.031
+   "score": 1.033
   },
   {
    "code": "AVGO",
    "name": "Broadcom",
    "rank": 8,
-   "score": 1.004
+   "score": 1.002
   },
   {
    "code": "TSM",
    "name": "TSMC",
    "rank": 9,
-   "score": 0.953
+   "score": 0.952
   },
   {
-   "code": "AMD",
-   "name": "AMD",
+   "code": "ARM",
+   "name": "Arm Holdings",
    "rank": 10,
-   "score": 0.819
+   "score": 0.818
   }
  ],
  "signals": {
@@ -929,24 +929,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "Apple (AAPL): sell-confirmed → hold",
-  "Arista Networks (ANET): hold-trend → buy-gated",
-  "Constellation Energy (CEG): sell-warning → hold",
-  "Credo Technology (CRDO): hold-trend → buy-gated",
-  "iShares MSCI Korea (EWY): sell-warning → hold",
-  "IREN (IREN): sell-warning → hold",
-  "Johnson Controls (JCI): buy-gated → sell-warning",
-  "Kinder Morgan (KMI): buy-gated → hold",
-  "Lumentum (LITE): hold-trend → sell-warning",
-  "Lam Research (LRCX): hold → sell-warning",
-  "Marvell (MRVL): sell-warning → buy-gated",
-  "Onto Innovation (ONTO): hold-trend → buy-gated",
-  "Quanta Services (PWR): hold-trend → buy-gated",
-  "Teradyne (TER): hold-trend → buy-gated",
-  "Williams Companies (WMB): hold → sell-warning",
-  "仓位建议变化: 🟠 观察列表 61% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 283370.52,
   "cash": 936.11,
