@@ -764,6 +764,12 @@
    "total": 283370.52,
    "cash": 936.11,
    "mv": 282434.41
+  },
+  {
+   "date": "2026-08-21",
+   "total": 284573.61,
+   "cash": 936.11,
+   "mv": 283637.5
   }
  ],
  "decisions": [
@@ -942,7 +948,7 @@
  "strategy_state": {
   "tier": 1,
   "seeded": true,
-  "last_check": "2026-08-20 16:07",
+  "last_check": "2026-08-21 05:56",
   "pending_sig": "持仓周线收盘跌破 EMA21 (核心趋势破坏): Broadcom(AVGO) / Alphabet(GOOGL) / Arm Holdings(ARM)|持仓掉出合格排名 Top10 (排名缓冲触发): Broadcom(有效排名 已出合格池) / Alphabet(有效排名 已出合格池) / Arm Holdings(有效排名 已出合格池) ← 顶替者: Arista Networks(模型#13, 收复EMA21回到合格池) / Salesforce(模型#15, 收复EMA21回到合格池) / ASML(模型#16, 收复EMA21回到合格池)"
  }
 }
