@@ -1,18 +1,18 @@
 {
- "last_run": "2026-08-21T05:56:18+08:00",
+ "last_run": "2026-08-21T16:07:23+08:00",
  "run_date": "2026-08-21",
  "top5": [
   {
    "code": "MU",
    "name": "Micron",
    "rank": 1,
-   "score": 2.272
+   "score": 2.274
   },
   {
    "code": "SNDK",
    "name": "Sandisk",
    "rank": 2,
-   "score": 1.825
+   "score": 1.826
   },
   {
    "code": "NVDA",
@@ -24,7 +24,7 @@
    "code": "CRDO",
    "name": "Credo Technology",
    "rank": 4,
-   "score": 1.231
+   "score": 1.23
   },
   {
    "code": "PLTR",
@@ -56,13 +56,13 @@
    "code": "TSM",
    "name": "TSMC",
    "rank": 9,
-   "score": 0.952
+   "score": 0.953
   },
   {
    "code": "ARM",
    "name": "Arm Holdings",
    "rank": 10,
-   "score": 0.818
+   "score": 0.819
   }
  ],
  "signals": {
@@ -928,19 +928,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "Apple (AAPL): hold → sell-confirmed",
-  "Credo Technology (CRDO): buy-gated → sell-warning",
-  "CoreWeave (CRWV): hold → sell-warning",
-  "EMCOR Group (EME): buy-gated → sell-warning",
-  "Eaton (ETN): buy-gated → sell-warning",
-  "Kinder Morgan (KMI): hold → sell-warning",
-  "Lumentum (LITE): sell-warning → buy-gated",
-  "Micron (MU): hold → buy-gated",
-  "Onto Innovation (ONTO): buy-gated → sell-warning",
-  "Quanta Services (PWR): buy-gated → sell-warning",
-  "仓位建议变化: 🟠 观察列表 71% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 284573.61,
   "cash": 936.11,
