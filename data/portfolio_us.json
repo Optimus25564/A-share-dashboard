@@ -1,60 +1,125 @@
 {
- "cash": 936.1099999999901,
+ "cash": 57510.16,
  "initialCash": 300000,
  "currency": "$",
  "positions": {
   "NVDA": {
-   "qty": 238,
-   "avgCost": 210.92865384615382,
+   "qty": 247,
+   "avgCost": 211.0668000622859,
    "name": "Nvidia"
-  },
-  "AAPL": {
-   "qty": 38,
-   "avgCost": 315.0728947368421,
-   "name": "Apple"
   },
   "MU": {
    "qty": 47,
    "avgCost": 935.4847542735042,
    "name": "Micron"
   },
-  "AVGO": {
-   "qty": 117,
-   "avgCost": 382.8661538461539,
-   "name": "Broadcom"
-  },
   "TSM": {
-   "qty": 28,
-   "avgCost": 403.41,
+   "qty": 100,
+   "avgCost": 414.5988,
    "name": "TSMC"
   },
   "MSFT": {
-   "qty": 89,
-   "avgCost": 499.9384269662922,
+   "qty": 91,
+   "avgCost": 499.57142857142867,
    "name": "Microsoft"
   },
-  "GOOGL": {
-   "qty": 35,
-   "avgCost": 354.06,
-   "name": "Alphabet"
-  },
-  "ARM": {
-   "qty": 40,
-   "avgCost": 282.49175,
-   "name": "Arm Holdings"
-  },
   "PLTR": {
-   "qty": 254,
+   "qty": 244,
    "avgCost": 174.04,
    "name": "Palantir"
-  },
-  "SNDK": {
-   "qty": 7,
-   "avgCost": 1641.11,
-   "name": "Sandisk"
   }
  },
  "history": [
+  {
+   "ts": "2026-08-22 05:52",
+   "side": "buy",
+   "code": "TSM",
+   "name": "TSMC",
+   "price": 418.95,
+   "qty": 72,
+   "amount": 30164.4,
+   "cashAfter": 57510.16
+  },
+  {
+   "ts": "2026-08-22 05:52",
+   "side": "sell",
+   "code": "PLTR",
+   "name": "Palantir",
+   "price": 179.94,
+   "qty": 10,
+   "amount": 1799.4,
+   "cashAfter": 57510.16
+  },
+  {
+   "ts": "2026-08-22 05:52",
+   "side": "buy",
+   "code": "MSFT",
+   "name": "Microsoft",
+   "price": 483.24,
+   "qty": 2,
+   "amount": 966.48,
+   "cashAfter": 57510.16
+  },
+  {
+   "ts": "2026-08-22 05:52",
+   "side": "buy",
+   "code": "NVDA",
+   "name": "Nvidia",
+   "price": 214.72,
+   "qty": 9,
+   "amount": 1932.48,
+   "cashAfter": 57510.16
+  },
+  {
+   "ts": "2026-08-22 05:52",
+   "side": "sell",
+   "code": "SNDK",
+   "name": "Sandisk",
+   "price": 1596.08,
+   "qty": 7,
+   "amount": 11172.56,
+   "cashAfter": 57510.16
+  },
+  {
+   "ts": "2026-08-22 05:52",
+   "side": "sell",
+   "code": "ARM",
+   "name": "Arm Holdings",
+   "price": 243.32,
+   "qty": 40,
+   "amount": 9732.8,
+   "cashAfter": 57510.16
+  },
+  {
+   "ts": "2026-08-22 05:52",
+   "side": "sell",
+   "code": "GOOGL",
+   "name": "Alphabet",
+   "price": 344.82,
+   "qty": 35,
+   "amount": 12068.7,
+   "cashAfter": 57510.16
+  },
+  {
+   "ts": "2026-08-22 05:52",
+   "side": "sell",
+   "code": "AVGO",
+   "name": "Broadcom",
+   "price": 368.45,
+   "qty": 117,
+   "amount": 43108.65,
+   "cashAfter": 57510.16
+  },
+  {
+   "ts": "2026-08-22 05:52",
+   "side": "sell",
+   "code": "AAPL",
+   "name": "Apple",
+   "price": 309.35,
+   "qty": 38,
+   "amount": 11755.3,
+   "cashAfter": 57510.16
+  },
   {
    "ts": "2026-08-15 05:52",
    "side": "buy",
@@ -770,9 +835,42 @@
    "total": 284573.61,
    "cash": 936.11,
    "mv": 283637.5
+  },
+  {
+   "date": "2026-08-22",
+   "total": 285759.86,
+   "cash": 936.11,
+   "mv": 284823.75
   }
  ],
  "decisions": [
+  {
+   "date": "2026-08-22",
+   "tier": "宏观门控 (核心80%, 卫星舱现金)",
+   "reasons": [
+    "持仓周线收盘跌破 EMA21 (核心趋势破坏): Broadcom(AVGO) / Alphabet(GOOGL) / Arm Holdings(ARM)",
+    "持仓掉出合格排名 Top10 (排名缓冲触发): Broadcom(有效排名 已出合格池) / Alphabet(有效排名 已出合格池) / Arm Holdings(有效排名 已出合格池) ← 顶替者: Arista Networks(模型#13, 收复EMA21回到合格池) / Salesforce(模型#15, 收复EMA21回到合格池) / ASML(模型#16, 收复EMA21回到合格池)"
+   ],
+   "trades": [
+    "卖出 Apple 38 股 @ 309.35",
+    "卖出 Broadcom 117 股 @ 368.45",
+    "卖出 Alphabet 35 股 @ 344.82",
+    "卖出 Arm Holdings 40 股 @ 243.32",
+    "卖出 Sandisk 7 股 @ 1596.08",
+    "买入 Nvidia 9 股 @ 214.72",
+    "买入 Microsoft 2 股 @ 483.24",
+    "卖出 Palantir 10 股 @ 179.94",
+    "买入 TSMC 72 股 @ 418.95"
+   ],
+   "holdings": [
+    "Nvidia 1名",
+    "Micron 3名",
+    "TSMC 8名",
+    "Microsoft 4名",
+    "Palantir 5名"
+   ],
+   "cash_pct": 20.1
+  },
   {
    "date": "2026-08-15",
    "tier": "正常 (核心80% + 卫星20%)",
@@ -948,7 +1046,6 @@
  "strategy_state": {
   "tier": 1,
   "seeded": true,
-  "last_check": "2026-08-21 16:07",
-  "pending_sig": "持仓周线收盘跌破 EMA21 (核心趋势破坏): Broadcom(AVGO) / Alphabet(GOOGL) / Arm Holdings(ARM)|持仓掉出合格排名 Top10 (排名缓冲触发): Broadcom(有效排名 已出合格池) / Alphabet(有效排名 已出合格池) / Arm Holdings(有效排名 已出合格池) ← 顶替者: Arista Networks(模型#13, 收复EMA21回到合格池) / Salesforce(模型#15, 收复EMA21回到合格池) / ASML(模型#16, 收复EMA21回到合格池)"
+  "last_check": "2026-08-22 05:52"
  }
 }

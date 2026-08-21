@@ -1,24 +1,24 @@
 {
- "last_run": "2026-08-21T16:06:13+08:00",
- "run_date": "2026-08-21",
+ "last_run": "2026-08-22T05:51:25+08:00",
+ "run_date": "2026-08-22",
  "top5": [
   {
    "code": "688256",
    "name": "寒武纪",
    "rank": 1,
-   "score": 1.726
+   "score": 1.727
   },
   {
    "code": "300308",
    "name": "中际旭创",
    "rank": 2,
-   "score": 1.407
+   "score": 1.409
   },
   {
    "code": "688041",
    "name": "海光信息",
    "rank": 3,
-   "score": 1.316
+   "score": 1.315
   },
   {
    "code": "688008",
@@ -30,7 +30,7 @@
    "code": "300604",
    "name": "长川科技",
    "rank": 5,
-   "score": 1.068
+   "score": 1.069
   }
  ],
  "candidates": [
@@ -38,7 +38,7 @@
    "code": "002463",
    "name": "沪电股份",
    "rank": 6,
-   "score": 0.886
+   "score": 0.89
   },
   {
    "code": "300475",
@@ -50,7 +50,7 @@
    "code": "688012",
    "name": "中微公司",
    "rank": 8,
-   "score": 0.809
+   "score": 0.808
   },
   {
    "code": "300476",
@@ -62,7 +62,7 @@
    "code": "688120",
    "name": "华海清科",
    "rank": 10,
-   "score": 0.601
+   "score": 0.598
   }
  ],
  "signals": {
@@ -466,19 +466,7 @@
  },
  "kline_status": "ok (28/28)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "紫光股份 (000938): sell-warning → buy-gated",
-  "浪潮信息 (000977): sell-warning → buy-gated",
-  "北方华创 (002371): sell-warning → sell-confirmed",
-  "雅克科技 (002409): sell-warning → sell-confirmed",
-  "胜宏科技 (300476): sell-warning → sell-confirmed",
-  "长川科技 (300604): sell-warning → hold",
-  "工业富联 (601138): sell-warning → sell-confirmed",
-  "中微公司 (688012): hold → sell-confirmed",
-  "华海清科 (688120): buy-gated → hold-trend",
-  "金盘科技 (688676): sell-confirmed → hold",
-  "仓位建议变化: 🟠 大盘跌破周线 EMA21 (3905.20 < 3966.33); 观察列表 79% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 2533116.0,
   "cash": 506963.0,
