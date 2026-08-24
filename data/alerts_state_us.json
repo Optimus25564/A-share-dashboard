@@ -1,6 +1,6 @@
 {
- "last_run": "2026-08-22T05:52:35+08:00",
- "run_date": "2026-08-22",
+ "last_run": "2026-08-24T16:12:38+08:00",
+ "run_date": "2026-08-24",
  "top5": [
   {
    "code": "MU",
@@ -18,7 +18,7 @@
    "code": "NVDA",
    "name": "Nvidia",
    "rank": 3,
-   "score": 1.286
+   "score": 1.285
   },
   {
    "code": "CRDO",
@@ -30,7 +30,7 @@
    "code": "PLTR",
    "name": "Palantir",
    "rank": 5,
-   "score": 1.22
+   "score": 1.221
   }
  ],
  "candidates": [
@@ -50,7 +50,7 @@
    "code": "AVGO",
    "name": "Broadcom",
    "rank": 8,
-   "score": 1.002
+   "score": 1.003
   },
   {
    "code": "TSM",
@@ -59,10 +59,10 @@
    "score": 0.953
   },
   {
-   "code": "ARM",
-   "name": "Arm Holdings",
+   "code": "AMD",
+   "name": "AMD",
    "rank": 10,
-   "score": 0.819
+   "score": 0.818
   }
  ],
  "signals": {
@@ -976,52 +976,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "AMD (AMD): sell-warning → sell-confirmed",
-  "Arista Networks (ANET): buy-gated → hold-trend",
-  "ASE Technology (ASE): sell-warning → sell-confirmed",
-  "Ciena (CIEN): sell-warning → sell-confirmed",
-  "Coherent (COHR): sell-warning → sell-confirmed",
-  "Global X Copper Miners ETF (COPX): hold-trend → buy-gated",
-  "Credo Technology (CRDO): sell-warning → sell-confirmed",
-  "CoreWeave (CRWV): sell-warning → sell-confirmed",
-  "EMCOR Group (EME): sell-warning → sell-confirmed",
-  "Eaton (ETN): sell-warning → sell-confirmed",
-  "Comfort Systems (FIX): sell-warning → sell-confirmed",
-  "Fabrinet (FN): sell-warning → sell-confirmed",
-  "GE Vernova (GEV): sell-warning → sell-confirmed",
-  "Hubbell (HUBB): sell-warning → sell-confirmed",
-  "IREN (IREN): hold → sell-confirmed",
-  "Johnson Controls (JCI): sell-warning → sell-confirmed",
-  "Kinder Morgan (KMI): sell-warning → sell-confirmed",
-  "Lam Research (LRCX): sell-warning → sell-confirmed",
-  "Monolithic Power (MPWR): sell-warning → sell-confirmed",
-  "Onto Innovation (ONTO): sell-warning → sell-confirmed",
-  "Oracle (ORCL): sell-warning → hold",
-  "Quanta Services (PWR): sell-warning → sell-confirmed",
-  "VanEck Semiconductor ETF (SMH): sell-warning → sell-confirmed",
-  "Synopsys (SNPS): sell-warning → sell-confirmed",
-  "Teradyne (TER): buy-gated → sell-confirmed",
-  "Tesla (TSLA): sell-confirmed → hold",
-  "TSMC (TSM): sell-warning → buy-gated",
-  "Trane Technologies (TT): sell-warning → sell-confirmed",
-  "Vertiv (VRT): sell-warning → sell-confirmed",
-  "Williams Companies (WMB): sell-warning → sell-confirmed",
-  "仓位建议变化: 🟠 观察列表 70% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱",
-  "🤖 美股模拟盘调仓 · 宏观门控 (核心80%, 卫星舱现金)",
-  "  原因: 持仓周线收盘跌破 EMA21 (核心趋势破坏): Broadcom(AVGO) / Alphabet(GOOGL) / Arm Holdings(ARM)",
-  "  原因: 持仓掉出合格排名 Top10 (排名缓冲触发): Broadcom(有效排名 已出合格池) / Alphabet(有效排名 已出合格池) / Arm Holdings(有效排名 已出合格池) ← 顶替者: Arista Networks(模型#13, 收复EMA21回到合格池) / Salesforce(模型#15, 收复EMA21回到合格池) / ASML(模型#16, 收复EMA21回到合格池)",
-  "  卖出 Apple 38 股 @ 309.35",
-  "  卖出 Broadcom 117 股 @ 368.45",
-  "  卖出 Alphabet 35 股 @ 344.82",
-  "  卖出 Arm Holdings 40 股 @ 243.32",
-  "  卖出 Sandisk 7 股 @ 1596.08",
-  "  买入 Nvidia 9 股 @ 214.72",
-  "  买入 Microsoft 2 股 @ 483.24",
-  "  卖出 Palantir 10 股 @ 179.94",
-  "  买入 TSMC 72 股 @ 418.95",
-  "  调仓后: 持仓 5 只 / 现金 20.1% / 总资产 $285,760"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 285759.86,
   "cash": 57510.16,
