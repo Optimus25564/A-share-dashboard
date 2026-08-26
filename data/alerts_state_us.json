@@ -1,5 +1,5 @@
 {
- "last_run": "2026-08-26T05:55:46+08:00",
+ "last_run": "2026-08-26T16:09:22+08:00",
  "run_date": "2026-08-26",
  "top5": [
   {
@@ -12,13 +12,13 @@
    "code": "SNDK",
    "name": "Sandisk",
    "rank": 2,
-   "score": 1.824
+   "score": 1.823
   },
   {
    "code": "NVDA",
    "name": "Nvidia",
    "rank": 3,
-   "score": 1.284
+   "score": 1.285
   },
   {
    "code": "CRDO",
@@ -30,7 +30,7 @@
    "code": "PLTR",
    "name": "Palantir",
    "rank": 5,
-   "score": 1.221
+   "score": 1.22
   }
  ],
  "candidates": [
@@ -44,13 +44,13 @@
    "code": "APP",
    "name": "AppLovin",
    "rank": 7,
-   "score": 1.033
+   "score": 1.034
   },
   {
    "code": "AVGO",
    "name": "Broadcom",
    "rank": 8,
-   "score": 1.002
+   "score": 1.001
   },
   {
    "code": "TSM",
@@ -62,7 +62,7 @@
    "code": "AMD",
    "name": "AMD",
    "rank": 10,
-   "score": 0.817
+   "score": 0.819
   }
  ],
  "signals": {
@@ -974,14 +974,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "Arista Networks (ANET): buy-gated → hold-trend",
-  "iShares MSCI Korea (EWY): sell-warning → buy-gated",
-  "Lumentum (LITE): sell-warning → buy-gated",
-  "Micron (MU): sell-warning → buy-gated",
-  "Nvidia (NVDA): sell-warning → buy-gated",
-  "仓位建议变化: 🟠 观察列表 77% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 282615.83,
   "cash": 57510.16,
