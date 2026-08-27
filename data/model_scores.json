@@ -203,21 +203,21 @@
    "rank": 1,
    "code": "NVDA",
    "name": "Nvidia",
-   "score": 1.1331,
+   "score": 1.1335,
    "weight": 2.9
   },
   {
    "rank": 2,
    "code": "AVGO",
    "name": "Broadcom",
-   "score": 0.8387,
+   "score": 0.8379,
    "weight": 2.5
   },
   {
    "rank": 3,
    "code": "MU",
    "name": "Micron",
-   "score": 0.798,
+   "score": 0.7976,
    "weight": 2.5
   },
   {
@@ -231,91 +231,91 @@
    "rank": 5,
    "code": "PLTR",
    "name": "Palantir",
-   "score": 0.7319,
+   "score": 0.7278,
    "weight": 2.4
   },
   {
    "rank": 6,
    "code": "META",
    "name": "Meta Platforms",
-   "score": 0.7235,
+   "score": 0.7236,
    "weight": 2.4
   },
   {
    "rank": 7,
    "code": "GOOGL",
    "name": "Alphabet",
-   "score": 0.6804,
+   "score": 0.6788,
    "weight": 2.3
   },
   {
    "rank": 8,
    "code": "TSM",
    "name": "TSMC",
-   "score": 0.6641,
+   "score": 0.6635,
    "weight": 2.3
   },
   {
    "rank": 9,
    "code": "AAPL",
    "name": "Apple",
-   "score": 0.5881,
+   "score": 0.5883,
    "weight": 2.2
   },
   {
    "rank": 10,
    "code": "APP",
    "name": "AppLovin",
-   "score": 0.582,
+   "score": 0.5809,
    "weight": 2.2
   },
   {
    "rank": 11,
    "code": "SNDK",
    "name": "Sandisk",
-   "score": 0.5711,
+   "score": 0.5712,
    "weight": 2.2
   },
   {
    "rank": 12,
    "code": "ARM",
    "name": "Arm Holdings",
-   "score": 0.516,
+   "score": 0.5131,
    "weight": 2.1
   },
   {
    "rank": 13,
    "code": "ANET",
    "name": "Arista Networks",
-   "score": 0.4934,
+   "score": 0.4964,
    "weight": 2.1
   },
   {
    "rank": 14,
    "code": "KLAC",
    "name": "KLA Corp",
-   "score": 0.4812,
+   "score": 0.4808,
    "weight": 2.1
   },
   {
    "rank": 15,
    "code": "CRM",
    "name": "Salesforce",
-   "score": 0.4762,
+   "score": 0.4755,
    "weight": 2.1
   },
   {
    "rank": 16,
    "code": "ASML",
    "name": "ASML",
-   "score": 0.4432,
+   "score": 0.4426,
    "weight": 2
   },
   {
    "rank": 17,
    "code": "ALAB",
    "name": "Astera Labs",
-   "score": 0.4255,
+   "score": 0.4264,
    "weight": 2
   },
   {
@@ -329,231 +329,231 @@
    "rank": 19,
    "code": "CRDO",
    "name": "Credo Technology",
-   "score": 0.3854,
+   "score": 0.3853,
    "weight": 2
   },
   {
    "rank": 20,
    "code": "NOW",
    "name": "ServiceNow",
-   "score": 0.3835,
+   "score": 0.3822,
    "weight": 2
   },
   {
    "rank": 21,
    "code": "AMZN",
    "name": "Amazon",
-   "score": 0.3322,
+   "score": 0.3314,
    "weight": 1.9
   },
   {
    "rank": 22,
    "code": "TER",
    "name": "Teradyne",
-   "score": 0.3138,
+   "score": 0.3127,
    "weight": 1.9
   },
   {
    "rank": 23,
    "code": "CEG",
    "name": "Constellation Energy",
-   "score": 0.3006,
+   "score": 0.3003,
    "weight": 1.9
   },
   {
    "rank": 24,
    "code": "AMD",
    "name": "AMD",
-   "score": 0.295,
+   "score": 0.2946,
    "weight": 1.8
   },
   {
    "rank": 25,
    "code": "CSCO",
    "name": "Cisco Systems",
-   "score": 0.2901,
+   "score": 0.2903,
    "weight": 1.8
   },
   {
    "rank": 26,
    "code": "LRCX",
    "name": "Lam Research",
-   "score": 0.2587,
+   "score": 0.2578,
    "weight": 1.8
   },
   {
    "rank": 27,
    "code": "WMB",
    "name": "Williams Companies",
-   "score": 0.2475,
+   "score": 0.2498,
    "weight": 1.8
   },
   {
    "rank": 28,
    "code": "AMAT",
    "name": "Applied Materials",
-   "score": 0.2256,
+   "score": 0.2251,
    "weight": 1.8
   },
   {
    "rank": 29,
    "code": "KMI",
    "name": "Kinder Morgan",
-   "score": 0.1519,
+   "score": 0.1538,
    "weight": 1.7
   },
   {
    "rank": 30,
    "code": "QCOM",
    "name": "Qualcomm",
-   "score": 0.1475,
+   "score": 0.1483,
    "weight": 1.7
   },
   {
    "rank": 31,
    "code": "MPWR",
    "name": "Monolithic Power",
-   "score": 0.147,
+   "score": 0.1465,
    "weight": 1.7
   },
   {
    "rank": 32,
    "code": "SNPS",
    "name": "Synopsys",
-   "score": 0.0714,
+   "score": 0.0711,
    "weight": 1.6
   },
   {
    "rank": 33,
    "code": "MRVL",
    "name": "Marvell",
-   "score": 0.0572,
+   "score": 0.0565,
    "weight": 1.5
   },
   {
    "rank": 34,
    "code": "CRWV",
    "name": "CoreWeave",
-   "score": 0.0502,
+   "score": 0.0496,
    "weight": 1.5
   },
   {
    "rank": 35,
    "code": "TSLA",
    "name": "Tesla",
-   "score": 0.0327,
+   "score": 0.0317,
    "weight": 1.5
   },
   {
    "rank": 36,
    "code": "ETN",
    "name": "Eaton",
-   "score": 0.0294,
+   "score": 0.0307,
    "weight": 1.5
   },
   {
    "rank": 37,
    "code": "VRT",
    "name": "Vertiv",
-   "score": 0.0128,
+   "score": 0.0144,
    "weight": 1.5
   },
   {
    "rank": 38,
    "code": "FIX",
    "name": "Comfort Systems",
-   "score": -0.0028,
+   "score": -0.001,
    "weight": 1.5
   },
   {
    "rank": 39,
    "code": "VST",
    "name": "Vistra",
-   "score": -0.0304,
+   "score": -0.0303,
    "weight": 1.4
   },
   {
    "rank": 40,
    "code": "GEV",
    "name": "GE Vernova",
-   "score": -0.0668,
+   "score": -0.0656,
    "weight": 1.4
   },
   {
    "rank": 41,
    "code": "ONTO",
    "name": "Onto Innovation",
-   "score": -0.0711,
+   "score": -0.0716,
    "weight": 1.4
   },
   {
    "rank": 42,
    "code": "CIEN",
    "name": "Ciena",
-   "score": -0.078,
+   "score": -0.0759,
    "weight": 1.4
   },
   {
    "rank": 43,
    "code": "LITE",
    "name": "Lumentum",
-   "score": -0.1344,
+   "score": -0.1313,
    "weight": 1.3
   },
   {
    "rank": 44,
    "code": "GLW",
    "name": "Corning",
-   "score": -0.1562,
+   "score": -0.1545,
    "weight": 1.3
   },
   {
    "rank": 45,
    "code": "JCI",
    "name": "Johnson Controls",
-   "score": -0.1622,
+   "score": -0.1615,
    "weight": 1.3
   },
   {
    "rank": 46,
    "code": "TT",
    "name": "Trane Technologies",
-   "score": -0.1817,
+   "score": -0.181,
    "weight": 1.2
   },
   {
    "rank": 47,
    "code": "INTC",
    "name": "Intel",
-   "score": -0.1895,
+   "score": -0.1894,
    "weight": 1.2
   },
   {
    "rank": 48,
    "code": "HUBB",
    "name": "Hubbell",
-   "score": -0.2028,
+   "score": -0.2021,
    "weight": 1.2
   },
   {
    "rank": 49,
    "code": "COHR",
    "name": "Coherent",
-   "score": -0.2854,
+   "score": -0.2843,
    "weight": 1.1
   },
   {
    "rank": 50,
    "code": "PWR",
    "name": "Quanta Services",
-   "score": -0.2915,
+   "score": -0.2906,
    "weight": 1.1
   },
   {
    "rank": 51,
    "code": "IREN",
    "name": "IREN",
-   "score": -0.2927,
+   "score": -0.2913,
    "weight": 1.1
   },
   {
@@ -567,56 +567,56 @@
    "rank": 53,
    "code": "EME",
    "name": "EMCOR Group",
-   "score": -0.3148,
+   "score": -0.3132,
    "weight": 1.1
   },
   {
    "rank": 54,
    "code": "NRG",
    "name": "NRG Energy",
-   "score": -0.3719,
+   "score": -0.3709,
    "weight": 1
   },
   {
    "rank": 55,
    "code": "RKLB",
    "name": "Rocket Lab",
-   "score": -0.3849,
+   "score": -0.386,
    "weight": 1
   },
   {
    "rank": 56,
    "code": "CCJ",
    "name": "Cameco",
-   "score": -0.3887,
+   "score": -0.389,
    "weight": 1
   },
   {
    "rank": 57,
    "code": "MOD",
    "name": "Modine Manufacturing",
-   "score": -0.4059,
+   "score": -0.4067,
    "weight": 1
   },
   {
    "rank": 58,
    "code": "ASE",
    "name": "ASE Technology",
-   "score": -0.4329,
+   "score": -0.4331,
    "weight": 0.9
   },
   {
    "rank": 59,
    "code": "FN",
    "name": "Fabrinet",
-   "score": -0.458,
+   "score": -0.4576,
    "weight": 0.9
   },
   {
    "rank": 60,
    "code": "AMKR",
    "name": "Amkor Technology",
-   "score": -0.6715,
+   "score": -0.6725,
    "weight": 0.6
   }
  ],
