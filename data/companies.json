@@ -53,9 +53,9 @@
       }
     ],
     "strategic": 7,
-    "market_cap_billion": 10040.4,
+    "market_cap_billion": 10034.6,
     "avg_turnover_pct": 3,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "300475": {
@@ -114,9 +114,9 @@
     "strategic": 7,
     "ai_execution_score": 7,
     "ai_execution_note": "SK 海力士 HBM 中国核心分销受益，HBM 涨价和 HBM3E/HBM4 高端型号出货驱动 2026Q1 业绩爆发；但分销毛利低、供应商集中和存储周期风险仍高。",
-    "market_cap_billion": 808.1,
+    "market_cap_billion": 835.8,
     "avg_turnover_pct": 9.5,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "601138": {
@@ -173,9 +173,9 @@
       }
     ],
     "strategic": 4,
-    "market_cap_billion": 12708.2,
+    "market_cap_billion": 12866.9,
     "avg_turnover_pct": 1.5,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "603019": {
@@ -232,9 +232,9 @@
       }
     ],
     "strategic": 8,
-    "market_cap_billion": 1255.7,
+    "market_cap_billion": 1291.5,
     "avg_turnover_pct": 3.8,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "688008": {
@@ -291,9 +291,9 @@
       }
     ],
     "strategic": 8,
-    "market_cap_billion": 2599.8,
+    "market_cap_billion": 2501.5,
     "avg_turnover_pct": 5.5,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "688041": {
@@ -350,9 +350,9 @@
       }
     ],
     "strategic": 10,
-    "market_cap_billion": 5706.0,
+    "market_cap_billion": 5901.5,
     "avg_turnover_pct": 5.2,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "688047": {
@@ -409,9 +409,9 @@
       }
     ],
     "strategic": 7,
-    "market_cap_billion": 425.9,
+    "market_cap_billion": 433.1,
     "avg_turnover_pct": 6.5,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "688256": {
@@ -468,9 +468,9 @@
       }
     ],
     "strategic": 10,
-    "market_cap_billion": 6581.8,
+    "market_cap_billion": 6994.0,
     "avg_turnover_pct": 4.5,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "688347": {
@@ -527,9 +527,9 @@
       }
     ],
     "strategic": 8,
-    "market_cap_billion": 4309.7,
+    "market_cap_billion": 4448.6,
     "avg_turnover_pct": 3,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "688981": {
@@ -586,9 +586,9 @@
       }
     ],
     "strategic": 10,
-    "market_cap_billion": 10776.7,
+    "market_cap_billion": 11018.2,
     "avg_turnover_pct": 1.8,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "_meta": {
@@ -606,7 +606,7 @@
       "market_cap_billion": "估算总市值 (亿元), 来源: 收盘价×总股本",
       "avg_turnover_pct": "近 60 日平均换手率 (%)"
     },
-    "market_cap_updated": "总市值更新于 2026-08-29 · 来源: 腾讯行情 f45 (A股亿元 / 美股亿美元) · scripts/update_market_caps.py",
+    "market_cap_updated": "总市值更新于 2026-08-31 · 来源: 腾讯行情 f45 (A股亿元 / 美股亿美元) · scripts/update_market_caps.py",
     "source_policy_note": "2026-07 起全部季度财务统一来源: 巨潮资讯官方定期报告 PDF 合并利润表, 单季 = 累计报告差减 (Q2=半年报-一季报, Q3=三季报-半年报, Q4=年报-三季报); GM/NM 为合并利润表口径 (非公司叙述/产品线口径)",
     "subjective_score_policy": "strategic 评分必须带 strategic_updated 日期与依据; 模型按新鲜度衰减: ≤180天全额, 180-365天半衰向中性5, 更旧→5。复核评分时必须同时更新日期和理由。ai_execution_score 已退役为参考字段, 不进模型。"
   },
@@ -664,9 +664,9 @@
       }
     ],
     "strategic": 9,
-    "market_cap_billion": 321.3,
+    "market_cap_billion": 322.6,
     "avg_turnover_pct": 8,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "002837": {
@@ -723,9 +723,9 @@
       }
     ],
     "strategic": 7,
-    "market_cap_billion": 823.5,
+    "market_cap_billion": 871.1,
     "avg_turnover_pct": 3.5,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "000977": {
@@ -782,9 +782,9 @@
       }
     ],
     "strategic": 6,
-    "market_cap_billion": 1137.2,
+    "market_cap_billion": 1250.8,
     "avg_turnover_pct": 4.5,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "000034": {
@@ -841,9 +841,9 @@
       }
     ],
     "strategic": 7,
-    "market_cap_billion": 244.8,
+    "market_cap_billion": 246.1,
     "avg_turnover_pct": 5.5,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "000938": {
@@ -900,9 +900,9 @@
       }
     ],
     "strategic": 7,
-    "market_cap_billion": 1026.5,
+    "market_cap_billion": 1114.0,
     "avg_turnover_pct": 3.2,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "002156": {
@@ -959,9 +959,9 @@
       }
     ],
     "strategic": 8,
-    "market_cap_billion": 967.5,
+    "market_cap_billion": 979.8,
     "avg_turnover_pct": 4.8,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "002409": {
@@ -1018,9 +1018,9 @@
       }
     ],
     "strategic": 7,
-    "market_cap_billion": 676.1,
+    "market_cap_billion": 677.6,
     "avg_turnover_pct": 6,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "600584": {
@@ -1077,9 +1077,9 @@
       }
     ],
     "strategic": 8,
-    "market_cap_billion": 1340.8,
+    "market_cap_billion": 1355.5,
     "avg_turnover_pct": 7.5,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "002463": {
@@ -1136,9 +1136,9 @@
       }
     ],
     "strategic": 8,
-    "market_cap_billion": 2341.9,
+    "market_cap_billion": 2403.7,
     "avg_turnover_pct": 4.5,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "300476": {
@@ -1195,9 +1195,9 @@
       }
     ],
     "strategic": 7,
-    "market_cap_billion": 2374.4,
+    "market_cap_billion": 2389.5,
     "avg_turnover_pct": 6,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "002371": {
@@ -1254,9 +1254,9 @@
       }
     ],
     "strategic": 9,
-    "market_cap_billion": 5061.8,
+    "market_cap_billion": 5078.3,
     "avg_turnover_pct": 1.5,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "688012": {
@@ -1313,9 +1313,9 @@
       }
     ],
     "strategic": 9,
-    "market_cap_billion": 3515.3,
+    "market_cap_billion": 3467.4,
     "avg_turnover_pct": 2.5,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "688120": {
@@ -1372,9 +1372,9 @@
       }
     ],
     "strategic": 7,
-    "market_cap_billion": 1292.9,
+    "market_cap_billion": 1293.5,
     "avg_turnover_pct": 3,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "300604": {
@@ -1431,9 +1431,9 @@
       }
     ],
     "strategic": 7,
-    "market_cap_billion": 1789.0,
+    "market_cap_billion": 1801.4,
     "avg_turnover_pct": 5,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "002028": {
@@ -1490,9 +1490,9 @@
       }
     ],
     "strategic": 8,
-    "market_cap_billion": 1120.5,
+    "market_cap_billion": 1096.5,
     "avg_turnover_pct": 3,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "688676": {
@@ -1549,9 +1549,9 @@
       }
     ],
     "strategic": 7,
-    "market_cap_billion": 304.0,
+    "market_cap_billion": 306.4,
     "avg_turnover_pct": 5,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "002335": {
@@ -1608,9 +1608,9 @@
       }
     ],
     "strategic": 7,
-    "market_cap_billion": 231.0,
+    "market_cap_billion": 232.5,
     "avg_turnover_pct": 5,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   },
   "002518": {
@@ -1667,9 +1667,9 @@
       }
     ],
     "strategic": 6,
-    "market_cap_billion": 206.5,
+    "market_cap_billion": 208.7,
     "avg_turnover_pct": 6,
-    "market_cap_asof": "2026-08-29",
+    "market_cap_asof": "2026-08-31",
     "strategic_updated": "2026-06-07"
   }
 }
