@@ -1,36 +1,36 @@
 {
- "last_run": "2026-09-01T20:41:46+08:00",
- "run_date": "2026-09-01",
+ "last_run": "2026-09-02T07:29:40+08:00",
+ "run_date": "2026-09-02",
  "top5": [
   {
    "code": "688256",
    "name": "寒武纪",
    "rank": 1,
-   "score": 1.731
+   "score": 1.732
   },
   {
    "code": "300308",
    "name": "中际旭创",
    "rank": 2,
-   "score": 1.402
+   "score": 1.404
   },
   {
    "code": "688041",
    "name": "海光信息",
    "rank": 3,
-   "score": 1.316
+   "score": 1.317
   },
   {
    "code": "688008",
    "name": "澜起科技",
    "rank": 4,
-   "score": 1.216
+   "score": 1.215
   },
   {
    "code": "300604",
    "name": "长川科技",
    "rank": 5,
-   "score": 1.067
+   "score": 1.07
   }
  ],
  "candidates": [
@@ -38,31 +38,31 @@
    "code": "002463",
    "name": "沪电股份",
    "rank": 6,
-   "score": 0.891
+   "score": 0.89
   },
   {
    "code": "300475",
    "name": "香农芯创",
    "rank": 7,
-   "score": 0.827
+   "score": 0.826
   },
   {
    "code": "688012",
    "name": "中微公司",
    "rank": 8,
-   "score": 0.807
+   "score": 0.806
   },
   {
    "code": "300476",
    "name": "胜宏科技",
    "rank": 9,
-   "score": 0.696
+   "score": 0.694
   },
   {
    "code": "688120",
    "name": "华海清科",
    "rank": 10,
-   "score": 0.594
+   "score": 0.593
   }
  ],
  "signals": {
@@ -463,14 +463,7 @@
  },
  "kline_status": "ok (28/28)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "沪电股份 (002463): buy-gated → sell-warning",
-  "香农芯创 (300475): hold → sell-confirmed",
-  "长川科技 (300604): sell-confirmed → buy-gated",
-  "工业富联 (601138): buy-gated → sell-warning",
-  "华海清科 (688120): buy-gated → sell-warning",
-  "仓位建议变化: 🟠 观察列表 86% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 2507089.0,
   "cash": 506963.0,
