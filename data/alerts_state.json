@@ -1,36 +1,36 @@
 {
- "last_run": "2026-08-31T23:18:06+08:00",
- "run_date": "2026-08-31",
+ "last_run": "2026-09-01T08:45:14+08:00",
+ "run_date": "2026-09-01",
  "top5": [
   {
    "code": "688256",
    "name": "寒武纪",
    "rank": 1,
-   "score": 1.728
+   "score": 1.731
   },
   {
    "code": "300308",
    "name": "中际旭创",
    "rank": 2,
-   "score": 1.404
+   "score": 1.402
   },
   {
    "code": "688041",
    "name": "海光信息",
    "rank": 3,
-   "score": 1.315
+   "score": 1.316
   },
   {
    "code": "688008",
    "name": "澜起科技",
    "rank": 4,
-   "score": 1.22
+   "score": 1.216
   },
   {
    "code": "300604",
    "name": "长川科技",
    "rank": 5,
-   "score": 1.068
+   "score": 1.067
   }
  ],
  "candidates": [
@@ -38,31 +38,31 @@
    "code": "002463",
    "name": "沪电股份",
    "rank": 6,
-   "score": 0.89
+   "score": 0.891
   },
   {
    "code": "300475",
    "name": "香农芯创",
    "rank": 7,
-   "score": 0.826
+   "score": 0.827
   },
   {
    "code": "688012",
    "name": "中微公司",
    "rank": 8,
-   "score": 0.809
+   "score": 0.807
   },
   {
    "code": "300476",
    "name": "胜宏科技",
    "rank": 9,
-   "score": 0.697
+   "score": 0.696
   },
   {
    "code": "688120",
    "name": "华海清科",
    "rank": 10,
-   "score": 0.595
+   "score": 0.594
   }
  ],
  "signals": {
@@ -101,7 +101,7 @@
    "close": 858.35,
    "close_date": "2026-08-28",
    "ema8": 958.07,
-   "ema21": 933.37,
+   "ema21": 933.39,
    "vs_ema8_pct": -10.41,
    "current_close": 851.9,
    "current_date": "2026-08-31",
@@ -125,11 +125,11 @@
    "close": 64.84,
    "close_date": "2026-08-31",
    "ema8": 64.11,
-   "ema21": 63.46,
+   "ema21": 63.47,
    "vs_ema8_pct": 1.14,
    "action": "buy-deep",
    "strength": 3,
-   "detail": "深回踩 EMA21 (63.46) — 黄金坑",
+   "detail": "深回踩 EMA21 (63.47) — 黄金坑",
    "gated": true
   },
   "603019": {
@@ -189,7 +189,7 @@
    "close": 1046.63,
    "close_date": "2026-08-28",
    "ema8": 1138.92,
-   "ema21": 1131.03,
+   "ema21": 1131.05,
    "vs_ema8_pct": -8.1,
    "current_close": 1112.18,
    "current_date": "2026-08-31",
@@ -353,7 +353,7 @@
    "close": 697.51,
    "close_date": "2026-08-28",
    "ema8": 717.69,
-   "ema21": 667.7,
+   "ema21": 667.69,
    "vs_ema8_pct": -2.81,
    "current_close": 699.79,
    "current_date": "2026-08-31",
@@ -366,7 +366,7 @@
    "close": 362.0,
    "close_date": "2026-08-31",
    "ema8": 364.53,
-   "ema21": 333.24,
+   "ema21": 333.26,
    "vs_ema8_pct": -0.69,
    "action": "sell-warning",
    "strength": 2,
@@ -465,14 +465,7 @@
  },
  "kline_status": "ok (28/28)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "紫光股份 (000938): sell-confirmed → buy-gated",
-  "沪电股份 (002463): sell-confirmed → buy-gated",
-  "香农芯创 (300475): sell-confirmed → hold",
-  "工业富联 (601138): sell-confirmed → buy-gated",
-  "中微公司 (688012): sell-confirmed → sell-warning",
-  "仓位建议变化: 🟠 观察列表 75% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 2544247.0,
   "cash": 506963.0,
