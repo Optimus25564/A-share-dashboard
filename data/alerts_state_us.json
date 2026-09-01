@@ -1,18 +1,18 @@
 {
- "last_run": "2026-09-01T08:46:15+08:00",
+ "last_run": "2026-09-01T20:42:39+08:00",
  "run_date": "2026-09-01",
  "top5": [
   {
    "code": "MU",
    "name": "Micron",
    "rank": 1,
-   "score": 2.272
+   "score": 2.273
   },
   {
    "code": "SNDK",
    "name": "Sandisk",
    "rank": 2,
-   "score": 1.825
+   "score": 1.826
   },
   {
    "code": "NVDA",
@@ -24,7 +24,7 @@
    "code": "CRDO",
    "name": "Credo Technology",
    "rank": 4,
-   "score": 1.232
+   "score": 1.231
   },
   {
    "code": "PLTR",
@@ -38,7 +38,7 @@
    "code": "ALAB",
    "name": "Astera Labs",
    "rank": 6,
-   "score": 1.116
+   "score": 1.117
   },
   {
    "code": "APP",
@@ -214,7 +214,7 @@
    "close": 317.76,
    "close_date": "2026-08-28",
    "ema8": 366.6,
-   "ema21": 414.43,
+   "ema21": 414.53,
    "vs_ema8_pct": -13.32,
    "current_close": 312.06,
    "current_date": "2026-08-31",
@@ -279,7 +279,7 @@
    "close": 270.79,
    "close_date": "2026-08-28",
    "ema8": 292.04,
-   "ema21": 277.27,
+   "ema21": 277.26,
    "vs_ema8_pct": -7.28,
    "current_close": 267.21,
    "current_date": "2026-08-31",
@@ -327,7 +327,7 @@
    "close": 279.2,
    "close_date": "2026-08-28",
    "ema8": 309.09,
-   "ema21": 306.64,
+   "ema21": 306.66,
    "vs_ema8_pct": -9.67,
    "current_close": 277.83,
    "current_date": "2026-08-31",
@@ -340,7 +340,7 @@
    "close": 914.76,
    "close_date": "2026-08-31",
    "ema8": 865.18,
-   "ema21": 812.23,
+   "ema21": 812.26,
    "vs_ema8_pct": 5.73,
    "action": "hold-trend",
    "strength": 1,
@@ -351,7 +351,7 @@
    "close": 414.36,
    "close_date": "2026-08-28",
    "ema8": 487.97,
-   "ema21": 515.7,
+   "ema21": 515.76,
    "vs_ema8_pct": -15.09,
    "current_close": 412.93,
    "current_date": "2026-08-31",
@@ -436,7 +436,7 @@
    "close": 84.23,
    "close_date": "2026-08-28",
    "ema8": 88.26,
-   "ema21": 91.22,
+   "ema21": 91.21,
    "vs_ema8_pct": -4.56,
    "current_close": 84.89,
    "current_date": "2026-08-31",
@@ -570,7 +570,7 @@
    "close": 239.05,
    "close_date": "2026-08-28",
    "ema8": 267.2,
-   "ema21": 257.71,
+   "ema21": 257.74,
    "vs_ema8_pct": -10.54,
    "current_close": 241.91,
    "current_date": "2026-08-31",
@@ -655,7 +655,7 @@
    "close": 232.75,
    "close_date": "2026-08-28",
    "ema8": 233.31,
-   "ema21": 214.35,
+   "ema21": 214.33,
    "vs_ema8_pct": -0.24,
    "current_close": 226.19,
    "current_date": "2026-08-31",
@@ -668,7 +668,7 @@
    "close": 289.47,
    "close_date": "2026-08-28",
    "ema8": 312.75,
-   "ema21": 291.91,
+   "ema21": 291.93,
    "vs_ema8_pct": -7.44,
    "current_close": 296.98,
    "current_date": "2026-08-31",
@@ -898,7 +898,7 @@
    "close": 35.45,
    "close_date": "2026-08-28",
    "ema8": 40.71,
-   "ema21": 43.18,
+   "ema21": 43.19,
    "vs_ema8_pct": -12.92,
    "current_close": 37.12,
    "current_date": "2026-08-31",
@@ -911,7 +911,7 @@
    "close": 186.38,
    "close_date": "2026-08-31",
    "ema8": 166.28,
-   "ema21": 152.57,
+   "ema21": 152.61,
    "vs_ema8_pct": 12.08,
    "action": "hold-trend",
    "strength": 1,
@@ -944,7 +944,7 @@
    "close": 64.39,
    "close_date": "2026-08-28",
    "ema8": 75.77,
-   "ema21": 80.3,
+   "ema21": 80.34,
    "vs_ema8_pct": -15.02,
    "current_close": 63.92,
    "current_date": "2026-08-31",
@@ -968,12 +968,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "Kinder Morgan (KMI): sell-confirmed → buy-gated",
-  "Qualcomm (QCOM): sell-confirmed → hold",
-  "SPDR Metals & Mining (XME): buy-gated → hold-trend",
-  "仓位建议变化: 🟠 观察列表 65% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 290275.24,
   "cash": 57510.16,
