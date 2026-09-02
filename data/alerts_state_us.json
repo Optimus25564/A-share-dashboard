@@ -1,18 +1,18 @@
 {
- "last_run": "2026-09-02T07:30:33+08:00",
+ "last_run": "2026-09-02T20:15:45+08:00",
  "run_date": "2026-09-02",
  "top5": [
   {
    "code": "MU",
    "name": "Micron",
    "rank": 1,
-   "score": 2.273
+   "score": 2.272
   },
   {
    "code": "SNDK",
    "name": "Sandisk",
    "rank": 2,
-   "score": 1.826
+   "score": 1.825
   },
   {
    "code": "NVDA",
@@ -24,13 +24,13 @@
    "code": "CRDO",
    "name": "Credo Technology",
    "rank": 4,
-   "score": 1.231
+   "score": 1.228
   },
   {
    "code": "PLTR",
    "name": "Palantir",
    "rank": 5,
-   "score": 1.223
+   "score": 1.222
   }
  ],
  "candidates": [
@@ -38,19 +38,19 @@
    "code": "ALAB",
    "name": "Astera Labs",
    "rank": 6,
-   "score": 1.117
+   "score": 1.115
   },
   {
    "code": "APP",
    "name": "AppLovin",
    "rank": 7,
-   "score": 1.034
+   "score": 1.035
   },
   {
    "code": "AVGO",
    "name": "Broadcom",
    "rank": 8,
-   "score": 1.002
+   "score": 1.003
   },
   {
    "code": "TSM",
@@ -973,20 +973,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "Amazon (AMZN): buy-gated → sell-warning",
-  "Arista Networks (ANET): hold-trend → buy-gated",
-  "Cameco (CCJ): hold → sell-warning",
-  "Cadence Design (CDNS): hold → sell-warning",
-  "Global X Copper Miners ETF (COPX): hold-trend → buy-gated",
-  "Lumentum (LITE): hold-trend → buy-gated",
-  "Oracle (ORCL): hold → sell-warning",
-  "Qualcomm (QCOM): hold → sell-confirmed",
-  "Synopsys (SNPS): hold → sell-warning",
-  "SPDR Metals & Mining (XME): hold-trend → buy-gated",
-  "大盘跌破周线 EMA8",
-  "仓位建议变化: 🟠 观察列表 74% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 285982.82,
   "cash": 57510.16,
