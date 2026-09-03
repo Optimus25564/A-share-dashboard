@@ -1,36 +1,36 @@
 {
- "last_run": "2026-09-03T07:31:35+08:00",
+ "last_run": "2026-09-03T20:13:57+08:00",
  "run_date": "2026-09-03",
  "top5": [
   {
    "code": "MU",
    "name": "Micron",
    "rank": 1,
-   "score": 2.272
+   "score": 2.273
   },
   {
    "code": "SNDK",
    "name": "Sandisk",
    "rank": 2,
-   "score": 1.825
+   "score": 1.826
   },
   {
    "code": "NVDA",
    "name": "Nvidia",
    "rank": 3,
-   "score": 1.285
-  },
-  {
-   "code": "CRDO",
-   "name": "Credo Technology",
-   "rank": 4,
-   "score": 1.228
+   "score": 1.286
   },
   {
    "code": "PLTR",
    "name": "Palantir",
+   "rank": 4,
+   "score": 1.219
+  },
+  {
+   "code": "CRDO",
+   "name": "Credo Technology",
    "rank": 5,
-   "score": 1.222
+   "score": 1.217
   }
  ],
  "candidates": [
@@ -38,19 +38,19 @@
    "code": "ALAB",
    "name": "Astera Labs",
    "rank": 6,
-   "score": 1.115
+   "score": 1.114
   },
   {
    "code": "APP",
    "name": "AppLovin",
    "rank": 7,
-   "score": 1.035
+   "score": 1.037
   },
   {
    "code": "AVGO",
    "name": "Broadcom",
    "rank": 8,
-   "score": 1.003
+   "score": 1.002
   },
   {
    "code": "TSM",
@@ -971,10 +971,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "Meta Platforms (META): sell-confirmed → hold",
-  "仓位建议变化: 🟠 观察列表 73% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 285984.05,
   "cash": 57510.16,
