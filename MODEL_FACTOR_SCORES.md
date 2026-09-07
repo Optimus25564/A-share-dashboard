@@ -1,6 +1,6 @@
 # 最新量化模型因子得分
 
-生成时间：2026/9/7 21:38:54 HKT
+生成时间：2026/9/8 07:43:17 HKT
 生成方式：`node scripts/build_model_factor_scores.mjs`（与 index.html 模型逻辑同步；改模型请同步三处并重新生成本文件）
 
 ## 公式（A股/美股一致）
