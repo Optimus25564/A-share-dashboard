@@ -1,36 +1,36 @@
 {
- "last_run": "2026-09-05T07:13:47+08:00",
- "run_date": "2026-09-05",
+ "last_run": "2026-09-07T21:38:51+08:00",
+ "run_date": "2026-09-07",
  "top5": [
   {
    "code": "MU",
    "name": "Micron",
    "rank": 1,
-   "score": 2.273
+   "score": 2.275
   },
   {
    "code": "SNDK",
    "name": "Sandisk",
    "rank": 2,
-   "score": 1.826
+   "score": 1.83
   },
   {
    "code": "NVDA",
    "name": "Nvidia",
    "rank": 3,
-   "score": 1.286
+   "score": 1.287
   },
   {
    "code": "PLTR",
    "name": "Palantir",
    "rank": 4,
-   "score": 1.222
+   "score": 1.219
   },
   {
    "code": "CRDO",
    "name": "Credo Technology",
    "rank": 5,
-   "score": 1.216
+   "score": 1.217
   }
  ],
  "candidates": [
@@ -38,7 +38,7 @@
    "code": "ALAB",
    "name": "Astera Labs",
    "rank": 6,
-   "score": 1.115
+   "score": 1.119
   },
   {
    "code": "APP",
@@ -56,13 +56,13 @@
    "code": "TSM",
    "name": "TSMC",
    "rank": 9,
-   "score": 0.952
+   "score": 0.953
   },
   {
    "code": "ARM",
    "name": "Arm Holdings",
    "rank": 10,
-   "score": 0.818
+   "score": 0.819
   }
  ],
  "signals": {
@@ -78,7 +78,7 @@
   "AMAT": "sell-confirmed",
   "KLAC": "sell-confirmed",
   "ONTO": "sell-confirmed",
-  "SNPS": "sell-confirmed",
+  "SNPS": "sell-warning",
   "MU": "buy-gated",
   "SNDK": "buy-gated",
   "COHR": "sell-confirmed",
@@ -86,7 +86,7 @@
   "FN": "sell-confirmed",
   "MSFT": "hold-trend",
   "GOOGL": "sell-confirmed",
-  "AMZN": "sell-confirmed",
+  "AMZN": "sell-warning",
   "META": "hold",
   "AAPL": "buy-gated",
   "TSLA": "sell-confirmed",
@@ -103,8 +103,8 @@
   "EWY": "buy-gated",
   "ARM": "sell-confirmed",
   "LRCX": "sell-confirmed",
-  "CDNS": "sell-confirmed",
-  "ASE": "sell-confirmed",
+  "CDNS": "sell-warning",
+  "ASE": "sell-warning",
   "AMKR": "sell-confirmed",
   "TER": "sell-confirmed",
   "ANET": "buy-gated",
@@ -294,11 +294,9 @@
    "ema8": 414.19,
    "ema21": 430.48,
    "vs_ema8_pct": -4.91,
-   "current_close": 393.84,
-   "current_date": "2026-09-04",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "本周收盘 393.84 < EMA8(414.19) — 周线已收盘且已破位"
+   "action": "sell-warning",
+   "strength": 2,
+   "detail": "本周收盘 393.84 < EMA8(414.19)，但周线未收盘 — 等本周五收盘后确认"
   },
   "MU": {
    "name": "Micron",
@@ -393,11 +391,9 @@
    "ema8": 258.97,
    "ema21": 251.58,
    "vs_ema8_pct": -0.18,
-   "current_close": 258.51,
-   "current_date": "2026-09-04",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "本周收盘 258.51 < EMA8(258.97) — 周线已收盘且已破位"
+   "action": "sell-warning",
+   "strength": 2,
+   "detail": "本周收盘 258.51 < EMA8(258.97)，但周线未收盘 — 等本周五收盘后确认"
   },
   "META": {
    "name": "Meta Platforms",
@@ -599,11 +595,9 @@
    "ema8": 328.4,
    "ema21": 336.18,
    "vs_ema8_pct": -10.87,
-   "current_close": 292.7,
-   "current_date": "2026-09-04",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "本周收盘 292.70 < EMA8(328.40) — 周线已收盘且已破位"
+   "action": "sell-warning",
+   "strength": 2,
+   "detail": "本周收盘 292.70 < EMA8(328.40)，但周线未收盘 — 等本周五收盘后确认"
   },
   "ASE": {
    "name": "ASE Technology",
@@ -612,11 +606,9 @@
    "ema8": 37.61,
    "ema21": 34.93,
    "vs_ema8_pct": -0.27,
-   "current_close": 37.51,
-   "current_date": "2026-09-04",
-   "action": "sell-confirmed",
-   "strength": 3,
-   "detail": "本周收盘 37.51 < EMA8(37.61) — 周线已收盘且已破位"
+   "action": "sell-warning",
+   "strength": 2,
+   "detail": "本周收盘 37.51 < EMA8(37.61)，但周线未收盘 — 等本周五收盘后确认"
   },
   "AMKR": {
    "name": "Amkor Technology",
@@ -972,19 +964,10 @@
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
  "changes": [
-  "Amazon (AMZN): sell-warning → sell-confirmed",
-  "ASE Technology (ASE): sell-warning → sell-confirmed",
-  "Cadence Design (CDNS): sell-warning → sell-confirmed",
-  "CoreWeave (CRWV): sell-confirmed → hold",
-  "Lumentum (LITE): sell-warning → buy-gated",
-  "Marvell (MRVL): sell-confirmed → buy-gated",
-  "Palantir (PLTR): buy-gated → hold-trend",
-  "Synopsys (SNPS): sell-warning → sell-confirmed",
-  "Tesla (TSLA): hold → sell-confirmed",
-  "TSMC (TSM): sell-confirmed → buy-gated",
-  "Vertiv (VRT): sell-confirmed → hold",
-  "Vistra (VST): sell-confirmed → hold",
-  "仓位建议变化: 🟠 观察列表 64% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
+  "Amazon (AMZN): sell-confirmed → sell-warning",
+  "ASE Technology (ASE): sell-confirmed → sell-warning",
+  "Cadence Design (CDNS): sell-confirmed → sell-warning",
+  "Synopsys (SNPS): sell-confirmed → sell-warning"
  ],
  "portfolio_summary": {
   "total": 293089.03,
