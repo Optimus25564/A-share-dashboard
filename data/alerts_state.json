@@ -1,18 +1,18 @@
 {
- "last_run": "2026-09-14T22:20:39+08:00",
- "run_date": "2026-09-14",
+ "last_run": "2026-09-15T07:58:00+08:00",
+ "run_date": "2026-09-15",
  "top5": [
   {
    "code": "688256",
    "name": "寒武纪",
    "rank": 1,
-   "score": 1.73
+   "score": 1.733
   },
   {
    "code": "300308",
    "name": "中际旭创",
    "rank": 2,
-   "score": 1.412
+   "score": 1.41
   },
   {
    "code": "688041",
@@ -24,7 +24,7 @@
    "code": "688008",
    "name": "澜起科技",
    "rank": 4,
-   "score": 1.216
+   "score": 1.215
   },
   {
    "code": "300604",
@@ -44,7 +44,7 @@
    "code": "300475",
    "name": "香农芯创",
    "rank": 7,
-   "score": 0.828
+   "score": 0.826
   },
   {
    "code": "688012",
@@ -62,7 +62,7 @@
    "code": "688120",
    "name": "华海清科",
    "rank": 10,
-   "score": 0.592
+   "score": 0.593
   }
  ],
  "signals": {
@@ -101,7 +101,7 @@
    "close": 926.0,
    "close_date": "2026-09-11",
    "ema8": 926.05,
-   "ema21": 924.55,
+   "ema21": 924.56,
    "vs_ema8_pct": -0.0,
    "current_close": 873.0,
    "current_date": "2026-09-14",
@@ -190,7 +190,7 @@
    "close": 1040.0,
    "close_date": "2026-09-11",
    "ema8": 1105.37,
-   "ema21": 1112.28,
+   "ema21": 1112.48,
    "vs_ema8_pct": -5.91,
    "current_close": 1040.0,
    "current_date": "2026-09-14",
@@ -242,7 +242,7 @@
    "close": 60.55,
    "close_date": "2026-09-11",
    "ema8": 61.11,
-   "ema21": 64.44,
+   "ema21": 64.43,
    "vs_ema8_pct": -0.92,
    "current_close": 60.01,
    "current_date": "2026-09-14",
@@ -255,7 +255,7 @@
    "close": 70.54,
    "close_date": "2026-09-11",
    "ema8": 75.29,
-   "ema21": 72.3,
+   "ema21": 72.29,
    "vs_ema8_pct": -6.3,
    "current_close": 68.82,
    "current_date": "2026-09-14",
@@ -320,7 +320,7 @@
    "close": 67.74,
    "close_date": "2026-09-11",
    "ema8": 74.0,
-   "ema21": 70.8,
+   "ema21": 70.81,
    "vs_ema8_pct": -8.47,
    "current_close": 66.33,
    "current_date": "2026-09-14",
@@ -333,7 +333,7 @@
    "close": 125.7,
    "close_date": "2026-09-14",
    "ema8": 122.32,
-   "ema21": 116.97,
+   "ema21": 116.96,
    "vs_ema8_pct": 2.76,
    "action": "buy",
    "strength": 1,
@@ -345,7 +345,7 @@
    "close": 228.99,
    "close_date": "2026-09-11",
    "ema8": 245.99,
-   "ema21": 266.39,
+   "ema21": 266.36,
    "vs_ema8_pct": -6.91,
    "current_close": 225.0,
    "current_date": "2026-09-14",
@@ -358,7 +358,7 @@
    "close": 634.0,
    "close_date": "2026-09-11",
    "ema8": 685.35,
-   "ema21": 656.47,
+   "ema21": 656.52,
    "vs_ema8_pct": -7.49,
    "current_close": 626.0,
    "current_date": "2026-09-14",
@@ -410,7 +410,7 @@
    "close": 134.67,
    "close_date": "2026-09-11",
    "ema8": 153.41,
-   "ema21": 162.9,
+   "ema21": 162.91,
    "vs_ema8_pct": -12.22,
    "current_close": 133.8,
    "current_date": "2026-09-14",
@@ -471,13 +471,7 @@
  },
  "kline_status": "ok (28/28)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "沪电股份 (002463): hold → buy-gated",
-  "科士达 (002518): sell-confirmed → hold",
-  "工业富联 (601138): sell-confirmed → sell-warning",
-  "仓位建议变化: 🟠 大盘跌破周线 EMA21 (3885.33 < 3949.31); 观察列表 93% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱",
-  "🤖 A股模拟盘: 检测到触发但周线未收盘, 等待周五收盘确认 — 持仓周线收盘跌破 EMA21 (核心趋势破坏): 中微公司(688012) / 工业富联(601138)；持仓掉出合格排名 Top10 (排名缓冲触发): 中微公司(有效排名 已出合格池) / 工业富联(有效排名 已出合格池)"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 2299017.0,
   "cash": 477035.0,
