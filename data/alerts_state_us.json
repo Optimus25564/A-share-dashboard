@@ -1,12 +1,12 @@
 {
- "last_run": "2026-09-15T07:58:57+08:00",
+ "last_run": "2026-09-15T20:50:28+08:00",
  "run_date": "2026-09-15",
  "top5": [
   {
    "code": "MU",
    "name": "Micron",
    "rank": 1,
-   "score": 2.271
+   "score": 2.272
   },
   {
    "code": "SNDK",
@@ -24,7 +24,7 @@
    "code": "PLTR",
    "name": "Palantir",
    "rank": 4,
-   "score": 1.219
+   "score": 1.22
   },
   {
    "code": "CRDO",
@@ -38,13 +38,13 @@
    "code": "ALAB",
    "name": "Astera Labs",
    "rank": 6,
-   "score": 1.114
+   "score": 1.112
   },
   {
    "code": "APP",
    "name": "AppLovin",
    "rank": 7,
-   "score": 1.038
+   "score": 1.039
   },
   {
    "code": "AVGO",
@@ -56,7 +56,7 @@
    "code": "TSM",
    "name": "TSMC",
    "rank": 9,
-   "score": 0.953
+   "score": 0.952
   },
   {
    "code": "AMD",
@@ -207,7 +207,7 @@
    "close": 323.96,
    "close_date": "2026-09-11",
    "ema8": 349.17,
-   "ema21": 400.38,
+   "ema21": 400.43,
    "vs_ema8_pct": -7.22,
    "current_close": 334.24,
    "current_date": "2026-09-14",
@@ -270,7 +270,7 @@
    "close": 281.26,
    "close_date": "2026-09-11",
    "ema8": 285.49,
-   "ema21": 275.19,
+   "ema21": 275.17,
    "vs_ema8_pct": -1.48,
    "current_close": 250.13,
    "current_date": "2026-09-14",
@@ -318,7 +318,7 @@
    "close": 266.5,
    "close_date": "2026-09-14",
    "ema8": 295.32,
-   "ema21": 303.21,
+   "ema21": 303.22,
    "vs_ema8_pct": -9.76,
    "action": "sell-warning",
    "strength": 2,
@@ -329,7 +329,7 @@
    "close": 835.03,
    "close_date": "2026-09-14",
    "ema8": 864.67,
-   "ema21": 821.31,
+   "ema21": 821.32,
    "vs_ema8_pct": -3.43,
    "action": "sell-warning",
    "strength": 2,
@@ -340,7 +340,7 @@
    "close": 414.58,
    "close_date": "2026-09-11",
    "ema8": 457.74,
-   "ema21": 494.87,
+   "ema21": 494.89,
    "vs_ema8_pct": -9.43,
    "current_close": 382.55,
    "current_date": "2026-09-14",
@@ -421,7 +421,7 @@
    "close": 82.98,
    "close_date": "2026-09-14",
    "ema8": 87.36,
-   "ema21": 90.59,
+   "ema21": 90.55,
    "vs_ema8_pct": -5.01,
    "action": "sell-warning",
    "strength": 2,
@@ -552,7 +552,7 @@
    "close": 239.01,
    "close_date": "2026-09-14",
    "ema8": 258.49,
-   "ema21": 257.41,
+   "ema21": 257.32,
    "vs_ema8_pct": -7.54,
    "action": "sell-warning",
    "strength": 2,
@@ -635,7 +635,7 @@
    "close": 162.95,
    "close_date": "2026-09-11",
    "ema8": 206.83,
-   "ema21": 200.09,
+   "ema21": 200.11,
    "vs_ema8_pct": -21.22,
    "current_close": 150.09,
    "current_date": "2026-09-14",
@@ -648,7 +648,7 @@
    "close": 291.22,
    "close_date": "2026-09-11",
    "ema8": 307.56,
-   "ema21": 289.77,
+   "ema21": 289.8,
    "vs_ema8_pct": -5.31,
    "current_close": 257.04,
    "current_date": "2026-09-14",
@@ -866,18 +866,18 @@
    "close": 43.17,
    "close_date": "2026-09-14",
    "ema8": 42.33,
-   "ema21": 43.81,
+   "ema21": 43.8,
    "vs_ema8_pct": 1.98,
    "action": "hold",
    "strength": 1,
-   "detail": "EMA8 (42.33) ≤ EMA21 (43.81) — 尚未多头排列"
+   "detail": "EMA8 (42.33) ≤ EMA21 (43.80) — 尚未多头排列"
   },
   "PLTR": {
    "name": "Palantir",
    "close": 173.31,
    "close_date": "2026-09-14",
    "ema8": 166.39,
-   "ema21": 154.81,
+   "ema21": 154.8,
    "vs_ema8_pct": 4.16,
    "action": "buy",
    "strength": 1,
@@ -911,7 +911,7 @@
    "close": 62.95,
    "close_date": "2026-09-11",
    "ema8": 70.93,
-   "ema21": 77.3,
+   "ema21": 77.29,
    "vs_ema8_pct": -11.26,
    "current_close": 62.55,
    "current_date": "2026-09-14",
@@ -935,12 +935,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "AMD (AMD): sell-warning → hold",
-  "Arista Networks (ANET): buy-gated → sell-warning",
-  "Alphabet (GOOGL): sell-confirmed → hold",
-  "TSMC (TSM): buy-gated → sell-warning"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 283127.64,
   "cash": 57510.16,
