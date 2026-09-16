@@ -1,5 +1,5 @@
 {
- "last_run": "2026-09-16T07:38:03+08:00",
+ "last_run": "2026-09-16T20:46:03+08:00",
  "run_date": "2026-09-16",
  "top5": [
   {
@@ -30,7 +30,7 @@
    "code": "CRDO",
    "name": "Credo Technology",
    "rank": 5,
-   "score": 1.213
+   "score": 1.214
   }
  ],
  "candidates": [
@@ -38,7 +38,7 @@
    "code": "ALAB",
    "name": "Astera Labs",
    "rank": 6,
-   "score": 1.112
+   "score": 1.111
   },
   {
    "code": "APP",
@@ -50,7 +50,7 @@
    "code": "AVGO",
    "name": "Broadcom",
    "rank": 8,
-   "score": 0.999
+   "score": 0.998
   },
   {
    "code": "TSM",
@@ -62,7 +62,7 @@
    "code": "AMD",
    "name": "AMD",
    "rank": 10,
-   "score": 0.82
+   "score": 0.822
   }
  ],
  "signals": {
@@ -219,14 +219,14 @@
   },
   "TSM": {
    "name": "TSMC",
-   "close": 413.75,
+   "close": 412.64,
    "close_date": "2026-09-15",
-   "ema8": 421.05,
-   "ema21": 409.23,
-   "vs_ema8_pct": -1.73,
+   "ema8": 419.94,
+   "ema21": 408.12,
+   "vs_ema8_pct": -1.74,
    "action": "sell-warning",
    "strength": 2,
-   "detail": "本周收盘 413.75 < EMA8(421.05)，但周线未收盘 — 等本周五收盘后确认"
+   "detail": "本周收盘 412.64 < EMA8(419.94)，但周线未收盘 — 等本周五收盘后确认"
   },
   "ASML": {
    "name": "ASML",
@@ -940,19 +940,12 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "AMD (AMD): hold → buy-gated",
-  "Arista Networks (ANET): sell-warning → buy-gated",
-  "Alphabet (GOOGL): hold → sell-confirmed",
-  "IREN (IREN): hold → sell-warning",
-  "Qualcomm (QCOM): hold → buy-gated",
-  "仓位建议变化: 🟠 观察列表 85% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
- ],
+ "changes": [],
  "portfolio_summary": {
-  "total": 282230.91,
+  "total": 282119.91,
   "cash": 57510.16,
   "cash_pct": 20.4,
-  "pnl_pct": -5.92,
+  "pnl_pct": -5.96,
   "positions": 5,
   "tier": "宏观门控 (核心80%, 卫星舱现金)",
   "currency": "$",
