@@ -1,18 +1,18 @@
 {
- "last_run": "2026-09-18T07:38:37+08:00",
+ "last_run": "2026-09-18T20:20:49+08:00",
  "run_date": "2026-09-18",
  "top5": [
   {
    "code": "MU",
    "name": "Micron",
    "rank": 1,
-   "score": 2.272
+   "score": 2.273
   },
   {
    "code": "SNDK",
    "name": "Sandisk",
    "rank": 2,
-   "score": 1.825
+   "score": 1.827
   },
   {
    "code": "NVDA",
@@ -30,7 +30,7 @@
    "code": "CRDO",
    "name": "Credo Technology",
    "rank": 5,
-   "score": 1.216
+   "score": 1.218
   }
  ],
  "candidates": [
@@ -38,13 +38,13 @@
    "code": "ALAB",
    "name": "Astera Labs",
    "rank": 6,
-   "score": 1.114
+   "score": 1.117
   },
   {
    "code": "APP",
    "name": "AppLovin",
    "rank": 7,
-   "score": 1.038
+   "score": 1.036
   },
   {
    "code": "AVGO",
@@ -62,7 +62,7 @@
    "code": "AMD",
    "name": "AMD",
    "rank": 10,
-   "score": 0.822
+   "score": 0.824
   }
  ],
  "signals": {
@@ -947,22 +947,7 @@
  },
  "kline_status": "ok (66/66)",
  "data_source": "Tencent ifzq.gtimg.cn (live)",
- "changes": [
-  "Arm Holdings (ARM): sell-warning → hold",
-  "ASE Technology (ASE): sell-warning → buy-gated",
-  "iShares MSCI Korea (EWY): sell-warning → buy-gated",
-  "Alphabet (GOOGL): sell-confirmed → hold",
-  "Intel (INTC): hold → buy-gated",
-  "Microsoft (MSFT): buy-gated → hold-trend",
-  "Micron (MU): sell-warning → buy-gated",
-  "Nvidia (NVDA): sell-warning → buy-gated",
-  "Oracle (ORCL): sell-warning → hold",
-  "Qualcomm (QCOM): hold → buy-gated",
-  "Sandisk (SNDK): sell-warning → buy-gated",
-  "TSMC (TSM): sell-warning → buy-gated",
-  "大盘站上周线 EMA8",
-  "仓位建议变化: 🟠 观察列表 65% 处于 sell 信号 — 卫星舱 20% 转现金, 核心舱 80% 持有不动; 指数收复周线 EMA21 后按排名买回卫星舱"
- ],
+ "changes": [],
  "portfolio_summary": {
   "total": 288953.45,
   "cash": 57510.16,
