@@ -1,0 +1,37 @@
+name: Refresh Futunn K-lines
+
+on:
+  schedule:
+    - cron: '15 2 * * 1-6'
+  workflow_dispatch:
+
+concurrency:
+  group: refresh-futu-klines
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Refresh Futunn REST snapshot and K-lines
+        env:
+          FUTU_CLIENT_ID: ${{ secrets.FUTU_CLIENT_ID }}
+          FUTU_REFRESH_TOKEN: ${{ secrets.FUTU_REFRESH_TOKEN }}
+        run: python scripts/futu_refresh_market.py
+      - name: Commit K-line cache
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/futu_snapshot.json data/futu_klines
+          if git diff --cached --quiet; then
+            echo "No market-data changes"
+          else
+            git commit -m "market-data: refresh Futunn REST cache $(date -u +%F)"
+            git push
+          fi

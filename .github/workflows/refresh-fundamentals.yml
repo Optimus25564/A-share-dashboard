@@ -34,6 +34,12 @@ jobs:
         run: python scripts/fill_us_cash_flow_from_sec.py
 
       - name: Update market caps
+        env:
+          FUTU_CLIENT_ID: ${{ secrets.FUTU_CLIENT_ID }}
+          FUTU_REFRESH_TOKEN: ${{ secrets.FUTU_REFRESH_TOKEN }}
+        run: python scripts/futu_refresh_market.py --snapshot-only
+
+      - name: Apply Futunn market caps
         run: python scripts/update_market_caps.py
 
       - name: Audit data quality (block commit on error)

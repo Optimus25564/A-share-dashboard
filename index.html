@@ -400,14 +400,14 @@
     <div>
       <h1>国产算力 · 关注列表 + 模拟盘 <span class="tag">去英伟达化 · 2026</span></h1>
       <div class="sub">
-        实时行情：腾讯免费接口（qt.gtimg.cn）
+        行情数据：富途 OpenAPI REST
         <span class="live" id="liveStatus"><span class="pulse"></span>未连接</span>
       </div>
     </div>
     <div class="meta">
       最近刷新：<b id="lastUpdate">--</b><br>
       行情时间：<b id="quoteTime">--</b> · 延迟 <b id="quoteDelay" style="color:var(--gold)">--</b><br>
-      自动刷新 <b>10秒</b> · <span id="clockLabel">北京时间</span> <b id="bjNow">--</b>
+      页面读取 <b>15分钟缓存</b> · <span id="clockLabel">北京时间</span> <b id="bjNow">--</b>
       <button class="trade-action" id="refreshBtn" style="margin-left:6px">手动刷新</button>
     </div>
   </header>
@@ -824,7 +824,7 @@
   </div>
 
   <footer>
-    本仪表盘仅用于个人投资研究跟踪。行情来自腾讯免费接口，存在 15 秒级别延迟可能；模拟盘不含手续费、印花税、T+1 限制，结果仅供参考。
+    本仪表盘仅用于个人投资研究跟踪。行情来自富途 OpenAPI REST，页面显示后台最近一次成功刷新结果；模拟盘不含手续费、印花税、T+1 限制，结果仅供参考。
   </footer>
 </div>
 
@@ -959,63 +959,53 @@ function renderLayerAverages(layerMap, quotesMap, idPrefix){
   }
 }
 
-// Code → market prefix
-function pfx(code){
-  // 6xx → sh (Shanghai), others → sz (Shenzhen)
-  return (code[0] === '6') ? ('sh' + code) : ('sz' + code);
+// Code → Futunn REST security identifier
+function futuSymbol(code){
+  if (/[A-Za-z]/.test(code)) return `US.${code === "ASE" ? "ASX" : code}`;
+  if (code[0] === "6") return `SH.${code}`;
+  if (["4", "8", "9"].includes(code[0])) return `BJ.${code}`;
+  return `SZ.${code}`;
 }
 
-// ============ Tencent quote API via JSONP-style script tag ============
-// qt.gtimg.cn returns: v_sh688256="1~寒武纪~688256~price~prevClose~open~vol~...~time~chg~chgPct~high~low~..."
-// We append <script charset="GBK"> which executes globals; then read window.v_xxx
+// ============ Futunn REST snapshot, produced by the private GitHub Actions backend ============
 let lastQuotes = {};
 
-function fetchQuotes(){
-  const keys = WATCH.map(w => pfx(w.code));
-  if (keys.length === 0) return Promise.resolve({});
-  return new Promise((resolve) => {
-    const script = document.createElement("script");
-    script.charset = "GBK"; // Tencent endpoint returns GBK
-    script.src = `https://qt.gtimg.cn/q=${keys.join(",")}&_=${Date.now()}`;
-    let done = false;
-    const finish = () => {
-      if (done) return; done = true;
-      const out = {};
-      keys.forEach(k => {
-        const raw = window["v_" + k];
-        if (raw) out[k.slice(2)] = parseQuote(raw);
-      });
-      try { document.head.removeChild(script); } catch(e){}
-      resolve(out);
-    };
-    script.onload = finish;
-    script.onerror = finish;
-    setTimeout(finish, 5000);
-    document.head.appendChild(script);
-  });
+let futuSnapshotCache = null;
+let futuSnapshotFetchedAt = 0;
+async function loadFutuSnapshot(force=false){
+  if (futuSnapshotCache && !force && Date.now() - futuSnapshotFetchedAt < 60000) return futuSnapshotCache;
+  const r = await fetch(`data/futu_snapshot.json?_=${Date.now()}`, {cache:"no-store"});
+  if (!r.ok) throw new Error(`Futunn snapshot HTTP ${r.status}`);
+  futuSnapshotCache = await r.json();
+  futuSnapshotFetchedAt = Date.now();
+  return futuSnapshotCache;
 }
-
-function parseQuote(s){
-  // Strip surrounding quotes if assigned as raw string
-  const str = String(s);
-  const parts = str.split("~");
-  // Tencent fields:
-  // 1=name 2=code 3=price 4=prevClose 5=open 6=volume(手)
-  // 30=time 31=change 32=changePct 33=high 34=low
-  // 36=volume 37=turnover(万元) 39=PE 45=marketCap 46=floatMarketCap
+function parseFutuQuote(item){
+  const price = Number(item.last_price) || 0;
+  const prevClose = Number(item.prev_close_price) || 0;
+  const change = price - prevClose;
   return {
-    name: parts[1] || "",
-    code: parts[2] || "",
-    price: parseFloat(parts[3]) || 0,
-    prevClose: parseFloat(parts[4]) || 0,
-    open: parseFloat(parts[5]) || 0,
-    high: parseFloat(parts[33]) || 0,
-    low: parseFloat(parts[34]) || 0,
-    change: parseFloat(parts[31]) || 0,
-    changePct: parseFloat(parts[32]) || 0,
-    turnover: parseFloat(parts[37]) || 0, // 万元
-    time: parts[30] || "",
+    name: item.sc_name || item.name || "",
+    code: String(item.code || "").split(".").pop(),
+    price, prevClose,
+    open: Number(item.open_price) || 0,
+    high: Number(item.high_price) || 0,
+    low: Number(item.low_price) || 0,
+    change,
+    changePct: prevClose ? change / prevClose * 100 : 0,
+    turnover: (Number(item.turnover) || 0) / 10000, // 页面原字段单位为万元
+    volume: Number(item.volume) || 0,
+    time: Number(item.update_time) || 0,
   };
+}
+async function fetchQuotes(force=false){
+  const payload = await loadFutuSnapshot(force);
+  const out = {};
+  WATCH.forEach(({code}) => {
+    const item = payload.quotes?.[code];
+    if (item) out[code] = parseFutuQuote(item);
+  });
+  return out;
 }
 
 function fmtNum(n, d=2){
@@ -2069,85 +2059,38 @@ document.getElementById("infoModal").onclick = (e) => {
 
 // ============ K-line: fetcher + indicators + modal ============
 async function fetchKLineRaw(sym, period="day", count=180){
-  const url = `https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=${sym},${period},,,${count},qfq&_=${Date.now()}`;
+  let symbol = sym;
+  if (/^sh\d+$/i.test(sym)) symbol = `SH.${sym.slice(2)}`;
+  else if (/^sz\d+$/i.test(sym)) symbol = `SZ.${sym.slice(2)}`;
+  else if (!sym.includes(".")) symbol = futuSymbol(sym);
+  const url = `data/futu_klines/${symbol}.${period}.json?_=${Date.now()}`;
   try {
     const r = await fetch(url);
     if (!r.ok) throw new Error("HTTP "+r.status);
     const j = await r.json();
-    return parseKLine(j, sym, period);
+    return (j.bars || []).slice(-count).map(row => ({
+      date: row.date ? String(row.date) : new Date(row.time_key).toISOString().slice(0,10),
+      open: +row.open, close: +row.close, high: +row.high, low: +row.low,
+      volume: +row.volume
+    })).filter(b => !isNaN(b.close));
   } catch(e) {
-    return new Promise((resolve) => {
-      const cb = "klcb_" + Math.floor(Math.random()*1e9);
-      window[cb] = (j) => { try{document.head.removeChild(s);}catch(e){} delete window[cb]; resolve(parseKLine(j, sym, period)); };
-      const s = document.createElement("script");
-      s.src = url + "&_callback=" + cb;
-      s.onerror = () => resolve([]);
-      setTimeout(() => resolve([]), 6000);
-      document.head.appendChild(s);
-    });
+    console.error('Futunn K-line fetch failed:', symbol, period, e);
+    return [];
   }
 }
 async function fetchKLine(code, period="day", count=180){
-  // 美股 ticker (包含字母) 用 Stooq, A股 (纯数字) 用腾讯
-  if (/[A-Za-z]/.test(code)) {
-    return fetchUSKLine(code, period);
-  }
-  return fetchKLineRaw(pfx(code), period, count);
+  return fetchKLineRaw(futuSymbol(code), period, count);
 }
 
-// 美股交易所映射 (默认 OQ=NASDAQ; N=NYSE; P=NYSE Arca)
-// 经实测验证 (count=100 bars 完整度): 大部分 OQ 默认即可
 const US_TICKER_ALIAS = {
   ASE: "ASX", // ASE Technology Holding ADR trades on NYSE as ASX
-};
-const US_EXCHANGE = {
-  // NYSE (.N)
-  TSM: 'N', ONTO: 'N', FN: 'N', VRT: 'N', ETN: 'N', GEV: 'N', CCJ: 'N', COHR: 'N',
-  ANET: 'N', CIEN: 'N', GLW: 'N', PWR: 'N', EME: 'N', FIX: 'N', MOD: 'N', TT: 'N',
-  JCI: 'N', HUBB: 'N', VST: 'N', NRG: 'N', KMI: 'N', WMB: 'N', ORCL: 'N', NOW: 'N',
-  CRM: 'N', ASX: 'N',
-  // NYSE Arca ETF 在腾讯美股 K 线接口里使用 .AM
-  XLU: 'AM', COPX: 'AM', XME: 'AM', EWY: 'AM',
-  // 默认 NASDAQ (.OQ): ARM, LRCX, CDNS, AMKR, TER, CRDO, ALAB, CSCO, MPWR, POWL, IREN, PLTR, 其余
 };
 function usApiTicker(ticker){
   return US_TICKER_ALIAS[ticker] || ticker;
 }
-function usSym(ticker){
-  const apiTicker = usApiTicker(ticker);
-  const ex = US_EXCHANGE[apiTicker] || 'OQ';
-  return `us${apiTicker}.${ex}`;
-}
 
-// 美股 K 线 from 腾讯 (CORS 友好, 与 A 股同 API 家族)
 async function fetchUSKLine(ticker, period="day", count=320){
-  const sym = usSym(ticker);
-  const url = `https://web.ifzq.gtimg.cn/appstock/app/usfqkline/get?param=${sym},${period},,,${count},qfq&_=${Date.now()}`;
-  try {
-    const r = await fetch(url);
-    const j = await r.json();
-    const node = j?.data?.[sym];
-    if (!node) return [];
-    const arr = node[period] || node["qfq"+period] || node.day || [];
-    return arr.map(row => ({
-      date: row[0],
-      open: +row[1], close: +row[2], high: +row[3], low: +row[4],
-      volume: +row[5]
-    })).filter(b => !isNaN(b.close));
-  } catch(e) {
-    console.error('Tencent US K-line fetch failed:', e);
-    return [];
-  }
-}
-function parseKLine(j, sym, period){
-  const node = j?.data?.[sym];
-  if (!node) return [];
-  const arr = node[period] || node["qfq"+period] || node["day"] || [];
-  return arr.map(row => ({
-    date: row[0],
-    open: +row[1], close: +row[2], high: +row[3], low: +row[4],
-    volume: +row[5]
-  })).filter(b => !isNaN(b.close));
+  return fetchKLineRaw(futuSymbol(ticker), period, count);
 }
 
 // === Indicators ===
@@ -2850,10 +2793,12 @@ function updateLiveForActiveTab(){
 function setUSHeaderQuoteMeta(){
   const quoteEl = document.getElementById("quoteTime");
   const delayEl = document.getElementById("quoteDelay");
-  if (quoteEl) quoteEl.textContent = "美股刷新";
+  const sample = Object.values(usQuotes).find(q => q && q.date);
+  const age = sample ? getQuoteAge(sample.date) : null;
+  if (quoteEl) quoteEl.textContent = sample ? new Date(sample.date).toLocaleTimeString("zh-CN", {hour12:false,timeZone:"America/New_York"}) + " ET" : "--";
   if (delayEl) {
-    delayEl.textContent = "约15-20分钟";
-    delayEl.style.color = "var(--gold)";
+    delayEl.textContent = age == null ? "--" : age < 3600 ? `${Math.floor(age/60)}分钟` : `${Math.floor(age/3600)}小时${Math.floor((age%3600)/60)}分`;
+    delayEl.style.color = age != null && age < 20 * 60 ? "var(--green)" : "var(--gold)";
   }
 }
 function formatTimeZoneNow(timeZone){
@@ -2884,16 +2829,9 @@ function updateClockForActiveTab(){
     clock.textContent = formatTimeZoneNow("Asia/Shanghai");
   }
 }
-// Parse Tencent timestamp "20260427101530" → Date in Beijing wall-clock; return age in seconds vs Beijing now
-function getQuoteAge(timeStr){
-  if (!timeStr || timeStr.length < 14) return null;
-  const y = +timeStr.slice(0,4), mo = +timeStr.slice(4,6)-1, d = +timeStr.slice(6,8);
-  const h = +timeStr.slice(8,10), mi = +timeStr.slice(10,12), s = +timeStr.slice(12,14);
-  // Quote time is in Beijing; build a Date treating these numbers as UTC, then compare to Beijing-now built same way
-  const quoteAsUTC = Date.UTC(y, mo, d, h, mi, s);
-  const bj = getBeijingNow();
-  const nowAsUTC = Date.UTC(bj.getFullYear(), bj.getMonth(), bj.getDate(), bj.getHours(), bj.getMinutes(), bj.getSeconds());
-  return Math.round((nowAsUTC - quoteAsUTC) / 1000);
+function getQuoteAge(timeMs){
+  if (!Number(timeMs)) return null;
+  return Math.max(0, Math.round((Date.now() - Number(timeMs)) / 1000));
 }
 function fmtBeijing(d){
   return d.toLocaleString("zh-CN",{hour12:false,timeZone:"Asia/Shanghai"}).replace(/\//g,"-");
@@ -2909,7 +2847,7 @@ async function refresh(force){
     return;
   }
   try {
-    const q = await fetchQuotes();
+    const q = await fetchQuotes(Boolean(force));
     if (Object.keys(q).length === 0) {
       if (activeTab !== "us") setLive(false, "接口无响应");
       return;
@@ -2922,7 +2860,7 @@ async function refresh(force){
     for (const c of Object.keys(q)) {
       if (q[c].time) {
         age = getQuoteAge(q[c].time);
-        qt = q[c].time.slice(8,10)+":"+q[c].time.slice(10,12)+":"+q[c].time.slice(12,14);
+        qt = new Date(q[c].time).toLocaleTimeString("zh-CN", {hour12:false,timeZone:"Asia/Shanghai"});
         break;
       }
     }
@@ -3089,60 +3027,36 @@ async function loadCompaniesUS(){
   }
   return companiesUS;
 }
-// 美股实时行情 - 腾讯 qt.gtimg.cn JSONP 批量 (与 A 股同接口家族, 15-20 分钟延迟而非 8 小时)
-// 注意: 美股 ticker 不带交易所后缀, 直接 usNVDA/usAAPL/usMU. 返回 v_usXXX 全局变量, GBK 编码.
-function fetchUSQuotes(){
+async function fetchUSQuotes(force=false){
   if (!companiesUS) return Promise.resolve({});
   const codes = Object.keys(companiesUS).filter(k => !k.startsWith('_'));
   if (codes.length === 0) return Promise.resolve({});
-  const keyPairs = codes.map(code => ({ code, key: "us" + usApiTicker(code) }));
-  const keys = keyPairs.map(x => x.key);
-  return new Promise((resolve) => {
-    const script = document.createElement("script");
-    script.charset = "GBK";
-    script.src = `https://qt.gtimg.cn/q=${keys.join(",")}&_=${Date.now()}`;
-    let done = false;
-    const finish = () => {
-      if (done) return; done = true;
-      const out = {};
-      keyPairs.forEach(({ code, key }) => {
-        const raw = window["v_" + key];
-        if (raw && String(raw).split("~").length > 30) {
-          const p = parseQuote(raw);  // 复用 A 股解析: name/code/price/prevClose/open/high/low/change/changePct/time
-          out[code] = {
-            close: p.price, open: p.open, prevClose: p.prevClose,
-            high: p.high, low: p.low,
-            changePct: p.changePct,
-            volume: 0,
-            date: p.time,  // ET 时区 yyyy-MM-dd HH:mm:ss
-          };
-        }
-        // 清理全局变量避免污染
-        try { delete window["v_" + key]; } catch(e){}
-      });
-      try { document.head.removeChild(script); } catch(e){}
-      resolve(out);
+  const payload = await loadFutuSnapshot(force);
+  const out = {};
+  codes.forEach(code => {
+    const item = payload.quotes?.[code];
+    if (!item) return;
+    const p = parseFutuQuote(item);
+    out[code] = {
+      close: p.price, open: p.open, prevClose: p.prevClose,
+      high: p.high, low: p.low, changePct: p.changePct,
+      volume: p.volume, date: p.time,
     };
-    script.onload = finish;
-    script.onerror = finish;
-    setTimeout(finish, 8000);
-    document.head.appendChild(script);
   });
+  return out;
 }
-async function refreshUSQuotes(){
-  const all = await fetchUSQuotes();
+async function refreshUSQuotes(force=false){
+  const all = await fetchUSQuotes(force);
   Object.entries(all).forEach(([c, q]) => { usQuotes[c] = q; });
   if (activeTab === "us") {
     setLive(isUSMarketHours(), isUSMarketHours() ? "美股盘中" : "美股盘后");
     setUSHeaderQuoteMeta();
   }
-  // 腾讯美股 quote 字段时区不稳定；展示本次刷新时间, 不做伪精确延迟换算
   const sample = Object.values(all).find(q => q && q.date);
   const tEl = document.getElementById("usQuoteTime");
   if (tEl) {
-    const refreshed = formatTimeZoneNow("Asia/Shanghai");
-    tEl.textContent = `${refreshed} 北京 · 腾讯美股约延迟 15-20 分钟`;
-    if (sample) tEl.title = `腾讯原始时间字段: ${sample.date || "--"}`;
+    const refreshed = sample ? new Date(sample.date).toLocaleString("zh-CN", {hour12:false,timeZone:"America/New_York"}) : "--";
+    tEl.textContent = `${refreshed} ET · 富途 REST`;
   }
   renderUSWatchlist();
 }
@@ -3538,7 +3452,7 @@ async function runWatchScanUS(force=false){
   renderUSPortfolioPie();
 }
 const usRefreshBtn = document.getElementById("usRefreshBtn");
-if (usRefreshBtn) usRefreshBtn.onclick = () => refreshUSQuotes();
+if (usRefreshBtn) usRefreshBtn.onclick = () => refreshUSQuotes(true);
 
 // ============ 自动策略盘 (只读) · 账本由 CI manage_portfolio.py 独家管理 ============
 const autoBooks = { a: null, us: null };
@@ -3677,7 +3591,7 @@ loadCompanies().then(() => {
   renderPortfolioPie();     // Top 10 组合配比饼图
   if (publicNews) { renderWatchlist(); renderGlobalFeed(); }  // news 先到则补渲染
   refresh(true);
-  setInterval(() => refresh(false), 10000);
+  setInterval(() => refresh(false), 60000);
   // 周线 EMA 趋势扫描 — 启动时跑一次，之后每 30 分钟刷新一次
   runWatchScan(false);
   setInterval(() => {

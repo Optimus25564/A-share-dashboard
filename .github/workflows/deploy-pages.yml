@@ -1,0 +1,41 @@
+name: Deploy Pages with Futunn market data
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Refresh Futunn REST snapshot
+        env:
+          FUTU_CLIENT_ID: ${{ secrets.FUTU_CLIENT_ID }}
+          FUTU_REFRESH_TOKEN: ${{ secrets.FUTU_REFRESH_TOKEN }}
+        run: python scripts/futu_refresh_market.py --snapshot-only
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
