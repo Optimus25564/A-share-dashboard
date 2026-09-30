@@ -117,7 +117,37 @@ def refresh_snapshot(repo: Path, token: str, symbols: dict[str, str]) -> None:
         body={"code_list": list(symbols.values())},
     )
     by_symbol = {item["code"]: item for item in data.get("snapshot_list", [])}
-    quotes = {code: by_symbol[symbol] for code, symbol in symbols.items() if symbol in by_symbol}
+    quotes = {}
+    for code, symbol in symbols.items():
+        if symbol in by_symbol:
+            quotes[code] = by_symbol[symbol]
+            continue
+        # Some accounts do not receive real-time A-share snapshots. Keep the
+        # site fully on Futunn by using the latest REST history bar cached by
+        # the daily job instead of falling back to another data provider.
+        kline_path = repo / "data" / "futu_klines" / f"{symbol}.day.json"
+        if not kline_path.exists():
+            continue
+        cached = json.loads(kline_path.read_text(encoding="utf-8"))
+        bars = cached.get("bars") or []
+        if not bars:
+            continue
+        bar = bars[-1]
+        quotes[code] = {
+            "code": symbol,
+            "name": bar.get("name", ""),
+            "sc_name": bar.get("sc_name") or bar.get("name", ""),
+            "update_time": bar.get("time_key", 0),
+            "data_date": str(bar.get("date", "")),
+            "last_price": bar.get("close", 0),
+            "open_price": bar.get("open", 0),
+            "high_price": bar.get("high", 0),
+            "low_price": bar.get("low", 0),
+            "prev_close_price": bar.get("last_close", 0),
+            "volume": bar.get("volume", 0),
+            "turnover": bar.get("turnover", 0),
+            "snapshot_fallback": "history_kline",
+        }
     atomic_json(
         repo / "data" / "futu_snapshot.json",
         {
@@ -170,6 +200,7 @@ def main() -> None:
     refresh_snapshot(args.repo, token, symbols)
     if not args.snapshot_only:
         refresh_klines(args.repo, token, symbols)
+        refresh_snapshot(args.repo, token, symbols)
 
 
 if __name__ == "__main__":
