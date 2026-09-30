@@ -83,15 +83,21 @@ def load_symbols(repo: Path) -> dict[str, str]:
 
 
 def futu_call(path: str, token: str, *, method="GET", body=None):
-    result = request_json(
-        f"{API_BASE}{path}",
-        method=method,
-        body=body,
-        headers={"Authorization": f"Bearer {token}"},
-    )
-    if result.get("ret_code") != 0:
-        raise RuntimeError(f"Futunn API error {result.get('ret_code')}: {result.get('ret_msg')}")
-    return result.get("data") or {}
+    for attempt in range(6):
+        result = request_json(
+            f"{API_BASE}{path}",
+            method=method,
+            body=body,
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        if result.get("ret_code") == 0:
+            return result.get("data") or {}
+        if result.get("ret_code") != -11 or attempt == 5:
+            raise RuntimeError(f"Futunn API error {result.get('ret_code')}: {result.get('ret_msg')}")
+        wait = 4 * (2**attempt)
+        print(f"Rate limited; retrying in {wait}s")
+        time.sleep(wait)
+    raise RuntimeError("Futunn API retry limit reached")
 
 
 def atomic_json(path: Path, value) -> None:
@@ -147,6 +153,7 @@ def refresh_klines(repo: Path, token: str, symbols: dict[str, str]) -> None:
             completed += 1
             if completed % 20 == 0 or completed == total:
                 print(f"K-lines: {completed}/{total}")
+            time.sleep(1.6)
 
 
 def main() -> None:
