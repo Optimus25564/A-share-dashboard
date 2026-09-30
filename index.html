@@ -407,7 +407,7 @@
     <div class="meta">
       最近刷新：<b id="lastUpdate">--</b><br>
       行情时间：<b id="quoteTime">--</b> · 延迟 <b id="quoteDelay" style="color:var(--gold)">--</b><br>
-      页面读取 <b>15分钟缓存</b> · <span id="clockLabel">北京时间</span> <b id="bjNow">--</b>
+      数据频率 <b>美股15分钟 / A股最新日线</b> · <span id="clockLabel">北京时间</span> <b id="bjNow">--</b>
       <button class="trade-action" id="refreshBtn" style="margin-left:6px">手动刷新</button>
     </div>
   </header>
@@ -996,6 +996,8 @@ function parseFutuQuote(item){
     turnover: (Number(item.turnover) || 0) / 10000, // 页面原字段单位为万元
     volume: Number(item.volume) || 0,
     time: Number(item.update_time) || 0,
+    dataDate: item.data_date || "",
+    snapshotFallback: item.snapshot_fallback || "",
   };
 }
 async function fetchQuotes(force=false){
@@ -2856,17 +2858,21 @@ async function refresh(force){
     document.getElementById("lastUpdate").textContent = new Date().toLocaleTimeString("zh-CN",{hour12:false,timeZone:"Asia/Shanghai"});
 
     // Compute quote age from any one stock's timestamp
-    let age = null, qt = "--";
+    let age = null, qt = "--", isDailyFallback = false;
     for (const c of Object.keys(q)) {
       if (q[c].time) {
         age = getQuoteAge(q[c].time);
-        qt = new Date(q[c].time).toLocaleTimeString("zh-CN", {hour12:false,timeZone:"Asia/Shanghai"});
+        isDailyFallback = q[c].snapshotFallback === "history_kline";
+        qt = isDailyFallback ? `日线 ${q[c].dataDate || "--"}` : new Date(q[c].time).toLocaleTimeString("zh-CN", {hour12:false,timeZone:"Asia/Shanghai"});
         break;
       }
     }
     document.getElementById("quoteTime").textContent = qt;
     const delayEl = document.getElementById("quoteDelay");
-    if (age == null) {
+    if (isDailyFallback) {
+      delayEl.textContent = "最新日线";
+      delayEl.style.color = "var(--gold)";
+    } else if (age == null) {
       delayEl.textContent = "--";
     } else if (age < 60) {
       delayEl.textContent = age + "秒";
